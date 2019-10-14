@@ -1,0 +1,225 @@
+@charset "UTF-8";
+
+*
+{
+	margin: 0;
+	padding: 0;
+	font-style: normal;
+}
+
+hr
+{
+	display: none;
+}
+
+a img
+{
+	border: none 0;
+}
+
+ 
+
+body
+{
+	background: #fff url("") repeat-y left top;
+	color: #000;
+	margin: 0;
+	padding: 0.5em 2em 2em 100px;
+}
+
+a:link
+{
+	text-decoration: none;
+	font-weight: bold;
+	color: #3161df;
+	background: transparent;
+}
+
+a:visited
+{
+	text-decoration: none;
+	font-weight: bold;
+	color: #459fd7;
+	background: transparent;
+}
+
+a:hover, a:active, a:focus
+{
+	font-weight: bold;
+	text-decoration: underline;
+	color: #17a488;
+	background: transparent;
+}
+
+
+ 
+
+div.ad
+{
+	text-align: right;
+	height: 65px;
+}
+
+div.ad a img
+{
+	border: solid 1px #bbb;
+}
+
+
+ 
+
+h1, h2, h3, h4, h5, h6
+{
+	font-weight: bold;
+}
+
+h1
+{
+	font-size: 120%;
+	margin-top: 2em;
+	margin-bottom: 0.8em;
+}
+
+h2
+{
+	font-size: 100%;
+	margin-top: 3em;
+	margin-bottom: 1.25em;
+	padding: 0.2em 2px;
+	border-top: solid 1px #898989;
+	border-bottom: solid 1px #898989;
+	background: #eeeeee;
+	color: #000;
+}
+
+h3
+{
+	font-size: 100%;
+	margin-top: 3em;
+	border-left: solid 1em #adadad;
+	padding-left: 0.5em;
+}
+
+h4
+{
+	font-size: 100%;
+	margin-top: 1.5em;
+}
+
+p
+{
+	line-height: 1.5;
+	margin: 0.5em 0;
+}
+
+ul, ol
+{
+	margin: 1em 0;
+	padding-left: 2em;
+}
+
+li
+{
+	margin: 0.2em 0;
+	line-height: 1.5;
+}
+
+dl
+{
+	margin: 1em 0;
+}
+
+dt
+{
+	margin: 0.7em 0 0 0;
+}
+
+dd
+{
+	margin: 0.3em 0 0 1em;
+	line-height: 1.5;
+}
+
+ 
+em.shoot
+{
+	color: #797979;
+	background: transparent;
+}
+
+ 
+.feeling
+{
+	white-space: nowrap;
+}
+
+ 
+.hidden
+{
+	color: #fff;
+	background: transparent;
+}
+
+ 
+
+ul.navigation
+{
+	list-style-type: none;
+	list-style-image: none;
+	margin: 4em 0 0 0;
+	text-align: right;
+}
+
+ul.navigation li
+{
+	font-size: 95%;
+	display: inline;
+	white-space: nowrap;
+	margin: 0 0.5em;
+}
+
+address
+{
+	font-size: 95%;
+	border-top: solid 1px #999;
+	margin: 0.5em 0 0 0;
+	padding: 0.2em 0;
+	line-height: 1.6;
+}
+
+.analyzer
+{
+	position: absolute;
+	top: 1px; left: 1px;
+}
+
+ 
+blockquote.comment
+{
+	font-size: 100%;
+	font-weight: bold;
+	margin-top: 1.5em;
+}
+
+dt.comment q:before{
+	content: "";
+}
+dt.comment q:after{
+	content: "";
+}
+
+dt.comment{
+	color: #c66;
+	background: transparent;
+}
+
+q q{
+	color: #b63030;
+	background: #fdf2f2;
+}
+
+
+
+
+
+

@@ -1,0 +1,79 @@
+ 
+
+.pio-container{
+    bottom: 0;
+    z-index: 52;
+    position: fixed;
+    user-select: none;
+}
+.pio-container.left{ left: 0 }
+.pio-container.right{ right: 0 }
+.pio-container.active{ cursor: move }
+.pio-container.static{ pointer-events: none }
+
+.pio-container .pio-action{
+    top: 3em;
+    right: 0;
+    opacity: 0;
+    position: absolute;
+    transition: opacity .3s;
+}
+.pio-container:hover .pio-action{ opacity: 1 }
+
+.pio-action span{
+    color: #fff;
+    width: 1.5em;
+    height: 1.5em;
+    display: block;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 66%;
+    margin-bottom: .5em;
+    border: 1px solid #666;
+    background: #fff center/70% no-repeat;
+}
+.pio-action .pio-home{
+    background-image: url("");
+}
+.pio-action .pio-close{
+    background-image: url("");
+}
+.pio-action .pio-skin{
+    background-image: url("");
+}
+.pio-action .pio-info{
+    background-image: url("");
+}
+.pio-action .pio-night{
+    background-image: url("");
+}
+.pio-container .pio-dialog{
+    top: -2em;
+    left: 1em;
+    right: 1em;
+    opacity: 0;
+    z-index: -1;
+    font-size: .8em;
+    background: #fff;
+    padding: .75em 1em;
+    border-radius: 1em;
+    visibility: hidden;
+    position: absolute;
+    word-break: break-all;
+    border: 1px solid #eee;
+    transition: opacity .3s, visibility .3s;
+}
+.pio-container .pio-dialog.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+#pio{ vertical-align: middle }
+
+@media screen and (max-width: 768px){
+    #pio{ width: 8em }
+    .pio-container{ pointer-events: none }
+    .pio-container.hidden, .pio-action, .pio-dialog{ display: none }
+}
+ 
+ 

@@ -1,0 +1,1816 @@
+
+  <!DOCTYPE html>
+  <html id="" class="">
+    <!-- OriginalSrc: https://bbs.sumisora.net/read.php?tid=10914751&fpage=8 -->
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <title>《俺たちに翼はない》脚本加密算法分析|【汉化破解研讨室】|【游戏汉化交流区】 - 『澄空学园』 GalGame专题网</title>
+      
+
+<link rel="stylesheet" type="text/css" href="assets/1570953341-5f21d2d0f0e14c54e3e080ff47c8ec08.css" referrerpolicy="no-referrer">
+<link type="text/css" href="assets/1570953341-2f10d407050ab6b2185fb483267feb32.css" rel="stylesheet" referrerpolicy="no-referrer">
+<link href="assets/1570953341-6ea61090578ddc8e91dc9b26707cebc8.css" rel="stylesheet" type="text/css" referrerpolicy="no-referrer">
+<link rel="stylesheet" type="text/css" href="assets/1570953341-46d427da9cafb653c4ed606490c99b3a.css" referrerpolicy="no-referrer">
+
+
+<style class="darkreader darkreader--fallback" media="screen"></style>
+<style class="darkreader darkreader--text" media="screen"></style>
+<style class="darkreader darkreader--invert" media="screen"></style>
+<style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}</style>
+<style class="darkreader darkreader--user-agent" media="screen">html {
+    background-color: #191a1b !important;
+}
+html, body, input, textarea, select, button {
+    background-color: #191a1b;
+}
+html, body, input, textarea, select, button {
+    border-color: #5a5956;
+    color: #f0ebe2;
+}
+a {
+    color: #4791e7;
+}
+table {
+    border-color: #4f4e4c;
+}
+::placeholder {
+    color: #bfb9ac;
+}
+::selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+::-moz-selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #565a0f !important;
+    color: #f0ebe2 !important;
+}
+::-webkit-scrollbar {
+    background-color: #1d1f1f;
+    color: #cbc5b9;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #2c2d2d;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #343636;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #404142;
+}
+::-webkit-scrollbar-corner {
+    background-color: #191a1b;
+}
+* {
+    scrollbar-color: #2c2d2d #1d1f1f;
+}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css"> 
+.tr3 td,.tr3 th{border-right:1px solid #D5E5E8;}
+.y-style{text-align:center;}
+.tr1 th{border-right:1px solid #D5E5E8;}
+.tr1 td.td1{border-left:0}
+ 
+
+.signature img { max-height:250px !important; }
+</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--override" media="screen">.jfk-bubble {
+    background-color: #000000 !important;
+}
+.vimvixen-hint {
+    background-color: #765500 !important;
+    border-color: #d5b22e !important;
+    color: #f9edcc !important;
+}</style>
+<style type="text/css">@keyframes fadeInOpacity{0%{opacity:0}to{opacity:1}}:hover>*>.fbvd--wrapper{animation-name:fadeInOpacity;animation-duration:.3s;opacity:1}.fbvd--wrapper{position:absolute;top:10px;left:10px;opacity:0;text-align:center;margin:0;z-index:5}.fbvd--wrapper a{background: url("") no-repeat 3px 4.55px; background-color: #fff; display:inline-block;font:700 14px Helvetica,Arial,sans-serif;color:#4b4f56;text-decoration:none;vertical-align:middle;padding:0px 8px 0px;margin-right:8px;border-radius:2px; line-height: 22px; padding-left:19px; border: 1px solid #e7e7e7; background-size: 13px}.fbvd--wrapper a:last-child{margin-right:0}.fbvd--wrapper a:hover{text-decoration:none}.fbvd--wrapper a:focus{box-shadow:0 0 1px 2px rgba(88,144,255,.75),0 1px 1px rgba(0,0,0,.15);outline:none}.fbvd--wrapper b{font-size:13px;position:relative;top:1px;color:#3b5998;font-weight:400}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+
+      <style class="mx-wc-style">
+        .mx-wc-main img {max-width: 100%;}
+        .mx-wc-main{
+          box-sizing: content-box;
+          background-color: rgb(25, 26, 27) !important;
+          margin: 0 auto;
+          margin-top: 20px;
+          max-width: 1349px;
+        }
+        @media (min-width: 768px) {
+          .mx-wc-main { padding: 15px 15px 80px 15px }
+        }
+        @media (max-width: 767px) {
+          .mx-wc-main { padding: 15px 3px 80px 3px }
+        }
+  
+      </style>
+    </head>
+    <body style="background-color: #ffffff !important; min-height: 100%; height: auto; position: static !important; overflow: auto !important; padding-bottom: 0px !important;" id="" class="">
+      <div class="mx-wc-main">
+        <div id="wrapA" class="mx-wc-selected-elem mx-wc-1570953341" style="display: block; float: none !important; position: relative !important; top: 0px !important; left: 0px !important; margin: 0px !important; flex: unset !important; width: 100% !important; max-width: 100% !important; box-sizing: border-box !important;">
+
+<div id="header">
+<div class="toptool tar">	<span>
+	<a href="https://bbs.sumisora.net/read.php?tid=10914751&amp;fpage=8&amp;skinco=simple" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">手机版</a>
+
+	| <a style="cursor:pointer;" id="td_skin" data-mx-warn="Empty URL">风格切换<img src="assets/1570953341-5c8e409588b73ce4284cf5b9bd619e15.gif"></a>
+	| <a href="https://bbs.sumisora.net/read.php?tid=10894912" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">学生手册</a>
+	</span>
+</div>
+<table cellspacing="0" cellpadding="0" align="center" width="100%">
+<tbody><tr>
+	<td class="banner"><a href="https://bbs.sumisora.net/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img id="forumlogo" src="assets/1570953341-7ac78a0e1e3ce795251288b0c8bd4b1b.png"></a></td>
+	<td class="banner" id="banner" align="right"></td>
+</tr>
+<tr><td align="center" height="1" colspan="2"></td></tr>
+</tbody></table>
+<div id="h_guide" class="guide" colspan="2"><span class="s3">»</span>
+
+	<span style="font-weight:bold" class="s3">silasu</span>&nbsp;<a href="https://bbs.sumisora.net/login.php?action=quit&amp;verify=034be2bd" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">退出</a> |
+	<a id="td_profile" href="https://bbs.sumisora.net/profile.php" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">控制面板</a>
+	| <a id="td_msg" href="https://bbs.sumisora.net/message.php" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+
+	短消息</a>
+
+	| <a id="td_sort" href="https://bbs.sumisora.net/sort.php" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">统计排行</a>
+
+	| <a href="https://bbs.sumisora.net/member.php" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">会员</a>
+
+	| <a href="https://bbs.sumisora.net/search.php" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">搜索</a>
+	| <a style="cursor:pointer;" id="td_hack" data-mx-warn="Empty URL">社区服务<img src="assets/1570953341-5c8e409588b73ce4284cf5b9bd619e15.gif"></a>
+
+	| <a href="https://bbs.sumisora.net/hack.php?H_name=galgamevote" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">GALGAME角色人气投票活动</a>
+
+ | <a href="https://bbs.sumisora.net/yume/polls/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">近期关注</a><!--[if lte IE 6]>
+ | <a href="read.php?tid=10955539" style="color:red">本站已停止支持IE6，请升级或更换浏览器</a>
+<![endif]-->
+</div>
+
+
+
+</div>
+<div id="main">
+
+
+
+
+<div class="t3" style="margin-top:8px"><table width="100%" cellspacing="0" cellpadding="0" align="center">
+	<tbody><tr><td class="b"><img src="assets/1570953341-ca4a91079181c2a5cb3514b2e5b5f035.gif" align="absmiddle"> <a href="https://bbs.sumisora.net/index.php" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">『澄空学园』</a> » <a href="https://bbs.sumisora.net/thread.php?fid=77" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">【游戏汉化交流区】</a> » <a href="https://bbs.sumisora.net/thread.php?fid=78&amp;page=8" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">【汉化破解研讨室】</a> » <a href="https://bbs.sumisora.net/read.php?tid=10914751" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">《俺たちに翼はない》脚本加密算法分析</a> <a href="https://bbs.sumisora.net/rss.php?tid=10914751" target="_blank" title="Rss订阅本帖最新内容" referrerpolicy="no-referrer" rel="noopener noreferrer"><img align="absmiddle" src="assets/1570953341-b4369735f1bfb33ab69477230a8ba635.png"></a></td></tr>
+</tbody></table></div>
+
+<!--ads begin-->
+
+<!--ads end-->
+<div class="t3"><table width="100%" align="center" cellspacing="0" cellpadding="0">
+	<tbody><tr><td align="left"><div class="fl"></div></td><td align="right" style="padding-bottom:.2em"><a href="https://bbs.sumisora.net/post.php?action=reply&amp;fid=78&amp;tid=10914751" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1570953341-132cb83b134d7ecd9b390389d489bc43.png"></a>
+
+<a href="https://bbs.sumisora.net/post.php?fid=78" style="margin-left:.5em" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1570953341-8cab7ee31ae503cf78e5410d40cec291.png" id="td_post"></a>
+
+</td></tr>
+</tbody></table></div>
+
+
+
+<form name="delatc" method="post">
+
+
+<div class="t" style="margin-bottom: 0px; border-bottom: 0px; --darkreader-inline-border-bottom: initial;" data-darkreader-inline-border-bottom=""><table cellspacing="0" cellpadding="0" width="100%">
+	<tbody><tr><th class="h"><strong class="fl w"><b>本页主题:</b> 《俺たちに翼はない》脚本加密算法分析</strong>
+	<span class="fr w"><a data-mx-warn="Empty URL">&nbsp;</a><a href="https://bbs.sumisora.net/job.php?action=previous&amp;fid=78&amp;tid=10914751&amp;fpage=8&amp;goto=previous" class="fn" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">上一主题</a> | <a href="https://bbs.sumisora.net/job.php?action=previous&amp;fid=78&amp;tid=10914751&amp;fpage=8&amp;goto=next" class="fn" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">下一主题</a> | <a href="javascript:scroll(0,999999)" title="底端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">底端</a></span> </th>
+	</tr>
+	<tr><td></td></tr>
+	<tr class="tr2"><td colspan="2" class="tar">
+
+		<a id="usetool" style="cursor:pointer" onclick="sendmsg('pw_ajax.php?action=usetool','',this.id)" data-mx-warn="Empty URL">[使用道具]</a>
+
+		<br></td>
+	</tr>
+	<tr><td></td></tr>
+</tbody></table></div>
+
+<a name="tpc" data-mx-warn="Empty URL"></a>
+<div class="t t2" style="border-top: 0px; --darkreader-inline-border-top: initial;" data-darkreader-inline-border-top=""><table cellspacing="0" cellpadding="0" width="100%" style="table-layout: fixed; border-top: 0px; --darkreader-inline-border-top: initial;" data-darkreader-inline-border-top="">
+	<tbody><tr class="tr1"><th style="width:20%" rowspan="2" class="r_two">
+
+		<img src="assets/1570953341-1cde2ccde0fc90dbe6db3784fc6ec383.gif" title="该用户目前不在线" align="absmiddle">
+
+<b>乙津夢</b>
+<div style="margin:.3em 0 .4em .2em"></div>
+<div class="user-pic"><table style="border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left=""><tbody><tr><td width="1">
+
+<a href="https://bbs.sumisora.net/profile.php?action=show&amp;uid=144048" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img class="pic" src="assets/1570953341-8d34d9f9280e4a12cd0f1fb4e54564d7.png" style="max-width:185px;max-height:200px;overflow:hidden" border="0"></a>
+
+</td><td style="vertical-align:top"><span id="sf_0"></span></td></tr></tbody></table>
+</div>
+		级别: <font color="#555555" data-darkreader-inline-color="" style="--darkreader-inline-color:#cfc9be;">学生会干事</font><br>
+		<img style="margin:.2em 0 .6em" src="assets/1570953341-87bc1a6e935264a57e50e0d513f23aa7.gif"><br>
+
+<span class="user-info2" id="showface_0">
+<span class="user-infoWrap2">
+
+
+精华:
+
+		<span class="s4">0</span>
+<br>
+发帖: <span class="s1 f9">2499</span><br>
+学分: <span class="s2 f9">367 点</span><br>
+澄空币: <span class="s3 f9">3062 KID</span><br>
+
+		GPA: <span class="s2 f9">3 点</span><br>
+
+		<span class="gray">注册时间:2007-10-11<br>
+		最后登录:2019-10-13 <br><br> 
+		<img src="assets/1570953341-d611e1ea09787be6459421daf5675717.png" title="星空的记忆汉化纪念勋章"> <img src="assets/1570953341-fc551661c6b14e66c09220c9e87cd6cd.png" title="星空的记忆EH汉化纪念勋章"> <img src="assets/1570953341-5c64e06b8133c772ea454d51a3a0a974.png" title="展望台の彼女"> <img src="assets/1570953341-2b7944623c26c12d2fd8f65e65d66f7a.gif" title="Favorite学部勋章"> <img src="assets/1570953341-b4ca2062fca1889e2ad39ccbcad77e2d.gif" title="乙津夢"> <img src="assets/1570953341-09974d1b907945d7b1563acb3052bcba.gif" title="10号フェイバリット10周年纪念章"> <br></span>
+		</span></span>
+		</th>
+		<th height="100%" class="r_one" valign="top" id="td_tpc" style="padding: 5px 15px 0px; border: 0px; width: 80%; overflow: hidden; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+			<div class="tiptop">
+			<span class="fl" style="white-space:nowrap;">
+			<a href="https://bbs.sumisora.net/post.php?action=quote&amp;fid=78&amp;tid=10914751&amp;pid=tpc&amp;article=0" onclick="return sendurl(this,4,event)" id="quote_tpc" title="引用回复这个帖子" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">引用</a> <a href="https://bbs.sumisora.net/post.php?action=modify&amp;fid=78&amp;tid=10914751&amp;pid=tpc&amp;article=0" id="modify_tpc" onclick="return sendurl(this,4,event)" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">编辑</a>
+			<a href="https://bbs.sumisora.net/message.php?action=write&amp;touid=144048" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">短信</a>
+
+			<a href="https://bbs.sumisora.net/operate.php?action=report&amp;tid=10914751&amp;pid=tpc" onclick="return sendurl(this,8)" id="report_tpc" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">举报</a>
+
+			<a href="https://bbs.sumisora.net/read.php?tid=10914751&amp;uid=144048" title="只看楼主的所有帖子" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">只看</a>
+
+			<a style="cursor:pointer;" onclick="copyUrl('tpc')" title="此楼地址" data-mx-warn="Empty URL">锚点</a>
+			</span>
+
+			<div class="c"></div>
+			</div>
+			<h1 id="subject_tpc" class="fl">&nbsp;《俺たちに翼はない》脚本加密算法分析</h1>
+			
+
+			<div id="p_tpc" class="c"></div>
+
+			<div id="mag_tpc" class="tpc_content"><h6 class="quote"><span class="s3 f12 fn">管理提醒：
+
+
+			</span></h6><blockquote class="blockquote">本帖被 clowwindy 从 【多媒体课堂】 移动到本区(2009-04-29)
+
+			</blockquote></div>
+
+<!--
+-->
+
+			<div class="tpc_content" id="read_tpc">前言：游戏汉化中的一个重要的步骤是对资源的解包以及封包。虽然现在有很多软件可以实现解包的功能，但要将资源修改后再封包的话，不熟悉解密的算法是无法写出逆算法的。脚本是游戏中的一个最重要的资源，负责控制游戏引擎的行为以及存储了游戏的文本。今天我就以《我们不是鸟人》为例说说我逆向的过程<br> <br>首先是老规矩，对CreateFileA下段，来到下面的地方：<br>00473839&nbsp;&nbsp; &gt; \6A 00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PUSH 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; /hTemplateFile = NULL<br>0047383B&nbsp;&nbsp; .&nbsp;&nbsp;68 80000000&nbsp;&nbsp; PUSH 80&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; |Attributes = NORMAL<br>00473840&nbsp;&nbsp; .&nbsp;&nbsp;6A 03&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PUSH 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; |Mode = OPEN_EXISTING<br>00473842&nbsp;&nbsp; .&nbsp;&nbsp;6A 00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PUSH 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; |pSecurity = NULL<br>00473844&nbsp;&nbsp; .&nbsp;&nbsp;6A 01&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PUSH 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; |ShareMode = FILE_SHARE_READ<br>00473846&nbsp;&nbsp; .&nbsp;&nbsp;8D95 D0FEFFFF LEA EDX,DWORD PTR SS:[EBP-130]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; |<br>0047384C&nbsp;&nbsp; .&nbsp;&nbsp;68 00000080&nbsp;&nbsp; PUSH 80000000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; |Access = GENERIC_READ<br>00473851&nbsp;&nbsp; .&nbsp;&nbsp;52&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH EDX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; |FileName= "I:\Program Files\Navel\壌偨偪偵梼偼側偄\SCRIPT.LPK"<br>00473852&nbsp;&nbsp; .&nbsp;&nbsp;FF15 B0D14E00 CALL DWORD PTR DS:[&lt;&amp;KERNEL32.CreateFile&gt;; \CreateFileA<br>00473858&nbsp;&nbsp; .&nbsp;&nbsp;8BD8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MOV EBX,EAX<br>0047385A&nbsp;&nbsp; .&nbsp;&nbsp;83FB FF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CMP EBX,-1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp;&nbsp;判断打开是否成功，句柄为-1则不跳<br>0047385D&nbsp;&nbsp; .&nbsp;&nbsp;895D E0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV DWORD PTR SS:[EBP-20],EBX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;保存句柄，我的机器上句柄为90<br>00473860&nbsp;&nbsp; .&nbsp;&nbsp;75 18&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; JNZ SHORT ORE_TUBA.0047387A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;句柄有效则跳转<br>00473862&nbsp;&nbsp; .&nbsp;&nbsp;B8 03000000&nbsp;&nbsp; MOV EAX,3<br>00473867&nbsp;&nbsp; .&nbsp;&nbsp;8B4D F4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV ECX,DWORD PTR SS:[EBP-C]<br>0047386A&nbsp;&nbsp; .&nbsp;&nbsp;64:890D 00000&gt;MOV DWORD PTR FS:[0],ECX<br>00473871&nbsp;&nbsp; .&nbsp;&nbsp;5F&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;POP EDI<br>00473872&nbsp;&nbsp; .&nbsp;&nbsp;5E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;POP ESI<br>00473873&nbsp;&nbsp; .&nbsp;&nbsp;5B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;POP EBX<br>00473874&nbsp;&nbsp; .&nbsp;&nbsp;8BE5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MOV ESP,EBP<br>00473876&nbsp;&nbsp; .&nbsp;&nbsp;5D&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;POP EBP<br>00473877&nbsp;&nbsp; .&nbsp;&nbsp;C2 1400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RETN 14<br>0047387A&nbsp;&nbsp; &gt;&nbsp;&nbsp;8B07&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MOV EAX,DWORD PTR DS:[EDI]<br>0047387C&nbsp;&nbsp; .&nbsp;&nbsp;56&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH ESI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp;&nbsp;文件名“SCRIPT.LPK"<br>0047387D&nbsp;&nbsp; .&nbsp;&nbsp;8BCF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MOV ECX,EDI<br>0047387F&nbsp;&nbsp; .&nbsp;&nbsp;FF50 5C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CALL DWORD PTR DS:[EAX+5C]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp;&nbsp;处理字符串的函数，将文件名转换为大写，解密的时候要用到<br>00473882&nbsp;&nbsp; .&nbsp;&nbsp;85C0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TEST EAX,EAX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp;&nbsp;判断是否成功<br>00473884&nbsp;&nbsp; .&nbsp;&nbsp;74 52&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; JE SHORT ORE_TUBA.004738D8<br>00473886&nbsp;&nbsp; .&nbsp;&nbsp;8B10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MOV EDX,DWORD PTR DS:[EAX]<br>00473888&nbsp;&nbsp; .&nbsp;&nbsp;8D4D 08&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LEA ECX,DWORD PTR SS:[EBP+8]<br>0047388B&nbsp;&nbsp; .&nbsp;&nbsp;51&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH ECX<br>0047388C&nbsp;&nbsp; .&nbsp;&nbsp;8D8D D0FEFFFF LEA ECX,DWORD PTR SS:[EBP-130]<br>00473892&nbsp;&nbsp; .&nbsp;&nbsp;53&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH EBX<br>00473893&nbsp;&nbsp; .&nbsp;&nbsp;51&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH ECX<br>00473894&nbsp;&nbsp; .&nbsp;&nbsp;8BC8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MOV ECX,EAX<br>00473896&nbsp;&nbsp; .&nbsp;&nbsp;FF52 04&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CALL DWORD PTR DS:[EDX+4]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;重要函数，跟进去看看<br>00473899&nbsp;&nbsp; .&nbsp;&nbsp;85C0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TEST EAX,EAX<br>0047389B&nbsp;&nbsp; .&nbsp;&nbsp;8945 E8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV DWORD PTR SS:[EBP-18],EAX<br><br>运气不错，第一次断下就是要打开脚本文件“SCRIPT.LPK”了。一直跟到call 00485D20这个地方，有点可疑，跟进去看看。<br>00485D20&nbsp;&nbsp; .&nbsp;&nbsp;55&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH EBP<br>00485D21&nbsp;&nbsp; .&nbsp;&nbsp;8BEC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MOV EBP,ESP<br>00485D23&nbsp;&nbsp; .&nbsp;&nbsp;6A FF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PUSH -1<br>00485D25&nbsp;&nbsp; .&nbsp;&nbsp;68 EBB44E00&nbsp;&nbsp; PUSH ORE_TUBA.004EB4EB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp;&nbsp;SE 处理程序安装<br>00485D2A&nbsp;&nbsp; .&nbsp;&nbsp;64:A1 0000000&gt;MOV EAX,DWORD PTR FS:[0]<br>00485D30&nbsp;&nbsp; .&nbsp;&nbsp;50&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH EAX<br>00485D31&nbsp;&nbsp; .&nbsp;&nbsp;64:8925 00000&gt;MOV DWORD PTR FS:[0],ESP<br>00485D38&nbsp;&nbsp; .&nbsp;&nbsp;81EC 54020000 SUB ESP,254<br>00485D3E&nbsp;&nbsp; .&nbsp;&nbsp;8B45 0C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV EAX,DWORD PTR SS:[EBP+C]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp;&nbsp;取句柄<br>00485D41&nbsp;&nbsp; .&nbsp;&nbsp;53&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH EBX<br>00485D42&nbsp;&nbsp; .&nbsp;&nbsp;56&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH ESI<br>00485D43&nbsp;&nbsp; .&nbsp;&nbsp;8B75 08&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV ESI,DWORD PTR SS:[EBP+8]<br>00485D46&nbsp;&nbsp; .&nbsp;&nbsp;57&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH EDI<br>00485D47&nbsp;&nbsp; .&nbsp;&nbsp;33FF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XOR EDI,EDI<br>00485D49&nbsp;&nbsp; .&nbsp;&nbsp;83F8 FF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CMP EAX,-1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp;&nbsp;判断句柄是否有效<br>00485D4C&nbsp;&nbsp; .&nbsp;&nbsp;8965 F0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV DWORD PTR SS:[EBP-10],ESP<br>00485D4F&nbsp;&nbsp; .&nbsp;&nbsp;8945 E4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV DWORD PTR SS:[EBP-1C],EAX<br>00485D52&nbsp;&nbsp; .&nbsp;&nbsp;897D D0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV DWORD PTR SS:[EBP-30],EDI<br>00485D55&nbsp;&nbsp; .&nbsp;&nbsp;897D FC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV DWORD PTR SS:[EBP-4],EDI<br>00485D58&nbsp;&nbsp; .&nbsp;&nbsp;75 4D&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; JNZ SHORT ORE_TUBA.00485DA7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;句柄有效则跳转<br>00485D5A&nbsp;&nbsp; .&nbsp;&nbsp;3BF7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CMP ESI,EDI<br>00485D5C&nbsp;&nbsp; .&nbsp;&nbsp;75 15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; JNZ SHORT ORE_TUBA.00485D73<br>00485D5E&nbsp;&nbsp; .&nbsp;&nbsp;8D45 A8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LEA EAX,DWORD PTR SS:[EBP-58]<br>00485D61&nbsp;&nbsp; .&nbsp;&nbsp;68 68604F00&nbsp;&nbsp; PUSH ORE_TUBA.004F6068&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; /Arg2 = 004F6068<br>00485D66&nbsp;&nbsp; .&nbsp;&nbsp;50&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH EAX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; |Arg1<br>00485D67&nbsp;&nbsp; .&nbsp;&nbsp;C745 A8 05000&gt;MOV DWORD PTR SS:[EBP-58],5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; |<br>00485D6E&nbsp;&nbsp; .&nbsp;&nbsp;E8 1F5F0500&nbsp;&nbsp; CALL ORE_TUBA.004DBC92&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; \ORE_TUBA.004DBC92<br>00485D73&nbsp;&nbsp; &gt;&nbsp;&nbsp;57&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH EDI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; /hTemplateFile<br>00485D74&nbsp;&nbsp; .&nbsp;&nbsp;68 80000000&nbsp;&nbsp; PUSH 80&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; |Attributes = NORMAL<br>00485D79&nbsp;&nbsp; .&nbsp;&nbsp;6A 03&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PUSH 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; |Mode = OPEN_EXISTING<br>00485D7B&nbsp;&nbsp; .&nbsp;&nbsp;57&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH EDI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; |pSecurity<br>00485D7C&nbsp;&nbsp; .&nbsp;&nbsp;6A 01&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PUSH 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; |ShareMode = FILE_SHARE_READ<br>00485D7E&nbsp;&nbsp; .&nbsp;&nbsp;68 00000080&nbsp;&nbsp; PUSH 80000000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; |Access = GENERIC_READ<br>00485D83&nbsp;&nbsp; .&nbsp;&nbsp;56&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH ESI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; |FileName<br>00485D84&nbsp;&nbsp; .&nbsp;&nbsp;FF15 B0D14E00 CALL DWORD PTR DS:[&lt;&amp;KERNEL32.CreateFile&gt;; \CreateFileA<br>00485D8A&nbsp;&nbsp; .&nbsp;&nbsp;83F8 FF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CMP EAX,-1<br>00485D8D&nbsp;&nbsp; .&nbsp;&nbsp;8945 E4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV DWORD PTR SS:[EBP-1C],EAX<br>00485D90&nbsp;&nbsp; .&nbsp;&nbsp;75 15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; JNZ SHORT ORE_TUBA.00485DA7<br>00485D92&nbsp;&nbsp; .&nbsp;&nbsp;8D4D B4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LEA ECX,DWORD PTR SS:[EBP-4C]<br>00485D95&nbsp;&nbsp; .&nbsp;&nbsp;68 68604F00&nbsp;&nbsp; PUSH ORE_TUBA.004F6068&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; /Arg2 = 004F6068<br>00485D9A&nbsp;&nbsp; .&nbsp;&nbsp;51&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH ECX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; |Arg1<br>00485D9B&nbsp;&nbsp; .&nbsp;&nbsp;C745 B4 03000&gt;MOV DWORD PTR SS:[EBP-4C],3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; |<br>00485DA2&nbsp;&nbsp; .&nbsp;&nbsp;E8 EB5E0500&nbsp;&nbsp; CALL ORE_TUBA.004DBC92&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; \ORE_TUBA.004DBC92<br>00485DA7&nbsp;&nbsp; &gt;&nbsp;&nbsp;8B4D E4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV ECX,DWORD PTR SS:[EBP-1C]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;取句柄<br>00485DAA&nbsp;&nbsp; .&nbsp;&nbsp;8D55 EC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LEA EDX,DWORD PTR SS:[EBP-14]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;缓冲区<br>00485DAD&nbsp;&nbsp; .&nbsp;&nbsp;57&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH EDI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; /pOverlapped<br>00485DAE&nbsp;&nbsp; .&nbsp;&nbsp;52&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH EDX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; |pBytesRead<br>00485DAF&nbsp;&nbsp; .&nbsp;&nbsp;8D45 C8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LEA EAX,DWORD PTR SS:[EBP-38]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; |<br>00485DB2&nbsp;&nbsp; .&nbsp;&nbsp;6A 08&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PUSH 8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; |BytesToRead = 8<br>00485DB4&nbsp;&nbsp; .&nbsp;&nbsp;50&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH EAX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; |Buffer<br>00485DB5&nbsp;&nbsp; .&nbsp;&nbsp;51&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH ECX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; |hFile<br>00485DB6&nbsp;&nbsp; .&nbsp;&nbsp;FF15 3CD24E00 CALL DWORD PTR DS:[&lt;&amp;KERNEL32.ReadFile&gt;] ; \ReadFile<br>00485DBC&nbsp;&nbsp; .&nbsp;&nbsp;85C0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TEST EAX,EAX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp;&nbsp;测试是否成功<br>00485DBE&nbsp;&nbsp; .&nbsp;&nbsp;75 15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; JNZ SHORT ORE_TUBA.00485DD5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;不为0则跳<br>00485DC0&nbsp;&nbsp; .&nbsp;&nbsp;8D55 AC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LEA EDX,DWORD PTR SS:[EBP-54]<br>00485DC3&nbsp;&nbsp; .&nbsp;&nbsp;68 68604F00&nbsp;&nbsp; PUSH ORE_TUBA.004F6068&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; /Arg2 = 004F6068<br>00485DC8&nbsp;&nbsp; .&nbsp;&nbsp;52&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH EDX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; |Arg1<br>00485DC9&nbsp;&nbsp; .&nbsp;&nbsp;C745 AC 07000&gt;MOV DWORD PTR SS:[EBP-54],7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; |<br>00485DD0&nbsp;&nbsp; .&nbsp;&nbsp;E8 BD5E0500&nbsp;&nbsp; CALL ORE_TUBA.004DBC92&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; \ORE_TUBA.004DBC92<br>00485DD5&nbsp;&nbsp; &gt;&nbsp;&nbsp;817D C8 4C504&gt;CMP DWORD PTR SS:[EBP-38],314B504C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp;&nbsp;跳到这里，判断文件开头四个字节是否”LPK1“<br>00485DDC&nbsp;&nbsp; .&nbsp;&nbsp;74 15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; JE SHORT ORE_TUBA.00485DF3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp;&nbsp;是的话跳转进行处理<br>00485DDE&nbsp;&nbsp; .&nbsp;&nbsp;8D45 C4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LEA EAX,DWORD PTR SS:[EBP-3C]<br>00485DE1&nbsp;&nbsp; .&nbsp;&nbsp;68 68604F00&nbsp;&nbsp; PUSH ORE_TUBA.004F6068&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; /Arg2 = 004F6068<br>00485DE6&nbsp;&nbsp; .&nbsp;&nbsp;50&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH EAX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; |Arg1<br>00485DE7&nbsp;&nbsp; .&nbsp;&nbsp;C745 C4 01000&gt;MOV DWORD PTR SS:[EBP-3C],1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; |<br>00485DEE&nbsp;&nbsp; .&nbsp;&nbsp;E8 9F5E0500&nbsp;&nbsp; CALL ORE_TUBA.004DBC92&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; \ORE_TUBA.004DBC92<br>00485DF3&nbsp;&nbsp; &gt;&nbsp;&nbsp;8D8D A0FEFFFF LEA ECX,DWORD PTR SS:[EBP-160]<br>00485DF9&nbsp;&nbsp; .&nbsp;&nbsp;6A 01&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PUSH 1<br>00485DFB&nbsp;&nbsp; .&nbsp;&nbsp;51&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH ECX<br>00485DFC&nbsp;&nbsp; .&nbsp;&nbsp;56&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH ESI<br>00485DFD&nbsp;&nbsp; .&nbsp;&nbsp;E8 0EEEFEFF&nbsp;&nbsp; CALL ORE_TUBA.00474C10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp;&nbsp;此处也是一个字符串复制的函数，经过一串比较后复制了”SCRIPT.LPK"字符串，但具体作用未知- -<br>00485E02&nbsp;&nbsp; .&nbsp;&nbsp;83C4 0C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ADD ESP,0C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp;&nbsp;平衡堆栈<br>00485E05&nbsp;&nbsp; .&nbsp;&nbsp;8D95 A0FDFFFF LEA EDX,DWORD PTR SS:[EBP-260]<br>00485E0B&nbsp;&nbsp; .&nbsp;&nbsp;8D85 A0FEFFFF LEA EAX,DWORD PTR SS:[EBP-160]<br>00485E11&nbsp;&nbsp; .&nbsp;&nbsp;52&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH EDX<br>00485E12&nbsp;&nbsp; .&nbsp;&nbsp;50&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH EAX<br>00485E13&nbsp;&nbsp; .&nbsp;&nbsp;E8 08F0FEFF&nbsp;&nbsp; CALL ORE_TUBA.00474E20&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp;&nbsp;又是处理文件名的函数，去掉"SCRIPT"的后缀名<br>00485E18&nbsp;&nbsp; .&nbsp;&nbsp;83C4 08&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ADD ESP,8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;平衡堆栈<br>00485E1B&nbsp;&nbsp; .&nbsp;&nbsp;8D8D A0FEFFFF LEA ECX,DWORD PTR SS:[EBP-160]<br>00485E21&nbsp;&nbsp; .&nbsp;&nbsp;51&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH ECX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; /StringOrChar<br>00485E22&nbsp;&nbsp; .&nbsp;&nbsp;FF15 58D34E00 CALL DWORD PTR DS:[&lt;&amp;USER32.CharUpperA&gt;] ; \CharUpperA<br>00485E28&nbsp;&nbsp; .&nbsp;&nbsp;8D95 A0FEFFFF LEA EDX,DWORD PTR SS:[EBP-160]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp;&nbsp;取“SCRIPT”的地址<br>00485E2E&nbsp;&nbsp; .&nbsp;&nbsp;52&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH EDX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; /String<br>00485E2F&nbsp;&nbsp; .&nbsp;&nbsp;FF15 FCD04E00 CALL DWORD PTR DS:[&lt;&amp;KERNEL32.lstrlenA&gt;] ; \lstrlenA<br>00485E35&nbsp;&nbsp; .&nbsp;&nbsp;8945 E0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV DWORD PTR SS:[EBP-20],EAX<br>00485E38&nbsp;&nbsp; .&nbsp;&nbsp;8D8405 9FFEFF&gt;LEA EAX,DWORD PTR SS:[EBP+EAX-161]<br>00485E3F&nbsp;&nbsp; .&nbsp;&nbsp;8D8D A0FEFFFF LEA ECX,DWORD PTR SS:[EBP-160]<br>00485E45&nbsp;&nbsp; .&nbsp;&nbsp;C745 DC 6BACB&gt;MOV DWORD PTR SS:[EBP-24],A5B9AC6B<br>00485E4C&nbsp;&nbsp; .&nbsp;&nbsp;C745 D4 E59D6&gt;MOV DWORD PTR SS:[EBP-2C],9A639DE5<br>00485E53&nbsp;&nbsp; .&nbsp;&nbsp;8945 B0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV DWORD PTR SS:[EBP-50],EAX<br>00485E56&nbsp;&nbsp; .&nbsp;&nbsp;894D BC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV DWORD PTR SS:[EBP-44],ECX<br>00485E59&nbsp;&nbsp; .&nbsp;&nbsp;8B45 DC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV EAX,DWORD PTR SS:[EBP-24]<br>00485E5C&nbsp;&nbsp; .&nbsp;&nbsp;8B5D D4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV EBX,DWORD PTR SS:[EBP-2C]<br>00485E5F&nbsp;&nbsp; .&nbsp;&nbsp;8B75 B0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV ESI,DWORD PTR SS:[EBP-50]<br>00485E62&nbsp;&nbsp; .&nbsp;&nbsp;8B7D BC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV EDI,DWORD PTR SS:[EBP-44]<br>00485E65&nbsp;&nbsp; .&nbsp;&nbsp;8B4D E0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV ECX,DWORD PTR SS:[EBP-20]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;上述都是一些初始化步骤，下面开始是第一个解密算法<br>00485E68&nbsp;&nbsp; &gt;&nbsp;&nbsp;3206&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XOR AL,BYTE PTR DS:[ESI]<br>00485E6A&nbsp;&nbsp; .&nbsp;&nbsp;321F&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XOR BL,BYTE PTR DS:[EDI]<br>00485E6C&nbsp;&nbsp; .&nbsp;&nbsp;C1C8 07&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ROR EAX,7<br>00485E6F&nbsp;&nbsp; .&nbsp;&nbsp;83C7 01&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ADD EDI,1<br>00485E72&nbsp;&nbsp; .&nbsp;&nbsp;83EE 01&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SUB ESI,1<br>00485E75&nbsp;&nbsp; .&nbsp;&nbsp;C1C3 07&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ROL EBX,7<br>00485E78&nbsp;&nbsp; .&nbsp;&nbsp;49&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DEC ECX<br>00485E79&nbsp;&nbsp; .^ 75 ED&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; JNZ SHORT ORE_TUBA.00485E68&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;循环6次<br>00485E7B&nbsp;&nbsp; .&nbsp;&nbsp;8945 EC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV DWORD PTR SS:[EBP-14],EAX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;保存eax，值为0xA8E7FAF1<br>00485E7E&nbsp;&nbsp; .&nbsp;&nbsp;895D D8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV DWORD PTR SS:[EBP-28],EBX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;保存ebx，值为0xA742F274<br>这里就是读取SCRIPT.LPK的内容然后进行判断了。首先从文件中读取8个字节，然后比较前面四个是否为“LPK1”，不是的话退出，是的话对密钥进行解密运算，那个算法写成C代码如下：<br><h6 class="quote">Quote:</h6><blockquote class="blockquote"><br>#include&lt;stdio.h&gt;<br>#define ror(m,n) (m&gt;&gt;n)|(m&lt;&lt;(8*sizeof(int)-n))<br>#define rol(m,n) (m&lt;&lt;n)|(m&gt;&gt;(8*sizeof(int)-n))<br><br>main()<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;char name[]="SCRIPT";<br>&nbsp;&nbsp;&nbsp;&nbsp;unsigned int a=0xa5b9ac6b,b=0x9a639de5;<br>&nbsp;&nbsp;&nbsp;&nbsp;printf("0x%08x&nbsp;&nbsp;0x%02x\n",a,b);<br>&nbsp;&nbsp;&nbsp;&nbsp;for(int i=0,j=5;i&lt;6;i++,j--)<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*(char*)&amp;a^=name[j];<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*(char*)&amp;b^=name<i>;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;a=ror(a,7);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b=rol(b,7);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;printf("0x%08x&nbsp;&nbsp;0x%08x\n",a,b);<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>&nbsp;&nbsp;&nbsp;&nbsp;printf("0x%08x&nbsp;&nbsp;0x%08x\n",a,b);<br>}<br></i></blockquote><i><br>但从文件中读取的后四个字节还不知道有什么用，先不管。下面继续单步跟过去：<br>00485E81&nbsp;&nbsp; .&nbsp;&nbsp;6A 3C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PUSH 3C<br>00485E83&nbsp;&nbsp; .&nbsp;&nbsp;E8 155B0500&nbsp;&nbsp; CALL ORE_TUBA.004DB99D&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp;&nbsp;分配一段内存，从下面的代码来看是一个结构，与解密的算法关系不大<br>00485E88&nbsp;&nbsp; .&nbsp;&nbsp;8BC8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MOV ECX,EAX<br>00485E8A&nbsp;&nbsp; .&nbsp;&nbsp;83C4 04&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ADD ESP,4<br>00485E8D&nbsp;&nbsp; .&nbsp;&nbsp;894D DC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV DWORD PTR SS:[EBP-24],ECX<br>00485E90&nbsp;&nbsp; .&nbsp;&nbsp;85C9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TEST ECX,ECX<br>00485E92&nbsp;&nbsp; .&nbsp;&nbsp;C645 FC 01&nbsp;&nbsp;&nbsp;&nbsp;MOV BYTE PTR SS:[EBP-4],1<br>00485E96&nbsp;&nbsp; .&nbsp;&nbsp;74 09&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; JE SHORT ORE_TUBA.00485EA1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp;&nbsp;判断上面分配内存是否成功，失败则跳转<br>00485E98&nbsp;&nbsp; .&nbsp;&nbsp;E8 A3010000&nbsp;&nbsp; CALL ORE_TUBA.00486040&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp;&nbsp;上面分配的内存的初始化代码<br>00485E9D&nbsp;&nbsp; .&nbsp;&nbsp;8BF8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MOV EDI,EAX<br>00485E9F&nbsp;&nbsp; .&nbsp;&nbsp;EB 02&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; JMP SHORT ORE_TUBA.00485EA3<br>00485EA1&nbsp;&nbsp; &gt;&nbsp;&nbsp;33FF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XOR EDI,EDI<br>00485EA3&nbsp;&nbsp; &gt;&nbsp;&nbsp;85FF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TEST EDI,EDI<br>00485EA5&nbsp;&nbsp; .&nbsp;&nbsp;C645 FC 00&nbsp;&nbsp;&nbsp;&nbsp;MOV BYTE PTR SS:[EBP-4],0<br>00485EA9&nbsp;&nbsp; .&nbsp;&nbsp;897D D0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV DWORD PTR SS:[EBP-30],EDI<br>00485EAC&nbsp;&nbsp; .&nbsp;&nbsp;75 15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; JNZ SHORT ORE_TUBA.00485EC3<br>00485EAE&nbsp;&nbsp; .&nbsp;&nbsp;8D55 A4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LEA EDX,DWORD PTR SS:[EBP-5C]<br>00485EB1&nbsp;&nbsp; .&nbsp;&nbsp;68 68604F00&nbsp;&nbsp; PUSH ORE_TUBA.004F6068&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; /Arg2 = 004F6068<br>00485EB6&nbsp;&nbsp; .&nbsp;&nbsp;52&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH EDX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; |Arg1<br>00485EB7&nbsp;&nbsp; .&nbsp;&nbsp;C745 A4 08000&gt;MOV DWORD PTR SS:[EBP-5C],8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; |<br>00485EBE&nbsp;&nbsp; .&nbsp;&nbsp;E8 CF5D0500&nbsp;&nbsp; CALL ORE_TUBA.004DBC92&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; \ORE_TUBA.004DBC92<br>00485EC3&nbsp;&nbsp; &gt;&nbsp;&nbsp;A1 483F5000&nbsp;&nbsp; MOV EAX,DWORD PTR DS:[503F48]<br>00485EC8&nbsp;&nbsp; .&nbsp;&nbsp;8B75 EC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV ESI,DWORD PTR SS:[EBP-14]<br>00485ECB&nbsp;&nbsp; .&nbsp;&nbsp;33C6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XOR EAX,ESI<br>00485ECD&nbsp;&nbsp; .&nbsp;&nbsp;8947 14&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV DWORD PTR DS:[EDI+14],EAX<br>00485ED0&nbsp;&nbsp; .&nbsp;&nbsp;8B45 D8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV EAX,DWORD PTR SS:[EBP-28]<br>00485ED3&nbsp;&nbsp; .&nbsp;&nbsp;8B15 503F5000 MOV EDX,DWORD PTR DS:[503F50]<br>00485ED9&nbsp;&nbsp; .&nbsp;&nbsp;8B75 CC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV ESI,DWORD PTR SS:[EBP-34]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;[ebp-34]存的就是刚才从SCRIPT.LPK中读的第二个双字的内容<br>00485EDC&nbsp;&nbsp; .&nbsp;&nbsp;33C2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XOR EAX,EDX<br>00485EDE&nbsp;&nbsp; .&nbsp;&nbsp;33F0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XOR ESI,EAX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;；与0xA742F274异或<br>00485EE0&nbsp;&nbsp; .&nbsp;&nbsp;8945 D8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV DWORD PTR SS:[EBP-28],EAX<br>00485EE3&nbsp;&nbsp; .&nbsp;&nbsp;8BC6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MOV EAX,ESI<br>00485EE5&nbsp;&nbsp; .&nbsp;&nbsp;81E6 FFFFFF00 AND ESI,0FFFFFF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;；舍去高四位<br>00485EEB&nbsp;&nbsp; .&nbsp;&nbsp;C1E8 18&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SHR EAX,18<br>00485EEE&nbsp;&nbsp; .&nbsp;&nbsp;8845 EA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV BYTE PTR SS:[EBP-16],AL<br>00485EF1&nbsp;&nbsp; .&nbsp;&nbsp;24 01&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AND AL,1<br>00485EF3&nbsp;&nbsp; .&nbsp;&nbsp;8975 E0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV DWORD PTR SS:[EBP-20],ESI<br>00485EF6&nbsp;&nbsp; .&nbsp;&nbsp;8845 EB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV BYTE PTR SS:[EBP-15],AL<br>00485EF9&nbsp;&nbsp; .&nbsp;&nbsp;74 09&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; JE SHORT ORE_TUBA.00485F04<br>00485EFB&nbsp;&nbsp; .&nbsp;&nbsp;C1E6 0B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SHL ESI,0B<br>00485EFE&nbsp;&nbsp; .&nbsp;&nbsp;83EE 08&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SUB ESI,8<br>00485F01&nbsp;&nbsp; .&nbsp;&nbsp;8975 E0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV DWORD PTR SS:[EBP-20],ESI<br>00485F04&nbsp;&nbsp; &gt;&nbsp;&nbsp;56&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH ESI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp;&nbsp;esi=将要从文件读取的大小<br>00485F05&nbsp;&nbsp; .&nbsp;&nbsp;E8 935A0500&nbsp;&nbsp; CALL ORE_TUBA.004DB99D&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp;&nbsp;分配空间<br>00485F0A&nbsp;&nbsp; .&nbsp;&nbsp;83C4 04&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ADD ESP,4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;平衡堆栈<br>00485F0D&nbsp;&nbsp; .&nbsp;&nbsp;8947 1C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV DWORD PTR DS:[EDI+1C],EAX<br>00485F10&nbsp;&nbsp; .&nbsp;&nbsp;85C0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TEST EAX,EAX<br>00485F12&nbsp;&nbsp; .&nbsp;&nbsp;75 15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; JNZ SHORT ORE_TUBA.00485F29<br>00485F14&nbsp;&nbsp; .&nbsp;&nbsp;8D4D C0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LEA ECX,DWORD PTR SS:[EBP-40]<br>00485F17&nbsp;&nbsp; .&nbsp;&nbsp;68 68604F00&nbsp;&nbsp; PUSH ORE_TUBA.004F6068&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; /Arg2 = 004F6068<br>00485F1C&nbsp;&nbsp; .&nbsp;&nbsp;51&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH ECX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; |Arg1<br>00485F1D&nbsp;&nbsp; .&nbsp;&nbsp;C745 C0 08000&gt;MOV DWORD PTR SS:[EBP-40],8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; |<br>00485F24&nbsp;&nbsp; .&nbsp;&nbsp;E8 695D0500&nbsp;&nbsp; CALL ORE_TUBA.004DBC92&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; \ORE_TUBA.004DBC92<br>00485F29&nbsp;&nbsp; &gt;&nbsp;&nbsp;8D55 EC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LEA EDX,DWORD PTR SS:[EBP-14]<br>00485F2C&nbsp;&nbsp; .&nbsp;&nbsp;6A 00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PUSH 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; /pOverlapped = NULL<br>00485F2E&nbsp;&nbsp; .&nbsp;&nbsp;52&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH EDX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; |pBytesRead<br>00485F2F&nbsp;&nbsp; .&nbsp;&nbsp;56&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH ESI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; |BytesToRead<br>00485F30&nbsp;&nbsp; .&nbsp;&nbsp;50&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH EAX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; |Buffer=0x00AE4008，记下这个地址<br>00485F31&nbsp;&nbsp; .&nbsp;&nbsp;8B45 E4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV EAX,DWORD PTR SS:[EBP-1C]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; |<br>00485F34&nbsp;&nbsp; .&nbsp;&nbsp;50&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH EAX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; |hFile<br>00485F35&nbsp;&nbsp; .&nbsp;&nbsp;FF15 3CD24E00 CALL DWORD PTR DS:[&lt;&amp;KERNEL32.ReadFile&gt;] ; \ReadFile<br>00485F3B&nbsp;&nbsp; .&nbsp;&nbsp;85C0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TEST EAX,EAX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp;&nbsp;判断是否成功<br>00485F3D&nbsp;&nbsp; .&nbsp;&nbsp;75 15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; JNZ SHORT ORE_TUBA.00485F54&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;成功则跳转<br>00485F3F&nbsp;&nbsp; .&nbsp;&nbsp;8D4D B8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LEA ECX,DWORD PTR SS:[EBP-48]<br>00485F42&nbsp;&nbsp; .&nbsp;&nbsp;68 68604F00&nbsp;&nbsp; PUSH ORE_TUBA.004F6068&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; /Arg2 = 004F6068<br>00485F47&nbsp;&nbsp; .&nbsp;&nbsp;51&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH ECX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; |Arg1<br>00485F48&nbsp;&nbsp; .&nbsp;&nbsp;C745 B8 07000&gt;MOV DWORD PTR SS:[EBP-48],7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; |<br>00485F4F&nbsp;&nbsp; .&nbsp;&nbsp;E8 3E5D0500&nbsp;&nbsp; CALL ORE_TUBA.004DBC92&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; \ORE_TUBA.004DBC92<br>00485F54&nbsp;&nbsp; &gt;&nbsp;&nbsp;8B57 1C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV EDX,DWORD PTR DS:[EDI+1C]<br>00485F57&nbsp;&nbsp; .&nbsp;&nbsp;C745 D4 85627&gt;MOV DWORD PTR SS:[EBP-2C],31746285<br>00485F5E&nbsp;&nbsp; .&nbsp;&nbsp;8955 DC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV DWORD PTR SS:[EBP-24],EDX<br>00485F61&nbsp;&nbsp; .&nbsp;&nbsp;8B45 D8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV EAX,DWORD PTR SS:[EBP-28]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;eax=前面算出来的第二个解密算子<br>00485F64&nbsp;&nbsp; .&nbsp;&nbsp;8B4D D4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV ECX,DWORD PTR SS:[EBP-2C]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;ecx=常数，用于解密<br>00485F67&nbsp;&nbsp; .&nbsp;&nbsp;8B5D E0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV EBX,DWORD PTR SS:[EBP-20]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;ebx=缓冲区大小<br>00485F6A&nbsp;&nbsp; .&nbsp;&nbsp;8B75 DC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV ESI,DWORD PTR SS:[EBP-24]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;esi=缓冲区地址<br>00485F6D&nbsp;&nbsp; .&nbsp;&nbsp;C1EB 02&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SHR EBX,2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;这里到下面的跳转都是对缓冲区的解密换算<br>00485F70&nbsp;&nbsp; &gt;&nbsp;&nbsp;C1C1 04&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ROL ECX,4<br>00485F73&nbsp;&nbsp; .&nbsp;&nbsp;3106&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XOR DWORD PTR DS:[ESI],EAX<br>00485F75&nbsp;&nbsp; .&nbsp;&nbsp;D3C8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ROR EAX,CL<br>00485F77&nbsp;&nbsp; .&nbsp;&nbsp;83C6 04&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ADD ESI,4<br>00485F7A&nbsp;&nbsp; .&nbsp;&nbsp;4B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DEC EBX<br>00485F7B&nbsp;&nbsp; .^ 75 F3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; JNZ SHORT ORE_TUBA.00485F70&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;跳回去继续循环<br>00485F7D&nbsp;&nbsp; .&nbsp;&nbsp;8A45 EB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV AL,BYTE PTR SS:[EBP-15]<br>00485F80&nbsp;&nbsp; .&nbsp;&nbsp;8B12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MOV EDX,DWORD PTR DS:[EDX]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp;&nbsp;[EDX]为解密后的第一个双字的内容，为0x1a2，会是啥呢，我猜测是脚本文件的个数<br><br>看到了没？[EBP-34]中存储的就是从文件中读出的第二个双字，将它与上面的算法算出来的b相异或就得到0x3f03，然后可以看出分配了0x3f03个字节的内存空间，再从文件中读出0x3f03个字节的内容。然后对读出的内容进行解密，写成C代码如下：<br><h6 class="quote">Quote:</h6><blockquote class="blockquote"><br>int data[]//缓冲区地址<br>int n=0x31746285;<br>int key=0xa742f274;<br>for(i=0;i&lt;0x3f03/4;i++)<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;n=rol(n,4);<br>&nbsp;&nbsp;&nbsp;&nbsp;data<i>^=key;<br>&nbsp;&nbsp;&nbsp;&nbsp;key=ror(key,*(char*)&amp;n);<br>}<br></i></blockquote><i><br>后面还有一段读取缓冲区的操作：<br>0048621F&nbsp;&nbsp; .&nbsp;&nbsp;8B3E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MOV EDI,DWORD PTR DS:[ESI]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp;&nbsp;读取缓冲区的数据，这个是什么，下面就知道<br>00486221&nbsp;&nbsp; .&nbsp;&nbsp;83C6 04&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ADD ESI,4<br>00486224&nbsp;&nbsp; .&nbsp;&nbsp;84C0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TEST AL,AL<br>00486226&nbsp;&nbsp; .&nbsp;&nbsp;8973 20&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV DWORD PTR DS:[EBX+20],ESI<br>00486229&nbsp;&nbsp; .&nbsp;&nbsp;74 1A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; JE SHORT ORE_TUBA.00486245<br>0048622B&nbsp;&nbsp; .&nbsp;&nbsp;8D4D EC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LEA ECX,DWORD PTR SS:[EBP-14]<br>0048622E&nbsp;&nbsp; .&nbsp;&nbsp;8D95 D0FEFFFF LEA EDX,DWORD PTR SS:[EBP-130]<br>00486234&nbsp;&nbsp; .&nbsp;&nbsp;51&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH ECX<br>00486235&nbsp;&nbsp; .&nbsp;&nbsp;52&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH EDX<br>00486236&nbsp;&nbsp; .&nbsp;&nbsp;56&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH ESI<br>00486237&nbsp;&nbsp; .&nbsp;&nbsp;8BCB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MOV ECX,EBX<br>00486239&nbsp;&nbsp; .&nbsp;&nbsp;C745 EC FFFFF&gt;MOV DWORD PTR SS:[EBP-14],-1<br>00486240&nbsp;&nbsp; .&nbsp;&nbsp;E8 BB020000&nbsp;&nbsp; CALL ORE_TUBA.00486500<br>00486245&nbsp;&nbsp; &gt;&nbsp;&nbsp;03F7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ADD ESI,EDI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;将前面读出的双子与缓冲区偏移地址相加，再保存起来<br>00486247&nbsp;&nbsp; &gt;&nbsp;&nbsp;8A45 10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV AL,BYTE PTR SS:[EBP+10]<br>0048624A&nbsp;&nbsp; .&nbsp;&nbsp;8973 2C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV DWORD PTR DS:[EBX+2C],ESI<br>再看看数据窗口中缓冲区的数据：<br>00AE4008&nbsp;&nbsp;A2 01 00 00 00 00 BF 29 00 00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;?....?.. <br>a<br>可以看出第一个双字是疑似脚本文件个数，中间两个字节作用未知，然后一个双字是一个偏移，用结构可以表达如下：<br><h6 class="quote">Quote:</h6><blockquote class="blockquote"><br>struct header{<br>&nbsp;&nbsp;&nbsp;&nbsp;DWORD numberoffile;<br>&nbsp;&nbsp;&nbsp;&nbsp;BYTE unknow[2];<br>&nbsp;&nbsp;&nbsp;&nbsp;DWORD offset;<br>……}；<br></blockquote><br>这个函数剩下的地方都没什么猛料，回到原来的函数后继续跟发现都是一些字符串的处理，一直跟到下面地址为0x004750eb的一个call，看到压栈的参数有一个为字符串“SCRIPT/LL_APP.SYS”，跟进去看看：<br>00472ED0&nbsp;&nbsp; .&nbsp;&nbsp;55&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH EBP<br>00472ED1&nbsp;&nbsp; .&nbsp;&nbsp;8BEC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MOV EBP,ESP<br>00472ED3&nbsp;&nbsp; .&nbsp;&nbsp;6A FF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PUSH -1<br>00472ED5&nbsp;&nbsp; .&nbsp;&nbsp;68 C0AB4E00&nbsp;&nbsp; PUSH ORE_TUBA.004EABC0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp;&nbsp;SE 处理程序安装<br>00472EDA&nbsp;&nbsp; .&nbsp;&nbsp;64:A1 0000000&gt;MOV EAX,DWORD PTR FS:[0]<br>00472EE0&nbsp;&nbsp; .&nbsp;&nbsp;50&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH EAX<br>00472EE1&nbsp;&nbsp; .&nbsp;&nbsp;64:8925 00000&gt;MOV DWORD PTR FS:[0],ESP<br>00472EE8&nbsp;&nbsp; .&nbsp;&nbsp;81EC 44020000 SUB ESP,244<br>00472EEE&nbsp;&nbsp; .&nbsp;&nbsp;8B45 08&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV EAX,DWORD PTR SS:[EBP+8]<br>00472EF1&nbsp;&nbsp; .&nbsp;&nbsp;53&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH EBX<br>00472EF2&nbsp;&nbsp; .&nbsp;&nbsp;56&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH ESI<br>00472EF3&nbsp;&nbsp; .&nbsp;&nbsp;57&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH EDI<br>00472EF4&nbsp;&nbsp; .&nbsp;&nbsp;8BD9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MOV EBX,ECX<br>00472EF6&nbsp;&nbsp; .&nbsp;&nbsp;8965 F0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV DWORD PTR SS:[EBP-10],ESP<br>00472EF9&nbsp;&nbsp; .&nbsp;&nbsp;6A 00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PUSH 0<br>00472EFB&nbsp;&nbsp; .&nbsp;&nbsp;8D8D B4FEFFFF LEA ECX,DWORD PTR SS:[EBP-14C]<br>00472F01&nbsp;&nbsp; .&nbsp;&nbsp;50&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH EAX<br>00472F02&nbsp;&nbsp; .&nbsp;&nbsp;51&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH ECX<br>00472F03&nbsp;&nbsp; .&nbsp;&nbsp;895D E4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV DWORD PTR SS:[EBP-1C],EBX<br>00472F06&nbsp;&nbsp; .&nbsp;&nbsp;C745 E8 FFFFF&gt;MOV DWORD PTR SS:[EBP-18],-1<br>00472F0D&nbsp;&nbsp; .&nbsp;&nbsp;C745 FC 00000&gt;MOV DWORD PTR SS:[EBP-4],0<br>00472F14&nbsp;&nbsp; .&nbsp;&nbsp;E8 A71A0000&nbsp;&nbsp; CALL ORE_TUBA.004749C0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp;&nbsp;处理字符串<br>00472F19&nbsp;&nbsp; .&nbsp;&nbsp;83C4 0C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ADD ESP,0C<br>00472F1C&nbsp;&nbsp; .&nbsp;&nbsp;8945 EC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV DWORD PTR SS:[EBP-14],EAX<br>00472F1F&nbsp;&nbsp; .&nbsp;&nbsp;85C0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TEST EAX,EAX<br>00472F21&nbsp;&nbsp; .&nbsp;&nbsp;75 15&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; JNZ SHORT ORE_TUBA.00472F38<br>00472F23&nbsp;&nbsp; .&nbsp;&nbsp;8D55 CC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LEA EDX,DWORD PTR SS:[EBP-34]<br>00472F26&nbsp;&nbsp; .&nbsp;&nbsp;68 68604F00&nbsp;&nbsp; PUSH ORE_TUBA.004F6068&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; /Arg2 = 004F6068<br>00472F2B&nbsp;&nbsp; .&nbsp;&nbsp;52&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH EDX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; |Arg1<br>00472F2C&nbsp;&nbsp; .&nbsp;&nbsp;C745 CC 05000&gt;MOV DWORD PTR SS:[EBP-34],5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; |<br>00472F33&nbsp;&nbsp; .&nbsp;&nbsp;E8 5A8D0600&nbsp;&nbsp; CALL ORE_TUBA.004DBC92&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; \ORE_TUBA.004DBC92<br>00472F38&nbsp;&nbsp; &gt;&nbsp;&nbsp;8B35 B0D14E00 MOV ESI,DWORD PTR DS:[&lt;&amp;KERNEL32.CreateF&gt;;&nbsp;&nbsp;kernel32.CreateFileA<br>00472F3E&nbsp;&nbsp; .&nbsp;&nbsp;6A 00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PUSH 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; /hTemplateFile = NULL<br>00472F40&nbsp;&nbsp; .&nbsp;&nbsp;68 80000000&nbsp;&nbsp; PUSH 80&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; |Attributes = NORMAL<br>00472F45&nbsp;&nbsp; .&nbsp;&nbsp;6A 03&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PUSH 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; |Mode = OPEN_EXISTING<br>00472F47&nbsp;&nbsp; .&nbsp;&nbsp;6A 00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PUSH 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; |pSecurity = NULL<br>00472F49&nbsp;&nbsp; .&nbsp;&nbsp;6A 01&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PUSH 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; |ShareMode = FILE_SHARE_READ<br>00472F4B&nbsp;&nbsp; .&nbsp;&nbsp;8D85 B4FEFFFF LEA EAX,DWORD PTR SS:[EBP-14C]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; |<br>00472F51&nbsp;&nbsp; .&nbsp;&nbsp;68 00000080&nbsp;&nbsp; PUSH 80000000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; |Access = GENERIC_READ<br>00472F56&nbsp;&nbsp; .&nbsp;&nbsp;50&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH EAX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; |FileName="I:\Program Files\Navel\壌偨偪偵梼偼側偄\SCRIPT\LL_APP.SYS"<br>00472F57&nbsp;&nbsp; .&nbsp;&nbsp;FFD6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CALL ESI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; \CreateFileA<br>00472F59&nbsp;&nbsp; .&nbsp;&nbsp;8BF8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MOV EDI,EAX<br>00472F5B&nbsp;&nbsp; .&nbsp;&nbsp;83FF FF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CMP EDI,-1<br>00472F5E&nbsp;&nbsp; .&nbsp;&nbsp;897D E8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV DWORD PTR SS:[EBP-18],EDI<br>00472F61&nbsp;&nbsp; .&nbsp;&nbsp;74 7E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; JE SHORT ORE_TUBA.00472FE1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;跳转<br><br>这个打开一个不存在的文件，但看文件名应该猜到，这个就是解密后的脚本文件了。但由于现在文件还不存在，所以会跳到后面的代码继续执行,一开始还是一些字符串处理的流程,然后到了0x0047310d的一个call,跟进去看看,一开始是一个嵌套的循环,处理字符串的.循环后出来到了下面一个call<br>00486840&nbsp;&nbsp; .&nbsp;&nbsp;81EC 04010000 SUB ESP,104&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;抬高堆栈<br>00486846&nbsp;&nbsp; .&nbsp;&nbsp;56&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH ESI<br>00486847&nbsp;&nbsp; .&nbsp;&nbsp;8BF1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MOV ESI,ECX<br>00486849&nbsp;&nbsp; .&nbsp;&nbsp;8A46 0D&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV AL,BYTE PTR DS:[ESI+D]<br>0048684C&nbsp;&nbsp; .&nbsp;&nbsp;84C0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TEST AL,AL<br>0048684E&nbsp;&nbsp; .&nbsp;&nbsp;74 6C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; JE SHORT ORE_TUBA.004868BC<br>00486850&nbsp;&nbsp; .&nbsp;&nbsp;8B8424 0C0100&gt;MOV EAX,DWORD PTR SS:[ESP+10C]<br>00486857&nbsp;&nbsp; .&nbsp;&nbsp;8D4C24 04&nbsp;&nbsp;&nbsp;&nbsp; LEA ECX,DWORD PTR SS:[ESP+4]<br>0048685B&nbsp;&nbsp; .&nbsp;&nbsp;50&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH EAX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; /String2<br>0048685C&nbsp;&nbsp; .&nbsp;&nbsp;51&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH ECX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; |String1<br>0048685D&nbsp;&nbsp; .&nbsp;&nbsp;FF15 00D14E00 CALL DWORD PTR DS:[&lt;&amp;KERNEL32.lstrcpyA&gt;] ; \lstrcpyA<br>00486863&nbsp;&nbsp; .&nbsp;&nbsp;8D5424 04&nbsp;&nbsp;&nbsp;&nbsp; LEA EDX,DWORD PTR SS:[ESP+4]<br>00486867&nbsp;&nbsp; .&nbsp;&nbsp;52&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH EDX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; /StringOrChar<br>00486868&nbsp;&nbsp; .&nbsp;&nbsp;FF15 54D34E00 CALL DWORD PTR DS:[&lt;&amp;USER32.CharLowerA&gt;] ; \CharLowerA<br>0048686E&nbsp;&nbsp; .&nbsp;&nbsp;8A4E 24&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV CL,BYTE PTR DS:[ESI+24]<br>00486871&nbsp;&nbsp; .&nbsp;&nbsp;8B56 20&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV EDX,DWORD PTR DS:[ESI+20]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;[ESI+20]中的数据是0x00AE4012，而前面从文件中读取0x3f03字节的内容的缓冲区是0x00AE4008<br>00486874&nbsp;&nbsp; .&nbsp;&nbsp;8D4424 04&nbsp;&nbsp;&nbsp;&nbsp; LEA EAX,DWORD PTR SS:[ESP+4]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp;&nbsp;取“ll_app.sys”地址<br>00486878&nbsp;&nbsp; .&nbsp;&nbsp;6A 00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PUSH 0<br>0048687A&nbsp;&nbsp; .&nbsp;&nbsp;50&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH EAX<br>0048687B&nbsp;&nbsp; .&nbsp;&nbsp;51&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH ECX<br>0048687C&nbsp;&nbsp; .&nbsp;&nbsp;52&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH EDX<br>0048687D&nbsp;&nbsp; .&nbsp;&nbsp;E8 DEC30400&nbsp;&nbsp; CALL ORE_TUBA.004D2C60&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp;&nbsp;又是一个处理字符串的call<br>然后一直单步到下面这个call:<br>00486898&nbsp;&nbsp; .&nbsp;&nbsp;51&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH ECX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; /Arg5<br>00486899&nbsp;&nbsp; .&nbsp;&nbsp;8B8C24 180100&gt;MOV ECX,DWORD PTR SS:[ESP+118]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; |<br>004868A0&nbsp;&nbsp; .&nbsp;&nbsp;52&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH EDX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; |Arg4<br>004868A1&nbsp;&nbsp; .&nbsp;&nbsp;8B9424 180100&gt;MOV EDX,DWORD PTR SS:[ESP+118]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; |<br>004868A8&nbsp;&nbsp; .&nbsp;&nbsp;51&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH ECX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; |Arg3<br>004868A9&nbsp;&nbsp; .&nbsp;&nbsp;52&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH EDX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; |Arg2<br>004868AA&nbsp;&nbsp; .&nbsp;&nbsp;50&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH EAX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; |Arg1<br>004868AB&nbsp;&nbsp; .&nbsp;&nbsp;8BCE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MOV ECX,ESI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; |<br>004868AD&nbsp;&nbsp; .&nbsp;&nbsp;E8 5E000000&nbsp;&nbsp; CALL ORE_TUBA.00486910&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; \重要，跟进去看看，发现又是一个嵌套循环,循环完了后又有一个call,跟进去后又是一个call……再进去后，哈哈，终于到达目标了<br>00486780&nbsp;&nbsp;/$&nbsp;&nbsp;8B41 38&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV EAX,DWORD PTR DS:[ECX+38]<br>00486783&nbsp;&nbsp;|.&nbsp;&nbsp;56&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH ESI<br>00486784&nbsp;&nbsp;|.&nbsp;&nbsp;85C0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TEST EAX,EAX<br>00486786&nbsp;&nbsp;|.&nbsp;&nbsp;57&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH EDI<br>00486787&nbsp;&nbsp;|.&nbsp;&nbsp;74 26&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; JE SHORT ORE_TUBA.004867AF<br>00486789&nbsp;&nbsp;|.&nbsp;&nbsp;8B5424 0C&nbsp;&nbsp;&nbsp;&nbsp; MOV EDX,DWORD PTR SS:[ESP+C]<br>0048678D&nbsp;&nbsp;|.&nbsp;&nbsp;8B7424 10&nbsp;&nbsp;&nbsp;&nbsp; MOV ESI,DWORD PTR SS:[ESP+10]<br>00486791&nbsp;&nbsp;|.&nbsp;&nbsp;8B7C24 14&nbsp;&nbsp;&nbsp;&nbsp; MOV EDI,DWORD PTR SS:[ESP+14]<br>00486795&nbsp;&nbsp;|.&nbsp;&nbsp;8B44D0 04&nbsp;&nbsp;&nbsp;&nbsp; MOV EAX,DWORD PTR DS:[EAX+EDX*8+4]<br>00486799&nbsp;&nbsp;|.&nbsp;&nbsp;8A50 1D&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV DL,BYTE PTR DS:[EAX+1D]<br>0048679C&nbsp;&nbsp;|.&nbsp;&nbsp;8816&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MOV BYTE PTR DS:[ESI],DL<br>0048679E&nbsp;&nbsp;|.&nbsp;&nbsp;8B50 04&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV EDX,DWORD PTR DS:[EAX+4]<br>004867A1&nbsp;&nbsp;|.&nbsp;&nbsp;8B70 14&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV ESI,DWORD PTR DS:[EAX+14]<br>004867A4&nbsp;&nbsp;|.&nbsp;&nbsp;8917&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MOV DWORD PTR DS:[EDI],EDX<br>004867A6&nbsp;&nbsp;|.&nbsp;&nbsp;8B40 08&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV EAX,DWORD PTR DS:[EAX+8]<br>004867A9&nbsp;&nbsp;|.&nbsp;&nbsp;8B5424 18&nbsp;&nbsp;&nbsp;&nbsp; MOV EDX,DWORD PTR SS:[ESP+18]<br>004867AD&nbsp;&nbsp;|.&nbsp;&nbsp;EB 5F&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; JMP SHORT ORE_TUBA.0048680E<br>004867AF&nbsp;&nbsp;|&gt;&nbsp;&nbsp;8A51 0F&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV DL,BYTE PTR DS:[ECX+F]<br>004867B2&nbsp;&nbsp;|.&nbsp;&nbsp;33C0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XOR EAX,EAX<br>004867B4&nbsp;&nbsp;|.&nbsp;&nbsp;84D2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TEST DL,DL<br>004867B6&nbsp;&nbsp;|.&nbsp;&nbsp;0F95C0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SETNE AL<br>004867B9&nbsp;&nbsp;|.&nbsp;&nbsp;83C0 02&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ADD EAX,2<br>004867BC&nbsp;&nbsp;|.&nbsp;&nbsp;8B71 2C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV ESI,DWORD PTR DS:[ECX+2C]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;esi=缓冲区内文件头的偏移起始地址<br>004867BF&nbsp;&nbsp;|.&nbsp;&nbsp;8D0485 010000&gt;LEA EAX,DWORD PTR DS:[EAX*4+1]<br>004867C6&nbsp;&nbsp;|.&nbsp;&nbsp;0FAF4424 0C&nbsp;&nbsp; IMUL EAX,DWORD PTR SS:[ESP+C]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;eax=文件头大小*文件的号数<br>004867CB&nbsp;&nbsp;|.&nbsp;&nbsp;8A1430&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MOV DL,BYTE PTR DS:[EAX+ESI]<br>004867CE&nbsp;&nbsp;|.&nbsp;&nbsp;03C6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ADD EAX,ESI<br>004867D0&nbsp;&nbsp;|.&nbsp;&nbsp;8B7424 10&nbsp;&nbsp;&nbsp;&nbsp; MOV ESI,DWORD PTR SS:[ESP+10]<br>004867D4&nbsp;&nbsp;|.&nbsp;&nbsp;40&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INC EAX<br>004867D5&nbsp;&nbsp;|.&nbsp;&nbsp;83C0 04&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ADD EAX,4<br>004867D8&nbsp;&nbsp;|.&nbsp;&nbsp;8816&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MOV BYTE PTR DS:[ESI],DL<br>004867DA&nbsp;&nbsp;|.&nbsp;&nbsp;8B70 FC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV ESI,DWORD PTR DS:[EAX-4]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp;&nbsp;目标文件数据在SCRIPT.LPK内的偏移，esi=0x15EDF<br>004867DD&nbsp;&nbsp;|.&nbsp;&nbsp;8A51 0C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV DL,BYTE PTR DS:[ECX+C]<br>004867E0&nbsp;&nbsp;|.&nbsp;&nbsp;84D2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TEST DL,DL<br>004867E2&nbsp;&nbsp;|.&nbsp;&nbsp;74 03&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; JE SHORT ORE_TUBA.004867E7<br>004867E4&nbsp;&nbsp;|.&nbsp;&nbsp;C1E6 0B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SHL ESI,0B<br>004867E7&nbsp;&nbsp;|&gt;&nbsp;&nbsp;8B7C24 14&nbsp;&nbsp;&nbsp;&nbsp; MOV EDI,DWORD PTR SS:[ESP+14]<br>004867EB&nbsp;&nbsp;|.&nbsp;&nbsp;8B10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MOV EDX,DWORD PTR DS:[EAX]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp;&nbsp;目标文件的大小，edx=0x19<br>004867ED&nbsp;&nbsp;|.&nbsp;&nbsp;53&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH EBX<br>004867EE&nbsp;&nbsp;|.&nbsp;&nbsp;8917&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MOV DWORD PTR DS:[EDI],EDX<br>004867F0&nbsp;&nbsp;|.&nbsp;&nbsp;8B5424 1C&nbsp;&nbsp;&nbsp;&nbsp; MOV EDX,DWORD PTR SS:[ESP+1C]<br>004867F4&nbsp;&nbsp;|.&nbsp;&nbsp;C702 00000000 MOV DWORD PTR DS:[EDX],0<br>004867FA&nbsp;&nbsp;|.&nbsp;&nbsp;8A59 0F&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV BL,BYTE PTR DS:[ECX+F]<br>从这一串代码中可以看出很多有用的信息，配合数据窗口中的数据，就能写出文件头的结构了：<br><h6 class="quote">Quote:</h6><blockquote class="blockquote"><br>struct fileheader{<br>&nbsp;&nbsp;&nbsp;&nbsp;BYTE type; //?<br>&nbsp;&nbsp;&nbsp;&nbsp;DWORD offset;<br>&nbsp;&nbsp;&nbsp;&nbsp;DWORD size;<br>&nbsp;&nbsp;&nbsp;&nbsp;DWORD unknow;<br>};<br></blockquote><br>我怎么能确定上面的结构是否正确？因为紧跟着这段代码的是如下的调用：<br>00486813&nbsp;&nbsp;|.&nbsp;&nbsp;6A 00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PUSH 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; /Origin = FILE_BEGIN<br>00486815&nbsp;&nbsp;|.&nbsp;&nbsp;6A 00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PUSH 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; |pOffsetHi = NULL<br>00486817&nbsp;&nbsp;|.&nbsp;&nbsp;56&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH ESI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; |OffsetLow=15EDF<br>00486818&nbsp;&nbsp;|.&nbsp;&nbsp;51&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH ECX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; |hFile<br>00486819&nbsp;&nbsp;|.&nbsp;&nbsp;FF15 50D24E00 CALL DWORD PTR DS:[&lt;&amp;KERNEL32.SetFilePoi&gt;; \SetFilePointer<br><br>这个函数这样就完了。继续<br>0048694E&nbsp;&nbsp;|.&nbsp;&nbsp;E8 2DFEFFFF&nbsp;&nbsp; CALL ORE_TUBA.00486780&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp;&nbsp;这个上面的函数<br>00486953&nbsp;&nbsp;|.&nbsp;&nbsp;85C0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TEST EAX,EAX<br>00486955&nbsp;&nbsp;|.&nbsp;&nbsp;74 0E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; JE SHORT ORE_TUBA.00486965<br>00486957&nbsp;&nbsp;|.&nbsp;&nbsp;5F&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;POP EDI<br>00486958&nbsp;&nbsp;|.&nbsp;&nbsp;5E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;POP ESI<br>00486959&nbsp;&nbsp;|.&nbsp;&nbsp;B8 06000000&nbsp;&nbsp; MOV EAX,6<br>0048695E&nbsp;&nbsp;|.&nbsp;&nbsp;5B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;POP EBX<br>0048695F&nbsp;&nbsp;|.&nbsp;&nbsp;8BE5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MOV ESP,EBP<br>00486961&nbsp;&nbsp;|.&nbsp;&nbsp;5D&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;POP EBP<br>00486962&nbsp;&nbsp;|.&nbsp;&nbsp;C2 1400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RETN 14<br>00486965&nbsp;&nbsp;|&gt;&nbsp;&nbsp;8B45 F8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV EAX,DWORD PTR SS:[EBP-8]<br>00486968&nbsp;&nbsp;|.&nbsp;&nbsp;85C0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TEST EAX,EAX<br>0048696A&nbsp;&nbsp;|.&nbsp;&nbsp;75 0E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; JNZ SHORT ORE_TUBA.0048697A<br>0048696C&nbsp;&nbsp;|.&nbsp;&nbsp;5F&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;POP EDI<br>0048696D&nbsp;&nbsp;|.&nbsp;&nbsp;5E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;POP ESI<br>0048696E&nbsp;&nbsp;|.&nbsp;&nbsp;B8 02000000&nbsp;&nbsp; MOV EAX,2<br>00486973&nbsp;&nbsp;|.&nbsp;&nbsp;5B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;POP EBX<br>00486974&nbsp;&nbsp;|.&nbsp;&nbsp;8BE5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MOV ESP,EBP<br>00486976&nbsp;&nbsp;|.&nbsp;&nbsp;5D&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;POP EBP<br>00486977&nbsp;&nbsp;|.&nbsp;&nbsp;C2 1400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RETN 14<br>0048697A&nbsp;&nbsp;|&gt;&nbsp;&nbsp;8B4D 10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV ECX,DWORD PTR SS:[EBP+10]<br>0048697D&nbsp;&nbsp;|.&nbsp;&nbsp;8B55 F4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV EDX,DWORD PTR SS:[EBP-C]<br>00486980&nbsp;&nbsp;|.&nbsp;&nbsp;6A 00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PUSH 0<br>00486982&nbsp;&nbsp;|.&nbsp;&nbsp;51&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH ECX<br>00486983&nbsp;&nbsp;|.&nbsp;&nbsp;52&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH EDX<br>00486984&nbsp;&nbsp;|.&nbsp;&nbsp;FFD6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CALL ESI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp;&nbsp;这个是分配缓冲区，edx就是刚才的0x19，这样就可以真正确定文件头的结构了<br>再经过一大串跳转，终于开始读数据了：<br>00486A51&nbsp;&nbsp;|.&nbsp;&nbsp;6A 00&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PUSH 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; /pOverlapped = NULL<br>00486A53&nbsp;&nbsp;|.&nbsp;&nbsp;50&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH EAX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; |pBytesRead<br>00486A54&nbsp;&nbsp;|.&nbsp;&nbsp;56&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH ESI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; |BytesToRead=0x19<br>00486A55&nbsp;&nbsp;|.&nbsp;&nbsp;51&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH ECX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; |Buffer=0015C198<br>00486A56&nbsp;&nbsp;|.&nbsp;&nbsp;8B4F 08&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV ECX,DWORD PTR DS:[EDI+8]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; |<br>00486A59&nbsp;&nbsp;|.&nbsp;&nbsp;51&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PUSH ECX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ; |hFile<br>00486A5A&nbsp;&nbsp;|.&nbsp;&nbsp;FF15 3CD24E00 CALL DWORD PTR DS:[&lt;&amp;KERNEL32.ReadFile&gt;] ; \ReadFile<br>读取文件成功后，下面终于到达我们的最终目标——解密过程了。解密过程分两段,第一段如下所示：<br>00486A78&nbsp;&nbsp;|&gt; \8B4D FC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV ECX,DWORD PTR SS:[EBP-4]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp;&nbsp;上面读入数据缓冲区地址<br>00486A7B&nbsp;&nbsp;|&gt;&nbsp;&nbsp;8A45 0F&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV AL,BYTE PTR SS:[EBP+F]<br>00486A7E&nbsp;&nbsp;|.&nbsp;&nbsp;84C0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TEST AL,AL<br>00486A80&nbsp;&nbsp;|.&nbsp;&nbsp;74 27&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; JE SHORT ORE_TUBA.00486AA9<br>00486A82&nbsp;&nbsp;|.&nbsp;&nbsp;85F6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TEST ESI,ESI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp;&nbsp;esi为读入数据的大小<br>00486A84&nbsp;&nbsp;|.&nbsp;&nbsp;8975 08&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV DWORD PTR SS:[EBP+8],ESI<br>00486A87&nbsp;&nbsp;|.&nbsp;&nbsp;74 20&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; JE SHORT ORE_TUBA.00486AA9<br>00486A89&nbsp;&nbsp;|&gt;&nbsp;&nbsp;8A01&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/MOV AL,BYTE PTR DS:[ECX]<br>00486A8B&nbsp;&nbsp;|.&nbsp;&nbsp;8AD0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|MOV DL,AL<br>00486A8D&nbsp;&nbsp;|.&nbsp;&nbsp;34 50&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |XOR AL,50<br>00486A8F&nbsp;&nbsp;|.&nbsp;&nbsp;80F2 FD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |XOR DL,0FD<br>00486A92&nbsp;&nbsp;|.&nbsp;&nbsp;80E2 0F&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |AND DL,0F<br>00486A95&nbsp;&nbsp;|.&nbsp;&nbsp;C0E2 04&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |SHL DL,4<br>00486A98&nbsp;&nbsp;|.&nbsp;&nbsp;C0E8 04&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |SHR AL,4<br>00486A9B&nbsp;&nbsp;|.&nbsp;&nbsp;02D0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|ADD DL,AL<br>00486A9D&nbsp;&nbsp;|.&nbsp;&nbsp;8811&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|MOV BYTE PTR DS:[ECX],DL<br>00486A9F&nbsp;&nbsp;|.&nbsp;&nbsp;8B45 08&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |MOV EAX,DWORD PTR SS:[EBP+8]<br>00486AA2&nbsp;&nbsp;|.&nbsp;&nbsp;41&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|INC ECX<br>00486AA3&nbsp;&nbsp;|.&nbsp;&nbsp;48&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|DEC EAX<br>00486AA4&nbsp;&nbsp;|.&nbsp;&nbsp;8945 08&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |MOV DWORD PTR SS:[EBP+8],EAX<br>00486AA7&nbsp;&nbsp;|.^ 75 E0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \JNZ SHORT ORE_TUBA.00486A89<br>转成c代码如下：<br><h6 class="quote">Quote:</h6><blockquote class="blockquote"><br>unsigned char data[];//缓冲区<br>unsigned char a,b;<br>for(int i=0;i&lt;0x19;i++)<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;a=data<i>;<br>&nbsp;&nbsp;&nbsp;&nbsp;b=a;<br>&nbsp;&nbsp;&nbsp;&nbsp;a^=0x50;<br>&nbsp;&nbsp;&nbsp;&nbsp;b^=0xfd;<br>&nbsp;&nbsp;&nbsp;&nbsp;b&amp;=0x0f;<br>&nbsp;&nbsp;&nbsp;&nbsp;b&lt;&lt;=4;<br>&nbsp;&nbsp;&nbsp;&nbsp;a&gt;&gt;=4;<br>&nbsp;&nbsp;&nbsp;&nbsp;b+=a;<br>&nbsp;&nbsp;&nbsp;&nbsp;data<i>=b;<br>}<br></i></i></blockquote><i><i><br><br>第二段解密过程为：<br>00486AC6&nbsp;&nbsp;|&gt; \8B47 14&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV EAX,DWORD PTR DS:[EDI+14]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;前面所算出来的第一个密钥，0xA8E7FAF1<br>00486AC9&nbsp;&nbsp;|.&nbsp;&nbsp;C745 F0 85627&gt;MOV DWORD PTR SS:[EBP-10],31746285&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp;&nbsp;立即数解密密钥<br>00486AD0&nbsp;&nbsp;|.&nbsp;&nbsp;8945 EC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV DWORD PTR SS:[EBP-14],EAX<br>00486AD3&nbsp;&nbsp;|.&nbsp;&nbsp;8B45 EC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV EAX,DWORD PTR SS:[EBP-14]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;eax=0xA8E7FAF1<br>00486AD6&nbsp;&nbsp;|.&nbsp;&nbsp;8B4D F0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV ECX,DWORD PTR SS:[EBP-10]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;ecx=0x31746285<br>00486AD9&nbsp;&nbsp;|.&nbsp;&nbsp;8B75 FC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV ESI,DWORD PTR SS:[EBP-4]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp;&nbsp;esi=0x0015C198，缓冲区地址<br>00486ADC&nbsp;&nbsp;|.&nbsp;&nbsp;8B5D 08&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MOV EBX,DWORD PTR SS:[EBP+8]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp;&nbsp;ebx=0x06，即为缓冲区大小，此时每次循环解密一个双字<br>00486ADF&nbsp;&nbsp;|&gt;&nbsp;&nbsp;C1C9 04&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /ROR ECX,4<br>00486AE2&nbsp;&nbsp;|.&nbsp;&nbsp;3106&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|XOR DWORD PTR DS:[ESI],EAX<br>00486AE4&nbsp;&nbsp;|.&nbsp;&nbsp;D3C0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|ROL EAX,CL<br>00486AE6&nbsp;&nbsp;|.&nbsp;&nbsp;83C6 04&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |ADD ESI,4<br>00486AE9&nbsp;&nbsp;|.&nbsp;&nbsp;4B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|DEC EBX<br>00486AEA&nbsp;&nbsp;|.^ 75 F3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; \JNZ SHORT ORE_TUBA.00486ADF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp;&nbsp;跳回去继续循环<br><br>这段代码跟前面的是不是很像，不过有些不一样，首先是解密的密钥用的是第一个不是用第二个，然后是循环移位的方向与前面的相反了，写成c代码如下：<br><h6 class="quote">Quote:</h6><blockquote class="blockquote"><br>int data[]//缓冲区地址<br>int n=0x31746285;<br>int key=0xa8e7faf1;;<br>for(i=0;i&lt;0x19/4;i++)<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;n=ror(n,4);<br>&nbsp;&nbsp;&nbsp;&nbsp;data<i>^=key;<br>&nbsp;&nbsp;&nbsp;&nbsp;key=rol(key,*(char*)&amp;n);<br>}<br></i></blockquote><i><br>好了，整个解密算法就完了。怎样知道答案对不对？用专门的解包软件（如crass）将脚本文件解密，用WinHex打开对应的文件然后对比一下就知道了。<br>另外，上述的解密过程一次解密一个双字的，所以最后剩下一个字节没有做任何操作。<br>剩下最后一个问题是，前面所说脚本文件的个数是0x1a2，这个怎样确定？由于有些脚本文件在游戏过程中才进行解密的，所以我用一个很笨的方法来确定：用软件解密脚本文件后，脚本文件总数418，即16进制的0x1a2.<br><br>限于篇幅，其他资源的解密过程就不贴了，原理都是一样的。<br><br>一直在网上想找关于galgame破解的文章，但除了CK上面的几篇其他地方都很少。所以我将自己的经验写出来，有这方面兴趣的同学可以参考一下~<div id="alert_tpc" style="color: gray; margin-top: 30px; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">[ 此帖被粉肠2047在2009-04-29 13:05重新编辑 ]</div></i></i></i></i></i></div><i><i><i>
+		</i></i></i></th>
+	</tr>
+	<tr class="tr1 r_one">
+		<th style="vertical-align: bottom; padding-left: 15px; border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+
+		<div id="w_tpc" class="c"></div>
+
+		<div><img src="assets/1570953341-ee75bbe39bae3a2e6fc29b9593dde416.png" align="absbottom"></div>
+		<div class="card" style="overflow:hidden;">
+			<table width="100%">
+				<tbody><tr>
+					<td id="ck_card_container_tpc">
+					<img src="assets/1570953341-250f699f9aa5f5d0803c05fca6bcaed2.png" width="224" border="0"> <img src="assets/1570953341-fadd7a20b74566145c6531b9145eb5f5.png" width="224" border="0"> <img src="assets/1570953341-f0294700c58a296cc96d12613cd4238a.png" width="224" border="0"> </td><td>
+				</td></tr>
+				
+			</tbody></table>
+		</div>
+
+
+		<div class="tipad"><span style="float:right">
+<a href="javascript:scroll(0,0)" title="顶端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">顶端</a> <a href="javascript:scroll(0,999999)" title="底端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">底端</a></span>
+			
+			<span class="gray"> 2009-04-29 12:48 | 
+	
+			</span>
+
+			<span><a class="s3" title="回复此楼" style="cursor:pointer;" onclick="postreply('回 楼主(乙津夢) 的帖子');" data-mx-warn="Empty URL">[楼 主]</a></span>
+
+		</div></th>
+	</tr></tbody></table>
+</div>
+
+<a name="2053774" data-mx-warn="Empty URL"></a>
+<div class="t t2"><table cellspacing="0" cellpadding="0" width="100%" style="table-layout: fixed; border-top: 0px; --darkreader-inline-border-top: initial;" data-darkreader-inline-border-top="">
+	<tbody><tr class="tr1"><th style="width:20%" rowspan="2" class="r_two">
+
+		<img src="assets/1570953341-1cde2ccde0fc90dbe6db3784fc6ec383.gif" title="该用户目前不在线" align="absmiddle">
+
+<b>恒の风</b>
+<div style="margin:.3em 0 .4em .2em">梦</div>
+<div class="user-pic"><table style="border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left=""><tbody><tr><td width="1">
+
+<a href="https://bbs.sumisora.net/profile.php?action=show&amp;uid=11323" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img class="pic" src="assets/1570953341-2e58d05323dec74c7c23889608fe5e2e.jpg" style="max-width:185px;max-height:200px;overflow:hidden" border="0"></a>
+
+</td><td style="vertical-align:top"><span id="sf_1"></span></td></tr></tbody></table>
+</div>
+		级别: <font color="#555555" data-darkreader-inline-color="" style="--darkreader-inline-color:#cfc9be;">学生会会长</font><br>
+		<img style="margin:.2em 0 .6em" src="assets/1570953341-0a01319a6cb0298e43987e75f6c15907.gif"><br>
+
+<span class="user-info2" id="showface_1">
+<span class="user-infoWrap2">
+
+
+精华:
+
+		<a href="https://bbs.sumisora.net/search.php?authorid=11323&amp;digest=1" target="_blank" class="s4 f9" referrerpolicy="no-referrer" rel="noopener noreferrer">2</a>
+<br>
+发帖: <span class="s1 f9">10451</span><br>
+学分: <span class="s2 f9">527 点</span><br>
+澄空币: <span class="s3 f9">2069 KID</span><br>
+
+		GPA: <span class="s2 f9">0 点</span><br>
+
+		<span class="gray">注册时间:2005-05-28<br>
+		最后登录:2019-10-12 <br><br> 
+		</span>
+		</span></span>
+		</th>
+		<th height="100%" class="r_one" valign="top" id="td_2053774" style="padding: 5px 15px 0px; border: 0px; width: 80%; overflow: hidden; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+			<div class="tiptop">
+			<span class="fl" style="white-space:nowrap;">
+			<a href="https://bbs.sumisora.net/post.php?action=quote&amp;fid=78&amp;tid=10914751&amp;pid=2053774&amp;article=1" onclick="return sendurl(this,4,event)" id="quote_2053774" title="引用回复这个帖子" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">引用</a> <a href="https://bbs.sumisora.net/post.php?action=modify&amp;fid=78&amp;tid=10914751&amp;pid=2053774&amp;article=1" id="modify_2053774" onclick="return sendurl(this,4,event)" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">编辑</a>
+			<a href="https://bbs.sumisora.net/message.php?action=write&amp;touid=11323" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">短信</a>
+
+			<a href="https://bbs.sumisora.net/operate.php?action=report&amp;tid=10914751&amp;pid=2053774" onclick="return sendurl(this,8)" id="report_2053774" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">举报</a>
+
+			<a href="https://bbs.sumisora.net/read.php?tid=10914751&amp;uid=11323" title="只看该作者的所有回复" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">只看</a>
+
+			<a style="cursor:pointer;" onclick="copyUrl('2053774')" title="此楼地址" data-mx-warn="Empty URL">锚点</a>
+			</span>
+
+			<div class="c"></div>
+			</div>
+			<h1 id="subject_2053774" class="fl">&nbsp;</h1>
+			
+
+			<div id="p_2053774" class="c"></div>
+
+<!--
+-->
+
+			<div class="tpc_content" id="read_2053774">粉肠……我觉得你有点发错区了……不是有汉化技术交流区吗……</div>
+		</th>
+	</tr>
+	<tr class="tr1 r_one">
+		<th style="vertical-align: bottom; padding-left: 15px; border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+
+		<div id="w_2053774" class="c"></div>
+
+		<div><img class="signature" src="assets/1570953341-f23b8ffd0b6b327441aa828c9cd3243d.gif" align="absbottom"></div>
+		<div class="signature" style="max-height:380px;maxHeight:380px; overflow:hidden;"><table width="100%"><tbody><tr><td>人生很短，请多珍惜，不要浪费在无谓的事情上</td><td></td></tr></tbody></table></div>
+
+		<div class="tipad"><span style="float:right">
+<a href="javascript:scroll(0,0)" title="顶端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">顶端</a> <a href="javascript:scroll(0,999999)" title="底端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">底端</a></span>
+			
+			<span class="gray"> 2009-04-29 12:57 | 
+	
+			</span>
+
+			<span><a class="s3" title="回复此楼" style="cursor:pointer;" onclick="postreply('回 1楼(恒の风) 的帖子');" data-mx-warn="Empty URL">1 楼</a></span>
+
+		</div></th>
+	</tr></tbody></table>
+</div>
+
+<a name="2053778" data-mx-warn="Empty URL"></a>
+<div class="t t2"><table cellspacing="0" cellpadding="0" width="100%" style="table-layout: fixed; border-top: 0px; --darkreader-inline-border-top: initial;" data-darkreader-inline-border-top="">
+	<tbody><tr class="tr1"><th style="width:20%" rowspan="2" class="r_two">
+
+		<img src="assets/1570953341-1cde2ccde0fc90dbe6db3784fc6ec383.gif" title="该用户目前不在线" align="absmiddle">
+
+<b>叉叉</b>
+<div style="margin:.3em 0 .4em .2em">“快点快点烧死他，快点快点烧死他”</div>
+<div class="user-pic"><table style="border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left=""><tbody><tr><td width="1">
+
+<a href="https://bbs.sumisora.net/profile.php?action=show&amp;uid=140208" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img class="pic" src="assets/1570953341-8c3f847e1051c00a5737b486af0e34a7.jpg" style="max-width:185px;max-height:200px;overflow:hidden" border="0"></a>
+
+</td><td style="vertical-align:top"><span id="sf_2"></span></td></tr></tbody></table>
+</div>
+		级别: <font color="#555555" data-darkreader-inline-color="" style="--darkreader-inline-color:#cfc9be;">澄空放送部</font><br>
+		<img style="margin:.2em 0 .6em" src="assets/1570953341-5e744f46ff57b95581c5eb5cc39615b8.gif"><br>
+
+<span class="user-info2" id="showface_2">
+<span class="user-infoWrap2">
+
+
+精华:
+
+		<span class="s4">0</span>
+<br>
+发帖: <span class="s1 f9">3371</span><br>
+学分: <span class="s2 f9">58 点</span><br>
+澄空币: <span class="s3 f9">217 KID</span><br>
+
+		GPA: <span class="s2 f9">0 点</span><br>
+
+		<span class="gray">注册时间:2007-09-12<br>
+		最后登录:2017-12-01 <br><br> 
+		<img src="assets/1570953341-0d37a19b834bd3003b54488bbfd9ff5a.gif" title="千贴纪念勋章"> <img src="assets/1570953341-f7d23f2374cb50e4c380eb990d9f6eb4.gif" title="1号学分纪念勋章"> <img src="assets/1570953341-d611e1ea09787be6459421daf5675717.png" title="星空的记忆汉化纪念勋章"> <img src="assets/1570953341-6ce665020727a82fe1f2adc5a39ea435.gif" title="3号学分纪念勋章"> <img src="assets/1570953341-98c7cc51c4fe5c09d28b0f6d64f33de6.gif" title="三千贴纪念勋章"> <img src="assets/1570953341-10186ca2cfdf99ebea095f161305d74e.gif" title="2号入学纪念勋章"> <br></span>
+		</span></span>
+		</th>
+		<th height="100%" class="r_one" valign="top" id="td_2053778" style="padding: 5px 15px 0px; border: 0px; width: 80%; overflow: hidden; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+			<div class="tiptop">
+			<span class="fl" style="white-space:nowrap;">
+			<a href="https://bbs.sumisora.net/post.php?action=quote&amp;fid=78&amp;tid=10914751&amp;pid=2053778&amp;article=2" onclick="return sendurl(this,4,event)" id="quote_2053778" title="引用回复这个帖子" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">引用</a> <a href="https://bbs.sumisora.net/post.php?action=modify&amp;fid=78&amp;tid=10914751&amp;pid=2053778&amp;article=2" id="modify_2053778" onclick="return sendurl(this,4,event)" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">编辑</a>
+			<a href="https://bbs.sumisora.net/message.php?action=write&amp;touid=140208" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">短信</a>
+
+			<a href="https://bbs.sumisora.net/operate.php?action=report&amp;tid=10914751&amp;pid=2053778" onclick="return sendurl(this,8)" id="report_2053778" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">举报</a>
+
+			<a href="https://bbs.sumisora.net/read.php?tid=10914751&amp;uid=140208" title="只看该作者的所有回复" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">只看</a>
+
+			<a style="cursor:pointer;" onclick="copyUrl('2053778')" title="此楼地址" data-mx-warn="Empty URL">锚点</a>
+			</span>
+
+			<div class="c"></div>
+			</div>
+			<h1 id="subject_2053778" class="fl">&nbsp;</h1>
+			
+
+			<div id="p_2053778" class="c"></div>
+
+<!--
+-->
+
+			<div class="tpc_content" id="read_2053778">肠姐姐你终于半只脚跨进去了...<br>恭喜坑男进阶技能习得...</div>
+		</th>
+	</tr>
+	<tr class="tr1 r_one">
+		<th style="vertical-align: bottom; padding-left: 15px; border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+
+		<div id="w_2053778" class="c"></div>
+
+		<div><img src="assets/1570953341-ee75bbe39bae3a2e6fc29b9593dde416.png" align="absbottom"></div>
+		<div class="card" style="overflow:hidden;">
+			<table width="100%">
+				<tbody><tr>
+					<td id="ck_card_container_2053778">
+					<img src="assets/1570953341-2cad85701947bf7867ab40be2316f5f5.png" width="224" border="0"> <img src="assets/1570953341-af100c4df78524200cceecea4e119cd7.png" width="224" border="0"> <img src="assets/1570953341-f0294700c58a296cc96d12613cd4238a.png" width="224" border="0"> </td><td>
+				</td></tr>
+				
+			</tbody></table>
+		</div>
+
+
+		<div class="tipad"><span style="float:right">
+<a href="javascript:scroll(0,0)" title="顶端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">顶端</a> <a href="javascript:scroll(0,999999)" title="底端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">底端</a></span>
+			
+			<span class="gray"> 2009-04-29 13:00 | 
+	
+			</span>
+
+			<span><a class="s3" title="回复此楼" style="cursor:pointer;" onclick="postreply('回 2楼(叉叉) 的帖子');" data-mx-warn="Empty URL">2 楼</a></span>
+
+		</div></th>
+	</tr></tbody></table>
+</div>
+
+<a name="2053780" data-mx-warn="Empty URL"></a>
+<div class="t t2"><table cellspacing="0" cellpadding="0" width="100%" style="table-layout: fixed; border-top: 0px; --darkreader-inline-border-top: initial;" data-darkreader-inline-border-top="">
+	<tbody><tr class="tr1"><th style="width:20%" rowspan="2" class="r_two">
+
+		<img src="assets/1570953341-1cde2ccde0fc90dbe6db3784fc6ec383.gif" title="该用户目前不在线" align="absmiddle">
+
+<b>乙津夢</b>
+<div style="margin:.3em 0 .4em .2em"></div>
+<div class="user-pic"><table style="border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left=""><tbody><tr><td width="1">
+
+<a href="https://bbs.sumisora.net/profile.php?action=show&amp;uid=144048" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img class="pic" src="assets/1570953341-8d34d9f9280e4a12cd0f1fb4e54564d7.png" style="max-width:185px;max-height:200px;overflow:hidden" border="0"></a>
+
+</td><td style="vertical-align:top"><span id="sf_3"></span></td></tr></tbody></table>
+</div>
+		级别: <font color="#555555" data-darkreader-inline-color="" style="--darkreader-inline-color:#cfc9be;">学生会干事</font><br>
+		<img style="margin:.2em 0 .6em" src="assets/1570953341-87bc1a6e935264a57e50e0d513f23aa7.gif"><br>
+
+<span class="user-info2" id="showface_3">
+<span class="user-infoWrap2">
+
+
+精华:
+
+		<span class="s4">0</span>
+<br>
+发帖: <span class="s1 f9">2499</span><br>
+学分: <span class="s2 f9">367 点</span><br>
+澄空币: <span class="s3 f9">3062 KID</span><br>
+
+		GPA: <span class="s2 f9">3 点</span><br>
+
+		<span class="gray">注册时间:2007-10-11<br>
+		最后登录:2019-10-13 <br><br> 
+		<img src="assets/1570953341-d611e1ea09787be6459421daf5675717.png" title="星空的记忆汉化纪念勋章"> <img src="assets/1570953341-fc551661c6b14e66c09220c9e87cd6cd.png" title="星空的记忆EH汉化纪念勋章"> <img src="assets/1570953341-5c64e06b8133c772ea454d51a3a0a974.png" title="展望台の彼女"> <img src="assets/1570953341-2b7944623c26c12d2fd8f65e65d66f7a.gif" title="Favorite学部勋章"> <img src="assets/1570953341-b4ca2062fca1889e2ad39ccbcad77e2d.gif" title="乙津夢"> <img src="assets/1570953341-09974d1b907945d7b1563acb3052bcba.gif" title="10号フェイバリット10周年纪念章"> <br></span>
+		</span></span>
+		</th>
+		<th height="100%" class="r_one" valign="top" id="td_2053780" style="padding: 5px 15px 0px; border: 0px; width: 80%; overflow: hidden; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+			<div class="tiptop">
+			<span class="fl" style="white-space:nowrap;">
+			<a href="https://bbs.sumisora.net/post.php?action=quote&amp;fid=78&amp;tid=10914751&amp;pid=2053780&amp;article=3" onclick="return sendurl(this,4,event)" id="quote_2053780" title="引用回复这个帖子" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">引用</a> <a href="https://bbs.sumisora.net/post.php?action=modify&amp;fid=78&amp;tid=10914751&amp;pid=2053780&amp;article=3" id="modify_2053780" onclick="return sendurl(this,4,event)" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">编辑</a>
+			<a href="https://bbs.sumisora.net/message.php?action=write&amp;touid=144048" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">短信</a>
+
+			<a href="https://bbs.sumisora.net/operate.php?action=report&amp;tid=10914751&amp;pid=2053780" onclick="return sendurl(this,8)" id="report_2053780" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">举报</a>
+
+			<a href="https://bbs.sumisora.net/read.php?tid=10914751&amp;uid=144048" title="只看该作者的所有回复" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">只看</a>
+
+			<a style="cursor:pointer;" onclick="copyUrl('2053780')" title="此楼地址" data-mx-warn="Empty URL">锚点</a>
+			</span>
+
+			<div class="c"></div>
+			</div>
+			<h1 id="subject_2053780" class="fl">&nbsp;</h1>
+			
+
+			<div id="p_2053780" class="c"></div>
+
+<!--
+-->
+
+			<div class="tpc_content" id="read_2053780"><h6 class="quote">Quote:</h6><blockquote class="blockquote">引用第1楼恒の风于2009-04-29 12:57发表的&nbsp;&nbsp;:<br>粉肠……我觉得你有点发错区了……不是有汉化技术交流区吗……</blockquote><br>太困了没注意看……哪个版主帮忙挪过去汉化技术区吧，3q~</div>
+		</th>
+	</tr>
+	<tr class="tr1 r_one">
+		<th style="vertical-align: bottom; padding-left: 15px; border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+
+		<div id="w_2053780" class="c"></div>
+
+		<div><img src="assets/1570953341-ee75bbe39bae3a2e6fc29b9593dde416.png" align="absbottom"></div>
+		<div class="card" style="overflow:hidden;">
+			<table width="100%">
+				<tbody><tr>
+					<td id="ck_card_container_2053780">
+					<img src="assets/1570953341-250f699f9aa5f5d0803c05fca6bcaed2.png" width="224" border="0"> <img src="assets/1570953341-fadd7a20b74566145c6531b9145eb5f5.png" width="224" border="0"> <img src="assets/1570953341-f0294700c58a296cc96d12613cd4238a.png" width="224" border="0"> </td><td>
+				</td></tr>
+				
+			</tbody></table>
+		</div>
+
+
+		<div class="tipad"><span style="float:right">
+<a href="javascript:scroll(0,0)" title="顶端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">顶端</a> <a href="javascript:scroll(0,999999)" title="底端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">底端</a></span>
+			
+			<span class="gray"> 2009-04-29 13:02 | 
+	
+			</span>
+
+			<span><a class="s3" title="回复此楼" style="cursor:pointer;" onclick="postreply('回 3楼(乙津夢) 的帖子');" data-mx-warn="Empty URL">3 楼</a></span>
+
+		</div></th>
+	</tr></tbody></table>
+</div>
+
+<a name="2053786" data-mx-warn="Empty URL"></a>
+<div class="t t2"><table cellspacing="0" cellpadding="0" width="100%" style="table-layout: fixed; border-top: 0px; --darkreader-inline-border-top: initial;" data-darkreader-inline-border-top="">
+	<tbody><tr class="tr1"><th style="width:20%" rowspan="2" class="r_two">
+
+		<img src="assets/1570953341-1cde2ccde0fc90dbe6db3784fc6ec383.gif" title="该用户目前不在线" align="absmiddle">
+
+<b>IoSK</b>
+<div style="margin:.3em 0 .4em .2em">第九駆逐隊をなめないでよ</div>
+<div class="user-pic"><table style="border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left=""><tbody><tr><td width="1">
+
+<a href="https://bbs.sumisora.net/profile.php?action=show&amp;uid=79712" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img class="pic" src="assets/1570953341-fab77cc1b73f543e6d835872aa9c1a73.jpg" style="max-width:185px;max-height:200px;overflow:hidden" border="0"></a>
+
+</td><td style="vertical-align:top"><span id="sf_4"></span></td></tr></tbody></table>
+</div>
+		级别: <font color="#555555" data-darkreader-inline-color="" style="--darkreader-inline-color:#cfc9be;">学生会干事</font><br>
+		<img style="margin:.2em 0 .6em" src="assets/1570953341-87bc1a6e935264a57e50e0d513f23aa7.gif"><br>
+
+<span class="user-info2" id="showface_4">
+<span class="user-infoWrap2">
+
+
+精华:
+
+		<a href="https://bbs.sumisora.net/search.php?authorid=79712&amp;digest=1" target="_blank" class="s4 f9" referrerpolicy="no-referrer" rel="noopener noreferrer">1</a>
+<br>
+发帖: <span class="s1 f9">5009</span><br>
+学分: <span class="s2 f9">491 点</span><br>
+澄空币: <span class="s3 f9">2378 KID</span><br>
+
+		GPA: <span class="s2 f9">5 点</span><br>
+
+		<span class="gray">注册时间:2006-12-27<br>
+		最后登录:2019-10-13 <br><br> 
+		<img src="assets/1570953341-5869908732a5345d35018da00d5b1b4d.gif" title="柳ヶ瀬湊"> <img src="assets/1570953341-4bc2c5395cc362f85bfa5d5c90482c3f.gif" title="3号入学纪念勋章"> <img src="assets/1570953341-0fb3dc99842931c7b30bc091940227c6.gif" title="漫画组勋章"> <img src="assets/1570953341-4a9a8a5b9dde38efa4574c464167aa33.gif" title="1号CIRCUS10周年纪念勋章"> <img src="assets/1570953341-3832cef0f881080f8fa2c456ae0d6f1f.gif" title="CIRCUS学部勋章"> <img src="assets/1570953341-2cf0e44167939ef0ef073310eb9eb738.gif" title="Navel学部勋章"> <br></span>
+		</span></span>
+		</th>
+		<th height="100%" class="r_one" valign="top" id="td_2053786" style="padding: 5px 15px 0px; border: 0px; width: 80%; overflow: hidden; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+			<div class="tiptop">
+			<span class="fl" style="white-space:nowrap;">
+			<a href="https://bbs.sumisora.net/post.php?action=quote&amp;fid=78&amp;tid=10914751&amp;pid=2053786&amp;article=4" onclick="return sendurl(this,4,event)" id="quote_2053786" title="引用回复这个帖子" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">引用</a> <a href="https://bbs.sumisora.net/post.php?action=modify&amp;fid=78&amp;tid=10914751&amp;pid=2053786&amp;article=4" id="modify_2053786" onclick="return sendurl(this,4,event)" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">编辑</a>
+			<a href="https://bbs.sumisora.net/message.php?action=write&amp;touid=79712" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">短信</a>
+
+			<a href="https://bbs.sumisora.net/operate.php?action=report&amp;tid=10914751&amp;pid=2053786" onclick="return sendurl(this,8)" id="report_2053786" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">举报</a>
+
+			<a href="https://bbs.sumisora.net/read.php?tid=10914751&amp;uid=79712" title="只看该作者的所有回复" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">只看</a>
+
+			<a style="cursor:pointer;" onclick="copyUrl('2053786')" title="此楼地址" data-mx-warn="Empty URL">锚点</a>
+			</span>
+
+			<div class="c"></div>
+			</div>
+			<h1 id="subject_2053786" class="fl">&nbsp;</h1>
+			
+
+			<div id="p_2053786" class="c"></div>
+
+<!--
+-->
+
+			<div class="tpc_content" id="read_2053786">肠肠升级了么，期待肠肠将这部神作汉化那天的到来~</div>
+		</th>
+	</tr>
+	<tr class="tr1 r_one">
+		<th style="vertical-align: bottom; padding-left: 15px; border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+
+		<div id="w_2053786" class="c"></div>
+
+		<div><img src="assets/1570953341-ee75bbe39bae3a2e6fc29b9593dde416.png" align="absbottom"></div>
+		<div class="card" style="overflow:hidden;">
+			<table width="100%">
+				<tbody><tr>
+					<td id="ck_card_container_2053786">
+					<img src="assets/1570953341-f7c9c80fc35350d22d87e519212274ef.png" width="224" border="0"> <img src="assets/1570953341-b0e607d9e55519a2798c061a1160b5e2.png" width="224" border="0"> <img src="assets/1570953341-5323a0ee129391f57138b59f22c5d16e.png" width="224" border="0"> </td><td>
+				</td></tr>
+				
+			</tbody></table>
+		</div>
+
+
+		<div class="tipad"><span style="float:right">
+<a href="javascript:scroll(0,0)" title="顶端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">顶端</a> <a href="javascript:scroll(0,999999)" title="底端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">底端</a></span>
+			
+			<span class="gray"> 2009-04-29 13:07 | 
+	
+			</span>
+
+			<span><a class="s3" title="回复此楼" style="cursor:pointer;" onclick="postreply('回 4楼(IoSK) 的帖子');" data-mx-warn="Empty URL">4 楼</a></span>
+
+		</div></th>
+	</tr></tbody></table>
+</div>
+
+<a name="2053793" data-mx-warn="Empty URL"></a>
+<div class="t t2"><table cellspacing="0" cellpadding="0" width="100%" style="table-layout: fixed; border-top: 0px; --darkreader-inline-border-top: initial;" data-darkreader-inline-border-top="">
+	<tbody><tr class="tr1"><th style="width:20%" rowspan="2" class="r_two">
+
+		<img src="assets/1570953341-1cde2ccde0fc90dbe6db3784fc6ec383.gif" title="该用户目前不在线" align="absmiddle">
+
+<b>BI枫</b>
+<div style="margin:.3em 0 .4em .2em">.`实里带幻`幻里有虚`.</div>
+<div class="user-pic"><table style="border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left=""><tbody><tr><td width="1">
+
+<a href="https://bbs.sumisora.net/profile.php?action=show&amp;uid=36995" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img class="pic" src="assets/1570953341-bc3b3631a24154c2d9ba8189508a5212.gif" style="max-width:185px;max-height:200px;overflow:hidden" border="0"></a>
+
+</td><td style="vertical-align:top"><span id="sf_5"></span></td></tr></tbody></table>
+</div>
+		级别: <font color="#555555" data-darkreader-inline-color="" style="--darkreader-inline-color:#cfc9be;">澄空二年生下学期</font><br>
+		<img style="margin:.2em 0 .6em" src="assets/1570953341-14d3050259d6ae6cb4b43275cd83308d.gif"><br>
+
+<span class="user-info2" id="showface_5">
+<span class="user-infoWrap2">
+
+
+精华:
+
+		<span class="s4">0</span>
+<br>
+发帖: <span class="s1 f9">1144</span><br>
+学分: <span class="s2 f9">1 点</span><br>
+澄空币: <span class="s3 f9">1435 KID</span><br>
+
+		GPA: <span class="s2 f9">0 点</span><br>
+
+		<span class="gray">注册时间:2006-02-06<br>
+		最后登录:2015-01-15 <br><br> 
+		<img src="assets/1570953341-7c54389b75944dfc69bf8c8810cf696e.gif" title="1号入学纪念勋章"> <img src="assets/1570953341-10186ca2cfdf99ebea095f161305d74e.gif" title="2号入学纪念勋章"> <img src="assets/1570953341-4bc2c5395cc362f85bfa5d5c90482c3f.gif" title="3号入学纪念勋章"> <img src="assets/1570953341-0d37a19b834bd3003b54488bbfd9ff5a.gif" title="千贴纪念勋章"> <br></span>
+		</span></span>
+		</th>
+		<th height="100%" class="r_one" valign="top" id="td_2053793" style="padding: 5px 15px 0px; border: 0px; width: 80%; overflow: hidden; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+			<div class="tiptop">
+			<span class="fl" style="white-space:nowrap;">
+			<a href="https://bbs.sumisora.net/post.php?action=quote&amp;fid=78&amp;tid=10914751&amp;pid=2053793&amp;article=5" onclick="return sendurl(this,4,event)" id="quote_2053793" title="引用回复这个帖子" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">引用</a> <a href="https://bbs.sumisora.net/post.php?action=modify&amp;fid=78&amp;tid=10914751&amp;pid=2053793&amp;article=5" id="modify_2053793" onclick="return sendurl(this,4,event)" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">编辑</a>
+			<a href="https://bbs.sumisora.net/message.php?action=write&amp;touid=36995" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">短信</a>
+
+			<a href="https://bbs.sumisora.net/operate.php?action=report&amp;tid=10914751&amp;pid=2053793" onclick="return sendurl(this,8)" id="report_2053793" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">举报</a>
+
+			<a href="https://bbs.sumisora.net/read.php?tid=10914751&amp;uid=36995" title="只看该作者的所有回复" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">只看</a>
+
+			<a style="cursor:pointer;" onclick="copyUrl('2053793')" title="此楼地址" data-mx-warn="Empty URL">锚点</a>
+			</span>
+
+			<div class="c"></div>
+			</div>
+			<h1 id="subject_2053793" class="fl">&nbsp;</h1>
+			
+
+			<div id="p_2053793" class="c"></div>
+
+<!--
+-->
+
+			<div class="tpc_content" id="read_2053793"><img src="assets/1570953341-8a11200216092878ad952c7d59c5a9a4.gif"> 这游戏难道会出汉化了`?</div>
+		</th>
+	</tr>
+	<tr class="tr1 r_one">
+		<th style="vertical-align: bottom; padding-left: 15px; border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+
+		<div id="w_2053793" class="c"></div>
+
+		<div class="tipad"><span style="float:right">
+<a href="javascript:scroll(0,0)" title="顶端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">顶端</a> <a href="javascript:scroll(0,999999)" title="底端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">底端</a></span>
+			
+			<span class="gray"> 2009-04-29 13:12 | 
+	
+			</span>
+
+			<span><a class="s3" title="回复此楼" style="cursor:pointer;" onclick="postreply('回 5楼(BI枫) 的帖子');" data-mx-warn="Empty URL">5 楼</a></span>
+
+		</div></th>
+	</tr></tbody></table>
+</div>
+
+<a name="2053794" data-mx-warn="Empty URL"></a>
+<div class="t t2"><table cellspacing="0" cellpadding="0" width="100%" style="table-layout: fixed; border-top: 0px; --darkreader-inline-border-top: initial;" data-darkreader-inline-border-top="">
+	<tbody><tr class="tr1"><th style="width:20%" rowspan="2" class="r_two">
+
+		<img src="assets/1570953341-1cde2ccde0fc90dbe6db3784fc6ec383.gif" title="该用户目前不在线" align="absmiddle">
+
+<b>果たし</b>
+<div style="margin:.3em 0 .4em .2em"></div>
+<div class="user-pic"><table style="border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left=""><tbody><tr><td width="1">
+
+<a href="https://bbs.sumisora.net/profile.php?action=show&amp;uid=282691" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img class="pic" src="assets/1570953341-09593dc9c6ba1156aca84337c81222ac.png" style="max-width:185px;max-height:200px;overflow:hidden" border="0"></a>
+
+</td><td style="vertical-align:top"><span id="sf_6"></span></td></tr></tbody></table>
+</div>
+		级别: <font color="#555555" data-darkreader-inline-color="" style="--darkreader-inline-color:#cfc9be;">澄空新闻组</font><br>
+		<img style="margin:.2em 0 .6em" src="assets/1570953341-b16950302a3de790ecbc217fc7e562d5.gif"><br>
+
+<span class="user-info2" id="showface_6">
+<span class="user-infoWrap2">
+
+
+精华:
+
+		<span class="s4">0</span>
+<br>
+发帖: <span class="s1 f9">321</span><br>
+学分: <span class="s2 f9">24 点</span><br>
+澄空币: <span class="s3 f9">948 KID</span><br>
+
+		GPA: <span class="s2 f9">0 点</span><br>
+
+		<span class="gray">注册时间:2009-04-27<br>
+		最后登录:2011-08-24 <br><br> 
+		<img src="assets/1570953341-c7785044460f94d1bcd03401e61734ac.gif" title="新闻组勋章"> <img src="assets/1570953341-a747ac9e50b6dfdd5da15916401426cc.gif" title="文学社勋章"> <img src="assets/1570953341-f7d23f2374cb50e4c380eb990d9f6eb4.gif" title="1号学分纪念勋章"> <img src="assets/1570953341-b631207db484bd37550de8f26cc13cad.gif" title="演剧部勋章"> <img src="assets/1570953341-20f82d22506b4f81dc2938f62a4e7829.gif" title="坛娘计划ZZ会场限定章"> <img src="assets/1570953341-7c54389b75944dfc69bf8c8810cf696e.gif" title="1号入学纪念勋章"> <br></span>
+		</span></span>
+		</th>
+		<th height="100%" class="r_one" valign="top" id="td_2053794" style="padding: 5px 15px 0px; border: 0px; width: 80%; overflow: hidden; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+			<div class="tiptop">
+			<span class="fl" style="white-space:nowrap;">
+			<a href="https://bbs.sumisora.net/post.php?action=quote&amp;fid=78&amp;tid=10914751&amp;pid=2053794&amp;article=6" onclick="return sendurl(this,4,event)" id="quote_2053794" title="引用回复这个帖子" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">引用</a> <a href="https://bbs.sumisora.net/post.php?action=modify&amp;fid=78&amp;tid=10914751&amp;pid=2053794&amp;article=6" id="modify_2053794" onclick="return sendurl(this,4,event)" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">编辑</a>
+			<a href="https://bbs.sumisora.net/message.php?action=write&amp;touid=282691" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">短信</a>
+
+			<a href="https://bbs.sumisora.net/operate.php?action=report&amp;tid=10914751&amp;pid=2053794" onclick="return sendurl(this,8)" id="report_2053794" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">举报</a>
+
+			<a href="https://bbs.sumisora.net/read.php?tid=10914751&amp;uid=282691" title="只看该作者的所有回复" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">只看</a>
+
+			<a style="cursor:pointer;" onclick="copyUrl('2053794')" title="此楼地址" data-mx-warn="Empty URL">锚点</a>
+			</span>
+
+			<div class="c"></div>
+			</div>
+			<h1 id="subject_2053794" class="fl">&nbsp;</h1>
+			
+
+			<div id="p_2053794" class="c"></div>
+
+<!--
+-->
+
+			<div class="tpc_content" id="read_2053794">看得不是很明白呀!希望快点汉化吧!</div>
+		</th>
+	</tr>
+	<tr class="tr1 r_one">
+		<th style="vertical-align: bottom; padding-left: 15px; border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+
+		<div id="w_2053794" class="c"></div>
+
+		<div><img class="signature" src="assets/1570953341-f23b8ffd0b6b327441aa828c9cd3243d.gif" align="absbottom"></div>
+		<div class="signature" style="max-height:380px;maxHeight:380px; overflow:hidden;"><table width="100%"><tbody><tr><td><a href="http://akibaneko.yo2.cn/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><span class="highslide"><img src="assets/1570953341-c5204b215ab1da843b58f6a0ea458fa8.jpg" border="0" style="max-width: 100%;max-height: 900px;"></span></a>希望大家支持,谢谢了</td><td></td></tr></tbody></table></div>
+
+		<div class="tipad"><span style="float:right">
+<a href="javascript:scroll(0,0)" title="顶端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">顶端</a> <a href="javascript:scroll(0,999999)" title="底端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">底端</a></span>
+			
+			<span class="gray"> 2009-04-29 13:14 | 
+	
+			</span>
+
+			<span><a class="s3" title="回复此楼" style="cursor:pointer;" onclick="postreply('回 6楼(果たし) 的帖子');" data-mx-warn="Empty URL">6 楼</a></span>
+
+		</div></th>
+	</tr></tbody></table>
+</div>
+
+<a name="2053857" data-mx-warn="Empty URL"></a>
+<div class="t t2"><table cellspacing="0" cellpadding="0" width="100%" style="table-layout: fixed; border-top: 0px; --darkreader-inline-border-top: initial;" data-darkreader-inline-border-top="">
+	<tbody><tr class="tr1"><th style="width:20%" rowspan="2" class="r_two">
+
+		<img src="assets/1570953341-1cde2ccde0fc90dbe6db3784fc6ec383.gif" title="该用户目前不在线" align="absmiddle">
+
+<b>拳王拉欧</b>
+<div style="margin:.3em 0 .4em .2em"></div>
+<div class="user-pic"><table style="border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left=""><tbody><tr><td width="1">
+
+<a href="https://bbs.sumisora.net/profile.php?action=show&amp;uid=245618" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img class="pic" src="assets/1570953341-8325a44eef4405277d661bb01cb194b2.jpg" style="max-width:185px;max-height:200px;overflow:hidden" border="0"></a>
+
+</td><td style="vertical-align:top"><span id="sf_7"></span></td></tr></tbody></table>
+</div>
+		级别: <font color="#555555" data-darkreader-inline-color="" style="--darkreader-inline-color:#cfc9be;">禁止发言</font><br>
+		<img style="margin:.2em 0 .6em" src="assets/1570953341-be59bc9a4edb96b6b54ba67c9267b93f.gif"><br>
+
+<span class="user-info2" id="showface_7">
+<span class="user-infoWrap2">
+
+
+精华:
+
+		<span class="s4">0</span>
+<br>
+发帖: <span class="s1 f9">1453</span><br>
+学分: <span class="s2 f9">-11 点</span><br>
+澄空币: <span class="s3 f9">5 KID</span><br>
+
+		GPA: <span class="s2 f9">0 点</span><br>
+
+		<span class="gray">注册时间:2008-11-12<br>
+		最后登录:2010-02-27 <br><br> 
+		<img src="assets/1570953341-0d37a19b834bd3003b54488bbfd9ff5a.gif" title="千贴纪念勋章"> <br></span>
+		</span></span>
+		</th>
+		<th height="100%" class="r_one" valign="top" id="td_2053857" style="padding: 5px 15px 0px; border: 0px; width: 80%; overflow: hidden; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+			<div class="tiptop">
+			<span class="fl" style="white-space:nowrap;">
+			<a href="https://bbs.sumisora.net/post.php?action=quote&amp;fid=78&amp;tid=10914751&amp;pid=2053857&amp;article=7" onclick="return sendurl(this,4,event)" id="quote_2053857" title="引用回复这个帖子" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">引用</a> <a href="https://bbs.sumisora.net/post.php?action=modify&amp;fid=78&amp;tid=10914751&amp;pid=2053857&amp;article=7" id="modify_2053857" onclick="return sendurl(this,4,event)" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">编辑</a>
+			<a href="https://bbs.sumisora.net/message.php?action=write&amp;touid=245618" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">短信</a>
+
+			<a href="https://bbs.sumisora.net/operate.php?action=report&amp;tid=10914751&amp;pid=2053857" onclick="return sendurl(this,8)" id="report_2053857" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">举报</a>
+
+			<a href="https://bbs.sumisora.net/read.php?tid=10914751&amp;uid=245618" title="只看该作者的所有回复" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">只看</a>
+
+			<a style="cursor:pointer;" onclick="copyUrl('2053857')" title="此楼地址" data-mx-warn="Empty URL">锚点</a>
+			</span>
+
+			<div class="c"></div>
+			</div>
+			<h1 id="subject_2053857" class="fl">&nbsp;</h1>
+			
+
+			<div id="p_2053857" class="c"></div>
+
+<!--
+-->
+
+			<div class="tpc_content" id="read_2053857"><span class="highslide"><img src="assets/1570953341-cea296ac44ec5bbd472828727cf3a7ca.jpg" border="0" style="max-width: 100%;max-height: 900px;"></span></div>
+		</th>
+	</tr>
+	<tr class="tr1 r_one">
+		<th style="vertical-align: bottom; padding-left: 15px; border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+
+		<div id="w_2053857" class="c"></div>
+
+		<div class="tipad"><span style="float:right">
+<a href="javascript:scroll(0,0)" title="顶端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">顶端</a> <a href="javascript:scroll(0,999999)" title="底端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">底端</a></span>
+			
+			<span class="gray"> 2009-04-29 14:37 | 
+	
+			</span>
+
+			<span><a class="s3" title="回复此楼" style="cursor:pointer;" onclick="postreply('回 7楼(拳王拉欧) 的帖子');" data-mx-warn="Empty URL">7 楼</a></span>
+
+		</div></th>
+	</tr></tbody></table>
+</div>
+
+<a name="2053886" data-mx-warn="Empty URL"></a>
+<div class="t t2"><table cellspacing="0" cellpadding="0" width="100%" style="table-layout: fixed; border-top: 0px; --darkreader-inline-border-top: initial;" data-darkreader-inline-border-top="">
+	<tbody><tr class="tr1"><th style="width:20%" rowspan="2" class="r_two">
+
+		<img src="assets/1570953341-1cde2ccde0fc90dbe6db3784fc6ec383.gif" title="该用户目前不在线" align="absmiddle">
+
+<b>白翼雪见</b>
+<div style="margin:.3em 0 .4em .2em">所有站在场上的都是我的敌人</div>
+<div class="user-pic"><table style="border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left=""><tbody><tr><td width="1">
+
+<a href="https://bbs.sumisora.net/profile.php?action=show&amp;uid=279078" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img class="pic" src="assets/1570953341-54751b66815a00d26e9cd4b1ea25e0a2.jpg" style="max-width:185px;max-height:200px;overflow:hidden" border="0"></a>
+
+</td><td style="vertical-align:top"><span id="sf_8"></span></td></tr></tbody></table>
+</div>
+		级别: <font color="#555555" data-darkreader-inline-color="" style="--darkreader-inline-color:#cfc9be;">澄空演剧部</font><br>
+		<img style="margin:.2em 0 .6em" src="assets/1570953341-b72ded756356e90b52c233ee1ea3d14c.gif"><br>
+
+<span class="user-info2" id="showface_8">
+<span class="user-infoWrap2">
+
+
+精华:
+
+		<span class="s4">0</span>
+<br>
+发帖: <span class="s1 f9">362</span><br>
+学分: <span class="s2 f9">3 点</span><br>
+澄空币: <span class="s3 f9">620 KID</span><br>
+
+		GPA: <span class="s2 f9">0 点</span><br>
+
+		<span class="gray">注册时间:2009-04-09<br>
+		最后登录:2013-09-29 <br><br> 
+		<img src="assets/1570953341-b631207db484bd37550de8f26cc13cad.gif" title="演剧部勋章"> <img src="assets/1570953341-7c54389b75944dfc69bf8c8810cf696e.gif" title="1号入学纪念勋章"> <br></span>
+		</span></span>
+		</th>
+		<th height="100%" class="r_one" valign="top" id="td_2053886" style="padding: 5px 15px 0px; border: 0px; width: 80%; overflow: hidden; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+			<div class="tiptop">
+			<span class="fl" style="white-space:nowrap;">
+			<a href="https://bbs.sumisora.net/post.php?action=quote&amp;fid=78&amp;tid=10914751&amp;pid=2053886&amp;article=8" onclick="return sendurl(this,4,event)" id="quote_2053886" title="引用回复这个帖子" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">引用</a> <a href="https://bbs.sumisora.net/post.php?action=modify&amp;fid=78&amp;tid=10914751&amp;pid=2053886&amp;article=8" id="modify_2053886" onclick="return sendurl(this,4,event)" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">编辑</a>
+			<a href="https://bbs.sumisora.net/message.php?action=write&amp;touid=279078" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">短信</a>
+
+			<a href="https://bbs.sumisora.net/operate.php?action=report&amp;tid=10914751&amp;pid=2053886" onclick="return sendurl(this,8)" id="report_2053886" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">举报</a>
+
+			<a href="https://bbs.sumisora.net/read.php?tid=10914751&amp;uid=279078" title="只看该作者的所有回复" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">只看</a>
+
+			<a style="cursor:pointer;" onclick="copyUrl('2053886')" title="此楼地址" data-mx-warn="Empty URL">锚点</a>
+			</span>
+
+			<div class="c"></div>
+			</div>
+			<h1 id="subject_2053886" class="fl">&nbsp;</h1>
+			
+
+			<div id="p_2053886" class="c"></div>
+
+<!--
+-->
+
+			<div class="tpc_content" id="read_2053886">.......太神奇了。。。。看懂一小部。。</div>
+		</th>
+	</tr>
+	<tr class="tr1 r_one">
+		<th style="vertical-align: bottom; padding-left: 15px; border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+
+		<div id="w_2053886" class="c"></div>
+
+		<div><img class="signature" src="assets/1570953341-f23b8ffd0b6b327441aa828c9cd3243d.gif" align="absbottom"></div>
+		<div class="signature" style="max-height:380px;maxHeight:380px; overflow:hidden;"><table width="100%"><tbody><tr><td>无用功也是功，如果连开始也不敢，那么只是单纯的胆小鬼罢了<br></td><td></td></tr></tbody></table></div>
+
+		<div class="tipad"><span style="float:right">
+<a href="javascript:scroll(0,0)" title="顶端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">顶端</a> <a href="javascript:scroll(0,999999)" title="底端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">底端</a></span>
+			
+			<span class="gray"> 2009-04-29 15:15 | 
+	
+			</span>
+
+			<span><a class="s3" title="回复此楼" style="cursor:pointer;" onclick="postreply('回 8楼(白翼雪见) 的帖子');" data-mx-warn="Empty URL">8 楼</a></span>
+
+		</div></th>
+	</tr></tbody></table>
+</div>
+
+<a name="2054084" data-mx-warn="Empty URL"></a>
+<div class="t t2"><table cellspacing="0" cellpadding="0" width="100%" style="table-layout: fixed; border-top: 0px; --darkreader-inline-border-top: initial;" data-darkreader-inline-border-top="">
+	<tbody><tr class="tr1"><th style="width:20%" rowspan="2" class="r_two">
+
+		<img src="assets/1570953341-1cde2ccde0fc90dbe6db3784fc6ec383.gif" title="该用户目前不在线" align="absmiddle">
+
+<b>乙津夢</b>
+<div style="margin:.3em 0 .4em .2em"></div>
+<div class="user-pic"><table style="border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left=""><tbody><tr><td width="1">
+
+<a href="https://bbs.sumisora.net/profile.php?action=show&amp;uid=144048" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img class="pic" src="assets/1570953341-8d34d9f9280e4a12cd0f1fb4e54564d7.png" style="max-width:185px;max-height:200px;overflow:hidden" border="0"></a>
+
+</td><td style="vertical-align:top"><span id="sf_9"></span></td></tr></tbody></table>
+</div>
+		级别: <font color="#555555" data-darkreader-inline-color="" style="--darkreader-inline-color:#cfc9be;">学生会干事</font><br>
+		<img style="margin:.2em 0 .6em" src="assets/1570953341-87bc1a6e935264a57e50e0d513f23aa7.gif"><br>
+
+<span class="user-info2" id="showface_9">
+<span class="user-infoWrap2">
+
+
+精华:
+
+		<span class="s4">0</span>
+<br>
+发帖: <span class="s1 f9">2499</span><br>
+学分: <span class="s2 f9">367 点</span><br>
+澄空币: <span class="s3 f9">3062 KID</span><br>
+
+		GPA: <span class="s2 f9">3 点</span><br>
+
+		<span class="gray">注册时间:2007-10-11<br>
+		最后登录:2019-10-13 <br><br> 
+		<img src="assets/1570953341-d611e1ea09787be6459421daf5675717.png" title="星空的记忆汉化纪念勋章"> <img src="assets/1570953341-fc551661c6b14e66c09220c9e87cd6cd.png" title="星空的记忆EH汉化纪念勋章"> <img src="assets/1570953341-5c64e06b8133c772ea454d51a3a0a974.png" title="展望台の彼女"> <img src="assets/1570953341-2b7944623c26c12d2fd8f65e65d66f7a.gif" title="Favorite学部勋章"> <img src="assets/1570953341-b4ca2062fca1889e2ad39ccbcad77e2d.gif" title="乙津夢"> <img src="assets/1570953341-09974d1b907945d7b1563acb3052bcba.gif" title="10号フェイバリット10周年纪念章"> <br></span>
+		</span></span>
+		</th>
+		<th height="100%" class="r_one" valign="top" id="td_2054084" style="padding: 5px 15px 0px; border: 0px; width: 80%; overflow: hidden; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+			<div class="tiptop">
+			<span class="fl" style="white-space:nowrap;">
+			<a href="https://bbs.sumisora.net/post.php?action=quote&amp;fid=78&amp;tid=10914751&amp;pid=2054084&amp;article=9" onclick="return sendurl(this,4,event)" id="quote_2054084" title="引用回复这个帖子" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">引用</a> <a href="https://bbs.sumisora.net/post.php?action=modify&amp;fid=78&amp;tid=10914751&amp;pid=2054084&amp;article=9" id="modify_2054084" onclick="return sendurl(this,4,event)" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">编辑</a>
+			<a href="https://bbs.sumisora.net/message.php?action=write&amp;touid=144048" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">短信</a>
+
+			<a href="https://bbs.sumisora.net/operate.php?action=report&amp;tid=10914751&amp;pid=2054084" onclick="return sendurl(this,8)" id="report_2054084" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">举报</a>
+
+			<a href="https://bbs.sumisora.net/read.php?tid=10914751&amp;uid=144048" title="只看该作者的所有回复" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">只看</a>
+
+			<a style="cursor:pointer;" onclick="copyUrl('2054084')" title="此楼地址" data-mx-warn="Empty URL">锚点</a>
+			</span>
+
+			<div class="c"></div>
+			</div>
+			<h1 id="subject_2054084" class="fl">&nbsp;</h1>
+			
+
+			<div id="p_2054084" class="c"></div>
+
+<!--
+-->
+
+			<div class="tpc_content" id="read_2054084"><h6 class="quote">Quote:</h6><blockquote class="blockquote">引用第2楼叉叉于2009-04-29 13:00发表的&nbsp;&nbsp;:<br>肠姐姐你终于半只脚跨进去了...<br>恭喜坑男进阶技能习得...</blockquote><br>你才是坑男！你全家都坑男，哼<br>你这个混蛋上次居然将糟糕物的名字改成考研英语复习，害我发别人了T T<br><br><h6 class="quote">Quote:</h6><blockquote class="blockquote">引用第4楼IoSK于2009-04-29 13:07发表的&nbsp;&nbsp;:<br>肠肠升级了么，期待肠肠将这部神作汉化那天的到来~</blockquote><br>爱酱你去开坑吧- -</div>
+		</th>
+	</tr>
+	<tr class="tr1 r_one">
+		<th style="vertical-align: bottom; padding-left: 15px; border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+
+		<div id="w_2054084" class="c"></div>
+
+		<div><img src="assets/1570953341-ee75bbe39bae3a2e6fc29b9593dde416.png" align="absbottom"></div>
+		<div class="card" style="overflow:hidden;">
+			<table width="100%">
+				<tbody><tr>
+					<td id="ck_card_container_2054084">
+					<img src="assets/1570953341-250f699f9aa5f5d0803c05fca6bcaed2.png" width="224" border="0"> <img src="assets/1570953341-fadd7a20b74566145c6531b9145eb5f5.png" width="224" border="0"> <img src="assets/1570953341-f0294700c58a296cc96d12613cd4238a.png" width="224" border="0"> </td><td>
+				</td></tr>
+				
+			</tbody></table>
+		</div>
+
+
+		<div class="tipad"><span style="float:right">
+<a href="javascript:scroll(0,0)" title="顶端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">顶端</a> <a href="javascript:scroll(0,999999)" title="底端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">底端</a></span>
+			
+			<span class="gray"> 2009-04-29 18:07 | 
+	
+			</span>
+
+			<span><a class="s3" title="回复此楼" style="cursor:pointer;" onclick="postreply('回 9楼(乙津夢) 的帖子');" data-mx-warn="Empty URL">9 楼</a></span>
+
+		</div></th>
+	</tr></tbody></table>
+</div>
+
+<a name="2057173" data-mx-warn="Empty URL"></a>
+<div class="t t2"><table cellspacing="0" cellpadding="0" width="100%" style="table-layout: fixed; border-top: 0px; --darkreader-inline-border-top: initial;" data-darkreader-inline-border-top="">
+	<tbody><tr class="tr1"><th style="width:20%" rowspan="2" class="r_two">
+
+		<img src="assets/1570953341-1cde2ccde0fc90dbe6db3784fc6ec383.gif" title="该用户目前不在线" align="absmiddle">
+
+<b>幽罗弥夜1</b>
+<div style="margin:.3em 0 .4em .2em"></div>
+<div class="user-pic"><table style="border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left=""><tbody><tr><td width="1">
+
+<a href="https://bbs.sumisora.net/profile.php?action=show&amp;uid=174137" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img class="pic" src="assets/1570953341-bc3b3631a24154c2d9ba8189508a5212.gif" style="max-width:185px;max-height:200px;overflow:hidden" border="0"></a>
+
+</td><td style="vertical-align:top"><span id="sf_10"></span></td></tr></tbody></table>
+</div>
+		级别: <font color="#555555" data-darkreader-inline-color="" style="--darkreader-inline-color:#cfc9be;">澄空一年生上学期</font><br>
+		<img style="margin:.2em 0 .6em" src="assets/1570953341-f43195cd588caa26c296fcc61910b3e6.gif"><br>
+
+<span class="user-info2" id="showface_10">
+<span class="user-infoWrap2">
+
+
+精华:
+
+		<span class="s4">0</span>
+<br>
+发帖: <span class="s1 f9">54</span><br>
+学分: <span class="s2 f9">0 点</span><br>
+澄空币: <span class="s3 f9">1000 KID</span><br>
+
+		GPA: <span class="s2 f9">0 点</span><br>
+
+		<span class="gray">注册时间:2008-02-03<br>
+		最后登录:2009-10-12 <br><br> 
+		</span>
+		</span></span>
+		</th>
+		<th height="100%" class="r_one" valign="top" id="td_2057173" style="padding: 5px 15px 0px; border: 0px; width: 80%; overflow: hidden; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+			<div class="tiptop">
+			<span class="fl" style="white-space:nowrap;">
+			<a href="https://bbs.sumisora.net/post.php?action=quote&amp;fid=78&amp;tid=10914751&amp;pid=2057173&amp;article=10" onclick="return sendurl(this,4,event)" id="quote_2057173" title="引用回复这个帖子" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">引用</a> <a href="https://bbs.sumisora.net/post.php?action=modify&amp;fid=78&amp;tid=10914751&amp;pid=2057173&amp;article=10" id="modify_2057173" onclick="return sendurl(this,4,event)" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">编辑</a>
+			<a href="https://bbs.sumisora.net/message.php?action=write&amp;touid=174137" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">短信</a>
+
+			<a href="https://bbs.sumisora.net/operate.php?action=report&amp;tid=10914751&amp;pid=2057173" onclick="return sendurl(this,8)" id="report_2057173" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">举报</a>
+
+			<a href="https://bbs.sumisora.net/read.php?tid=10914751&amp;uid=174137" title="只看该作者的所有回复" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">只看</a>
+
+			<a style="cursor:pointer;" onclick="copyUrl('2057173')" title="此楼地址" data-mx-warn="Empty URL">锚点</a>
+			</span>
+
+			<div class="c"></div>
+			</div>
+			<h1 id="subject_2057173" class="fl">&nbsp;</h1>
+			
+
+			<div id="p_2057173" class="c"></div>
+
+<!--
+-->
+
+			<div class="tpc_content" id="read_2057173">lz 最好分析下sob文件 看看其他lpk的key是怎么从gameiniti.sob中获得的 另外最新的使用该系统的真説 猟奇の檻 第2章 其key是通过对terios03.sob中的字段进行动态运算算出key的 这个你感兴趣也可以分析下</div>
+		</th>
+	</tr>
+	<tr class="tr1 r_one">
+		<th style="vertical-align: bottom; padding-left: 15px; border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+
+		<div id="w_2057173" class="c"></div>
+
+		<div class="tipad"><span style="float:right">
+<a href="javascript:scroll(0,0)" title="顶端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">顶端</a> <a href="javascript:scroll(0,999999)" title="底端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">底端</a></span>
+			
+			<span class="gray"> 2009-05-01 11:48 | 
+	
+			</span>
+
+			<span><a class="s3" title="回复此楼" style="cursor:pointer;" onclick="postreply('回 10楼(幽罗弥夜1) 的帖子');" data-mx-warn="Empty URL">10 楼</a></span>
+
+		</div></th>
+	</tr></tbody></table>
+</div>
+
+<a name="2062303" data-mx-warn="Empty URL"></a>
+<div class="t t2"><table cellspacing="0" cellpadding="0" width="100%" style="table-layout: fixed; border-top: 0px; --darkreader-inline-border-top: initial;" data-darkreader-inline-border-top="">
+	<tbody><tr class="tr1"><th style="width:20%" rowspan="2" class="r_two">
+
+		<img src="assets/1570953341-1cde2ccde0fc90dbe6db3784fc6ec383.gif" title="该用户目前不在线" align="absmiddle">
+
+<b>blues_city</b>
+<div style="margin:.3em 0 .4em .2em"></div>
+<div class="user-pic"><table style="border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left=""><tbody><tr><td width="1">
+
+<a href="https://bbs.sumisora.net/profile.php?action=show&amp;uid=127336" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img class="pic" src="assets/1570953341-5da4f0c846ba948bafdc9a90316654f8.jpg" style="max-width:185px;max-height:200px;overflow:hidden" border="0"></a>
+
+</td><td style="vertical-align:top"><span id="sf_11"></span></td></tr></tbody></table>
+</div>
+		级别: <font color="#555555" data-darkreader-inline-color="" style="--darkreader-inline-color:#cfc9be;">澄空新生</font><br>
+		<img style="margin:.2em 0 .6em" src="assets/1570953341-be59bc9a4edb96b6b54ba67c9267b93f.gif"><br>
+
+<span class="user-info2" id="showface_11">
+<span class="user-infoWrap2">
+
+
+精华:
+
+		<span class="s4">0</span>
+<br>
+发帖: <span class="s1 f9">31</span><br>
+学分: <span class="s2 f9">0 点</span><br>
+澄空币: <span class="s3 f9">967 KID</span><br>
+
+		GPA: <span class="s2 f9">0 点</span><br>
+
+		<span class="gray">注册时间:2007-06-06<br>
+		最后登录:2013-03-18 <br><br> 
+		</span>
+		</span></span>
+		</th>
+		<th height="100%" class="r_one" valign="top" id="td_2062303" style="padding: 5px 15px 0px; border: 0px; width: 80%; overflow: hidden; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+			<div class="tiptop">
+			<span class="fl" style="white-space:nowrap;">
+			<a href="https://bbs.sumisora.net/post.php?action=quote&amp;fid=78&amp;tid=10914751&amp;pid=2062303&amp;article=11" onclick="return sendurl(this,4,event)" id="quote_2062303" title="引用回复这个帖子" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">引用</a> <a href="https://bbs.sumisora.net/post.php?action=modify&amp;fid=78&amp;tid=10914751&amp;pid=2062303&amp;article=11" id="modify_2062303" onclick="return sendurl(this,4,event)" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">编辑</a>
+			<a href="https://bbs.sumisora.net/message.php?action=write&amp;touid=127336" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">短信</a>
+
+			<a href="https://bbs.sumisora.net/operate.php?action=report&amp;tid=10914751&amp;pid=2062303" onclick="return sendurl(this,8)" id="report_2062303" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">举报</a>
+
+			<a href="https://bbs.sumisora.net/read.php?tid=10914751&amp;uid=127336" title="只看该作者的所有回复" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">只看</a>
+
+			<a style="cursor:pointer;" onclick="copyUrl('2062303')" title="此楼地址" data-mx-warn="Empty URL">锚点</a>
+			</span>
+
+			<div class="c"></div>
+			</div>
+			<h1 id="subject_2062303" class="fl">&nbsp;</h1>
+			
+
+			<div id="p_2062303" class="c"></div>
+
+<!--
+-->
+
+			<div class="tpc_content" id="read_2062303">好好看看先……<br>一直对跟综脚本找不到要领……<br>读取动作太多，跑一会儿就烦了……<br>你是对每一个读取的动作都大概看一下的吗？<br>还有读出来的东西怎么跟？</div>
+		</th>
+	</tr>
+	<tr class="tr1 r_one">
+		<th style="vertical-align: bottom; padding-left: 15px; border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+
+		<div id="w_2062303" class="c"></div>
+
+		<div><img class="signature" src="assets/1570953341-f23b8ffd0b6b327441aa828c9cd3243d.gif" align="absbottom"></div>
+		<div class="signature" style="max-height:380px;maxHeight:380px; overflow:hidden;"><table width="100%"><tbody><tr><td>http://blog.sina.com.cn/bluescity<br>http://blog.csdn.net/blues_city<br>http://bluescity.googlepages.com/ 游戏文件多功能通用分析器 RipFiles　</td><td></td></tr></tbody></table></div>
+
+		<div class="tipad"><span style="float:right">
+<a href="javascript:scroll(0,0)" title="顶端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">顶端</a> <a href="javascript:scroll(0,999999)" title="底端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">底端</a></span>
+			
+			<span class="gray"> 2009-05-04 00:49 | 
+	
+			</span>
+
+			<span><a class="s3" title="回复此楼" style="cursor:pointer;" onclick="postreply('回 11楼(blues_city) 的帖子');" data-mx-warn="Empty URL">11 楼</a></span>
+
+		</div></th>
+	</tr></tbody></table>
+</div>
+
+<a name="2062309" data-mx-warn="Empty URL"></a>
+<div class="t t2"><table cellspacing="0" cellpadding="0" width="100%" style="table-layout: fixed; border-top: 0px; --darkreader-inline-border-top: initial;" data-darkreader-inline-border-top="">
+	<tbody><tr class="tr1"><th style="width:20%" rowspan="2" class="r_two">
+
+		<img src="assets/1570953341-1cde2ccde0fc90dbe6db3784fc6ec383.gif" title="该用户目前不在线" align="absmiddle">
+
+<b>真昼</b>
+<div style="margin:.3em 0 .4em .2em"></div>
+<div class="user-pic"><table style="border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left=""><tbody><tr><td width="1">
+
+<a href="https://bbs.sumisora.net/profile.php?action=show&amp;uid=21614" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img class="pic" src="assets/1570953341-dc91d8580b838dba054ca61100111b10.jpg" style="max-width:185px;max-height:200px;overflow:hidden" border="0"></a>
+
+</td><td style="vertical-align:top"><span id="sf_12"></span></td></tr></tbody></table>
+</div>
+		级别: <font color="#555555" data-darkreader-inline-color="" style="--darkreader-inline-color:#cfc9be;">澄空二年生下学期</font><br>
+		<img style="margin:.2em 0 .6em" src="assets/1570953341-14d3050259d6ae6cb4b43275cd83308d.gif"><br>
+
+<span class="user-info2" id="showface_12">
+<span class="user-infoWrap2">
+
+
+精华:
+
+		<span class="s4">0</span>
+<br>
+发帖: <span class="s1 f9">705</span><br>
+学分: <span class="s2 f9">10 点</span><br>
+澄空币: <span class="s3 f9">2723 KID</span><br>
+
+		GPA: <span class="s2 f9">0 点</span><br>
+
+		<span class="gray">注册时间:2005-09-10<br>
+		最后登录:2013-01-10 <br><br> 
+		</span>
+		</span></span>
+		</th>
+		<th height="100%" class="r_one" valign="top" id="td_2062309" style="padding: 5px 15px 0px; border: 0px; width: 80%; overflow: hidden; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+			<div class="tiptop">
+			<span class="fl" style="white-space:nowrap;">
+			<a href="https://bbs.sumisora.net/post.php?action=quote&amp;fid=78&amp;tid=10914751&amp;pid=2062309&amp;article=12" onclick="return sendurl(this,4,event)" id="quote_2062309" title="引用回复这个帖子" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">引用</a> <a href="https://bbs.sumisora.net/post.php?action=modify&amp;fid=78&amp;tid=10914751&amp;pid=2062309&amp;article=12" id="modify_2062309" onclick="return sendurl(this,4,event)" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">编辑</a>
+			<a href="https://bbs.sumisora.net/message.php?action=write&amp;touid=21614" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">短信</a>
+
+			<a href="https://bbs.sumisora.net/operate.php?action=report&amp;tid=10914751&amp;pid=2062309" onclick="return sendurl(this,8)" id="report_2062309" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">举报</a>
+
+			<a href="https://bbs.sumisora.net/read.php?tid=10914751&amp;uid=21614" title="只看该作者的所有回复" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">只看</a>
+
+			<a style="cursor:pointer;" onclick="copyUrl('2062309')" title="此楼地址" data-mx-warn="Empty URL">锚点</a>
+			</span>
+
+			<div class="c"></div>
+			</div>
+			<h1 id="subject_2062309" class="fl">&nbsp;</h1>
+			
+
+			<div id="p_2062309" class="c"></div>
+
+<!--
+-->
+
+			<div class="tpc_content" id="read_2062309">电脑小白路过, 还以为俺翼开坑了.</div>
+		</th>
+	</tr>
+	<tr class="tr1 r_one">
+		<th style="vertical-align: bottom; padding-left: 15px; border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+
+		<div id="w_2062309" class="c"></div>
+
+		<div class="tipad"><span style="float:right">
+<a href="javascript:scroll(0,0)" title="顶端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">顶端</a> <a href="javascript:scroll(0,999999)" title="底端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">底端</a></span>
+			
+			<span class="gray"> 2009-05-04 01:01 | 
+	
+			</span>
+
+			<span><a class="s3" title="回复此楼" style="cursor:pointer;" onclick="postreply('回 12楼(真昼) 的帖子');" data-mx-warn="Empty URL">12 楼</a></span>
+
+		</div></th>
+	</tr></tbody></table>
+</div>
+
+<a name="2062775" data-mx-warn="Empty URL"></a>
+<div class="t t2"><table cellspacing="0" cellpadding="0" width="100%" style="table-layout: fixed; border-top: 0px; --darkreader-inline-border-top: initial;" data-darkreader-inline-border-top="">
+	<tbody><tr class="tr1"><th style="width:20%" rowspan="2" class="r_two">
+
+		<img src="assets/1570953341-1cde2ccde0fc90dbe6db3784fc6ec383.gif" title="该用户目前不在线" align="absmiddle">
+
+<b>乙津夢</b>
+<div style="margin:.3em 0 .4em .2em"></div>
+<div class="user-pic"><table style="border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left=""><tbody><tr><td width="1">
+
+<a href="https://bbs.sumisora.net/profile.php?action=show&amp;uid=144048" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img class="pic" src="assets/1570953341-8d34d9f9280e4a12cd0f1fb4e54564d7.png" style="max-width:185px;max-height:200px;overflow:hidden" border="0"></a>
+
+</td><td style="vertical-align:top"><span id="sf_13"></span></td></tr></tbody></table>
+</div>
+		级别: <font color="#555555" data-darkreader-inline-color="" style="--darkreader-inline-color:#cfc9be;">学生会干事</font><br>
+		<img style="margin:.2em 0 .6em" src="assets/1570953341-87bc1a6e935264a57e50e0d513f23aa7.gif"><br>
+
+<span class="user-info2" id="showface_13">
+<span class="user-infoWrap2">
+
+
+精华:
+
+		<span class="s4">0</span>
+<br>
+发帖: <span class="s1 f9">2499</span><br>
+学分: <span class="s2 f9">367 点</span><br>
+澄空币: <span class="s3 f9">3062 KID</span><br>
+
+		GPA: <span class="s2 f9">3 点</span><br>
+
+		<span class="gray">注册时间:2007-10-11<br>
+		最后登录:2019-10-13 <br><br> 
+		<img src="assets/1570953341-d611e1ea09787be6459421daf5675717.png" title="星空的记忆汉化纪念勋章"> <img src="assets/1570953341-fc551661c6b14e66c09220c9e87cd6cd.png" title="星空的记忆EH汉化纪念勋章"> <img src="assets/1570953341-5c64e06b8133c772ea454d51a3a0a974.png" title="展望台の彼女"> <img src="assets/1570953341-2b7944623c26c12d2fd8f65e65d66f7a.gif" title="Favorite学部勋章"> <img src="assets/1570953341-b4ca2062fca1889e2ad39ccbcad77e2d.gif" title="乙津夢"> <img src="assets/1570953341-09974d1b907945d7b1563acb3052bcba.gif" title="10号フェイバリット10周年纪念章"> <br></span>
+		</span></span>
+		</th>
+		<th height="100%" class="r_one" valign="top" id="td_2062775" style="padding: 5px 15px 0px; border: 0px; width: 80%; overflow: hidden; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+			<div class="tiptop">
+			<span class="fl" style="white-space:nowrap;">
+			<a href="https://bbs.sumisora.net/post.php?action=quote&amp;fid=78&amp;tid=10914751&amp;pid=2062775&amp;article=13" onclick="return sendurl(this,4,event)" id="quote_2062775" title="引用回复这个帖子" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">引用</a> <a href="https://bbs.sumisora.net/post.php?action=modify&amp;fid=78&amp;tid=10914751&amp;pid=2062775&amp;article=13" id="modify_2062775" onclick="return sendurl(this,4,event)" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">编辑</a>
+			<a href="https://bbs.sumisora.net/message.php?action=write&amp;touid=144048" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">短信</a>
+
+			<a href="https://bbs.sumisora.net/operate.php?action=report&amp;tid=10914751&amp;pid=2062775" onclick="return sendurl(this,8)" id="report_2062775" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">举报</a>
+
+			<a href="https://bbs.sumisora.net/read.php?tid=10914751&amp;uid=144048" title="只看该作者的所有回复" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">只看</a>
+
+			<a style="cursor:pointer;" onclick="copyUrl('2062775')" title="此楼地址" data-mx-warn="Empty URL">锚点</a>
+			</span>
+
+			<div class="c"></div>
+			</div>
+			<h1 id="subject_2062775" class="fl">&nbsp;</h1>
+			
+
+			<div id="p_2062775" class="c"></div>
+
+<!--
+-->
+
+			<div class="tpc_content" id="read_2062775"><h6 class="quote">Quote:</h6><blockquote class="blockquote">引用第10楼幽罗弥夜1于2009-05-01 11:48发表的&nbsp;&nbsp;:<br>lz 最好分析下sob文件 看看其他lpk的key是怎么从gameiniti.sob中获得的 另外最新的使用该系统的真説 猟奇の檻 第2章 其key是通过对terios03.sob中的字段进行动态运算算出key的 这个你感兴趣也可以分析下</blockquote><br>感谢指点，我一直不确定是由哪个文件解得其他资源文件的key的，原来是gameiniti.sob<br><h6 class="quote">Quote:</h6><blockquote class="blockquote">引用第11楼blues_city于2009-05-04 00:49发表的&nbsp;&nbsp;:<br>好好看看先……<br>一直对跟综脚本找不到要领……<br>读取动作太多，跑一会儿就烦了……<br>你是对每一个读取的动作都大概看一下的吗？<br>还有读出来的东西怎么跟？</blockquote><br>我以前习惯是对CreateFileA跟ReadFile下断，但发现那样找不到我想要的结果，现在是只对CreateFileA下断，记下句柄，然后一部一部跟后面的内容，一般游戏在打开文件后不远都会跟着读取的，然后再继续跟下去就是对读出的内容解密变换。假如实在是找不到那个变换过程可以对读出的内容下内存读取断点</div>
+		</th>
+	</tr>
+	<tr class="tr1 r_one">
+		<th style="vertical-align: bottom; padding-left: 15px; border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+
+		<div id="w_2062775" class="c"></div>
+
+		<div><img src="assets/1570953341-ee75bbe39bae3a2e6fc29b9593dde416.png" align="absbottom"></div>
+		<div class="card" style="overflow:hidden;">
+			<table width="100%">
+				<tbody><tr>
+					<td id="ck_card_container_2062775">
+					<img src="assets/1570953341-250f699f9aa5f5d0803c05fca6bcaed2.png" width="224" border="0"> <img src="assets/1570953341-fadd7a20b74566145c6531b9145eb5f5.png" width="224" border="0"> <img src="assets/1570953341-f0294700c58a296cc96d12613cd4238a.png" width="224" border="0"> </td><td>
+				</td></tr>
+				
+			</tbody></table>
+		</div>
+
+
+		<div class="tipad"><span style="float:right">
+<a href="javascript:scroll(0,0)" title="顶端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">顶端</a> <a href="javascript:scroll(0,999999)" title="底端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">底端</a></span>
+			
+			<span class="gray"> 2009-05-04 13:14 | 
+	
+			</span>
+
+			<span><a class="s3" title="回复此楼" style="cursor:pointer;" onclick="postreply('回 13楼(乙津夢) 的帖子');" data-mx-warn="Empty URL">13 楼</a></span>
+
+		</div></th>
+	</tr></tbody></table>
+</div>
+
+<a name="2117670" data-mx-warn="Empty URL"></a>
+<div class="t t2"><table cellspacing="0" cellpadding="0" width="100%" style="table-layout: fixed; border-top: 0px; --darkreader-inline-border-top: initial;" data-darkreader-inline-border-top="">
+	<tbody><tr class="tr1"><th style="width:20%" rowspan="2" class="r_two">
+
+		<img src="assets/1570953341-1cde2ccde0fc90dbe6db3784fc6ec383.gif" title="该用户目前不在线" align="absmiddle">
+
+<b>夏末</b>
+<div style="margin:.3em 0 .4em .2em"></div>
+<div class="user-pic"><table style="border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left=""><tbody><tr><td width="1">
+
+<a href="https://bbs.sumisora.net/profile.php?action=show&amp;uid=186909" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img class="pic" src="assets/1570953341-bc3b3631a24154c2d9ba8189508a5212.gif" style="max-width:185px;max-height:200px;overflow:hidden" border="0"></a>
+
+</td><td style="vertical-align:top"><span id="sf_14"></span></td></tr></tbody></table>
+</div>
+		级别: <font color="#555555" data-darkreader-inline-color="" style="--darkreader-inline-color:#cfc9be;">澄空一年生上学期</font><br>
+		<img style="margin:.2em 0 .6em" src="assets/1570953341-f43195cd588caa26c296fcc61910b3e6.gif"><br>
+
+<span class="user-info2" id="showface_14">
+<span class="user-infoWrap2">
+
+
+精华:
+
+		<span class="s4">0</span>
+<br>
+发帖: <span class="s1 f9">55</span><br>
+学分: <span class="s2 f9">0 点</span><br>
+澄空币: <span class="s3 f9">835 KID</span><br>
+
+		GPA: <span class="s2 f9">0 点</span><br>
+
+		<span class="gray">注册时间:2008-03-08<br>
+		最后登录:2014-01-10 <br><br> 
+		</span>
+		</span></span>
+		</th>
+		<th height="100%" class="r_one" valign="top" id="td_2117670" style="padding: 5px 15px 0px; border: 0px; width: 80%; overflow: hidden; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+			<div class="tiptop">
+			<span class="fl" style="white-space:nowrap;">
+			<a href="https://bbs.sumisora.net/post.php?action=quote&amp;fid=78&amp;tid=10914751&amp;pid=2117670&amp;article=14" onclick="return sendurl(this,4,event)" id="quote_2117670" title="引用回复这个帖子" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">引用</a> <a href="https://bbs.sumisora.net/post.php?action=modify&amp;fid=78&amp;tid=10914751&amp;pid=2117670&amp;article=14" id="modify_2117670" onclick="return sendurl(this,4,event)" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">编辑</a>
+			<a href="https://bbs.sumisora.net/message.php?action=write&amp;touid=186909" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">短信</a>
+
+			<a href="https://bbs.sumisora.net/operate.php?action=report&amp;tid=10914751&amp;pid=2117670" onclick="return sendurl(this,8)" id="report_2117670" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">举报</a>
+
+			<a href="https://bbs.sumisora.net/read.php?tid=10914751&amp;uid=186909" title="只看该作者的所有回复" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">只看</a>
+
+			<a style="cursor:pointer;" onclick="copyUrl('2117670')" title="此楼地址" data-mx-warn="Empty URL">锚点</a>
+			</span>
+
+			<div class="c"></div>
+			</div>
+			<h1 id="subject_2117670" class="fl">&nbsp;</h1>
+			
+
+			<div id="p_2117670" class="c"></div>
+
+<!--
+-->
+
+			<div class="tpc_content" id="read_2117670">惭愧，软件工程毕业的不会汇编。。。才刚开始学 <img src="assets/1570953341-41cdcbb6811a13f75b48c247382af27d.gif"></div>
+		</th>
+	</tr>
+	<tr class="tr1 r_one">
+		<th style="vertical-align: bottom; padding-left: 15px; border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+
+		<div id="w_2117670" class="c"></div>
+
+		<div class="tipad"><span style="float:right">
+<a href="javascript:scroll(0,0)" title="顶端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">顶端</a> <a href="javascript:scroll(0,999999)" title="底端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">底端</a></span>
+			
+			<span class="gray"> 2009-06-04 21:09 | 
+	
+			</span>
+
+			<span><a class="s3" title="回复此楼" style="cursor:pointer;" onclick="postreply('回 14楼(夏末) 的帖子');" data-mx-warn="Empty URL">14 楼</a></span>
+
+		</div></th>
+	</tr></tbody></table>
+</div>
+
+<a name="a" data-mx-warn="Empty URL"></a><a name="3439804" data-mx-warn="Empty URL"></a>
+<div class="t t2"><table cellspacing="0" cellpadding="0" width="100%" style="table-layout: fixed; border-top: 0px; --darkreader-inline-border-top: initial;" data-darkreader-inline-border-top="">
+	<tbody><tr class="tr1"><th style="width:20%" rowspan="2" class="r_two">
+
+		<img src="assets/1570953341-1cde2ccde0fc90dbe6db3784fc6ec383.gif" title="该用户目前不在线" align="absmiddle">
+
+<b>≡ω≡</b>
+<div style="margin:.3em 0 .4em .2em">我灌的不是水··是寂寞···</div>
+<div class="user-pic"><table style="border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left=""><tbody><tr><td width="1">
+
+<a href="https://bbs.sumisora.net/profile.php?action=show&amp;uid=251447" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img class="pic" src="assets/1570953341-ca5f53508d1f711bb0cf99e540e0ce4b.gif" style="max-width:185px;max-height:200px;overflow:hidden" border="0"></a>
+
+</td><td style="vertical-align:top"><span id="sf_15"></span></td></tr></tbody></table>
+</div>
+		级别: <font color="#555555" data-darkreader-inline-color="" style="--darkreader-inline-color:#cfc9be;">澄空一年生上学期</font><br>
+		<img style="margin:.2em 0 .6em" src="assets/1570953341-f43195cd588caa26c296fcc61910b3e6.gif"><br>
+
+<span class="user-info2" id="showface_15">
+<span class="user-infoWrap2">
+
+
+精华:
+
+		<span class="s4">0</span>
+<br>
+发帖: <span class="s1 f9">41</span><br>
+学分: <span class="s2 f9">0 点</span><br>
+澄空币: <span class="s3 f9">668 KID</span><br>
+
+		GPA: <span class="s2 f9">0 点</span><br>
+
+		<span class="gray">注册时间:2008-12-14<br>
+		最后登录:2016-12-10 <br><br> 
+		</span>
+		</span></span>
+		</th>
+		<th height="100%" class="r_one" valign="top" id="td_3439804" style="padding: 5px 15px 0px; border: 0px; width: 80%; overflow: hidden; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+			<div class="tiptop">
+			<span class="fl" style="white-space:nowrap;">
+			<a href="https://bbs.sumisora.net/post.php?action=quote&amp;fid=78&amp;tid=10914751&amp;pid=3439804&amp;article=15" onclick="return sendurl(this,4,event)" id="quote_3439804" title="引用回复这个帖子" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">引用</a> <a href="https://bbs.sumisora.net/post.php?action=modify&amp;fid=78&amp;tid=10914751&amp;pid=3439804&amp;article=15" id="modify_3439804" onclick="return sendurl(this,4,event)" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">编辑</a>
+			<a href="https://bbs.sumisora.net/message.php?action=write&amp;touid=251447" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">短信</a>
+
+			<a href="https://bbs.sumisora.net/operate.php?action=report&amp;tid=10914751&amp;pid=3439804" onclick="return sendurl(this,8)" id="report_3439804" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">举报</a>
+
+			<a href="https://bbs.sumisora.net/read.php?tid=10914751&amp;uid=251447" title="只看该作者的所有回复" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">只看</a>
+
+			<a style="cursor:pointer;" onclick="copyUrl('3439804')" title="此楼地址" data-mx-warn="Empty URL">锚点</a>
+			</span>
+
+			<div class="c"></div>
+			</div>
+			<h1 id="subject_3439804" class="fl">&nbsp;</h1>
+			
+
+			<div id="p_3439804" class="c"></div>
+
+<!--
+-->
+
+			<div class="tpc_content" id="read_3439804">太神奇了·····没一句看懂的·····</div>
+		</th>
+	</tr>
+	<tr class="tr1 r_one">
+		<th style="vertical-align: bottom; padding-left: 15px; border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+
+		<div id="w_3439804" class="c"></div>
+
+		<div><img class="signature" src="assets/1570953341-f23b8ffd0b6b327441aa828c9cd3243d.gif" align="absbottom"></div>
+		<div class="signature" style="max-height:380px;maxHeight:380px; overflow:hidden;"><table width="100%"><tbody><tr><td>想い続けていれば、願いはきっと叶うんだよな。</td><td></td></tr></tbody></table></div>
+
+		<div class="tipad"><span style="float:right">
+<a href="javascript:scroll(0,0)" title="顶端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">顶端</a> <a href="javascript:scroll(0,999999)" title="底端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">底端</a></span>
+			
+			<span class="gray"> 2010-08-14 11:30 | 
+	
+			</span>
+
+			<span><a class="s3" title="回复此楼" style="cursor:pointer;" onclick="postreply('回 15楼(≡ω≡) 的帖子');" data-mx-warn="Empty URL">15 楼</a></span>
+
+		</div></th>
+	</tr></tbody></table>
+</div>
+
+</form>
+<div class="t3" style="margin:initial"><table cellspacing="0" cellpadding="0" width="100%" align="center">
+	<tbody><tr><td align="left"></td>
+		<td valign="center" align="right">
+		<a class="abtn f_two" id="readlog" onclick="sendmsg('pw_ajax.php?action=readlog','',this.id);" data-mx-warn="Empty URL">帖子浏览记录<img src="assets/1570953341-5c8e409588b73ce4284cf5b9bd619e15.gif"></a>
+		<select onchange="Fjump(this.options[this.selectedIndex].value)"><option value="" selected="">快速跳至</option>
+<option value="1">&gt;&gt; 『澄空学园 办公楼区』</option>
+<option value="2"> &nbsp;|- 【校园公告栏】</option>
+<option value="5"> &nbsp;|- 【论坛意见箱】</option>
+<option value="113">&gt;&gt; 『澄空学园 资讯社』</option>
+<option value="47"> &nbsp;|- 【新鲜速报】</option>
+<option value="103"> &nbsp;|- 【新作介绍】</option>
+<option value="8"> &nbsp; &nbsp;|-  【电子杂志下载区】</option>
+<option value="104"> &nbsp;|- 【杂志专题】</option>
+<option value="7">&gt;&gt; 『澄空学园 教学楼区』</option>
+<option value="62"> &nbsp;|- 【AGE主题学部】</option>
+<option value="39"> &nbsp;|- 【Akabeesoft2主题学部】</option>
+<option value="100"> &nbsp;|- 【AUGUST主题学部】</option>
+<option value="42"> &nbsp;|- 【CIRCUS主题学部】</option>
+<option value="40"> &nbsp;|- 【Cotton-Nekoneko主题学部】</option>
+<option value="64"> &nbsp;|- 【GIGA主题学部】</option>
+<option value="38"> &nbsp;|- 【Key主题学部】</option>
+<option value="10"> &nbsp;|- 【KID主题学部】</option>
+<option value="37"> &nbsp;|- 【Leaf主题学部】</option>
+<option value="70"> &nbsp;|- 【minori主题学部】</option>
+<option value="12"> &nbsp;|- 【Navel主题学部】</option>
+<option value="65"> &nbsp;|- 【Nitro+主题学部】</option>
+<option value="14"> &nbsp;|- 【Type-Moon应援会】</option>
+<option value="17"> &nbsp; &nbsp;|-  【TM精华区】</option>
+<option value="98"> &nbsp;|- 【Will主题学部】</option>
+<option value="116"> &nbsp;|- 【FAVORITE主题学部】</option>
+<option value="108"> &nbsp;|- 【ALcot主题学部】</option>
+<option value="55"> &nbsp;|- 【GALGAME综合作品讨论室】</option>
+<option value="97"> &nbsp; &nbsp;|-  【Light主题学部】</option>
+<option value="117"> &nbsp; &nbsp;|-  【CUFFS主题学部】</option>
+<option value="15"> &nbsp; &nbsp;|-  【Liar Soft主题学部】</option>
+<option value="57"> &nbsp; &nbsp;|-  【Purple 主题学部】</option>
+<option value="13"> &nbsp; &nbsp;|-  【工画堂主题学部】</option>
+<option value="35"> &nbsp;|- 【GALGAME综合杂谈室】</option>
+<option value="99"> &nbsp;|- 【ぱれっと主题学部】</option>
+<option value="122"> &nbsp;|- 【SAGA PLANETS研讨室】</option>
+<option value="123"> &nbsp;|- 【Lump of Sugar 研讨室】</option>
+<option value="86">&gt;&gt; 『澄空学园 图书馆』</option>
+<option value="80"> &nbsp;|- 【游戏鉴赏室】</option>
+<option value="56"> &nbsp;|- 【GALGAME攻略馆】</option>
+<option value="115"> &nbsp;|- 【作品出处问询室】</option>
+<option value="63"> &nbsp;|- 【Galgame疑问求助室】</option>
+<option value="18">&gt;&gt; 『澄空学园 教辅楼区』</option>
+<option value="73"> &nbsp;|- 【同人游戏区】</option>
+<option value="60"> &nbsp;|- 【二次元轻小说社】</option>
+<option value="20"> &nbsp;|- 【日语自学教室】</option>
+<option value="61"> &nbsp; &nbsp;|-  【日语学习资料区】</option>
+<option value="118"> &nbsp; &nbsp;|-  【日语参考文章区】</option>
+<option value="21"> &nbsp;|- 【一般游戏社团】</option>
+<option value="24"> &nbsp;|- 【多媒体课堂】</option>
+<option value="88">&gt;&gt; 『澄空学园 原创综合区』</option>
+<option value="79"> &nbsp;|- 【原创游戏部】</option>
+<option value="36"> &nbsp; &nbsp;|-  【ss-square】</option>
+<option value="89"> &nbsp;|- 【MAD研究室】</option>
+<option value="91"> &nbsp;|- 【莉可屋 REC ROOM】</option>
+<option value="119"> &nbsp; &nbsp;|-  【澄空百合社翻唱作品】</option>
+<option value="19"> &nbsp;|- 【澄空文学部】</option>
+<option value="120"> &nbsp; &nbsp;|-  【落日余晖】</option>
+<option value="23"> &nbsp;|- 【绘画工房】</option>
+<option value="69"> &nbsp;|- 【活动投票区】</option>
+<option value="74"> &nbsp;|- 【友谊赛投票区】</option>
+<option value="58"> &nbsp;|- 【澄空部活室】</option>
+<option value="41"> &nbsp;|- 【暑假原创作品活动专区】</option>
+<option value="59"> &nbsp;|- 【实物周边交流区】</option>
+<option value="85"> &nbsp; &nbsp;|-  【ComicMarket相关资料】</option>
+<option value="82"> &nbsp; &nbsp;|-  【新品介绍】</option>
+<option value="84"> &nbsp; &nbsp;|-  【综合交流】</option>
+<option value="83"> &nbsp; &nbsp;|-  【好物收集】</option>
+<option value="81"> &nbsp; &nbsp;|-  【交易求购】</option>
+<option value="95"> &nbsp;|- 【澄空放送部】</option>
+<option value="111"> &nbsp; &nbsp;|-  【放送策划室】</option>
+<option value="27"> &nbsp;|- 【水下乐园LeMU】</option>
+<option value="46"> &nbsp; &nbsp;|-  【美工作品收藏室】</option>
+<option value="26"> &nbsp; &nbsp;|-  【COS自爆馆】</option>
+<option value="90"> &nbsp; &nbsp;|-  【澄空期刊室】</option>
+<option value="71"> &nbsp;|- 【澄空演剧部】</option>
+<option value="9"> &nbsp; &nbsp;|-  演剧部排练室</option>
+<option value="52"> &nbsp;|- 【废帖回收站】</option>
+<option value="29">&gt;&gt; 『澄空学园 好物交流站』</option>
+<option value="50"> &nbsp;|- 【澄空学园字幕作品】</option>
+<option value="51"> &nbsp;|- 【澄空学园漫画作品】</option>
+<option value="77"> &nbsp;|- 【游戏汉化交流区】</option>
+<option value="28"> &nbsp; &nbsp;|-  【CK-GAL中文化小组】</option>
+<option value="106"> &nbsp; &nbsp;|-  【PRO2】</option>
+<option value="49"> &nbsp; &nbsp;|-      【桜】</option>
+<option value="30"> &nbsp;|- 【资源求助区】</option>
+<option value="32"> &nbsp;|- 【澄空音乐厅】</option>
+<option value="33"> &nbsp;|- 【澄空美术馆】</option>
+<option value="34"> &nbsp;|- 【动漫租售屋】</option>
+<option value="44">&gt;&gt; 『澄空学园 课余工作区』</option>
+<option value="45"> &nbsp;|- 【澄空漫画汉化组】</option>
+<option value="48"> &nbsp;|-  【澄空学园字幕组】</option>
+<option value="101"> &nbsp; &nbsp;|-  字幕组资料区</option>
+<option value="72"> &nbsp;|- 【澄空学园分流组】</option>
+<option value="87"> &nbsp;|- 【澄空学园新闻组】</option>
+<option value="96"> &nbsp;|- 【澄空学园文学社】</option>
+<option value="75"> &nbsp;|- 【澄空学园百合社】</option>
+<option value="112"> &nbsp;|- 【澄空学园编辑部】</option>
+<option value="114"> &nbsp;|- 【澄空学园美工部】</option>
+<option value="121"> &nbsp;|-  【澄空祭运行委员会】</option>
+</select></td>
+		
+	</tr>
+	<tr><td style="padding-top: 12px;text-align: left;"><img src="assets/1570953341-ca4a91079181c2a5cb3514b2e5b5f035.gif" align="absbottom"> <b><a href="https://bbs.sumisora.net/index.php" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">『澄空学园』</a> » <a href="https://bbs.sumisora.net/thread.php?fid=78&amp;page=8" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">【汉化破解研讨室】</a></b> </td>
+	<td style="padding-top: 12px;text-align: right;"><a href="https://bbs.sumisora.net/post.php?action=reply&amp;fid=78&amp;tid=10914751" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1570953341-132cb83b134d7ecd9b390389d489bc43.png"></a>
+
+<a href="https://bbs.sumisora.net/post.php?fid=78" style="margin-left:.5em" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1570953341-8cab7ee31ae503cf78e5410d40cec291.png" id="td_post1"></a>
+</td>
+	</tr>
+</tbody></table></div>
+
+
+
+
+<form name="FORM" method="post" action="post.php?" enctype="multipart/form-data" onsubmit="return checkpost(document.FORM);">
+<div class="t" style="margin-top:8px"><table cellspacing="0" cellpadding="0" align="center" width="100%">
+	<tbody><tr>
+		<td class="h" colspan="3"><b>快速发帖</b></td>
+	</tr>
+	<tr></tr>
+	<tr class="tr2"><td colspan="100" style="border-bottom: 0px; --darkreader-inline-border-bottom: initial;" data-darkreader-inline-border-bottom=""></td></tr>
+	<tr>
+		<td valign="top" width="20%" class="f_one" style="padding:7px">
+		<fieldset id="smiliebox" style="border: 1px solid rgb(213, 229, 232); --darkreader-inline-border-top:#354e51; --darkreader-inline-border-right:#354e51; --darkreader-inline-border-bottom:#354e51; --darkreader-inline-border-left:#354e51;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+		<legend>内容</legend>
+		<br>
+		<input type="checkbox" name="atc_usesign" value="1" checked="">使用签名<br>
+		<input type="checkbox" name="atc_convert" value="1" checked="">Wind Code自动转换 <br>
+	 	<input type="checkbox" id="atc_autoimg" name="atc_autoimg" value="1" onchange="onAutoImgchange()" checked="" title="此设置会记在浏览器中"><label for="atc_autoimg" title="此设置会记在浏览器中">自动分析img</label><br><br>
+	 	
+		<input type="checkbox" name="atc_requiresell" value="1" disabled="">出售此帖
+		<input class="input" type="text" maxlength="3" size="3" name="atc_money" value="0">
+		<br>
+		<input type="checkbox" name="atc_requirervrc" value="1">加密此帖
+		<input class="input" type="text" maxlength="6" size="3" name="atc_rvrc" value="0">
+		<br>
+		<br><br><a href="https://bbs.sumisora.net/read.php?tid=10925672" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">如何在帖子中贴图？</a>
+		<br><a href="https://bbs.sumisora.net/read.php?tid=10942243" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Wind Code使用教程</a>
+		<br><a href="https://bbs.sumisora.net/yume/recover/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">恢复帖子内容</a>
+		</fieldset>
+		</td>
+		<td width="60%" class="f_one" style="padding:7px">
+		<div>
+
+
+<blockquote style="width: 96%;" class="blockquote">澄空娘：『转帖请标注[转帖]，并注明原作者和出处，这是对原作者的尊重
+』</blockquote>
+
+		<input type="text" class="input" name="atc_title" value="Re:《俺たちに翼はない》脚本加密算法分析" size="65">
+		
+
+		 认证码: <input class="input" type="text" name="gdcode" size="5" tabindex="6" onfocus="try{opencode('menu_gd',this)}catch(e){}"><br>
+		
+
+		</div><div style="padding:.3em 0">
+		</div>
+		<textarea onkeydown="quickpost(event)" id="atc_content" name="atc_content" rows="8" style="width:96%"></textarea>
+		
+		
+		
+		
+		
+		<div style="margin:5px 0">
+		<div style="padding: 4px 10px 0px 0px; float: left; color: rgb(136, 136, 136); --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">按 Ctrl+Enter 直接提交</div>
+		<input class="btn" type="submit" name="Submit" value=" 提 交 "></div>
+		</td>
+		<td width="20%" class="f_one">
+		<div style="padding:3px; text-align:center; width:200px;">
+		<fieldset id="smiliebox" style="border: 1px solid rgb(213, 229, 232); --darkreader-inline-border-top:#354e51; --darkreader-inline-border-right:#354e51; --darkreader-inline-border-bottom:#354e51; --darkreader-inline-border-left:#354e51;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+			<legend>表情</legend>
+			<div id="menu_show"></div>
+<span style="float:right; margin:3px 10px 5px;"><a id="td_face" style="cursor:pointer;" onclick="showDefault();" align="absmiddle" unselectable="on" data-mx-warn="Empty URL">[更多]</a></span>
+<span style="float:left; margin:3px 10px 5px;"><a id="td_generalface" style="cursor:pointer;" onclick="showfaces();$('#td_generalface').fadeOut();" align="absmiddle" data-mx-warn="Empty URL">[显示表情]</a></span>
+		</fieldset></div>
+		
+		
+		</td>
+	</tr>
+</tbody></table></div></form>
+
+
+
+
+
+
+
+</div>
+<div id="bottom"></div><br>
+<center class="gray">
+<small><span id="windspend">Total 0.063887(s) query 6, Time is now 10-13 15:50, 
+Load is low.
+</span> <br>
+Powered by <a href="http://www.phpwind.net/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><b>PHPWind</b></a> <a href="http://www.phpwind.net/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><b style="color: rgb(255, 153, 0); --darkreader-inline-color:#f7b24b;" data-darkreader-inline-color="">v6.3.2</b></a> Code © 2003-08 <a href="http://www.phpwind.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><b>PHPWind.com</b></a> Corporation</small>
+</center><br>
+<div id="footer">
+	<span class="f12 fl"></span><a href="https://bbs.sumisora.net/sendmail.php" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Contact us</a>
+
+</div>
+</div>
+        
+      </div>
+    </body>
+  </html>

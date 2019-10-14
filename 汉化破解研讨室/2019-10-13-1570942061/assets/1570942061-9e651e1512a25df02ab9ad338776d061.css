@@ -1,0 +1,92 @@
+.pic1 {
+	BORDER-RIGHT: #e1e1e1 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #e1e1e1 1px solid; PADDING-LEFT: 0px; BACKGROUND: #fff; PADDING-BOTTOM: 0px; MARGIN: 2px; BORDER-LEFT: #e1e1e1 1px solid; PADDING-TOP: 0px; BORDER-BOTTOM: #e1e1e1 1px solid; TEXT-ALIGN: center
+}
+.pic2 {
+	BORDER-RIGHT: #e1e1e1 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #e1e1e1 1px solid; PADDING-LEFT: 2px; BACKGROUND: #fff; PADDING-BOTTOM: 2px; MARGIN: 2px; BORDER-LEFT: #e1e1e1 1px solid; PADDING-TOP: 2px; BORDER-BOTTOM: #e1e1e1 1px solid; TEXT-ALIGN: center
+}
+.space1 {
+	MARGIN-BOTTOM: 1px
+}
+.space3 {
+	MARGIN-BOTTOM: 3px
+}
+.space5 {
+	MARGIN-BOTTOM: 5px
+}
+.space10 {
+	MARGIN-BOTTOM: 10px
+}
+.space15 {
+	MARGIN-BOTTOM: 15px
+}
+.space20 {
+	MARGIN-BOTTOM: 20px
+}
+.space25 {
+	MARGIN-BOTTOM: 25px
+}
+.space30 {
+	MARGIN: 60px
+}
+.dir {
+	FONT-SIZE: 13px; 
+	padding: 5px 0px 5px 0px; 
+	COLOR: #e1e1e1; 
+	TEXT-ALIGN: center
+}
+.tools {
+	MARGIN: 5px 0px
+}
+.adbox {
+	padding: 15px 0px; LINE-HEIGHT: 130%
+}
+.adtext {
+	FONT-SIZE: 12px
+}
+
+TABLE.form {
+}
+LABEL {
+}
+
+#ccode_ans {
+	BORDER: #666666 1px solid; WIDTH: 50px;
+}
+
+#text {
+	BORDER: #666666 1px solid; WIDTH: 370px; HEIGHT: 150px
+}
+
+.ccode_info {
+	padding-left: 5px; FONT-SIZE: 12px; FONT-WEIGHT: normal;
+}
+
+.myicon {
+}
+
+.myicon img{
+	BORDER: #ffffff 1px solid;
+}
+
+.myicon-c {
+}
+
+.myicon-c img {
+	BORDER: #ffffff 1px solid; margin: 0px 0px 7px 0px;
+}
+
+.myicon-info {
+	float: left; padding: 0px 0px 5px 5px; FONT-SIZE: 12px; FONT-WEIGHT: normal;
+}
+
+a.myicon:link {
+	TEXT-DECORATION: none;  
+}
+
+a.myicon:visited {
+	TEXT-DECORATION: none;  
+}
+
+
+ 
+ 

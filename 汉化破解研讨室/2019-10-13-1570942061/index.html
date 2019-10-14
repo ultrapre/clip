@@ -1,0 +1,241 @@
+
+  <!DOCTYPE html>
+  <html id="" class="">
+    <!-- OriginalSrc: https://web.archive.org/web/20080209013753/http://blog.roodo.com/toheart/archives/5511807.html -->
+    <head>
+      <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <title>美少女遊戲實驗室(謎:美少女遊戲泛用系統 (1)-簡介 - 樂多日誌</title>
+      
+
+<link rel="stylesheet" type="text/css" href="assets/1570942061-7d8615ffad0397de253976c03119d074.css" referrerpolicy="no-referrer">
+<link rel="stylesheet" type="text/css" href="assets/1570942061-32a1290393936a63a45283a71d7c7890.css" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="assets/1570942061-b98f6fe2ffddcbf2b652540171f75406.css" type="text/css" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="assets/1570942061-9e651e1512a25df02ab9ad338776d061.css" type="text/css" referrerpolicy="no-referrer">
+
+
+<style type="text/css">@keyframes fadeInOpacity{0%{opacity:0}to{opacity:1}}:hover>*>.fbvd--wrapper{animation-name:fadeInOpacity;animation-duration:.3s;opacity:1}.fbvd--wrapper{position:absolute;top:10px;left:10px;opacity:0;text-align:center;margin:0;z-index:5}.fbvd--wrapper a{background: url("") no-repeat 3px 4.55px; background-color: #fff; display:inline-block;font:700 14px Helvetica,Arial,sans-serif;color:#4b4f56;text-decoration:none;vertical-align:middle;padding:0px 8px 0px;margin-right:8px;border-radius:2px; line-height: 22px; padding-left:19px; border: 1px solid #e7e7e7; background-size: 13px}.fbvd--wrapper a:last-child{margin-right:0}.fbvd--wrapper a:hover{text-decoration:none}.fbvd--wrapper a:focus{box-shadow:0 0 1px 2px rgba(88,144,255,.75),0 1px 1px rgba(0,0,0,.15);outline:none}.fbvd--wrapper b{font-size:13px;position:relative;top:1px;color:#3b5998;font-weight:400}</style>
+
+      
+    </head>
+    <body class="mx-wc-selected-elem mx-wc-1570942061"><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+
+
+
+
+<div id="wm-ipp-base" lang="en" style="display: block; direction: ltr;">
+</div>
+<!-- END WAYBACK TOOLBAR INSERT -->
+<!-- HEADER -->
+<a name="top" data-mx-warn="Empty URL"></a>
+<div id="container">
+	<div id="banner">
+		<h1 class="blogtitle"><a href="https://web.archive.org/web/20080209013753/http://blog.roodo.com/toheart" accesskey="1" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">美少女遊戲實驗室(謎</a></h1>
+		<div class="description">美少女遊戲的小感&amp;抽檔備忘錄</div>
+	</div>
+	<div class="blog">
+	<div class="dir">
+	<a class="amenu" href="https://web.archive.org/web/20080209013753/http://blog.roodo.com/toheart/archives/5508613.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">&lt;&lt; 二月份注目新作</a>	| <a class="amenu" href="https://web.archive.org/web/20080209013753/http://blog.roodo.com/toheart/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">回blog首頁</a> |
+		</div>
+	<h2 class="date">February 7,2008</h2>
+		<div class="blogbody">
+		<h3 class="title">美少女遊戲泛用系統 (1)-簡介</h3>
+		<div class="main">
+						<div class="pict"><img src="assets/1570942061-232d21079e35f7ed0bda139a73983b0b.png" width="160" height="197" border="0" alt="kirikiri_inside.png" hspace="5" class="pict" align="left"></div>阿K歐咩(*ﾟーﾟ)＞挨拶<br>
+接下來一系列是新年特輯,介紹美少女遊戲使用的遊戲引擎<br>
+<br>
+美少女遊戲的系統,雖然不能說是遊戲的重點,但是卻能左右玩家對整個遊戲的感覺...<br>
+"泛用遊戲引擎系統"指的是某些程式設計師開發出來為了製作遊戲的"shell"介面或是程式庫...簡單的說,有了這個介面,製作公司只需要把劇本(文字)、聲音、圖片套進這個介面裡面就能生出一個遊戲...<br>
+資金足夠的公司可能會專門開發自己專用的系統,但是泛用系統因為不需要另外開發程式,而且價格較便宜(甚至免費),比較受到小型製作公司青睞<br clear="all"><br>
+另外有人會問,像VA的Realive/AVG32系統和light的Malie系統這種到底算不算?我覺得只要是自己開發提供給自己公司(或子公司)的封閉系統就不能算是泛用引擎系統(Realive/AVG32系統是由VA旗下的versammlen開發<br>
+下面我會介紹一些有名的美少女遊戲泛用系統,當然類似的系統可能相當多,我只能列出我知道的部份 (如果內容有誤也請盡量指教m(_ _)m<div></div><br clear="all"></div>
+		<a name="more" data-mx-warn="Empty URL"></a>
+		<div class="main"><b>1. <a href="https://web.archive.org/web/20080209013753/http://www.nscripter.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Nscripter</a></b> / 作者:高橋直樹<br>
+在2000-03年附近很常看到的AVG系統,我覺得應該算的上是這類泛用系統的始祖之一,因為系統構造簡單,雖然使用列舉型的語法也不會太複雜,作為一般AVG或Visual Novel形式的遊戲相當合適,所以被相當多同人和商業公司採用,其中不乏名氣很高的遊戲<br>
+最近幾年因為遊戲在系統上需求越來越高,Nscriptrr感覺就比較不敷使用,所以有漸漸退出的趨勢,它的使用者已經逐漸被吉里吉里,Buriko和Majiro系統取代<br>
+順便一題,作者本身是編劇家,參與不少美少女遊戲的劇本擔當...<br>
+<b>代表作:</b>水色,Aka(貓貓), 月姬(type-moon), はにはに(AUGUST), はじめてのおてつだい(StudioRing), ひぐらしのなく頃に系列等...<br>
+<br>
+<b>2. <a href="https://web.archive.org/web/20080209013753/http://kikyou.info/tvp/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">吉里吉里</a></b> / 作者:W.Dee<br>
+歷史和Nscriptor差不多,但是靠著2004年的超人氣遊戲"Fate"才讓人開始知道吉里吉里這個泛用系統...使用的TJS語法採用類似javascript風格並不困難,加上主體KAG3系統的功能強大,無論是最簡單的小說形式遊戲或是需要華麗畫面的效果都能應付自如,另外,外掛功能還能讓系統支援更多種類的檔案形式...當然最重要的,吉里吉里依循GPL是免費使用的<br>
+另外,KAG3系統因為支援unicode,所以對國內有些有志之士發展遊戲中文化很有幫助<br>
+<b>代表作:</b>Fate(type-moon), Sugar+Spice!(Chuable), あかべぇそふとつぅ全般, ゆずソフト全般, 還有一堆同人遊戲採用<br>
+<br>
+<b>3. <a href="https://web.archive.org/web/20080209013753/http://www.entis.jp/gls/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">EntisGLS</a></b> / 作者:Leshade Entis<br>
+也是頗有歷史的系統,不過EntisGLS並不是一個shell,而是一群處理各種形式檔案的程式庫,所以開發遊戲的難度要困難的多,也不知道是不是這個緣故,以EntisGLS為系統的遊戲很少看到做的好的...<br>
+這個系統比較特殊的是它獨自研發的"ERI CODEC",是在音聲或畫像作失真相當少的壓縮技術,另外,作者本身也會作畫,甚至自己開發同人遊戲<br>
+<b>代表作:</b>顔のない月(Orbit), ぴゅあぴゅあ(KLEIN), さくらむすび(CUFFS), こんねこ(Marmalade)<br>
+<br>
+<b>4. <a href="https://web.archive.org/web/20080209013753/http://www.darios.buriko.no-ip.info/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Buriko General Interpreter</a></b> / 作者:Darios Sawm(Buriko)<br>
+又名<a href="https://web.archive.org/web/20080209013753/http://ja.wikipedia.org/wiki/Ethornell" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Ethornell</a>,系統本身詳細不明,2002年這個系統首先被root/Clover社採用的時候以為是他們開發的,不過04年以後發現越來越多公司也在使用這個系統...有人認為開發者集很多系統之大成做的,另外DirectX用的頗多,只是系統在目前一般的設備下不會覺得負載很重,流暢度也很夠,雖然不知道script編寫難易度如何,但是看到不少商業作採(改)用,(例如root和八月分別從Entis和Nscripter改用),想必應該有它過人之處吧...<br>
+順帶一題,BGI系統最近成立公司"<a href="https://web.archive.org/web/20080209013753/http://www.buriko.jp/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Buriko社</a>",本格的為遊戲公司作外注的系統開發<br>
+<b>代表作:</b>ている・ている(CLOVER), あけるり/FA(AUGUST), H2O(枕), Lump of sugar社全般<br>
+<br>
+<b>5. MAJIRO Script</b> / 作者:越畑声太<br>
+這個系統的詳細恐怕更少了,貓貓在2004年的"麻雀"首次將系統從Nscripter改為這個系統才開始注意到...作者似乎只受注寫作系統,並且同時擔當script編寫,過去從SIESTA社和棉花社的日記和訪談中大概是這種感覺,當然因為是作者自己開發的系統,script的錯誤會減低很多<br>
+另外我過去小小研究一下這個系統就感覺,這些2D AVG的引擎構造似乎都有點像,(例如Buriko,Majiro,Remain/Alcot系和ケロQ最新的系統)<br>
+<b>代表作:</b>Scarlett(貓貓), SIESTA社全般, 棉花社全般<br>
+<br>
+<b>6. <a href="https://web.archive.org/web/20080209013753/http://yu-ris.net/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">YU-RIS/ERIS</a></b> / 作者:たくみ<br>
+同樣是提供免費下載使用的遊戲引擎,但是知名度卻遠不如上面的幾個系統...從OHP上的介紹看來,YU-RIS是AVG遊戲引擎,ERIS是程式庫,使用的腳本類似C語言的列舉型語法,系統本身似乎不特別突出,不過利用directX的畫面處理有相當好評的模樣<br>
+另外不能不提的,2006年銀時計社利用YU-RIS開發的SLG"おたく☆まっしぐら"bug相當嚴重在當時造成很大的話題,一方面可能這個系統的腳本真的比較困難,當然一方面看出要用AVG引擎開發SLG也是相當無茶<br>
+<b>代表作:</b>お嬢様組曲(symphony), らずべりー(戲畫), Whirlpool社全般, CLOCKUP社全般<br>
+<br>
+<b>7. <a href="https://web.archive.org/web/20080209013753/http://www.retouch.info/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">sketch</a></b> / 作者:薫(retouch)<br>
+2004年Lotus社的"空色"是第一次看到這個系統做的遊戲...<br>
+sketch是這個引擎的核心系統,以retouch這個程式庫環境來開發遊戲,最後開發出來的遊戲還要利用ExHIBIT來執行...系統本身不使用directX,畫面的處理完全靠自己的核心系統,事實上視覺效果上面處理的意外的不錯,但是副作用是對系統的負載偏高...<br>
+sketch系統在retouchOHP也有提供免費版本下載<br>
+<b>代表作:</b>空色の風琴(LOTUS), エーテルの砂時計(Dreamsoft), 白銀のソレイユ(SkyFish), Clear(MOONSTONE)<br>
+<br>
+<b>8. <a href="https://web.archive.org/web/20080209013753/http://www.adobe.com/jp/products/director/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Macromedia(Adobe) director</a></b> / 作者:Macromedia<br>
+可能有人覺得意外,雖然大部分看到director製作的系統都是以簡單的fandisk為主,但是的確也有用它製作一般的AVG遊戲...director系統的特點是容易開發跨平台(Mac系統)遊戲<br>
+Macromedia不算是小公司,這程式如果要用來開發商業作品想必要支付不少權利金,所以已經很久沒看到director系統製作的遊戲...<br>
+<b>代表作:</b>犠母妹/Deep Fantasy(Selen), Pia3 ヒロインズFunBox, すきしょ系列(プラチナれーべる)<br>
+<br>
+...つづく<div></div><br clear="all"></div>
+		<div class="posted">Posted by hikaru613 at <a class="aposted" href="https://web.archive.org/web/20080209013753/http://www.roodo.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">樂多Roodo!</a> │15:06
+				 │<a class="aposted" href="#comments">回應(3)</a>
+						 │<a class="aposted" href="#trackback">引用(0)</a>
+						 │<a class="aposted" href="https://web.archive.org/web/20080209013753/http://blog.roodo.com/toheart/archives/cat_299325.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">特集</a>
+				<br>
+		<div class="tools">
+				樂多分類：<a class="aposted" href="https://web.archive.org/web/20080209013753/http://blog.roodo.com/categories/game" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">遊戲</a>
+						共同主題：<a class="aposted" href="https://web.archive.org/web/20080209013753/http://blog.roodo.com/topic/5783" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">美少女遊戲</a>
+				工具：<a class="aposted" href="javascript:location.href='https://web.archive.org/web/20080209013753/http://cliip.roodo.com/Main.php?do=Cliip&amp;url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title)+'&amp;digest='+encodeURIComponent((window.getSelection?window.getSelection().toString():document.selection.createRange().text).slice(0,400))" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">加入樂多書籤</a>│<a class="aposted" href="https://web.archive.org/web/20080209013753/http://adm.blog.roodo.com/article/edit&amp;aID=5511807" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">編輯本文</a>
+		</div>		
+		</div>
+		<div class="main">
+<div class="adbox">
+	<center>
+  <table cellspacing="0" cellpadding="0" border="0" align="center">
+    <tbody>
+      <tr>
+        <td>
+<!--/* Blog文章頁圖文A */-->
+
+
+       
+        </td>
+        <td>
+<!--/* Blog文章頁圖文B */-->
+
+
+        
+        </td>
+      </tr>
+      <tr>
+        <td align="right" colspan="2" class="adtext"><a href="https://web.archive.org/web/20080209013753/http://www.roodo.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Ads by Roodo!</a>&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+</center>
+</div>
+</div>		
+						<a name="trackback" data-mx-warn="Empty URL"></a>
+				<h3 class="title">引用URL</h3>
+				<div class="trackback-url">http://cgi.blog.roodo.com/trackback/5511807  <input type="image" src="https://web.archive.org/web/20080209013753im_/http://static.roodo.com/blog/copy_trackbck.gif" onclick="javascript:CopyText('https://web.archive.org/web/20080209013753/http://cgi.blog.roodo.com/trackback/5511807');"></div>
+				
+				<a name="comments" data-mx-warn="Empty URL"></a>
+<div class="comments-head">回應文章 <a href="https://web.archive.org/web/20080209013753/http://blog.roodo.com/toheart/archives/5511807-comment.xml" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1570942061-2df3ca2c115bf72b102c0ed779423511.gif" align="top" border="0" width="27" height="15"></a></div>
+<a name="comment-15724897" data-mx-warn="Empty URL"></a>
+	<div class="comments-body">
+			
+	太感謝大大了<br>
+這些資訊在台灣恐怕也只有這裡才看得到<br>
+對我這個同人畫家來說受用無窮<br>
+<br>
+高橋直樹該不會是Studio ego的那位吧？<br>
+雖然他的劇本我覺得很普通<br>
+但是他還會寫程式這倒是蠻厲害的<br>
+雖然我也寫過Direct3D的程式<br>
+但已經好一段時間沒碰了<br>
+畢竟遊戲程式設計師出頭天的機會太少<br>
+原畫或編劇比較有機會</div>
+<div class="comments-post">Posted by Zbv
+    
+at	February 8,2008 10:53
+</div>
+<a name="comment-15725065" data-mx-warn="Empty URL"></a>
+	<div class="comments-body">
+			
+	高橋直樹就是ego那個沒錯...<br>
+至於程式我只知道皮毛而已,倒是曾經真的想好好研究nscript(還買了書</div>
+<div class="comments-post">Posted by <a class="aposted" href="https://web.archive.org/web/20080209013753/http://blog.roodo.com/toheart/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Hikaru</a>
+    
+at	February 8,2008 12:22
+</div>
+<a name="comment-15726577" data-mx-warn="Empty URL"></a>
+	<div class="comments-body">
+			
+	要拆解系統就有研究麼..</div>
+<div class="comments-post">Posted by 小歌丸
+    
+at	February 8,2008 23:46
+</div>
+					<a name="commentForm" data-mx-warn="Empty URL"></a>
+		<table cellpadding="5" cellspacing="0" border="0" class="form">
+		
+		
+		
+		
+		
+		
+		<tbody><tr>
+			<td><label for="author">姓名 : </label></td>
+			<td><input id="author" name="author"></td> 
+		</tr>
+		<tr>
+			<td valign="top"><label for="email">Email : </label></td>
+			<td><input id="email" name="email"></td>
+		</tr>
+		<tr>
+			<td valign="top"><label for="url">URL : </label></td>
+			<td><input id="url" name="url"></td>
+		</tr>
+				<tr>
+			<td valign="top">
+						</td>
+			<td>
+			<input id="bake" type="checkbox" name="cookie" style="padding:0;margin:0px;"> <label for="bake">記住我的資訊</label><br>
+						</td>
+		</tr>		
+		<tr>
+			<td valign="top" colspan="2"><label for="text">回應內容 : </label><br>
+			<textarea id="text" name="comments" rows="10" cols="10"></textarea></td>
+		</tr>
+		<tr>
+			<td colspan="2"><input name="preview" type="submit" value=" 預覽內容 "> <input name="save" type="submit" value=" 直接送出 "></td>
+		</tr>
+		
+		</tbody></table>
+			<div class="pagetop"><a class="aposted" href="#top">回最上方</a></div>
+
+	</div>
+
+</div>
+<div id="footer"></div>
+<div style="CLEAR: both">&nbsp;</div>
+
+</div>
+
+	
+
+
+
+<!--
+playback timings (ms):
+  RedisCDXSource: 4.799
+  esindex: 0.01
+  captures_list: 187.076
+  PetaboxLoader3.resolve: 208.683
+  load_resource: 481.936
+  exclusion.robots.policy: 0.238
+  CDXLines.iter: 11.831 (3)
+  LoadShardBlock: 168.048 (3)
+  exclusion.robots: 0.246
+  PetaboxLoader3.datanode: 365.421 (4)
+--><a href="" download="" data-mx-warn="Empty URL"></a><div data-mx-warn="extension url was not captured by MaoXian" data-mx-original-src="chrome-extension://kjahokgdcbohofgdidndeiaigkehdjdc/pages/ui-selection.html?t=aHR0cHM6Ly93ZWIuYXJjaGl2ZS5vcmc="></div><div data-mx-warn="extension url was not captured by MaoXian" data-mx-original-src="chrome-extension://kjahokgdcbohofgdidndeiaigkehdjdc/pages/ui-control.html?t=aHR0cHM6Ly93ZWIuYXJjaGl2ZS5vcmc="></div>
+</body>
+  </html>

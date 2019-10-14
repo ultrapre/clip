@@ -1,0 +1,20 @@
+.tshuz_floor{width:582px;float:right; margin-bottom:10px; clear:both;}
+.tshuz_floor:after{content:".";display:block;height:0;clear:both;visibility:hidden} 
+.tshuz_title{float:right;background:#f7f8fa;border:1px solid #f0f1f2;color:#1D53BF;cursor:pointer;display:inline-block;height:28px;line-height:28px;text-align:center;width:80px;}
+.nobottom {border-bottom:0!important;}
+.tshuz_reply {border:1px solid #f0f1f2;background:#f7f8fa; padding:0 10px; margin-top:27px;}
+	.tshuz_reply .avatar img {width:32px; height:32px; padding:2px; border:1px #ccc solid;float: left;}
+	.tshuz_reply .tshuz_cnt {margin-left: 45px;zoom: 1; word-wrap: break-word;word-break: break-all;}
+	.tshuz_reply .tshuz_at {color: #2d64b3;}
+	.tshuz_reply ul li {border-bottom: 1px dashed #dedede; padding:10px 0;}
+	.tshuz_reply .tshuz_time { text-align:right}
+	.tshuz_reply .icon-reply {float:right; background:#fff; border:1px solid #ccc; padding:5px 10px; border-radius:3px; cursor:pointer;}
+	.tshuz_reply .icon-reply:hover {border-color: #3e89fa; color: #3e89fa;}
+	.tshuz_reply .reply_cnt {width:545px; margin:10px 0; height:32px; line-height:16px; padding:5px;border: 2px solid #d6dffa;}
+	.tshuz_reply .reply_cnt:focus { outline: none;}
+	.tshuz_reply .smiley {z-index:11;position:relative;width:33px;height:22px;background:url("") no-repeat;cursor:pointer; float:right}
+	.tshuz_reply .reply_submit {padding:3px 6px; line-height:13px; border-radius:3px; float:right; margin-left:10px;}
+	.tshuz_reply #reply_more {line-height: 25px;}
+	.tshuz_reply .reply_area {display: none;}
+	.tshuz_reply .tshuz_cnt_main img {vertical-align: middle; padding:0 2px; max-height:2em;}
+.tshuz_floor:after,.tshuz_reply ul li:after {content:".";display:block;height:0;clear:both;visibility:hidden}

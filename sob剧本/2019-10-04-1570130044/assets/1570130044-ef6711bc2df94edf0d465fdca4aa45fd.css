@@ -1,0 +1,30 @@
+ 
+
+@import url("1570130044-23d7a113fa9657d99d716703adda63c3.css");
+
+html { line-height: 1.8em; }
+
+body, b, em, a, span, div, p, td { font-size: 18pt; }
+
+h1 { font-size: 26pt; }
+h2 { font-size: 22pt; }
+h3 { font-size: 20pt; }
+h4 { font-size: 18pt; }
+h5 { font-size: 16pt; }
+h6 { font-size: 14pt; }
+
+tt, pre { font-size: 16pt; }
+sup, sub { font-size: 12pt; }
+
+table.navigation {
+    float: right;
+    margin: 2px;
+}
+
+.navigation td, .navigation a {
+    font-size: 10pt;
+    padding: 2px;
+}
+
+#interwiki, #pagelocation, #pageinfo { display: none; }
+

@@ -1,0 +1,1344 @@
+
+  <!DOCTYPE html>
+  <html id="" class="translated-ltr">
+    <!-- OriginalSrc: https://web.archive.org/web/20080709013531/http://sekai.insani.org/archives/18 -->
+    <head>
+      <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <title>sekai.insani.org»所以您想成为一名黑客？ 第三部分：代码原型</title>
+      
+
+<link rel="stylesheet" type="text/css" href="assets/1570957266-7d8615ffad0397de253976c03119d074.css" referrerpolicy="no-referrer">
+<link rel="stylesheet" type="text/css" href="assets/1570957266-32a1290393936a63a45283a71d7c7890.css" referrerpolicy="no-referrer">
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="assets/1570957266-bf6e8ede6c9939560d4ea3bd7e88d251.css" referrerpolicy="no-referrer">
+
+
+<style class="darkreader darkreader--fallback" media="screen"></style>
+<style class="darkreader darkreader--text" media="screen"></style>
+<style class="darkreader darkreader--invert" media="screen">#wm-sparkline-canvas, .yt, .sparkline-canvas, .sparkline-mouse-highlight, .search-toolbar-logo, #wm-logo {
+    filter: invert(100%) hue-rotate(180deg) contrast(90%) grayscale(10%) sepia(10%) !important;
+}</style>
+<style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}</style>
+<style class="darkreader darkreader--user-agent" media="screen">html {
+    background-color: #191a1b !important;
+}
+html, body, input, textarea, select, button {
+    background-color: #191a1b;
+}
+html, body, input, textarea, select, button {
+    border-color: #5a5956;
+    color: #f0ebe2;
+}
+a {
+    color: #4791e7;
+}
+table {
+    border-color: #4f4e4c;
+}
+::placeholder {
+    color: #bfb9ac;
+}
+::selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+::-moz-selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #565a0f !important;
+    color: #f0ebe2 !important;
+}
+::-webkit-scrollbar {
+    background-color: #1d1f1f;
+    color: #cbc5b9;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #2c2d2d;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #343636;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #404142;
+}
+::-webkit-scrollbar-corner {
+    background-color: #191a1b;
+}
+* {
+    scrollbar-color: #2c2d2d #1d1f1f;
+}</style>
+<style class="darkreader darkreader--override" media="screen">.jfk-bubble {
+    background-color: #000000 !important;
+}
+.vimvixen-hint {
+    background-color: #765500 !important;
+    border-color: #d5b22e !important;
+    color: #f9edcc !important;
+}
+.measure {
+    z-index: 0 !important;
+}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css" media="screen">
+		@import url("assets/1570957266-7e88aea83eb97a1629bfe544761c2926.css");
+		
+body{
+			background: #6C7C8B url("") repeat-x;
+		}
+	</style>
+<style class="darkreader darkreader--cors" media="screen">body {
+
+  margin:0px;
+
+  padding:0px;
+
+  text-align:center;
+
+  font:11px/15px Georgia,"Times New Roman",Serif;
+
+	color: #555558;background:#73868C;
+
+}
+
+#maincol {
+
+  width:70%;
+
+  background:#fff;
+
+  float:left;
+
+}
+
+#maincol .col {
+
+	padding-bottom: 5px;
+
+	padding-left:25px;
+
+	padding-right:25px;
+
+	line-height:1.6em;
+
+	margin-top:30px;
+
+}
+
+#headbar{
+
+
+
+	background:#6C6a6A;
+
+	height:8px;
+
+border-bottom:1px solid #636161;
+
+}
+
+#navcol {
+
+	padding:5px;
+
+	padding-top: 20px;
+
+	clear:right;
+
+
+
+        right:0px;
+
+	float:right;
+
+  font-size:1em;
+
+  }
+
+#container{
+
+	
+
+ width:90%;
+
+ text-align:left;
+
+ margin-left: auto;
+
+ display:block;
+
+  margin-right: auto;
+
+ background:#fff;
+
+ border-left: 2px solid #777;
+
+ border-right: 2px solid #777;
+
+ padding-bottom:0;
+
+}
+
+#container:after {
+
+    content: "."; 
+
+    display: block; 
+
+    height: 0; 
+
+    clear: both; 
+
+    visibility: hidden;
+
+}
+
+a{
+
+	text-decoration:none;
+
+}
+
+a{
+
+	color: #3C657B;
+
+	text-decoration: none;
+
+	}
+
+#footer{
+
+border-top:1px solid #111;
+
+border-bottom:1px solid #111;
+
+color: #eee;
+
+background: #555;
+
+clear:both;
+
+padding: 5px;
+
+ text-align:center;
+
+ margin-left: auto;
+
+ display:block;
+
+  margin-right: auto;
+
+  font-size: 0.9em;
+
+  font-family:"Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;
+
+}
+
+#footer a{
+
+	color: #fff;
+
+	font-weight:bold;
+
+}
+
+a:hover {
+
+	text-decoration:underline;
+
+}
+
+.entry{
+
+	padding-bottom: 20px;
+
+}
+
+
+
+h1, h2, h3, h4 {
+
+font-family:"Century Gothic", "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;
+
+}
+
+#header {
+
+	padding: 0px;	
+
+	margin-top: 3px;
+
+	padding-top:50px;
+
+	
+
+	padding-bottom:10px;
+
+	border-bottom: 1px solid #bab1b1;
+
+	background: #404040;
+
+	text-align:right;
+
+	padding-right:20px;
+
+	padding-left:5px;
+
+}
+
+#header h1{
+
+	padding:0px;
+
+	margin: 0px;
+
+	margin-bottom:10px;
+
+	font-size: 2.4em;
+
+	letter-spacing:0.1em;
+
+	
+
+}
+
+#header h1 a {
+
+	color: #ffffef;
+
+}
+
+#header h1 a:hover {
+
+	text-decoration:none;
+
+	color: #bb4444;
+
+}
+
+#header img {
+
+	border:none;
+
+}
+
+#subtitle {
+
+	font-family:"Century Gothic", "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;
+
+	margin-bottom:3px;
+
+	font-size: 0.9em;
+
+	text-transform:uppercase;
+
+	color:#bbb;
+
+}
+
+
+
+h2 {
+
+font-size: 1.2em;
+
+margin-bottom:5px;
+
+}
+
+h2.entrydate{
+
+margin-bottom:1px;
+
+font-size: 1.8em;
+
+font-weight:normal;
+
+text-transform:uppercase;
+
+}
+
+.entrymeta{
+
+	font-size: 0.9em;background:#eee;
+
+}
+
+h3.entrytitle{
+
+margin-top:0px;
+
+margin-bottom:1px;
+
+font-size: 1.8em;
+
+font-weight:normal;
+
+}
+
+.entry{
+
+margin-top:8px;
+
+}
+
+.entrybody p a{
+
+font-weight:bold;
+
+}
+
+.entrybody p {
+
+	margin-top:8px;
+
+	margin-bottom:16px;
+
+}
+
+
+
+
+
+ul {
+
+ margin:0 0 1em 0;
+
+ padding-left:0px;
+
+ list-style-type:square;
+
+}
+
+ul.extern {
+
+	font-style:italic;	
+
+}
+
+ul.children {
+
+ list-style-type:disc;
+
+}
+
+ul.nomarginchildren {
+ list-style-type:disc;
+ margin: 0 0 0 0;
+}
+
+
+
+
+
+h2#comments{
+
+text-align:center;
+
+border-top:1px solid #acb1ba;
+
+background:#9ba1aa;
+
+padding:7px;
+
+border-bottom:1px solid #acb1ba;
+
+margin-bottom:10px;
+
+margin-top:80px;
+
+}
+
+ol#commentlist {
+
+margin-top:0px;
+
+
+
+ padding: 5px;
+
+ margin-left: 0px;
+
+ color: #9b9b9b;
+
+ list-style-type: none;
+
+ font-size:0.9em;
+
+}
+
+#commentlist li  p{
+
+ padding: 0px;
+
+ margin: 0px 0px 0px 0px;
+
+}
+
+.commentname {
+
+ float: left;
+
+ margin: 0;
+
+ padding: 0  0 2px 0;
+
+
+
+}
+
+.commentinfo{
+
+ width: 200px;
+
+ float: right;
+
+ text-align: right;
+
+}
+
+.commenttext {
+
+ clear: both;
+
+ padding-top: 0px;
+
+ margin-top: 0px;
+
+ margin-bottom: 30px;
+
+ border-top: 1px solid #ebebeb;
+
+ line-height:12px;
+
+ color: #5b5b5b;
+
+}
+
+#commentsformheader{
+
+padding-left:18px;
+
+font-size: 1.4em;
+
+}
+
+#commentsform{
+
+	margin-top:none;
+
+	text-align:center;
+
+	border:1px solid #ddd;
+
+	background:#ededed;
+
+	padding:0px 10px;
+
+}
+
+#commentsform form{
+
+text-align:left;
+
+margin:0px;
+
+}
+
+#commentsform p{
+
+	margin:5px;
+
+}
+
+#commentsform form textarea{
+
+	width:100%;
+
+}
+
+
+
+code{
+
+	font-family: 'lucida console', 'Courier New', monospace;
+
+	font-size: 0.8em;
+
+	display:block;
+
+	padding:5px;
+
+	background-color: #eee;
+
+	border: 1px solid #d3d3d6;
+
+}
+
+input[type="text"], textarea {
+
+	padding:3px;
+
+	border: 1px solid #d3d3d6;
+
+	color: #535356;
+
+	-moz-border-radius: 3px;
+
+}
+
+input[type="submit"]{
+
+	padding:2px;
+
+	font-size: 1.25em;
+
+	border: 1px solid #d3d3d3;
+
+	background: #fff;
+
+	-moz-border-radius: 3px;
+
+}
+
+blockquote {
+
+	border-left: 3px solid #686868;
+
+	color: #888;
+
+	padding-left: 8px;
+
+	margin-left: 25px;
+
+}
+
+a img {
+
+border:none;
+
+}
+
+
+
+p.footer {
+
+	color:#777;
+
+}
+		
+body{
+			background: #6C7C8B url("") repeat-x;
+		}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">@keyframes fadeInOpacity{0%{opacity:0}to{opacity:1}}:hover>*>.fbvd--wrapper{animation-name:fadeInOpacity;animation-duration:.3s;opacity:1}.fbvd--wrapper{position:absolute;top:10px;left:10px;opacity:0;text-align:center;margin:0;z-index:5}.fbvd--wrapper a{background: url("") no-repeat 3px 4.55px; background-color: #fff; display:inline-block;font:700 14px Helvetica,Arial,sans-serif;color:#4b4f56;text-decoration:none;vertical-align:middle;padding:0px 8px 0px;margin-right:8px;border-radius:2px; line-height: 22px; padding-left:19px; border: 1px solid #e7e7e7; background-size: 13px}.fbvd--wrapper a:last-child{margin-right:0}.fbvd--wrapper a:hover{text-decoration:none}.fbvd--wrapper a:focus{box-shadow:0 0 1px 2px rgba(88,144,255,.75),0 1px 1px rgba(0,0,0,.15);outline:none}.fbvd--wrapper b{font-size:13px;position:relative;top:1px;color:#3b5998;font-weight:400}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--cors" media="screen">.goog-te-banner-frame{left:0px;top:0px;height:39px;width:100%;z-index:10000001;position:fixed;border:none;border-bottom:1px solid #6b90da;margin:0;-moz-box-shadow:0 0 8px 1px #999999;-webkit-box-shadow:0 0 8px 1px #999999;box-shadow:0 0 8px 1px #999999;_position:absolute}.goog-te-menu-frame{z-index:10000002;position:fixed;border:none;-moz-box-shadow:0 3px 8px 2px #999999;-webkit-box-shadow:0 3px 8px 2px #999999;box-shadow:0 3px 8px 2px #999999;_position:absolute}.goog-te-ftab-frame{z-index:10000000;border:none;margin:0}.goog-te-gadget{font-family:arial;font-size:11px;color:#666;white-space:nowrap}.goog-te-gadget img{vertical-align:middle;border:none}.goog-te-gadget-simple{background-color:#fff;border-left:1px solid #d5d5d5;border-top:1px solid #9b9b9b;border-bottom:1px solid #e8e8e8;border-right:1px solid #d5d5d5;font-size:10pt;display:inline-block;padding-top:1px;padding-bottom:2px;cursor:pointer;zoom:1;*display:inline}.goog-te-gadget-icon{margin-left:2px;margin-right:2px;width:19px;height:19px;border:none;vertical-align:middle}.goog-te-combo{margin-left:4px;margin-right:4px;vertical-align:baseline;*vertical-align:middle}.goog-te-gadget .goog-te-combo{margin:4px 0}.goog-logo-link,.goog-logo-link:link,.goog-logo-link:visited,.goog-logo-link:hover,.goog-logo-link:active{font-size:12px;font-weight:bold;color:#444;text-decoration:none}.goog-te-banner .goog-logo-link,.goog-close-link{display:block;margin:0px 10px}.goog-te-banner .goog-logo-link{padding-top:2px;padding-left:4px}.goog-te-combo,.goog-te-banner *,.goog-te-ftab *,.goog-te-menu *,.goog-te-menu2 *,.goog-te-balloon *{font-family:arial;font-size:10pt}.goog-te-banner{margin:0;background-color:#e4effb;overflow:hidden}.goog-te-banner img{border:none}.goog-te-banner-content{color:#000}.goog-te-banner-content img{vertical-align:middle}.goog-te-banner-info{color:#666;vertical-align:top;margin-top:0px;font-size:7pt}.goog-te-banner-margin{width:8px}.goog-te-button{border-color:#e7e7e7;border-style:none solid solid none;border-width:0 1px 1px 0}.goog-te-button div{border-color:#cccccc #999999 #999999 #cccccc;border-right:1px solid #999999;border-style:solid;border-width:1px;height:20px}.goog-te-button button{background:transparent;border:none;cursor:pointer;height:20px;overflow:hidden;margin:0;vertical-align:top;white-space:nowrap}.goog-te-button button:active{background:none repeat scroll 0 0 #cccccc}.goog-te-ftab{margin:0px;background-color:#fff;white-space:nowrap}.goog-te-ftab-link{text-decoration:none;font-weight:bold;font-size:10pt;border:1px outset #888;padding:6px 10px;white-space:nowrap;position:absolute;left:0px;top:0px}.goog-te-ftab-link img{margin-left:2px;margin-right:2px;width:19px;height:19px;border:none;vertical-align:middle}.goog-te-ftab-link span{text-decoration:underline;margin-left:2px;margin-right:2px;vertical-align:middle}.goog-float-top .goog-te-ftab-link{padding:2px 2px;border-top-width:0px}.goog-float-bottom .goog-te-ftab-link{padding:2px 2px;border-bottom-width:0px}.goog-te-menu-value{text-decoration:none;color:#0000cc;white-space:nowrap;margin-left:4px;margin-right:4px}.goog-te-menu-value span{text-decoration:underline}.goog-te-menu-value img{margin-left:2px;margin-right:2px}.goog-te-gadget-simple .goog-te-menu-value{color:#000}.goog-te-gadget-simple .goog-te-menu-value span{text-decoration:none}.goog-te-menu{background-color:#ffffff;text-decoration:none;border:2px solid #c3d9ff;overflow-y:scroll;overflow-x:hidden;position:absolute;left:0;top:0}.goog-te-menu-item{padding:3px;text-decoration:none}.goog-te-menu-item,.goog-te-menu-item:link{color:#0000cc;background:#ffffff}.goog-te-menu-item:visited{color:#551a8b}.goog-te-menu-item:hover{background:#c3d9ff}.goog-te-menu-item:active{color:#0000cc}.goog-te-menu2{background-color:#ffffff;text-decoration:none;border:1px solid #6b90da;overflow:hidden;padding:4px}.goog-te-menu2-colpad{width:16px}.goog-te-menu2-separator{margin:6px 0;height:1px;background-color:#aaa;overflow:hidden}.goog-te-menu2-item div,.goog-te-menu2-item-selected div{padding:4px}.goog-te-menu2-item .indicator{display:none}.goog-te-menu2-item-selected .indicator{display:auto}.goog-te-menu2-item-selected .text{padding-left:4px;padding-right:4px}.goog-te-menu2-item,.goog-te-menu2-item-selected{text-decoration:none}.goog-te-menu2-item div,.goog-te-menu2-item:link div,.goog-te-menu2-item:visited div,.goog-te-menu2-item:active div{color:#0000cc;background:#ffffff}.goog-te-menu2-item:hover div{color:#ffffff;background:#3366cc}.goog-te-menu2-item-selected div,.goog-te-menu2-item-selected:link div,.goog-te-menu2-item-selected:visited div,.goog-te-menu2-item-selected:hover div,.goog-te-menu2-item-selected:active div{color:#000;font-weight:bold}.goog-te-balloon{background-color:#ffffff;overflow:hidden;padding:8px;border:none;-moz-border-radius:10px;border-radius:10px}.goog-te-balloon-frame{background-color:#ffffff;border:1px solid #6b90da;-moz-box-shadow:0 3px 8px 2px #999999;-webkit-box-shadow:0 3px 8px 2px #999999;box-shadow:0 3px 8px 2px #999999;-moz-border-radius:8px;border-radius:8px}.goog-te-balloon img{border:none}.goog-te-balloon-text{margin-top:6px}.goog-te-balloon-zippy{margin-top:6px;white-space:nowrap}.goog-te-balloon-zippy *{vertical-align:middle}.goog-te-balloon-zippy .minus{background-image:url("https://www.google.com/images/zippy_minus_sm.gif")}.goog-te-balloon-zippy .plus{background-image:url("https://www.google.com/images/zippy_plus_sm.gif")}.goog-te-balloon-zippy span{color:#00c;text-decoration:underline;cursor:pointer;margin:0 4px}.goog-te-balloon-form{margin:6px 0 0 0}.goog-te-balloon-form form{margin:0}.goog-te-balloon-form form textarea{margin-bottom:4px;width:100%}.goog-te-balloon-footer{margin:6px 0 4px 0}.goog-te-spinner-pos{z-index:1000;position:fixed;transition-delay:0.6s;left:-1000px;top:-1000px}.goog-te-spinner-animation{background:#ccc;display:flex;align-items:center;justify-content:center;width:104px;height:104px;border-radius:50px;background:#fff url("") 50% 50% no-repeat;transition:all 0.6s ease-in-out;transform:scale(0.4);opacity:0}.goog-te-spinner-animation-show{transform:scale(0.5);opacity:1}.goog-te-spinner{margin:2px 0 0 2px;animation:goog-te-spinner-rotator 1.4s linear infinite}@keyframes goog-te-spinner-rotator{0%{transform:rotate(0deg)}100%{transform:rotate(270deg)}}.goog-te-spinner-path{stroke-dasharray:187;stroke-dashoffset:0;stroke:#4285f4;transform-origin:center;animation:goog-te-spinner-dash 1.4s ease-in-out infinite}@keyframes goog-te-spinner-dash{0%{stroke-dashoffset:187}50%{stroke-dashoffset:46.75;transform:rotate(135deg)}100%{stroke-dashoffset:187;transform:rotate(450deg)}}#goog-gt-tt html,#goog-gt-tt body,#goog-gt-tt div,#goog-gt-tt span,#goog-gt-tt iframe,#goog-gt-tt h1,#goog-gt-tt h2,#goog-gt-tt h3,#goog-gt-tt h4,#goog-gt-tt h5,#goog-gt-tt h6,#goog-gt-tt p,#goog-gt-tt a,#goog-gt-tt img,#goog-gt-tt ol,#goog-gt-tt ul,#goog-gt-tt li,#goog-gt-tt table,#goog-gt-tt form,#goog-gt-tt tbody,#goog-gt-tt tr,#goog-gt-tt td{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;text-align:left;line-height:normal}#goog-gt-tt ol,#goog-gt-tt ul{list-style:none}#goog-gt-tt table{border-collapse:collapse;border-spacing:0}#goog-gt-tt caption,#goog-gt-tt th,#goog-gt-tt td{text-align:left;font-weight:normal}#goog-gt-tt input::-moz-focus-inner{border:0}div#goog-gt-tt{padding:10px 14px}#goog-gt-tt{color:#222;background-color:#ffffff;border:1px solid #eee;box-shadow:0 4px 16px rgba(0,0,0,.2);-moz-box-shadow:0 4px 16px rgba(0,0,0,.2);-webkit-box-shadow:0 4px 16px rgba(0,0,0,.2);display:none;font-family:arial;font-size:10pt;width:420px;padding:12px;position:absolute;z-index:10000}#goog-gt-tt .original-text,.gt-hl-layer{clear:both;font-size:10pt;position:relative;text-align:justify;width:100%}#goog-gt-tt .title{color:#999;font-family:arial,sans-serif;margin:4px 0;text-align:left}#goog-gt-tt .close-button{display:none}#goog-gt-tt .logo{float:left;margin:0px}#goog-gt-tt .activity-links{display:inline-block}#goog-gt-tt .started-activity-container{display:none;width:100%}#goog-gt-tt .activity-root{margin-top:20px}#goog-gt-tt .left{float:left}#goog-gt-tt .right{float:right}#goog-gt-tt .bottom{min-height:15px;position:relative;height:1%}#goog-gt-tt .status-message{background:-moz-linear-gradient(top,#29910d 0%,#20af0e 100%);background:-webkit-linear-gradient(top,#29910d 0%,#20af0e 100%);background:-o-linear-gradient(top,#29910d 0%,#20af0e 100%);background:-ms-linear-gradient(top,#29910d 0%,#20af0e 100%);background:linear-gradient(top,#29910d 0%,#20af0e 100%);background:#29910d;border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;box-shadow:inset 0px 2px 2px #1e6609;-moz-box-shadow:inset 0px 2px 2px #1e6609;-webkit-box-shadow:inset 0px 2px 2px #1e6609;color:white;font-size:9pt;font-weight:bolder;margin-top:12px;padding:6px;text-shadow:1px 1px 1px #1e6609}#goog-gt-tt .activity-link{color:#1155cc;cursor:pointer;font-family:arial;font-size:11px;margin-right:15px;text-decoration:none}#goog-gt-tt textarea{font-family:arial;resize:vertical;width:100%;margin-bottom:10px;-webkit-border-radius:1px;-moz-border-radius:1px;border-radius:1px;border:1px solid #d9d9d9;border-top:1px solid silver;font-size:13px;height:auto;overflow-y:auto;padding:1px}#goog-gt-tt textarea:focus{-webkit-box-shadow:inset 0 1px 2px rgba(0,0,0,0.3);-moz-box-shadow:inset 0 1px 2px rgba(0,0,0,0.3);box-shadow:inset 0 1px 2px rgba(0,0,0,0.3);border:1px solid #4d90fe;outline:none}#goog-gt-tt .activity-cancel{margin-right:10px}#goog-gt-tt .translate-form{min-height:25px;vertical-align:middle;padding-top:8px}#goog-gt-tt .translate-form .activity-form{margin-bottom:5px;margin-bottom:0px}#goog-gt-tt .translate-form .activity-form input{display:inline-block;min-width:54px;*min-width:70px;border:1px solid #dcdcdc;border:1px solid rgba(0,0,0,0.1);text-align:center;color:#444;font-size:11px;font-weight:bold;height:27px;outline:0;padding:0 8px;vertical-align:middle;line-height:27px;margin:0 16px 0 0;box-shadow:0 1px 2px rgba(0,0,0,.1);-moz-box-shadow:0 1px 2px rgba(0,0,0,.1);-webkit-box-shadow:0 1px 2px rgba(0,0,0,.1);-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;-webkit-transition:all 0.218s;-moz-transition:all 0.218s;-o-transition:all 0.218s;transition:all 0.218s;background-color:#f5f5f5;background-image:-webkit-gradient(linear,left top,left bottom,from(#f5f5f5),to(#f1f1f1));background-image:-webkit-linear-gradient(top,#f5f5f5,#f1f1f1);background-image:-moz-linear-gradient(top,#f5f5f5,#f1f1f1);background-image:-ms-linear-gradient(top,#f5f5f5,#f1f1f1);background-image:-o-linear-gradient(top,#f5f5f5,#f1f1f1);background-image:linear-gradient(top,#f5f5f5,#f1f1f1);-webkit-user-select:none;-moz-user-select:none;cursor:default}#goog-gt-tt .translate-form .activity-form input:hover{border:1px solid #c6c6c6;color:#222;-webkit-transition:all 0.0s;-moz-transition:all 0.0s;-o-transition:all 0.0s;transition:all 0.0s;background-color:#f8f8f8;background-image:-webkit-gradient(linear,left top,left bottom,from(#f8f8f8),to(#f1f1f1));background-image:-webkit-linear-gradient(top,#f8f8f8,#f1f1f1);background-image:-moz-linear-gradient(top,#f8f8f8,#f1f1f1);background-image:-ms-linear-gradient(top,#f8f8f8,#f1f1f1);background-image:-o-linear-gradient(top,#f8f8f8,#f1f1f1);background-image:linear-gradient(top,#f8f8f8,#f1f1f1)}#goog-gt-tt .translate-form .activity-form input:active{border:1px solid #c6c6c6;color:#333;background-color:#f6f6f6;background-image:-webkit-gradient(linear,left top,left bottom,from(#f6f6f6),to(#f1f1f1));background-image:-webkit-linear-gradient(top,#f6f6f6,#f1f1f1);background-image:-moz-linear-gradient(top,#f6f6f6,#f1f1f1);background-image:-ms-linear-gradient(top,#f6f6f6,#f1f1f1);background-image:-o-linear-gradient(top,#f6f6f6,#f1f1f1);background-image:linear-gradient(top,#f6f6f6,#f1f1f1)}#goog-gt-tt .translate-form .activity-form input:focus #goog-gt-tt .translate-form .activity-form input.focus #goog-gt-tt .translate-form .activity-form input:active,#goog-gt-tt .translate-form .activity-form input:focus:active,#goog-gt-tt .translate-form .activity-form input:.focus:active{box-shadow:inset 0 0 0 1px rgba(255,255,255,0.5);-webkit-box-shadow:inset 0 0 0 1px rgba(255,255,255,0.5);-moz-box-shadow:inset 0 0 0 1px rgba(255,255,255,0.5)}#goog-gt-tt .translate-form .activity-form input:focus,#goog-gt-tt .translate-form .activity-form input.focus{outline:none;border:1px solid #4d90fe;z-index:4!important}#goog-gt-tt .translate-form .activity-form input.selected{background-color:#eeeeee;background-image:-webkit-gradient(linear,left top,left bottom,from(#eeeeee),to(#e0e0e0));background-image:-webkit-linear-gradient(top,#eeeeee,#e0e0e0);background-image:-moz-linear-gradient(top,#eeeeee,#e0e0e0);background-image:-ms-linear-gradient(top,#eeeeee,#e0e0e0);background-image:-o-linear-gradient(top,#eeeeee,#e0e0e0);background-image:linear-gradient(top,#eeeeee,#e0e0e0);-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);border:1px solid #ccc;color:#333}#goog-gt-tt .translate-form .activity-form input.activity-submit{color:white;border-color:#3079ed;background-color:#4d90fe;background-image:-webkit-gradient(linear,left top,left bottom,from(#4d90fe),to(#4787ed));background-image:-webkit-linear-gradient(top,#4d90fe,#4787ed);background-image:-moz-linear-gradient(top,#4d90fe,#4787ed);background-image:-ms-linear-gradient(top,#4d90fe,#4787ed);background-image:-o-linear-gradient(top,#4d90fe,#4787ed);background-image:linear-gradient(top,#4d90fe,#4787ed)}#goog-gt-tt .translate-form .activity-form input.activity-submit:hover #goog-gt-tt .translate-form .activity-form input.activity-submit:focus,#goog-gt-tt .translate-form .activity-form input.activity-submit.focus #goog-gt-tt .translate-form .activity-form input.activity-submit:active{border-color:#3079ed;background-color:#357ae8;background-image:-webkit-gradient(linear,left top,left bottom,from(#4d90fe),to(#357ae8));background-image:-webkit-linear-gradient(top,#4d90fe,#357ae8);background-image:-moz-linear-gradient(top,#4d90fe,#357ae8);background-image:-ms-linear-gradient(top,#4d90fe,#357ae8);background-image:-o-linear-gradient(top,#4d90fe,#357ae8);background-image:linear-gradient(top,#4d90fe,#357ae8)}#goog-gt-tt .translate-form .activity-form input.activity-submit:hover{box-shadow:inset 0 0 0 1px #fff,0px 1px 1px rgba(0,0,0,0.1);-webkit-box-shadow:inset 0 0 0 1px #fff,0px 1px 1px rgba(0,0,0,0.1);-moz-box-shadow:inset 0 0 0 1px #fff,0px 1px 1px rgba(0,0,0,0.1)}#goog-gt-tt .translate-form .activity-form input:focus,#goog-gt-tt .translate-form .activity-form input.focus,#goog-gt-tt .translate-form .activity-form input:active,#goog-gt-tt .translate-form .activity-form input:hover,#goog-gt-tt .translate-form .activity-form input.activity-submit:focus,#goog-gt-tt .translate-form .activity-form input.activity-submit.focus,#goog-gt-tt .translate-form .activity-form input.activity-submit:active,#goog-gt-tt .translate-form .activity-form input.activity-submit:hover{border-color:#3079ed}#goog-gt-tt .gray{color:#999;font-family:arial,sans-serif}#goog-gt-tt .alt-helper-text{color:#999;font-size:11px;font-family:arial,sans-serif;margin:15px 0px 5px 0px}#goog-gt-tt .alt-error-text{color:#800;display:none;font-size:9pt}.goog-text-highlight{background-color:#c9d7f1;-webkit-box-shadow:2px 2px 4px #9999aa;-moz-box-shadow:2px 2px 4px #9999aa;box-shadow:2px 2px 4px #9999aa;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;position:relative}#goog-gt-tt .alt-menu.goog-menu{background:#ffffff;border:1px solid #dddddd;-webkit-box-shadow:0px 3px 3px #888;-moz-box-shadow:0px 2px 20px #888;box-shadow:0px 2px 4px #99a;min-width:0;outline:none;padding:0;position:absolute;z-index:2000}#goog-gt-tt .alt-menu .goog-menuitem{cursor:pointer;padding:2px 5px 5px;margin-right:0px;border-style:none}#goog-gt-tt .alt-menu div.goog-menuitem:hover{background:#ddd}#goog-gt-tt .alt-menu .goog-menuitem h1{font-size:100%;font-weight:bold;margin:4px 0px}#goog-gt-tt .alt-menu .goog-menuitem strong{color:#345aad}#goog-gt-tt .goog-submenu-arrow{text-align:right;position:absolute;right:0;left:auto}#goog-gt-tt .goog-menuitem-rtl .goog-submenu-arrow{text-align:left;position:absolute;left:0;right:auto}#goog-gt-tt .gt-hl-text,#goog-gt-tt .trans-target-highlight{background-color:#f1ea00;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;-moz-box-shadow:rgba(0,0,0,.5) 3px 3px 4px;-webkit-box-shadow:rgba(0,0,0,.5) 3px 3px 4px;box-shadow:rgba(0,0,0,.5) 3px 3px 4px;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;color:#f1ea00;cursor:pointer;margin:-2px -2px -2px -3px;padding:2px 2px 2px 3px;position:relative}#goog-gt-tt .trans-target-highlight{color:#222}#goog-gt-tt .gt-hl-layer{color:white;position:absolute!important}#goog-gt-tt .trans-target,#goog-gt-tt .trans-target .trans-target-highlight{background-color:#c9d7f1;border-radius:4px 4px 0px 0px;-webkit-border-radius:4px 4px 0px 0px;-moz-border-radius:4px 4px 0px 0px;-moz-box-shadow:rgba(0,0,0,.5) 3px 3px 4px;-webkit-box-shadow:rgba(0,0,0,.5) 3px 3px 4px;box-shadow:rgba(0,0,0,.5) 3px 3px 4px;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;cursor:pointer;margin:-2px -2px -2px -3px;padding:2px 2px 3px 3px;position:relative}#goog-gt-tt span:focus{outline:none}#goog-gt-tt .trans-edit{background-color:transparent;border:1px solid #4d90fe;border-radius:0em;-webkit-border-radius:0em;-moz-border-radius:0em;margin:-2px;padding:1px}#goog-gt-tt .gt-trans-highlight-l{border-left:2px solid red;margin-left:-2px}#goog-gt-tt .gt-trans-highlight-r{border-right:2px solid red;margin-right:-2px}#goog-gt-tt #alt-input{padding:2px}#goog-gt-tt #alt-input-text{font-size:11px;padding:2px 2px 3px;margin:0;background-color:#fff;color:#333;border:1px solid #d9d9d9;border-top:1px solid #c0c0c0;display:inline-block;vertical-align:top;height:21px;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-webkit-border-radius:1px}#goog-gt-tt #alt-input-text:hover{border:1px solid #b9b9b9;border-top:1px solid #a0a0a0;-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1)}#goog-gt-tt #alt-input-text:focus{-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);outline:none;border:1px solid #4d90fe}#goog-gt-tt #alt-input-submit{font-size:11px;padding:2px 6px 3px;margin:0 0 0 2px;height:21px}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+
+      
+    </head>
+    <body id="home" class="log mx-wc-selected-elem mx-wc-1570957266"><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+
+
+
+
+<div id="wm-ipp-base" lang="en" style="display: block; direction: ltr;">
+</div>
+<!-- END WAYBACK TOOLBAR INSERT -->
+	<div id="container">
+		<!-- The header begins  -->
+		<div id="header">
+			<h1><a href="https://web.archive.org/web/20080709013531/http://sekai.insani.org/" title="sekai.insani.org" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：精神错乱的世界</font></font></a></h1>
+			<div id="subtitle">
+				<!-- Here's the tagline  --><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+				insani的生产杂志			</font></font></div>
+		</div>
+		<div id="headbar"></div>
+		<!-- The header ends  -->
+		<div id="maincol"><!-- The main content column begins  -->
+			<div class="col"><div class="entry">
+			<!--
+				<h2 class="entrydate">June 12, 2006</h2>
+			-->
+			<h3 class="entrytitle" id="post-18">
+				<a href="https://web.archive.org/web/20080709013531/http://sekai.insani.org/archives/18" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">所以你想成为一名黑客？</font><font style="vertical-align: inherit;">第三部分：代码原型</font></font></a>
+			</h3>
+			<div class="entrybody">
+				<div class="entrymeta"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+					爱德华·凯斯（Edward Keyes）在2006年6月12日发布到</font></font><a href="https://web.archive.org/web/20080709013531/http://sekai.insani.org/archives/category/production-process/" title="查看生产过程中的所有帖子" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Production Process</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，</font></font><a href="https://web.archive.org/web/20080709013531/http://sekai.insani.org/archives/category/production-process/so-you-want-to-be-a-hacker/" title="查看“您想成为一名黑客？”中的所有文章。" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">所以您想成为一名黑客吗？</font></font></a>				</div>
+				<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在上一期中，我们使用值得信赖的十六进制编辑器分析了Cross + Channel存档格式，并且在概念验证的手动图像提取之后，我们相信我们知道该文件中的情况。</font><font style="vertical-align: inherit;">但是当然只有一种方法可以确保：构建一些工具，然后尝试修改游戏！</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">因此，今天我们将通过一些快速的代码原型来创建一些合适的工具来处理档案。</font><font style="vertical-align: inherit;">我的意图是使这一切尽可能简单明了，因此，如果您从本期中脱口而出，说：“您的意思</font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">是</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我要写一个游戏就要做什么？！”然后……任务完成了。</font></font><a id="more-18" data-mx-warn="Empty URL"></a></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我们应该使用哪种语言？</font><font style="vertical-align: inherit;">通常，我使用C语言工作，但是我也想从本系列中学习一些东西，所以我们将使用</font></font><a href="https://web.archive.org/web/20080709013531/http://www.python.org/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Python</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，这对我来说也是一种学习经验。</font><font style="vertical-align: inherit;">其主要优点是：</font></font></p>
+<ul>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">跨平台。</font><font style="vertical-align: inherit;">它适用于Windows，Linux和Mac OS，并且统一了一些固有的差异，例如目录路径分隔符。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">级别的好组合。</font><font style="vertical-align: inherit;">有灵活的高级数据结构，例如哈希表字典和函数延续，以及不错的低级位操作。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">直观的语法。</font><font style="vertical-align: inherit;">Python几乎就像可执行的伪代码，因此，如果您几乎了解其他任何语言，则应该能够轻松阅读它。
+</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">互动模式。</font><font style="vertical-align: inherit;">如果需要，您可以一个接一个地键入命令并立即执行它们。</font><font style="vertical-align: inherit;">这对于避免在原型制作过程中进行缓慢的编辑-重新编译-测试步骤非常有用。
+</font></font></li>
+</ul>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">不幸的是，主要缺点是速度。</font><font style="vertical-align: inherit;">Python只是无法与C或其他金属编译语言进行严重的位压缩相比。</font><font style="vertical-align: inherit;">就我们的目的而言，这还不是很重要，当成为一个问题时，实际上有一些相当不错的Python / C接口功能可用于我们在需要时混合和匹配代码。</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">因此，如果您使用的是Mac OS X，则可能已经有了Python。</font><font style="vertical-align: inherit;">如果您使用的是Linux，则可以拥有它，也可以轻松获取软件包以进行发行。</font><font style="vertical-align: inherit;">如果您使用的是Windows，则也有一个</font></font><a href="https://web.archive.org/web/20080709013531/http://www.python.org/download/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">安装程序</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font><font style="vertical-align: inherit;">索取一份副本，然后继续！</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我们需要什么样的例行程序？</font><font style="vertical-align: inherit;">好吧，让我们回顾一下我们上次确定的存档格式：</font></font></p>
+<ol>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">签名串 </font></font><samp><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">仅包装</font></font></samp></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">56个字节的零</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">8字节小字节序文件计数</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">144字节的文件条目记录，包括：
+</font></font><ol>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">128字节文件名，以零结尾</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">8字节的Little-Endian文件偏移量（从存档开始）</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">8字节小端文件大小</font></font></li>
+</ol>
+</li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">压缩后的文件（未压缩和未加密）。</font></font></li>
+</ol>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">因此，看来我们需要例程才能：</font></font></p>
+<ul>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">读/写特定长度和字节序的整数</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">读/写零终止的字符串</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">检查签名和已知的零运行</font></font></li>
+</ul>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">没汗！</font><font style="vertical-align: inherit;">这些实用程序例程从现在开始便会派上用场，因此一旦我们编写它们，我们也可以将它们用于后续游戏。</font><font style="vertical-align: inherit;">让我们攻击整数例如：</font></font></p>
+<pre><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">def read_unsigned（infile，size = 4，endian = LITTLE_ENDIAN）：</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+   结果= long（0）</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+   对于我在xrange（size）：</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+      temp = long（ord（infile.read（1）））</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+      如果endian == LITTLE_ENDIAN：</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+         结果| =（temp &lt;&lt;（8 * i））</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+      elif endian == BIG_ENDIAN：</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+         结果=（结果&lt;&lt; 8）| </font><font style="vertical-align: inherit;">温度</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+   返回结果</font></font><font></font>
+</pre>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">根据您的背景，此代码段是完全琐碎的或完全令人困惑的。</font><font style="vertical-align: inherit;">基本上，它只是一次从文件中读取一个字节，并将这些位转换为适当的数值以建立一个多字节数字，具体取决于这些字节是否按最低有效位优先（小尾数）排序。 ，或最高有效位数优先（大端）。</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我们需要的其余内容相似，说实话，真的不值得详细讨论。</font><font style="vertical-align: inherit;">我非常有</font></font><a href="https://web.archive.org/web/20080709013531/http://www.insani.org/tools/insani.py" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用地整理</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">了实用程序例程的快速打包，您可以将其作为</font><a href="https://web.archive.org/web/20080709013531/http://www.insani.org/tools/insani.py" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;">insani.py</font></a><font style="vertical-align: inherit;">下载并根据</font><a href="https://web.archive.org/web/20080709013531/http://www.insani.org/tools/insani.py" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;">需要</font></a><font style="vertical-align: inherit;">使用。</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">现在我们开始解决问题，阅读和编​​写存档！</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我们基本上可以只浏览上面的存档规范，然后将其转换为代码。</font><font style="vertical-align: inherit;">首先签名和标题：</font></font></p>
+<pre><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">从insani进口*</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+arcfile = open（'cg.pd'，'rb'）</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+assert_string（arcfile，'PackOnly'，ERROR_ABORT）</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+assert_zeroes（arcfile，56，ERROR_WARNING）</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+numfiles = read_unsigned（arcfile，LONG_LENGTH）</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+打印'正在提取％d个文件...'％numfiles</font></font><font></font>
+</pre>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在这里我正在使用 </font></font><samp><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">assert_string（）</font></font></samp><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 和 </font></font><samp><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">assert_zeroes（）</font></font></samp><font style="vertical-align: inherit;"></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">insani.py中的</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">实用程序例程，</font><font style="vertical-align: inherit;">以检查文件签名和我们期望的零。</font><font style="vertical-align: inherit;">的</font></font><samp><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LONG_LENGTH</font></font></samp><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 常数仅为8，即我们整数的长度，而little-endianness被隐含为默认值。</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">这里要注意的主要事情是错误检查。</font><font style="vertical-align: inherit;">我的意思不是“正常”的错误检查，例如确保文件正确打开或您有足够的内存来读取8字节整数等。对于原型工具而言，这有点愚蠢：我们不在乎整个过程如果在无法读取文件时崩溃，则很多，因为这是我们想要的行为。</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">不，我是说，错误检查了我们对存档的假设。</font><font style="vertical-align: inherit;">您会看到，我们</font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">可能</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">只是完全跳过了文件的前64个字节，然后直接跳到了</font></font><samp><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">numfiles</font></font></samp><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">阅读声明。</font><font style="vertical-align: inherit;">那是我们真正需要的唯一信息，对吗？</font><font style="vertical-align: inherit;">我们为什么要麻烦检查签名，或检查那些零？</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">之所以这样做，是因为我们仍在测试对文件的理解……我们只查看了一个游戏中一个存档文件的一小部分。</font><font style="vertical-align: inherit;">那56个零</font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">真的有用</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">吗？  </font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">总是？</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">  我们不确定。</font><font style="vertical-align: inherit;">因此，如果该工具遇到了意外的情况（即</font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我们</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">不期望的情况），那么我们想了解它，或者中止“现在我完全感到困惑”的情况，或者至少为该情况显示警告不太严重的差异，因此我们可以更仔细地检查情况并修改工具。</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">好的，足够了。</font><font style="vertical-align: inherit;">只是相信我：建立额外的逻辑来检查您的假设，而不是总是跳转到已知的重要信息。</font><font style="vertical-align: inherit;">现在继续阅读索引：</font></font></p>
+<pre><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">打印“正在读取存档索引...”</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+条目= []</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+对于我在xrange（numfiles）：</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+   文件名= read_string（arcfile）</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+   assert_zeroes（arcfile，128-len（filename）-1）</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+   位置= read_unsigned（arcfile，LONG_LENGTH）</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+   大小= read_unsigned（arcfile，LONG_LENGTH）</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+   entry.append（（文件名，位置，大小））</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+assert_zeroes（arcfile，144 *（16384-numfiles），ERROR_WARNING）</font></font><font></font>
+</pre>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在这里，我们使用一些Python魔术来简化生活。</font><font style="vertical-align: inherit;">读取文件名，位置和大小后，我们只需将三个变量收集到一个用额外括号表示的“元组”中，然后将其压入我们的末尾</font></font><samp><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">参赛作品</font></font></samp><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">链表。</font><font style="vertical-align: inherit;">在C中做同样的事情会有点复杂，但是这里几乎是伪代码。</font><font style="vertical-align: inherit;">再次注意声明语句：该文件的每个字节都在检查中，或者正在使用其数据，或者正在检查其状态为不感兴趣。</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">现在，我们完成该过程，并实际写出文件，并进行一些清理：</font></font></p>
+<pre><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在条目中用于（文件名，位置，大小）：</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+   打印'从偏移量0x％X提取％s（％d字节）'％\</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+    （文件名，大小，位置）</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+   outfile = open（文件名，'wb'）</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+   断言（arcfile.tell（）==位置）</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+   outfile.write（arcfile.read（size））</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+   outfile.close（）</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+断言（arcfile.read（1）==''）</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+arcfile.close（）</font></font><font></font>
+</pre>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">循环结构是Python的另一个好地方：我们可以遍历我们的代码 </font></font><samp><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">参赛作品</font></font></samp><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">简单列出，一次提取整个元组，然后再次使用这些变量。</font><font style="vertical-align: inherit;">而不是</font></font><samp><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">断言</font></font></samp><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 声明，我们本来可以做一个 </font></font><samp><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">arcfile.seek（位置）</font></font></samp><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">命令跳转到我们想要的偏移量，但是在这里，我们仍在测试我们对存档格式的了解：文件是否按顺序存储，它们之间没有间隙，就像我们认为的那样？</font><font style="vertical-align: inherit;">在所有文件之后，我们真的处于存档的末尾，还是还有更多我们忽略的数据？</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如果我们正确地完成了所有操作，那么应该不会有任何意外。</font><font style="vertical-align: inherit;">因此，让我们尝试一下。</font><font style="vertical-align: inherit;">如果愿意，</font><font style="vertical-align: inherit;">可以下载</font></font><a href="https://web.archive.org/web/20080709013531/http://www.insani.org/tools/crosschannel-extract1.py" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">crosschannel-extract1.py</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，但我建议您自己实现，或者至少键入一下以了解该语言：</font></font></p>
+<pre><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">％python crosschannel-extract1.py</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+正在提取545个文件...</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+正在读取档案索引...</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+从偏移量0x240048提取bgcc0000e.png（8370字节）</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+从偏移量0x2420FA中提取bgcc0023.png（538382字节）</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+...</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+从偏移量0x566E1B4中提取TCYM0005c.png（156881字节）</font></font><font></font>
+</pre>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">似乎可行，并且所有PNG文件都可以在您喜欢的图像编辑器中查看。</font><font style="vertical-align: inherit;">嗯，尽管其中有一些是NSFW。</font><font style="vertical-align: inherit;">^^;</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">概念验证提取起作用。</font><font style="vertical-align: inherit;">现在，我们可以稍微改善一下，因为硬编码的存档文件名确实很烂。</font><font style="vertical-align: inherit;">修改后的版本为</font></font><a href="https://web.archive.org/web/20080709013531/http://www.insani.org/tools/crosschannel-extract2.py" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">crosschannel-extract2.py</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，它从Python操作系统接口库中添加了一些例程，以从命令行读取参数，并允许我们将文件提取到新的子目录等。我还对错误进行了调整-进行一点检查，以允许出现乱序的文件（如果我们遇到过的话），以及如果发现位置或文件大小“明显”错误，则提早中止操作。</font><font style="vertical-align: inherit;">如果您愿意的话，请看一下，尽管它对本文的重点并不是很重要。</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我们真正应该做的就是立即重建存档！</font><font style="vertical-align: inherit;">没汗 </font><font style="vertical-align: inherit;">我们可以只使用我们的代码，然后很容易地将其适应相反的情况。</font><font style="vertical-align: inherit;">首先，我们需要从命令行中传递的子目录名称中收集有关我们要重新打包的文件的信息：</font></font></p>
+<pre><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">导入系统，操作系统</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+从insani进口*</font></font><font></font>
+<font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+dirname = sys.argv [1]</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+rawnames = os.listdir（目录名）</font></font><font></font>
+<font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+numfiles = 0</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+位置= 144 * 16384 + 72</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+条目= []</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+用于原始名称中的文件名：</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+   fullpath = os.path.join（目录名，文件名）</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+   如果os.path.isfile（fullpath）：＃跳过任何子目录</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+      numfiles + = 1</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+      大小= os.stat（fullpath）.st_size</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+      entry.append（（文件名，全路径，位置，大小））</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+      位置+ =大小；</font></font><font></font>
+</pre>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在执行此操作的同时，我们可以根据文件大小以及标头和索引的已知大小来计算每个文件的最终位置。</font><font style="vertical-align: inherit;">接下来，我们可以将它们写出来：</font></font></p>
+<pre><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">打印'正在打包％d文件...'％numfiles</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+arcfile = open（sys.argv [2]，'wb'）</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+arcfile.write（'PackOnly'）</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+write_zeroes（arcfile，56）</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+write_unsigned（arcfile，numfiles，LONG_LENGTH）</font></font><font></font>
+<font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+打印“正在写存档索引...”</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+在条目中用于（文件名，全路径，位置，大小）：</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+   write_string（arcfile，filename）</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+   write_zeroes（arcfile，128-len（filename）-1）</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+   write_unsigned（arcfile，position，LONG_LENGTH）</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+   write_unsigned（arcfile，size，LONG_LENGTH）</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+write_zeroes（arcfile，144 *（16384-numfiles））</font></font><font></font>
+</pre>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">实际上，这很容易，因为我们不需要检查任何事情：我们只是在写我们所知道的东西……没有不确定性。</font><font style="vertical-align: inherit;">您还会注意到该结构与我们最初的存档描述之间的映射关系非常紧密：拥有实用程序例程很好，这样您只需一行或两行代码就可以处理规​​范中的每个项目。</font><font style="vertical-align: inherit;">现在我们自己编写文件：</font></font></p>
+<pre><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在条目中用于（文件名，全路径，位置，大小）：</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+   打印'打包％s（％d字节）的偏移量为0x％X'％\</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+    （文件名，大小，位置）</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+   断言（arcfile.tell（）==位置）</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+   infile = open（fullpath，'rb'）</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+   arcfile.write（infile.read（size））</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+   infile.close（）</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+arcfile.close（）</font></font><font></font>
+</pre>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在这里，我们正在使用 </font></font><samp><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">断言</font></font></samp><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">语句，但实际上这只是一个“愚蠢的程序员”检查，而不是其他任何检查：如果我们正确编写了所有内容，则无论归档格式的详细信息如何，该断言始终都是正确的。</font><font style="vertical-align: inherit;">这是假中止的经典用法之一</font></font><samp><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">断言</font></font></samp><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 声明：快速检查程序正确运行时可能不会出错的内容。</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如果愿意，</font><font style="vertical-align: inherit;">可以获取</font></font><a href="https://web.archive.org/web/20080709013531/http://www.insani.org/tools/crosschannel-repack1.py" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">crosschannel-repack1.py</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，但我再次鼓励您编写自己的。</font><font style="vertical-align: inherit;">让我们测试一下：</font></font></p>
+<pre><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">％python crosschannel-repack1.py temp temp.pd</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+正在打包545个文件...</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+正在撰写档案索引...</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+在偏移量0x240048处打包bgcc0000a.png（408458字节）</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+在偏移量0x2A3BD2处打包bgcc0000b.png（436171字节）</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+...</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+在偏移量0x5693D26处打包xiconp.png（2399字节）</font></font><font></font>
+</pre>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">成功工具的黄金标准是能够提取存档文件并将其重新打包为原始文件的完美副本。</font><font style="vertical-align: inherit;">我们成功了吗？</font></font></p>
+<pre><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">％diff cg.pd温度.pd</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+二进制文件cg.pd和temp.pd不同</font></font><font></font>
+</pre>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">哦，不。</font><font style="vertical-align: inherit;">好吧，这是意料之中的……文件不会以相同的顺序打包，因为我们重新打包的存档按字母顺序排列其目录列表，而原始存档则更为随机。</font><font style="vertical-align: inherit;">有关系吗 </font><font style="vertical-align: inherit;">我们不确定。</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">成功工具</font><font style="vertical-align: inherit;">的</font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">白银</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">标准是能够成功提取自己的档案。</font><font style="vertical-align: inherit;">因此，我们提取，重新包装然后再次提取，并确保第一次提取与第二次提取相同。</font></font></p>
+<pre><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">％python crosschannel-extract2.py temp.pd temp2</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+正在提取545个文件...</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+...</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+％diff -r temp temp2</font></font><font></font>
+</pre>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">那行得通。</font><font style="vertical-align: inherit;">好的，因此我们的提取和重新包装工具在内部兼容。</font><font style="vertical-align: inherit;">它们与</font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">游戏</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">兼容</font><font style="vertical-align: inherit;">吗？</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">这是一种有用的交易技巧。</font><font style="vertical-align: inherit;">第一次测试重建的存档时，请</font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">不要进行任何更改</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font><font style="vertical-align: inherit;">只需提取游戏自己的存档，重新打包，然后看游戏是否仍在运行。</font><font style="vertical-align: inherit;">这样，您可以查看游戏是否具有可执行文件中存储的存档的MD5校验和，或者您是否缺少有关存档格式的内容。</font><font style="vertical-align: inherit;">一旦你通过这道障碍，</font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">那么</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">你就可以开始改变文件和插入英语等。</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">长话短说，这是可行的。</font><font style="vertical-align: inherit;">幸运的是，似乎没有任何校验和异常，或者我们尚未完全复制的存档功能（</font><font style="vertical-align: inherit;">毕竟</font><font style="vertical-align: inherit;">文件排序</font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">可能</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">很重要）。</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">下一步是尝试更改某些内容。</font><font style="vertical-align: inherit;">主标题屏幕图形怎么样？</font><font style="vertical-align: inherit;">恰好是</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">x0000.png</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，所以我们可以放入我们自己的640×480 PNG文件，重建档案，然后看看会发生什么……</font></font></p>
+<p><img id="image19" src="assets/1570957266-a99394edd214488930638926e517a34f.png" alt="跨渠道NNS屏幕截图"></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">彩色矩形是主菜单突出显示系统的一部分。</font><font style="vertical-align: inherit;">看起来我们做得不错…大多数UI资源都存储为PNG，因此我们的翻译器和图形编辑器应该能够使用这些工具来制作游戏界面。</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">但是，等等……游戏脚本呢！</font></font></p>
+<pre><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">％python crosschannel_extract2.py script.pd脚本</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+在位置0x0处应为“ PackOnly”，但看到的是“ PackPlus”。</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+流产！</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+追溯（最近一次通话）：</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+...</font></font><font></font>
+</pre>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">包</font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">加</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">？！</font><font style="vertical-align: inherit;">哦哦 </font><font style="vertical-align: inherit;">但是现在，我们进行错误检查的智慧已被揭示出来……我们立即知道脚本存档中正在发生一些奇怪的事情，而不是提取垃圾并试图在以后的步骤中弄清楚它。</font><font style="vertical-align: inherit;">让我们回到十六进制编辑器，看看。</font></font></p>
+<p><img id="image20" src="assets/1570957266-a6e325959caa1e408d24492333081c93.png" alt="跨通道十六进制04"></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">好吧，实际上看起来很正常。</font><font style="vertical-align: inherit;">所有的零仍然存在。</font><font style="vertical-align: inherit;">看起来像文件计数，文件名，位置和大小。</font><font style="vertical-align: inherit;">如果向下滚动，将像以前一样，只看到零以偏移0×240048。</font><font style="vertical-align: inherit;">因此，除了文件签名本身之外，整个标头和索引是相同的。</font><font style="vertical-align: inherit;">这是一个完整的无人操作吗？</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">嗯，但是看看文件本身：</font></font></p>
+<p><img id="image21" src="assets/1570957266-73de395b07c23ee4174e8ff31d70fc7b.png" alt="跨通道十六进制05"></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">这有点奇怪。</font><font style="vertical-align: inherit;">这些字节不是随机的，而是一长串的常量值，因此可能没有真正压缩或加密。</font><font style="vertical-align: inherit;">还有很大一部分较大的值，高于0×80，这是不寻常的。</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">因此，我们这里可能正在研究某种基本的“加密”，即广受欢迎的XOR /恒定字节加法，适用于保护文件免受六岁姐姐的侵害……假设她没有反正就是代码。</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我们可以猜出答案……实际上，如果您猜对了，那就对了。</font><font style="vertical-align: inherit;">但是您知道吗，我很懒，所以我将通过一些快速代码来强制执行此操作。</font></font></p>
+<pre><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">arcfile = open（'script.pd'，'rb'）</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+arcfile.seek（0x240076）</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+数据= arcfile.read（16）</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+outfile = open（'bruteforce.dat'，'wb'）</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+为我在xrange（256）中：</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+   对于数据中的温度：</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+      outfile.write（chr（ord（temp）^ i））</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+   对于数据中的温度：</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+      outfile.write（chr（（ord（temp）+ i）＆0x00FF））</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+outfile.close（）</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+arcfile.close（）</font></font><font></font>
+</pre>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我只是读取一个看起来很有趣的偏移量的16字节数据（选择以匹配我的十六进制编辑器宽度），进行XOR运算并将所有可能的字节值添加到该字符串，然后将其写到文件中进行检查。</font><font style="vertical-align: inherit;">肉眼扫描整个8KB文件大约需要10秒钟，我们发现：</font></font></p>
+<p><img id="image22" src="assets/1570957266-264b4038e6f9fe9a9ee1a2317d577b3f.png" alt="跨通道十六进制06"></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">哇，可识别的文本，位于文件的末尾……总是在您看到的最后一个位置。</font><font style="vertical-align: inherit;">因此，这对应于0xFF的XOR，或者只是翻转了文件中的所有位，这恰恰是您可能已经猜到的。</font><font style="vertical-align: inherit;">我的意思是，当您不确定时，不要害怕做一点实验...编写上面的代码片段并进行一些可能的扫描是5分钟的工作，顶一下，而您可以轻松地敲打头如果您有时感觉不够聪明，则可以使用数小时或数天的未知未知简单加密。</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">现在，我们可以更新提取工具以解决此问题。</font><font style="vertical-align: inherit;">这是对标头代码的非常简单的修改：</font></font></p>
+<pre><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">签名= arcfile.read（8）</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+如果签名=='PackOnly'：</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+   xorbyte = 0</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+elif签名=='PackPlus'：</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+   xorbyte = 0x00FF</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+其他：</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+   打印“未知文件签名％s，正在中止。” </font><font style="vertical-align: inherit;">％\</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+    escape_string（签名）</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+   sys.exit（0）</font></font><font></font>
+</pre>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">以及文件读取代码：</font></font></p>
+<pre><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">   数据=数组（'B'，arcfile.read（size））</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+   如果xorbyte！= 0：</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+      对于我在xrange（len（data））：</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+         数据[i] ^ = xorbyte</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+   outfile.write（data.tostring（））</font></font><font></font>
+</pre>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如果您不熟悉Python，那么这部分会有些混乱。</font><font style="vertical-align: inherit;">标准的Python字符串是不可变的数据类型，因此，如果不对字符串进行数以千计的新复制，就不能对所有字节进行XOR。</font><font style="vertical-align: inherit;">相反，我们将其读取到一个可变的无符号字节数组中。</font><font style="vertical-align: inherit;">您需要添加一个</font></font><samp><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">从数组导入数组</font></font></samp><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">您也可以在文件顶部添加一行，因为数组模块不是核心语言的一部分。</font><font style="vertical-align: inherit;">新版本是</font></font><a href="https://web.archive.org/web/20080709013531/http://www.insani.org/tools/crosschannel-extract3.py" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">crosschannel-extract3.py</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<pre><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">％python crosschannel-extract3.py script.pd脚本</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+正在提取54个文件...</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+正在读取档案索引...</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+从偏移量0x240048提取adstart.dsf（236字节）</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+从偏移量0x240134提取cca0001.dsf（934字节）</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+...</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+从偏移量0x297376提取cca0011c.dsf（6674字节）</font></font><font></font>
+</pre>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">看起来我们在做生意。</font><font style="vertical-align: inherit;">提取的脚本通常使用Shift-JIS字符编码在文本编辑器中打开。</font><font style="vertical-align: inherit;">稍作窥探，我们可以看到文件</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">cca0001.dsf</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">是主游戏脚本的开始。</font><font style="vertical-align: inherit;">进行一些编辑，快速重新打包（当我们创建自己的存档时，我们甚至都不需要为PackPlus烦恼），并预先保存！</font></font></p>
+<p><img id="image23" src="assets/1570957266-b38d40bc37f2eb897ff320160d10a268.png" alt="跨频道脚本截图01"></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">请注意，我在最后一步中跳过了一些复杂性，例如手动对行进行换行，并确保游戏引擎获得CR-LF换行符，而不仅仅是LF。</font><font style="vertical-align: inherit;">还有更多的怪异现象潜伏在这里……我并不是要暗示脚本格式是微不足道的，只是它现在可以接受超出本文范围的进一步试验。</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">然后去哪儿？</font><font style="vertical-align: inherit;">作为一项家庭作业，您应该尝试试验此代码，甚至更好地使用自己选择的语言编写自己的代码。</font><font style="vertical-align: inherit;">那么，归档格式中的那些2.3MB的零将如何呢……如果您将其取出并在索引之后立即开始文件存储以节省空间，引擎对象会如何？</font><font style="vertical-align: inherit;">您可以编写一个例程，将其打包到存档中时自动将脚本自动换行吗？</font><font style="vertical-align: inherit;">窗口标题栏中的汉字怎么样？</font><font style="vertical-align: inherit;">您在尝试对该标题进行完整翻译时还会遇到什么其他问题？</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">但是现在，这就是我打算将Cross + Channel用于…的全部……我们已经对其进行了广泛的破解，这里没有太多的东西要学习。</font><font style="vertical-align: inherit;">这是一项合法的成就，因为这是市场上真正的游戏，人们愿意翻译。</font><font style="vertical-align: inherit;">但是，这也是一个非常简单的示例。</font><font style="vertical-align: inherit;">档案没有压缩和最小加密。</font><font style="vertical-align: inherit;">图形文件是标准格式；</font><font style="vertical-align: inherit;">脚本文件为纯文本；</font><font style="vertical-align: inherit;">游戏中没有进行完整性检查，也根本不需要触摸可执行文件。</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如果它们相反，那么任何或所有这些特征可能对我们意味着很多工作。</font><font style="vertical-align: inherit;">因此，在接下来的几期中，我将选择其他游戏来提供更复杂情况的良好示例，同时重点介绍这些领域之一。</font><font style="vertical-align: inherit;">可以随意建议您希望看到的游戏，但是当然不能保证我会对他们有所了解。</font><font style="vertical-align: inherit;">嘿。</font></font></p>
+				<p class="comments_link">
+									</p>
+			</div>
+	<!--
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	    xmlns:dc="http://purl.org/dc/elements/1.1/"
+	    xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+		<rdf:Description rdf:about="http://sekai.insani.org/archives/18"
+    dc:identifier="http://sekai.insani.org/archives/18"
+    dc:title="So You Want To Be a Hacker? Part III: Code Prototyping"
+    trackback:ping="http://sekai.insani.org/archives/18/trackback/" />
+</rdf:RDF>	-->
+</div>
+
+<!--comments area-->
+	<div id="commentblock">
+		<h2 id="comments"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+			15对“所以你想成为一名黑客？</font><font style="vertical-align: inherit;">第三部分：代码原型”
+		</font></font></h2>
+		<ol id="commentlist">
+							<li class="alt" id="comment-37">
+					<div class="commentname">
+						<span class="commentauthor"><a href="https://web.archive.org/web/20080709013531/http://wsyntax.com/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">氰基丙烯酸</font></font></a></span>
+					</div>
+										<div class="commentinfo">
+						<span class="commentdate"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+							2006年6月13日| 
+							</font></font><a href="#comment-37" title="评论链接网址"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">凌晨1:45</font></font></a>
+						</span>
+					</div>
+					<div class="commenttext"><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">哇！</font><font style="vertical-align: inherit;">很棒的文章，埃德；</font><font style="vertical-align: inherit;">我从来不知道一点点摆弄和阅读会如此简单！</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我真的不敢相信-it-。
+</font></font></p>
+</div>
+				</li>
+											<li class="standard" id="comment-38">
+					<div class="commentname">
+						<span class="commentauthor"><a href="https://web.archive.org/web/20080709013531/http://www.haeleth.net/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">海勒斯</font></font></a></span>
+					</div>
+										<div class="commentinfo">
+						<span class="commentdate"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+							2006年6月13日| 
+							</font></font><a href="#comment-38" title="评论链接网址"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">上午5:59</font></font></a>
+						</span>
+					</div>
+					<div class="commenttext"><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ah，Python。</font><font style="vertical-align: inherit;">您应该使用过OCaml，它具有所有相同的优点，而没有Python的任何缺点（像糖蜜一样慢，没有提前进行类型检查，有效的空白）。</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">纯粹从系统中思考，我已经自欺欺人：Majiro有一个不错的专有图形格式，它丑陋而不是复杂（这是RLE采取的愚蠢至极的系统）。</font><font style="vertical-align: inherit;">AVG32具有简单的压缩（不加密）和相对简单的字节码格式，但更重要的是，有一些有趣的错误需要人们解决。</font><font style="vertical-align: inherit;">这也是一个很好的例子，说明西方黑客可以利用现有的日语作品。</font><font style="vertical-align: inherit;">而且，众所周知，RealLive是系统的一个很好的例子，其中的工具已经存在，但又不稳定又不可靠，以至于使用它们本身实际上就是一种黑客体验。</font><font style="vertical-align: inherit;">不，等等，刮擦最后一个…：P
+</font></font></p>
+</div>
+				</li>
+											<li class="alt" id="comment-39">
+					<div class="commentname">
+						<span class="commentauthor"><a href="https://web.archive.org/web/20080709013531/http://www.haeleth.net/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">海勒斯</font></font></a></span>
+					</div>
+										<div class="commentinfo">
+						<span class="commentdate"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+							2006年6月13日| 
+							</font></font><a href="#comment-39" title="评论链接网址"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">上午6:00</font></font></a>
+						</span>
+					</div>
+					<div class="commenttext"><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">糟糕，爆炸后的软件在该段的第一段周围剥离了我的&lt;bigotry type =” flamebait”&gt;标签…
+</font></font></p>
+</div>
+				</li>
+											<li class="standard" id="comment-40">
+					<div class="commentname">
+						<span class="commentauthor"><a href="https://web.archive.org/web/20080709013531/http://www.bishoujo.us/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PyTom</font></font></a></span>
+					</div>
+										<div class="commentinfo">
+						<span class="commentdate"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+							2006年6月13日| 
+							</font></font><a href="#comment-40" title="评论链接网址"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">上午6:55</font></font></a>
+						</span>
+					</div>
+					<div class="commenttext"><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我建议python struct模块对于这样的事情可能非常有用。</font><font style="vertical-align: inherit;">使用此模块，从存档读取文件条目的代码变为：</font></font></p>
+<p><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（已删除，请参见下文。-Ed）</font></font></em></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">没有经过测试或其他任何东西，但是使用struct.unpack应该可以简化二进制数据的处理。
+</font></font></p>
+</div>
+				</li>
+											<li class="alt" id="comment-42">
+					<div class="commentname">
+						<span class="commentauthor"><a href="https://web.archive.org/web/20080709013531/http://www.insani.org/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">爱德华·凯斯</font></font></a></span>
+					</div>
+										<div class="commentinfo">
+						<span class="commentdate"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+							2006年6月13日| 
+							</font></font><a href="#comment-42" title="评论链接网址"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">上午7:30</font></font></a>
+						</span>
+					</div>
+					<div class="commenttext"><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">很抱歉Wordpress搞砸了格式。</font><font style="vertical-align: inherit;">这是PyTom的代码：</font></font></p>
+<pre><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">打印“正在读取存档索引...”</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+条目= []</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+对于我在xrange（numfiles）：</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+   数据= arcfile.read（144）</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+   文件名，位置，大小= struct.unpack（“ &lt;128sqq”）</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+   文件名= filename.strip（“ \ 0”）</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+   entry.append（（文件名，位置，大小））</font></font><font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+assert_zeroes（arcfile，144 *（16384-numfiles），ERROR_WARNING）</font></font><font></font>
+</pre>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">确实，这是一个很棒的技巧，谢谢！</font><font style="vertical-align: inherit;">应该知道别人已经为我解决了这个问题。
+</font></font></p>
+</div>
+				</li>
+											<li class="standard" id="comment-43">
+					<div class="commentname">
+						<span class="commentauthor"><a href="https://web.archive.org/web/20080709013531/http://insani.org/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">胜公园</font></font></a></span>
+					</div>
+										<div class="commentinfo">
+						<span class="commentdate"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+							2006年6月13日| 
+							</font></font><a href="#comment-43" title="评论链接网址"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">上午8:54</font></font></a>
+						</span>
+					</div>
+					<div class="commenttext"><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">“……一个很好的系统示例，其中工具已经存在，但又如此脆弱且不可靠，以至于使用工具本身实际上就是一种黑客体验。”</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">您确定不是在这里谈论onscripter-insani吗？</font><font style="vertical-align: inherit;">-_-
+</font></font></p>
+</div>
+				</li>
+											<li class="alt" id="comment-44">
+					<div class="commentname">
+						<span class="commentauthor"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">罗克斯凡</font></font></span>
+					</div>
+										<div class="commentinfo">
+						<span class="commentdate"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+							2006年6月15日| 
+							</font></font><a href="#comment-44" title="评论链接网址"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">下午6:26</font></font></a>
+						</span>
+					</div>
+					<div class="commenttext"><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我在大多数转储脚本中复制粘贴了这些功能：</font></font><br>
+</p><pre><code><font></font>
+def getByte(f):<font></font>
+    return struct.unpack("&lt;b&gt;<font></font>
+etc.&lt;/b&gt;</code></pre>
+<p></p>
+</div>
+				</li>
+											<li class="standard" id="comment-45">
+					<div class="commentname">
+						<span class="commentauthor"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">罗克斯凡</font></font></span>
+					</div>
+										<div class="commentinfo">
+						<span class="commentdate"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+							2006年6月15日| 
+							</font></font><a href="#comment-45" title="评论链接网址"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">下午7:19</font></font></a>
+						</span>
+					</div>
+					<div class="commenttext"><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我Wordpress 0：1 </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+Orz
+</font></font></p>
+</div>
+				</li>
+											<li class="alt" id="comment-49">
+					<div class="commentname">
+						<span class="commentauthor"><a href="https://web.archive.org/web/20080709013531/http://www.insani.org/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">爱德华·凯斯</font></font></a></span>
+					</div>
+										<div class="commentinfo">
+						<span class="commentdate"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+							2006年6月16日| 
+							</font></font><a href="#comment-49" title="评论链接网址"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">下午8:48</font></font></a>
+						</span>
+					</div>
+					<div class="commenttext"><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我真心为Wordpress弄乱代码片段表示歉意…我现在安装了一个插件可以解决此问题，因此&lt;code&gt; &lt;/ code&gt;标记中包含的代码现在应该保留格式并自动转义特殊字符。</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">roxfan，想再试一次吗？</font><font style="vertical-align: inherit;">或者，您可以给我发送电子邮件，以发送您想要发布的内容，也可以修复您之前的评论。
+</font></font></p>
+</div>
+				</li>
+											<li class="standard" id="comment-50">
+					<div class="commentname">
+						<span class="commentauthor"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">罗克斯凡</font></font></span>
+					</div>
+										<div class="commentinfo">
+						<span class="commentdate"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+							2006年6月16日| 
+							</font></font><a href="#comment-50" title="评论链接网址"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">晚上10:44</font></font></a>
+						</span>
+					</div>
+					<div class="commenttext"><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">尝试＃2</font></font><br>
+</p><pre><code><font></font>
+def getByte(f):<font></font>
+    return struct.unpack("&lt;B",f.read(1))[0]<font></font>
+<font></font>
+def getWord(f):<font></font>
+    return struct.unpack("&lt;H",f.read(2))[0]<font></font>
+<font></font>
+def getDWord(f):<font></font>
+    return struct.unpack("&lt;I",f.read(4))[0]<font></font>
+<font></font>
+def getQWord(f):<font></font>
+    return struct.unpack("&lt;Q",f.read(8))[0]<font></font>
+</code></pre><p></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">没什么特别的，但是可以方便地使用这些代码片段经常对我有帮助。
+</font></font></p>
+</div>
+				</li>
+											<li class="alt" id="comment-56">
+					<div class="commentname">
+						<span class="commentauthor"><a href="https://web.archive.org/web/20080709013531/http://blog.shishnet.org/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">嘘</font></font></a></span>
+					</div>
+										<div class="commentinfo">
+						<span class="commentdate"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+							2006年7月1日| 
+							</font></font><a href="#comment-56" title="评论链接网址"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">凌晨4:31</font></font></a>
+						</span>
+					</div>
+					<div class="commenttext"><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">可预见的但值得注意的观察-游戏不在乎存档使用的两种格式。在简单的XOR加密的情况下，这用处不大，但是在解密和加密分开的情况下，它可能有用尝试将加密的存档替换为未加密的存档。</font><font style="vertical-align: inherit;">（例如，这是否适用于Planetarian，因为通过从RAM抓取文件来规避了AFAIR解密？RealLive在查找存档文件之前先在磁盘上查找文件更加容易，但是也许应该考虑一下该功能）已移除...）
+</font></font></p>
+</div>
+				</li>
+											<li class="standard" id="comment-57">
+					<div class="commentname">
+						<span class="commentauthor"><a href="https://web.archive.org/web/20080709013531/http://www.insani.org/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">爱德华·凯斯</font></font></a></span>
+					</div>
+										<div class="commentinfo">
+						<span class="commentdate"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+							2006年7月1日| 
+							</font></font><a href="#comment-57" title="评论链接网址"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">上午10:16</font></font></a>
+						</span>
+					</div>
+					<div class="commenttext"><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">是的，确实很多。</font><font style="vertical-align: inherit;">游戏有时会使用一种单独的方法来读取数据，尤其是作为调试或补丁插入机制时，例如“检查文件是否仅存在于磁盘上，然后查看存档中是否存在该文件”。</font><font style="vertical-align: inherit;">另外，为简化起见，存档中通常会使用未压缩的存储格式……只要压缩标志本身是数据格式的一部分，游戏引擎就会正确读取它。</font><font style="vertical-align: inherit;">最后但并非最不重要的一点是，有时您可以通过“愚蠢”且快速地实现图形格式或压缩算法来节省大量工作，即，如果压缩算法允许您使用转义码将原始字节插入压缩后的文件中，数据流，只是逃避每个字节！</font><font style="vertical-align: inherit;">（不过，很高兴回过头来为最终版本正确地做。）</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">对于Planetarian的完整版本，DRM意味着我们不费吹灰之力便​​无法更改某些文件，但是幸运的是，有一种后门方法可以让引擎读取不受保护的版本。</font><font style="vertical-align: inherit;">节省了很多工作，甚至可能使整个事情成为可能，因为完全禁用DRM对我们来说是一个道德问题。
+</font></font></p>
+</div>
+				</li>
+											<li class="alt" id="comment-58">
+					<div class="commentname">
+						<span class="commentauthor"><a href="https://web.archive.org/web/20080709013531/http://www.haeleth.net/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">海勒斯</font></font></a></span>
+					</div>
+										<div class="commentinfo">
+						<span class="commentdate"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+							2006年7月1日| 
+							</font></font><a href="#comment-58" title="评论链接网址"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">下午7:38</font></font></a>
+						</span>
+					</div>
+					<div class="commenttext"><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">但是请注意，RealLive的“外部”文件实际上是经过压缩和稍微加密的，因为RealLive在文件级别而非存档级别处理压缩。</font><font style="vertical-align: inherit;">因此，虽然《动感小说》有所收获，因为它具有一个额外的全局存档层（具有丑陋的加密功能），对于常规的RealLive游戏来说，这并不是一个有用的捷径：引擎需要您完成所有的压缩和压缩工作。加密文件是否在存档中。</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">需要注意的另一件事是，除了私有格式外，游戏还接受标准格式。</font><font style="vertical-align: inherit;">例如，大多数Majiro游戏似乎都在图像中使用专有且令人讨厌的Rokucho格式，但是我没有浪费任何时间尝试编写一款体面的Rokucho压缩器，因为该引擎将同样愉快地使用PNG。</font><font style="vertical-align: inherit;">许多RealLive游戏都坚持使用专有的NWA格式来播放音频-但是，如果您要编辑或替换音频，则只能使用Ogg Vorbis。
+</font></font></p>
+</div>
+				</li>
+											<li class="standard" id="comment-8559">
+					<div class="commentname">
+						<span class="commentauthor"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ÿ</font></font></span>
+					</div>
+										<div class="commentinfo">
+						<span class="commentdate"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+							2008年2月10日| 
+							</font></font><a href="#comment-8559" title="评论链接网址"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">上午9:25</font></font></a>
+						</span>
+					</div>
+					<div class="commenttext"><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如果您想将代码放在网站中，可以
+</font></font></p>
+</div>
+				</li>
+											<li class="alt" id="comment-12065">
+					<div class="commentname">
+						<span class="commentauthor"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">gawa川</font></font></span>
+					</div>
+										<div class="commentinfo">
+						<span class="commentdate"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+							2008年5月10日| 
+							</font></font><a href="#comment-12065" title="评论链接网址"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">下午3:39</font></font></a>
+						</span>
+					</div>
+					<div class="commenttext"><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">h ..这似乎是一个非常古老的话题…无论如何，我在这里只是为了感谢您提供了这个有用的“教程”，我一直想提取这个游戏图像文件这么长时间才能拍出一部出色的MAD电影，但显然没有运气..</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">手动搜索图像非常痛苦！</font><font style="vertical-align: inherit;">或玩整个游戏只是为了拍摄快照！</font><font style="vertical-align: inherit;">不要****，这会引起一些麻烦-_- Uu，太可惜了，我发现这个网站太晚了，但是无论如何，最重要的事实是，现在我现在可以提取图像了，这对将来的变种真的很有帮助。</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sayonara。
+</font></font></p>
+</div>
+				</li>
+									</ol>
+
+<!--comments form -->
+<h2 id="commentsformheader"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">发表评论</font></font></h2>
+			<div id="commentsform">
+			<form action="https://web.archive.org/web/20080709013531/http://sekai.insani.org/wp-comments-post.php" method="post" id="commentform">
+							<p>
+					<input type="text" name="author" id="author" value="" size="22" tabindex="1">
+					<label for="author"><small><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">名称 </font></font></small></label>
+				</p>
+				<p>
+					<input type="text" name="email" id="email" value="" size="22" tabindex="2">
+					<label for="email"><small><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">电子邮件（不会显示） </font></font></small></label>
+				</p>
+				<p>
+					<input type="text" name="url" id="url" value="" size="22" tabindex="3">
+					<label for="url"><small><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">网站</font></font></small></label>
+				</p>
+						<!--<p><small><strong>XHTML:</strong> You can use these tags: &lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;code&gt; &lt;em&gt; &lt;i&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+			<p>
+				<textarea name="comment" id="comment" cols="50" rows="10" tabindex="4"></textarea>
+			</p>
+			<p>
+				<font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><input name="submit" type="submit" id="submit" tabindex="5" value="提交评论"></font></font>
+				
+			</p>
+					</form>
+	</div></div>
+	
+
+</div>
+</div><!-- The main content column ends  -->
+﻿<!-- begin sidebar -->
+
+<div id="navcol">
+
+		<h2><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">乌尔比和奥比</font></font></h2>
+
+		<ul>
+
+			<li><a href="https://web.archive.org/web/20080709013531/http://sekai.insani.org/wp-register.php" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">寄存器</font></font></a></li>
+			<li><a href="https://web.archive.org/web/20080709013531/http://sekai.insani.org/wp-login.php" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">登录</font></font></a></li>
+
+			<li class="sidebullet">
+
+			<a href="https://web.archive.org/web/20080709013531/http://sekai.insani.org/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">家</font></font></a></li>
+
+			<li><a href="https://web.archive.org/web/20080709013531/http://sekai.insani.org/feed/" title="使用RSS联合此站点" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><abbr title="真正简单的整合"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">的RSS</font></font></abbr></a></li>
+
+			<li><a href="https://web.archive.org/web/20080709013531/http://www.insani.org/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">insani.org</font></font></a></li>
+		</ul>
+		
+		<h2><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">绝种世界</font></font></h2>
+		<ul>	
+			<li><a href="https://web.archive.org/web/20080709013531/http://altogether.insani.org/2005" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">一起| 2005</font></font></a></li>
+			<li><a href="https://web.archive.org/web/20080709013531/http://altogether.insani.org/2006" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">一起2006</font></font></a></li>
+			<li><a href="https://web.archive.org/web/20080709013531/http://www.haeleth.net/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hæleþesáwendende</font></font></a></li>
+			<li><a href="https://web.archive.org/web/20080709013531/http://dekadenbiyori.blog40.fc2.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">でかだんびより</font></font></a></li>
+		</ul>
+
+		<h2><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">档案</font></font></h2>
+
+		<ul>
+
+				<li><a href="https://web.archive.org/web/20080709013531/http://sekai.insani.org/archives/date/2006/08/" title="2006年8月" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2006年8月</font></font></a></li>
+	<li><a href="https://web.archive.org/web/20080709013531/http://sekai.insani.org/archives/date/2006/07/" title="2006年7月" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2006年7月</font></font></a></li>
+	<li><a href="https://web.archive.org/web/20080709013531/http://sekai.insani.org/archives/date/2006/06/" title="2006年6月" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2006年6月</font></font></a></li>
+	<li><a href="https://web.archive.org/web/20080709013531/http://sekai.insani.org/archives/date/2006/05/" title="2006年5月" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2006年5月</font></font></a></li>
+
+		</ul>
+
+		
+
+		<h2><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">分类目录</font></font></h2>
+
+		<ul>
+
+				<li><a href="https://web.archive.org/web/20080709013531/http://sekai.insani.org/archives/category/production-process/" title="包含我们的生产过程是什么样的帖子，或评论其他人的生产过程。" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">生产过程</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（9）
+		</font></font><ul class="children">	<li><a href="https://web.archive.org/web/20080709013531/http://sekai.insani.org/archives/category/production-process/letters-to-a-young-translator/" title="生产过程评论中的“给年轻译者的信”系列。" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">给年轻翻译的信</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（3）
+</font></font></li>
+	<li><a href="https://web.archive.org/web/20080709013531/http://sekai.insani.org/archives/category/production-process/so-you-want-to-be-a-hacker/" title="生产过程注释中的“您想成为一名黑客？”系列。" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">所以你想成为一名黑客？</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（4）
+</font></font></li>
+	<li><a href="https://web.archive.org/web/20080709013531/http://sekai.insani.org/archives/category/production-process/project-debriefs/" title="讨论项目的进行方式，经验教训等。" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">项目汇报</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（2）
+</font></font></li>
+		</ul>
+</li>
+	<li><a href="https://web.archive.org/web/20080709013531/http://sekai.insani.org/archives/category/translation/" title="草稿翻译或正在进行中的作品的花絮" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">翻译</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（3）
+		</font></font><ul class="children">	<li><a href="https://web.archive.org/web/20080709013531/http://sekai.insani.org/archives/category/translation/french/" title="原始语言：法语" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">法国</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（3）
+</font></font></li>
+		</ul>
+</li>
+
+		</ul>
+
+		<ul id="linkslist">
+
+		
+		
+		</ul>		
+
+		
+		<div id="searchdiv">
+
+		<form id="searchform" method="get" action="">
+
+			<input type="text" name="s" size="15">
+
+		</form>
+
+		</div>
+
+	</div>
+
+<!-- end sidebar --><!-- begin footer -->
+<div id="footer">
+		<p class="footer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+			«这些人的死者的头脑已经变得糟透了。</font><font style="vertical-align: inherit;">/用手指指着他们的谋杀案，/曾经目击过的众多谋杀案。» </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Wilfred Owen，</font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">精神病案件</font></font></em>
+		</p>
+	</div>
+</div>
+
+
+<!--
+playback timings (ms):
+  esindex: 0.035
+  RedisCDXSource: 34.501
+  captures_list: 106.579
+  LoadShardBlock: 51.628 (3)
+  exclusion.robots: 0.364
+  exclusion.robots.policy: 0.35
+  PetaboxLoader3.resolve: 229.986
+  CDXLines.iter: 17.015 (3)
+  PetaboxLoader3.datanode: 57.915 (4)
+  load_resource: 270.911
+--><div class="goog-te-spinner-pos"><div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66"><circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30" data-darkreader-inline-fill="" style="--darkreader-inline-fill:none;"></circle></svg></div></div><div data-mx-warn="extension url was not captured by MaoXian" data-mx-original-src="chrome-extension://kjahokgdcbohofgdidndeiaigkehdjdc/pages/ui-selection.html?t=aHR0cHM6Ly93ZWIuYXJjaGl2ZS5vcmc="></div><div data-mx-warn="extension url was not captured by MaoXian" data-mx-original-src="chrome-extension://kjahokgdcbohofgdidndeiaigkehdjdc/pages/ui-control.html?t=aHR0cHM6Ly93ZWIuYXJjaGl2ZS5vcmc="></div>
+</body>
+  </html>

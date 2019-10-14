@@ -1,0 +1,331 @@
+
+  <!DOCTYPE html>
+  <html id="" class="">
+    <!-- OriginalSrc: http://cogito.thisillusion.org/?m=201608 -->
+    <head>
+      <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <title>Sol解包</title>
+      
+
+<link rel="stylesheet" type="text/css" media="all" href="assets/1570118224-ae01e21417744c1a8d0711b783ec44f5.css" referrerpolicy="no-referrer">
+
+
+<style class="darkreader darkreader--fallback" media="screen"></style>
+<style class="darkreader darkreader--text" media="screen"></style>
+<style class="darkreader darkreader--invert" media="screen"></style>
+<style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}</style>
+<style class="darkreader darkreader--user-agent" media="screen">html {
+    background-color: #191a1b !important;
+}
+html, body, input, textarea, select, button {
+    background-color: #191a1b;
+}
+html, body, input, textarea, select, button {
+    border-color: #5a5956;
+    color: #f0ebe2;
+}
+a {
+    color: #4791e7;
+}
+table {
+    border-color: #4f4e4c;
+}
+::placeholder {
+    color: #bfb9ac;
+}
+::selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+::-moz-selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #565a0f !important;
+    color: #f0ebe2 !important;
+}
+::-webkit-scrollbar {
+    background-color: #1d1f1f;
+    color: #cbc5b9;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #2c2d2d;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #343636;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #404142;
+}
+::-webkit-scrollbar-corner {
+    background-color: #191a1b;
+}
+* {
+    scrollbar-color: #2c2d2d #1d1f1f;
+}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--override" media="screen">.jfk-bubble {
+    background-color: #000000 !important;
+}
+.vimvixen-hint {
+    background-color: #765500 !important;
+    border-color: #d5b22e !important;
+    color: #f9edcc !important;
+}</style>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">@keyframes fadeInOpacity{0%{opacity:0}to{opacity:1}}:hover>*>.fbvd--wrapper{animation-name:fadeInOpacity;animation-duration:.3s;opacity:1}.fbvd--wrapper{position:absolute;top:10px;left:10px;opacity:0;text-align:center;margin:0;z-index:5}.fbvd--wrapper a{background: url("") no-repeat 3px 4.55px; background-color: #fff; display:inline-block;font:700 14px Helvetica,Arial,sans-serif;color:#4b4f56;text-decoration:none;vertical-align:middle;padding:0px 8px 0px;margin-right:8px;border-radius:2px; line-height: 22px; padding-left:19px; border: 1px solid #e7e7e7; background-size: 13px}.fbvd--wrapper a:last-child{margin-right:0}.fbvd--wrapper a:hover{text-decoration:none}.fbvd--wrapper a:focus{box-shadow:0 0 1px 2px rgba(88,144,255,.75),0 1px 1px rgba(0,0,0,.15);outline:none}.fbvd--wrapper b{font-size:13px;position:relative;top:1px;color:#3b5998;font-weight:400}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+
+      
+    </head>
+    <body class="archive date single-author two-column right-sidebar mx-wc-selected-elem mx-wc-1570118224" style="">
+<div id="page" class="hfeed">
+	<header id="branding" role="banner">
+			<hgroup>
+				<h1 id="site-title"><span><a href="http://cogito.thisillusion.org/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">木之</a></span></h1>
+				<h2 id="site-description"></h2>
+			</hgroup>
+
+						<a href="http://cogito.thisillusion.org/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+									<img src="assets/1570118224-1cf390a21f0c64f12bee16a9b2d613dc.jpg" width="1000" height="288" alt="木之">
+							</a>
+			
+								<form method="get" id="searchform" action="http://cogito.thisillusion.org/">
+		<label for="s" class="assistive-text">Search</label>
+		<input type="text" class="field" name="s" id="s" placeholder="Search">
+		
+	</form>
+			
+			<nav id="access" role="navigation">
+				<h3 class="assistive-text">Main menu</h3>
+								<div class="skip-link"><a class="assistive-text" href="#content">Skip to primary content</a></div>
+									<div class="skip-link"><a class="assistive-text" href="#secondary">Skip to secondary content</a></div>
+												<div class="menu"><ul>
+<li><a href="http://cogito.thisillusion.org/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Home</a></li><li class="page_item page-item-8"><a href="http://cogito.thisillusion.org/?page_id=8" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">About</a></li>
+<li class="page_item page-item-2"><a href="http://cogito.thisillusion.org/?page_id=2" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Sample Page</a></li>
+</ul></div>
+			</nav><!-- #access -->
+	</header><!-- #branding -->
+
+
+	<div id="main">
+
+		<section id="primary">
+			<div id="content" role="main">
+
+			
+				<header class="page-header">
+					<h1 class="page-title">
+													Monthly Archives: <span>August 2016</span>											</h1>
+				</header>
+
+				
+								
+					
+	<article id="post-652" class="post-652 post type-post status-publish format-standard hentry category-uncategorized">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://cogito.thisillusion.org/?p=652" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">搞定Lucifen，再次体会到rUGP有多难</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://cogito.thisillusion.org/?p=652" title="4:20 pm" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><time class="entry-date" datetime="2016-08-24T16:20:50+00:00">August 24, 2016</time></a>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>7月底，暂离汉化一周年，忽然动了翻俺翼的念头，于是开始搞俺翼R的程序。出乎意料的是，只花了二十多天的业余时间，就把从解包到剧本封包的主要问题都解决了。跟当年搞君望LE的程序一比，天上地下——解决君望LE的解包和初步封包前后花了大半年。单纯以花费的时间衡量的话，君望LE大约比俺翼R难十倍到二十倍。即使考虑自身水平提高、改用Python开发、资料更丰富等因素，也无法忽视两种引擎复杂度的巨大差别。</p>
+<p>首先是封包格式和对象种类。俺翼R等Lucifen引擎的游戏有多个LPK包，分别存放脚本、背景、立绘、语音等内容，每个包开头的前缀树和索引数组里记录着包内所有对象的文件名和位置大小。Crass早已提供了前缀树和索引数组的解码算法，只需要跟程序抓一下密钥就能用了……即使不会解析其中某些对象，至少能拆开LPK包。相比之下，君望LE的rio文件没有全局索引，而是把所有对象存成树形。一个对象如何连接到子对象与它的类型、内容有关，只有正确解析了一个对象，才能确认它的子对象存在哪儿、有多大。把rio文件中的所有对象取出来，几乎等于解析所有对象。这是一个可怕的工作：君望LE中已经确认的对象类型不少于88种，而且都是需要进一步解析的二进制数据。相比之下，俺翼R的LPK包解开后，需要进一步解析的基本只有elg、sob、tob三种对象。</p>
+<p>图片解析方面差别不大。君望LE这边，westside的四个函数可以合并成一个；俺翼R这边，Crass的四个函数可以合并成两个。当然，原来的算法都是有效的；不过既然做静态替换，需要写逆算法的函数自然是越少越好。两边的难度都在算法清理和合并，写逆算法并不难。</p>
+<p>脚本的情况和外层封包类似，虽然都是二进制脚本，但是俺翼R有全局索引信息和强特征，君望LE没有。俺翼R的tob脚本开头有记录命令组分割点的数组，而且命令组中除可自由调整的剧本正文外，每条命令开头都有特定标记。于是，很容易分割命令和提取文本，封包也不用顾忌正文长度的改变。君望LE的脚本复杂得多，11种脚本对象的解析依赖于更深一层约300种命令对象的解析，而且缺少共通的结构。我在RioX中采用的方法是，对假设树剪枝以定位每个对象开头的标记双字。虽然这个双字没有强特征，但是相邻对象标记双字的差和对象长度之间存在弱对应关系。一般情况下扫完整个脚本，假设树中就只剩一个假设了。封包时，对象长度有限制，标记双字也需要调整。</p>
+<p>解决了解包封包，处理中文显示就有套路了：先改取字体的API，再改双字节字符判断。然后，就可以开始翻译了。</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+												<span class="cat-links">
+				<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://cogito.thisillusion.org/?cat=1" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Uncategorized</a>			</span>
+															
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-652 -->
+
+				
+					
+	<article id="post-650" class="post-650 post type-post status-publish format-standard hentry category-uncategorized">
+		<header class="entry-header">
+						<h1 class="entry-title"><a href="http://cogito.thisillusion.org/?p=650" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">默默开坑——《俺たちに翼はないR》翻译开始</a></h1>
+			
+						<div class="entry-meta">
+				<span class="sep">Posted on </span><a href="http://cogito.thisillusion.org/?p=650" title="4:17 pm" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><time class="entry-date" datetime="2016-08-23T16:17:50+00:00">August 23, 2016</time></a>			</div><!-- .entry-meta -->
+			
+					</header><!-- .entry-header -->
+
+				<div class="entry-content">
+			<p>从12年8月21日君望开坑，到15年8月3日君望完整汉化发布，断断续续做了三年汉化。之后忙创业的事，度过了脱离汉化的一年。现在生活状态有所改变，准备抽一部分时间回归翻译。</p>
+<p>随着公司的发展，虽然一直忙，但是有规律有计划的工作在减少。我需要把能招人分配出去的工作尽量分出去，腾出精力处理工作中发生的问题；反过来越来越多的突发问题也让我无法给自己分配计划性的工作，因为处理突发问题很可能造成这些工作的耽搁。结果就是，我一天到晚要时刻准备着，也会处理不少事，但是总有很多手头无事的碎片时间。既然如此，我想业余还是做点galgame翻译吧：有趣，能换换脑子，不怕被随时打断，没有进度压力。</p>
+<p>至于翻《俺たちに翼はないR》，主要是两方面的考虑。一是有共鸣。其实当年我也曾想写自己的剧本的，也有过一个很模糊的构思。但是读到俺翼之后，发现我不用写了：我想写的主题甚至形式已经有人写了，而且达到了我无法企及的高度。那么现在我把它翻译了就好。二是文本难度很高，不担心被抢坑。当初君望从容填坑，有程序和文本双重困难护航；俺翼的程序虽然易破，文本难度却更高，长度也不亚于君望。从各方面查到的信息显示，俺翼有过两个组开坑，第一个组历经两年后弃坑，第二个组自12年接坑以来没多少动静，至少已经沉默一年多了。最近有人发出来的第一个组翻的文本我看了一眼，只占全剧本的不到10%。时至今日，游戏发售已经过了七年，会去翻而且能坚持下来的，除我之外未必再有吧。</p>
+<p>考虑到文本难度太高、作品知名度偏低、我自己无法保证进度这三点，这次就不尝试拉队伍了，纯粹自己做。投入程度会低于君望，不保证进度，根据情况随时可能选择放弃。至于质量，只能说锻炼自己，尽力而为——毕竟王雀孙写俺翼时就是一副要把日语玩坏的架势，日本人阅读原文都可能觉得费劲。</p>
+<p>无论如何，今天还是决定默默开坑，在此记录一下。作为前期准备，已经初步完成了《俺たちに翼はないR》的解包封包程序。最近二十几天利用工作之余跟踪程序编写代码，已经做到可以把翻译后的GBK编码的剧本封回去正常显示了，汉化所需的基本功能已完成。跟当初搞君望的程序相比，只花了大约二十分之一的时间——Lucifen就是这么简单，或者说rUGP就是这么难……</p>
+<p>最后，我只是想默默做点有趣的事。看到本文的朋友们就不要替我公布了。</p>
+					</div><!-- .entry-content -->
+		
+		<footer class="entry-meta">
+												<span class="cat-links">
+				<span class="entry-utility-prep entry-utility-prep-cat-links">Posted in</span> <a href="http://cogito.thisillusion.org/?cat=1" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Uncategorized</a>			</span>
+															
+			
+					</footer><!-- .entry-meta -->
+	</article><!-- #post-650 -->
+
+				
+				
+			
+			</div><!-- #content -->
+		</section><!-- #primary -->
+
+		<div id="secondary" class="widget-area" role="complementary">
+			<aside id="search-2" class="widget widget_search">	<form method="get" id="searchform" action="http://cogito.thisillusion.org/">
+		<label for="s" class="assistive-text">Search</label>
+		<input type="text" class="field" name="s" id="s" placeholder="Search">
+		
+	</form>
+</aside>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<h3 class="widget-title">Recent Posts</h3>		<ul>
+					<li>
+				<a href="http://cogito.thisillusion.org/?p=655" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">2016-波纹疾走</a>
+						</li>
+					<li>
+				<a href="http://cogito.thisillusion.org/?p=652" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">搞定Lucifen，再次体会到rUGP有多难</a>
+						</li>
+					<li>
+				<a href="http://cogito.thisillusion.org/?p=650" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">默默开坑——《俺たちに翼はないR》翻译开始</a>
+						</li>
+					<li>
+				<a href="http://cogito.thisillusion.org/?p=639" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">一道奥数题</a>
+						</li>
+					<li>
+				<a href="http://cogito.thisillusion.org/?p=633" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">史上最快夭折的汉化项目？</a>
+						</li>
+				</ul>
+		</aside>		<aside id="recent-comments-2" class="widget widget_recent_comments"><h3 class="widget-title">Recent Comments</h3><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">doyleconan</span> on <a href="http://cogito.thisillusion.org/?p=639#comment-2327" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">一道奥数题</a></li><li class="recentcomments"><span class="comment-author-link">comars</span> on <a href="http://cogito.thisillusion.org/?p=633#comment-2326" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">史上最快夭折的汉化项目？</a></li><li class="recentcomments"><span class="comment-author-link">1</span> on <a href="http://cogito.thisillusion.org/?p=515#comment-2310" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">君望汉化：终于只剩我自己了</a></li><li class="recentcomments"><span class="comment-author-link">fishound</span> on <a href="http://cogito.thisillusion.org/?p=263#comment-534" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">White Album 2 （其四）</a></li><li class="recentcomments"><span class="comment-author-link">muzhi</span> on <a href="http://cogito.thisillusion.org/?p=263#comment-533" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">White Album 2 （其四）</a></li></ul></aside><aside id="archives-2" class="widget widget_archive"><h3 class="widget-title">Archives</h3>		<ul>
+			<li><a href="http://cogito.thisillusion.org/?m=201701" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">January 2017</a></li>
+	<li><a href="http://cogito.thisillusion.org/?m=201608" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">August 2016</a></li>
+	<li><a href="http://cogito.thisillusion.org/?m=201604" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">April 2016</a></li>
+	<li><a href="http://cogito.thisillusion.org/?m=201603" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">March 2016</a></li>
+	<li><a href="http://cogito.thisillusion.org/?m=201601" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">January 2016</a></li>
+	<li><a href="http://cogito.thisillusion.org/?m=201504" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">April 2015</a></li>
+	<li><a href="http://cogito.thisillusion.org/?m=201408" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">August 2014</a></li>
+	<li><a href="http://cogito.thisillusion.org/?m=201406" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">June 2014</a></li>
+	<li><a href="http://cogito.thisillusion.org/?m=201405" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">May 2014</a></li>
+	<li><a href="http://cogito.thisillusion.org/?m=201402" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">February 2014</a></li>
+	<li><a href="http://cogito.thisillusion.org/?m=201312" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">December 2013</a></li>
+	<li><a href="http://cogito.thisillusion.org/?m=201311" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">November 2013</a></li>
+	<li><a href="http://cogito.thisillusion.org/?m=201310" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">October 2013</a></li>
+	<li><a href="http://cogito.thisillusion.org/?m=201309" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">September 2013</a></li>
+	<li><a href="http://cogito.thisillusion.org/?m=201305" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">May 2013</a></li>
+	<li><a href="http://cogito.thisillusion.org/?m=201303" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">March 2013</a></li>
+	<li><a href="http://cogito.thisillusion.org/?m=201302" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">February 2013</a></li>
+	<li><a href="http://cogito.thisillusion.org/?m=201212" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">December 2012</a></li>
+	<li><a href="http://cogito.thisillusion.org/?m=201210" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">October 2012</a></li>
+	<li><a href="http://cogito.thisillusion.org/?m=201209" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">September 2012</a></li>
+	<li><a href="http://cogito.thisillusion.org/?m=201208" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">August 2012</a></li>
+	<li><a href="http://cogito.thisillusion.org/?m=201207" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">July 2012</a></li>
+	<li><a href="http://cogito.thisillusion.org/?m=201206" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">June 2012</a></li>
+	<li><a href="http://cogito.thisillusion.org/?m=201205" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">May 2012</a></li>
+	<li><a href="http://cogito.thisillusion.org/?m=201204" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">April 2012</a></li>
+	<li><a href="http://cogito.thisillusion.org/?m=201203" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">March 2012</a></li>
+	<li><a href="http://cogito.thisillusion.org/?m=201202" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">February 2012</a></li>
+	<li><a href="http://cogito.thisillusion.org/?m=201201" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">January 2012</a></li>
+	<li><a href="http://cogito.thisillusion.org/?m=201112" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">December 2011</a></li>
+	<li><a href="http://cogito.thisillusion.org/?m=201111" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">November 2011</a></li>
+	<li><a href="http://cogito.thisillusion.org/?m=201109" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">September 2011</a></li>
+	<li><a href="http://cogito.thisillusion.org/?m=201108" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">August 2011</a></li>
+	<li><a href="http://cogito.thisillusion.org/?m=201107" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">July 2011</a></li>
+	<li><a href="http://cogito.thisillusion.org/?m=201106" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">June 2011</a></li>
+	<li><a href="http://cogito.thisillusion.org/?m=201105" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">May 2011</a></li>
+	<li><a href="http://cogito.thisillusion.org/?m=201104" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">April 2011</a></li>
+	<li><a href="http://cogito.thisillusion.org/?m=201103" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">March 2011</a></li>
+	<li><a href="http://cogito.thisillusion.org/?m=201102" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">February 2011</a></li>
+		</ul>
+		</aside><aside id="categories-2" class="widget widget_categories"><h3 class="widget-title">Categories</h3>		<ul>
+	<li class="cat-item cat-item-1"><a href="http://cogito.thisillusion.org/?cat=1" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Uncategorized</a>
+</li>
+		</ul>
+</aside><aside id="meta-2" class="widget widget_meta"><h3 class="widget-title">Meta</h3>			<ul>
+						<li><a href="http://cogito.thisillusion.org/wp-login.php" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Log in</a></li>
+			<li><a href="http://cogito.thisillusion.org/?feed=rss2" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://cogito.thisillusion.org/?feed=comments-rss2" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="https://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform." target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">WordPress.org</a></li>			</ul>
+			</aside>		</div><!-- #secondary .widget-area -->
+
+	</div><!-- #main -->
+
+	<footer id="colophon" role="contentinfo">
+
+			
+
+			<div id="site-generator">
+								<a href="https://wordpress.org/" title="Semantic Personal Publishing Platform" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Proudly powered by WordPress</a>
+			</div>
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+
+
+
+<span id="copylAddress" style="display: inline-block; position: absolute; left: -9999em;"></span><a href="" download="" data-mx-warn="Empty URL"></a><div data-mx-warn="extension url was not captured by MaoXian" data-mx-original-src="chrome-extension://kjahokgdcbohofgdidndeiaigkehdjdc/pages/ui-selection.html?t=aHR0cDovL2NvZ2l0by50aGlzaWxsdXNpb24ub3Jn"></div><div data-mx-warn="extension url was not captured by MaoXian" data-mx-original-src="chrome-extension://kjahokgdcbohofgdidndeiaigkehdjdc/pages/ui-control.html?t=aHR0cDovL2NvZ2l0by50aGlzaWxsdXNpb24ub3Jn"></div>
+</body>
+  </html>

@@ -1,0 +1,79 @@
+body {
+  background: url("") repeat fixed;
+  font-size: larger;
+}
+
+div#menu {
+  width: 8em;
+  float: left;
+   
+}
+#menu ul {
+  list-style: none;
+  margin: 0ex 0ex 2em;
+  padding-left: 1em;
+}
+#menu p {
+  padding-left: 1em;
+  margin: 1em 1em 1ex 0ex;
+  background: url("") repeat fixed;
+}
+#menu p.top {
+  padding-left: 0ex;
+  text-align: center;
+}
+#menu img {
+  display: block;
+  width: 80%;
+  margin: auto;
+  padding-right: 1em;
+}
+
+.content {
+  position: absolute;
+  left: 8em;
+  margin: 0ex;
+  padding: 1em 1em 0ex 1ex;
+  float: left;
+}
+.content div {
+  font-size: smaller;
+}
+.item {
+  background: white none;
+  border: 1px solid;
+  padding: 0ex 1em 1ex;
+  margin-bottom: 1em;
+  text-align: justify;
+}
+
+.item p {
+  margin: 1ex 0ex;
+}
+
+p.contentheader {
+  background: url("") repeat fixed;
+  margin-top: 2em;
+  margin-bottom: 1em;
+  padding-left: 1em;
+}
+p.contentheader#top {
+  margin-top: 0ex;
+}
+
+p.itemheader {
+  margin: 1em;
+  font-size: larger;
+}
+
+table.ngtable {
+  border: none;
+  font-family: sans-serif;
+}
+
+table.ngtable tr td {
+  width: 50%;
+  vertical-align: top;
+  font-size: smaller;
+  padding: 1ex;
+}

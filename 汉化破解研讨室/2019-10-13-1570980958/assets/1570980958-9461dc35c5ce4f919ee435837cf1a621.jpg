@@ -1,0 +1,27 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>imat.cn</title>
+<meta name="description" content="百度一下 你就知道" />
+<meta name="keywords" content="百度搜索,图片搜索,内容搜索" />
+<style type="text/css">
+.pending{
+margin: 0 auto;
+overflow: hidden;
+margin-top: 50px;
+}
+</style>
+<script type="text/javascript">var pageinfo = {ad:1};</script>
+<script type="text/javascript" src="http://cdn.dragonstatic.com/parking/js/track.js"></script>
+</head>
+<body>
+<nav>
+<div class="domain_name" ><b>imat.cn</b></div>
+</nav>
+<div class="pending">Your parking page is pending. It may takes one hour to become fully active.</div>
+</body>
+</html>
+

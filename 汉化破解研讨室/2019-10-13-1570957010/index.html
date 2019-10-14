@@ -1,0 +1,1173 @@
+
+  <!DOCTYPE html>
+  <html id="" class="translated-ltr">
+    <!-- OriginalSrc: https://web.archive.org/web/20080810165851/http://sekai.insani.org/archives/8 -->
+    <head>
+      <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <title>sekai.insani.org»所以您想成为一名黑客？ 第二部分：十六进制编辑器</title>
+      
+
+<link rel="stylesheet" type="text/css" href="assets/1570957010-7d8615ffad0397de253976c03119d074.css" referrerpolicy="no-referrer">
+<link rel="stylesheet" type="text/css" href="assets/1570957010-32a1290393936a63a45283a71d7c7890.css" referrerpolicy="no-referrer">
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="assets/1570957010-bf6e8ede6c9939560d4ea3bd7e88d251.css" referrerpolicy="no-referrer">
+
+
+<style class="darkreader darkreader--fallback" media="screen"></style>
+<style class="darkreader darkreader--text" media="screen"></style>
+<style class="darkreader darkreader--invert" media="screen">#wm-sparkline-canvas, .yt, .sparkline-canvas, .sparkline-mouse-highlight, .search-toolbar-logo, #wm-logo {
+    filter: invert(100%) hue-rotate(180deg) contrast(90%) grayscale(10%) sepia(10%) !important;
+}</style>
+<style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}</style>
+<style class="darkreader darkreader--user-agent" media="screen">html {
+    background-color: #191a1b !important;
+}
+html, body, input, textarea, select, button {
+    background-color: #191a1b;
+}
+html, body, input, textarea, select, button {
+    border-color: #5a5956;
+    color: #f0ebe2;
+}
+a {
+    color: #4791e7;
+}
+table {
+    border-color: #4f4e4c;
+}
+::placeholder {
+    color: #bfb9ac;
+}
+::selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+::-moz-selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #565a0f !important;
+    color: #f0ebe2 !important;
+}
+::-webkit-scrollbar {
+    background-color: #1d1f1f;
+    color: #cbc5b9;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #2c2d2d;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #343636;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #404142;
+}
+::-webkit-scrollbar-corner {
+    background-color: #191a1b;
+}
+* {
+    scrollbar-color: #2c2d2d #1d1f1f;
+}</style>
+<style class="darkreader darkreader--override" media="screen">.jfk-bubble {
+    background-color: #000000 !important;
+}
+.vimvixen-hint {
+    background-color: #765500 !important;
+    border-color: #d5b22e !important;
+    color: #f9edcc !important;
+}
+.measure {
+    z-index: 0 !important;
+}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css" media="screen">
+		@import url("assets/1570957010-c996c665e115ff938caf098a9f2fe634.css");
+		
+body{
+			background: #6C7C8B url("") repeat-x;
+		}
+	</style>
+<style class="darkreader darkreader--cors" media="screen">body {
+
+  margin:0px;
+
+  padding:0px;
+
+  text-align:center;
+
+  font:11px/15px Georgia,"Times New Roman",Serif;
+
+	color: #555558;background:#73868C;
+
+}
+
+#maincol {
+
+  width:70%;
+
+  background:#fff;
+
+  float:left;
+
+}
+
+#maincol .col {
+
+	padding-bottom: 5px;
+
+	padding-left:25px;
+
+	padding-right:25px;
+
+	line-height:1.6em;
+
+	margin-top:30px;
+
+}
+
+#headbar{
+
+
+
+	background:#6C6a6A;
+
+	height:8px;
+
+border-bottom:1px solid #636161;
+
+}
+
+#navcol {
+
+	padding:5px;
+
+	padding-top: 20px;
+
+	clear:right;
+
+
+
+        right:0px;
+
+	float:right;
+
+  font-size:1em;
+
+  }
+
+#container{
+
+	
+
+ width:90%;
+
+ text-align:left;
+
+ margin-left: auto;
+
+ display:block;
+
+  margin-right: auto;
+
+ background:#fff;
+
+ border-left: 2px solid #777;
+
+ border-right: 2px solid #777;
+
+ padding-bottom:0;
+
+}
+
+#container:after {
+
+    content: "."; 
+
+    display: block; 
+
+    height: 0; 
+
+    clear: both; 
+
+    visibility: hidden;
+
+}
+
+a{
+
+	text-decoration:none;
+
+}
+
+a{
+
+	color: #3C657B;
+
+	text-decoration: none;
+
+	}
+
+#footer{
+
+border-top:1px solid #111;
+
+border-bottom:1px solid #111;
+
+color: #eee;
+
+background: #555;
+
+clear:both;
+
+padding: 5px;
+
+ text-align:center;
+
+ margin-left: auto;
+
+ display:block;
+
+  margin-right: auto;
+
+  font-size: 0.9em;
+
+  font-family:"Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;
+
+}
+
+#footer a{
+
+	color: #fff;
+
+	font-weight:bold;
+
+}
+
+a:hover {
+
+	text-decoration:underline;
+
+}
+
+.entry{
+
+	padding-bottom: 20px;
+
+}
+
+
+
+h1, h2, h3, h4 {
+
+font-family:"Century Gothic", "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;
+
+}
+
+#header {
+
+	padding: 0px;	
+
+	margin-top: 3px;
+
+	padding-top:50px;
+
+	
+
+	padding-bottom:10px;
+
+	border-bottom: 1px solid #bab1b1;
+
+	background: #404040;
+
+	text-align:right;
+
+	padding-right:20px;
+
+	padding-left:5px;
+
+}
+
+#header h1{
+
+	padding:0px;
+
+	margin: 0px;
+
+	margin-bottom:10px;
+
+	font-size: 2.4em;
+
+	letter-spacing:0.1em;
+
+	
+
+}
+
+#header h1 a {
+
+	color: #ffffef;
+
+}
+
+#header h1 a:hover {
+
+	text-decoration:none;
+
+	color: #bb4444;
+
+}
+
+#header img {
+
+	border:none;
+
+}
+
+#subtitle {
+
+	font-family:"Century Gothic", "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;
+
+	margin-bottom:3px;
+
+	font-size: 0.9em;
+
+	text-transform:uppercase;
+
+	color:#bbb;
+
+}
+
+
+
+h2 {
+
+font-size: 1.2em;
+
+margin-bottom:5px;
+
+}
+
+h2.entrydate{
+
+margin-bottom:1px;
+
+font-size: 1.8em;
+
+font-weight:normal;
+
+text-transform:uppercase;
+
+}
+
+.entrymeta{
+
+	font-size: 0.9em;background:#eee;
+
+}
+
+h3.entrytitle{
+
+margin-top:0px;
+
+margin-bottom:1px;
+
+font-size: 1.8em;
+
+font-weight:normal;
+
+}
+
+.entry{
+
+margin-top:8px;
+
+}
+
+.entrybody p a{
+
+font-weight:bold;
+
+}
+
+.entrybody p {
+
+	margin-top:8px;
+
+	margin-bottom:16px;
+
+}
+
+
+
+
+
+ul {
+
+ margin:0 0 1em 0;
+
+ padding-left:0px;
+
+ list-style-type:square;
+
+}
+
+ul.extern {
+
+	font-style:italic;	
+
+}
+
+ul.children {
+
+ list-style-type:disc;
+
+}
+
+ul.nomarginchildren {
+ list-style-type:disc;
+ margin: 0 0 0 0;
+}
+
+
+
+
+
+h2#comments{
+
+text-align:center;
+
+border-top:1px solid #acb1ba;
+
+background:#9ba1aa;
+
+padding:7px;
+
+border-bottom:1px solid #acb1ba;
+
+margin-bottom:10px;
+
+margin-top:80px;
+
+}
+
+ol#commentlist {
+
+margin-top:0px;
+
+
+
+ padding: 5px;
+
+ margin-left: 0px;
+
+ color: #9b9b9b;
+
+ list-style-type: none;
+
+ font-size:0.9em;
+
+}
+
+#commentlist li  p{
+
+ padding: 0px;
+
+ margin: 0px 0px 0px 0px;
+
+}
+
+.commentname {
+
+ float: left;
+
+ margin: 0;
+
+ padding: 0  0 2px 0;
+
+
+
+}
+
+.commentinfo{
+
+ width: 200px;
+
+ float: right;
+
+ text-align: right;
+
+}
+
+.commenttext {
+
+ clear: both;
+
+ padding-top: 0px;
+
+ margin-top: 0px;
+
+ margin-bottom: 30px;
+
+ border-top: 1px solid #ebebeb;
+
+ line-height:12px;
+
+ color: #5b5b5b;
+
+}
+
+#commentsformheader{
+
+padding-left:18px;
+
+font-size: 1.4em;
+
+}
+
+#commentsform{
+
+	margin-top:none;
+
+	text-align:center;
+
+	border:1px solid #ddd;
+
+	background:#ededed;
+
+	padding:0px 10px;
+
+}
+
+#commentsform form{
+
+text-align:left;
+
+margin:0px;
+
+}
+
+#commentsform p{
+
+	margin:5px;
+
+}
+
+#commentsform form textarea{
+
+	width:100%;
+
+}
+
+
+
+code{
+
+	font-family: 'lucida console', 'Courier New', monospace;
+
+	font-size: 0.8em;
+
+	display:block;
+
+	padding:5px;
+
+	background-color: #eee;
+
+	border: 1px solid #d3d3d6;
+
+}
+
+input[type="text"], textarea {
+
+	padding:3px;
+
+	border: 1px solid #d3d3d6;
+
+	color: #535356;
+
+	-moz-border-radius: 3px;
+
+}
+
+input[type="submit"]{
+
+	padding:2px;
+
+	font-size: 1.25em;
+
+	border: 1px solid #d3d3d3;
+
+	background: #fff;
+
+	-moz-border-radius: 3px;
+
+}
+
+blockquote {
+
+	border-left: 3px solid #686868;
+
+	color: #888;
+
+	padding-left: 8px;
+
+	margin-left: 25px;
+
+}
+
+a img {
+
+border:none;
+
+}
+
+
+
+p.footer {
+
+	color:#777;
+
+}
+		
+body{
+			background: #6C7C8B url("") repeat-x;
+		}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">@keyframes fadeInOpacity{0%{opacity:0}to{opacity:1}}:hover>*>.fbvd--wrapper{animation-name:fadeInOpacity;animation-duration:.3s;opacity:1}.fbvd--wrapper{position:absolute;top:10px;left:10px;opacity:0;text-align:center;margin:0;z-index:5}.fbvd--wrapper a{background: url("") no-repeat 3px 4.55px; background-color: #fff; display:inline-block;font:700 14px Helvetica,Arial,sans-serif;color:#4b4f56;text-decoration:none;vertical-align:middle;padding:0px 8px 0px;margin-right:8px;border-radius:2px; line-height: 22px; padding-left:19px; border: 1px solid #e7e7e7; background-size: 13px}.fbvd--wrapper a:last-child{margin-right:0}.fbvd--wrapper a:hover{text-decoration:none}.fbvd--wrapper a:focus{box-shadow:0 0 1px 2px rgba(88,144,255,.75),0 1px 1px rgba(0,0,0,.15);outline:none}.fbvd--wrapper b{font-size:13px;position:relative;top:1px;color:#3b5998;font-weight:400}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--cors" media="screen">.goog-te-banner-frame{left:0px;top:0px;height:39px;width:100%;z-index:10000001;position:fixed;border:none;border-bottom:1px solid #6b90da;margin:0;-moz-box-shadow:0 0 8px 1px #999999;-webkit-box-shadow:0 0 8px 1px #999999;box-shadow:0 0 8px 1px #999999;_position:absolute}.goog-te-menu-frame{z-index:10000002;position:fixed;border:none;-moz-box-shadow:0 3px 8px 2px #999999;-webkit-box-shadow:0 3px 8px 2px #999999;box-shadow:0 3px 8px 2px #999999;_position:absolute}.goog-te-ftab-frame{z-index:10000000;border:none;margin:0}.goog-te-gadget{font-family:arial;font-size:11px;color:#666;white-space:nowrap}.goog-te-gadget img{vertical-align:middle;border:none}.goog-te-gadget-simple{background-color:#fff;border-left:1px solid #d5d5d5;border-top:1px solid #9b9b9b;border-bottom:1px solid #e8e8e8;border-right:1px solid #d5d5d5;font-size:10pt;display:inline-block;padding-top:1px;padding-bottom:2px;cursor:pointer;zoom:1;*display:inline}.goog-te-gadget-icon{margin-left:2px;margin-right:2px;width:19px;height:19px;border:none;vertical-align:middle}.goog-te-combo{margin-left:4px;margin-right:4px;vertical-align:baseline;*vertical-align:middle}.goog-te-gadget .goog-te-combo{margin:4px 0}.goog-logo-link,.goog-logo-link:link,.goog-logo-link:visited,.goog-logo-link:hover,.goog-logo-link:active{font-size:12px;font-weight:bold;color:#444;text-decoration:none}.goog-te-banner .goog-logo-link,.goog-close-link{display:block;margin:0px 10px}.goog-te-banner .goog-logo-link{padding-top:2px;padding-left:4px}.goog-te-combo,.goog-te-banner *,.goog-te-ftab *,.goog-te-menu *,.goog-te-menu2 *,.goog-te-balloon *{font-family:arial;font-size:10pt}.goog-te-banner{margin:0;background-color:#e4effb;overflow:hidden}.goog-te-banner img{border:none}.goog-te-banner-content{color:#000}.goog-te-banner-content img{vertical-align:middle}.goog-te-banner-info{color:#666;vertical-align:top;margin-top:0px;font-size:7pt}.goog-te-banner-margin{width:8px}.goog-te-button{border-color:#e7e7e7;border-style:none solid solid none;border-width:0 1px 1px 0}.goog-te-button div{border-color:#cccccc #999999 #999999 #cccccc;border-right:1px solid #999999;border-style:solid;border-width:1px;height:20px}.goog-te-button button{background:transparent;border:none;cursor:pointer;height:20px;overflow:hidden;margin:0;vertical-align:top;white-space:nowrap}.goog-te-button button:active{background:none repeat scroll 0 0 #cccccc}.goog-te-ftab{margin:0px;background-color:#fff;white-space:nowrap}.goog-te-ftab-link{text-decoration:none;font-weight:bold;font-size:10pt;border:1px outset #888;padding:6px 10px;white-space:nowrap;position:absolute;left:0px;top:0px}.goog-te-ftab-link img{margin-left:2px;margin-right:2px;width:19px;height:19px;border:none;vertical-align:middle}.goog-te-ftab-link span{text-decoration:underline;margin-left:2px;margin-right:2px;vertical-align:middle}.goog-float-top .goog-te-ftab-link{padding:2px 2px;border-top-width:0px}.goog-float-bottom .goog-te-ftab-link{padding:2px 2px;border-bottom-width:0px}.goog-te-menu-value{text-decoration:none;color:#0000cc;white-space:nowrap;margin-left:4px;margin-right:4px}.goog-te-menu-value span{text-decoration:underline}.goog-te-menu-value img{margin-left:2px;margin-right:2px}.goog-te-gadget-simple .goog-te-menu-value{color:#000}.goog-te-gadget-simple .goog-te-menu-value span{text-decoration:none}.goog-te-menu{background-color:#ffffff;text-decoration:none;border:2px solid #c3d9ff;overflow-y:scroll;overflow-x:hidden;position:absolute;left:0;top:0}.goog-te-menu-item{padding:3px;text-decoration:none}.goog-te-menu-item,.goog-te-menu-item:link{color:#0000cc;background:#ffffff}.goog-te-menu-item:visited{color:#551a8b}.goog-te-menu-item:hover{background:#c3d9ff}.goog-te-menu-item:active{color:#0000cc}.goog-te-menu2{background-color:#ffffff;text-decoration:none;border:1px solid #6b90da;overflow:hidden;padding:4px}.goog-te-menu2-colpad{width:16px}.goog-te-menu2-separator{margin:6px 0;height:1px;background-color:#aaa;overflow:hidden}.goog-te-menu2-item div,.goog-te-menu2-item-selected div{padding:4px}.goog-te-menu2-item .indicator{display:none}.goog-te-menu2-item-selected .indicator{display:auto}.goog-te-menu2-item-selected .text{padding-left:4px;padding-right:4px}.goog-te-menu2-item,.goog-te-menu2-item-selected{text-decoration:none}.goog-te-menu2-item div,.goog-te-menu2-item:link div,.goog-te-menu2-item:visited div,.goog-te-menu2-item:active div{color:#0000cc;background:#ffffff}.goog-te-menu2-item:hover div{color:#ffffff;background:#3366cc}.goog-te-menu2-item-selected div,.goog-te-menu2-item-selected:link div,.goog-te-menu2-item-selected:visited div,.goog-te-menu2-item-selected:hover div,.goog-te-menu2-item-selected:active div{color:#000;font-weight:bold}.goog-te-balloon{background-color:#ffffff;overflow:hidden;padding:8px;border:none;-moz-border-radius:10px;border-radius:10px}.goog-te-balloon-frame{background-color:#ffffff;border:1px solid #6b90da;-moz-box-shadow:0 3px 8px 2px #999999;-webkit-box-shadow:0 3px 8px 2px #999999;box-shadow:0 3px 8px 2px #999999;-moz-border-radius:8px;border-radius:8px}.goog-te-balloon img{border:none}.goog-te-balloon-text{margin-top:6px}.goog-te-balloon-zippy{margin-top:6px;white-space:nowrap}.goog-te-balloon-zippy *{vertical-align:middle}.goog-te-balloon-zippy .minus{background-image:url("https://www.google.com/images/zippy_minus_sm.gif")}.goog-te-balloon-zippy .plus{background-image:url("https://www.google.com/images/zippy_plus_sm.gif")}.goog-te-balloon-zippy span{color:#00c;text-decoration:underline;cursor:pointer;margin:0 4px}.goog-te-balloon-form{margin:6px 0 0 0}.goog-te-balloon-form form{margin:0}.goog-te-balloon-form form textarea{margin-bottom:4px;width:100%}.goog-te-balloon-footer{margin:6px 0 4px 0}.goog-te-spinner-pos{z-index:1000;position:fixed;transition-delay:0.6s;left:-1000px;top:-1000px}.goog-te-spinner-animation{background:#ccc;display:flex;align-items:center;justify-content:center;width:104px;height:104px;border-radius:50px;background:#fff url("") 50% 50% no-repeat;transition:all 0.6s ease-in-out;transform:scale(0.4);opacity:0}.goog-te-spinner-animation-show{transform:scale(0.5);opacity:1}.goog-te-spinner{margin:2px 0 0 2px;animation:goog-te-spinner-rotator 1.4s linear infinite}@keyframes goog-te-spinner-rotator{0%{transform:rotate(0deg)}100%{transform:rotate(270deg)}}.goog-te-spinner-path{stroke-dasharray:187;stroke-dashoffset:0;stroke:#4285f4;transform-origin:center;animation:goog-te-spinner-dash 1.4s ease-in-out infinite}@keyframes goog-te-spinner-dash{0%{stroke-dashoffset:187}50%{stroke-dashoffset:46.75;transform:rotate(135deg)}100%{stroke-dashoffset:187;transform:rotate(450deg)}}#goog-gt-tt html,#goog-gt-tt body,#goog-gt-tt div,#goog-gt-tt span,#goog-gt-tt iframe,#goog-gt-tt h1,#goog-gt-tt h2,#goog-gt-tt h3,#goog-gt-tt h4,#goog-gt-tt h5,#goog-gt-tt h6,#goog-gt-tt p,#goog-gt-tt a,#goog-gt-tt img,#goog-gt-tt ol,#goog-gt-tt ul,#goog-gt-tt li,#goog-gt-tt table,#goog-gt-tt form,#goog-gt-tt tbody,#goog-gt-tt tr,#goog-gt-tt td{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;text-align:left;line-height:normal}#goog-gt-tt ol,#goog-gt-tt ul{list-style:none}#goog-gt-tt table{border-collapse:collapse;border-spacing:0}#goog-gt-tt caption,#goog-gt-tt th,#goog-gt-tt td{text-align:left;font-weight:normal}#goog-gt-tt input::-moz-focus-inner{border:0}div#goog-gt-tt{padding:10px 14px}#goog-gt-tt{color:#222;background-color:#ffffff;border:1px solid #eee;box-shadow:0 4px 16px rgba(0,0,0,.2);-moz-box-shadow:0 4px 16px rgba(0,0,0,.2);-webkit-box-shadow:0 4px 16px rgba(0,0,0,.2);display:none;font-family:arial;font-size:10pt;width:420px;padding:12px;position:absolute;z-index:10000}#goog-gt-tt .original-text,.gt-hl-layer{clear:both;font-size:10pt;position:relative;text-align:justify;width:100%}#goog-gt-tt .title{color:#999;font-family:arial,sans-serif;margin:4px 0;text-align:left}#goog-gt-tt .close-button{display:none}#goog-gt-tt .logo{float:left;margin:0px}#goog-gt-tt .activity-links{display:inline-block}#goog-gt-tt .started-activity-container{display:none;width:100%}#goog-gt-tt .activity-root{margin-top:20px}#goog-gt-tt .left{float:left}#goog-gt-tt .right{float:right}#goog-gt-tt .bottom{min-height:15px;position:relative;height:1%}#goog-gt-tt .status-message{background:-moz-linear-gradient(top,#29910d 0%,#20af0e 100%);background:-webkit-linear-gradient(top,#29910d 0%,#20af0e 100%);background:-o-linear-gradient(top,#29910d 0%,#20af0e 100%);background:-ms-linear-gradient(top,#29910d 0%,#20af0e 100%);background:linear-gradient(top,#29910d 0%,#20af0e 100%);background:#29910d;border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;box-shadow:inset 0px 2px 2px #1e6609;-moz-box-shadow:inset 0px 2px 2px #1e6609;-webkit-box-shadow:inset 0px 2px 2px #1e6609;color:white;font-size:9pt;font-weight:bolder;margin-top:12px;padding:6px;text-shadow:1px 1px 1px #1e6609}#goog-gt-tt .activity-link{color:#1155cc;cursor:pointer;font-family:arial;font-size:11px;margin-right:15px;text-decoration:none}#goog-gt-tt textarea{font-family:arial;resize:vertical;width:100%;margin-bottom:10px;-webkit-border-radius:1px;-moz-border-radius:1px;border-radius:1px;border:1px solid #d9d9d9;border-top:1px solid silver;font-size:13px;height:auto;overflow-y:auto;padding:1px}#goog-gt-tt textarea:focus{-webkit-box-shadow:inset 0 1px 2px rgba(0,0,0,0.3);-moz-box-shadow:inset 0 1px 2px rgba(0,0,0,0.3);box-shadow:inset 0 1px 2px rgba(0,0,0,0.3);border:1px solid #4d90fe;outline:none}#goog-gt-tt .activity-cancel{margin-right:10px}#goog-gt-tt .translate-form{min-height:25px;vertical-align:middle;padding-top:8px}#goog-gt-tt .translate-form .activity-form{margin-bottom:5px;margin-bottom:0px}#goog-gt-tt .translate-form .activity-form input{display:inline-block;min-width:54px;*min-width:70px;border:1px solid #dcdcdc;border:1px solid rgba(0,0,0,0.1);text-align:center;color:#444;font-size:11px;font-weight:bold;height:27px;outline:0;padding:0 8px;vertical-align:middle;line-height:27px;margin:0 16px 0 0;box-shadow:0 1px 2px rgba(0,0,0,.1);-moz-box-shadow:0 1px 2px rgba(0,0,0,.1);-webkit-box-shadow:0 1px 2px rgba(0,0,0,.1);-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;-webkit-transition:all 0.218s;-moz-transition:all 0.218s;-o-transition:all 0.218s;transition:all 0.218s;background-color:#f5f5f5;background-image:-webkit-gradient(linear,left top,left bottom,from(#f5f5f5),to(#f1f1f1));background-image:-webkit-linear-gradient(top,#f5f5f5,#f1f1f1);background-image:-moz-linear-gradient(top,#f5f5f5,#f1f1f1);background-image:-ms-linear-gradient(top,#f5f5f5,#f1f1f1);background-image:-o-linear-gradient(top,#f5f5f5,#f1f1f1);background-image:linear-gradient(top,#f5f5f5,#f1f1f1);-webkit-user-select:none;-moz-user-select:none;cursor:default}#goog-gt-tt .translate-form .activity-form input:hover{border:1px solid #c6c6c6;color:#222;-webkit-transition:all 0.0s;-moz-transition:all 0.0s;-o-transition:all 0.0s;transition:all 0.0s;background-color:#f8f8f8;background-image:-webkit-gradient(linear,left top,left bottom,from(#f8f8f8),to(#f1f1f1));background-image:-webkit-linear-gradient(top,#f8f8f8,#f1f1f1);background-image:-moz-linear-gradient(top,#f8f8f8,#f1f1f1);background-image:-ms-linear-gradient(top,#f8f8f8,#f1f1f1);background-image:-o-linear-gradient(top,#f8f8f8,#f1f1f1);background-image:linear-gradient(top,#f8f8f8,#f1f1f1)}#goog-gt-tt .translate-form .activity-form input:active{border:1px solid #c6c6c6;color:#333;background-color:#f6f6f6;background-image:-webkit-gradient(linear,left top,left bottom,from(#f6f6f6),to(#f1f1f1));background-image:-webkit-linear-gradient(top,#f6f6f6,#f1f1f1);background-image:-moz-linear-gradient(top,#f6f6f6,#f1f1f1);background-image:-ms-linear-gradient(top,#f6f6f6,#f1f1f1);background-image:-o-linear-gradient(top,#f6f6f6,#f1f1f1);background-image:linear-gradient(top,#f6f6f6,#f1f1f1)}#goog-gt-tt .translate-form .activity-form input:focus #goog-gt-tt .translate-form .activity-form input.focus #goog-gt-tt .translate-form .activity-form input:active,#goog-gt-tt .translate-form .activity-form input:focus:active,#goog-gt-tt .translate-form .activity-form input:.focus:active{box-shadow:inset 0 0 0 1px rgba(255,255,255,0.5);-webkit-box-shadow:inset 0 0 0 1px rgba(255,255,255,0.5);-moz-box-shadow:inset 0 0 0 1px rgba(255,255,255,0.5)}#goog-gt-tt .translate-form .activity-form input:focus,#goog-gt-tt .translate-form .activity-form input.focus{outline:none;border:1px solid #4d90fe;z-index:4!important}#goog-gt-tt .translate-form .activity-form input.selected{background-color:#eeeeee;background-image:-webkit-gradient(linear,left top,left bottom,from(#eeeeee),to(#e0e0e0));background-image:-webkit-linear-gradient(top,#eeeeee,#e0e0e0);background-image:-moz-linear-gradient(top,#eeeeee,#e0e0e0);background-image:-ms-linear-gradient(top,#eeeeee,#e0e0e0);background-image:-o-linear-gradient(top,#eeeeee,#e0e0e0);background-image:linear-gradient(top,#eeeeee,#e0e0e0);-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);border:1px solid #ccc;color:#333}#goog-gt-tt .translate-form .activity-form input.activity-submit{color:white;border-color:#3079ed;background-color:#4d90fe;background-image:-webkit-gradient(linear,left top,left bottom,from(#4d90fe),to(#4787ed));background-image:-webkit-linear-gradient(top,#4d90fe,#4787ed);background-image:-moz-linear-gradient(top,#4d90fe,#4787ed);background-image:-ms-linear-gradient(top,#4d90fe,#4787ed);background-image:-o-linear-gradient(top,#4d90fe,#4787ed);background-image:linear-gradient(top,#4d90fe,#4787ed)}#goog-gt-tt .translate-form .activity-form input.activity-submit:hover #goog-gt-tt .translate-form .activity-form input.activity-submit:focus,#goog-gt-tt .translate-form .activity-form input.activity-submit.focus #goog-gt-tt .translate-form .activity-form input.activity-submit:active{border-color:#3079ed;background-color:#357ae8;background-image:-webkit-gradient(linear,left top,left bottom,from(#4d90fe),to(#357ae8));background-image:-webkit-linear-gradient(top,#4d90fe,#357ae8);background-image:-moz-linear-gradient(top,#4d90fe,#357ae8);background-image:-ms-linear-gradient(top,#4d90fe,#357ae8);background-image:-o-linear-gradient(top,#4d90fe,#357ae8);background-image:linear-gradient(top,#4d90fe,#357ae8)}#goog-gt-tt .translate-form .activity-form input.activity-submit:hover{box-shadow:inset 0 0 0 1px #fff,0px 1px 1px rgba(0,0,0,0.1);-webkit-box-shadow:inset 0 0 0 1px #fff,0px 1px 1px rgba(0,0,0,0.1);-moz-box-shadow:inset 0 0 0 1px #fff,0px 1px 1px rgba(0,0,0,0.1)}#goog-gt-tt .translate-form .activity-form input:focus,#goog-gt-tt .translate-form .activity-form input.focus,#goog-gt-tt .translate-form .activity-form input:active,#goog-gt-tt .translate-form .activity-form input:hover,#goog-gt-tt .translate-form .activity-form input.activity-submit:focus,#goog-gt-tt .translate-form .activity-form input.activity-submit.focus,#goog-gt-tt .translate-form .activity-form input.activity-submit:active,#goog-gt-tt .translate-form .activity-form input.activity-submit:hover{border-color:#3079ed}#goog-gt-tt .gray{color:#999;font-family:arial,sans-serif}#goog-gt-tt .alt-helper-text{color:#999;font-size:11px;font-family:arial,sans-serif;margin:15px 0px 5px 0px}#goog-gt-tt .alt-error-text{color:#800;display:none;font-size:9pt}.goog-text-highlight{background-color:#c9d7f1;-webkit-box-shadow:2px 2px 4px #9999aa;-moz-box-shadow:2px 2px 4px #9999aa;box-shadow:2px 2px 4px #9999aa;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;position:relative}#goog-gt-tt .alt-menu.goog-menu{background:#ffffff;border:1px solid #dddddd;-webkit-box-shadow:0px 3px 3px #888;-moz-box-shadow:0px 2px 20px #888;box-shadow:0px 2px 4px #99a;min-width:0;outline:none;padding:0;position:absolute;z-index:2000}#goog-gt-tt .alt-menu .goog-menuitem{cursor:pointer;padding:2px 5px 5px;margin-right:0px;border-style:none}#goog-gt-tt .alt-menu div.goog-menuitem:hover{background:#ddd}#goog-gt-tt .alt-menu .goog-menuitem h1{font-size:100%;font-weight:bold;margin:4px 0px}#goog-gt-tt .alt-menu .goog-menuitem strong{color:#345aad}#goog-gt-tt .goog-submenu-arrow{text-align:right;position:absolute;right:0;left:auto}#goog-gt-tt .goog-menuitem-rtl .goog-submenu-arrow{text-align:left;position:absolute;left:0;right:auto}#goog-gt-tt .gt-hl-text,#goog-gt-tt .trans-target-highlight{background-color:#f1ea00;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;-moz-box-shadow:rgba(0,0,0,.5) 3px 3px 4px;-webkit-box-shadow:rgba(0,0,0,.5) 3px 3px 4px;box-shadow:rgba(0,0,0,.5) 3px 3px 4px;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;color:#f1ea00;cursor:pointer;margin:-2px -2px -2px -3px;padding:2px 2px 2px 3px;position:relative}#goog-gt-tt .trans-target-highlight{color:#222}#goog-gt-tt .gt-hl-layer{color:white;position:absolute!important}#goog-gt-tt .trans-target,#goog-gt-tt .trans-target .trans-target-highlight{background-color:#c9d7f1;border-radius:4px 4px 0px 0px;-webkit-border-radius:4px 4px 0px 0px;-moz-border-radius:4px 4px 0px 0px;-moz-box-shadow:rgba(0,0,0,.5) 3px 3px 4px;-webkit-box-shadow:rgba(0,0,0,.5) 3px 3px 4px;box-shadow:rgba(0,0,0,.5) 3px 3px 4px;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;cursor:pointer;margin:-2px -2px -2px -3px;padding:2px 2px 3px 3px;position:relative}#goog-gt-tt span:focus{outline:none}#goog-gt-tt .trans-edit{background-color:transparent;border:1px solid #4d90fe;border-radius:0em;-webkit-border-radius:0em;-moz-border-radius:0em;margin:-2px;padding:1px}#goog-gt-tt .gt-trans-highlight-l{border-left:2px solid red;margin-left:-2px}#goog-gt-tt .gt-trans-highlight-r{border-right:2px solid red;margin-right:-2px}#goog-gt-tt #alt-input{padding:2px}#goog-gt-tt #alt-input-text{font-size:11px;padding:2px 2px 3px;margin:0;background-color:#fff;color:#333;border:1px solid #d9d9d9;border-top:1px solid #c0c0c0;display:inline-block;vertical-align:top;height:21px;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-webkit-border-radius:1px}#goog-gt-tt #alt-input-text:hover{border:1px solid #b9b9b9;border-top:1px solid #a0a0a0;-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1)}#goog-gt-tt #alt-input-text:focus{-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);outline:none;border:1px solid #4d90fe}#goog-gt-tt #alt-input-submit{font-size:11px;padding:2px 6px 3px;margin:0 0 0 2px;height:21px}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+
+      
+    </head>
+    <body id="home" class="log mx-wc-selected-elem mx-wc-1570957010"><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+
+
+
+
+<div id="wm-ipp-base" lang="en" style="display: block; direction: ltr;">
+</div>
+<!-- END WAYBACK TOOLBAR INSERT -->
+	<div id="container">
+		<!-- The header begins  -->
+		<div id="header">
+			<h1><a href="https://web.archive.org/web/20080810165851/http://sekai.insani.org/" title="sekai.insani.org" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：精神错乱的世界</font></font></a></h1>
+			<div id="subtitle">
+				<!-- Here's the tagline  --><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+				insani的生产杂志			</font></font></div>
+		</div>
+		<div id="headbar"></div>
+		<!-- The header ends  -->
+		<div id="maincol"><!-- The main content column begins  -->
+			<div class="col"><div class="entry">
+			<!--
+				<h2 class="entrydate">May 29, 2006</h2>
+			-->
+			<h3 class="entrytitle" id="post-8">
+				<a href="https://web.archive.org/web/20080810165851/http://sekai.insani.org/archives/8" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">所以你想成为一名黑客？</font><font style="vertical-align: inherit;">第二部分：十六进制编辑器</font></font></a>
+			</h3>
+			<div class="entrybody">
+				<div class="entrymeta"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+					爱德华·凯斯（Edward Keyes）在2006年5月29日发布到</font></font><a href="https://web.archive.org/web/20080810165851/http://sekai.insani.org/archives/category/production-process/" title="查看生产过程中的所有帖子" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Production Process</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，</font></font><a href="https://web.archive.org/web/20080810165851/http://sekai.insani.org/archives/category/production-process/so-you-want-to-be-a-hacker/" title="查看“您想成为一名黑客？”中的所有文章。" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">所以您想成为一名黑客吗？</font></font></a>				</div>
+				<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">让我们开始吧。</font><font style="vertical-align: inherit;">今天，我们将看一个简单的示例存档格式，作为讨论游戏数据文件“标准”部分的跳板。</font><font style="vertical-align: inherit;">当您凝视未知格式时，请记住此类模板，这将有助于您理解遇到的随机字节。</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">目前，我们要看的游戏是</font></font><a href="https://web.archive.org/web/20080810165851/http://www.flyingshine.com/product/crosschannel/dl.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cross + Channel</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（试用版下载链接位于页面底部），该游戏的</font></font><a href="https://web.archive.org/web/20080810165851/http://kurosuchannel.free.fr/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">翻译项​​目</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">正在进行中。</font><font style="vertical-align: inherit;">因此，如有需要，请索取一份副本，让我们看看。</font></font><a id="more-8" data-mx-warn="Empty URL"></a></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在内部，除了可执行文件等，我们只有几个文件：</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">bgm.pd</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">cg.pd</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">script.pd</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">se.pd</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">和</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">voice.pd</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font><font style="vertical-align: inherit;">这是非常典型的情况：大多数游戏并未在其自己的文件中附带每个声音片段和图像，而是将它们收集到几个数据存档中，游戏引擎可以随机访问这些存档。</font><font style="vertical-align: inherit;">从这些档案中提取单独的文件是攻击游戏的第一步。</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">现在是时候启动黑客最喜欢的工具之一，即十六进制编辑器。</font><font style="vertical-align: inherit;">这是一个相对简单的实用程序，它仅显示文件中的原始字节及其位置…更高级的功能通常包括解释通用数据格式（整数和浮点数等），比较文件以及特别是搜索所需文件的能力。模式。</font><font style="vertical-align: inherit;">我个人使用Mac实用程序</font></font><a href="https://web.archive.org/web/20080810165851/http://hexedit.sourceforge.net/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">HexEdit</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font><font style="vertical-align: inherit;">如果您有喜欢的Windows或Linux十六进制编辑器，请随时在评论中提及它，以供其他读者查看。</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（</font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">更新：</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">到目前为止，建议Windows使用的是</font></font><a href="https://web.archive.org/web/20080810165851/http://www.x-ways.net/winhex/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">WinHex</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，</font></font><a href="https://web.archive.org/web/20080810165851/http://www.softlookup.com/display.asp?id=7651" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">HView</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，</font></font><a href="https://web.archive.org/web/20080810165851/http://www.chmaas.handshake.de/delphi/freeware/xvi32/xvi32.htm" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">XVI32</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，</font></font><a href="https://web.archive.org/web/20080810165851/http://www.hexworkshop.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hex Workshop</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">以及组合的十六进制和文本编辑器</font></font><a href="https://web.archive.org/web/20080810165851/http://www.ultraedit.com/index.php?name=Content&amp;pa=showpage&amp;pid=10" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">UltraEdit-32</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。对于基于Unix的系统</font><font style="vertical-align: inherit;">，已经提到了</font></font><a href="https://web.archive.org/web/20080810165851/http://www.jewfish.net/description.php?title=HexCurse" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">HexCurse</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。谢谢！）</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">那么文件是什么样的呢？</font><font style="vertical-align: inherit;">这是</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">cg.pd</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">的开头</font><font style="vertical-align: inherit;">，我们可以放心地假设其中包含游戏图像文件：</font></font></p>
+<p><img id="image9" src="assets/1570957010-9f60caf4259339627b98370febb60527.png" alt="跨通道十六进制01"></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">是的，看一下：可识别的文件名！</font><font style="vertical-align: inherit;">（例如</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">bgcc0000e.png</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。）如果看到类似这样的内容，而不是随机字节，则应该感到高兴。</font><font style="vertical-align: inherit;">即使您还不完全清楚这意味着什么，也有一条通向进一步解释的明确途径。</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">为了帮助我们解释我们正在寻找的内容，是时候对“典型游戏档案”的内容进行简短的论述了。</font></font></p>
+<ol>
+<li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">标题</font></font></strong>
+<ol>
+<li><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">签名</font></font></em><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 
+通常，存档将以某种标识字符串开头，该字符串为存档格式和版本提供签名。</font><font style="vertical-align: inherit;">您可以使用此方法来确保实用程序在正确的文件类型上运行。
+</font></font></li>
+<li><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">索引位置在</font></font></em><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 
+大多数情况下，归档索引将立即开始，但是有时实际上将索引存储在</font><font style="vertical-align: inherit;">文件</font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">末尾</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，因为归档打包程序直到之后才知道它的大小（如果索引本身就是索引）例如压缩的）。</font><font style="vertical-align: inherit;">在这种情况下，将有一个指向索引位置的指针。
+</font></font></li>
+</ol>
+</li>
+<li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">索引</font></font></strong><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 
+您要了解的关键结构是存档内容的索引，因为它告诉您如何获取其中包含的文件。
+</font></font><ol>
+<li><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">索引大小</font></font></em><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 
+通常，索引将从大小值开始，通常只是索引中包含的文件数。</font><font style="vertical-align: inherit;">不过，情况并非总是如此，因为有时索引会一直持续到命中特殊的结尾条目（例如，负文件大小或空文件名等）为止。
+</font></font></li>
+<li><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文件条目列表</font></font></em><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 
+接下来是存档中包含的各个文件的列表。</font><font style="vertical-align: inherit;">根据文件名的处理方式，这可以是恒定长度或可变长度的数据结构。</font><font style="vertical-align: inherit;">有时，文件路径也将具有层次结构，以表示内部的整个目录树。</font><font style="vertical-align: inherit;">每个条目包含许多标准信息：
+</font></font><ol>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文件名/文件路径：可以是一个以零结尾的字符串，或者有时会明确给出长度。</font><font style="vertical-align: inherit;">信不信由你，文件名是可选的，因为我遇到了至少一种</font><font style="vertical-align: inherit;">存储</font><font style="vertical-align: inherit;">文件</font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">名哈希的</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">情况。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">位置：档案中文件开头的提示。</font><font style="vertical-align: inherit;">偏移量可以是从存档的开头，索引的开头开始，有时也可以是存档中“文件区域”的开头（即，与第一个文件的内容开头的偏移量，或者等效于与文件末尾的偏移量）。索引）。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">大小：文件的大小。</font><font style="vertical-align: inherit;">由于有时可以从偏移量推断到下一个文件，因此有时会忽略掉它。</font><font style="vertical-align: inherit;">其他时候，有两种不同的大小：文件的原始大小和存储在归档文件中的压缩大小。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">标志：文件是否已压缩，如果已压缩，请使用什么算法？</font><font style="vertical-align: inherit;">是否已加密，如果已加密，是否有要使用的密钥或初始化值？</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">校验和：为确保数据完整性，有时会给出文件的校验和。</font><font style="vertical-align: inherit;">这对于黑客来说可能是非常烦人的，因为这意味着要修改存档，我们将需要对校验和算法进行逆向工程，以便能够为我们的新数据计算适当的值（或者禁用可执行文件中的检查）。</font></font></li>
+</ol>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">请注意，有时会分发此信息，例如，在索引结构中使用文件名指定文件位置，但是在该偏移量之前紧随文件数据本身给出文件大小和压缩标志。</font></font></p></li>
+</ol>
+</li>
+<li><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文件</font></font></strong><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 
+然后，文件本身只是在存档中串联在一起，可能经过压缩和加密。</font><font style="vertical-align: inherit;">游戏引擎知道从索引条目中找到它们的位置，因此它可以立即跳转到所需的位置。
+</font></font></li>
+</ol>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">好的，让我们</font><font style="vertical-align: inherit;">从这个角度来看</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">cg.pd。</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">的</font></font><samp><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">仅包装</font></font></samp><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">从一开始的顺序对我来说就像是存档签名。</font><font style="vertical-align: inherit;">然后只有一堆零字节，直到我们到达偏移量0×40，我们有了序列</font></font><samp><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">21 02 00 00 00 00 00 00</font></font></samp><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 就在可识别的ASCII字符串文件名之前。</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">这可能是索引的大小吗？</font><font style="vertical-align: inherit;">好吧，首先，我们如何解释这些字节？</font><font style="vertical-align: inherit;">我们有几种选择：</font></font></p>
+<ul>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">随机标志字节。</font><font style="vertical-align: inherit;">设置了三个位：第一个字节为0×20和0×01，第二个字节为0×02。</font><font style="vertical-align: inherit;">并非没有道理，但也不是很有用。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">小尾数整数。</font><font style="vertical-align: inherit;">这里0×21是最低有效字节，0×02是下一个字节，依此类推。因此，实际整数值为0×0000000000000221，即十进制545。这可能是一个合理的索引大小。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">大端整数。</font><font style="vertical-align: inherit;">现在0×21是最重要的字节，下一个是0×02，整数值为0×21020000，即十进制553,779,200（我们甚至忽略了其他四个00）。</font><font style="vertical-align: inherit;">这是不合理的，因为整个文件不是500MB。</font><font style="vertical-align: inherit;">也许这只是一个16位整数：0×2102 = 8450，它可能适用于索引数组的字节大小。</font></font></li>
+</ul>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">让我们检查一下。</font><font style="vertical-align: inherit;">扫描文件的开头，似乎文件名从偏移量0×48、0xD8、0×168、0×1F8、0×288等开始。这意味着每个文件名占用144个字节。</font><font style="vertical-align: inherit;">最终文件名（</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TCYM0005c.png</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">）从偏移量0×13248开始，这意味着可能存在（0×13248-0×00048）/ 144 +1 = 545个文件条目。</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">是的，545！</font><font style="vertical-align: inherit;">所以对</font></font><samp><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">21 02 00 00 00 00 00 00</font></font></samp><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">作为一个小尾数整数，告诉我们有多少个文件条目可能是正确的。</font><font style="vertical-align: inherit;">更重要的是，现在我们可以将注意力集中在这144个字节的区域上，因为每个区域都可能是一个文件条目。</font><font style="vertical-align: inherit;">另外，我们知道我们的档案库喜欢小尾数整数，并且可能更喜欢8字节整数。</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">好的，让我们检查一下这些文件条目。</font><font style="vertical-align: inherit;">但是（这是一个小技巧）不要看第一个。</font><font style="vertical-align: inherit;">在第一个条目中，太多东西很可能为零，因此我们不确定要看什么。</font><font style="vertical-align: inherit;">相反，让我们检查第二个条目，我们看到它从偏移量0xD8到0×167：</font></font></p>
+<p><img id="image10" src="assets/1570957010-253133e059fb4326fb912433eb66987e.png" alt="跨通道十六进制02"></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我们有一个文件名，很多零，看起来像另外两个8字节的little-endian整数。</font><font style="vertical-align: inherit;">记住我们的典型游戏档案库的模板…我们正在寻找大小和位置信息，也许其中一些零也是标志字节，但是还没有办法知道。</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">现在，让我们假设所有零都是文件名数据结构的一部分：这恰好为它留出了128个字节，对于（懒惰的）程序员来说，这听起来很合理。</font><font style="vertical-align: inherit;">然后剩余的信息是整数0×002420FA和0×0008370E。</font><font style="vertical-align: inherit;">还不太确定如何构成这些……但是让我们得到更多的例子。</font><font style="vertical-align: inherit;">前几个文件的数字是什么样的？</font></font></p>
+<p></p><table>
+<colgroup><col width="80"><col width="120"><col width="120"></colgroup>
+<tbody><tr>
+<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文件1</font></font></td>
+<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">0×00240048</font></font></td>
+<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">0×000020B2</font></font></td>
+</tr>
+<tr>
+<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文件2</font></font></td>
+<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">0×002420FA</font></font></td>
+<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">0×0008370E</font></font></td>
+</tr>
+<tr>
+<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文件3</font></font></td>
+<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">0×002C5808</font></font></td>
+<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">0×00002FA6</font></font></td>
+</tr>
+<tr>
+<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文件4</font></font></td>
+<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">0×002C870E</font></font></td>
+<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">0×00063B8A</font></font></td>
+</tr>
+<tr>
+<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文件5</font></font></td>
+<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">0×0032C338</font></font></td>
+<td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">0×0006A7CB</font></font></td>
+</tr>
+</tbody></table>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">现在开始变得有意义：第一列中的数字总是越来越大，而且它们的数目总是正好与第二列中的数字一样大！</font><font style="vertical-align: inherit;">这是偏移和大小变化的完美标志。</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">因此，如果我们的假设正确，则第一个文件</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">bgcc0000e.png的长度</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">应为0×000020B2 = 8370字节，并且可能应从档案中的偏移量0×00240048开始。</font><font style="vertical-align: inherit;">我们并不完全确定这一点，因为偏移量可能正在计算或不计算签名或索引的大小，并且确实有点可疑，因为我们认为索引实际上以偏移量0×000132D7结尾。</font><font style="vertical-align: inherit;">但是无论如何，让我们看一下，因为文件可能是乱序的：</font></font></p>
+<p><img id="image11" src="assets/1570957010-af491d8e4ea39690e26a4cf2183c3c14.png" alt="跨通道十六进制03"></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">尤里卡！</font><font style="vertical-align: inherit;">我们已经猜对了，因为偏移量0×00240048处的右边是PNG文件的开始。</font><font style="vertical-align: inherit;">不压缩，不加密。</font><font style="vertical-align: inherit;">实际上，如果将接下来的8370个字节复制并粘贴到一个新文件中，然后在图形编辑器中打开它，则会得到</font></font><a href="https://web.archive.org/web/20080810165851/http://sekai.insani.org/wp-content/uploads/2006/05/crosschannel_bgcc0000e.png" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">640×480空白屏幕的</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">回报</font><font style="vertical-align: inherit;">。</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">嗯 </font><font style="vertical-align: inherit;">好吧，游戏也需要白屏，至少尺寸是合理的。</font><font style="vertical-align: inherit;">为了安全起见，让我们尝试下一张图像。</font><font style="vertical-align: inherit;">抓取从偏移量0×002420FA开始的0×0008370E字节可得到：</font></font></p>
+<p><img id="image13" src="assets/1570957010-163c5867adb5bafce4348a14e9665d0e.png" alt="跨渠道bgcc0023已提取"></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">好极了！</font><font style="vertical-align: inherit;">胜利是我们的！</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">因此，让我们总结一下。</font><font style="vertical-align: inherit;">我们认为.PD格式目前包括：</font></font></p>
+<ol>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">签名串 </font></font><samp><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">仅包装</font></font></samp></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">56个字节的零</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">8字节小字节序文件计数</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">144字节的文件条目记录，包括：
+</font></font><ol>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">128字节文件名，以零结尾</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">8字节的Little-Endian文件偏移量（从存档开始）</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">8字节小端文件大小</font></font></li>
+</ol>
+</li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">压缩后的文件（未压缩和未加密）。</font></font></li>
+</ol>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我们应该如何处理索引结尾和文件数据开头之间的空白？</font><font style="vertical-align: inherit;">好吧，偏移量0×00240048是可疑的……第一个文件条目为0×48，这意味着总共0×240000字节可用于文件条目。</font><font style="vertical-align: inherit;">每个144字节，意味着有足够的空间可容纳16384个文件。</font><font style="vertical-align: inherit;">当然，这是2 ^ 14，这恰好让我感到（一个懒惰的）程序员会做的事情：只是留出足够的空间来容纳大量文件。</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">这是必需的吗？</font><font style="vertical-align: inherit;">当我们通过消除空白空间来重建档案时，也许可以节省几兆。</font><font style="vertical-align: inherit;">或者，如果我们将内容移动一个多字节，游戏可能会崩溃……我们只需要看看即可。</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">因此，下次我们将利用我们的知识，并将其转化为代码。</font><font style="vertical-align: inherit;">当然，我们会遇到一些障碍，呵呵。
+</font></font></p>
+				<p class="comments_link">
+									</p>
+			</div>
+	<!--
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	    xmlns:dc="http://purl.org/dc/elements/1.1/"
+	    xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+		<rdf:Description rdf:about="http://sekai.insani.org/archives/8"
+    dc:identifier="http://sekai.insani.org/archives/8"
+    dc:title="So You Want To Be a Hacker? Part II: The Hex Editor"
+    trackback:ping="http://sekai.insani.org/archives/8/trackback/" />
+</rdf:RDF>	-->
+</div>
+
+<!--comments area-->
+	<div id="commentblock">
+		<h2 id="comments"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+			13对“所以你想成为一名黑客？</font><font style="vertical-align: inherit;">第二部分：十六进制编辑器”
+		</font></font></h2>
+		<ol id="commentlist">
+							<li class="alt" id="comment-12">
+					<div class="commentname">
+						<span class="commentauthor"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">罗克斯凡</font></font></span>
+					</div>
+										<div class="commentinfo">
+						<span class="commentdate"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+							2006年5月29日| 
+							</font></font><a href="#comment-12" title="评论链接网址"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">下午9:04</font></font></a>
+						</span>
+					</div>
+					<div class="commenttext"><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">很好的写作。</font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+对于Windows十六进制编辑器，我更喜欢WinHex或Hiew。</font><font style="vertical-align: inherit;">但是还有很多其他内容，例如010编辑器，QView，小巧的十六进制等。
+</font></font></p>
+</div>
+				</li>
+											<li class="standard" id="comment-13">
+					<div class="commentname">
+						<span class="commentauthor"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">椎井</font></font></span>
+					</div>
+										<div class="commentinfo">
+						<span class="commentdate"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+							2006年5月30日| 
+							</font></font><a href="#comment-13" title="评论链接网址"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">上午12:10</font></font></a>
+						</span>
+					</div>
+					<div class="commenttext"><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我个人使用xvi32。 </font></font></p>
+<p><a href="https://web.archive.org/web/20080810165851/http://www.chmaas.handshake.de/delphi/freeware/xvi32/xvi32.htm" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">http://www.chmaas.handshake.de/delphi/freeware/xvi32/xvi32.htm</font></font></a>
+</p>
+</div>
+				</li>
+											<li class="alt" id="comment-14">
+					<div class="commentname">
+						<span class="commentauthor"><a href="https://web.archive.org/web/20080810165851/http://www.haeleth.net/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">海勒斯</font></font></a></span>
+					</div>
+										<div class="commentinfo">
+						<span class="commentdate"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+							2006年5月30日| 
+							</font></font><a href="#comment-14" title="评论链接网址"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">凌晨3:16</font></font></a>
+						</span>
+					</div>
+					<div class="commenttext"><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">一直使用UltraEdit-32。</font><font style="vertical-align: inherit;">在我的文本编辑器中具有十六进制编辑功能非常方便。
+</font></font></p>
+</div>
+				</li>
+											<li class="standard" id="comment-15">
+					<div class="commentname">
+						<span class="commentauthor"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">水濑</font></font></span>
+					</div>
+										<div class="commentinfo">
+						<span class="commentdate"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+							2006年5月30日| 
+							</font></font><a href="#comment-15" title="评论链接网址"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">上午7:48</font></font></a>
+						</span>
+					</div>
+					<div class="commenttext"><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我要评论您的第一个条目，并说：“除了示范一个例子，您如何教这样的事情？”。</font><font style="vertical-align: inherit;">好吧，看来这就是您要做的:)</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我非常喜欢弄清楚文件格式或网络协议……尽管由于需求很少，我并没有非常熟练的经验。</font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+到目前为止，我始终使用与上述相同的推论。</font><font style="vertical-align: inherit;">寻找模式，尝试理论等。“手动”方式。</font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+不过，我有兴趣了解的是诸如自动分析技术之类的技术，这些技术可以对非常困难的格式有所帮助，并提示您数据是什么……我从没研究过，但是我听说过其他黑客到处乱说。</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">此外，还有一些技巧，用于弄清如何在混淆后取回数据。</font><font style="vertical-align: inherit;">现在对我来说，这只是猜测，“文件A的标头中的16个字节的随机序列是什么？</font><font style="vertical-align: inherit;">也许如果我用这个文件对其进行异或处理，那么什么都没做，但会出现垃圾……嗯，不，好的，让我们看看它是否是AES密钥吗？”等等。</font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+我想听听是否有任何方法可以使该过程更有效率……通常，当人们隐藏数据时，这是可笑的不安全，但要弄清楚他们的所作所为仍然很耗时。</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我想我是否真的很烦我会在逆向工程或其他方面寻找资源...所以我当然不会要求您在教程中涵盖这些类型的内容，但是您现在确实引起了我的注意:)</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">关于十六进制编辑器…… </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+我在Unix中使用“ hexcurse”。</font><font style="vertical-align: inherit;">没什么了不起的，但是确实达到了目的。</font><font style="vertical-align: inherit;">在Windows中，另外一个用于XVI32 ：) </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+我喜欢UltraEdit32进行代码编辑，但是我不使用它进行十六进制编辑。</font><font style="vertical-align: inherit;">也许会好起来吗？</font><font style="vertical-align: inherit;">我仍然有Win95的旧版本，不允许您在文件名中放置空格，如果您不小心抓住了滚轮，则会崩溃……:)
+</font></font></p>
+</div>
+				</li>
+											<li class="alt" id="comment-16">
+					<div class="commentname">
+						<span class="commentauthor"><a href="https://web.archive.org/web/20080810165851/http://www.haeleth.net/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">海勒斯</font></font></a></span>
+					</div>
+										<div class="commentinfo">
+						<span class="commentdate"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+							2006年5月30日| 
+							</font></font><a href="#comment-16" title="评论链接网址"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">上午10:11</font></font></a>
+						</span>
+					</div>
+					<div class="commenttext"><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">嗯，是的，UltraEdit自1994年以来肯定已经变得更好。</font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+它的十六进制编辑并不是十分复杂，但是它可以完成我作为黑客所需的一切。</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">我以前从未听说过自动文件格式分析。</font><font style="vertical-align: inherit;">我知道并使用的一种自动化分析形式是可执行分析—扫描实际程序以查找对有趣的API的调用，这是一种查找加载特定资源的代码段的快速方法，因此您可以从代码中重构格式读它。</font><font style="vertical-align: inherit;">Ed可能会继续这样做（IIRC，他是向我介绍OllyDbg的人，OllyDbg专门研究它），具体取决于Cross + Channel是完全加密还是压缩其脚本。
+</font></font></p>
+</div>
+				</li>
+											<li class="standard" id="comment-17">
+					<div class="commentname">
+						<span class="commentauthor"><a href="https://web.archive.org/web/20080810165851/http://www.insani.org/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">爱德华·凯斯</font></font></a></span>
+					</div>
+										<div class="commentinfo">
+						<span class="commentdate"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+							2006年5月30日| 
+							</font></font><a href="#comment-17" title="评论链接网址"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">上午10:12</font></font></a>
+						</span>
+					</div>
+					<div class="commenttext"><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">哎呀，如果有很好的自动化过程可以进行推论，我希望我自己也知道这些！</font><font style="vertical-align: inherit;">但是，除了一定程度的困难之外，我还从文件分析和反复试验的过程过渡到了将调试器引入原始可执行文件并查看其运行情况，最终这也将涉及到。</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">请注意，当然，我绝不是这里的终极专家。</font><font style="vertical-align: inherit;">当然，在游戏翻译社区中，有些人会反驳我的反向工程能力，更不用说更广泛的游戏破解圈子里的人了。</font><font style="vertical-align: inherit;">我主要只是想使学习过程从本系列教程开始—希望我能使其他一些人屈服于提交有关他们所做的特别有趣的骇客的文章。</font><font style="vertical-align: inherit;">:)</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PS-Cross + Channel只是一个开始的选择，因为它具有易于理解的基本数据格式。</font><font style="vertical-align: inherit;">稍后，当我需要更好的示例（例如自定义图像格式或压缩和加密等）时，我将切换到其他游戏。当然，如果人们有他们特别想看到的游戏，请随时建议他们。
+</font></font></p>
+</div>
+				</li>
+											<li class="alt" id="comment-23">
+					<div class="commentname">
+						<span class="commentauthor"><a href="https://web.archive.org/web/20080810165851/http://www.shishnet.org/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">嘘</font></font></a></span>
+					</div>
+										<div class="commentinfo">
+						<span class="commentdate"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+							2006年6月4日| 
+							</font></font><a href="#comment-23" title="评论链接网址"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">下午2:43</font></font></a>
+						</span>
+					</div>
+					<div class="commenttext"><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">因此，我们更好地了解要查找的内容，常用的格式？</font><font style="vertical-align: inherit;">我猜想PNG / JPEG / BMP（？）用于图像，Ogg Vorbis / MP3用于声音，zlib用于压缩，xor / RC4用于加密-有经验的人可以确认/拒绝吗？
+</font></font></p>
+</div>
+				</li>
+											<li class="standard" id="comment-25">
+					<div class="commentname">
+						<span class="commentauthor"><a href="https://web.archive.org/web/20080810165851/http://www.insani.org/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">爱德华·凯斯</font></font></a></span>
+					</div>
+										<div class="commentinfo">
+						<span class="commentdate"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+							2006年6月4日| 
+							</font></font><a href="#comment-25" title="评论链接网址"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">下午2:57</font></font></a>
+						</span>
+					</div>
+					<div class="commenttext"><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">是的 </font><font style="vertical-align: inherit;">对于图像，PNG / JPEG / BMP都是很常见的，（完全不幸的）完全自定义图像格式也很常见，这将是以后输入的主题。</font><font style="vertical-align: inherit;">对于声音而言，Ogg Vorbis / MP3 / WAV很常见，而且值得庆幸的是，而且它们几乎总是未经压缩和未加密地存储，以便从磁盘流式播放，因此它们是了解档案的好方法。</font><font style="vertical-align: inherit;">对于压缩，zlib是一个不错的选择，但是LZSS和Huffman编码的不同变体也很普遍（另一个稍后的主题），在某些自定义图像格式中，游程压缩也是如此。</font><font style="vertical-align: inherit;">对于加密，您拥有从简单的一个字节的XOR到自定义流密码，再到像Blowfish这样的工业强度加密（稍后再介绍！），应有尽有。</font><font style="vertical-align: inherit;">尚未运行RC4，但也不会令我感到惊讶。
+</font></font></p>
+</div>
+				</li>
+											<li class="alt" id="comment-30">
+					<div class="commentname">
+						<span class="commentauthor"><a href="https://web.archive.org/web/20080810165851/http://www.haeleth.net/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">海勒斯</font></font></a></span>
+					</div>
+										<div class="commentinfo">
+						<span class="commentdate"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+							2006年6月5日| 
+							</font></font><a href="#comment-30" title="评论链接网址"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">下午3:25</font></font></a>
+						</span>
+					</div>
+					<div class="commenttext"><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">需要注意的是一个或两个自定义音效格式是相当普遍-一个臭名昭著的罪犯是在VisualArt的.nwa格式，用于声音和音乐在大多数的商业版本的（即使在演示使用的Ogg Vorbis格式-解释</font></font><i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">说</font></font></i><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">！如果你可以一）
+</font></font></p>
+</div>
+				</li>
+											<li class="standard" id="comment-35">
+					<div class="commentname">
+						<span class="commentauthor"><a href="https://web.archive.org/web/20080810165851/http://www.shishnet.org/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">嘘</font></font></a></span>
+					</div>
+										<div class="commentinfo">
+						<span class="commentdate"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+							2006年6月6日| 
+							</font></font><a href="#comment-35" title="评论链接网址"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">晚上8:50</font></font></a>
+						</span>
+					</div>
+					<div class="commenttext"><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">编写</font></font><a href="https://web.archive.org/web/20080810165851/http://shish.is-a-geek.net/svn/metadump/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">一个多格式提取器</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">以使自己熟悉这些东西（和C ++）；</font><font style="vertical-align: inherit;">我注意到，每个游戏都使用许多易于阅读的格式，而似乎只有很多很难使用的格式—我认为这代表了具有许多简单定制引擎的市场，以及一两个专业品质的通用产品？</font><font style="vertical-align: inherit;">（示例数据来自进入holyseal.net的位置，并随机单击，直到我发现其中包含“试用”和“ .exe”的链接，并且旁边的数字小于100MB）
+</font></font></p>
+</div>
+				</li>
+											<li class="alt" id="comment-2495">
+					<div class="commentname">
+						<span class="commentauthor"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">约瑟夫·拉罗扎</font></font></span>
+					</div>
+										<div class="commentinfo">
+						<span class="commentdate"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+							2007年5月16日| 
+							</font></font><a href="#comment-2495" title="评论链接网址"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">上午8:44</font></font></a>
+						</span>
+					</div>
+					<div class="commenttext"><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">HxD是一个很好的免费十六进制编辑器。
+</font></font></p>
+</div>
+				</li>
+											<li class="standard" id="comment-12058">
+					<div class="commentname">
+						<span class="commentauthor"><a href="https://web.archive.org/web/20080810165851/http://bvb/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ucop</font></font></a></span>
+					</div>
+										<div class="commentinfo">
+						<span class="commentdate"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+							2008年5月10日| 
+							</font></font><a href="#comment-12058" title="评论链接网址"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">上午6:58</font></font></a>
+						</span>
+					</div>
+					<div class="commenttext"><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">嗨，大家好。.我是较新的，但是仍然不了解如何使用带有完整教程的编辑器，您能学习还是发送有关它的文章？
+</font></font></p>
+</div>
+				</li>
+											<li class="alt" id="comment-14633">
+					<div class="commentname">
+						<span class="commentauthor"><a href="https://web.archive.org/web/20080810165851/http://www.stevens-tech.edu/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Girljuicyboa</font></font></a></span>
+					</div>
+										<div class="commentinfo">
+						<span class="commentdate"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+							2008年8月5日| 
+							</font></font><a href="#comment-14633" title="评论链接网址"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">下午4:40</font></font></a>
+						</span>
+					</div>
+					<div class="commenttext"><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">大象大象树丑陋
+</font></font></p>
+</div>
+				</li>
+									</ol>
+
+<!--comments form -->
+<h2 id="commentsformheader"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">发表评论</font></font></h2>
+			<div id="commentsform">
+			<form action="https://web.archive.org/web/20080810165851/http://sekai.insani.org/wp-comments-post.php" method="post" id="commentform">
+							<p>
+					<input type="text" name="author" id="author" value="" size="22" tabindex="1">
+					<label for="author"><small><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">名称 </font></font></small></label>
+				</p>
+				<p>
+					<input type="text" name="email" id="email" value="" size="22" tabindex="2">
+					<label for="email"><small><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">电子邮件（不会显示） </font></font></small></label>
+				</p>
+				<p>
+					<input type="text" name="url" id="url" value="" size="22" tabindex="3">
+					<label for="url"><small><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">网站</font></font></small></label>
+				</p>
+						<!--<p><small><strong>XHTML:</strong> You can use these tags: &lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;code&gt; &lt;em&gt; &lt;i&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+			<p>
+				<textarea name="comment" id="comment" cols="50" rows="10" tabindex="4"></textarea>
+			</p>
+			<p>
+				<font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><input name="submit" type="submit" id="submit" tabindex="5" value="提交评论"></font></font>
+				
+			</p>
+					</form>
+	</div></div>
+	
+
+</div>
+</div><!-- The main content column ends  -->
+﻿<!-- begin sidebar -->
+
+<div id="navcol">
+
+		<h2><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">乌尔比和奥比</font></font></h2>
+
+		<ul>
+
+			<li><a href="https://web.archive.org/web/20080810165851/http://sekai.insani.org/wp-register.php" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">寄存器</font></font></a></li>
+			<li><a href="https://web.archive.org/web/20080810165851/http://sekai.insani.org/wp-login.php" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">登录</font></font></a></li>
+
+			<li class="sidebullet">
+
+			<a href="https://web.archive.org/web/20080810165851/http://sekai.insani.org/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">家</font></font></a></li>
+
+			<li><a href="https://web.archive.org/web/20080810165851/http://sekai.insani.org/feed/" title="使用RSS联合此站点" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><abbr title="真正简单的整合"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">的RSS</font></font></abbr></a></li>
+
+			<li><a href="https://web.archive.org/web/20080810165851/http://www.insani.org/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">insani.org</font></font></a></li>
+		</ul>
+		
+		<h2><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">绝种世界</font></font></h2>
+		<ul>	
+			<li><a href="https://web.archive.org/web/20080810165851/http://altogether.insani.org/2005" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">一起| 2005</font></font></a></li>
+			<li><a href="https://web.archive.org/web/20080810165851/http://altogether.insani.org/2006" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">一起2006</font></font></a></li>
+			<li><a href="https://web.archive.org/web/20080810165851/http://www.haeleth.net/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hæleþesáwendende</font></font></a></li>
+			<li><a href="https://web.archive.org/web/20080810165851/http://dekadenbiyori.blog40.fc2.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">でかだんびより</font></font></a></li>
+		</ul>
+
+		<h2><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">档案</font></font></h2>
+
+		<ul>
+
+				<li><a href="https://web.archive.org/web/20080810165851/http://sekai.insani.org/archives/date/2006/08/" title="2006年8月" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2006年8月</font></font></a></li>
+	<li><a href="https://web.archive.org/web/20080810165851/http://sekai.insani.org/archives/date/2006/07/" title="2006年7月" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2006年7月</font></font></a></li>
+	<li><a href="https://web.archive.org/web/20080810165851/http://sekai.insani.org/archives/date/2006/06/" title="2006年6月" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2006年6月</font></font></a></li>
+	<li><a href="https://web.archive.org/web/20080810165851/http://sekai.insani.org/archives/date/2006/05/" title="2006年5月" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2006年5月</font></font></a></li>
+
+		</ul>
+
+		
+
+		<h2><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">分类目录</font></font></h2>
+
+		<ul>
+
+				<li><a href="https://web.archive.org/web/20080810165851/http://sekai.insani.org/archives/category/production-process/" title="包含我们的生产过程是什么样的帖子，或评论其他人的生产过程。" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">生产过程</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（9）
+		</font></font><ul class="children">	<li><a href="https://web.archive.org/web/20080810165851/http://sekai.insani.org/archives/category/production-process/letters-to-a-young-translator/" title="生产过程评论中的“给年轻译者的信”系列。" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">给年轻翻译的信</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（3）
+</font></font></li>
+	<li><a href="https://web.archive.org/web/20080810165851/http://sekai.insani.org/archives/category/production-process/so-you-want-to-be-a-hacker/" title="生产过程注释中的“您想成为一名黑客？”系列。" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">所以你想成为一名黑客？</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（4）
+</font></font></li>
+	<li><a href="https://web.archive.org/web/20080810165851/http://sekai.insani.org/archives/category/production-process/project-debriefs/" title="讨论项目的进行方式，经验教训等。" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">项目汇报</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（2）
+</font></font></li>
+		</ul>
+</li>
+	<li><a href="https://web.archive.org/web/20080810165851/http://sekai.insani.org/archives/category/translation/" title="草稿翻译或正在进行中的作品的花絮" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">翻译</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（3）
+		</font></font><ul class="children">	<li><a href="https://web.archive.org/web/20080810165851/http://sekai.insani.org/archives/category/translation/french/" title="原始语言：法语" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">法国</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（3）
+</font></font></li>
+		</ul>
+</li>
+
+		</ul>
+
+		<ul id="linkslist">
+
+		
+		
+		</ul>		
+
+		
+		<div id="searchdiv">
+
+		<form id="searchform" method="get" action="">
+
+			<input type="text" name="s" size="15">
+
+		</form>
+
+		</div>
+
+	</div>
+
+<!-- end sidebar --><!-- begin footer -->
+<div id="footer">
+		<p class="footer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+			«我火热的心脏萎缩，疼痛。</font><font style="vertical-align: inherit;">这是死亡。</font><font style="vertical-align: inherit;">/不会为我的古老伤疤增光，/也不会干燥我的泰坦尼克号眼泪，大海。» </font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">威尔弗雷德·欧文（</font><em><font style="vertical-align: inherit;">The</font></em><font style="vertical-align: inherit;"> Wilfred Owen），</font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">《终结》</font></font></em>
+		</p>
+	</div>
+</div>
+
+
+<!--
+playback timings (ms):
+  RedisCDXSource: 112.613
+  PetaboxLoader3.datanode: 104.283 (4)
+  captures_list: 354.477
+  CDXLines.iter: 16.547 (3)
+  exclusion.robots.policy: 0.438
+  exclusion.robots: 0.458
+  LoadShardBlock: 219.813 (3)
+  PetaboxLoader3.resolve: 43.576
+  esindex: 0.019
+  load_resource: 108.278
+--><div class="goog-te-spinner-pos"><div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66"><circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30" data-darkreader-inline-fill="" style="--darkreader-inline-fill:none;"></circle></svg></div></div><div data-mx-warn="extension url was not captured by MaoXian" data-mx-original-src="chrome-extension://kjahokgdcbohofgdidndeiaigkehdjdc/pages/ui-selection.html?t=aHR0cHM6Ly93ZWIuYXJjaGl2ZS5vcmc="></div><div data-mx-warn="extension url was not captured by MaoXian" data-mx-original-src="chrome-extension://kjahokgdcbohofgdidndeiaigkehdjdc/pages/ui-control.html?t=aHR0cHM6Ly93ZWIuYXJjaGl2ZS5vcmc="></div>
+</body>
+  </html>

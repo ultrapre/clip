@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="google-site-verification" content="dcJxwJj3BjHRWOqfkv5foGijNDdhCqUogRWWtNXWfEM" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--[if IE 6]>
+<script type="text/javascript" src="http://static.fanfou.com/js/DD_belatedPNG_0.0.8a-min.js"></script>
+<script type="text/javascript">
+DD_belatedPNG.fix('.pngfix');
+</script>
+<![endif]-->
+<script language="javascript">
+window.hasFeature = function(x) {
+  return !!{"gtalk_setting":true,"userlink_paging":true,"pic_sync":true,"deferred_update":true,"friend_id":true,"open_access":true,"guide_push_randomten":true,"oauth2":true,"disable_basic_auth":true,"inner_repost_status":true,"repost_photo":true,"render_msg":true,"dm_return_parentid":true,"verify_platform":true,"upload_location":true,"self_serviced_api":true,"mss":true,"mss_cdn":true,"apple":true,"reply_log":true,"new_auth_pg":true,"classic_view":true,"user_dialog":true}[x];
+}
+</script>
+<link rel="shortcut icon" href="http://static.fanfou.com/favicon.ico" />
+<link rel="EditURI" type="application/rsd+xml" href="//fanfou.com/rsd" />
+<link rel="apple-touch-icon" href="http://static.fanfou.com/apple-touch-icon.png"/>
+<link rel="search" type="application/opensearchdescription+xml" href="http://static.fanfou.com/opensearch.xml" title="饭否" />
+<script type="text/javascript" charset="utf-8" src="http://static.fanfou.com/js/jquery-1.7.min.js?v=383096d6"></script><link rel="stylesheet" href="http://static.fanfou.com/css/base.css?v=4c576a8b" type="text/css"  media="screen"  charset="utf-8" />
+<title>迷你博客|心情日记|心情随笔|灵感记录|即时新闻 - 饭否</title>
+<meta name="description" content="饭否是一个迷你博客，心情记录、心情日记、心情随笔、灵感记录、即时新闻，随时随地记录和分享。" />
+<meta name="keywords" content="饭否,心情日记,灵感记录,迷你博客" />
+</head>
+<body>
+<div id="container" class="newlook">
+<div id="header">
+<h1><a hidefocus="true" class="global-header-anchor" href="//fanfou.com/"><p class="pngfix global-header-content logo20191013">首页</p></a></h1>
+	<div id="navigation" class="ui-roundedbox"><div class="ui-roundedbox-corner ui-roundedbox-tl"><div class="ui-roundedbox-corner ui-roundedbox-tr"><div class="ui-roundedbox-corner ui-roundedbox-bl"><div class="ui-roundedbox-corner ui-roundedbox-br"><div class="ui-roundedbox-content">
+		<ul>
+						<li><a href="//fanfou.com/">首页</a></li>
+						<li><a href="//fanfou.com/search">搜索</a></li>
+			<li><a href="//fanfou.com/login?fr=%2Fu%2F%7Ej2pAX75YYPg%2Fs.png">登录</a></li>
+			<li><a href="//fanfou.com/register">注册</a></li>
+								</ul>
+	</div></div></div></div></div></div>
+</div>
+<table id="columns">
+	<tr>
+		<td id="main">
+			<p id="headline">饭否，随时随地记录与分享！</p>
+			<ul id="slogan">
+				<li id="what"><p>迷你博客<br />记录生活的点点滴滴</p></li>
+				<li id="who"><p>交流与分享<br />拉近你和朋友</p></li>
+				<li id="how"><p>随时随地<br />支持 MSN/QQ 与手机</p></li>
+			</ul>
+			<p id="get-started"><a href="/register">注册</a></p>
+					</td>
+		<td id="sidebar">
+			<div class="sect first-sect">
+	<h2>登录</h2>
+	<form method="post" action="/login" id="login">
+		<p>
+			<label class="label_input" for="loginname">Email 或手机号：</label>
+			<input tabindex="1" type="text" name="loginname" id="loginname" class="input_text" value="" />
+		</p>
+		<p>
+			<label class="label_input" for="loginpass">饭否密码：</label>
+			<input tabindex="2" type="password" name="loginpass" id="loginpass" class="input_text" value="" maxlength="32" />
+		</p>
+				<p>
+			<label class="label_check" for="autologin">
+				<input tabindex="10" type="checkbox" name="auto_login" id="autologin" class="input_check" value="on" />
+				下次自动登录
+			</label>
+		</p>
+		<p class="act">
+			<a href="/reset" id="forgot">忘记密码了？</a>
+			<input type="hidden" name="action" value="login" />
+		   	<input type="hidden" name="token" value="3f5837df" />
+			<input tabindex="11" type="submit" class="formbutton" value="登录" />
+		</p>
+	</form>
+</div>
+		</td>
+	</tr>
+</table>
+<div id="footer" class="ui-roundedbox"><div class="ui-roundedbox-corner ui-roundedbox-tl"><div class="ui-roundedbox-corner ui-roundedbox-tr"><div class="ui-roundedbox-corner ui-roundedbox-bl"><div class="ui-roundedbox-corner ui-roundedbox-br"><div class="ui-roundedbox-content">
+
+<div class="police-info">
+    <a class="police" target="_blank" href="http://www.sznet110.gov.cn/index.jsp"><img src="http://static.fanfou.com/img/j_02.jpg" alt=""/></a>
+    <a class="police" target="_blank" href="http://www.sznet110.gov.cn/webrecord/innernet/Welcome.jsp?bano=4403301900851"><img src="http://static.fanfou.com/img/sznet110gangting.gif" alt=""/></a>
+</div>
+
+<a href="http://help.fanfou.com/about.html" target="_blank">关于饭否</a> | <a href="http://help.fanfou.com/apps.html?fr=ft" target="_blank">更多玩法</a> | <a href="http://blog.fanfou.com" target="_blank">团队博客</a> | <a href="https://github.com/FanfouAPI/FanFouAPIDoc/wiki" target="_blank">API</a> | <a href="http://help.fanfou.com/faq.html" target="_blank">帮助</a> | <a href="http://help.fanfou.com/agreement.html" target="_blank">用户条款</a> | <a href="http://help.fanfou.com/privacy.html" target="_blank">隐私声明</a> | <a href="http://www.ce.cn/" target="_blank">合作伙伴</a>
+<br/>
+<p>&copy;<span title="I:0; Q:2; S:1; C:0; F:0; T:459.96; H:write01">2007~2019</span> fanfou.com
+<a href="http://www.miibeian.gov.cn" target="_blank" id="miibeian">粤ICP备14065106号</a><span class="szinfo">深圳市中经饭否科技有限公司 版权所有</span>
+<br>
+</p>
+</div>
+</div></div></div></div></div></div>
+</div>
+<script type="text/javascript" charset="utf-8" src="http://static.fanfou.com/js/yui/2.6.0/build/utilities/utilities.js"></script><script type="text/javascript" charset="utf-8" src="http://static.fanfou.com/js/fanfou.js?v=383096d6"></script><script type="text/javascript">
+YAHOO.util.Event.onDOMReady(function(){
+	var elLoginname = YAHOO.util.Dom.get('loginname');
+	var elLoginpass = YAHOO.util.Dom.get('loginpass');
+	if(elLoginname){
+		if(elLoginname.value) {
+			elLoginpass.focus();
+		} else {
+			elLoginname.focus();
+		}
+	}
+});
+</script>
+
+<script type="text/javascript">var FF = FF || {}; FF.gaCode = "index.php/anon"; FF.gaCallback = function (tracker) { tracker._setVar("anon"); }</script></body>
+</html>

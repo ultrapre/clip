@@ -1,0 +1,278 @@
+
+  <!DOCTYPE html>
+  <html id="" class="">
+    <!-- OriginalSrc: https://web.archive.org/web/20190506040336/https://shinyashimokawa.space/index.php/archives/370/ -->
+    <head>
+      <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <title>Shift_JIS与GBK编码范围的差别 - 下川真哉的主页</title>
+      
+<link rel="shortcut icon" href="assets/1569942589-9addc19a249970bee24de0ed0b8a7619.png" referrerpolicy="no-referrer">
+
+
+<link rel="stylesheet" type="text/css" href="assets/1569942589-7d8615ffad0397de253976c03119d074.css" referrerpolicy="no-referrer">
+<link rel="stylesheet" type="text/css" href="assets/1569942589-32a1290393936a63a45283a71d7c7890.css" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="assets/1569942589-8db0dacd0ad855fada185da4b14d364b.css" referrerpolicy="no-referrer">
+<link href="assets/1569942589-d5b08e0ebc40363598d49891f53ab607.css" rel="stylesheet" type="text/css" referrerpolicy="no-referrer">
+<link href="assets/1569942589-9cc31926c43688523b4d63f0b8ad9087.css" rel="stylesheet" referrerpolicy="no-referrer">
+<link href="assets/1569942589-737ca0da45daceadabd250cc80c6a71c.css" rel="stylesheet" referrerpolicy="no-referrer">
+
+
+<style class="darkreader darkreader--fallback" media="screen"></style>
+<style class="darkreader darkreader--text" media="screen"></style>
+<style class="darkreader darkreader--invert" media="screen">#wm-sparkline-canvas, .yt, .sparkline-canvas, .sparkline-mouse-highlight, .search-toolbar-logo, #wm-logo {
+    filter: invert(100%) hue-rotate(180deg) contrast(90%) grayscale(10%) sepia(10%) !important;
+}</style>
+<style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}</style>
+<style class="darkreader darkreader--user-agent" media="screen">html {
+    background-color: #191a1b !important;
+}
+html, body, input, textarea, select, button {
+    background-color: #191a1b;
+}
+html, body, input, textarea, select, button {
+    border-color: #5a5956;
+    color: #f0ebe2;
+}
+a {
+    color: #4791e7;
+}
+table {
+    border-color: #4f4e4c;
+}
+::placeholder {
+    color: #bfb9ac;
+}
+::selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+::-moz-selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #565a0f !important;
+    color: #f0ebe2 !important;
+}
+::-webkit-scrollbar {
+    background-color: #1d1f1f;
+    color: #cbc5b9;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #2c2d2d;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #343636;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #404142;
+}
+::-webkit-scrollbar-corner {
+    background-color: #191a1b;
+}
+* {
+    scrollbar-color: #2c2d2d #1d1f1f;
+}</style>
+<style class="darkreader darkreader--override" media="screen">.jfk-bubble {
+    background-color: #000000 !important;
+}
+.vimvixen-hint {
+    background-color: #765500 !important;
+    border-color: #d5b22e !important;
+    color: #f9edcc !important;
+}
+.measure {
+    z-index: 0 !important;
+}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style> #Snow{ position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 99999; pointer-events: none; } </style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">@keyframes fadeInOpacity{0%{opacity:0}to{opacity:1}}:hover>*>.fbvd--wrapper{animation-name:fadeInOpacity;animation-duration:.3s;opacity:1}.fbvd--wrapper{position:absolute;top:10px;left:10px;opacity:0;text-align:center;margin:0;z-index:5}.fbvd--wrapper a{background: url("") no-repeat 3px 4.55px; background-color: #fff; display:inline-block;font:700 14px Helvetica,Arial,sans-serif;color:#4b4f56;text-decoration:none;vertical-align:middle;padding:0px 8px 0px;margin-right:8px;border-radius:2px; line-height: 22px; padding-left:19px; border: 1px solid #e7e7e7; background-size: 13px}.fbvd--wrapper a:last-child{margin-right:0}.fbvd--wrapper a:hover{text-decoration:none}.fbvd--wrapper a:focus{box-shadow:0 0 1px 2px rgba(88,144,255,.75),0 1px 1px rgba(0,0,0,.15);outline:none}.fbvd--wrapper b{font-size:13px;position:relative;top:1px;color:#3b5998;font-weight:400}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+
+      
+    </head>
+    <body class="mx-wc-selected-elem mx-wc-1569942589" gtools_scp_screen_capture_injected="true" style=""><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+
+
+
+
+<div id="wm-ipp-base" lang="en" style="display: block; direction: ltr;">
+</div>
+<!-- END WAYBACK TOOLBAR INSERT --> <!--[if lt IE 8]> <div class="browsehappy" role="dialog"> 当前网页 <strong>不支持</strong> 你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/" target="_blank">升级你的浏览器</a>。 </div> <![endif]--> <header id="header" class="header bg-white animated headroom--not-bottom slideDown headroom--top"> <div class="navbar-container"> <a href="https://web.archive.org/web/20190506040336/https://shinyashimokawa.space/" class="navbar-logo" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"> 下川真哉的主页 </a> <div class="navbar-menu"> <a href="https://web.archive.org/web/20190506040336/https://shinyashimokawa.space/index.php/dlzc.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">登入/注册</a> <a href="https://web.archive.org/web/20190506040336/https://shinyashimokawa.space/index.php/keijipan-1.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">检索</a> <a href="https://web.archive.org/web/20190506040336/https://shinyashimokawa.space/index.php/Timeline.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">时间线</a> <a href="https://web.archive.org/web/20190506040336/https://shinyashimokawa.space/index.php/Categorys.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">分类</a> <a href="https://web.archive.org/web/20190506040336/https://shinyashimokawa.space/index.php/start-page.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">关于我</a> <a href="https://web.archive.org/web/20190506040336/https://shinyashimokawa.space/index.php/kms.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">KMS服务</a> <a href="https://web.archive.org/web/20190506040336/https://shinyashimokawa.space/index.php/j.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">原则</a> </div> <div class="navbar-search" onclick=""> <span class="icon-search"></span> <form id="search" method="post" action="https://web.archive.org/web/20190506040336/https://shinyashimokawa.space/" role="search"> <span class="search-box"> <input type="text" id="input" class="input" name="s" required="true" placeholder="Search..." maxlength="30" autocomplete="off"> </span> </form> </div>  </div> </header> if (typeof aplayers !== 'undefined'){ for (var i = 0; i &lt; aplayers.length; i++) { try {aplayers[i].destroy()} catch(e){} } } loadMeting(); <div class="post-header-thumb bg-red"> <div class="post-header-thumb-op" style="background-image:url(https://web.archive.org/web/20190506040336im_/https://shinyashimokawa.space/PIC/bei.jpg);"></div> <div class="post-header-thumb-cover"> <div class="post-header-thumb-container"> <div class="post-header-thumb-title"> Shift_JIS与GBK编码范围的差别 </div> <div class="post-header-thumb-meta"> <time datetime="2019-04-04T19:06:00+08:00" itemprop="datePublished">Published on Apr 4, 2019</time> in <a href="https://web.archive.org/web/20190506040336/https://shinyashimokawa.space/index.php/category/%E9%9A%8F%E6%89%8B%E8%AE%B0/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">随手记</a> with <a href="#comments"> 0 comment</a> </div> <div class="post-tags"> </div> </div> </div> </div> <article class="main-content post-page" itemscope="" itemtype="http://schema.org/Article">  <div id="post-content" class="post-content" itemprop="articleBody">  <p>用以解决日文GAL汉化过程中程序的字符边界检查问题。</p><p>一、Shift_JIS</p><p>1.以下字元在Shift_JIS使用一个字节来表示。</p><blockquote><p>ASCII字符 (0x20-0x7E)，但“/”被“¥”取代<br>ASCII控制字符 (0x00-0x1F、0x7F)<br>JIS X 0201标准内的半角标点及片假名(0xA1-0xDF)<br>在部分操作系统中，0xA0用来放置“不换行空格”。</p></blockquote><p>2.以下字元在Shift_JIS使用两个字节来表示。</p><blockquote><p>JIS X 0208字集的所有字符：<br>“第一位字节”使用0x81-0x9F、0xE0-0xEF (共47个)<br>“第二位字节”使用0x40-0x7E、0x80-0xFC (共188个)<br>使用者定义区：<br>“第一位字节”使用0xF0-0xFC (共47个)<br>“第二位字节”使用0x40-0x7E、0x80-0xFC (共188个)</p></blockquote><p>3.在Shift_JIS编码表中，并未使用0xFD、0xFE及0xFF。</p><p>4.在微软及IBM的日语电脑系统中，在0xFA、0xFB及0xFC的两字节区域，加入了388个JIS X 0208没有收录的符号和汉字。</p><p>二、GBK</p><p>1.汉字区。包括：</p><blockquote><p>a.GB 2312 汉字区。即 GBK/2: B0A1-F7FE。收录 GB 2312 汉字 6763 个，按原顺序排列。<br>b.GB 13000.1 扩充汉字区。包括：<br>(1) GBK/3: 8140-A0FE。收录 GB 13000.1 中的 CJK 汉字 6080 个。<br>(2) GBK/4: AA40-FEA0。收录 CJK 汉字和增补的汉字 8160 个。CJK 汉字在前，按 UCS 代码大小排列；增补的汉字（包括部&gt; 首和构件）在后，按《康熙字典》的页码/字位排列。<br>(3) 汉字“〇”安排在图形符号区GBK/5：A996。</p></blockquote><p>2.图形符号区。包括：</p><blockquote><p>a.GB 2312 非汉字符号区。即 GBK/1: A1A1-A9FE。其中除 GB 2312 的符号外，还有 10 个小写罗马数字和 GB 12345 增补&gt; 的符号。计符号 717 个。<br>b.GB 13000.1 扩充非汉字区。即 GBK/5: A840-A9A0。BIG-5 非汉字符号、结构符和“〇”排列在此区。计符号 166 个。</p></blockquote><p>3.用户自定义区：分为(1)(2)(3)三个小区。</p><blockquote><p>(1) AAA1-AFFE，码位 564 个。<br>(2) F8A1-FEFE，码位 658 个。<br>(3) A140-A7A0，码位 672 个。<br>第(3)区尽管对用户开放，但限制使用，因为不排除未来在此区域增补新字符的可能性。</p></blockquote> <p class="post-info"> 本文由 <a href="https://web.archive.org/web/20190506040336/https://shinyashimokawa.space/index.php/author/1/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">下川真哉</a> 创作，采用 <a href="https://web.archive.org/web/20190506040336/https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">知识共享署名4.0</a> 国际许可协议进行许可<br>本站文章除注明转载/出处外，均为本站原创或翻译，转载前请务必署名<br>最后编辑时间为: Apr 4, 2019 at 07:45 pm 访问: 43 次 </p> </div> </article> <div id="post-bottom-bar" class="post-bottom-bar animated headroom--not-bottom pinned headroom--top"> <div class="bottom-bar-inner"> <div class="bottom-bar-items social-share left"> <span class="bottom-bar-item">Share : </span> <span class="bottom-bar-item bottom-bar-facebook"><a href="https://web.archive.org/web/20190506040336/https://www.facebook.com/sharer/sharer.php?u=https://shinyashimokawa.space/index.php/archives/370/" target="_blank" title="Shift_JIS与GBK编码范围的差别" rel="noopener noreferrer" referrerpolicy="no-referrer">facebook</a></span> <span class="bottom-bar-item bottom-bar-twitter"><a href="https://web.archive.org/web/20190506040336/https://twitter.com/intent/tweet?url=https://shinyashimokawa.space/index.php/archives/370/&amp;text=Shift_JIS%E4%B8%8EGBK%E7%BC%96%E7%A0%81%E8%8C%83%E5%9B%B4%E7%9A%84%E5%B7%AE%E5%88%AB" target="_blank" title="Shift_JIS与GBK编码范围的差别" rel="noopener noreferrer" referrerpolicy="no-referrer">Twitter</a></span> <span class="bottom-bar-item bottom-bar-weibo"><a href="https://web.archive.org/web/20190506040336/http://service.weibo.com/share/share.php?url=https://shinyashimokawa.space/index.php/archives/370/&amp;title=Shift_JIS%E4%B8%8EGBK%E7%BC%96%E7%A0%81%E8%8C%83%E5%9B%B4%E7%9A%84%E5%B7%AE%E5%88%AB" target="_blank" title="Shift_JIS与GBK编码范围的差别" rel="noopener noreferrer" referrerpolicy="no-referrer">Weibo</a></span> </div> <div class="bottom-bar-items right"> <span class="bottom-bar-item"><a href="https://web.archive.org/web/20190506040336/https://shinyashimokawa.space/index.php/archives/373/" title="初窥Galgame汉化——以CatSystem2引擎游戏《ゆきこいめると》为例" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">←</a></span> <span class="bottom-bar-item"><a href="https://web.archive.org/web/20190506040336/https://shinyashimokawa.space/index.php/archives/365/" title="Windows下如何Github SSH公钥" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">→</a></span> <span class="bottom-bar-item"><a href="#footer">↓</a></span> <span class="bottom-bar-item"><a href="#">↑</a></span> </div> </div> </div> <div id="respond-post-370" class="comment-container"> <div id="comments" class="clearfix"> <span class="response">Responses </span> <form method="post" action="https://web.archive.org/web/20190506040336/https://shinyashimokawa.space/index.php/archives/370/comment" id="comment-form" class="comment-form" role="form" onsubmit="getElementById('misubmit').disabled=true;return true;"> <input type="text" name="author" maxlength="12" id="author" class="form-control input-control clearfix" placeholder="Name (*)" value="" required=""> <input type="email" name="mail" id="mail" class="form-control input-control clearfix" placeholder="Email (*)" value="" required=""> <input type="url" name="url" id="url" class="form-control input-control clearfix" placeholder="Site (http://)" value=""> <textarea name="text" id="textarea" class="form-control" placeholder="在此处留下您的评论哦！" required=""></textarea> <button type="submit" class="submit" id="misubmit">SUBMIT</button>  </form> </div> </div> <footer id="footer" class="footer bg-white"> <div class="footer-social"> <div class="footer-container clearfix"> <div class="social-list"> <a class="social twitter" target="_blank" href="https://web.archive.org/web/20190506040336/https://twitter.com/SMKWSY" referrerpolicy="no-referrer" rel="noopener noreferrer">Twitter</a> <a class="social weibo" target="_blank" href="https://web.archive.org/web/20190506040336/https://weibo.com/bych0220" referrerpolicy="no-referrer" rel="noopener noreferrer">微博</a> <a class="social zhihu" target="_blank" href="https://web.archive.org/web/20190506040336/https://www.zhihu.com/people/bych0220" referrerpolicy="no-referrer" rel="noopener noreferrer">知乎</a> <a class="social github" target="_blank" href="https://web.archive.org/web/20190506040336/https://github.com/Shinya-Shimokawa" referrerpolicy="no-referrer" rel="noopener noreferrer">GitHub</a> </div> </div> </div> <div class="footer-meta"> <div class="footer-container"> <div class="meta-item meta-copyright"> <div class="meta-copyright-info"> <a href="https://web.archive.org/web/20190506040336/https://shinyashimokawa.space/" class="info-logo" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"> <img src="assets/1569942589-9addc19a249970bee24de0ed0b8a7619.png" alt="下川真哉的主页"> </a> <div class="info-text"> <p>Theme <a href="https://web.archive.org/web/20190506040336/https://github.com/chakhsu/pinghsu" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">"Pinghsu"</a></p> <p>Designed by <a href="https://web.archive.org/web/20190506040336/https://www.linpx.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Chakhsu</a></p> <p>Powered by <a href="https://web.archive.org/web/20190506040336/http://www.typecho.org/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">Typecho</a></p> <p>© 2019 <a href="https://web.archive.org/web/20190506040336/https://shinyashimokawa.space/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">下川真哉的主页</a></p> <p><a href="https://web.archive.org/web/20190506040336/http://www.miitbeian.gov.cn/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">宅ICP备2001124号(仮)</a></p> </div> </div> </div> <div class="meta-item meta-posts"> <h3 class="meta-title">RECENT POSTS</h3> <li><a href="https://web.archive.org/web/20190506040336/https://shinyashimokawa.space/index.php/archives/442/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">新中国六大行政区设立与撤销始末（2010）</a></li><li><a href="https://web.archive.org/web/20190506040336/https://shinyashimokawa.space/index.php/archives/428/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">俄罗斯联邦制度的现实矛盾和未来走向（2011）</a></li><li><a href="https://web.archive.org/web/20190506040336/https://shinyashimokawa.space/index.php/archives/424/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">馬關新約/日清講和条約（1895年4月17日）</a></li><li><a href="https://web.archive.org/web/20190506040336/https://shinyashimokawa.space/index.php/archives/414/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">日韓合併條約（1910年8月22日）</a></li><li><a href="https://web.archive.org/web/20190506040336/https://shinyashimokawa.space/index.php/archives/407/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">“姓氏”的小考究</a></li><li><a href="https://web.archive.org/web/20190506040336/https://shinyashimokawa.space/index.php/archives/405/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">遠く君へ-中島愛（日汉对照歌词）</a></li><li><a href="https://web.archive.org/web/20190506040336/https://shinyashimokawa.space/index.php/archives/404/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">「寧空屋也不出租」 專家點出台灣房市最主要問題</a></li><li><a href="https://web.archive.org/web/20190506040336/https://shinyashimokawa.space/index.php/archives/397/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">If I Leave – 조수미（韩英对照歌词）</a></li><li><a href="https://web.archive.org/web/20190506040336/https://shinyashimokawa.space/index.php/archives/373/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">初窥Galgame汉化——以CatSystem2引擎游戏《ゆきこいめると》为例</a></li><li><a href="https://web.archive.org/web/20190506040336/https://shinyashimokawa.space/index.php/archives/370/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Shift_JIS与GBK编码范围的差别</a></li> </div> <div class="meta-item meta-comments"> <h3 class="meta-title">RECENT COMMENTS</h3> </div> </div> </div> </footer> <div id="directory-content" class="directory-content initial headroom--not-bottom pinned headroom--top"> <div id="directory"><ul></ul></div> </div>    <canvas id="Snow" width="1366" height="625"></canvas>   <div class="pio-container left static"><div class="pio-action"></div><canvas id="pio" width="200" height="350"></canvas></div>          <!--
+     FILE ARCHIVED ON 04:03:36 May 06, 2019 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 15:11:21 Oct 01, 2019.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  load_resource: 212.077
+  captures_list: 226.19
+  PetaboxLoader3.resolve: 216.072 (2)
+  esindex: 0.018
+  RedisCDXSource: 0.9
+  exclusion.robots: 0.423
+  exclusion.robots.policy: 0.403
+  CDXLines.iter: 16.497 (3)
+  PetaboxLoader3.datanode: 162.09 (4)
+  LoadShardBlock: 204.858 (3)
+--><span id="copylAddress" style="display: inline-block; position: absolute; left: -9999em;"></span><a href="" download="" data-mx-warn="Empty URL"></a><div data-mx-warn="extension url was not captured by MaoXian" data-mx-original-src="chrome-extension://kjahokgdcbohofgdidndeiaigkehdjdc/pages/ui-selection.html?t=aHR0cHM6Ly93ZWIuYXJjaGl2ZS5vcmc="></div><div data-mx-warn="extension url was not captured by MaoXian" data-mx-original-src="chrome-extension://kjahokgdcbohofgdidndeiaigkehdjdc/pages/ui-control.html?t=aHR0cHM6Ly93ZWIuYXJjaGl2ZS5vcmc="></div>
+</body>
+  </html>

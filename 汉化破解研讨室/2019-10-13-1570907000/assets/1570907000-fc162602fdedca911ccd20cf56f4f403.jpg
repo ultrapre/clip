@@ -1,0 +1,2297 @@
+<!DOCTYPE html>
+<html lang='id'>
+<head>
+<script type="text/psajs" data-pagespeed-orig-index="0">LUX=(function(){var a=("undefined"!==typeof(LUX)&&"undefined"!==typeof(LUX.gaMarks)?LUX.gaMarks:[]);var d=("undefined"!==typeof(LUX)&&"undefined"!==typeof(LUX.gaMeasures)?LUX.gaMeasures:[]);var j="LUX_start";var k=window.performance;var l=("undefined"!==typeof(LUX)&&LUX.ns?LUX.ns:(Date.now?Date.now():+(new Date())));if(k&&k.timing&&k.timing.navigationStart){l=k.timing.navigationStart}function f(){if(k&&k.now){return k.now()}var o=Date.now?Date.now():+(new Date());return o-l}function b(n){if(k){if(k.mark){return k.mark(n)}else{if(k.webkitMark){return k.webkitMark(n)}}}a.push({name:n,entryType:"mark",startTime:f(),duration:0});return}function m(p,t,n){if("undefined"===typeof(t)&&h(j)){t=j}if(k){if(k.measure){if(t){if(n){return k.measure(p,t,n)}else{return k.measure(p,t)}}else{return k.measure(p)}}else{if(k.webkitMeasure){return k.webkitMeasure(p,t,n)}}}var r=0,o=f();if(t){var s=h(t);if(s){r=s.startTime}else{if(k&&k.timing&&k.timing[t]){r=k.timing[t]-k.timing.navigationStart}else{return}}}if(n){var q=h(n);if(q){o=q.startTime}else{if(k&&k.timing&&k.timing[n]){o=k.timing[n]-k.timing.navigationStart}else{return}}}d.push({name:p,entryType:"measure",startTime:r,duration:(o-r)});return}function h(n){return c(n,g())}function c(p,o){for(i=o.length-1;i>=0;i--){var n=o[i];if(p===n.name){return n}}return undefined}function g(){if(k){if(k.getEntriesByType){return k.getEntriesByType("mark")}else{if(k.webkitGetEntriesByType){return k.webkitGetEntriesByType("mark")}}}return a}return{mark:b,measure:m,gaMarks:a,gaMeasures:d}})();LUX.ns=(Date.now?Date.now():+(new Date()));LUX.ac=[];LUX.cmd=function(a){LUX.ac.push(a)};LUX.init=function(){LUX.cmd(["init"])};LUX.send=function(){LUX.cmd(["send"])};LUX.addData=function(a,b){LUX.cmd(["addData",a,b])};LUX_ae=[];window.addEventListener("error",function(a){LUX_ae.push(a)});LUX_al=[];if("function"===typeof(PerformanceObserver)&&"function"===typeof(PerformanceLongTaskTiming)){var LongTaskObserver=new PerformanceObserver(function(c){var b=c.getEntries();for(var a=0;a<b.length;a++){var d=b[a];LUX_al.push(d)}});try{LongTaskObserver.observe({type:["longtask"]})}catch(e){}};</script>
+<script async='' crossorigin='anonymous' defer='defer' src='https://cdn.speedcurve.com/js/lux.js?id=392098101' type="text/psajs" data-pagespeed-orig-index="1"></script>
+<script type="text/psajs" data-pagespeed-orig-index="2">
+  // Google Analytics
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');  
+  ga('create','UA-89312886-3', 'auto'); 
+  ga('send', 'pageview', {'dimension1': 'homepage', 'dimension2':  '' }); 
+  
+  
+  // Google Tag Manager
+  // (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer', 'GTM-5GKFRSG');
+  function loadGTM(w, d, s, l, i) {
+    // Google Tag Manager
+    w[l] = w[l] || [];
+    w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+    var f = d.getElementsByTagName(s)[0];
+    var j = d.createElement(s);
+    var dl = l != 'dataLayer' ? `&l=${l}` : '';
+    j.async = true;
+    j.src = `https://www.googletagmanager.com/gtm.js?id=${i}${dl}`;
+    f.parentNode.insertBefore(j, f);
+  }
+  function loadScripts() {
+    loadGTM(window, document, 'script', 'dataLayer', 'GTM-5GKFRSG');
+  }
+  function readyCallback() {
+    loadScripts();
+    document.removeEventListener('DOMContentLoaded', readyCallback);
+  }
+  document.addEventListener('DOMContentLoaded', readyCallback);
+</script>
+<link rel="stylesheet" media="all" href="/assets/A.application_id-259558f23adf439d65deb529c8768ad0c0d863d2fcabcf9a2c76df300cfa5c83.css.pagespeed.cf.JakCp3ftwh.css"/>
+<title>HonestDocs: Info Kesehatan, Tanya Dokter, Pengiriman Obat | HonestDocs</title>
+<meta charset='utf-8'>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' name='viewport'>
+<meta name='keywords'>
+<meta content='Dapatkan informasi kesehatan terlengkap, fitur tanya jawab dokter, hingga booking rumah sakit online di HonestDocs. Klik di sini untuk memulai!' name='description'>
+<!-- OG tags -->
+<meta content='id_ID' property='og:locale'>
+<meta content='website' property='og:type'>
+<meta content='HonestDocs: Info Kesehatan, Tanya Dokter, Pengiriman Obat | HonestDocs' property='og:title'>
+<meta content='Dapatkan informasi kesehatan terlengkap, fitur tanya jawab dokter, hingga booking rumah sakit online di HonestDocs. Klik di sini untuk memulai!' property='og:description'>
+<meta content='https://www.honestdocs.id/' property='og:url'>
+<meta content='HonestDocs' property='og:site_name'>
+<meta content='https://www.honestdocs.id/assets/HD_logo-477b01d33bebdda2673255ef247ab0bb756644382fc3d88164887e0145de8abd.png' property='og:image'>
+<meta content='293636654661738' property='fb:app_id'>
+<!-- SEO pagination -->
+<!-- Google Schema -->
+<script type='application/ld+json'>
+{ "@context": "http://schema.org", "@type": "WebSite", "url": https://www.honestdocs.id/, "potentialAction": { "@type": "SearchAction", "target": "https://www.honestdocs.id//universal-search?q={search_term_string}", "query-input": "required name=search_term_string" }}
+</script>
+<script type='application/ld+json'>
+{ "@context": "https://schema.org", "@type": "Organization", "name": "HonestDocs", "url": https://www.honestdocs.id/, "logo": "https://www.honestdocs.id/assets/HD_logo-477b01d33bebdda2673255ef247ab0bb756644382fc3d88164887e0145de8abd.png", "contactPoint": [{ "@type": "ContactPoint", "email": "support@honestdocs.id", "contactType": "customer service", "availableLanguage": [Indonesian, " English"], "url": https://www.honestdocs.id/ }], "sameAs": [https://www.facebook.com/HonestDocsID, https://twitter.com/HonestDocsID] }
+</script>
+<!-- Apple favicons -->
+<link rel="apple-touch-icon" type="image/png" href="/xapple-touch-icon-120x120.png.pagespeed.ic.3uJ_tKB0fu.png" sizes="120x120"/>
+<link rel="apple-touch-icon" type="image/png" href="/assets/apple-touch-icon-ace91eaaed10959a4f9e767bc08b35612364fda2116790cf3972c68646ff3b9d.png" sizes="152x152"/>
+<link href='/manifest.json' rel='manifest'>
+<meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="ruzs9KrH4bWSMbuLjNr+QtRmwRUQC0u62yd2ryk2P1Lu0NXFvrrXV4jZfIj87IKR7JTnTs+g0MDsq9ki2w8uXA=="/>
+<!-- AMP Pages -->
+<script type="text/psajs" data-pagespeed-orig-index="3">var OneSignal=window.OneSignal||[];OneSignal.push(["init",{appId:"ac2dd5a4-0069-4f3f-b097-f6379b5c0dd7",autoRegister:false,notifyButton:{enable:true}}]);window.fbAppId="293636654661738";window.fbLocale="id_ID";</script>
+<script data-pagespeed-no-defer>(function(){function f(a,b,d){if(a.addEventListener)a.addEventListener(b,d,!1);else if(a.attachEvent)a.attachEvent("on"+b,d);else{var c=a["on"+b];a["on"+b]=function(){d.call(this);c&&c.call(this)}}};window.pagespeed=window.pagespeed||{};var g=window.pagespeed;function k(a){this.g=[];this.f=0;this.h=!1;this.j=a;this.i=null;this.l=0;this.b=!1;this.a=0}function l(a,b){var d=b.getAttribute("data-pagespeed-lazy-position");if(d)return parseInt(d,0);var d=b.offsetTop,c=b.offsetParent;c&&(d+=l(a,c));d=Math.max(d,0);b.setAttribute("data-pagespeed-lazy-position",d);return d}
+function m(a,b){var d,c,e;if(!a.b&&(0==b.offsetHeight||0==b.offsetWidth))return!1;a:if(b.currentStyle)c=b.currentStyle.position;else{if(document.defaultView&&document.defaultView.getComputedStyle&&(c=document.defaultView.getComputedStyle(b,null))){c=c.getPropertyValue("position");break a}c=b.style&&b.style.position?b.style.position:""}if("relative"==c)return!0;e=0;"number"==typeof window.pageYOffset?e=window.pageYOffset:document.body&&document.body.scrollTop?e=document.body.scrollTop:document.documentElement&&
+document.documentElement.scrollTop&&(e=document.documentElement.scrollTop);d=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight;c=e;e+=d;var h=b.getBoundingClientRect();h?(e=h.top-d,c=h.bottom):(h=l(a,b),d=h+b.offsetHeight,e=h-e,c=d-c);return e<=a.f&&0<=c+a.f}
+k.prototype.m=function(a){p(a);var b=this;window.setTimeout(function(){var d=a.getAttribute("data-pagespeed-lazy-src");if(d)if((b.h||m(b,a))&&-1!=a.src.indexOf(b.j)){var c=a.parentNode,e=a.nextSibling;c&&c.removeChild(a);a.c&&(a.getAttribute=a.c);a.removeAttribute("onload");a.tagName&&"IMG"==a.tagName&&g.CriticalImages&&f(a,"load",function(){g.CriticalImages.checkImageForCriticality(this);b.b&&(b.a--,b.a||g.CriticalImages.checkCriticalImages())});a.removeAttribute("data-pagespeed-lazy-src");a.removeAttribute("data-pagespeed-lazy-replaced-functions");
+c&&c.insertBefore(a,e);if(c=a.getAttribute("data-pagespeed-lazy-srcset"))a.srcset=c,a.removeAttribute("data-pagespeed-lazy-srcset");a.src=d}else b.g.push(a)},0)};k.prototype.loadIfVisibleAndMaybeBeacon=k.prototype.m;k.prototype.s=function(){this.h=!0;q(this)};k.prototype.loadAllImages=k.prototype.s;function q(a){var b=a.g,d=b.length;a.g=[];for(var c=0;c<d;++c)a.m(b[c])}function t(a,b){return a.a?null!=a.a(b):null!=a.getAttribute(b)}
+k.prototype.u=function(){for(var a=document.getElementsByTagName("img"),b=0,d;d=a[b];b++)t(d,"data-pagespeed-lazy-src")&&p(d)};k.prototype.overrideAttributeFunctions=k.prototype.u;function p(a){t(a,"data-pagespeed-lazy-replaced-functions")||(a.c=a.getAttribute,a.getAttribute=function(a){"src"==a.toLowerCase()&&t(this,"data-pagespeed-lazy-src")&&(a="data-pagespeed-lazy-src");return this.c(a)},a.setAttribute("data-pagespeed-lazy-replaced-functions","1"))}
+g.o=function(a,b){function d(){if(!(c.b&&a||c.i)){var b=200;200<(new Date).getTime()-c.l&&(b=0);c.i=window.setTimeout(function(){c.l=(new Date).getTime();q(c);c.i=null},b)}}var c=new k(b);g.lazyLoadImages=c;f(window,"load",function(){c.b=!0;c.h=a;c.f=200;if(g.CriticalImages){for(var b=0,d=document.getElementsByTagName("img"),r=0,n;n=d[r];r++)-1!=n.src.indexOf(c.j)&&t(n,"data-pagespeed-lazy-src")&&b++;c.a=b;c.a||g.CriticalImages.checkCriticalImages()}q(c)});b.indexOf("data")&&((new Image).src=b);f(window,
+"scroll",d);f(window,"resize",d)};g.lazyLoadInit=g.o;})();
+
+pagespeed.lazyLoadInit(true, "/pagespeed_static/1.JiBnMqyl6S.gif");
+</script></head>
+<body class='id'><noscript><meta HTTP-EQUIV="refresh" content="0;url='https://www.honestdocs.id/?PageSpeed=noscript'" /><style><!--table,div,span,font,p{display:none} --></style><div style="display:block">Please click <a href="https://www.honestdocs.id/?PageSpeed=noscript">here</a> if you are not redirected within a few seconds.</div></noscript>
+<div id='fb-root'></div>
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+<iframe height='0' src='https://www.googletagmanager.com/ns.html?id=GTM-5GKFRSG' style='display:none;visibility:hidden' width='0'></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+<div id='content'>
+<div class='app'>
+<header class='header'>
+<div class='header__container header__container--home js-header js-header-first'>
+<div class='header__new'>
+<a class="header__logotip" href="/"><img src="/assets/footer-logo-cb214c17fc4ea968b8e0564f38bbb4cb7be3ee14d57e0e823a847a26337bd280.svg" alt="Footer logo"/></a>
+<div class='header__link-shop'>
+<span class='icon-shop'></span>
+<a class="header__health-shop js-ga-nav-bar" href="/toko-kesehatan"><span>Toko Kesehatan</span>
+</a></div>
+</div>
+<div class='header__row'>
+<ul class='header__list header__list--second js-menu-links'>
+<li class='header__item'><a class="header__link js-ga-nav-bar header__link--second" href="/penyakit">Penyakit</a></li>
+<li class='header__item'><a class="header__link header__link--second js-ga-nav-bar " href="/obat">Obat</a></li>
+<li class='header__item'><a class="header__link header__link--second" href="/rumah-sakit">Cari Rumah Sakit</a></li>
+<li class='header__item'><a class="header__link header__link--second" href="/apotik">Apotik</a></li>
+<li class='header__item'><a class="header__link header__link--second js-ga-nav-bar" href="/tanya-dokter">Tanya Dokter</a></li>
+<li class='header__item'><a class="header__link header__link--second js-ga-nav-bar" href="/artikel-kesehatan">Artikel</a></li>
+</ul>
+</div>
+<div class='header__account'>
+<ul class='header__account-list'>
+<li class='header__account-item'>
+<a class="header__account-link" href="/my/users/sign_in">Masuk</a>
+</li>
+<li class='header__account-devider'></li>
+<li class='header__account-item'>
+<a class="header__account-link" href="/my/users/sign_up">Daftar</a>
+</li>
+</ul>
+</div>
+<div class='clearfix'></div>
+<div class='header__mobile header__mobile--home'>
+<button class='navbar-toggle header__button js-menu-btn' type='button'>
+<span class='icon-bar icon-bar--hover'></span>
+<span class='icon-bar icon-bar--hover'></span>
+<span class='icon-bar icon-bar--hover'></span>
+</button>
+<a class='header__logotip js-menu-logo js-logo' href='/'><img src="/assets/footer-logo-cb214c17fc4ea968b8e0564f38bbb4cb7be3ee14d57e0e823a847a26337bd280.svg" alt="Footer logo"/></a>
+<button class='header__search search-js'></button>
+</div>
+</div>
+<div class='header__layer'></div>
+</header>
+<section class='section'>
+<div class='banner banner--full-screen banner--home js-banner'>
+<div class='content-flex content-flex--home'>
+<div class='search'>
+<div class='search__row search__row--home'>
+<div class='search__col search__col--left'>
+<a class="search__logo" href="/"><img class="search__images" src="/assets/homelogo-24baed5a7a3c519a2de6c39c0cae4f1f1cb500e2d9c0686ea70ad943bc366c39.svg" alt="Homelogo"/>
+</a></div>
+<div class='search__col search__col--right'>
+<p class='search__title'>
+Temukan info penyakit, obat-obatan, rumah sakit, dan artikel kesehatan lainnya di sini
+</p>
+<div action='' class='search__group'>
+<form class="search__group" action="/universal-search" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;"/>
+<input type="text" name="q" id="q" class="inputHome search__input input-search-validate-js" placeholder="Nyeri punggung, diabetes, sakit kepala" maxlength="100"/>
+<input type="submit" value="Cari" class="main-button main-button--search js-search-bar" disabled="disabled" data-disable-with="Cari"/>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class='anchor'>
+<div class='anchor__row'>
+<div class='anchor__title'>
+Scroll ke bawah untuk melihat gejala berbagai penyakit, ulasan rumah sakit, dan artikel kesehatan.
+</div>
+<div class='anchor__item'>
+<a class='anchor__link js-scrollto-btn' href='#'>
+<img data-pagespeed-lazy-src="/assets/Oval-3af26f20bf32cf2e90dba82b28650d80b241c45cfd1b43b088cfc9e2d0809873.svg" alt="Oval" src="/pagespeed_static/1.JiBnMqyl6S.gif" onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);"/>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='container container--fluid js-scrollto-home'>
+<div class='container__inners'>
+<div class='docket'>
+<h3 class='title title--home'>
+<a href="/penyakit">Penyakit Yang Banyak Dibaca</a>
+</h3>
+<div class='docket__ticket js-main-slider'>
+<div class='docket__cart'>
+<div class='docket__inner'>
+<div class='docket__basic'>
+<a class="docket__image" href="/flu-singapura"><image alt='Flu Singapura' class='docket__image lazyload' data-src='/system/conditions/images/000/000/454/medium/Kenali_Flu_Singapura_Dari_Penyebab__Gejala_dan__Pengobatannya.jpg'></image>
+</a><div class='docket__description'>
+<div class='docket__info'>
+<a class="docket__text" href="/flu-singapura">Flu Singapura</a>
+<p class='docket__text docket__text--second'>Flu Singapura (HFMD) - Gejala, Penyebab, &amp; Obat</p>
+<p></p>
+</div>
+<div class='docket__item'>
+<a class="docket__link" href="/flu-singapura">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='docket__cart'>
+<div class='docket__inner'>
+<div class='docket__basic'>
+<a class="docket__image" href="/cedera-kepala-ringan"><image alt='Cedera Kepala Ringan' class='docket__image lazyload' data-src='/system/conditions/images/000/000/110/medium/Cedera_Kepala_Ringan.jpg'></image>
+</a><div class='docket__description'>
+<div class='docket__info'>
+<a class="docket__text" href="/cedera-kepala-ringan">Cedera Kepala Ringan</a>
+<p class='docket__text docket__text--second'>Cedera Kepala Ringan: Penyebab, Gejala, dan Pengobatan</p>
+<p></p>
+</div>
+<div class='docket__item'>
+<a class="docket__link" href="/cedera-kepala-ringan">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='docket__cart'>
+<div class='docket__inner'>
+<div class='docket__basic'>
+<a class="docket__image" href="/thalasemia"><image alt='Thalasemia' class='docket__image lazyload' data-src='/system/conditions/images/000/000/021/medium/Thalasemia.jpg'></image>
+</a><div class='docket__description'>
+<div class='docket__info'>
+<a class="docket__text" href="/thalasemia">Thalasemia</a>
+<p class='docket__text docket__text--second'>Thalasemia: Penyakit Kelainan Darah Karena Faktor Keturunan</p>
+<p></p>
+</div>
+<div class='docket__item'>
+<a class="docket__link" href="/thalasemia">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='docket__cart'>
+<div class='docket__inner'>
+<div class='docket__basic'>
+<a class="docket__image" href="/cacar-monyet"><image alt='Cacar Monyet' class='docket__image lazyload' data-src='/system/conditions/images/000/007/888/medium/cacar_monyet.jpg'></image>
+</a><div class='docket__description'>
+<div class='docket__info'>
+<a class="docket__text" href="/cacar-monyet">Cacar Monyet</a>
+<p class='docket__text docket__text--second'>Cacar Monyet: Penyebab, Gejala, dan Pengobatan</p>
+<p></p>
+</div>
+<div class='docket__item'>
+<a class="docket__link" href="/cacar-monyet">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='docket__cart'>
+<div class='docket__inner'>
+<div class='docket__basic'>
+<a class="docket__image" href="/demam-berdarah"><image alt='Demam Berdarah' class='docket__image lazyload' data-src='/system/conditions/images/000/000/604/medium/Demam_Berdarah__Kenali_Gejala__Penyebab__Obat_dan_Cara_Pencegahannya.jpg'></image>
+</a><div class='docket__description'>
+<div class='docket__info'>
+<a class="docket__text" href="/demam-berdarah">Demam Berdarah</a>
+<p class='docket__text docket__text--second'>Demam Berdarah: Gejala, Penyebab, dan Pengobatan</p>
+<p></p>
+</div>
+<div class='docket__item'>
+<a class="docket__link" href="/demam-berdarah">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='docket__cart'>
+<div class='docket__inner'>
+<div class='docket__basic'>
+<a class="docket__image" href="/difteri"><image alt='Difteri' class='docket__image lazyload' data-src='/system/conditions/images/000/000/467/medium/Kenali_Penyakit_Difteri_Dari_Penyebab__Gejala__dan_Pengobatannya.jpg'></image>
+</a><div class='docket__description'>
+<div class='docket__info'>
+<a class="docket__text" href="/difteri">Difteri</a>
+<p class='docket__text docket__text--second'>Kenali Penyakit Difteri Dari Penyebab, Gejala, dan Pengobatannya</p>
+<p></p>
+</div>
+<div class='docket__item'>
+<a class="docket__link" href="/difteri">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='docket__cart'>
+<div class='docket__inner'>
+<div class='docket__basic'>
+<a class="docket__image" href="/herpes"><image alt='Herpes ' class='docket__image lazyload' data-src='/system/conditions/images/000/000/182/medium/Kenali_Lebih_Dalam_Mengenai_Penyakit_Herpes.jpg'></image>
+</a><div class='docket__description'>
+<div class='docket__info'>
+<a class="docket__text" href="/herpes">Herpes </a>
+<p class='docket__text docket__text--second'>Kenali Penyakit Herpes dan Cara Menanganinya</p>
+<p></p>
+</div>
+<div class='docket__item'>
+<a class="docket__link" href="/herpes">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='docket__cart'>
+<div class='docket__inner'>
+<div class='docket__basic'>
+<a class="docket__image" href="/ambeien"><image alt='Ambeien (Wasir)' class='docket__image lazyload' data-src='/system/conditions/images/000/000/710/medium/open-uri20190222-1266-nc6oi3'></image>
+</a><div class='docket__description'>
+<div class='docket__info'>
+<a class="docket__text" href="/ambeien">Ambeien (Wasir)</a>
+<p class='docket__text docket__text--second'>Ambeien (Wasir): Gejala, Penyebab, dan Pengobatan</p>
+<p></p>
+</div>
+<div class='docket__item'>
+<a class="docket__link" href="/ambeien">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='docket__cart'>
+<div class='docket__inner'>
+<div class='docket__basic'>
+<a class="docket__image" href="/penyakit-sifilis"><image alt='Sifilis' class='docket__image lazyload' data-src='/system/conditions/images/000/000/602/medium/Sifilis_Penyebab__Gejala__dan_Pengobatan.jpg'></image>
+</a><div class='docket__description'>
+<div class='docket__info'>
+<a class="docket__text" href="/penyakit-sifilis">Sifilis</a>
+<p class='docket__text docket__text--second'>Sifilis: Penyebab, Gejala, dan Pengobatan</p>
+<p></p>
+</div>
+<div class='docket__item'>
+<a class="docket__link" href="/penyakit-sifilis">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='docket__cart'>
+<div class='docket__inner'>
+<div class='docket__basic'>
+<a class="docket__image" href="/anemia"><image alt='Anemia' class='docket__image lazyload' data-src='/system/conditions/images/000/000/211/medium/Anemia_Darah_Merah.jpg'></image>
+</a><div class='docket__description'>
+<div class='docket__info'>
+<a class="docket__text" href="/anemia">Anemia</a>
+<p class='docket__text docket__text--second'>Kenali Anemia Penyebab,Gejala,dan Pengobatannya</p>
+<p></p>
+</div>
+<div class='docket__item'>
+<a class="docket__link" href="/anemia">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='docket__cart'>
+<div class='docket__inner'>
+<div class='docket__basic'>
+<a class="docket__image" href="/demam"><image alt='Demam' class='docket__image lazyload' data-src='/system/conditions/images/000/000/134/medium/kenali_Demam_dari_Penyebab_Gejala_dan_pengobatannya.jpg'></image>
+</a><div class='docket__description'>
+<div class='docket__info'>
+<a class="docket__text" href="/demam">Demam</a>
+<p class='docket__text docket__text--second'>Demam: Penyebab, Gejala, dan Pengobatan</p>
+<p></p>
+</div>
+<div class='docket__item'>
+<a class="docket__link" href="/demam">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='docket__cart'>
+<div class='docket__inner'>
+<div class='docket__basic'>
+<a class="docket__image" href="/cacing-kremi"><image alt='Cacing Kremi' class='docket__image lazyload' data-src='/system/conditions/images/000/000/091/medium/Cacing_Kremi_atau_Pinworm.jpg'></image>
+</a><div class='docket__description'>
+<div class='docket__info'>
+<a class="docket__text" href="/cacing-kremi">Cacing Kremi</a>
+<p class='docket__text docket__text--second'>Kenali Lebih Dalam Mengenai Infeksi Cacing Kremi</p>
+<p></p>
+</div>
+<div class='docket__item'>
+<a class="docket__link" href="/cacing-kremi">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='docket__cart'>
+<div class='docket__inner'>
+<div class='docket__basic'>
+<a class="docket__image" href="/skizofrenia"><image alt='Skizofrenia' class='docket__image lazyload' data-src='/system/conditions/images/000/000/072/medium/Skizofrenia.jpg'></image>
+</a><div class='docket__description'>
+<div class='docket__info'>
+<a class="docket__text" href="/skizofrenia">Skizofrenia</a>
+<p class='docket__text docket__text--second'>Skizofrenia: Penyebab, Gejala, dan Pengobatan</p>
+<p></p>
+</div>
+<div class='docket__item'>
+<a class="docket__link" href="/skizofrenia">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='docket__cart'>
+<div class='docket__inner'>
+<div class='docket__basic'>
+<a class="docket__image" href="/asbestosis"><image alt='Asbestosis' class='docket__image lazyload' data-src='/system/conditions/images/000/000/070/medium/Asbetosis_atau_Fibrosis_Paru.jpg'></image>
+</a><div class='docket__description'>
+<div class='docket__info'>
+<a class="docket__text" href="/asbestosis">Asbestosis</a>
+<p class='docket__text docket__text--second'>Asbestosis: Penyebab, Gejala, dan Pengobatannya</p>
+<p></p>
+</div>
+<div class='docket__item'>
+<a class="docket__link" href="/asbestosis">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='docket__cart'>
+<div class='docket__inner'>
+<div class='docket__basic'>
+<a class="docket__image" href="/sakit-tenggorokan"><image alt='Sakit Tenggorokan' class='docket__image lazyload' data-src='/system/conditions/images/000/000/044/medium/Sakit_Tenggorokan.jpg'></image>
+</a><div class='docket__description'>
+<div class='docket__info'>
+<a class="docket__text" href="/sakit-tenggorokan">Sakit Tenggorokan</a>
+<p class='docket__text docket__text--second'>Sakit Tenggorokan: Penyebab, Gejala, dan Pengobatan</p>
+<p></p>
+</div>
+<div class='docket__item'>
+<a class="docket__link" href="/sakit-tenggorokan">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='docket__cart'>
+<div class='docket__inner'>
+<div class='docket__basic'>
+<a class="docket__image" href="/rambut-rontok"><image alt='Rambut Rontok' class='docket__image lazyload' data-src='/system/conditions/images/000/000/025/medium/Rambut_Rontok.jpg'></image>
+</a><div class='docket__description'>
+<div class='docket__info'>
+<a class="docket__text" href="/rambut-rontok">Rambut Rontok</a>
+<p class='docket__text docket__text--second'>Mengatasi Masalah Rambut Rontok Yang Mengganggu</p>
+<p></p>
+</div>
+<div class='docket__item'>
+<a class="docket__link" href="/rambut-rontok">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='docket__cart'>
+<div class='docket__inner'>
+<div class='docket__basic'>
+<a class="docket__image" href="/hashimoto"><image alt='Hashimoto' class='docket__image lazyload' data-src='/system/conditions/images/000/000/006/medium/Penyakit_Tiroiditis_Hashimoto.jpg'></image>
+</a><div class='docket__description'>
+<div class='docket__info'>
+<a class="docket__text" href="/hashimoto">Hashimoto</a>
+<p class='docket__text docket__text--second'>Kenali Penyakit Tiroiditis Hashimoto dan Cara Menanganinya</p>
+<p></p>
+</div>
+<div class='docket__item'>
+<a class="docket__link" href="/hashimoto">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='docket__cart'>
+<div class='docket__inner'>
+<div class='docket__basic'>
+<a class="docket__image" href="/kekurangan-yodium"><image alt='Kekurangan Yodium' class='docket__image lazyload' data-src='/system/conditions/images/000/000/004/medium/Kekurangan_Yodium.jpg'></image>
+</a><div class='docket__description'>
+<div class='docket__info'>
+<a class="docket__text" href="/kekurangan-yodium">Kekurangan Yodium</a>
+<p class='docket__text docket__text--second'>Bahaya Kekurangan Yodium Bagi Tubuh</p>
+<p></p>
+</div>
+<div class='docket__item'>
+<a class="docket__link" href="/kekurangan-yodium">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='docket__cart'>
+<div class='docket__inner'>
+<div class='docket__basic'>
+<a class="docket__image" href="/alzheimer"><image alt='Alzheimer' class='docket__image lazyload' data-src='/system/conditions/images/000/000/554/medium/Alzheimer.jpg'></image>
+</a><div class='docket__description'>
+<div class='docket__info'>
+<a class="docket__text" href="/alzheimer">Alzheimer</a>
+<p class='docket__text docket__text--second'>Alzheimer: Penyebab, Gejala, dan Obat</p>
+<p></p>
+</div>
+<div class='docket__item'>
+<a class="docket__link" href="/alzheimer">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='docket__cart'>
+<div class='docket__inner'>
+<div class='docket__basic'>
+<a class="docket__image" href="/batuk-kronis"><image alt='Batuk Kronis' class='docket__image lazyload' data-src='/system/conditions/images/000/000/483/medium/Kenali_Batuk_Kronis_Dari_Penyebab__Gejala_dan__Pengobatannya.jpg'></image>
+</a><div class='docket__description'>
+<div class='docket__info'>
+<a class="docket__text" href="/batuk-kronis">Batuk Kronis</a>
+<p class='docket__text docket__text--second'>Batuk Kronis: Penyebab, Gejala dan, Pengobatan</p>
+<p></p>
+</div>
+<div class='docket__item'>
+<a class="docket__link" href="/batuk-kronis">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='docket__cart'>
+<div class='docket__inner'>
+<div class='docket__basic'>
+<a class="docket__image" href="/tipes"><image alt='Tipes' class='docket__image lazyload' data-src='/system/conditions/images/000/000/470/medium/Gejala_Tifus.jpg'></image>
+</a><div class='docket__description'>
+<div class='docket__info'>
+<a class="docket__text" href="/tipes">Tipes</a>
+<p class='docket__text docket__text--second'>Tipes: Penyebab, Gejala, dan Pengobatan</p>
+<p></p>
+</div>
+<div class='docket__item'>
+<a class="docket__link" href="/tipes">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='docket__cart'>
+<div class='docket__inner'>
+<div class='docket__basic'>
+<a class="docket__image" href="/batu-ginjal"><image alt='Batu Ginjal' class='docket__image lazyload' data-src='/system/conditions/images/000/000/224/medium/Kenali_Batu_Ginjal_dari_Penyebab_Gejala_dan_Pengobatannya.jpg'></image>
+</a><div class='docket__description'>
+<div class='docket__info'>
+<a class="docket__text" href="/batu-ginjal">Batu Ginjal</a>
+<p class='docket__text docket__text--second'>Kenali Batu Ginjal dari Penyebab,Gejala,dan Pengobatannya</p>
+<p></p>
+</div>
+<div class='docket__item'>
+<a class="docket__link" href="/batu-ginjal">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='docket__cart'>
+<div class='docket__inner'>
+<div class='docket__basic'>
+<a class="docket__image" href="/kanker-serviks"><image alt='Kanker Serviks' class='docket__image lazyload' data-src='/system/conditions/images/000/000/068/medium/Kanker_Serviks__Penyebab__Gejala__dan_Pengobatan.jpg'></image>
+</a><div class='docket__description'>
+<div class='docket__info'>
+<a class="docket__text" href="/kanker-serviks">Kanker Serviks</a>
+<p class='docket__text docket__text--second'>Kanker Serviks: Penyebab, Gejala, dan Pengobatan</p>
+<p></p>
+</div>
+<div class='docket__item'>
+<a class="docket__link" href="/kanker-serviks">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='docket__cart'>
+<div class='docket__inner'>
+<div class='docket__basic'>
+<a class="docket__image" href="/rabun-jauh"><image alt='Rabun Jauh' class='docket__image lazyload' data-src='/system/conditions/images/000/000/008/medium/Penyakit_Rabun_Jauh.jpg'></image>
+</a><div class='docket__description'>
+<div class='docket__info'>
+<a class="docket__text" href="/rabun-jauh">Rabun Jauh</a>
+<p class='docket__text docket__text--second'>Rabun Jauh: Penyebab, Gejala, dan Pengobatan</p>
+<p></p>
+</div>
+<div class='docket__item'>
+<a class="docket__link" href="/rabun-jauh">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='docket__cart'>
+<div class='docket__inner'>
+<div class='docket__basic'>
+<a class="docket__image" href="/cedera-kepala"><image alt='Cedera Kepala' class='docket__image lazyload' data-src='/system/conditions/images/000/000/003/medium/Cedera_Kepala_Bahaya__Klasifikasi__Penanganan.jpg'></image>
+</a><div class='docket__description'>
+<div class='docket__info'>
+<a class="docket__text" href="/cedera-kepala">Cedera Kepala</a>
+<p class='docket__text docket__text--second'>Pelajari Cara Menangani Cedera Kepala</p>
+<p></p>
+</div>
+<div class='docket__item'>
+<a class="docket__link" href="/cedera-kepala">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='docket__cart'>
+<div class='docket__inner'>
+<a class='docket__seque' href='/penyakit'>
+<div class='docket__layer'>
+<img class="docket__logo" src="/assets/logos-3bf8b7d7f2b7965462e33e4198a964d1309165583e171b92a50ba89a25db4fe2.svg" alt="Logos"/>
+<span class='docket__link docket__link--last'>
+Semua Penyakit
+</span>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='container container--fluid'>
+<div class='container__inners'>
+<div class='preview'>
+<h3 class='title title--home'>
+<a href="/rumah-sakit">Review Rumah Sakit</a>
+</h3>
+<div class='preview__ticket preview__ticket--padding js-main-slider'>
+<div class='preview__cart'>
+<div class='preview__inner'>
+<div class='preview__info preview__info--search'>
+<a class="preview__image preview__image--search" href="/rumah-sakit/aic-kuningan-medical-center"><image alt='AIC Kuningan Medical Center' class='lazyload' data-src='/assets/hospital_default-c426cd3ed77df51449028807011b9352dff4569c67e89c080133dfe3a756f3d8.jpg'></image>
+</a><div class='preview__rating preview__rating--search'>
+<a class="preview__text preview__text--first" href="/rumah-sakit/aic-kuningan-medical-center">AIC Kuningan Medical Center</a>
+<p class='preview__text preview__text--small'>
+Jakarta Selatan, Indonesia
+</p>
+<div class='rating' data-score='4.38'></div>
+</div>
+</div>
+<div class='preview__link'>
+<a class="docket__link docket__link--preview" href="/rumah-sakit/aic-kuningan-medical-center">Lihat review rumah sakit</a>
+</div>
+</div>
+</div>
+<div class='preview__cart'>
+<div class='preview__inner'>
+<div class='preview__info preview__info--search'>
+<a class="preview__image preview__image--search" href="/rumah-sakit/klinik-spesialis-bedah-digestif-rs-katolik-st-vincentius-a-paulo-rzk"><image alt='Klinik Spesialis Bedah Digestif RS Katolik St. Vincentius A Paulo (RZK)' class='lazyload' data-src='/assets/hospital_default-c426cd3ed77df51449028807011b9352dff4569c67e89c080133dfe3a756f3d8.jpg'></image>
+</a><div class='preview__rating preview__rating--search'>
+<a class="preview__text preview__text--first" href="/rumah-sakit/klinik-spesialis-bedah-digestif-rs-katolik-st-vincentius-a-paulo-rzk">Klinik Spesialis Bedah Digestif RS Katolik St. Vincentius A Paulo (RZK)</a>
+<p class='preview__text preview__text--small'>
+Surabaya, Indonesia
+</p>
+<div class='rating'></div>
+</div>
+</div>
+<div class='preview__link'>
+<a class="docket__link docket__link--preview" href="/rumah-sakit/klinik-spesialis-bedah-digestif-rs-katolik-st-vincentius-a-paulo-rzk">Lihat review rumah sakit</a>
+</div>
+</div>
+</div>
+<div class='preview__cart'>
+<div class='preview__inner'>
+<div class='preview__info preview__info--search'>
+<a class="preview__image preview__image--search" href="/rumah-sakit/mayapada-hospital-jakarta-selatan"><image alt='Mayapada Hospital Jakarta Selatan' class='lazyload' data-src='/assets/hospital_default-c426cd3ed77df51449028807011b9352dff4569c67e89c080133dfe3a756f3d8.jpg'></image>
+</a><div class='preview__rating preview__rating--search'>
+<a class="preview__text preview__text--first" href="/rumah-sakit/mayapada-hospital-jakarta-selatan">Mayapada Hospital Jakarta Selatan</a>
+<p class='preview__text preview__text--small'>
+Jakarta Selatan, Indonesia
+</p>
+<div class='rating'></div>
+</div>
+</div>
+<div class='preview__link'>
+<a class="docket__link docket__link--preview" href="/rumah-sakit/mayapada-hospital-jakarta-selatan">Lihat review rumah sakit</a>
+</div>
+</div>
+</div>
+<div class='preview__cart'>
+<div class='preview__inner'>
+<div class='preview__info preview__info--search'>
+<a class="preview__image preview__image--search" href="/rumah-sakit/rumah-sakit-umum-pusat-fatmawati"><image alt='Rumah Sakit Umum Pusat Fatmawati' class='lazyload' data-src='/assets/hospital_default-c426cd3ed77df51449028807011b9352dff4569c67e89c080133dfe3a756f3d8.jpg'></image>
+</a><div class='preview__rating preview__rating--search'>
+<a class="preview__text preview__text--first" href="/rumah-sakit/rumah-sakit-umum-pusat-fatmawati">Rumah Sakit Umum Pusat Fatmawati</a>
+<p class='preview__text preview__text--small'>
+Jakarta Selatan, Indonesia
+</p>
+<div class='rating'></div>
+</div>
+</div>
+<div class='preview__link'>
+<a class="docket__link docket__link--preview" href="/rumah-sakit/rumah-sakit-umum-pusat-fatmawati">Lihat review rumah sakit</a>
+</div>
+</div>
+</div>
+<div class='preview__cart'>
+<div class='preview__inner'>
+<div class='preview__info preview__info--search'>
+<a class="preview__image preview__image--search" href="/rumah-sakit/rumah-sakit-bhakti-mulia"><image alt='Rumah Sakit Bhakti Mulia' class='lazyload' data-src='/assets/hospital_default-c426cd3ed77df51449028807011b9352dff4569c67e89c080133dfe3a756f3d8.jpg'></image>
+</a><div class='preview__rating preview__rating--search'>
+<a class="preview__text preview__text--first" href="/rumah-sakit/rumah-sakit-bhakti-mulia">Rumah Sakit Bhakti Mulia</a>
+<p class='preview__text preview__text--small'>
+Jakarta Barat, Indonesia
+</p>
+<div class='rating'></div>
+</div>
+</div>
+<div class='preview__link'>
+<a class="docket__link docket__link--preview" href="/rumah-sakit/rumah-sakit-bhakti-mulia">Lihat review rumah sakit</a>
+</div>
+</div>
+</div>
+<div class='preview__cart'>
+<div class='preview__inner'>
+<div class='preview__info preview__info--search'>
+<a class="preview__image preview__image--search" href="/rumah-sakit/rumah-sakit-columbia-asia-semarang"><image alt='Rumah Sakit Columbia Asia Semarang' class='lazyload' data-src='/assets/hospital_default-c426cd3ed77df51449028807011b9352dff4569c67e89c080133dfe3a756f3d8.jpg'></image>
+</a><div class='preview__rating preview__rating--search'>
+<a class="preview__text preview__text--first" href="/rumah-sakit/rumah-sakit-columbia-asia-semarang">Rumah Sakit Columbia Asia Semarang</a>
+<p class='preview__text preview__text--small'>
+Semarang, Indonesia
+</p>
+<div class='rating'></div>
+</div>
+</div>
+<div class='preview__link'>
+<a class="docket__link docket__link--preview" href="/rumah-sakit/rumah-sakit-columbia-asia-semarang">Lihat review rumah sakit</a>
+</div>
+</div>
+</div>
+<div class='preview__cart'>
+<div class='preview__inner'>
+<div class='preview__info preview__info--search'>
+<a class="preview__image preview__image--search" href="/rumah-sakit/rumah-sakit-mitra-keluarga-kelapa-gading"><image alt='Rumah Sakit Mitra Keluarga Kelapa Gading' class='lazyload' data-src='/assets/hospital_default-c426cd3ed77df51449028807011b9352dff4569c67e89c080133dfe3a756f3d8.jpg'></image>
+</a><div class='preview__rating preview__rating--search'>
+<a class="preview__text preview__text--first" href="/rumah-sakit/rumah-sakit-mitra-keluarga-kelapa-gading">Rumah Sakit Mitra Keluarga Kelapa Gading</a>
+<p class='preview__text preview__text--small'>
+Jakarta Utara, Indonesia
+</p>
+<div class='rating'></div>
+</div>
+</div>
+<div class='preview__link'>
+<a class="docket__link docket__link--preview" href="/rumah-sakit/rumah-sakit-mitra-keluarga-kelapa-gading">Lihat review rumah sakit</a>
+</div>
+</div>
+</div>
+<div class='preview__cart'>
+<div class='preview__inner'>
+<div class='preview__info preview__info--search'>
+<a class="preview__image preview__image--search" href="/rumah-sakit/mrccc-siloam-hospitals-semanggi"><image alt='MRCCC Siloam Hospitals Semanggi' class='lazyload' data-src='/assets/hospital_default-c426cd3ed77df51449028807011b9352dff4569c67e89c080133dfe3a756f3d8.jpg'></image>
+</a><div class='preview__rating preview__rating--search'>
+<a class="preview__text preview__text--first" href="/rumah-sakit/mrccc-siloam-hospitals-semanggi">MRCCC Siloam Hospitals Semanggi</a>
+<p class='preview__text preview__text--small'>
+Jakarta Selatan, Indonesia
+</p>
+<div class='rating'></div>
+</div>
+</div>
+<div class='preview__link'>
+<a class="docket__link docket__link--preview" href="/rumah-sakit/mrccc-siloam-hospitals-semanggi">Lihat review rumah sakit</a>
+</div>
+</div>
+</div>
+<div class='preview__cart'>
+<div class='preview__inner'>
+<a class='docket__seque' href='/rumah-sakit'>
+<div class='docket__layer docket__layer--preview'>
+<img class="preview__logo" src="/assets/logos3-6c236d1b3a528a68513f2de2a9b79e4d647fa2df67f0b0f4067dfcbb54d778e0.svg" alt="Logos3"/>
+<span class='docket__link docket__link--last docket__link--width'>
+Baca semua review
+</span>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='container container--fluid'>
+<div class='container__inners'>
+<div class='grid-recent'>
+<h2 class='title title--home'>
+<a href="/tanya-dokter">Tanya Dokter</a>
+</h2>
+<div class='grid-recent__container js-main-slider'>
+<div class='grid-recent__layer'>
+<div class='commentaries'>
+<div class='commentaries__logo'><img src="/assets/Doctor-64ae7d8b12e5201ae2e47992fa3318cf1fee75fd2b32bf55b0652e07b25f0854.svg" alt="Doctor"/></div>
+<div class='commentaries__comment-wrap'>
+<span class='commentaries__title'>
+<a href="/tanya-dokter/7384646">Dok, maaf mau tanya.
+Saya akhir2 ini kalau menstruasi 5hari dok tapi kadang 3hari udah selesai. Nahh sebulanan ni selesai mens, 5 hari kemudian keluar lendir semacam gumpalan darah gitu dok. Dan itu selama sebulan kadang keluar kadang ngga. Sebabnya kenapa ya dok?
+Mohon dijawab ya Dok. Terimakasih</a>
+</span>
+<div class='commentaries__description'>
+<span>Pertanyaan ini telah dijawab oleh seorang ahli medis</span>
+</div>
+</div>
+</div>
+<div class='grid-recent__panel'>
+<div class='pane'>
+<div class='pane__left'>
+<div class='pane__number'>
+<a href="/tanya-dokter/7384646">3
+<img src="/assets/comment-6ef27fbbb22ee30a4965af080c2151ff846749463fcd4eacea208628521ee68d.svg" alt="Comment"/>
+</a></div>
+</div>
+<div class='pane__right'>
+<a rel="nofollow" class="pane__like pane__like--type" data-remote="true" data-method="put" href="https://www.honestdocs.id/questions/7384646/like"><img src="/assets/like-45997a10c238d66c72acd243898f26595a5d63c505d1b8fa446852aa874dfbfd.svg" alt="Like"/></a>
+<a rel="nofollow" class="pane__like pane__like--type" data-remote="true" data-method="put" href="https://www.honestdocs.id/questions/7384646/dislike"><img src="/assets/dislike-fb6cbfb84e2ee580312aeab65ed194f0716b51459a736203f579e840c83d5336.svg" alt="Dislike"/></a>
+</div>
+</div>
+</div>
+</div>
+<div class='grid-recent__layer'>
+<div class='commentaries'>
+<div class='commentaries__logo'><img src="/assets/Doctor-64ae7d8b12e5201ae2e47992fa3318cf1fee75fd2b32bf55b0652e07b25f0854.svg" alt="Doctor"/></div>
+<div class='commentaries__comment-wrap'>
+<span class='commentaries__title'>
+<a href="/tanya-dokter/19415121">Cara mengatasi penyakit tipes bukan dengan cara tradisional</a>
+</span>
+<div class='commentaries__description'>
+<span>Pertanyaan ini telah dijawab oleh seorang ahli medis</span>
+</div>
+</div>
+</div>
+<div class='grid-recent__panel'>
+<div class='pane'>
+<div class='pane__left'>
+<div class='pane__number'>
+<a href="/tanya-dokter/19415121">1
+<img src="/assets/comment-6ef27fbbb22ee30a4965af080c2151ff846749463fcd4eacea208628521ee68d.svg" alt="Comment"/>
+</a></div>
+</div>
+<div class='pane__right'>
+<a rel="nofollow" class="pane__like pane__like--type" data-remote="true" data-method="put" href="https://www.honestdocs.id/questions/19415121/like"><img src="/assets/like-45997a10c238d66c72acd243898f26595a5d63c505d1b8fa446852aa874dfbfd.svg" alt="Like"/></a>
+<a rel="nofollow" class="pane__like pane__like--type" data-remote="true" data-method="put" href="https://www.honestdocs.id/questions/19415121/dislike"><img src="/assets/dislike-fb6cbfb84e2ee580312aeab65ed194f0716b51459a736203f579e840c83d5336.svg" alt="Dislike"/></a>
+</div>
+</div>
+</div>
+</div>
+<div class='grid-recent__layer'>
+<div class='commentaries'>
+<div class='commentaries__logo'><img src="/assets/Doctor-64ae7d8b12e5201ae2e47992fa3318cf1fee75fd2b32bf55b0652e07b25f0854.svg" alt="Doctor"/></div>
+<div class='commentaries__comment-wrap'>
+<span class='commentaries__title'>
+<a href="/tanya-dokter/12469368">Halo dok.. saya mau bertanya, apakah tenggorokan yg sakit/susah menelan, adalah dampak dari penyakit TB?</a>
+</span>
+<div class='commentaries__description'>
+<span>Pertanyaan ini telah dijawab oleh seorang ahli medis</span>
+</div>
+</div>
+</div>
+<div class='grid-recent__panel'>
+<div class='pane'>
+<div class='pane__left'>
+<div class='pane__number'>
+<a href="/tanya-dokter/12469368">2
+<img src="/assets/comment-6ef27fbbb22ee30a4965af080c2151ff846749463fcd4eacea208628521ee68d.svg" alt="Comment"/>
+</a></div>
+</div>
+<div class='pane__right'>
+<a rel="nofollow" class="pane__like pane__like--type" data-remote="true" data-method="put" href="https://www.honestdocs.id/questions/12469368/like"><img src="/assets/like-45997a10c238d66c72acd243898f26595a5d63c505d1b8fa446852aa874dfbfd.svg" alt="Like"/></a>
+<a rel="nofollow" class="pane__like pane__like--type" data-remote="true" data-method="put" href="https://www.honestdocs.id/questions/12469368/dislike"><img src="/assets/dislike-fb6cbfb84e2ee580312aeab65ed194f0716b51459a736203f579e840c83d5336.svg" alt="Dislike"/></a>
+</div>
+</div>
+</div>
+</div>
+<div class='grid-recent__layer'>
+<div class='commentaries'>
+<div class='commentaries__logo'><img src="/assets/Doctor-64ae7d8b12e5201ae2e47992fa3318cf1fee75fd2b32bf55b0652e07b25f0854.svg" alt="Doctor"/></div>
+<div class='commentaries__comment-wrap'>
+<span class='commentaries__title'>
+<a href="/tanya-dokter/23502346">sore dok. Saya mau nnya klw penyakit kebocoran mani katup akan smbh normal lagi
+. cpt ngga ngatasi yh</a>
+</span>
+<div class='commentaries__description'>
+<span>Pertanyaan ini telah dijawab oleh seorang ahli medis</span>
+</div>
+</div>
+</div>
+<div class='grid-recent__panel'>
+<div class='pane'>
+<div class='pane__left'>
+<div class='pane__number'>
+<a href="/tanya-dokter/23502346">1
+<img src="/assets/comment-6ef27fbbb22ee30a4965af080c2151ff846749463fcd4eacea208628521ee68d.svg" alt="Comment"/>
+</a></div>
+</div>
+<div class='pane__right'>
+<a rel="nofollow" class="pane__like pane__like--type" data-remote="true" data-method="put" href="https://www.honestdocs.id/questions/23502346/like"><img src="/assets/like-45997a10c238d66c72acd243898f26595a5d63c505d1b8fa446852aa874dfbfd.svg" alt="Like"/></a>
+<a rel="nofollow" class="pane__like pane__like--type" data-remote="true" data-method="put" href="https://www.honestdocs.id/questions/23502346/dislike"><img src="/assets/dislike-fb6cbfb84e2ee580312aeab65ed194f0716b51459a736203f579e840c83d5336.svg" alt="Dislike"/></a>
+</div>
+</div>
+</div>
+</div>
+<div class='grid-recent__layer'>
+<div class='commentaries'>
+<div class='commentaries__comment-wrap'>
+<span class='commentaries__title'>
+<a href="/tanya-dokter/6351325">Kaki saya seperti ini sejak 2 bulan lalu kira kira kenapa ya dok? Awalnya gatal terus saya garuk muncul benjolan kecil yg didalamnya seperti ada cairannya, karena saya gemas saya sobek benjolan itu dan cairannya keluar, tapi lama lama luka sobek itu gatal lagi dan tanpa sadar saya garuk sampe mel...</a>
+</span>
+<div class='commentaries__description'>
+</div>
+</div>
+</div>
+<div class='grid-recent__panel'>
+<div class='pane'>
+<div class='pane__left'>
+<div class='pane__number'>
+<a href="/tanya-dokter/6351325">0
+<img src="/assets/comment-6ef27fbbb22ee30a4965af080c2151ff846749463fcd4eacea208628521ee68d.svg" alt="Comment"/>
+</a></div>
+</div>
+<div class='pane__right'>
+<a rel="nofollow" class="pane__like pane__like--type" data-remote="true" data-method="put" href="https://www.honestdocs.id/questions/6351325/like"><img src="/assets/like-45997a10c238d66c72acd243898f26595a5d63c505d1b8fa446852aa874dfbfd.svg" alt="Like"/></a>
+<a rel="nofollow" class="pane__like pane__like--type" data-remote="true" data-method="put" href="https://www.honestdocs.id/questions/6351325/dislike"><img src="/assets/dislike-fb6cbfb84e2ee580312aeab65ed194f0716b51459a736203f579e840c83d5336.svg" alt="Dislike"/></a>
+</div>
+</div>
+</div>
+</div>
+<div class='grid-recent__layer'>
+<div class='commentaries'>
+<div class='commentaries__logo'><img src="/assets/Doctor-64ae7d8b12e5201ae2e47992fa3318cf1fee75fd2b32bf55b0652e07b25f0854.svg" alt="Doctor"/></div>
+<div class='commentaries__comment-wrap'>
+<span class='commentaries__title'>
+<a href="/tanya-dokter/38263755">Assalamualaikum..Dok saya mpunyai anak prmpuan usia 6bln dg sakit kolestasis dan sdg mnjalani kntrol setiap bulannya, alhmdlh smkin membaik.. hnya saja skrg trkena demam dan pilek, bolehkah mengkonsumsi obat parasetamol drops, pdhal ank sya jg msih mngkonsumsi obat untuk kolestasisnya. Trimakasih</a>
+</span>
+<div class='commentaries__description'>
+<span>Pertanyaan ini telah dijawab oleh seorang ahli medis</span>
+</div>
+</div>
+</div>
+<div class='grid-recent__panel'>
+<div class='pane'>
+<div class='pane__left'>
+<div class='pane__number'>
+<a href="/tanya-dokter/38263755">3
+<img src="/assets/comment-6ef27fbbb22ee30a4965af080c2151ff846749463fcd4eacea208628521ee68d.svg" alt="Comment"/>
+</a></div>
+</div>
+<div class='pane__right'>
+<a rel="nofollow" class="pane__like pane__like--type" data-remote="true" data-method="put" href="https://www.honestdocs.id/questions/38263755/like"><img src="/assets/like-45997a10c238d66c72acd243898f26595a5d63c505d1b8fa446852aa874dfbfd.svg" alt="Like"/></a>
+<a rel="nofollow" class="pane__like pane__like--type" data-remote="true" data-method="put" href="https://www.honestdocs.id/questions/38263755/dislike"><img src="/assets/dislike-fb6cbfb84e2ee580312aeab65ed194f0716b51459a736203f579e840c83d5336.svg" alt="Dislike"/></a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='container container--fluid container--blue container--gallery-news'>
+<div class='container__inners'>
+<div class='news news--gallery'>
+<div class='news__layer'>
+<div class='news__title'>
+<div class='news__inner'>
+<h4 class='news__topic'>
+<a href="/layanan-kesehatan">Layanan Kesehatan</a>
+</h4>
+</div>
+</div>
+<div class='news__items js-main-slider'>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/cara-mengatasi-sesak-napas-saat-hamil"><image alt='Cara Efektif dan Aman Mengatasi Sesak Napas Saat Hamil' class='lazyload' data-src='/system/blog_articles/images/000/002/523/thumb/Cara_Efektif_dan_Aman_Mengatasi_Sesak_Napas_Saat_Hamil.jpg'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/cara-mengatasi-sesak-napas-saat-hamil">Cara Efektif dan Aman Mengatasi Sesak Napas Saat Hamil</a>
+<p class='news__small'></p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/cara-mengatasi-sesak-napas-saat-hamil">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/9-obat-asam-urat-alami-tradisional"><image alt='10 Obat Asam Urat Alami Tradisional' class='lazyload' data-src='/system/blog_articles/images/000/001/108/thumb/9_Obat_Asam_Urat_Alami_Tradisional.jpg'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/9-obat-asam-urat-alami-tradisional">10 Obat Asam Urat Alami Tradisional</a>
+<p class='news__small'>Beragam bahan alami yang dapat Anda gunakan sebagai obat asam urat tradisional yang mudah &amp; murah didapatkan.</p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/9-obat-asam-urat-alami-tradisional">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/kemoterapi"><image alt='Mengenal Cara Kerja Kemoterapi dalam Pengobatan Kanker' class='lazyload' data-src='/system/blog_articles/images/000/000/505/thumb/Perawatan_Kemoterapi.jpg'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/kemoterapi">Mengenal Cara Kerja Kemoterapi dalam Pengobatan Kanker</a>
+<p class='news__small'></p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/kemoterapi">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/cara-mengobati-keseleo"><image alt='Cara Benar Mengobati Keseleo (Terkilir)' class='lazyload' data-src='/system/blog_articles/images/000/000/868/thumb/Cara_Benar_Mengobati_Keseleo_%28Terkilir%29.jpg'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/cara-mengobati-keseleo">Cara Benar Mengobati Keseleo (Terkilir)</a>
+<p class='news__small'></p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/cara-mengobati-keseleo">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/obat-sakit-tenggorokan-alami-dan-di-apotek"><image alt='Obat Sakit Tenggorokan Alami dan Apotek Ada Disini' class='lazyload' data-src='/system/blog_articles/images/000/001/685/thumb/Obat_Sakit_Tenggorokan_Alami_dan_Apotek_Ada_Disini.jpg'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/obat-sakit-tenggorokan-alami-dan-di-apotek">Obat Sakit Tenggorokan Alami dan Apotek Ada Disini</a>
+<p class='news__small'></p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/obat-sakit-tenggorokan-alami-dan-di-apotek">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/efek-samping-paracetamol"><image alt='Efek Samping Paracetamol dan Cara Menghindarinya' class='lazyload' data-src='/system/blog_articles/images/000/001/863/thumb/Efek_samping_paracetamol_dan_cara_menghindarinya.jpg'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/efek-samping-paracetamol">Efek Samping Paracetamol dan Cara Menghindarinya</a>
+<p class='news__small'></p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/efek-samping-paracetamol">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/10-obat-ambeien-alami-yang-ampuh"><image alt='10 Obat Ambeien Alami Yang Ampuh dan Mudah Dibuat' class='lazyload' data-src='/system/blog_articles/images/000/001/658/thumb/10_Obat_Ambeien_Alami_Yang_Ampuh_dan_Mudah_Dibuat.jpg'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/10-obat-ambeien-alami-yang-ampuh">10 Obat Ambeien Alami Yang Ampuh dan Mudah Dibuat</a>
+<p class='news__small'></p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/10-obat-ambeien-alami-yang-ampuh">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/apakah-postinor-aman"><image alt='Cegah Kehamilan Dengan Postinor, Apakah Aman?' class='lazyload' data-src='/system/blog_articles/images/000/003/368/thumb/apakah_postinor_aman.jpg'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/apakah-postinor-aman">Cegah Kehamilan Dengan Postinor, Apakah Aman?</a>
+<p class='news__small'></p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/apakah-postinor-aman">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/gejala-asam-urat-pada-kaki-dan-tips-mengatasinya"><image alt='Gejala Asam Urat Pada Kaki dan Tips Mengatasinya' class='lazyload' data-src='/system/blog_articles/images/000/001/794/thumb/Gejala_Asam_Urat_Pada_Kaki_dan_Tips_Mengatasinya.jpg'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/gejala-asam-urat-pada-kaki-dan-tips-mengatasinya">Gejala Asam Urat Pada Kaki dan Tips Mengatasinya</a>
+<p class='news__small'></p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/gejala-asam-urat-pada-kaki-dan-tips-mengatasinya">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/imunisasi"><image alt='Pencegahan Penyakit Dengan Imunisasi Sejak Dini' class='lazyload' data-src='/system/blog_articles/images/000/000/001/thumb/Pencegahan_Penyakit_Dengan_Imunisasi_Sejak_Dini.jpg'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/imunisasi">Pencegahan Penyakit Dengan Imunisasi Sejak Dini</a>
+<p class='news__small'></p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/imunisasi">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/obat-tipes-tradisional-paling-ampuh-100-alami"><image alt='20 Obat Tipes Alami &amp; Tradisional Paling Ampuh' class='lazyload' data-src='/system/blog_articles/images/000/001/901/thumb/20_Obat_Tipes_Tradisional_Paling_Ampuh.jpg'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/obat-tipes-tradisional-paling-ampuh-100-alami">20 Obat Tipes Alami &amp; Tradisional Paling Ampuh</a>
+<p class='news__small'></p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/obat-tipes-tradisional-paling-ampuh-100-alami">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/obat-batuk-ekspektoran-mukolitik-antitusif"><image alt='Tips Memilih Obat Batuk Sesuai Gejala, Penyebab dan Usia Penderita' class='lazyload' data-src='/system/blog_articles/images/000/000/569/thumb/Tips_Memilih_Obat_Batuk_Sesuai_Gejala_Penyebab_dan_Usia_Penderita.jpg'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/obat-batuk-ekspektoran-mukolitik-antitusif">Tips Memilih Obat Batuk Sesuai Gejala, Penyebab dan Usia Penderita</a>
+<p class='news__small'></p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/obat-batuk-ekspektoran-mukolitik-antitusif">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/medical-check-up"><image alt='Medical Check Up: Manfaat, Prosedur, dan Biaya' class='lazyload' data-src='/system/blog_articles/images/000/001/539/thumb/Medical_Check_Up_Kegunaan_dan_Prosedur.jpg'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/medical-check-up">Medical Check Up: Manfaat, Prosedur, dan Biaya</a>
+<p class='news__small'></p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/medical-check-up">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/tabel-tekanan-darah-normal-dan-tidak-normal"><image alt='Tabel Tekanan Darah Normal dan Tidak Normal' class='lazyload' data-src='/system/blog_articles/images/000/001/109/thumb/Tabel_Tekanan_Darah_Normal_dan_Tidak_Normal.jpg'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/tabel-tekanan-darah-normal-dan-tidak-normal">Tabel Tekanan Darah Normal dan Tidak Normal</a>
+<p class='news__small'></p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/tabel-tekanan-darah-normal-dan-tidak-normal">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/tes-kesehatan-yang-wajib-dilakukan"><image alt='Tes Kesehatan Yang Wajib Dilakukan!' class='lazyload' data-src='/system/blog_articles/images/000/003/091/thumb/Tes_Kesehatan_Yang_Wajib_Dilakukan!.jpg'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/tes-kesehatan-yang-wajib-dilakukan">Tes Kesehatan Yang Wajib Dilakukan!</a>
+<p class='news__small'></p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/tes-kesehatan-yang-wajib-dilakukan">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/analisa-gas-darah"><image alt='Analisa Gas Darah : Definisi, Pemeriksaan, Nilai Normal' class='lazyload' data-src='/system/blog_articles/images/000/002/674/thumb/open-uri20190225-24705-1nnkbrw'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/analisa-gas-darah">Analisa Gas Darah : Definisi, Pemeriksaan, Nilai Normal</a>
+<p class='news__small'></p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/analisa-gas-darah">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='news__layer'>
+<div class='news__title'>
+<div class='news__inner'>
+<h4 class='news__topic'>
+<a href="/keluarga">Keluarga</a>
+</h4>
+</div>
+</div>
+<div class='news__items js-main-slider'>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/100-manfaat-asi-eksklusif-bagi-ibu-dan-bayi"><image alt='Manfaat Asi Eksklusif Bagi Ibu dan Bayi' class='lazyload' data-src='/system/blog_articles/images/000/001/155/thumb/100_Manfaat_Asi_Eksklusif_Bagi_Ibu_dan_Bayi.jpg'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/100-manfaat-asi-eksklusif-bagi-ibu-dan-bayi">Manfaat Asi Eksklusif Bagi Ibu dan Bayi</a>
+<p class='news__small'></p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/100-manfaat-asi-eksklusif-bagi-ibu-dan-bayi">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/ingin-tahu-tanda-bayi-cukup-asi-ini-dia-tandanya"><image alt='Ingin Tahu Apakah Bayi Cukup ASI? Ini Dia Tandanya' class='lazyload' data-src='/system/blog_articles/images/000/001/408/thumb/Ingin_Tahu_Tanda_Bayi_Cukup_Asi__Ini_Dia_Tandanya.jpg'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/ingin-tahu-tanda-bayi-cukup-asi-ini-dia-tandanya">Ingin Tahu Apakah Bayi Cukup ASI? Ini Dia Tandanya</a>
+<p class='news__small'></p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/ingin-tahu-tanda-bayi-cukup-asi-ini-dia-tandanya">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/kandungan-asi-air-susu-ibu"><image alt='Kandungan Asi (Air Susu Ibu) Yang Menjadikannya Istimewa' class='lazyload' data-src='/system/blog_articles/images/000/001/769/thumb/Kandungan_Asi_%28Air_Susu_Ibu%29_Yang_Menjadikannya_Istimewa.jpg'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/kandungan-asi-air-susu-ibu">Kandungan Asi (Air Susu Ibu) Yang Menjadikannya Istimewa</a>
+<p class='news__small'></p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/kandungan-asi-air-susu-ibu">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/cara-benar-minum-pil-kb"><image alt='Cara Benar Minum Pil KB ' class='lazyload' data-src='/system/blog_articles/images/000/001/028/thumb/Cara_Benar_Minum_Pil_KB.jpg'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/cara-benar-minum-pil-kb">Cara Benar Minum Pil KB </a>
+<p class='news__small'></p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/cara-benar-minum-pil-kb">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/merek-pil-kb-di-indonesia"><image alt='16 Harga Merek Pil KB yang Beredar di Indonesia ' class='lazyload' data-src='/system/blog_articles/images/000/003/295/thumb/merek_pil_KB_%282%29.jpg'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/merek-pil-kb-di-indonesia">16 Harga Merek Pil KB yang Beredar di Indonesia </a>
+<p class='news__small'></p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/merek-pil-kb-di-indonesia">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/kapan-bayi-boleh-minum-air-putih"><image alt='Kapan Bayi Boleh Minum Air Putih? dan Berapa Banyak?' class='lazyload' data-src='/system/blog_articles/images/000/002/150/thumb/Kapan_Bayi_Boleh_Minum_Air_Putih__dan_Berapa_Banyak_.jpg'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/kapan-bayi-boleh-minum-air-putih">Kapan Bayi Boleh Minum Air Putih? dan Berapa Banyak?</a>
+<p class='news__small'></p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/kapan-bayi-boleh-minum-air-putih">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/10-penyebab-bayi-susah-tidur-malam-dan-cara-mengatasinya"><image alt='10 Penyebab Bayi Susah Tidur Malam dan Cara Mengatasinya' class='lazyload' data-src='/system/blog_articles/images/000/001/978/thumb/10_Penyebab_Bayi_Susah_Tidur_Malam_dan_Cara_Mengatasinya.jpg'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/10-penyebab-bayi-susah-tidur-malam-dan-cara-mengatasinya">10 Penyebab Bayi Susah Tidur Malam dan Cara Mengatasinya</a>
+<p class='news__small'></p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/10-penyebab-bayi-susah-tidur-malam-dan-cara-mengatasinya">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/pilih-sesar-atau-lahir-normal-kelebihan-kekurangan"><image alt='Pilih Sesar atau Lahir Normal? Ini Kelebihan dan Kekurangannya' class='lazyload' data-src='/system/blog_articles/images/000/001/835/thumb/Pilih_Sesar_atau_Lahir_Normal__Ini_Kelebihan_dan_Kekurangannya.jpg'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/pilih-sesar-atau-lahir-normal-kelebihan-kekurangan">Pilih Sesar atau Lahir Normal? Ini Kelebihan dan Kekurangannya</a>
+<p class='news__small'></p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/pilih-sesar-atau-lahir-normal-kelebihan-kekurangan">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/naik-motor-saat-hamil-amankah-buat-ibu-hamil-dan-bayi"><image alt='Naik Motor Saat Hamil, Amankah Untuk Ibu dan Bayi?' class='lazyload' data-src='/system/blog_articles/images/000/006/657/thumb/Naik_Motor_Saat_Hamil__Amankah_Buat_Ibu_Hamil_dan_Bayi.jpg'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/naik-motor-saat-hamil-amankah-buat-ibu-hamil-dan-bayi">Naik Motor Saat Hamil, Amankah Untuk Ibu dan Bayi?</a>
+<p class='news__small'></p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/naik-motor-saat-hamil-amankah-buat-ibu-hamil-dan-bayi">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/hipertensi-dalam-kehamilan-ibu"><image alt='Hipertensi Dalam Kehamilan' class='lazyload' data-src='/system/blog_articles/images/000/000/576/thumb/Hipertensi_Dalam_Kehamilan.jpg'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/hipertensi-dalam-kehamilan-ibu">Hipertensi Dalam Kehamilan</a>
+<p class='news__small'></p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/hipertensi-dalam-kehamilan-ibu">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/penyakit-penyebab-susah-hamil"><image alt='7 Penyakit yang Sering Jadi Penyebab Susah Hamil' class='lazyload' data-src='/system/blog_articles/images/000/004/294/thumb/penyakit_penyebab_susah_hamil.jpg'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/penyakit-penyebab-susah-hamil">7 Penyakit yang Sering Jadi Penyebab Susah Hamil</a>
+<p class='news__small'></p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/penyakit-penyebab-susah-hamil">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/tanda-tanda-awal-kehamilan"><image alt='12 Tanda Tanda Hamil Tahap Awal' class='lazyload' data-src='/system/blog_articles/images/000/000/644/thumb/Tanda-Tanda_Awal_Kehamilan.jpg'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/tanda-tanda-awal-kehamilan">12 Tanda Tanda Hamil Tahap Awal</a>
+<p class='news__small'>Mengetahui tanda-tanda kehamilan yang dapat Anda rasakan pada tahap awal</p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/tanda-tanda-awal-kehamilan">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/cara-mengobati-batuk-dan-pilek-pada-ibu-hamil"><image alt='Cara Mengobati Batuk Dan Pilek Pada Ibu Hamil' class='lazyload' data-src='/system/blog_articles/images/000/000/575/thumb/open-uri20190213-20038-162tptn'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/cara-mengobati-batuk-dan-pilek-pada-ibu-hamil">Cara Mengobati Batuk Dan Pilek Pada Ibu Hamil</a>
+<p class='news__small'></p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/cara-mengobati-batuk-dan-pilek-pada-ibu-hamil">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/pengobatan-flu-singapura-pada-anak"><image alt='Tips Pengobatan Flu Singapura Pada Anak Kesayangan Anda' class='lazyload' data-src='/system/blog_articles/images/000/000/570/thumb/Tips_Pengobatan_Flu_Singapura_Pada_Anak_Kesayangan_Anda.jpg'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/pengobatan-flu-singapura-pada-anak">Tips Pengobatan Flu Singapura Pada Anak Kesayangan Anda</a>
+<p class='news__small'></p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/pengobatan-flu-singapura-pada-anak">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/cara-mengatasi-pilek-pada-bayi-dan-anak"><image alt='Cara Mengatasi Pilek pada Bayi dan Anak Yang tepat dan Aman' class='lazyload' data-src='/system/blog_articles/images/000/000/573/thumb/Cara_Mengatasi_Pilek_pada_Bayi_dan_Anak_Yang_tepat_dan_Aman.jpg'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/cara-mengatasi-pilek-pada-bayi-dan-anak">Cara Mengatasi Pilek pada Bayi dan Anak Yang tepat dan Aman</a>
+<p class='news__small'></p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/cara-mengatasi-pilek-pada-bayi-dan-anak">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/5-jenis-vitamin-untuk-bayi"><image alt='5 Jenis Vitamin Untuk Bayi Yang Paling Utama' class='lazyload' data-src='/system/blog_articles/images/000/002/086/thumb/5_Jenis_Vitamin_Untuk_Bayi_Yang_Paling_Utama.jpg'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/5-jenis-vitamin-untuk-bayi">5 Jenis Vitamin Untuk Bayi Yang Paling Utama</a>
+<p class='news__small'></p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/5-jenis-vitamin-untuk-bayi">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='news__layer'>
+<div class='news__title'>
+<div class='news__inner'>
+<h4 class='news__topic'>
+<a href="/lifestyle">Lifestyle</a>
+</h4>
+</div>
+</div>
+<div class='news__items js-main-slider'>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/16-cara-menguruskan-badan-sehat-dan-alami"><image alt='16 Cara Menurunkan Berat Badan Yang Sehat dan Alami' class='lazyload' data-src='/system/blog_articles/images/000/001/527/thumb/16_Cara_Menguruskan_Badan_Yang_Sehat_dan_Alami.jpg'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/16-cara-menguruskan-badan-sehat-dan-alami">16 Cara Menurunkan Berat Badan Yang Sehat dan Alami</a>
+<p class='news__small'></p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/16-cara-menguruskan-badan-sehat-dan-alami">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/cara-menghilangkan-bekas-gigitan-nyamuk"><image alt='Cara Alami Menghilangkan Bekas Gigitan Nyamuk' class='lazyload' data-src='/system/blog_articles/images/000/001/359/thumb/Cara_Alami_Menghilangkan_Bekas_Gigitan_Nyamuk.jpg'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/cara-menghilangkan-bekas-gigitan-nyamuk">Cara Alami Menghilangkan Bekas Gigitan Nyamuk</a>
+<p class='news__small'></p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/cara-menghilangkan-bekas-gigitan-nyamuk">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/cara-ampuh-menghilangkan-bekas-luka"><image alt='Cara Ampuh Menghilangkan Bekas Luka' class='lazyload' data-src='/system/blog_articles/images/000/000/813/thumb/Cara_Ampuh_Menghilangkan_Bekas_Luka.jpg'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/cara-ampuh-menghilangkan-bekas-luka">Cara Ampuh Menghilangkan Bekas Luka</a>
+<p class='news__small'></p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/cara-ampuh-menghilangkan-bekas-luka">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/daftar-penyakit-saat-puasa"><image alt='Waspada, Ini 6 Penyakit Saat Puasa yang Paling Sering Terjadi' class='lazyload' data-src='/system/blog_articles/images/000/003/360/thumb/daftar_penyakit_saat_puasa_%282%29.jpg'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/daftar-penyakit-saat-puasa">Waspada, Ini 6 Penyakit Saat Puasa yang Paling Sering Terjadi</a>
+<p class='news__small'></p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/daftar-penyakit-saat-puasa">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/kenali-gejala-dan-cara-pencegahan-cacar-monyet"><image alt='Kenali Gejala dan Cara Pencegahan Cacar Monyet (Monkeypox)' class='lazyload' data-src='/system/blog_articles/images/000/003/392/thumb/Cacar.jpg'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/kenali-gejala-dan-cara-pencegahan-cacar-monyet">Kenali Gejala dan Cara Pencegahan Cacar Monyet (Monkeypox)</a>
+<p class='news__small'></p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/kenali-gejala-dan-cara-pencegahan-cacar-monyet">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/enzim-enzim-pencernaan-pada-lambung-pankreas-usus-halus"><image alt='Enzim-Enzim Pencernaan Pada Lambung, Pankreas, Usus Halus' class='lazyload' data-src='/system/blog_articles/images/000/008/331/thumb/Enzyme.jpg'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/enzim-enzim-pencernaan-pada-lambung-pankreas-usus-halus">Enzim-Enzim Pencernaan Pada Lambung, Pankreas, Usus Halus</a>
+<p class='news__small'></p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/enzim-enzim-pencernaan-pada-lambung-pankreas-usus-halus">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/makanan-mengandung-purin"><image alt='4 Makanan Mengandung Purin Ini Bisa Picu Asam Urat Kambuh' class='lazyload' data-src='/system/blog_articles/images/000/008/378/thumb/makanan_mengandung_purin.jpg'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/makanan-mengandung-purin">4 Makanan Mengandung Purin Ini Bisa Picu Asam Urat Kambuh</a>
+<p class='news__small'></p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/makanan-mengandung-purin">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/tabel-kalori-makanan-dan-minuman"><image alt='Tabel Kalori Makanan dan Minuman Anda Sehari-hari' class='lazyload' data-src='/system/blog_articles/images/000/003/244/thumb/Tabel_Kalori_Makanan_dan_Minuman_Anda_Sehari-hari.jpg'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/tabel-kalori-makanan-dan-minuman">Tabel Kalori Makanan dan Minuman Anda Sehari-hari</a>
+<p class='news__small'></p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/tabel-kalori-makanan-dan-minuman">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/manfaat-biji-kelor"><image alt='Manfaat Biji Kelor Yang Mengagumkan Bagi Kesehatan' class='lazyload' data-src='/system/blog_articles/images/000/002/195/thumb/Manfaat_Biji_Kelor_Yang_Mengagumkan_Bagi_Kesehatan.jpg'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/manfaat-biji-kelor">Manfaat Biji Kelor Yang Mengagumkan Bagi Kesehatan</a>
+<p class='news__small'></p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/manfaat-biji-kelor">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/tabel-kandungan-lemak-dalam-makanan"><image alt='Kandungan Lemak Dalam Makanan Favoritmu' class='lazyload' data-src='/system/blog_articles/images/000/000/002/thumb/Kandungan_Lemak_Dalam_Makanan.jpg'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/tabel-kandungan-lemak-dalam-makanan">Kandungan Lemak Dalam Makanan Favoritmu</a>
+<p class='news__small'>Mengenal lebih dekat tentang kandungan lemak dalam makanan yang dapat </p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/tabel-kandungan-lemak-dalam-makanan">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/manfaat-daun-kelor"><image alt='Manfaat Daun Kelor Yang Terbukti Ampuh Melawan Penyakit' class='lazyload' data-src='/system/blog_articles/images/000/002/153/thumb/Manfaat_Daun_Kelor_Yang_Terbukti_Ampuh_Melawan_Penyakit.jpg'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/manfaat-daun-kelor">Manfaat Daun Kelor Yang Terbukti Ampuh Melawan Penyakit</a>
+<p class='news__small'></p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/manfaat-daun-kelor">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/cara-tidur-yang-baik-untuk-kesehatan"><image alt='Bagaimanakah Cara Tidur Yang Baik Untuk Kesehatan?' class='lazyload' data-src='/system/blog_articles/images/000/001/537/thumb/Bagaimanakah_Cara_Tidur_Yang_Baik_Untuk_Kesehatan_.jpg'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/cara-tidur-yang-baik-untuk-kesehatan">Bagaimanakah Cara Tidur Yang Baik Untuk Kesehatan?</a>
+<p class='news__small'></p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/cara-tidur-yang-baik-untuk-kesehatan">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/penyebab-insomnia-sulit-tidur"><image alt='Penyebab Insomnia Yang Membuat Anda Susah Tidur' class='lazyload' data-src='/system/blog_articles/images/000/001/805/thumb/Penyebab_Insomnia_Yang_Membuat_Anda_Susah_Tidur.jpg'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/penyebab-insomnia-sulit-tidur">Penyebab Insomnia Yang Membuat Anda Susah Tidur</a>
+<p class='news__small'></p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/penyebab-insomnia-sulit-tidur">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/ingin-jantung-sehat-terapkan-tips-jantung-sehat-ini"><image alt='Ingin Jantung Sehat? Terapkan Tips Jantung Sehat Ini' class='lazyload' data-src='/system/blog_articles/images/000/002/140/thumb/Ingin_Jantung_Sehat__Terapkan_Tips_Jantung_Sehat_Ini.jpg'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/ingin-jantung-sehat-terapkan-tips-jantung-sehat-ini">Ingin Jantung Sehat? Terapkan Tips Jantung Sehat Ini</a>
+<p class='news__small'></p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/ingin-jantung-sehat-terapkan-tips-jantung-sehat-ini">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/vape-tanpa-nikotin"><image alt='Vape Tanpa Nikotin, Benarkah Lebih Aman dari Efek Samping?' class='lazyload' data-src='/system/blog_articles/images/000/008/317/thumb/vape_tanpa_nikotin_%282%29.jpg'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/vape-tanpa-nikotin">Vape Tanpa Nikotin, Benarkah Lebih Aman dari Efek Samping?</a>
+<p class='news__small'></p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/vape-tanpa-nikotin">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+<div class='news__cart'>
+<div class='news__inner'>
+<a class="news__image" href="/penyebab-nyeri-haid-indikasi-penyakit"><image alt='Kenali Penyebab Nyeri Haid dan Indikasi Adanya Penyakit Lain' class='lazyload' data-src='/system/blog_articles/images/000/000/557/thumb/Kenali_Penyebab_Nyeri_Haid_Dan_Indikasi_Adanya_Penyakit_Lain.jpg'></image>
+</a><div class='news__description'>
+<a class="news__big" href="/penyebab-nyeri-haid-indikasi-penyakit">Kenali Penyebab Nyeri Haid dan Indikasi Adanya Penyakit Lain</a>
+<p class='news__small'></p>
+</div>
+<div class='news__item'>
+<a class="news__link" href="/penyebab-nyeri-haid-indikasi-penyakit">Baca Selengkapnya</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type="text/javascript" data-pagespeed-no-defer>pagespeed.lazyLoadImages.overrideAttributeFunctions();</script><script type="text/psajs" data-pagespeed-orig-index="4">window.onload=function(e){ratingReview('.rating',"/assets/starshalf-687d55f5fed2401cd5364984b1daf97b8c791bb1af6045d9a3eb933896fa103f.svg","/assets/starwhite-5ec5316af370787cfce23ca97253b57f0490e98f365c8edc7a76a86132b40874.svg","/assets/stargreen-ecba752f70325d029a3c76e354eb624c1de99696792a4ed0212365922d0108d2.svg",true);};</script>
+</section>
+<footer class='footer'>
+<div class='footer__container'>
+<div class='footer__row footer__row--top'>
+<div class='footer__logo'>
+<a class="footer__logo-link" href="/"><img src="/assets/footer-logo-cb214c17fc4ea968b8e0564f38bbb4cb7be3ee14d57e0e823a847a26337bd280.svg" alt="Footer logo"/></a>
+</div>
+</div>
+<div class='footer__row footer__row--center'>
+<div class='footer__search'>
+<div class='footer__label'>
+Daftar Newsletter
+</div>
+<div class='btn-group dropup footer__btn'>
+<button class='footer__button' disabled='disabled' type='button'>
+Tips Sehat
+</button>
+<form action='https://www.createsend.com/t/subscribeerror?description=' class='js-cm-form footer__form' data-id='92D4C54F0FEC16E5ADC2B1904DE9ED1A656ED576158E1FB60AB992E63CB3F3407A81A944B79C391F0575C1C6ECA628723DFFBABAC9BBD9286665E3A83460A83A' id='subForm' method='post'>
+<input class='footer__input js-cm-email-input' id='fieldEmail' name='cm-gjljjy-gjljjy' placeholder='Dapatkan tips &amp; berita kesehatan' required='' type='email'>
+<button class='footer__submit js-submit-analytics js-cm-submit-button' type='submit'>
+Submit
+</button>
+</input>
+</form>
+<script src='https://js.createsend1.com/javascript/copypastesubscribeformlogic.js' data-pagespeed-orig-type='text/javascript' type="text/psajs" data-pagespeed-orig-index="5"></script>
+</div>
+</div>
+</div>
+<div class='footer__row'>
+<div class='footer__navigation'>
+<ul class='footer__list'>
+<p class='footer__category-name'>
+Madu
+</p>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/cara-menggunakan-madu-sebagai-obat-batuk-anak">Madu Untuk Obat Batuk Anak</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/manfaat-madu-untuk-ibu-hamil-yang-bunda-harus-tau">Madu Untuk Ibu Hamil</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/khasiat-madu-hitam-sungguh-luar-biasa">Manfaat Madu Hitam</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/manfaat-madu">Manfaat Madu</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/ciri-ciri-madu-asli-ujilah-melalui-8-cara-berikut">Ciri-Ciri Madu Asli</a>
+</li>
+</ul>
+<ul class='footer__list'>
+<p class='footer__category-name'>
+Ibu Hamil
+</p>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/tanda-tanda-awal-kehamilan">Tanda Tanda Kehamilan</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/kapan-bercak-darah-tanda-hamil-muncul">Bercak Carah Tanda Hamil</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/hb-normal-ibu-hamil">HB Normal Ibu Hamil</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/masa-subur-wanita-setelah-haid">Masa Subur Wanita</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/makanan-penguat-kandungan-cegah-keguguran">Makanan Penguat Kandungan</a>
+</li>
+</ul>
+<ul class='footer__list'>
+<p class='footer__category-name'>
+Obat Infeksi
+</p>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/cefixime-100mg-200mg">Cefixime</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/ciprofloxacin">Ciprofloxacin</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/cefspan">Cefspan</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/super-tetra">Super Tetra</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/dionicol">Dionicol</a>
+</li>
+</ul>
+<ul class='footer__list'>
+<p class='footer__category-name'>
+Bayi
+</p>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/ttv-normal-bayi-baru-lahir">TTV Normal Bayi</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/cara-mengeluarkan-dahak-pada-bayi-dengan-mudah">Mengeluarkan Dahak Bayi</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/bintik-merah-pada-kulit-bayi-setelah-demam">Bintik Merah Pada Bayi</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/bab-bayi-berwarna-hijau-penyebab-dan-solusinya">BAB Bayi Hijau</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/cara-menaikkan-berat-badan-bayi-efektif-dan-aman">Menaikkan Berat Badan Bayi</a>
+</li>
+</ul>
+<ul class='footer__list'>
+<p class='footer__category-name'>
+Tipes
+</p>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/penyebab-tifus-dan-cara-mencegahnya">Penyebab Tipes</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/ciri-ciri-dan-gejala-penyakit-tipes">Ciri-Ciri Tipes</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/obat-sakit-tipes-yang-bisa-dibeli-di-apotek">Obat Tipes</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/tifus">Tifus</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/tipes">Tipes</a>
+</li>
+</ul>
+<ul class='footer__list'>
+<p class='footer__category-name'>
+HIV &amp; AIDS
+</p>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/ciri-ciri-ruam-hiv">Ciri Ruam HIV</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/gejala-awal-hiv">Gejala Awal HIV</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/10-ciri-ciri-hiv-pada-wanita">Ciri HIV Pada Wanita</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/masa-inkubasi-hiv">Masa Inkubasi HIV</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/obat-hiv-aids-menyembuhkan">Obat HIV AIDS</a>
+</li>
+</ul>
+<ul class='footer__list'>
+<p class='footer__category-name'>
+Sakit Tenggorokan
+</p>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/inilah-bahaya-radang-tenggorokan-yang-ditakuti">Bahaya Radang Tenggorokan</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/radang-tenggorokan">Radang Tenggorokan</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/obat-radang-tenggorokan-anak-manjur-dan-aman">Obat Radang Tenggorokan Anak</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/gejala-radang-tenggorokan">Gejala Radang Tenggorokan</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/sakit-tenggorokan-saat-hamil">Sakit Tenggorokan Saat Hamil</a>
+</li>
+</ul>
+<ul class='footer__list'>
+<p class='footer__category-name'>
+Multivitamin
+</p>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/enervon-c">Enervon C</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/imboost">Imboost</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/imboost-force">Imboost Force</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/neurobion">Neurobion</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/imboost-kids">Imboost Kids</a>
+</li>
+</ul>
+<ul class='footer__list'>
+<p class='footer__category-name'>
+Makanan &amp; Minuman Diet
+</p>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/16-contoh-makanan-diet-keto-yang-mudah-ditemukan">Makanan Diet Keto</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/16-resep-minuman-penurun-berat-badan">Minuman Penurun Berat Badan</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/20-manfaat-buah-plum-untuk-diet-dan-kesehatan-tubuh">Buah Plum Untuk Diet</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/diet-jeruk-nipis-menurunkan-berat-badan-dalam-waktu-1-minggu">Diet Jeruk Nipis</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/makanan-untuk-diet-menurunkan-berat-badan">Makanan Penurun Berat Badan</a>
+</li>
+</ul>
+<ul class='footer__list'>
+<p class='footer__category-name'>
+Kurang Tidur
+</p>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/cara-tidur-yang-baik-untuk-kesehatan">Cara Tidur Yang Baik</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/penyebab-insomnia-sulit-tidur">Penyebab Insomnia</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/penyebab-susah-tidur-malam-dan-solusinya">Penyebab Susah Tidur</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/durasi-dan-waktu-tidur-baik-kesehatan">Durasi Waktu Tidur</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/10-akibat-kurang-tidur">Akibat Kurang Tidur</a>
+</li>
+</ul>
+<ul class='footer__list'>
+<p class='footer__category-name'>
+Usus
+</p>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/enzim-enzim-pencernaan-pada-lambung-pankreas-usus-halus">Enzim Pencernaan</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/16-ciri-ciri-dan-gejala-penyakit-usus-buntu">Gejala Usus Buntu</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/6-fungsi-usus-halus-duodenum-jejunum-dan-ileum">Fungsi Usus Halus</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/10-ciri-ciri-usus-buntu">Ciri Usus Buntu</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/obat-radang-usus-medis-dan-alami">Obat Radang Usus</a>
+</li>
+</ul>
+<ul class='footer__list'>
+<p class='footer__category-name'>
+Kolesterol
+</p>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/20-jenis-obat-kolesterol-generik-dan-paten">Jenis Obat Kolesterol</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/ciri-ciri-kolesterol-rendah-dan-bahayanya-bagi-tubuh">Ciri Kolesterol Rendah</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/sayuran-penurun-kolesterol-tinggi">Sayuran Penurun Kolesterol</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/jus-penurun-kolesterol">Jus Penurun Kolesterol</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/10-makanan-penderita-kolesterol-tinggi">Makanan Bebas Kolesterol</a>
+</li>
+</ul>
+<ul class='footer__list'>
+<p class='footer__category-name'>
+Mental Health
+</p>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/trypophobia">Trypophobia</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/agoraphobia">Agoraphobia</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/gangguan-somatisasi">Gangguan Somatisasi</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/jenis-psikosis-dan-gejala">Jenis Psikosis</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/philophobia">Philophobia</a>
+</li>
+</ul>
+<ul class='footer__list'>
+<p class='footer__category-name'>
+Obat Alergi
+</p>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/cetirizine">Cetirizine</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/bdm-tablet">BDM Tablet</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/carbidu">Carbidu</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/lerzin">Lerzin</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/dexamethasone">Dexamethasone</a>
+</li>
+</ul>
+<ul class='footer__list'>
+<p class='footer__category-name'>
+Obat Nyeri
+</p>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/cataflam">Cataflam</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/dexketoprofen">Dexketoprofen</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/paracetamol">Paracetamol</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/mefinal-500">Mefinal</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/asam-mefenamat">Asam Mefenamat</a>
+</li>
+</ul>
+<ul class='footer__list'>
+<p class='footer__category-name'>
+Demam Berdarah
+</p>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/3-fase-demam-berdarah-dbd">Fase DBD</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/penyebab-demam-berdarah-dbd">Penyebab DBD</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/20-ciri-ciri-demam-berdarah-dengue-dbd">Ciri-Ciri DBD</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/demam-berdarah">Demam Berdarah (DBD)</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/gejala-demam-berdarah-pada-anak-dan-balita">DBD Anak &amp; Balita</a>
+</li>
+</ul>
+<ul class='footer__list'>
+<p class='footer__category-name'>
+Ibu Melahirkan
+</p>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/persiapan-melahirkan-caesar">Persiapan Melahirkan Caesar</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/kenali-tanda-bahaya-masa-nifas">Masa Nifas</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/persiapan-melahirkan-normal-sebelum-selama-sesudah">Persiapan Melahirkan Normal</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/pilih-sesar-atau-lahir-normal-kelebihan-kekurangan">Pilih Lahir Normal atau Caesar</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/operasi-caesar">Operasi Caesar</a>
+</li>
+</ul>
+<ul class='footer__list'>
+<p class='footer__category-name'>
+Ibu Menyusui
+</p>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/makanan-sehat-untuk-ibu-menyusui">Makanan Sehat Ibu Menyusui</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/100-manfaat-asi-eksklusif-bagi-ibu-dan-bayi">Manfaat ASI Esklusif</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/cara-memperbanyak-asi-secara-alami">Cara Memperbanyak ASI</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/6-pantangan-makanan-ibu-menyusui">Pantangan Makanan Ibu Menyusui</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/kandungan-asi-air-susu-ibu">Kandungan ASI</a>
+</li>
+</ul>
+<ul class='footer__list'>
+<p class='footer__category-name'>
+Kontrasepsi
+</p>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/obat-penunda-haid-yang-ampuh-pil-kb">Pil KB</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/cara-benar-minum-pil-kb">Cara Minum Pil KB</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/jenis-kb-apa-saja-yang-perlu-diketahui">Jenis Jenis Alat KB</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/pil-kb-yasmin-manfaat-dan-efek-samping">Pil KB Yasmin</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/microgynon">Pil KB Microgynon</a>
+</li>
+</ul>
+<ul class='footer__list'>
+<p class='footer__category-name'>
+Asam Urat
+</p>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/cara-menurunkan-asam-urat-secara-alami-dan-efektif">Cara Menurunkan Asam Urat</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/asam-urat">Asam Urat</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/9-obat-asam-urat-alami-tradisional">Obat Asam Urat</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/nilai-normal-asam-urat">Nilai Normal Asam Urat</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/gejala-asam-urat-pada-kaki-dan-tips-mengatasinya">Gejala Asam Urat</a>
+</li>
+</ul>
+<ul class='footer__list'>
+<p class='footer__category-name'>
+Beli Obat Populer
+</p>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/toko-kesehatan/apotik-online/microgynon-tab-25-strip">MICROGYNON TAB 25 STRIP</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/toko-kesehatan/apotik-online/anvomer-b6-tab">ANVOMER B6 TAB</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/toko-kesehatan/apotik-online/simvastatin-yarindo-10mg-tab-30s">Simvastatin Yarindo</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/toko-kesehatan/apotik-online/folavicap-400mcg-tab-100s">FOLAVICAP 400MCG TAB 100S</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/toko-kesehatan/apotik-online/biropyron-capl-100s">BIROPYRON CAPL 100S</a>
+</li>
+</ul>
+<ul class='footer__list'>
+<p class='footer__category-name'>
+Artikel Obat Populer
+</p>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/spasmal">Spasmal</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/hufabion">Hufabion</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/calcifar-plus">Calcifar Plus</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/sagestam-salep">Sagestam Salep</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/thiamycin">Thiamycin</a>
+</li>
+</ul>
+<ul class='footer__list'>
+<p class='footer__category-name'>
+Apotek di Indonesia
+</p>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/apotik/apotek-artomoro-tegal">Apotek Artomoro</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/apotik/apotik-sahabat-jaya-padang">Apotik Sahabat Jaya</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/apotik/apotek-kharisma-jambi">Apotek Kharisma</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/apotik/apotik-murni-2-tangerang">Apotik Murni 2</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/apotik/apotik-berlian-sorong">Apotik Berlian</a>
+</li>
+</ul>
+<ul class='footer__list'>
+<p class='footer__category-name'>
+Puasa
+</p>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/menu-buka-puasa-dan-sahur-sehat">Menu Sehat Buka Puasa dan Sahur</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/manfaat-air-kelapa-muda-saat-buka-puasa">Manfaat Air Kelapa Muda Untuk Puasa</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/manfaat-puasa-untuk-anak">Manfaat Puasa Untuk Anak</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/menu-buka-puasa-untuk-anak-kost">Menu Buka Puasa Untuk Anak Kost</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/menjaga-daya-tahan-tubuh-saat-puasa">Menjaga Daya Tahan Tubuh Saat Puasa</a>
+</li>
+</ul>
+<ul class='footer__list'>
+<p class='footer__category-name'>
+Polusi
+</p>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/jenis-makanan-penangkal-polusi">Makanan Anti Polusi</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/waspadai-risiko-pencemaran-udara">Risiko Pencemaran Udara</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/batas-aman-polusi-udara-aqi-pm25">Angka Aman AQI dan PM2.5</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/bahaya-polusi-udara-bagi-kesehatan">Bahaya Polusi Udara</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/dampak-polusi-udara-bagi-bayi-anak">Dampak Polusi Bagi Anak</a>
+</li>
+</ul>
+<ul class='footer__list'>
+<p class='footer__category-name'>
+Penyakit Trending
+</p>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/cacar-monyet">Cacar Monyet</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/bilirubin">Bilirubin</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/muntah-darah">Muntah Darah</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/penyebab-kutu-air-dan-cara-mengobatinya">Kutu Air</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/infeksi-saluran-kemih-isk">Infeksi Saluran Kemih</a>
+</li>
+</ul>
+<ul class='footer__list'>
+<p class='footer__category-name'>
+Toko Kesehatan
+</p>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/toko-kesehatan/klinik-gigi">Paket Perawatan Gigi</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/toko-kesehatan/apotik-online">Pengiriman Obat</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/toko-kesehatan/fisioterapi">Paket Fisioterapi</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/toko-kesehatan/home-care">Paket Home Care</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/toko-kesehatan/pemeriksaan-kesehatan">Paket Pemeriksaan Kesehatan</a>
+</li>
+</ul>
+<ul class='footer__list'>
+<p class='footer__category-name'>
+Postinor
+</p>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/postinor">Postinor Pil KB</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/postinor">Efek Samping Postinor</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/postinor">Jual Postinor</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/postinor">Postinor Tablet</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/postinor">Postinor Adalah</a>
+</li>
+</ul>
+<ul class='footer__list'>
+<p class='footer__category-name'>
+Kesehatan Gigi
+</p>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/obat-sakit-gigi-anak-paling-manjur-dan-aman">Obat Sakit Gigi Anak</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/13-cara-membersihkan-karang-gigi-bahan-alami">Cara Alami Membersihkan Karang Gigi</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/penyebab-dan-cara-merawat-gigi-sensitif">Cara Merawat Gigi Sensitif</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/cara-mengobati-sakit-gigi-akibat-gigi-bungsu">Cara Mengobati Sakit Gigi Bungsu</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/mengenal-fungsi-jenis-dan-bagian-gigi-manusia">Jenis &amp; Bagian Gigi Manusia</a>
+</li>
+</ul>
+<ul class='footer__list'>
+<p class='footer__category-name'>
+Paket Health Checkup
+</p>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/toko-kesehatan/pemeriksaan-kesehatan/paket-panel-kesuburan-pria-1x-visit-di-path-lab-klinik">Tes Kesuburan Pria</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/toko-kesehatan/pemeriksaan-kesehatan/prediabetic-profile-di-path-lab">Paket Cek Diabetes</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/toko-kesehatan/pemeriksaan-kesehatan/paket-prenatal-panel-awal-kehamilan-di-path-lab">Paket Prenatal (Tes Pra Kehamilan)</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/toko-kesehatan/pemeriksaan-kesehatan/medical-check-up-paket-basic-di-path-lab-klinik">Paket Medical Check Up</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/toko-kesehatan/pemeriksaan-kesehatan/paket-hormonal-screen-di-path-lab">Cak Gangguan Haid Tidak Teratur</a>
+</li>
+</ul>
+<ul class='footer__list'>
+<p class='footer__category-name'>
+Paket Kesehatan Gigi
+</p>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/toko-kesehatan/klinik-gigi/veneer-1-kali-di-host-dental-clinic">Paket Veneer Gigi</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/toko-kesehatan/klinik-gigi/pembersihan-karang-gigi-dan-staining-dentalogy-dental-care">Paket Pembersihan Karang Gigi</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/toko-kesehatan/klinik-gigi/pencabutan-gigi-bungsu-1-kali-di-host-dental-clinic">Paket Cabut Gigi</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/toko-kesehatan/klinik-gigi/penambalan-gigi-1-kali-di-host-dental-clinic">Paket Tambal Gigi</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/toko-kesehatan/klinik-gigi/perawatan-teeth-bleaching-menggunakan-LED-light-activator-include-scaling-dan-fluoride-coating-di-entistique-clinic">Paket Bleaching Gigi</a>
+</li>
+</ul>
+<ul class='footer__list'>
+<p class='footer__category-name'>
+Paket Perawatan Kecantikan
+</p>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/toko-kesehatan/perawatan-kecantikan/combo-facial-treatment-1-kali-di-aveia-clinic">Paket Facial Treatment</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/toko-kesehatan/perawatan-kecantikan/anti-hair-loss-therapy-di-genese-clinic">Paket Anti Rambut Rontok</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/toko-kesehatan/perawatan-kecantikan/facial-korean-vshape-by-storz-medical-di-genese-clinic">Paket Facial Korean V-Shaped</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/toko-kesehatan/perawatan-kecantikan/mikrodermabrasi-facial-1-kali-di-aveia-clinic">Paket Mikrodermabrasi Facial</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/toko-kesehatan/perawatan-kecantikan/triple-proionic-anti-stretch-mark-treatment-by-indiba-1-kali-dengan-indiba-di-genese-clinic">Paket Penghilang Stretch Mark</a>
+</li>
+</ul>
+<ul class='footer__list'>
+<p class='footer__category-name'>
+Paket Fisioterapi
+</p>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/toko-kesehatan/fisioterapi/fisioterapi-sakit-pinggang-5x-visit-di-nk-health">Paket Fisioterapi Sakit Pinggang</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/toko-kesehatan/fisioterapi/fisioterapi-vertigo-5x-visit-di-nk-health">Paket Fisioterapi Vertigo</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/toko-kesehatan/fisioterapi/fisioterapi-cidera-olahraga-5x-visit-di-nk-health">Paket Fisioterapi Cedera Olahraga</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/toko-kesehatan/fisioterapi/fisioterapi-pasca-stroke-5x-visit-di-nk-health">Paket Fisioterapi Pasca Stroke</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/toko-kesehatan/fisioterapi/fisioterapi-keseleo-5x-visit-di-nk-health">Paket Fisioterapi Keseleo</a>
+</li>
+</ul>
+<ul class='footer__list'>
+<p class='footer__category-name'>
+Paket Home Care
+</p>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/toko-kesehatan/home-care/panel-pemeriksaan-pra-nikah-male-di-path-lab-homeservice">Paket Pre-Marital Pria</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/toko-kesehatan/home-care/panel-pemeriksaan-pra-nikah-female-di-path-lab-homeservice">Paket Pre-Marital Wanita</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/toko-kesehatan/home-care/paket-medical-check-up-homecare-di-path-lab-klinik">Paket Medical Check Up di Rumah</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/toko-kesehatan/home-care/fisioterapi-sakit-pinggang-di-bagus-homecare">Paket Fisioterapi Keseleo di Rumah</a>
+</li>
+<li class='footer__item'>
+<a class="footer__link" href="https://www.honestdocs.id/toko-kesehatan/home-care/paket-cek-darah-tyroid-di-path-lab-indonesia-homeservice">Paket Cek Darah Tiroid di Rumah</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class='footer__copywriting'>
+<div class='footer__copy'>
+@ 2019 HonestDocs 🏥👩‍⚕️💊🐶🦄 - Hak Cipta Dilindungi
+<div class='footer__right'>
+<a href="/campaigns/tentang-kami">Tentang Kami</a>
+<a href="https://www.honestdocs.id/campaigns/syarat-dan-ketentuan">Syarat dan Ketentuan</a>
+<a href="/sitemap">Sitemap</a>
+<span>
+🇹🇭
+</span>
+<a href="https://www.honestdocs.co">HonestDocs Thailand</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</div>
+<!-- to speedup rendering -->
+<script async='' src='https://cdn.onesignal.com/sdks/OneSignalSDK.js' type="text/psajs" data-pagespeed-orig-index="6"></script>
+<script src="/assets/application-b1d982920ee38c58c8dabfc5707d563cbbd3975d401846b72198357d0add9464.js.pagespeed.jm.HK-3F5XINr.js" defer="defer" type="text/psajs" data-pagespeed-orig-index="7"></script>
+</body>
+</html>
+<script type="text/javascript" src="/pagespeed_static/js_defer.I4cHjq6EEP.js"></script>

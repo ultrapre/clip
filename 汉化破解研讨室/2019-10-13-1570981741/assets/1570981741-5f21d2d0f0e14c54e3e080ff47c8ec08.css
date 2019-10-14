@@ -1,0 +1,65 @@
+  
+.svw {width: 50px; height: 20px; background: #fff;} 
+.svw ul {position: relative; left: -999em;} 
+ 
+  
+.stripViewer {  
+position: relative; 
+overflow: hidden;  
+border: 5px solid #9999ee;   
+margin: 0 0 1px 0; 
+} 
+.stripViewer ul {   
+margin: 0; 
+padding: 0; 
+position: relative; 
+left: 0; 
+top: 0; 
+width: 1%; 
+list-style-type: none; 
+} 
+.stripViewer ul li {  
+float:left; 
+} 
+.stripTransmitter { 
+overflow: auto; 
+width: 1%; 
+} 
+.stripTransmitter ul { 
+margin: 0; 
+padding: 0; 
+position: relative; 
+list-style-type: none; 
+} 
+.stripTransmitter ul li{ 
+width: 20px; 
+float:left; 
+margin: 0 1px 1px 0; 
+} 
+.stripTransmitter a{ 
+font: bold 10px Verdana, Arial; 
+text-align: center; 
+line-height: 22px; 
+background: #9999ee; 
+color: #fff; 
+text-decoration: none; 
+display: block; 
+} 
+.stripTransmitter a:hover, a.current{ 
+background: #fff; 
+color: #9999ee; 
+} 
+ 
+  
+#tooltip { 
+background: #fff; 
+color: #000; 
+opacity: 0.85; 
+border: 5px solid #dedede; 
+} 
+#tooltip h3 {  
+font: normal 10px Verdana;  
+margin: 0;  
+padding: 6px 2px;  
+border: 0; 
+} 

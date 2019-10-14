@@ -1,0 +1,850 @@
+
+  <!DOCTYPE html>
+  <html id="" class="">
+    <!-- OriginalSrc: https://bbs.sumisora.net/read.php?tid=218484&fpage=5 -->
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <title>关于FATAL/FAKE里*.la文件的解析|【汉化破解研讨室】|【游戏汉化交流区】 - 『澄空学园』 GalGame专题网</title>
+      
+
+<link rel="stylesheet" type="text/css" href="assets/1570905998-5f21d2d0f0e14c54e3e080ff47c8ec08.css" referrerpolicy="no-referrer">
+<link type="text/css" href="assets/1570905998-2f10d407050ab6b2185fb483267feb32.css" rel="stylesheet" referrerpolicy="no-referrer">
+<link href="assets/1570905998-6ea61090578ddc8e91dc9b26707cebc8.css" rel="stylesheet" type="text/css" referrerpolicy="no-referrer">
+<link rel="stylesheet" type="text/css" href="assets/1570905998-46d427da9cafb653c4ed606490c99b3a.css" referrerpolicy="no-referrer">
+
+
+<style class="darkreader darkreader--fallback" media="screen"></style>
+<style class="darkreader darkreader--text" media="screen"></style>
+<style class="darkreader darkreader--invert" media="screen"></style>
+<style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}</style>
+<style class="darkreader darkreader--user-agent" media="screen">html {
+    background-color: #191a1b !important;
+}
+html, body, input, textarea, select, button {
+    background-color: #191a1b;
+}
+html, body, input, textarea, select, button {
+    border-color: #5a5956;
+    color: #f0ebe2;
+}
+a {
+    color: #4791e7;
+}
+table {
+    border-color: #4f4e4c;
+}
+::placeholder {
+    color: #bfb9ac;
+}
+::selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+::-moz-selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #565a0f !important;
+    color: #f0ebe2 !important;
+}
+::-webkit-scrollbar {
+    background-color: #1d1f1f;
+    color: #cbc5b9;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #2c2d2d;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #343636;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #404142;
+}
+::-webkit-scrollbar-corner {
+    background-color: #191a1b;
+}
+* {
+    scrollbar-color: #2c2d2d #1d1f1f;
+}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css"> 
+.tr3 td,.tr3 th{border-right:1px solid #D5E5E8;}
+.y-style{text-align:center;}
+.tr1 th{border-right:1px solid #D5E5E8;}
+.tr1 td.td1{border-left:0}
+ 
+
+.signature img { max-height:250px !important; }
+</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--override" media="screen">.jfk-bubble {
+    background-color: #000000 !important;
+}
+.vimvixen-hint {
+    background-color: #765500 !important;
+    border-color: #d5b22e !important;
+    color: #f9edcc !important;
+}</style>
+<style type="text/css">@keyframes fadeInOpacity{0%{opacity:0}to{opacity:1}}:hover>*>.fbvd--wrapper{animation-name:fadeInOpacity;animation-duration:.3s;opacity:1}.fbvd--wrapper{position:absolute;top:10px;left:10px;opacity:0;text-align:center;margin:0;z-index:5}.fbvd--wrapper a{background: url("") no-repeat 3px 4.55px; background-color: #fff; display:inline-block;font:700 14px Helvetica,Arial,sans-serif;color:#4b4f56;text-decoration:none;vertical-align:middle;padding:0px 8px 0px;margin-right:8px;border-radius:2px; line-height: 22px; padding-left:19px; border: 1px solid #e7e7e7; background-size: 13px}.fbvd--wrapper a:last-child{margin-right:0}.fbvd--wrapper a:hover{text-decoration:none}.fbvd--wrapper a:focus{box-shadow:0 0 1px 2px rgba(88,144,255,.75),0 1px 1px rgba(0,0,0,.15);outline:none}.fbvd--wrapper b{font-size:13px;position:relative;top:1px;color:#3b5998;font-weight:400}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+
+      <style class="mx-wc-style">
+        .mx-wc-main img {max-width: 100%;}
+        .mx-wc-main{
+          box-sizing: content-box;
+          background-color: rgb(25, 26, 27) !important;
+          margin: 0 auto;
+          margin-top: 20px;
+          max-width: 1349px;
+        }
+        @media (min-width: 768px) {
+          .mx-wc-main { padding: 15px 15px 80px 15px }
+        }
+        @media (max-width: 767px) {
+          .mx-wc-main { padding: 15px 3px 80px 3px }
+        }
+  
+      </style>
+    </head>
+    <body style="background-color: #ffffff !important; min-height: 100%; height: auto; position: static !important; overflow: auto !important; padding-bottom: 0px !important;" id="" class="">
+      <div class="mx-wc-main">
+        <div id="wrapA" class="mx-wc-selected-elem mx-wc-1570905998" style="display: block; float: none !important; position: relative !important; top: 0px !important; left: 0px !important; margin: 0px !important; flex: unset !important; width: 100% !important; max-width: 100% !important; box-sizing: border-box !important;">
+
+<div id="header">
+<div class="toptool tar">	<span>
+	<a href="https://bbs.sumisora.net/read.php?tid=218484&amp;fpage=5&amp;skinco=simple" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">手机版</a>
+
+	| <a style="cursor:pointer;" id="td_skin" data-mx-warn="Empty URL">风格切换<img src="assets/1570905998-5c8e409588b73ce4284cf5b9bd619e15.gif"></a>
+	| <a href="https://bbs.sumisora.net/read.php?tid=10894912" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">学生手册</a>
+	</span>
+</div>
+<table cellspacing="0" cellpadding="0" align="center" width="100%">
+<tbody><tr>
+	<td class="banner"><a href="https://bbs.sumisora.net/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img id="forumlogo" src="assets/1570905998-7ac78a0e1e3ce795251288b0c8bd4b1b.png"></a></td>
+	<td class="banner" id="banner" align="right"></td>
+</tr>
+<tr><td align="center" height="1" colspan="2"></td></tr>
+</tbody></table>
+<div id="h_guide" class="guide" colspan="2"><span class="s3">»</span>
+
+	<span style="font-weight:bold" class="s3">silasu</span>&nbsp;<a href="https://bbs.sumisora.net/login.php?action=quit&amp;verify=034be2bd" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">退出</a> |
+	<a id="td_profile" href="https://bbs.sumisora.net/profile.php" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">控制面板</a>
+	| <a id="td_msg" href="https://bbs.sumisora.net/message.php" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+
+	短消息</a>
+
+	| <a id="td_sort" href="https://bbs.sumisora.net/sort.php" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">统计排行</a>
+
+	| <a href="https://bbs.sumisora.net/member.php" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">会员</a>
+
+	| <a href="https://bbs.sumisora.net/search.php" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">搜索</a>
+	| <a style="cursor:pointer;" id="td_hack" data-mx-warn="Empty URL">社区服务<img src="assets/1570905998-5c8e409588b73ce4284cf5b9bd619e15.gif"></a>
+
+	| <a href="https://bbs.sumisora.net/hack.php?H_name=galgamevote" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">GALGAME角色人气投票活动</a>
+
+ | <a href="https://bbs.sumisora.net/yume/polls/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">近期关注</a><!--[if lte IE 6]>
+ | <a href="read.php?tid=10955539" style="color:red">本站已停止支持IE6，请升级或更换浏览器</a>
+<![endif]-->
+</div>
+
+
+
+</div>
+<div id="main">
+
+
+
+
+<div class="t3" style="margin-top:8px"><table width="100%" cellspacing="0" cellpadding="0" align="center">
+	<tbody><tr><td class="b"><img src="assets/1570905998-ca4a91079181c2a5cb3514b2e5b5f035.gif" align="absmiddle"> <a href="https://bbs.sumisora.net/index.php" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">『澄空学园』</a> » <a href="https://bbs.sumisora.net/thread.php?fid=77" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">【游戏汉化交流区】</a> » <a href="https://bbs.sumisora.net/thread.php?fid=78&amp;page=5" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">【汉化破解研讨室】</a> » <a href="https://bbs.sumisora.net/read.php?tid=218484" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">关于FATAL/FAKE里*.la文件的解析</a> <a href="https://bbs.sumisora.net/rss.php?tid=218484" target="_blank" title="Rss订阅本帖最新内容" referrerpolicy="no-referrer" rel="noopener noreferrer"><img align="absmiddle" src="assets/1570905998-b4369735f1bfb33ab69477230a8ba635.png"></a></td></tr>
+</tbody></table></div>
+
+<!--ads begin-->
+
+<!--ads end-->
+<div class="t3"><table width="100%" align="center" cellspacing="0" cellpadding="0">
+	<tbody><tr><td align="left"><div class="fl"></div></td><td align="right" style="padding-bottom:.2em"><a href="https://bbs.sumisora.net/post.php?action=reply&amp;fid=78&amp;tid=218484" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1570905998-132cb83b134d7ecd9b390389d489bc43.png"></a>
+
+<a href="https://bbs.sumisora.net/post.php?fid=78" style="margin-left:.5em" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1570905998-8cab7ee31ae503cf78e5410d40cec291.png" id="td_post"></a>
+
+</td></tr>
+</tbody></table></div>
+
+
+
+<form name="delatc" method="post">
+
+
+<div class="t" style="margin-bottom: 0px; border-bottom: 0px; --darkreader-inline-border-bottom: initial;" data-darkreader-inline-border-bottom=""><table cellspacing="0" cellpadding="0" width="100%">
+	<tbody><tr><th class="h"><strong class="fl w"><b>本页主题:</b> 关于FATAL/FAKE里*.la文件的解析</strong>
+	<span class="fr w"><a data-mx-warn="Empty URL">&nbsp;</a><a href="https://bbs.sumisora.net/job.php?action=previous&amp;fid=78&amp;tid=218484&amp;fpage=5&amp;goto=previous" class="fn" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">上一主题</a> | <a href="https://bbs.sumisora.net/job.php?action=previous&amp;fid=78&amp;tid=218484&amp;fpage=5&amp;goto=next" class="fn" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">下一主题</a> | <a href="javascript:scroll(0,999999)" title="底端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">底端</a></span> </th>
+	</tr>
+	<tr><td></td></tr>
+	<tr class="tr2"><td colspan="2" class="tar">
+
+		<a id="usetool" style="cursor:pointer" onclick="sendmsg('pw_ajax.php?action=usetool','',this.id)" data-mx-warn="Empty URL">[使用道具]</a>
+
+		<br></td>
+	</tr>
+	<tr><td></td></tr>
+</tbody></table></div>
+
+<a name="tpc" data-mx-warn="Empty URL"></a>
+<div class="t t2" style="border-top: 0px; --darkreader-inline-border-top: initial;" data-darkreader-inline-border-top=""><table cellspacing="0" cellpadding="0" width="100%" style="table-layout: fixed; border-top: 0px; --darkreader-inline-border-top: initial;" data-darkreader-inline-border-top="">
+	<tbody><tr class="tr1"><th style="width:20%" rowspan="2" class="r_two">
+
+		<img src="assets/1570905998-1cde2ccde0fc90dbe6db3784fc6ec383.gif" title="该用户目前不在线" align="absmiddle">
+
+<b>rednaxela</b>
+<div style="margin:.3em 0 .4em .2em"></div>
+<div class="user-pic"><table style="border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left=""><tbody><tr><td width="1">
+
+<a href="https://bbs.sumisora.net/profile.php?action=show&amp;uid=9227" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img class="pic" src="assets/1570905998-ce00c7df760cd0b54791980099058989.gif" style="max-width:185px;max-height:200px;overflow:hidden" border="0"></a>
+
+</td><td style="vertical-align:top"><span id="sf_0"></span></td></tr></tbody></table>
+</div>
+		级别: <font color="#555555" data-darkreader-inline-color="" style="--darkreader-inline-color:#cfc9be;">澄空三年生上学期</font><br>
+		<img style="margin:.2em 0 .6em" src="assets/1570905998-5fc5bacf4fd91c54a5fe72c4ceff18fa.gif"><br>
+
+<span class="user-info2" id="showface_0">
+<span class="user-infoWrap2">
+
+
+精华:
+
+		<a href="https://bbs.sumisora.net/search.php?authorid=9227&amp;digest=1" target="_blank" class="s4 f9" referrerpolicy="no-referrer" rel="noopener noreferrer">5</a>
+<br>
+发帖: <span class="s1 f9">375</span><br>
+学分: <span class="s2 f9">35 点</span><br>
+澄空币: <span class="s3 f9">895 KID</span><br>
+
+		GPA: <span class="s2 f9">7 点</span><br>
+
+		<span class="gray">注册时间:2005-04-15<br>
+		最后登录:2016-04-07 <br><br> 
+		</span>
+		</span></span>
+		</th>
+		<th height="100%" class="r_one" valign="top" id="td_tpc" style="padding: 5px 15px 0px; border: 0px; width: 80%; overflow: hidden; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+			<div class="tiptop">
+			<span class="fl" style="white-space:nowrap;">
+			<a href="https://bbs.sumisora.net/post.php?action=quote&amp;fid=78&amp;tid=218484&amp;pid=tpc&amp;article=0" onclick="return sendurl(this,4,event)" id="quote_tpc" title="引用回复这个帖子" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">引用</a> <a href="https://bbs.sumisora.net/post.php?action=modify&amp;fid=78&amp;tid=218484&amp;pid=tpc&amp;article=0" id="modify_tpc" onclick="return sendurl(this,4,event)" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">编辑</a>
+			<a href="https://bbs.sumisora.net/message.php?action=write&amp;touid=9227" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">短信</a>
+
+			<a href="https://bbs.sumisora.net/operate.php?action=report&amp;tid=218484&amp;pid=tpc" onclick="return sendurl(this,8)" id="report_tpc" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">举报</a>
+
+			<a href="https://bbs.sumisora.net/read.php?tid=218484&amp;uid=9227" title="只看楼主的所有帖子" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">只看</a>
+
+			<a style="cursor:pointer;" onclick="copyUrl('tpc')" title="此楼地址" data-mx-warn="Empty URL">锚点</a>
+			</span>
+
+			<div class="c"></div>
+			</div>
+			<h1 id="subject_tpc" class="fl">&nbsp;关于FATAL/FAKE里*.la文件的解析</h1>
+			
+
+			<div id="p_tpc" class="c"></div>
+
+<!--
+-->
+
+			<div class="tpc_content" id="read_tpc">FATAL/FAKE, Fate/stay night的同人3D格斗游戏.应该是相当有名的东西了吧,不多介绍了.<br><br>嗯因为有人想替换FATAL/FAKE里的背景音乐,所以帮忙看了看.看到是个相当简单的东西,想说顺便做个例子也好.于是就有了本文.<br><br>这次我们少点废话,多点代码.之前发的系列翻译(呃,没翻完拖着了,人的惰性啊...)主要是以Python为例子来写程序的.换用其它语言如何呢? 本文里采用了Java为实现语言,实现了对FATAL/FAKE里的拆包/打包的功能.但是只是非常粗糙的实现,其中有些处理细节被忽略了,下面会再提到.<br>如果希望运行本例子的程序但是尚未安装JDK或者JRE的,请到Sun的官方网站:<br><a href="http://java.sun.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">http://java.sun.com/</a><br>下载JDK或JRE并安装.<br><br>因为目标是背景音乐的替换,我们找到了bgm.la这个文件.而且这是个同人游戏,一个合理的猜测是它不会花多少工夫自己从头设计一种专有的音频格式,而会采用常见的标准格式.进一步猜测这里使用的格式是易于使用且免费的音频格式,Ogg.以前也提到过Ogg只是种容器格式,一般我们说的Ogg格式实际上是Ogg Vorbis.不过这都没什么关系,因为有这个固定格式的容器就可以了.<br><br>我们希望了解这种归档文件的结构,但是不想多花工夫.怎么办?<br>使用工具: ExtractData (<a href="http://atelibet.s11.xrea.com/side_yuu/tool/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">http://atelibet.s11.xrea.com/side_yuu/tool/</a>), 本例中使用的是0.93版<br>同样是出于这只是个简单的同人游戏的考虑,我们可以猜测游戏使用的归档格式应该不太复杂,甚至很可能是无压缩无加密的.而ExtractData有内建的搜索功能,可以在文件里搜索无压缩无加密的AHX,BMP,JPG,MPG,OGG,PNG,WAV,WMV等格式的数据,可以帮我们快速完成一些所需信息的收集而不必自己动手.直接使用ExtractData打开bgm.la,会提示这不是已支持的归档格式,并询问是否搜索.确认后,就会看到以下结果:<br><span class="highslide"><img src="assets/1570905998-3c41a7ede460abceefd154398eecfc31.jpg" border="0" style="max-width: 100%;max-height: 800px;"></span><br>果然不出所料,bgm.la里有Ogg文件.就这么解出来的播放的话,可以确认是原本的文件,没问题.<br><br>接下来我们使用十六进制编辑器打开bgm.la.<br><span class="highslide"><img src="assets/1570905998-686d2b3626c65ab5f01f593191d7d11a.jpg" border="0" style="max-width: 100%;max-height: 800px;"></span><br><br>根据常见游戏归档的一般形式,我们可以马上得知头4个字节,"LARC"是一个特征标记(signature),并没有什么特别意义,可以忽略.(其实是会让人联想到larc这个解压程序的,不过它的文件后缀应该是lzs才对)<br><br>接下来看到的4个字节是0C 00 00 00.以little-endian字节序来看,这个值怎么看都是12.联系到用ExtractData看到的数据,可以大胆猜测这是个4字节的整型数,表示归档内的文件个数.<br><br>后面是0B 00,接着一串可读的字符串. 0B 00是十进制的11,数数后面这字符串的长度,正好就是11.可以猜测这是个2字节的整型数,表示文件名的长度.后面的字符串自然就是文件名了.<br><br>接着,66 9A 2F 00.马上对应到ExtractData给出的数据里第一行最后两项.没错,这个数字就是最后两项的差,也就是文件的大小(反应快的其实对照"文件大小"把十进制换算过来也会得出一样的结论).<br><br>然后是4字节的0.有读到我先前翻译的那系列文的同学或许会记得,看index从第二个开始看比较合适,因为第一个很可能有很多0,无法判断意义.那么我们就继续看下去.<br><br>又是两字节的数字接一个字符串,然后同样是文件大小.再接着就有趣了.对应第一个index entry里是4个字节的00的地方,在第二个entry里不是零,而是第一个里所描述的文件大小.马上可以猜测这是相对文件索引之后(或者说相对原始文件内容开始)的偏移量.<br><br>稍微检查一下,基本上就确定上面的猜测是正确的了.重要的是,如何把上述结构转换为代码.<br><br>首先,应对file index的形式,我们定义一个类类存放index里每个entry的数据:<br><h6 class="quote"><a href="javascript:" onclick="CopyCode(document.getElementById('code1'));" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Copy code</a></h6><pre class="prettyprint" id="code1" style="border-radius:5px;font-family:monaco,consolas,monospace;font-size:12px;overflow-x:auto;line-height:1.4em"><span class="com">/*
+ * @(#)LarcIndexEntry.java&nbsp; 2007/03/10
+ * Written by rednaxela / FX
+ */</span><span class="pln">
+
+</span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">LarcIndexEntry</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+&nbsp; &nbsp; 
+&nbsp; &nbsp; </span><span class="kwd">private</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> filename</span><span class="pun">;</span><span class="pln">
+&nbsp; &nbsp; </span><span class="kwd">private</span><span class="pln"> </span><span class="kwd">int</span><span class="pln"> length</span><span class="pun">;</span><span class="pln">
+&nbsp; &nbsp; </span><span class="kwd">private</span><span class="pln"> </span><span class="kwd">int</span><span class="pln"> offset</span><span class="pun">;</span><span class="pln">
+&nbsp; &nbsp; 
+&nbsp; &nbsp; </span><span class="com">/**
+&nbsp; &nbsp;&nbsp; * @return the filename
+&nbsp; &nbsp;&nbsp; */</span><span class="pln">
+&nbsp; &nbsp; </span><span class="kwd">public</span><span class="pln"> </span><span class="typ">String</span><span class="pln"> getFilename</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">return</span><span class="pln"> filename</span><span class="pun">;</span><span class="pln">
+&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln">
+&nbsp; &nbsp; 
+&nbsp; &nbsp; </span><span class="com">/**
+&nbsp; &nbsp;&nbsp; * @param filename the filename to set
+&nbsp; &nbsp;&nbsp; */</span><span class="pln">
+&nbsp; &nbsp; </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> setFilename</span><span class="pun">(</span><span class="typ">String</span><span class="pln"> filename</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">filename </span><span class="pun">=</span><span class="pln"> filename</span><span class="pun">;</span><span class="pln">
+&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln">
+&nbsp; &nbsp; 
+&nbsp; &nbsp; </span><span class="com">/**
+&nbsp; &nbsp;&nbsp; * @return the length
+&nbsp; &nbsp;&nbsp; */</span><span class="pln">
+&nbsp; &nbsp; </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">int</span><span class="pln"> getLength</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">return</span><span class="pln"> length</span><span class="pun">;</span><span class="pln">
+&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln">
+&nbsp; &nbsp; 
+&nbsp; &nbsp; </span><span class="com">/**
+&nbsp; &nbsp;&nbsp; * @param length the length to set
+&nbsp; &nbsp;&nbsp; */</span><span class="pln">
+&nbsp; &nbsp; </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> setLength</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> length</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">length </span><span class="pun">=</span><span class="pln"> length</span><span class="pun">;</span><span class="pln">
+&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln">
+&nbsp; &nbsp; 
+&nbsp; &nbsp; </span><span class="com">/**
+&nbsp; &nbsp;&nbsp; * @return the offset
+&nbsp; &nbsp;&nbsp; */</span><span class="pln">
+&nbsp; &nbsp; </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">int</span><span class="pln"> getOffset</span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">return</span><span class="pln"> offset</span><span class="pun">;</span><span class="pln">
+&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln">
+&nbsp; &nbsp; 
+&nbsp; &nbsp; </span><span class="com">/**
+&nbsp; &nbsp;&nbsp; * @param offset the offset to set
+&nbsp; &nbsp;&nbsp; */</span><span class="pln">
+&nbsp; &nbsp; </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> setOffset</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> offset</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">this</span><span class="pun">.</span><span class="pln">offset </span><span class="pun">=</span><span class="pln"> offset</span><span class="pun">;</span><span class="pln">
+&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln">&nbsp; &nbsp; 
+</span><span class="pun">}</span></pre><br>代码几乎是自动生成的,所以有些没什么意义的注释可以不用在意.<br><br>接下来让我们把解包和打包的功能实现出来:<br><h6 class="quote"><a href="javascript:" onclick="CopyCode(document.getElementById('code2'));" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Copy code</a></h6><pre class="prettyprint" id="code2" style="border-radius:5px;font-family:monaco,consolas,monospace;font-size:12px;overflow-x:auto;line-height:1.4em"><span class="com">/*
+ * @(#)LarcArchiver.java&nbsp; 2007/03/10
+ * Written by rednaxela / FX
+ */</span><span class="pln">
+
+</span><span class="kwd">import</span><span class="pln"> java</span><span class="pun">.</span><span class="pln">io</span><span class="pun">.*;</span><span class="pln">
+</span><span class="kwd">import</span><span class="pln"> java</span><span class="pun">.</span><span class="pln">util</span><span class="pun">.*;</span><span class="pln">
+
+</span><span class="com">/**
+ * Demonstrating archive operations on *.la files as seen in FATAL/FAKE.
+ */</span><span class="pln">
+</span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">class</span><span class="pln"> </span><span class="typ">LarcArchiver</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+&nbsp; &nbsp; 
+&nbsp; &nbsp; </span><span class="kwd">static</span><span class="pln"> </span><span class="kwd">final</span><span class="pln"> </span><span class="kwd">byte</span><span class="pun">[]</span><span class="pln"> signature </span><span class="pun">=</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">(</span><span class="kwd">byte</span><span class="pun">)</span><span class="str">'L'</span><span class="pun">,</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">byte</span><span class="pun">)</span><span class="str">'A'</span><span class="pun">,</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">byte</span><span class="pun">)</span><span class="str">'R'</span><span class="pun">,</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">byte</span><span class="pun">)</span><span class="str">'C'</span><span class="pln">
+&nbsp; &nbsp; </span><span class="pun">};</span><span class="pln">
+
+
+&nbsp; &nbsp; </span><span class="com">/**
+&nbsp; &nbsp;&nbsp; * the application entry point
+&nbsp; &nbsp;&nbsp; * @param args (command line) parameters
+&nbsp; &nbsp;&nbsp; */</span><span class="pln">
+&nbsp; &nbsp; </span><span class="kwd">public</span><span class="pln"> </span><span class="kwd">static</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> main</span><span class="pun">(</span><span class="typ">String</span><span class="pln"> args</span><span class="pun">[])</span><span class="pln"> </span><span class="kwd">throws</span><span class="pln"> </span><span class="typ">Exception</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// check command line arguments</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">args</span><span class="pun">.</span><span class="pln">length </span><span class="pun">!=</span><span class="pln"> </span><span class="lit">2</span><span class="pun">)</span><span class="pln"> error</span><span class="pun">(</span><span class="str">"Usage: java LarcArchiver [option] filename/dirname\n"</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span class="pun">+</span><span class="pln"> </span><span class="str">"options:\n"</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span class="pun">+</span><span class="pln"> </span><span class="str">"[e]xtract\n"</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span class="pun">+</span><span class="pln"> </span><span class="str">"[a]rchive"</span><span class="pun">);</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="str">"e"</span><span class="pun">.</span><span class="pln">equals</span><span class="pun">(</span><span class="pln">args</span><span class="pun">[</span><span class="lit">0</span><span class="pun">].</span><span class="pln">trim</span><span class="pun">()))</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="com">// extract files from archive</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">String</span><span class="pln"> filename </span><span class="pun">=</span><span class="pln"> args</span><span class="pun">[</span><span class="lit">1</span><span class="pun">].</span><span class="pln">trim</span><span class="pun">();</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">filename</span><span class="pun">.</span><span class="pln">length</span><span class="pun">()</span><span class="pln"> </span><span class="pun">==</span><span class="pln"> </span><span class="lit">0</span><span class="pun">)</span><span class="pln"> error</span><span class="pun">(</span><span class="str">"2nd argument not exist."</span><span class="pun">);</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// open source archive</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">File</span><span class="pln"> arc </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">File</span><span class="pun">(</span><span class="pln">filename</span><span class="pun">);</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(!</span><span class="pln">arc</span><span class="pun">.</span><span class="pln">exists</span><span class="pun">())</span><span class="pln"> error</span><span class="pun">(</span><span class="str">"Archive "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> filename </span><span class="pun">+</span><span class="pln"> </span><span class="str">" doesn't exist"</span><span class="pun">);</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">long</span><span class="pln"> contentOfs </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0L</span><span class="pun">;</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">LarcIndexEntry</span><span class="pun">[]</span><span class="pln"> indexEntries </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">null</span><span class="pun">;</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">FileInputStream</span><span class="pln"> fis </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">FileInputStream</span><span class="pun">(</span><span class="pln">arc</span><span class="pun">);</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">DataInputStream</span><span class="pln"> dis </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">DataInputStream</span><span class="pun">(</span><span class="pln">fis</span><span class="pun">);</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// match archive signature</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">byte</span><span class="pun">[]</span><span class="pln"> sig </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="kwd">byte</span><span class="pun">[</span><span class="lit">4</span><span class="pun">];</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; dis</span><span class="pun">.</span><span class="pln">read</span><span class="pun">(</span><span class="pln">sig</span><span class="pun">);</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(!</span><span class="typ">Arrays</span><span class="pun">.</span><span class="pln">equals</span><span class="pun">(</span><span class="pln">signature</span><span class="pun">,</span><span class="pln"> sig</span><span class="pun">))</span><span class="pln"> error</span><span class="pun">(</span><span class="str">"Archive file not supported."</span><span class="pun">);</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// get file count</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">int</span><span class="pln"> fileCount </span><span class="pun">=</span><span class="pln"> reverseEndian</span><span class="pun">(</span><span class="pln">dis</span><span class="pun">.</span><span class="pln">readInt</span><span class="pun">());</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">out</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"Files in archive: "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> fileCount</span><span class="pun">);</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; indexEntries </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">LarcIndexEntry</span><span class="pun">[</span><span class="pln">fileCount</span><span class="pun">];</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// read index entries</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> i </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i </span><span class="pun">&lt;</span><span class="pln"> fileCount</span><span class="pun">;</span><span class="pln"> </span><span class="pun">++</span><span class="pln">i</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">LarcIndexEntry</span><span class="pln"> entry </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">LarcIndexEntry</span><span class="pun">();</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">int</span><span class="pln"> filenameLen </span><span class="pun">=</span><span class="pln"> reverseEndian</span><span class="pun">(</span><span class="pln">dis</span><span class="pun">.</span><span class="pln">readShort</span><span class="pun">());</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">byte</span><span class="pun">[]</span><span class="pln"> name </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="kwd">byte</span><span class="pun">[</span><span class="pln">filenameLen</span><span class="pun">];</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; dis</span><span class="pun">.</span><span class="pln">read</span><span class="pun">(</span><span class="pln">name</span><span class="pun">);</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; entry</span><span class="pun">.</span><span class="pln">setFilename</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">String</span><span class="pun">(</span><span class="pln">name</span><span class="pun">));</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">System</span><span class="pun">.</span><span class="pln">err</span><span class="pun">.</span><span class="kwd">print</span><span class="pun">(</span><span class="str">"File \""</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> entry</span><span class="pun">.</span><span class="pln">getFilename</span><span class="pun">()</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="str">"\" : "</span><span class="pun">);</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; entry</span><span class="pun">.</span><span class="pln">setLength</span><span class="pun">(</span><span class="pln">reverseEndian</span><span class="pun">(</span><span class="pln">dis</span><span class="pun">.</span><span class="pln">readInt</span><span class="pun">()));</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">System</span><span class="pun">.</span><span class="pln">err</span><span class="pun">.</span><span class="kwd">print</span><span class="pun">(</span><span class="str">"size: 0x"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="typ">Integer</span><span class="pun">.</span><span class="pln">toHexString</span><span class="pun">(</span><span class="pln">entry</span><span class="pun">.</span><span class="pln">getLength</span><span class="pun">()).</span><span class="pln">toUpperCase</span><span class="pun">());</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; entry</span><span class="pun">.</span><span class="pln">setOffset</span><span class="pun">(</span><span class="pln">reverseEndian</span><span class="pun">(</span><span class="pln">dis</span><span class="pun">.</span><span class="pln">readInt</span><span class="pun">()));</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">System</span><span class="pun">.</span><span class="pln">err</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">" at relative offset 0x"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="typ">Integer</span><span class="pun">.</span><span class="pln">toHexString</span><span class="pun">(</span><span class="pln">entry</span><span class="pun">.</span><span class="pln">getOffset</span><span class="pun">()).</span><span class="pln">toUpperCase</span><span class="pun">());</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; indexEntries</span><span class="pun">[</span><span class="pln">i</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> entry</span><span class="pun">;</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; contentOfs </span><span class="pun">=</span><span class="pln"> fis</span><span class="pun">.</span><span class="pln">getChannel</span><span class="pun">().</span><span class="pln">position</span><span class="pun">();</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// extract files</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="typ">LarcIndexEntry</span><span class="pln"> entry </span><span class="pun">:</span><span class="pln"> indexEntries</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// data correctness check</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">fis</span><span class="pun">.</span><span class="pln">getChannel</span><span class="pun">().</span><span class="pln">position</span><span class="pun">()</span><span class="pln"> </span><span class="pun">-</span><span class="pln"> contentOfs </span><span class="pun">!=</span><span class="pln"> entry</span><span class="pun">.</span><span class="pln">getOffset</span><span class="pun">())</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; error</span><span class="pun">(</span><span class="str">"Bad file contents.\n"</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> entry</span><span class="pun">.</span><span class="pln">getFilename</span><span class="pun">()</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="str">" with relative offset 0x"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="typ">Integer</span><span class="pun">.</span><span class="pln">toHexString</span><span class="pun">((</span><span class="kwd">int</span><span class="pun">)(</span><span class="pln">fis</span><span class="pun">.</span><span class="pln">getChannel</span><span class="pun">().</span><span class="pln">position</span><span class="pun">()</span><span class="pln"> </span><span class="pun">-</span><span class="pln"> contentOfs</span><span class="pun">)));</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">BufferedOutputStream</span><span class="pln"> bos </span><span class="pun">=</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">BufferedOutputStream</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">FileOutputStream</span><span class="pun">(</span><span class="str">"./"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> entry</span><span class="pun">.</span><span class="pln">getFilename</span><span class="pun">()),</span><span class="pln"> </span><span class="lit">0x7FFFFF</span><span class="pun">);</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">int</span><span class="pln"> remainder </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">while</span><span class="pln"> </span><span class="pun">(</span><span class="pln">fis</span><span class="pun">.</span><span class="pln">available</span><span class="pun">()</span><span class="pln"> </span><span class="pun">!=</span><span class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="pun">&amp;&amp;</span><span class="pln"> remainder </span><span class="pun">!=</span><span class="pln"> entry</span><span class="pun">.</span><span class="pln">getLength</span><span class="pun">())</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; bos</span><span class="pun">.</span><span class="pln">write</span><span class="pun">(</span><span class="pln">fis</span><span class="pun">.</span><span class="pln">read</span><span class="pun">());</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">++</span><span class="pln">remainder</span><span class="pun">;</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; bos</span><span class="pun">.</span><span class="pln">flush</span><span class="pun">();</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; bos</span><span class="pun">.</span><span class="pln">close</span><span class="pun">();</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; fis</span><span class="pun">.</span><span class="pln">close</span><span class="pun">();</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"> </span><span class="kwd">else</span><span class="pln"> </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="str">"a"</span><span class="pun">.</span><span class="pln">equals</span><span class="pun">(</span><span class="pln">args</span><span class="pun">[</span><span class="lit">0</span><span class="pun">].</span><span class="pln">trim</span><span class="pun">()))</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="com">// pack files into archive</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">String</span><span class="pln"> dirname </span><span class="pun">=</span><span class="pln"> args</span><span class="pun">[</span><span class="lit">1</span><span class="pun">].</span><span class="pln">trim</span><span class="pun">();</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(</span><span class="pln">dirname</span><span class="pun">.</span><span class="pln">length</span><span class="pun">()</span><span class="pln"> </span><span class="pun">==</span><span class="pln"> </span><span class="lit">0</span><span class="pun">)</span><span class="pln"> error</span><span class="pun">(</span><span class="str">"2nd argument not exist."</span><span class="pun">);</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// open source directory</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">File</span><span class="pln"> dir </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">File</span><span class="pun">(</span><span class="pln">dirname</span><span class="pun">);</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(!</span><span class="pln">dir</span><span class="pun">.</span><span class="pln">exists</span><span class="pun">())</span><span class="pln"> error</span><span class="pun">(</span><span class="str">"Directory "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> dirname </span><span class="pun">+</span><span class="pln"> </span><span class="str">" doesn't exist"</span><span class="pun">);</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">else</span><span class="pln"> </span><span class="kwd">if</span><span class="pln"> </span><span class="pun">(!</span><span class="pln">dir</span><span class="pun">.</span><span class="pln">isDirectory</span><span class="pun">())</span><span class="pln"> error</span><span class="pun">(</span><span class="pln">dirname </span><span class="pun">+</span><span class="pln"> </span><span class="str">" is not a valid directory."</span><span class="pun">);</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">File</span><span class="pun">[]</span><span class="pln"> files </span><span class="pun">=</span><span class="pln"> dir</span><span class="pun">.</span><span class="pln">listFiles</span><span class="pun">();</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">int</span><span class="pln"> fileCount </span><span class="pun">=</span><span class="pln"> files</span><span class="pun">.</span><span class="pln">length</span><span class="pun">;</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">LarcIndexEntry</span><span class="pun">[]</span><span class="pln"> indexEntries </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">LarcIndexEntry</span><span class="pun">[</span><span class="pln">fileCount</span><span class="pun">];</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// make up index data</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">int</span><span class="pln"> runningOfs </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> i </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln"> i </span><span class="pun">&lt;</span><span class="pln"> fileCount</span><span class="pun">;</span><span class="pln"> </span><span class="pun">++</span><span class="pln">i</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">LarcIndexEntry</span><span class="pln"> entry </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">LarcIndexEntry</span><span class="pun">();</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; entry</span><span class="pun">.</span><span class="pln">setFilename</span><span class="pun">(</span><span class="pln">files</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">getName</span><span class="pun">());</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; entry</span><span class="pun">.</span><span class="pln">setLength</span><span class="pun">((</span><span class="kwd">int</span><span class="pun">)</span><span class="pln">files</span><span class="pun">[</span><span class="pln">i</span><span class="pun">].</span><span class="pln">length</span><span class="pun">());</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; entry</span><span class="pun">.</span><span class="pln">setOffset</span><span class="pun">(</span><span class="pln">runningOfs</span><span class="pun">);</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; indexEntries</span><span class="pun">[</span><span class="pln">i</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> entry</span><span class="pun">;</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; runningOfs </span><span class="pun">+=</span><span class="pln"> entry</span><span class="pun">.</span><span class="pln">getLength</span><span class="pun">();</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">System</span><span class="pun">.</span><span class="pln">err</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"Added file + "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> entry</span><span class="pun">.</span><span class="pln">getFilename</span><span class="pun">()</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> </span><span class="str">" size: 0x"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="typ">Integer</span><span class="pun">.</span><span class="pln">toHexString</span><span class="pun">(</span><span class="pln">entry</span><span class="pun">.</span><span class="pln">getLength</span><span class="pun">()).</span><span class="pln">toUpperCase</span><span class="pun">()</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">+</span><span class="pln"> </span><span class="str">" at relative offset: 0x"</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="typ">Integer</span><span class="pun">.</span><span class="pln">toHexString</span><span class="pun">(</span><span class="pln">entry</span><span class="pun">.</span><span class="pln">getOffset</span><span class="pun">()).</span><span class="pln">toUpperCase</span><span class="pun">());</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// write out archive signature and file count</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">DataOutputStream</span><span class="pln"> dos </span><span class="pun">=</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">DataOutputStream</span><span class="pun">(</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">BufferedOutputStream</span><span class="pun">(</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">FileOutputStream</span><span class="pun">(</span><span class="pln">dir</span><span class="pun">.</span><span class="pln">getName</span><span class="pun">()</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> </span><span class="str">".la"</span><span class="pun">)));</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; dos</span><span class="pun">.</span><span class="pln">write</span><span class="pun">(</span><span class="pln">signature</span><span class="pun">);</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; dos</span><span class="pun">.</span><span class="pln">writeInt</span><span class="pun">(</span><span class="pln">reverseEndian</span><span class="pun">(</span><span class="pln">fileCount</span><span class="pun">));</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// write out the file index</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="typ">LarcIndexEntry</span><span class="pln"> entry </span><span class="pun">:</span><span class="pln"> indexEntries</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; dos</span><span class="pun">.</span><span class="pln">writeShort</span><span class="pun">(</span><span class="pln">reverseEndian</span><span class="pun">(</span><span class="pln">entry</span><span class="pun">.</span><span class="pln">getFilename</span><span class="pun">().</span><span class="pln">length</span><span class="pun">())</span><span class="pln"> </span><span class="pun">&gt;&gt;&gt;</span><span class="pln"> </span><span class="lit">16</span><span class="pun">);</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; dos</span><span class="pun">.</span><span class="pln">write</span><span class="pun">(</span><span class="pln">entry</span><span class="pun">.</span><span class="pln">getFilename</span><span class="pun">().</span><span class="pln">getBytes</span><span class="pun">());</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; dos</span><span class="pun">.</span><span class="pln">writeInt</span><span class="pun">(</span><span class="pln">reverseEndian</span><span class="pun">(</span><span class="pln">entry</span><span class="pun">.</span><span class="pln">getLength</span><span class="pun">()));</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; dos</span><span class="pun">.</span><span class="pln">writeInt</span><span class="pun">(</span><span class="pln">reverseEndian</span><span class="pun">(</span><span class="pln">entry</span><span class="pun">.</span><span class="pln">getOffset</span><span class="pun">()));</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="com">// write out each file's content</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">for</span><span class="pln"> </span><span class="pun">(</span><span class="typ">File</span><span class="pln"> f </span><span class="pun">:</span><span class="pln"> files</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">BufferedInputStream</span><span class="pln"> bis </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="typ">BufferedInputStream</span><span class="pun">(</span><span class="kwd">new</span><span class="pln"> </span><span class="typ">FileInputStream</span><span class="pun">(</span><span class="pln">f</span><span class="pun">));</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">while</span><span class="pln"> </span><span class="pun">(</span><span class="pln">bis</span><span class="pun">.</span><span class="pln">available</span><span class="pun">()</span><span class="pln"> </span><span class="pun">!=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">)</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; dos</span><span class="pun">.</span><span class="pln">writeByte</span><span class="pun">(</span><span class="pln">bis</span><span class="pun">.</span><span class="pln">read</span><span class="pun">());</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; bis</span><span class="pun">.</span><span class="pln">close</span><span class="pun">();</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; dos</span><span class="pun">.</span><span class="pln">flush</span><span class="pun">();</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; dos</span><span class="pun">.</span><span class="pln">close</span><span class="pun">();</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">}</span><span class="pln"> </span><span class="kwd">else</span><span class="pln"> error</span><span class="pun">(</span><span class="str">"Usage: java LarcArchiver [option] filename/dirname\n"</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span class="pun">+</span><span class="pln"> </span><span class="str">"options:\n"</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span class="pun">+</span><span class="pln"> </span><span class="str">"[e]xtract\n"</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  </span><span class="pun">+</span><span class="pln"> </span><span class="str">"[a]rchive"</span><span class="pun">);</span><span class="pln">
+&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln">
+&nbsp; &nbsp; 
+&nbsp; &nbsp; </span><span class="kwd">private</span><span class="pln"> </span><span class="kwd">static</span><span class="pln"> </span><span class="kwd">int</span><span class="pln"> reverseEndian</span><span class="pun">(</span><span class="kwd">int</span><span class="pln"> i</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">byte</span><span class="pun">[]</span><span class="pln"> bytes </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="kwd">byte</span><span class="pun">[</span><span class="lit">4</span><span class="pun">];</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; bytes</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">byte</span><span class="pun">)(</span><span class="pln">i </span><span class="pun">&gt;&gt;&gt;</span><span class="pln"> </span><span class="lit">24</span><span class="pun">);</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; bytes</span><span class="pun">[</span><span class="lit">1</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">byte</span><span class="pun">)(</span><span class="pln">i </span><span class="pun">&gt;&gt;&gt;</span><span class="pln"> </span><span class="lit">16</span><span class="pun">);</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; bytes</span><span class="pun">[</span><span class="lit">2</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">byte</span><span class="pun">)(</span><span class="pln">i </span><span class="pun">&gt;&gt;&gt;</span><span class="pln"> </span><span class="lit">8</span><span class="pun">);</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; bytes</span><span class="pun">[</span><span class="lit">3</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">byte</span><span class="pun">)</span><span class="pln"> i</span><span class="pun">;</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; i&nbsp; </span><span class="pun">=</span><span class="pln">&nbsp; bytes</span><span class="pun">[</span><span class="lit">3</span><span class="pun">]</span><span class="pln"> </span><span class="pun">&lt;&lt;</span><span class="pln"> </span><span class="lit">24</span><span class="pun">;</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; i </span><span class="pun">|=</span><span class="pln"> </span><span class="pun">(</span><span class="pln">bytes</span><span class="pun">[</span><span class="lit">2</span><span class="pun">]</span><span class="pln"> </span><span class="pun">&lt;&lt;</span><span class="pln"> </span><span class="lit">16</span><span class="pun">)</span><span class="pln"> </span><span class="pun">&amp;</span><span class="pln"> </span><span class="lit">0x0ff0000</span><span class="pun">;</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; i </span><span class="pun">|=</span><span class="pln"> </span><span class="pun">(</span><span class="pln">bytes</span><span class="pun">[</span><span class="lit">1</span><span class="pun">]</span><span class="pln"> </span><span class="pun">&lt;&lt;</span><span class="pln">&nbsp; </span><span class="lit">8</span><span class="pun">)</span><span class="pln"> </span><span class="pun">&amp;</span><span class="pln"> </span><span class="lit">0x000ff00</span><span class="pun">;</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; i </span><span class="pun">|=</span><span class="pln">&nbsp; bytes</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]</span><span class="pln">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">&amp;</span><span class="pln"> </span><span class="lit">0x00000ff</span><span class="pun">;</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">return</span><span class="pln"> i</span><span class="pun">;</span><span class="pln">
+&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln">
+&nbsp; &nbsp; 
+&nbsp; &nbsp; </span><span class="kwd">private</span><span class="pln"> </span><span class="kwd">static</span><span class="pln"> </span><span class="kwd">int</span><span class="pln"> reverseEndian</span><span class="pun">(</span><span class="kwd">short</span><span class="pln"> s</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">byte</span><span class="pun">[]</span><span class="pln"> bytes </span><span class="pun">=</span><span class="pln"> </span><span class="kwd">new</span><span class="pln"> </span><span class="kwd">byte</span><span class="pun">[</span><span class="lit">2</span><span class="pun">];</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; bytes</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">byte</span><span class="pun">)(</span><span class="pln">s </span><span class="pun">&gt;&gt;&gt;</span><span class="pln"> </span><span class="lit">8</span><span class="pun">);</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; bytes</span><span class="pun">[</span><span class="lit">1</span><span class="pun">]</span><span class="pln"> </span><span class="pun">=</span><span class="pln"> </span><span class="pun">(</span><span class="kwd">byte</span><span class="pun">)</span><span class="pln"> s</span><span class="pun">;</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">int</span><span class="pln"> i </span><span class="pun">=</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; i </span><span class="pun">|=</span><span class="pln"> </span><span class="pun">(</span><span class="pln">bytes</span><span class="pun">[</span><span class="lit">1</span><span class="pun">]</span><span class="pln"> </span><span class="pun">&lt;&lt;</span><span class="pln">&nbsp; </span><span class="lit">8</span><span class="pun">)</span><span class="pln"> </span><span class="pun">&amp;</span><span class="pln"> </span><span class="lit">0x000ff00</span><span class="pun">;</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; i </span><span class="pun">|=</span><span class="pln">&nbsp; bytes</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]</span><span class="pln">&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="pun">&amp;</span><span class="pln"> </span><span class="lit">0x00000ff</span><span class="pun">;</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="kwd">return</span><span class="pln"> i</span><span class="pun">;</span><span class="pln">
+&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln">
+&nbsp; &nbsp; 
+&nbsp; &nbsp; </span><span class="kwd">private</span><span class="pln"> </span><span class="kwd">static</span><span class="pln"> </span><span class="kwd">void</span><span class="pln"> error</span><span class="pun">(</span><span class="typ">String</span><span class="pln"> cause</span><span class="pun">)</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">System</span><span class="pun">.</span><span class="pln">err</span><span class="pun">.</span><span class="pln">println</span><span class="pun">(</span><span class="str">"Error "</span><span class="pln"> </span><span class="pun">+</span><span class="pln"> cause</span><span class="pun">);</span><span class="pln">
+&nbsp; &nbsp; &nbsp; &nbsp; </span><span class="typ">System</span><span class="pun">.</span><span class="kwd">exit</span><span class="pun">(</span><span class="lit">1</span><span class="pun">);</span><span class="pln">
+&nbsp; &nbsp; </span><span class="pun">}</span><span class="pln">
+</span><span class="pun">}</span></pre><br><br>一开始定义了一个常量数组,存放这种归档的特征标记串.<br><br>然后直接来到程序入口,main().可以看到,这里为了快速开发出原型(并且是准备用一次就抛弃的代码,use-and-throw),我们忽略了对异常的处理,所以直接写上throws Exception.<br>接下来对命令行参数做了不太严谨的检查,并根据不同情况进入解包或打包的分支.<br><br>后面几乎就是对解包/打包的算法最直接的实现了,所以也没什么需要多解释的.需要说明的地方是,Java的默认字节序是big-endian,与我们这里使用的文件不一样.所以很多地方很无奈的做了reverseEndian()这么一种恶心的操作.另外我们用到了有缓存的输入/输出流的包装类,Buffered开头的那几个,因而可以稍微偷点懒,在自己的代码里少做些麻烦的缓存处理.当然,为了提高实际运行效率,在要开发最终的发行工具时,最好还是不要直接以byte为单位对文件读写,否则大量的读写操作能让任何高效的算法变得奇慢无比.<br><br>基本上就是...这样了.要使用这个工具,方法是在命令行下,以下列格式执行程序:<br>java LarcArchiver [option] filename/dirname<br>选项[option]可以为:<br>e, 表示把指定的归档文件解包到当前目录,或者<br>a, 表示把执行的目录打包到当前目录下与源目录名同名的*.la归档文件里.<br><br>举例来说,如果这个程序与bgm.la在同一个目录里,那么执行:<br>java LarcArchiver e bgm.la<br>会将bgm.la的内容全部解到当前目录下.<br><br>而如果需要打包的内容放在了一个叫bgm的目录里,这个bgm目录是当前目录的子目录的话:<br>java LarcArchiver a bgm\<br>会将bgm目录里的所有文件都打包到一个名为bgm.la的归档里.<br><br>看到这里相信不少人都会叫起来:"为什么只能把目标文件写到当前目录?" 其实那还不是因为我偷懒了么...指定目标位置要多处理一个参数,在快速开发原型时没必要的代码统统不写可以省下不少时间精力.不过必要的"错误检查"绝对不能忘记或省略,不然自己要吃更多的苦头.<br><br>同样的算法,可以以极高的相似度用C++重新写一次.至于这里为什么用了Java,纯粹是惯性...表拍我 =v=<br><br>这次就到这里吧...相当无聊的一篇文,送给在入门边缘的同学.<br><br>P.S. 听说汉公有新弄出什么神兵利器了,崇拜啊~~</div>
+		</th>
+	</tr>
+	<tr class="tr1 r_one">
+		<th style="vertical-align: bottom; padding-left: 15px; border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+
+		<div id="w_tpc" class="c"></div>
+
+		<div class="tipad"><span style="float:right">
+<a href="javascript:scroll(0,0)" title="顶端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">顶端</a> <a href="javascript:scroll(0,999999)" title="底端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">底端</a></span>
+			
+			<span class="gray"> 2007-03-10 07:10 | 
+	
+			</span>
+
+			<span><a class="s3" title="回复此楼" style="cursor:pointer;" onclick="postreply('回 楼主(rednaxela) 的帖子');" data-mx-warn="Empty URL">[楼 主]</a></span>
+
+		</div></th>
+	</tr></tbody></table>
+</div>
+
+<a name="a" data-mx-warn="Empty URL"></a><a name="5243120" data-mx-warn="Empty URL"></a>
+<div class="t t2"><table cellspacing="0" cellpadding="0" width="100%" style="table-layout: fixed; border-top: 0px; --darkreader-inline-border-top: initial;" data-darkreader-inline-border-top="">
+	<tbody><tr class="tr1"><th style="width:20%" rowspan="2" class="r_two">
+
+		<img src="assets/1570905998-1cde2ccde0fc90dbe6db3784fc6ec383.gif" title="该用户目前不在线" align="absmiddle">
+
+<b>alexyu_yxj</b>
+<div style="margin:.3em 0 .4em .2em">那个不良信息什么的最讨厌了！</div>
+<div class="user-pic"><table style="border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left=""><tbody><tr><td width="1">
+
+<a href="https://bbs.sumisora.net/profile.php?action=show&amp;uid=14850" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img class="pic" src="assets/1570905998-a44b851105b11c472a3f7d28b5db7ead.jpg" style="max-width:185px;max-height:200px;overflow:hidden" border="0"></a>
+
+</td><td style="vertical-align:top"><span id="sf_1"></span></td></tr></tbody></table>
+</div>
+		级别: <font color="#555555" data-darkreader-inline-color="" style="--darkreader-inline-color:#cfc9be;">澄空三年生上学期</font><br>
+		<img style="margin:.2em 0 .6em" src="assets/1570905998-5fc5bacf4fd91c54a5fe72c4ceff18fa.gif"><br>
+
+<span class="user-info2" id="showface_1">
+<span class="user-infoWrap2">
+
+
+精华:
+
+		<span class="s4">0</span>
+<br>
+发帖: <span class="s1 f9">1866</span><br>
+学分: <span class="s2 f9">0 点</span><br>
+澄空币: <span class="s3 f9">733 KID</span><br>
+
+		GPA: <span class="s2 f9">0 点</span><br>
+
+		<span class="gray">注册时间:2005-07-20<br>
+		最后登录:2017-12-26 <br><br> 
+		</span>
+		</span></span>
+		</th>
+		<th height="100%" class="r_one" valign="top" id="td_5243120" style="padding: 5px 15px 0px; border: 0px; width: 80%; overflow: hidden; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+			<div class="tiptop">
+			<span class="fl" style="white-space:nowrap;">
+			<a href="https://bbs.sumisora.net/post.php?action=quote&amp;fid=78&amp;tid=218484&amp;pid=5243120&amp;article=1" onclick="return sendurl(this,4,event)" id="quote_5243120" title="引用回复这个帖子" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">引用</a> <a href="https://bbs.sumisora.net/post.php?action=modify&amp;fid=78&amp;tid=218484&amp;pid=5243120&amp;article=1" id="modify_5243120" onclick="return sendurl(this,4,event)" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">编辑</a>
+			<a href="https://bbs.sumisora.net/message.php?action=write&amp;touid=14850" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">短信</a>
+
+			<a href="https://bbs.sumisora.net/operate.php?action=report&amp;tid=218484&amp;pid=5243120" onclick="return sendurl(this,8)" id="report_5243120" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">举报</a>
+
+			<a href="https://bbs.sumisora.net/read.php?tid=218484&amp;uid=14850" title="只看该作者的所有回复" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">只看</a>
+
+			<a style="cursor:pointer;" onclick="copyUrl('5243120')" title="此楼地址" data-mx-warn="Empty URL">锚点</a>
+			</span>
+
+			<div class="c"></div>
+			</div>
+			<h1 id="subject_5243120" class="fl">&nbsp;</h1>
+			
+
+			<div id="p_5243120" class="c"></div>
+
+<!--
+-->
+
+			<div class="tpc_content" id="read_5243120">先膜拜菊苣，晚上回去看看能不能解析出来</div>
+		</th>
+	</tr>
+	<tr class="tr1 r_one">
+		<th style="vertical-align: bottom; padding-left: 15px; border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+
+		<div id="w_5243120" class="c"></div>
+
+		<div><img class="signature" src="assets/1570905998-f23b8ffd0b6b327441aa828c9cd3243d.gif" align="absbottom"></div>
+		<div class="signature" style="max-height:380px;maxHeight:380px; overflow:hidden;"><table width="100%"><tbody><tr><td><span class="highslide"><img src="assets/1570905998-fbd3825ad001d8d3f23ef4bdb7970264.jpg" border="0" style="max-width: 100%;max-height: 900px;"></span><br>存款真是快乐啊～～～</td><td></td></tr></tbody></table></div>
+
+		<div class="tipad"><span style="float:right">
+<a href="javascript:scroll(0,0)" title="顶端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">顶端</a> <a href="javascript:scroll(0,999999)" title="底端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">底端</a></span>
+			
+			<span class="gray"> 2012-08-06 13:41 | 
+	
+			</span>
+
+			<span><a class="s3" title="回复此楼" style="cursor:pointer;" onclick="postreply('回 1楼(alexyu_yxj) 的帖子');" data-mx-warn="Empty URL">1 楼</a></span>
+
+		</div></th>
+	</tr></tbody></table>
+</div>
+
+</form>
+<div class="t3" style="margin:initial"><table cellspacing="0" cellpadding="0" width="100%" align="center">
+	<tbody><tr><td align="left"></td>
+		<td valign="center" align="right">
+		<a class="abtn f_two" id="readlog" onclick="sendmsg('pw_ajax.php?action=readlog','',this.id);" data-mx-warn="Empty URL">帖子浏览记录<img src="assets/1570905998-5c8e409588b73ce4284cf5b9bd619e15.gif"></a>
+		<select onchange="Fjump(this.options[this.selectedIndex].value)"><option value="" selected="">快速跳至</option>
+<option value="1">&gt;&gt; 『澄空学园 办公楼区』</option>
+<option value="2"> &nbsp;|- 【校园公告栏】</option>
+<option value="5"> &nbsp;|- 【论坛意见箱】</option>
+<option value="113">&gt;&gt; 『澄空学园 资讯社』</option>
+<option value="47"> &nbsp;|- 【新鲜速报】</option>
+<option value="103"> &nbsp;|- 【新作介绍】</option>
+<option value="8"> &nbsp; &nbsp;|-  【电子杂志下载区】</option>
+<option value="104"> &nbsp;|- 【杂志专题】</option>
+<option value="7">&gt;&gt; 『澄空学园 教学楼区』</option>
+<option value="62"> &nbsp;|- 【AGE主题学部】</option>
+<option value="39"> &nbsp;|- 【Akabeesoft2主题学部】</option>
+<option value="100"> &nbsp;|- 【AUGUST主题学部】</option>
+<option value="42"> &nbsp;|- 【CIRCUS主题学部】</option>
+<option value="40"> &nbsp;|- 【Cotton-Nekoneko主题学部】</option>
+<option value="64"> &nbsp;|- 【GIGA主题学部】</option>
+<option value="38"> &nbsp;|- 【Key主题学部】</option>
+<option value="10"> &nbsp;|- 【KID主题学部】</option>
+<option value="37"> &nbsp;|- 【Leaf主题学部】</option>
+<option value="70"> &nbsp;|- 【minori主题学部】</option>
+<option value="12"> &nbsp;|- 【Navel主题学部】</option>
+<option value="65"> &nbsp;|- 【Nitro+主题学部】</option>
+<option value="14"> &nbsp;|- 【Type-Moon应援会】</option>
+<option value="17"> &nbsp; &nbsp;|-  【TM精华区】</option>
+<option value="98"> &nbsp;|- 【Will主题学部】</option>
+<option value="116"> &nbsp;|- 【FAVORITE主题学部】</option>
+<option value="108"> &nbsp;|- 【ALcot主题学部】</option>
+<option value="55"> &nbsp;|- 【GALGAME综合作品讨论室】</option>
+<option value="97"> &nbsp; &nbsp;|-  【Light主题学部】</option>
+<option value="117"> &nbsp; &nbsp;|-  【CUFFS主题学部】</option>
+<option value="15"> &nbsp; &nbsp;|-  【Liar Soft主题学部】</option>
+<option value="57"> &nbsp; &nbsp;|-  【Purple 主题学部】</option>
+<option value="13"> &nbsp; &nbsp;|-  【工画堂主题学部】</option>
+<option value="35"> &nbsp;|- 【GALGAME综合杂谈室】</option>
+<option value="99"> &nbsp;|- 【ぱれっと主题学部】</option>
+<option value="122"> &nbsp;|- 【SAGA PLANETS研讨室】</option>
+<option value="123"> &nbsp;|- 【Lump of Sugar 研讨室】</option>
+<option value="86">&gt;&gt; 『澄空学园 图书馆』</option>
+<option value="80"> &nbsp;|- 【游戏鉴赏室】</option>
+<option value="56"> &nbsp;|- 【GALGAME攻略馆】</option>
+<option value="115"> &nbsp;|- 【作品出处问询室】</option>
+<option value="63"> &nbsp;|- 【Galgame疑问求助室】</option>
+<option value="18">&gt;&gt; 『澄空学园 教辅楼区』</option>
+<option value="73"> &nbsp;|- 【同人游戏区】</option>
+<option value="60"> &nbsp;|- 【二次元轻小说社】</option>
+<option value="20"> &nbsp;|- 【日语自学教室】</option>
+<option value="61"> &nbsp; &nbsp;|-  【日语学习资料区】</option>
+<option value="118"> &nbsp; &nbsp;|-  【日语参考文章区】</option>
+<option value="21"> &nbsp;|- 【一般游戏社团】</option>
+<option value="24"> &nbsp;|- 【多媒体课堂】</option>
+<option value="88">&gt;&gt; 『澄空学园 原创综合区』</option>
+<option value="79"> &nbsp;|- 【原创游戏部】</option>
+<option value="36"> &nbsp; &nbsp;|-  【ss-square】</option>
+<option value="89"> &nbsp;|- 【MAD研究室】</option>
+<option value="91"> &nbsp;|- 【莉可屋 REC ROOM】</option>
+<option value="119"> &nbsp; &nbsp;|-  【澄空百合社翻唱作品】</option>
+<option value="19"> &nbsp;|- 【澄空文学部】</option>
+<option value="120"> &nbsp; &nbsp;|-  【落日余晖】</option>
+<option value="23"> &nbsp;|- 【绘画工房】</option>
+<option value="69"> &nbsp;|- 【活动投票区】</option>
+<option value="74"> &nbsp;|- 【友谊赛投票区】</option>
+<option value="58"> &nbsp;|- 【澄空部活室】</option>
+<option value="41"> &nbsp;|- 【暑假原创作品活动专区】</option>
+<option value="59"> &nbsp;|- 【实物周边交流区】</option>
+<option value="85"> &nbsp; &nbsp;|-  【ComicMarket相关资料】</option>
+<option value="82"> &nbsp; &nbsp;|-  【新品介绍】</option>
+<option value="84"> &nbsp; &nbsp;|-  【综合交流】</option>
+<option value="83"> &nbsp; &nbsp;|-  【好物收集】</option>
+<option value="81"> &nbsp; &nbsp;|-  【交易求购】</option>
+<option value="95"> &nbsp;|- 【澄空放送部】</option>
+<option value="111"> &nbsp; &nbsp;|-  【放送策划室】</option>
+<option value="27"> &nbsp;|- 【水下乐园LeMU】</option>
+<option value="46"> &nbsp; &nbsp;|-  【美工作品收藏室】</option>
+<option value="26"> &nbsp; &nbsp;|-  【COS自爆馆】</option>
+<option value="90"> &nbsp; &nbsp;|-  【澄空期刊室】</option>
+<option value="71"> &nbsp;|- 【澄空演剧部】</option>
+<option value="9"> &nbsp; &nbsp;|-  演剧部排练室</option>
+<option value="52"> &nbsp;|- 【废帖回收站】</option>
+<option value="29">&gt;&gt; 『澄空学园 好物交流站』</option>
+<option value="50"> &nbsp;|- 【澄空学园字幕作品】</option>
+<option value="51"> &nbsp;|- 【澄空学园漫画作品】</option>
+<option value="77"> &nbsp;|- 【游戏汉化交流区】</option>
+<option value="28"> &nbsp; &nbsp;|-  【CK-GAL中文化小组】</option>
+<option value="106"> &nbsp; &nbsp;|-  【PRO2】</option>
+<option value="49"> &nbsp; &nbsp;|-      【桜】</option>
+<option value="30"> &nbsp;|- 【资源求助区】</option>
+<option value="32"> &nbsp;|- 【澄空音乐厅】</option>
+<option value="33"> &nbsp;|- 【澄空美术馆】</option>
+<option value="34"> &nbsp;|- 【动漫租售屋】</option>
+<option value="44">&gt;&gt; 『澄空学园 课余工作区』</option>
+<option value="45"> &nbsp;|- 【澄空漫画汉化组】</option>
+<option value="48"> &nbsp;|-  【澄空学园字幕组】</option>
+<option value="101"> &nbsp; &nbsp;|-  字幕组资料区</option>
+<option value="72"> &nbsp;|- 【澄空学园分流组】</option>
+<option value="87"> &nbsp;|- 【澄空学园新闻组】</option>
+<option value="96"> &nbsp;|- 【澄空学园文学社】</option>
+<option value="75"> &nbsp;|- 【澄空学园百合社】</option>
+<option value="112"> &nbsp;|- 【澄空学园编辑部】</option>
+<option value="114"> &nbsp;|- 【澄空学园美工部】</option>
+<option value="121"> &nbsp;|-  【澄空祭运行委员会】</option>
+</select></td>
+		
+	</tr>
+	<tr><td style="padding-top: 12px;text-align: left;"><img src="assets/1570905998-ca4a91079181c2a5cb3514b2e5b5f035.gif" align="absbottom"> <b><a href="https://bbs.sumisora.net/index.php" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">『澄空学园』</a> » <a href="https://bbs.sumisora.net/thread.php?fid=78&amp;page=5" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">【汉化破解研讨室】</a></b> </td>
+	<td style="padding-top: 12px;text-align: right;"><a href="https://bbs.sumisora.net/post.php?action=reply&amp;fid=78&amp;tid=218484" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1570905998-132cb83b134d7ecd9b390389d489bc43.png"></a>
+
+<a href="https://bbs.sumisora.net/post.php?fid=78" style="margin-left:.5em" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1570905998-8cab7ee31ae503cf78e5410d40cec291.png" id="td_post1"></a>
+</td>
+	</tr>
+</tbody></table></div>
+
+
+
+
+<form name="FORM" method="post" action="post.php?" enctype="multipart/form-data" onsubmit="return checkpost(document.FORM);">
+<div class="t" style="margin-top:8px"><table cellspacing="0" cellpadding="0" align="center" width="100%">
+	<tbody><tr>
+		<td class="h" colspan="3"><b>快速发帖</b></td>
+	</tr>
+	<tr></tr>
+	<tr class="tr2"><td colspan="100" style="border-bottom: 0px; --darkreader-inline-border-bottom: initial;" data-darkreader-inline-border-bottom=""></td></tr>
+	<tr>
+		<td valign="top" width="20%" class="f_one" style="padding:7px">
+		<fieldset id="smiliebox" style="border: 1px solid rgb(213, 229, 232); --darkreader-inline-border-top:#354e51; --darkreader-inline-border-right:#354e51; --darkreader-inline-border-bottom:#354e51; --darkreader-inline-border-left:#354e51;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+		<legend>内容</legend>
+		<br>
+		<input type="checkbox" name="atc_usesign" value="1" checked="">使用签名<br>
+		<input type="checkbox" name="atc_convert" value="1" checked="">Wind Code自动转换 <br>
+	 	<input type="checkbox" id="atc_autoimg" name="atc_autoimg" value="1" onchange="onAutoImgchange()" checked="" title="此设置会记在浏览器中"><label for="atc_autoimg" title="此设置会记在浏览器中">自动分析img</label><br><br>
+	 	
+		<input type="checkbox" name="atc_requiresell" value="1" disabled="">出售此帖
+		<input class="input" type="text" maxlength="3" size="3" name="atc_money" value="0">
+		<br>
+		<input type="checkbox" name="atc_requirervrc" value="1">加密此帖
+		<input class="input" type="text" maxlength="6" size="3" name="atc_rvrc" value="0">
+		<br>
+		<br><br><a href="https://bbs.sumisora.net/read.php?tid=10925672" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">如何在帖子中贴图？</a>
+		<br><a href="https://bbs.sumisora.net/read.php?tid=10942243" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Wind Code使用教程</a>
+		<br><a href="https://bbs.sumisora.net/yume/recover/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">恢复帖子内容</a>
+		</fieldset>
+		</td>
+		<td width="60%" class="f_one" style="padding:7px">
+		<div>
+
+
+<blockquote style="width: 96%;" class="blockquote">澄空娘：『发帖请注意内涵，“占楼”“路过”“留名”这样的行为是不受欢迎的
+』</blockquote>
+
+		<input type="text" class="input" name="atc_title" value="Re:关于FATAL/FAKE里*.la文件的解析" size="65">
+		
+
+		 认证码: <input class="input" type="text" name="gdcode" size="5" tabindex="6" onfocus="try{opencode('menu_gd',this)}catch(e){}"><br>
+		
+
+		</div><div style="padding:.3em 0">
+		</div>
+		<textarea onkeydown="quickpost(event)" id="atc_content" name="atc_content" rows="8" style="width:96%"></textarea>
+		
+		
+		
+		
+		
+		<div style="margin:5px 0">
+		<div style="padding: 4px 10px 0px 0px; float: left; color: rgb(136, 136, 136); --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">按 Ctrl+Enter 直接提交</div>
+		<input class="btn" type="submit" name="Submit" value=" 提 交 "></div>
+		</td>
+		<td width="20%" class="f_one">
+		<div style="padding:3px; text-align:center; width:200px;">
+		<fieldset id="smiliebox" style="border: 1px solid rgb(213, 229, 232); --darkreader-inline-border-top:#354e51; --darkreader-inline-border-right:#354e51; --darkreader-inline-border-bottom:#354e51; --darkreader-inline-border-left:#354e51;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+			<legend>表情</legend>
+			<div id="menu_show"></div>
+<span style="float:right; margin:3px 10px 5px;"><a id="td_face" style="cursor:pointer;" onclick="showDefault();" align="absmiddle" unselectable="on" data-mx-warn="Empty URL">[更多]</a></span>
+<span style="float:left; margin:3px 10px 5px;"><a id="td_generalface" style="cursor:pointer;" onclick="showfaces();$('#td_generalface').fadeOut();" align="absmiddle" data-mx-warn="Empty URL">[显示表情]</a></span>
+		</fieldset></div>
+		
+		
+		</td>
+	</tr>
+</tbody></table></div></form>
+
+
+
+
+
+
+
+</div>
+<div id="bottom"></div><br>
+<center class="gray">
+<small><span id="windspend">Total 0.038070(s) query 6, Time is now 10-13 02:43, 
+Load is low.
+</span> <br>
+Powered by <a href="http://www.phpwind.net/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><b>PHPWind</b></a> <a href="http://www.phpwind.net/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><b style="color: rgb(255, 153, 0); --darkreader-inline-color:#f7b24b;" data-darkreader-inline-color="">v6.3.2</b></a> Code © 2003-08 <a href="http://www.phpwind.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><b>PHPWind.com</b></a> Corporation</small>
+</center><br>
+<div id="footer">
+	<span class="f12 fl"></span><a href="https://bbs.sumisora.net/sendmail.php" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Contact us</a>
+
+</div>
+</div>
+        
+      </div>
+    </body>
+  </html>

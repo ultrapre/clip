@@ -1,0 +1,860 @@
+
+  <!DOCTYPE html>
+  <html id="" class="">
+    <!-- OriginalSrc: https://bbs.sumisora.net/read.php?tid=10997713&fpage=6 -->
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <title>DirectX 9引擎3D游戏逆向分析及汉化实例|【汉化破解研讨室】|【游戏汉化交流区】 - 『澄空学园』 GalGame专题网</title>
+      
+
+<link rel="stylesheet" type="text/css" href="assets/1570958422-5f21d2d0f0e14c54e3e080ff47c8ec08.css" referrerpolicy="no-referrer">
+<link type="text/css" href="assets/1570958422-2f10d407050ab6b2185fb483267feb32.css" rel="stylesheet" referrerpolicy="no-referrer">
+<link href="assets/1570958422-6ea61090578ddc8e91dc9b26707cebc8.css" rel="stylesheet" type="text/css" referrerpolicy="no-referrer">
+<link rel="stylesheet" type="text/css" href="assets/1570958422-46d427da9cafb653c4ed606490c99b3a.css" referrerpolicy="no-referrer">
+
+
+<style class="darkreader darkreader--fallback" media="screen"></style>
+<style class="darkreader darkreader--text" media="screen"></style>
+<style class="darkreader darkreader--invert" media="screen"></style>
+<style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}</style>
+<style class="darkreader darkreader--user-agent" media="screen">html {
+    background-color: #191a1b !important;
+}
+html, body, input, textarea, select, button {
+    background-color: #191a1b;
+}
+html, body, input, textarea, select, button {
+    border-color: #5a5956;
+    color: #f0ebe2;
+}
+a {
+    color: #4791e7;
+}
+table {
+    border-color: #4f4e4c;
+}
+::placeholder {
+    color: #bfb9ac;
+}
+::selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+::-moz-selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #565a0f !important;
+    color: #f0ebe2 !important;
+}
+::-webkit-scrollbar {
+    background-color: #1d1f1f;
+    color: #cbc5b9;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #2c2d2d;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #343636;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #404142;
+}
+::-webkit-scrollbar-corner {
+    background-color: #191a1b;
+}
+* {
+    scrollbar-color: #2c2d2d #1d1f1f;
+}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--override" media="screen">.jfk-bubble {
+    background-color: #000000 !important;
+}
+.vimvixen-hint {
+    background-color: #765500 !important;
+    border-color: #d5b22e !important;
+    color: #f9edcc !important;
+}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css"> 
+.tr3 td,.tr3 th{border-right:1px solid #D5E5E8;}
+.y-style{text-align:center;}
+.tr1 th{border-right:1px solid #D5E5E8;}
+.tr1 td.td1{border-left:0}
+ 
+
+.signature img { max-height:250px !important; }
+</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">@keyframes fadeInOpacity{0%{opacity:0}to{opacity:1}}:hover>*>.fbvd--wrapper{animation-name:fadeInOpacity;animation-duration:.3s;opacity:1}.fbvd--wrapper{position:absolute;top:10px;left:10px;opacity:0;text-align:center;margin:0;z-index:5}.fbvd--wrapper a{background: url("") no-repeat 3px 4.55px; background-color: #fff; display:inline-block;font:700 14px Helvetica,Arial,sans-serif;color:#4b4f56;text-decoration:none;vertical-align:middle;padding:0px 8px 0px;margin-right:8px;border-radius:2px; line-height: 22px; padding-left:19px; border: 1px solid #e7e7e7; background-size: 13px}.fbvd--wrapper a:last-child{margin-right:0}.fbvd--wrapper a:hover{text-decoration:none}.fbvd--wrapper a:focus{box-shadow:0 0 1px 2px rgba(88,144,255,.75),0 1px 1px rgba(0,0,0,.15);outline:none}.fbvd--wrapper b{font-size:13px;position:relative;top:1px;color:#3b5998;font-weight:400}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+
+      <style class="mx-wc-style">
+        .mx-wc-main img {max-width: 100%;}
+        .mx-wc-main{
+          box-sizing: content-box;
+          background-color: rgb(25, 26, 27) !important;
+          margin: 0 auto;
+          margin-top: 20px;
+          max-width: 1349px;
+        }
+        @media (min-width: 768px) {
+          .mx-wc-main { padding: 15px 15px 80px 15px }
+        }
+        @media (max-width: 767px) {
+          .mx-wc-main { padding: 15px 3px 80px 3px }
+        }
+  
+      </style>
+    </head>
+    <body style="background-color: #ffffff !important; min-height: 100%; height: auto; position: static !important; overflow: auto !important; padding-bottom: 0px !important;" id="" class="">
+      <div class="mx-wc-main">
+        <div id="wrapA" class="mx-wc-selected-elem mx-wc-1570958422" style="display: block; float: none !important; position: relative !important; top: 0px !important; left: 0px !important; margin: 0px !important; flex: unset !important; width: 100% !important; max-width: 100% !important; box-sizing: border-box !important;">
+
+<div id="header">
+<div class="toptool tar">	<span>
+	<a href="https://bbs.sumisora.net/read.php?tid=10997713&amp;fpage=6&amp;skinco=simple" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">手机版</a>
+
+	| <a style="cursor:pointer;" id="td_skin" data-mx-warn="Empty URL">风格切换<img src="assets/1570958422-5c8e409588b73ce4284cf5b9bd619e15.gif"></a>
+	| <a href="https://bbs.sumisora.net/read.php?tid=10894912" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">学生手册</a>
+	</span>
+</div>
+<table cellspacing="0" cellpadding="0" align="center" width="100%">
+<tbody><tr>
+	<td class="banner"><a href="https://bbs.sumisora.net/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img id="forumlogo" src="assets/1570958422-7ac78a0e1e3ce795251288b0c8bd4b1b.png"></a></td>
+	<td class="banner" id="banner" align="right"></td>
+</tr>
+<tr><td align="center" height="1" colspan="2"></td></tr>
+</tbody></table>
+<div id="h_guide" class="guide" colspan="2"><span class="s3">»</span>
+
+	<span style="font-weight:bold" class="s3">silasu</span>&nbsp;<a href="https://bbs.sumisora.net/login.php?action=quit&amp;verify=034be2bd" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">退出</a> |
+	<a id="td_profile" href="https://bbs.sumisora.net/profile.php" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">控制面板</a>
+	| <a id="td_msg" href="https://bbs.sumisora.net/message.php" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+
+	短消息</a>
+
+	| <a id="td_sort" href="https://bbs.sumisora.net/sort.php" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">统计排行</a>
+
+	| <a href="https://bbs.sumisora.net/member.php" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">会员</a>
+
+	| <a href="https://bbs.sumisora.net/search.php" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">搜索</a>
+	| <a style="cursor:pointer;" id="td_hack" data-mx-warn="Empty URL">社区服务<img src="assets/1570958422-5c8e409588b73ce4284cf5b9bd619e15.gif"></a>
+
+	| <a href="https://bbs.sumisora.net/hack.php?H_name=galgamevote" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">GALGAME角色人气投票活动</a>
+
+ | <a href="https://bbs.sumisora.net/yume/polls/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">近期关注</a><!--[if lte IE 6]>
+ | <a href="read.php?tid=10955539" style="color:red">本站已停止支持IE6，请升级或更换浏览器</a>
+<![endif]-->
+</div>
+
+
+
+</div>
+<div id="main">
+
+
+
+
+<div class="t3" style="margin-top:8px"><table width="100%" cellspacing="0" cellpadding="0" align="center">
+	<tbody><tr><td class="b"><img src="assets/1570958422-ca4a91079181c2a5cb3514b2e5b5f035.gif" align="absmiddle"> <a href="https://bbs.sumisora.net/index.php" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">『澄空学园』</a> » <a href="https://bbs.sumisora.net/thread.php?fid=77" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">【游戏汉化交流区】</a> » <a href="https://bbs.sumisora.net/thread.php?fid=78&amp;page=6" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">【汉化破解研讨室】</a> » <a href="https://bbs.sumisora.net/read.php?tid=10997713" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">DirectX 9引擎3D游戏逆向分析及汉化实例</a> <a href="https://bbs.sumisora.net/rss.php?tid=10997713" target="_blank" title="Rss订阅本帖最新内容" referrerpolicy="no-referrer" rel="noopener noreferrer"><img align="absmiddle" src="assets/1570958422-b4369735f1bfb33ab69477230a8ba635.png"></a></td></tr>
+</tbody></table></div>
+
+<!--ads begin-->
+
+<!--ads end-->
+<div class="t3"><table width="100%" align="center" cellspacing="0" cellpadding="0">
+	<tbody><tr><td align="left"><div class="fl"></div></td><td align="right" style="padding-bottom:.2em"><a href="https://bbs.sumisora.net/post.php?action=reply&amp;fid=78&amp;tid=10997713" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1570958422-132cb83b134d7ecd9b390389d489bc43.png"></a>
+
+<a href="https://bbs.sumisora.net/post.php?fid=78" style="margin-left:.5em" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1570958422-8cab7ee31ae503cf78e5410d40cec291.png" id="td_post"></a>
+
+</td></tr>
+</tbody></table></div>
+
+
+
+<form name="delatc" method="post">
+
+
+<div class="t" style="margin-bottom: 0px; border-bottom: 0px; --darkreader-inline-border-bottom: initial;" data-darkreader-inline-border-bottom=""><table cellspacing="0" cellpadding="0" width="100%">
+	<tbody><tr><th class="h"><strong class="fl w"><b>本页主题:</b> DirectX 9引擎3D游戏逆向分析及汉化实例</strong>
+	<span class="fr w"><a data-mx-warn="Empty URL">&nbsp;</a><a href="https://bbs.sumisora.net/job.php?action=previous&amp;fid=78&amp;tid=10997713&amp;fpage=6&amp;goto=previous" class="fn" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">上一主题</a> | <a href="https://bbs.sumisora.net/job.php?action=previous&amp;fid=78&amp;tid=10997713&amp;fpage=6&amp;goto=next" class="fn" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">下一主题</a> | <a href="javascript:scroll(0,999999)" title="底端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">底端</a></span> </th>
+	</tr>
+	<tr><td></td></tr>
+	<tr class="tr2"><td colspan="2" class="tar">
+
+		<a id="usetool" style="cursor:pointer" onclick="sendmsg('pw_ajax.php?action=usetool','',this.id)" data-mx-warn="Empty URL">[使用道具]</a>
+
+		<br></td>
+	</tr>
+	<tr><td></td></tr>
+</tbody></table></div>
+
+<a name="tpc" data-mx-warn="Empty URL"></a>
+<div class="t t2" style="border-top: 0px; --darkreader-inline-border-top: initial;" data-darkreader-inline-border-top=""><table cellspacing="0" cellpadding="0" width="100%" style="table-layout: fixed; border-top: 0px; --darkreader-inline-border-top: initial;" data-darkreader-inline-border-top="">
+	<tbody><tr class="tr1"><th style="width:20%" rowspan="2" class="r_two">
+
+		<img src="assets/1570958422-1cde2ccde0fc90dbe6db3784fc6ec383.gif" title="该用户目前不在线" align="absmiddle">
+
+<b>my918</b>
+<div style="margin:.3em 0 .4em .2em"></div>
+<div class="user-pic"><table style="border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left=""><tbody><tr><td width="1">
+
+<a href="https://bbs.sumisora.net/profile.php?action=show&amp;uid=459164" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img class="pic" src="assets/1570958422-0323a55fb7600d167564b79fc6e0f444.gif" style="max-width:185px;max-height:200px;overflow:hidden" border="0"></a>
+
+</td><td style="vertical-align:top"><span id="sf_0"></span></td></tr></tbody></table>
+</div>
+		级别: <font color="#555555" data-darkreader-inline-color="" style="--darkreader-inline-color:#cfc9be;">澄空新生</font><br>
+		<img style="margin:.2em 0 .6em" src="assets/1570958422-be59bc9a4edb96b6b54ba67c9267b93f.gif"><br>
+
+<span class="user-info2" id="showface_0">
+<span class="user-infoWrap2">
+
+
+精华:
+
+		<span class="s4">0</span>
+<br>
+发帖: <span class="s1 f9">7</span><br>
+学分: <span class="s2 f9">0 点</span><br>
+澄空币: <span class="s3 f9">656 KID</span><br>
+
+		GPA: <span class="s2 f9">0 点</span><br>
+
+		<span class="gray">注册时间:2010-07-10<br>
+		最后登录:2012-04-11 <br><br> 
+		</span>
+		</span></span>
+		</th>
+		<th height="100%" class="r_one" valign="top" id="td_tpc" style="padding: 5px 15px 0px; border: 0px; width: 80%; overflow: hidden; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+			<div class="tiptop">
+			<span class="fl" style="white-space:nowrap;">
+			<a href="https://bbs.sumisora.net/post.php?action=quote&amp;fid=78&amp;tid=10997713&amp;pid=tpc&amp;article=0" onclick="return sendurl(this,4,event)" id="quote_tpc" title="引用回复这个帖子" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">引用</a> <a href="https://bbs.sumisora.net/post.php?action=modify&amp;fid=78&amp;tid=10997713&amp;pid=tpc&amp;article=0" id="modify_tpc" onclick="return sendurl(this,4,event)" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">编辑</a>
+			<a href="https://bbs.sumisora.net/message.php?action=write&amp;touid=459164" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">短信</a>
+
+			<a href="https://bbs.sumisora.net/operate.php?action=report&amp;tid=10997713&amp;pid=tpc" onclick="return sendurl(this,8)" id="report_tpc" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">举报</a>
+
+			<a href="https://bbs.sumisora.net/read.php?tid=10997713&amp;uid=459164" title="只看楼主的所有帖子" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">只看</a>
+
+			<a style="cursor:pointer;" onclick="copyUrl('tpc')" title="此楼地址" data-mx-warn="Empty URL">锚点</a>
+			</span>
+
+			<div class="c"></div>
+			</div>
+			<h1 id="subject_tpc" class="fl">&nbsp;DirectX 9引擎3D游戏逆向分析及汉化实例</h1>
+			
+
+			<div id="p_tpc" class="c"></div>
+
+<!--
+-->
+
+			<div class="tpc_content" id="read_tpc"><table style="border: 1px solid rgb(213, 229, 232); width: 98%; border-collapse: collapse; --darkreader-inline-border-top:#354e51; --darkreader-inline-border-right:#354e51; --darkreader-inline-border-bottom:#354e51; --darkreader-inline-border-left:#354e51;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left=""><tbody><tr class="tr3"><td>文章来源：绝影之家<br>先引一段这次要分析的游戏的资料： <br>引用: <br><br><br><blockquote>游戏全名：Tom Clancy's H.A.W.X <br>中文译名：汤姆克兰西之鹰击长空 <br>下载地址：<a href="http://www.verycd.com/topics/2736263/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">http://www.verycd.com/topics/2736263/</a> <br>由育碧Bucharest工作室开发，充分利用次世代平台的好处，《鹰击长空》给我们带来了一个紧张和真实的空战体验。故事发生在2012年。当单一民族国家聚集越密的世纪，战争的规则发展得越来越快。越来越多的国家开始增加对私人军队公司（PMCs）的依赖。法律松懈的立场给精英们有利可图。雷克雅末协定更加深地令他们授权军队工作的每一方面合化法，当PMCs这样的利益浮上水面之后，周围增强的利害关系给与他们足够强大的力量开始扩张。 </blockquote><br><br><br>【前言】 <br>需要说明的是育碧官方已经出了这款游戏的中文补丁，所以如果你是玩家的话可以直接用中文版。 <br>这款游戏自问世以来，玩家一直比较多，但是官方始终没出中文版，也没有明确表态不会出中文版。正因为官方态度比较暧昧，各个组也都没敢动手，这状况持续很长时间。当时我正好安装了这款游戏，正有汉化的意向。索性开始调试了，到了调试分析基本完成补丁也写好了的时候，官方突然出了一个中文补丁，据说是为hawx2做售前宣传。汉化工作便停止了，补丁也没有用了。 <br>这些都是题外话，无论补丁有没有用，汉化经验总是有用的。现在将这游戏的分析过程整理出来，想必是有价值的。 <br><br><br>【准备工作】 <br>国外公司开发游戏都有个习惯，那就是不使用OS提供的字体，自己制作字符字库，然后设计一个字符输出引擎。这样做有两个好处，一是保持了游戏美工风格的统一，二是规避了使用OS字体可能带来的版权问题。这款游戏就是这样。 <br>知道了这一点，我们的工作便有了方向：首先找到所有的文本资源，翻译之，统计汉字数量，并编码之。第二步找到字符资源，按编码制作相同格式中文字符资源替换之。第三步导入翻译完成的中文文本，汉化结束。 <br>先找资源，其实不用找，就在根目录，data2.pak data3.pak名字起得很明显，再确认一下就行了。到这里没接触过汉化的朋友一定有疑问，pak到底什么文件啊。Pak就是package打包文件，至于怎么打包的怎么解包的只有开发人员知道。打包文件不同于pe，格式自由扩展名也自由，开发人员要是乐意了叫.exe都行。所以无视扩展名是非常有必要的。不过别灰心，用winhex看看文件头两字节为0x50、0x4b，即字符‘PK’，这有点像zip文件。改改后缀名发现还真就是zip文件，不过加了密码。调试得知密码为rF4hfGe1PfrzGe3IbaRtWsIn，然后解压出一大堆dds纹理，找到了少量的未压缩文本资源，以及大部分压缩了的文本资源。 <br>到这里遇到了问题，字符资源始终没找到。看来替换字符资源这条路是行不通了。不过还有一个方法，就是外挂字幕汉化。具体方法就是hook掉游戏的文字显示函数，接管之，重新设计一个文字显示函数。这就是下面的重点。 <br><br><br>【游戏分析】 <br>所谓的重新设计一个显示函数，其实就是调用D3DXCreateFont创建一个字体，然后调用DrawText直接绘制文本，这样做便不必考虑字符字库资源问题了。 <br>DirectX9游戏的启动过程大概是这样的：先调用Direct3DCreate9，返回一个IDirect3D9接口指针，然后执行IDirect3D9-&gt;CreateDevice，再返回一个D3D设备接口指针。有了这个设备指针我们便可以使用DX9提供的一切绘图手段，包括我们最关心的D3DXCreateFont和DrawText。我们要做的就是在游戏调用完CreateDevice之后，hook之保存这个指针备用。 <br>OD载入游戏，CTRL+N，抛弃掉几个无用的搜索结果以后，确认为0x48dd7e <br>代码: <br><ol type="1" style="margin:0 0 0 25px"><li>0048DD7E&nbsp;&nbsp;|.&nbsp;&nbsp;E8 CD604600&nbsp; &nbsp;call&nbsp; &nbsp; &lt;jmp.&amp;d3d9.Direct3DCreate9&gt; <br></li><li>0048DD83&nbsp;&nbsp;|.&nbsp;&nbsp;3BC3&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; cmp&nbsp; &nbsp;&nbsp;&nbsp;eax, ebx <br></li><li>0048DD85&nbsp;&nbsp;|.&nbsp;&nbsp;A3 187FE500&nbsp; &nbsp;mov&nbsp; &nbsp;&nbsp;&nbsp;dword ptr [E57F18], eax&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; ;&nbsp;&nbsp;保存创建的接口指针 <br></li><li>0048DD8A&nbsp;&nbsp;|.&nbsp;&nbsp;75 05&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;jnz&nbsp; &nbsp;&nbsp;&nbsp;short 0048DD91 <br></li><li>0048DD8C&nbsp;&nbsp;|.&nbsp;&nbsp;5F&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;pop&nbsp; &nbsp;&nbsp;&nbsp;edi <br></li><li>0048DD8D&nbsp;&nbsp;|.&nbsp;&nbsp;32C0&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; xor&nbsp; &nbsp;&nbsp;&nbsp;al, al <br></li><li>0048DD8F&nbsp;&nbsp;|.&nbsp;&nbsp;5B&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;pop&nbsp; &nbsp;&nbsp;&nbsp;ebx <br></li><li>0048DD90&nbsp;&nbsp;|.&nbsp;&nbsp;C3&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;retn <br></li><li>0048DD91&nbsp;&nbsp;|&gt;&nbsp;&nbsp;8B08&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; mov&nbsp; &nbsp;&nbsp;&nbsp;ecx, dword ptr [eax] <br></li><li>0048DD93&nbsp;&nbsp;|.&nbsp;&nbsp;8B51 38&nbsp; &nbsp;&nbsp; &nbsp; mov&nbsp; &nbsp;&nbsp;&nbsp;edx, dword ptr [ecx+38] <br></li><li>0048DD96&nbsp;&nbsp;|.&nbsp;&nbsp;56&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;push&nbsp; &nbsp; esi <br></li><li>0048DD97&nbsp;&nbsp;|.&nbsp;&nbsp;68 F877E500&nbsp; &nbsp;push&nbsp; &nbsp; 00E577F8 <br></li><li>0048DD9C&nbsp;&nbsp;|.&nbsp;&nbsp;57&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;push&nbsp; &nbsp; edi <br></li><li>0048DD9D&nbsp;&nbsp;|.&nbsp;&nbsp;53&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;push&nbsp; &nbsp; ebx <br></li><li>0048DD9E&nbsp;&nbsp;|.&nbsp;&nbsp;50&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;push&nbsp; &nbsp; eax <br></li><li>0048DD9F&nbsp;&nbsp;|.&nbsp;&nbsp;FFD2&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; call&nbsp; &nbsp; edx <br></li><li>0048DDA1&nbsp;&nbsp;|.&nbsp;&nbsp;0FB615 207FE5&gt;movzx&nbsp; &nbsp;edx, byte ptr [E57F20] <br></li><li>0048DDA8&nbsp;&nbsp;|.&nbsp;&nbsp;8B4424 10&nbsp; &nbsp;&nbsp;&nbsp;mov&nbsp; &nbsp;&nbsp;&nbsp;eax, dword ptr [esp+10] <br></li><li>0048DDAC&nbsp;&nbsp;|.&nbsp;&nbsp;8B4C24 14&nbsp; &nbsp;&nbsp;&nbsp;mov&nbsp; &nbsp;&nbsp;&nbsp;ecx, dword ptr [esp+14] <br></li><li>0048DDB0&nbsp;&nbsp;|.&nbsp;&nbsp;57&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;push&nbsp; &nbsp; edi <br></li><li>0048DDB1&nbsp;&nbsp;|.&nbsp;&nbsp;52&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;push&nbsp; &nbsp; edx <br></li><li>0048DDB2&nbsp;&nbsp;|.&nbsp;&nbsp;893D 28BFDE00 mov&nbsp; &nbsp;&nbsp;&nbsp;dword ptr [DEBF28], edi <br></li><li>0048DDB8&nbsp;&nbsp;|.&nbsp;&nbsp;893D 34BFDE00 mov&nbsp; &nbsp;&nbsp;&nbsp;dword ptr [DEBF34], edi <br></li><li>0048DDBE&nbsp;&nbsp;|.&nbsp;&nbsp;893D 50BFDE00 mov&nbsp; &nbsp;&nbsp;&nbsp;dword ptr [DEBF50], edi <br></li><li>0048DDC4&nbsp;&nbsp;|.&nbsp;&nbsp;A3 1CBFDE00&nbsp; &nbsp;mov&nbsp; &nbsp;&nbsp;&nbsp;dword ptr [DEBF1C], eax <br></li><li>0048DDC9&nbsp;&nbsp;|.&nbsp;&nbsp;890D 20BFDE00 mov&nbsp; &nbsp;&nbsp;&nbsp;dword ptr [DEBF20], ecx <br></li><li>0048DDCF&nbsp;&nbsp;|.&nbsp;&nbsp;E8 EC38FFFF&nbsp; &nbsp;call&nbsp; &nbsp; 004816C0 <br></li><li>0048DDD4&nbsp;&nbsp;|.&nbsp;&nbsp;8B7424 28&nbsp; &nbsp;&nbsp;&nbsp;mov&nbsp; &nbsp;&nbsp;&nbsp;esi, dword ptr [esp+28] <br></li><li>0048DDD8&nbsp;&nbsp;|.&nbsp;&nbsp;83C4 08&nbsp; &nbsp;&nbsp; &nbsp; add&nbsp; &nbsp;&nbsp;&nbsp;esp, 8 <br></li><li>0048DDDB&nbsp;&nbsp;|.&nbsp;&nbsp;33C0&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; xor&nbsp; &nbsp;&nbsp;&nbsp;eax, eax <br></li><li>0048DDDD&nbsp;&nbsp;|.&nbsp;&nbsp;385C24 24&nbsp; &nbsp;&nbsp;&nbsp;cmp&nbsp; &nbsp;&nbsp;&nbsp;byte ptr [esp+24], bl <br></li><li>0048DDE1&nbsp;&nbsp;|.&nbsp;&nbsp;68 1C7FE500&nbsp; &nbsp;push&nbsp; &nbsp; 00E57F1C&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; ;&nbsp;&nbsp;注意第一个参数 <br></li><li>0048DDE6&nbsp;&nbsp;|.&nbsp;&nbsp;0F95C0&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;setne&nbsp; &nbsp;al <br></li><li>0048DDE9&nbsp;&nbsp;|.&nbsp;&nbsp;33C9&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; xor&nbsp; &nbsp;&nbsp;&nbsp;ecx, ecx <br></li><li>0048DDEB&nbsp;&nbsp;|.&nbsp;&nbsp;385C24 20&nbsp; &nbsp;&nbsp;&nbsp;cmp&nbsp; &nbsp;&nbsp;&nbsp;byte ptr [esp+20], bl <br></li><li>0048DDEF&nbsp;&nbsp;|.&nbsp;&nbsp;68 1CBFDE00&nbsp; &nbsp;push&nbsp; &nbsp; 00DEBF1C <br></li><li>0048DDF4&nbsp;&nbsp;|.&nbsp;&nbsp;0F94C1&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;sete&nbsp; &nbsp; cl <br></li><li>0048DDF7&nbsp;&nbsp;|.&nbsp;&nbsp;C705 24BFDE00&gt;mov&nbsp; &nbsp;&nbsp;&nbsp;dword ptr [DEBF24], 16 <br></li><li>0048DE01&nbsp;&nbsp;|.&nbsp;&nbsp;8935 38BFDE00 mov&nbsp; &nbsp;&nbsp;&nbsp;dword ptr [DEBF38], esi <br></li><li>0048DE07&nbsp;&nbsp;|.&nbsp;&nbsp;8D0485 470000&gt;lea&nbsp; &nbsp;&nbsp;&nbsp;eax, dword ptr [eax*4+47] <br></li><li>0048DE0E&nbsp;&nbsp;|.&nbsp;&nbsp;A3 44BFDE00&nbsp; &nbsp;mov&nbsp; &nbsp;&nbsp;&nbsp;dword ptr [DEBF44], eax <br></li><li>0048DE13&nbsp;&nbsp;|.&nbsp;&nbsp;A1 187FE500&nbsp; &nbsp;mov&nbsp; &nbsp;&nbsp;&nbsp;eax, dword ptr [E57F18]&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; ;&nbsp;&nbsp;取出上面保存的IDirect3D9接口指针 <br></li><li>0048DE18&nbsp;&nbsp;|.&nbsp;&nbsp;890D 3CBFDE00 mov&nbsp; &nbsp;&nbsp;&nbsp;dword ptr [DEBF3C], ecx <br></li><li>0048DE1E&nbsp;&nbsp;|.&nbsp;&nbsp;8B0D 0475E500 mov&nbsp; &nbsp;&nbsp;&nbsp;ecx, dword ptr [E57504] <br></li><li>0048DE24&nbsp;&nbsp;|.&nbsp;&nbsp;8B10&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; mov&nbsp; &nbsp;&nbsp;&nbsp;edx, dword ptr [eax]&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; ;&nbsp;&nbsp;edx为IDirect3D9对象地址 <br></li><li>0048DE26&nbsp;&nbsp;|.&nbsp;&nbsp;8B52 40&nbsp; &nbsp;&nbsp; &nbsp; mov&nbsp; &nbsp;&nbsp;&nbsp;edx, dword ptr [edx+40]&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; ;&nbsp;&nbsp;edx为CreateDevice函数地址 <br></li><li>0048DE29&nbsp;&nbsp;|.&nbsp;&nbsp;51&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;push&nbsp; &nbsp; ecx <br></li><li>0048DE2A&nbsp;&nbsp;|.&nbsp;&nbsp;56&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;push&nbsp; &nbsp; esi <br></li><li>0048DE2B&nbsp;&nbsp;|.&nbsp;&nbsp;57&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;push&nbsp; &nbsp; edi <br></li><li>0048DE2C&nbsp;&nbsp;|.&nbsp;&nbsp;53&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;push&nbsp; &nbsp; ebx <br></li><li>0048DE2D&nbsp;&nbsp;|.&nbsp;&nbsp;50&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;push&nbsp; &nbsp; eax <br></li><li>0048DE2E&nbsp;&nbsp;|.&nbsp;&nbsp;FFD2&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; call&nbsp; &nbsp; edx&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;;&nbsp;&nbsp;调用CreateDevice</li></ol><i>复制代码</i> <br>这几行代码表示游戏把创建的指针保存到了0xe57f18，接着往下看，0x48de13取出了这个指针，然后又按指针找到了接口地址，又在这个地址上加上0x40。查阅微软dx sdk得知，CreateDevice这个函数是IDirect3D9接口中的第17个函数，所以他的偏移为16*4=0x40。由此可以确定，0x48de2e处的call调用的就是CreateDevice。 <br>先看看CreateDevice的原型： <br>代码: <br>HRESULT CreateDevice( UINT Adapter, D3DDEVTYPE DeviceType, HWND hFocusWindow, DWORD BehaviorFlags, D3DPRESENT_PARAMETERS *pPresentationParameters, IDirect3DDevice9** ppReturnedDeviceInterface ); <br>其中我们最关心的就是最后一个参数IDirect3DDevice9** ppReturnedDeviceInterface，这个就是我们要的设备接口指针。按照stdcall入栈顺序，0x48dde1处push的0xE57F1C就是这个接口的指针，我们只需要在这个call返回时取出0xE57F1C处的指针保存即可。 <br><br>【寻找显示函数】 <br>OD载入游戏，运行，当运行到有文字显示的时候，切到od然后暂停。ALT+M打开内存窗口，搜索刚才看到的字符串，然后在找到的字符串上下内存访问断点。假设断到了某处，CTRL+F9执行到返回，把这个过程nop掉（注意栈平衡），继续游戏。假如游戏没有报错，正常运行而且没有文字显示了说明你找到的就是文字显示函数。如果报错或者有文字显示，继续下断，继续nop，继续观察。如此反复N次，一定能找到。 <br>不要嫌烦，找不到也别灰心，所谓调试，不就是调整测试调整测试。 <br>我尝试n次终于断在了0x614082 <br>代码: <br><ol type="1" style="margin:0 0 0 25px"><li>00614082&nbsp; &nbsp;.&nbsp;&nbsp;FFD0&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; call&nbsp; &nbsp; eax&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;;&nbsp;&nbsp;显示函数00614084&nbsp; &nbsp;.&nbsp;&nbsp; <br></li><li>83C4 18&nbsp; &nbsp;&nbsp; &nbsp; add&nbsp; &nbsp;&nbsp;&nbsp;esp, 18</li></ol><i>复制代码</i>栈窗口截图如下， <br><span class="highslide"><img src="assets/1570958422-d5850f1a4f6f2a75e11086ca607a285a.jpg" border="0" style="max-width: 100%;max-height: 800px;"></span> <br>其中一个参数为游戏的文本Loading Data，有点像，nop掉这个call之后不显示文字，如图 <br><span class="highslide"><img src="assets/1570958422-e3f06523a0a8308fd2d1801b1c06121f.jpg" border="0" style="max-width: 100%;max-height: 800px;"></span> <br>而游戏正常运行，看来就是它了。 <br><br><br>【分析函数接口】 <br>找到显示函数之后，下一步要做的就是分析这个函数的接口，这个至关重要。 <br>&nbsp;&nbsp;从上面的截图来看，我们猜测倒数第六个push的dword很可能就是字符串地址参数。可是光知道这个不够。要绘制出文字，还需要知道字符串指针、位置、大小、颜色、透明度等。这时也没有什么太好的办法，只有一个一个修改运行观察，看看游戏有什么变化，然后猜测再修改再确认。当然，也可以观察汇编代码比如借助浮点数指令可以确定浮点数，或者使用ida的F5来辅助分析（推荐），这里不再赘述，大家各显神通。 <br>&nbsp;&nbsp;我所分析出的显示函数接口如下： <br>代码: <br><ol type="1" style="margin:0 0 0 25px"><li>void drawtext( <br></li><li>color *&nbsp;&nbsp;a,&nbsp;&nbsp;//color是我自己定义的一个struct，四字节，分别为alpha，r，g，b <br></li><li>float x,&nbsp; &nbsp; //浮点数，x坐标 <br></li><li>float y,&nbsp; &nbsp; //浮点数，y坐标 <br></li><li>int len,&nbsp; &nbsp; //要显示的字符串长度 <br></li><li>DWORD type,//恒为’%s’,用不到，可能表示要显示的是一个字符串 <br></li><li>const unsigned short * s//字符串指针 <br></li><li>);</li></ol><i>复制代码</i>有了接口说明，我们便可以hook掉这个显示函数然后使用我们前面保存的那个设备接口指针调用D3DXCreateFont创建一个字体，再调用DrawText直接绘制文本。具体如何hook不重要，思路对了就行。下面是我创建宋体然后DrawText直接绘制中文的效果截图 <br><span class="highslide"><img src="assets/1570958422-6ce0491972cb07b308915cde069214f7.jpg" border="0" style="max-width: 100%;max-height: 800px;"></span> <br>终于有亲切的方块汉字出现了。尽管不太好看，但总算在正确的位置，以正确的大小，正确的颜色，正确的透明度显示出了正确的汉字，作为破解者，算是成功了吧。 <br>因为补丁代码风格比较不堪，这里就不贴了，有了思路，我想写出来不难吧。 <br><br>【总结】 <br>外挂字幕汉化的步骤大致如下：首先通过hook的方式获得D3D设备接口指针。然后找出显示函数并分析出函数接口。再然后hook该显示函数，按照分析出的接口重新设计。 <br>从上文可以看出，实现起来并不难。不过麻烦的就是找指针，找函数，分析函数接口这些比较琐碎的没有规律的事情。不过破解就是这样，不能光靠运气，但没运气也不行。</td></tr></tbody></table><div id="alert_tpc" style="color: gray; margin-top: 30px; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">[ 此帖被my918在2011-05-22 07:11重新编辑 ]</div></div>
+		</th>
+	</tr>
+	<tr class="tr1 r_one">
+		<th style="vertical-align: bottom; padding-left: 15px; border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+
+		<div id="w_tpc" class="c"></div>
+
+		<div><img class="signature" src="assets/1570958422-f23b8ffd0b6b327441aa828c9cd3243d.gif" align="absbottom"></div>
+		<div class="signature" style="max-height:380px;maxHeight:380px; overflow:hidden;"><table width="100%"><tbody><tr><td>绝影汉化组长期招募汉化技术人才，加入方式QQ：109990997</td><td></td></tr></tbody></table></div>
+
+		<div class="tipad"><span style="float:right">
+<a href="javascript:scroll(0,0)" title="顶端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">顶端</a> <a href="javascript:scroll(0,999999)" title="底端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">底端</a></span>
+			
+			<span class="gray"> 2011-05-22 06:57 | 
+	
+			</span>
+
+			<span><a class="s3" title="回复此楼" style="cursor:pointer;" onclick="postreply('回 楼主(my918) 的帖子');" data-mx-warn="Empty URL">[楼 主]</a></span>
+
+		</div></th>
+	</tr></tbody></table>
+</div>
+
+<a name="4004792" data-mx-warn="Empty URL"></a>
+<div class="t t2"><table cellspacing="0" cellpadding="0" width="100%" style="table-layout: fixed; border-top: 0px; --darkreader-inline-border-top: initial;" data-darkreader-inline-border-top="">
+	<tbody><tr class="tr1"><th style="width:20%" rowspan="2" class="r_two">
+
+		<img src="assets/1570958422-1cde2ccde0fc90dbe6db3784fc6ec383.gif" title="该用户目前不在线" align="absmiddle">
+
+<b>reimukawayi</b>
+<div style="margin:.3em 0 .4em .2em"></div>
+<div class="user-pic"><table style="border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left=""><tbody><tr><td width="1">
+
+<a href="https://bbs.sumisora.net/profile.php?action=show&amp;uid=549873" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img class="pic" src="assets/1570958422-17f7b03b88edb9727d0ac59a28e7b035.jpg" style="max-width:185px;max-height:200px;overflow:hidden" border="0"></a>
+
+</td><td style="vertical-align:top"><span id="sf_1"></span></td></tr></tbody></table>
+</div>
+		级别: <font color="#555555" data-darkreader-inline-color="" style="--darkreader-inline-color:#cfc9be;">澄空一年生上学期</font><br>
+		<img style="margin:.2em 0 .6em" src="assets/1570958422-f43195cd588caa26c296fcc61910b3e6.gif"><br>
+
+<span class="user-info2" id="showface_1">
+<span class="user-infoWrap2">
+
+
+精华:
+
+		<span class="s4">0</span>
+<br>
+发帖: <span class="s1 f9">94</span><br>
+学分: <span class="s2 f9">0 点</span><br>
+澄空币: <span class="s3 f9">642 KID</span><br>
+
+		GPA: <span class="s2 f9">0 点</span><br>
+
+		<span class="gray">注册时间:2011-01-17<br>
+		最后登录:2013-04-02 <br><br> 
+		</span>
+		</span></span>
+		</th>
+		<th height="100%" class="r_one" valign="top" id="td_4004792" style="padding: 5px 15px 0px; border: 0px; width: 80%; overflow: hidden; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+			<div class="tiptop">
+			<span class="fl" style="white-space:nowrap;">
+			<a href="https://bbs.sumisora.net/post.php?action=quote&amp;fid=78&amp;tid=10997713&amp;pid=4004792&amp;article=1" onclick="return sendurl(this,4,event)" id="quote_4004792" title="引用回复这个帖子" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">引用</a> <a href="https://bbs.sumisora.net/post.php?action=modify&amp;fid=78&amp;tid=10997713&amp;pid=4004792&amp;article=1" id="modify_4004792" onclick="return sendurl(this,4,event)" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">编辑</a>
+			<a href="https://bbs.sumisora.net/message.php?action=write&amp;touid=549873" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">短信</a>
+
+			<a href="https://bbs.sumisora.net/operate.php?action=report&amp;tid=10997713&amp;pid=4004792" onclick="return sendurl(this,8)" id="report_4004792" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">举报</a>
+
+			<a href="https://bbs.sumisora.net/read.php?tid=10997713&amp;uid=549873" title="只看该作者的所有回复" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">只看</a>
+
+			<a style="cursor:pointer;" onclick="copyUrl('4004792')" title="此楼地址" data-mx-warn="Empty URL">锚点</a>
+			</span>
+
+			<div class="c"></div>
+			</div>
+			<h1 id="subject_4004792" class="fl">&nbsp;</h1>
+			
+
+			<div id="p_4004792" class="c"></div>
+
+<!--
+-->
+
+			<div class="tpc_content" id="read_4004792">虽然不太明白，但了解了汉化是怎么一回事…</div>
+		</th>
+	</tr>
+	<tr class="tr1 r_one">
+		<th style="vertical-align: bottom; padding-left: 15px; border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+
+		<div id="w_4004792" class="c"></div>
+
+		<div class="tipad"><span style="float:right">
+<a href="javascript:scroll(0,0)" title="顶端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">顶端</a> <a href="javascript:scroll(0,999999)" title="底端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">底端</a></span>
+			
+			<span class="gray"> 2011-05-22 08:51 | 
+	
+			</span>
+
+			<span><a class="s3" title="回复此楼" style="cursor:pointer;" onclick="postreply('回 1楼(reimukawayi) 的帖子');" data-mx-warn="Empty URL">1 楼</a></span>
+
+		</div></th>
+	</tr></tbody></table>
+</div>
+
+<a name="4004797" data-mx-warn="Empty URL"></a>
+<div class="t t2"><table cellspacing="0" cellpadding="0" width="100%" style="table-layout: fixed; border-top: 0px; --darkreader-inline-border-top: initial;" data-darkreader-inline-border-top="">
+	<tbody><tr class="tr1"><th style="width:20%" rowspan="2" class="r_two">
+
+		<img src="assets/1570958422-1cde2ccde0fc90dbe6db3784fc6ec383.gif" title="该用户目前不在线" align="absmiddle">
+
+<b>BlueViolence</b>
+<div style="margin:.3em 0 .4em .2em"></div>
+<div class="user-pic"><table style="border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left=""><tbody><tr><td width="1">
+
+<a href="https://bbs.sumisora.net/profile.php?action=show&amp;uid=242453" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img class="pic" src="assets/1570958422-bc3b3631a24154c2d9ba8189508a5212.gif" style="max-width:185px;max-height:200px;overflow:hidden" border="0"></a>
+
+</td><td style="vertical-align:top"><span id="sf_2"></span></td></tr></tbody></table>
+</div>
+		级别: <font color="#555555" data-darkreader-inline-color="" style="--darkreader-inline-color:#cfc9be;">澄空二年生上学期</font><br>
+		<img style="margin:.2em 0 .6em" src="assets/1570958422-3699e74cfe4e975552e8db25eb7cc233.gif"><br>
+
+<span class="user-info2" id="showface_2">
+<span class="user-infoWrap2">
+
+
+精华:
+
+		<span class="s4">0</span>
+<br>
+发帖: <span class="s1 f9">640</span><br>
+学分: <span class="s2 f9">0 点</span><br>
+澄空币: <span class="s3 f9">739 KID</span><br>
+
+		GPA: <span class="s2 f9">0 点</span><br>
+
+		<span class="gray">注册时间:2008-10-24<br>
+		最后登录:2019-06-30 <br><br> 
+		</span>
+		</span></span>
+		</th>
+		<th height="100%" class="r_one" valign="top" id="td_4004797" style="padding: 5px 15px 0px; border: 0px; width: 80%; overflow: hidden; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+			<div class="tiptop">
+			<span class="fl" style="white-space:nowrap;">
+			<a href="https://bbs.sumisora.net/post.php?action=quote&amp;fid=78&amp;tid=10997713&amp;pid=4004797&amp;article=2" onclick="return sendurl(this,4,event)" id="quote_4004797" title="引用回复这个帖子" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">引用</a> <a href="https://bbs.sumisora.net/post.php?action=modify&amp;fid=78&amp;tid=10997713&amp;pid=4004797&amp;article=2" id="modify_4004797" onclick="return sendurl(this,4,event)" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">编辑</a>
+			<a href="https://bbs.sumisora.net/message.php?action=write&amp;touid=242453" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">短信</a>
+
+			<a href="https://bbs.sumisora.net/operate.php?action=report&amp;tid=10997713&amp;pid=4004797" onclick="return sendurl(this,8)" id="report_4004797" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">举报</a>
+
+			<a href="https://bbs.sumisora.net/read.php?tid=10997713&amp;uid=242453" title="只看该作者的所有回复" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">只看</a>
+
+			<a style="cursor:pointer;" onclick="copyUrl('4004797')" title="此楼地址" data-mx-warn="Empty URL">锚点</a>
+			</span>
+
+			<div class="c"></div>
+			</div>
+			<h1 id="subject_4004797" class="fl">&nbsp;</h1>
+			
+
+			<div id="p_4004797" class="c"></div>
+
+<!--
+-->
+
+			<div class="tpc_content" id="read_4004797">楼主写得很好，运气是需要的不过运气是建立在经验基础之上的。</div>
+		</th>
+	</tr>
+	<tr class="tr1 r_one">
+		<th style="vertical-align: bottom; padding-left: 15px; border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+
+		<div id="w_4004797" class="c"></div>
+
+		<div class="tipad"><span style="float:right">
+<a href="javascript:scroll(0,0)" title="顶端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">顶端</a> <a href="javascript:scroll(0,999999)" title="底端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">底端</a></span>
+			
+			<span class="gray"> 2011-05-22 08:56 | 
+	
+			</span>
+
+			<span><a class="s3" title="回复此楼" style="cursor:pointer;" onclick="postreply('回 2楼(BlueViolence) 的帖子');" data-mx-warn="Empty URL">2 楼</a></span>
+
+		</div></th>
+	</tr></tbody></table>
+</div>
+
+<a name="4005070" data-mx-warn="Empty URL"></a>
+<div class="t t2"><table cellspacing="0" cellpadding="0" width="100%" style="table-layout: fixed; border-top: 0px; --darkreader-inline-border-top: initial;" data-darkreader-inline-border-top="">
+	<tbody><tr class="tr1"><th style="width:20%" rowspan="2" class="r_two">
+
+		<img src="assets/1570958422-1cde2ccde0fc90dbe6db3784fc6ec383.gif" title="该用户目前不在线" align="absmiddle">
+
+<b>amaranthf</b>
+<div style="margin:.3em 0 .4em .2em">はい、変態です。</div>
+<div class="user-pic"><table style="border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left=""><tbody><tr><td width="1">
+
+<a href="https://bbs.sumisora.net/profile.php?action=show&amp;uid=247562" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img class="pic" src="assets/1570958422-1355eb712976ba923dc6d00960493aea.jpg" style="max-width:185px;max-height:200px;overflow:hidden" border="0"></a>
+
+</td><td style="vertical-align:top"><span id="sf_3"></span></td></tr></tbody></table>
+</div>
+		级别: <font color="#555555" data-darkreader-inline-color="" style="--darkreader-inline-color:#cfc9be;">澄空三年生上学期</font><br>
+		<img style="margin:.2em 0 .6em" src="assets/1570958422-5fc5bacf4fd91c54a5fe72c4ceff18fa.gif"><br>
+
+<span class="user-info2" id="showface_3">
+<span class="user-infoWrap2">
+
+
+精华:
+
+		<a href="https://bbs.sumisora.net/search.php?authorid=247562&amp;digest=1" target="_blank" class="s4 f9" referrerpolicy="no-referrer" rel="noopener noreferrer">1</a>
+<br>
+发帖: <span class="s1 f9">302</span><br>
+学分: <span class="s2 f9">159 点</span><br>
+澄空币: <span class="s3 f9">914 KID</span><br>
+
+		GPA: <span class="s2 f9">0 点</span><br>
+
+		<span class="gray">注册时间:2008-11-23<br>
+		最后登录:2019-08-30 <br><br> 
+		<img src="assets/1570958422-bd1b51324558fe7f970dc337a22ab44d.gif" title="杏子御津爱护同好会勋章"> <img src="assets/1570958422-f464946ff600e13a1efb7655381816b9.gif" title="きっと、澄みわたる朝色よりも汉化纪念勋章"> <img src="assets/1570958422-e4c06c69f2782e34fc77312ea6e838be.gif" title="Gift汉化纪念勋章"> <img src="assets/1570958422-15e89d0b08be5c8eefbdfacf3bb9dffd.gif" title="天神乱漫汉化纪念勋章"> <img src="assets/1570958422-b0c0c9209b189d3c6e4a2f1ce27e06da.gif" title="纯白交响曲汉化纪念勋章"> <img src="assets/1570958422-fc10b14705a44f23e82b183dd9d03d74.gif" title="muv-luv alternative汉化纪念勋章"> <br></span>
+		</span></span>
+		</th>
+		<th height="100%" class="r_one" valign="top" id="td_4005070" style="padding: 5px 15px 0px; border: 0px; width: 80%; overflow: hidden; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+			<div class="tiptop">
+			<span class="fl" style="white-space:nowrap;">
+			<a href="https://bbs.sumisora.net/post.php?action=quote&amp;fid=78&amp;tid=10997713&amp;pid=4005070&amp;article=3" onclick="return sendurl(this,4,event)" id="quote_4005070" title="引用回复这个帖子" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">引用</a> <a href="https://bbs.sumisora.net/post.php?action=modify&amp;fid=78&amp;tid=10997713&amp;pid=4005070&amp;article=3" id="modify_4005070" onclick="return sendurl(this,4,event)" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">编辑</a>
+			<a href="https://bbs.sumisora.net/message.php?action=write&amp;touid=247562" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">短信</a>
+
+			<a href="https://bbs.sumisora.net/operate.php?action=report&amp;tid=10997713&amp;pid=4005070" onclick="return sendurl(this,8)" id="report_4005070" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">举报</a>
+
+			<a href="https://bbs.sumisora.net/read.php?tid=10997713&amp;uid=247562" title="只看该作者的所有回复" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">只看</a>
+
+			<a style="cursor:pointer;" onclick="copyUrl('4005070')" title="此楼地址" data-mx-warn="Empty URL">锚点</a>
+			</span>
+
+			<div class="c"></div>
+			</div>
+			<h1 id="subject_4005070" class="fl">&nbsp;</h1>
+			
+
+			<div id="p_4005070" class="c"></div>
+
+<!--
+-->
+
+			<div class="tpc_content" id="read_4005070">英文字体好啊，随便就可以自己画字库……顺便IDA本身是不带F5功能的……</div>
+		</th>
+	</tr>
+	<tr class="tr1 r_one">
+		<th style="vertical-align: bottom; padding-left: 15px; border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+
+		<div id="w_4005070" class="c"></div>
+
+		<div><img src="assets/1570958422-ee75bbe39bae3a2e6fc29b9593dde416.png" align="absbottom"></div>
+		<div class="card" style="overflow:hidden;">
+			<table width="100%">
+				<tbody><tr>
+					<td id="ck_card_container_4005070">
+					<img src="assets/1570958422-3e2b863b5e623887b192ec599f8824b1.png" width="224" border="0"> <img src="assets/1570958422-b9097c442aecbdab3af0001b460f5744.png" width="224" border="0"> <img src="assets/1570958422-681af903addce100446352ebfb1ea230.png" width="224" border="0"> </td><td>
+				</td></tr>
+				
+			</tbody></table>
+		</div>
+
+
+		<div class="tipad"><span style="float:right">
+<a href="javascript:scroll(0,0)" title="顶端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">顶端</a> <a href="javascript:scroll(0,999999)" title="底端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">底端</a></span>
+			
+			<span class="gray"> 2011-05-22 12:25 | 
+	
+			</span>
+
+			<span><a class="s3" title="回复此楼" style="cursor:pointer;" onclick="postreply('回 3楼(amaranthf) 的帖子');" data-mx-warn="Empty URL">3 楼</a></span>
+
+		</div></th>
+	</tr></tbody></table>
+</div>
+
+<a name="a" data-mx-warn="Empty URL"></a><a name="4005259" data-mx-warn="Empty URL"></a>
+<div class="t t2"><table cellspacing="0" cellpadding="0" width="100%" style="table-layout: fixed; border-top: 0px; --darkreader-inline-border-top: initial;" data-darkreader-inline-border-top="">
+	<tbody><tr class="tr1"><th style="width:20%" rowspan="2" class="r_two">
+
+		<img src="assets/1570958422-1cde2ccde0fc90dbe6db3784fc6ec383.gif" title="该用户目前不在线" align="absmiddle">
+
+<b>风织翼</b>
+<div style="margin:.3em 0 .4em .2em"></div>
+<div class="user-pic"><table style="border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left=""><tbody><tr><td width="1">
+
+<a href="https://bbs.sumisora.net/profile.php?action=show&amp;uid=331970" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img class="pic" src="assets/1570958422-bc91a33538b6ab863b6bd50bbcda8ed2.png" style="max-width:185px;max-height:200px;overflow:hidden" border="0"></a>
+
+</td><td style="vertical-align:top"><span id="sf_4"></span></td></tr></tbody></table>
+</div>
+		级别: <font color="#555555" data-darkreader-inline-color="" style="--darkreader-inline-color:#cfc9be;">澄空一年生下学期</font><br>
+		<img style="margin:.2em 0 .6em" src="assets/1570958422-0e03c5ece6b57c19681c4186b2d07c62.gif"><br>
+
+<span class="user-info2" id="showface_4">
+<span class="user-infoWrap2">
+
+
+精华:
+
+		<span class="s4">0</span>
+<br>
+发帖: <span class="s1 f9">259</span><br>
+学分: <span class="s2 f9">1 点</span><br>
+澄空币: <span class="s3 f9">612 KID</span><br>
+
+		GPA: <span class="s2 f9">0 点</span><br>
+
+		<span class="gray">注册时间:2009-11-12<br>
+		最后登录:2014-11-02 <br><br> 
+		</span>
+		</span></span>
+		</th>
+		<th height="100%" class="r_one" valign="top" id="td_4005259" style="padding: 5px 15px 0px; border: 0px; width: 80%; overflow: hidden; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+			<div class="tiptop">
+			<span class="fl" style="white-space:nowrap;">
+			<a href="https://bbs.sumisora.net/post.php?action=quote&amp;fid=78&amp;tid=10997713&amp;pid=4005259&amp;article=4" onclick="return sendurl(this,4,event)" id="quote_4005259" title="引用回复这个帖子" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">引用</a> <a href="https://bbs.sumisora.net/post.php?action=modify&amp;fid=78&amp;tid=10997713&amp;pid=4005259&amp;article=4" id="modify_4005259" onclick="return sendurl(this,4,event)" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">编辑</a>
+			<a href="https://bbs.sumisora.net/message.php?action=write&amp;touid=331970" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">短信</a>
+
+			<a href="https://bbs.sumisora.net/operate.php?action=report&amp;tid=10997713&amp;pid=4005259" onclick="return sendurl(this,8)" id="report_4005259" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">举报</a>
+
+			<a href="https://bbs.sumisora.net/read.php?tid=10997713&amp;uid=331970" title="只看该作者的所有回复" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">只看</a>
+
+			<a style="cursor:pointer;" onclick="copyUrl('4005259')" title="此楼地址" data-mx-warn="Empty URL">锚点</a>
+			</span>
+
+			<div class="c"></div>
+			</div>
+			<h1 id="subject_4005259" class="fl">&nbsp;</h1>
+			
+
+			<div id="p_4005259" class="c"></div>
+
+<!--
+-->
+
+			<div class="tpc_content" id="read_4005259">转贴要注明出处，即使是你论坛里的也不代表你就可以把源地址和原作者的信息吃掉</div>
+		</th>
+	</tr>
+	<tr class="tr1 r_one">
+		<th style="vertical-align: bottom; padding-left: 15px; border: 0px; --darkreader-inline-border-top: initial; --darkreader-inline-border-right: initial; --darkreader-inline-border-bottom: initial; --darkreader-inline-border-left: initial;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+
+		<div id="w_4005259" class="c"></div>
+
+		<div><img class="signature" src="assets/1570958422-f23b8ffd0b6b327441aa828c9cd3243d.gif" align="absbottom"></div>
+		<div class="signature" style="max-height:380px;maxHeight:380px; overflow:hidden;"><table width="100%"><tbody><tr><td>乃们敢不敢先把程序日好了，把测试补丁出了再开坑？</td><td></td></tr></tbody></table></div>
+
+		<div class="tipad"><span style="float:right">
+<a href="javascript:scroll(0,0)" title="顶端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">顶端</a> <a href="javascript:scroll(0,999999)" title="底端" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">底端</a></span>
+			
+			<span class="gray"> 2011-05-22 14:52 | 
+	
+			</span>
+
+			<span><a class="s3" title="回复此楼" style="cursor:pointer;" onclick="postreply('回 4楼(风织翼) 的帖子');" data-mx-warn="Empty URL">4 楼</a></span>
+
+		</div></th>
+	</tr></tbody></table>
+</div>
+
+</form>
+<div class="t3" style="margin:initial"><table cellspacing="0" cellpadding="0" width="100%" align="center">
+	<tbody><tr><td align="left"></td>
+		<td valign="center" align="right">
+		<a class="abtn f_two" id="readlog" onclick="sendmsg('pw_ajax.php?action=readlog','',this.id);" data-mx-warn="Empty URL">帖子浏览记录<img src="assets/1570958422-5c8e409588b73ce4284cf5b9bd619e15.gif"></a>
+		<select onchange="Fjump(this.options[this.selectedIndex].value)"><option value="" selected="">快速跳至</option>
+<option value="1">&gt;&gt; 『澄空学园 办公楼区』</option>
+<option value="2"> &nbsp;|- 【校园公告栏】</option>
+<option value="5"> &nbsp;|- 【论坛意见箱】</option>
+<option value="113">&gt;&gt; 『澄空学园 资讯社』</option>
+<option value="47"> &nbsp;|- 【新鲜速报】</option>
+<option value="103"> &nbsp;|- 【新作介绍】</option>
+<option value="8"> &nbsp; &nbsp;|-  【电子杂志下载区】</option>
+<option value="104"> &nbsp;|- 【杂志专题】</option>
+<option value="7">&gt;&gt; 『澄空学园 教学楼区』</option>
+<option value="62"> &nbsp;|- 【AGE主题学部】</option>
+<option value="39"> &nbsp;|- 【Akabeesoft2主题学部】</option>
+<option value="100"> &nbsp;|- 【AUGUST主题学部】</option>
+<option value="42"> &nbsp;|- 【CIRCUS主题学部】</option>
+<option value="40"> &nbsp;|- 【Cotton-Nekoneko主题学部】</option>
+<option value="64"> &nbsp;|- 【GIGA主题学部】</option>
+<option value="38"> &nbsp;|- 【Key主题学部】</option>
+<option value="10"> &nbsp;|- 【KID主题学部】</option>
+<option value="37"> &nbsp;|- 【Leaf主题学部】</option>
+<option value="70"> &nbsp;|- 【minori主题学部】</option>
+<option value="12"> &nbsp;|- 【Navel主题学部】</option>
+<option value="65"> &nbsp;|- 【Nitro+主题学部】</option>
+<option value="14"> &nbsp;|- 【Type-Moon应援会】</option>
+<option value="17"> &nbsp; &nbsp;|-  【TM精华区】</option>
+<option value="98"> &nbsp;|- 【Will主题学部】</option>
+<option value="116"> &nbsp;|- 【FAVORITE主题学部】</option>
+<option value="108"> &nbsp;|- 【ALcot主题学部】</option>
+<option value="55"> &nbsp;|- 【GALGAME综合作品讨论室】</option>
+<option value="97"> &nbsp; &nbsp;|-  【Light主题学部】</option>
+<option value="117"> &nbsp; &nbsp;|-  【CUFFS主题学部】</option>
+<option value="15"> &nbsp; &nbsp;|-  【Liar Soft主题学部】</option>
+<option value="57"> &nbsp; &nbsp;|-  【Purple 主题学部】</option>
+<option value="13"> &nbsp; &nbsp;|-  【工画堂主题学部】</option>
+<option value="35"> &nbsp;|- 【GALGAME综合杂谈室】</option>
+<option value="99"> &nbsp;|- 【ぱれっと主题学部】</option>
+<option value="122"> &nbsp;|- 【SAGA PLANETS研讨室】</option>
+<option value="123"> &nbsp;|- 【Lump of Sugar 研讨室】</option>
+<option value="86">&gt;&gt; 『澄空学园 图书馆』</option>
+<option value="80"> &nbsp;|- 【游戏鉴赏室】</option>
+<option value="56"> &nbsp;|- 【GALGAME攻略馆】</option>
+<option value="115"> &nbsp;|- 【作品出处问询室】</option>
+<option value="63"> &nbsp;|- 【Galgame疑问求助室】</option>
+<option value="18">&gt;&gt; 『澄空学园 教辅楼区』</option>
+<option value="73"> &nbsp;|- 【同人游戏区】</option>
+<option value="60"> &nbsp;|- 【二次元轻小说社】</option>
+<option value="20"> &nbsp;|- 【日语自学教室】</option>
+<option value="61"> &nbsp; &nbsp;|-  【日语学习资料区】</option>
+<option value="118"> &nbsp; &nbsp;|-  【日语参考文章区】</option>
+<option value="21"> &nbsp;|- 【一般游戏社团】</option>
+<option value="24"> &nbsp;|- 【多媒体课堂】</option>
+<option value="88">&gt;&gt; 『澄空学园 原创综合区』</option>
+<option value="79"> &nbsp;|- 【原创游戏部】</option>
+<option value="36"> &nbsp; &nbsp;|-  【ss-square】</option>
+<option value="89"> &nbsp;|- 【MAD研究室】</option>
+<option value="91"> &nbsp;|- 【莉可屋 REC ROOM】</option>
+<option value="119"> &nbsp; &nbsp;|-  【澄空百合社翻唱作品】</option>
+<option value="19"> &nbsp;|- 【澄空文学部】</option>
+<option value="120"> &nbsp; &nbsp;|-  【落日余晖】</option>
+<option value="23"> &nbsp;|- 【绘画工房】</option>
+<option value="69"> &nbsp;|- 【活动投票区】</option>
+<option value="74"> &nbsp;|- 【友谊赛投票区】</option>
+<option value="58"> &nbsp;|- 【澄空部活室】</option>
+<option value="41"> &nbsp;|- 【暑假原创作品活动专区】</option>
+<option value="59"> &nbsp;|- 【实物周边交流区】</option>
+<option value="85"> &nbsp; &nbsp;|-  【ComicMarket相关资料】</option>
+<option value="82"> &nbsp; &nbsp;|-  【新品介绍】</option>
+<option value="84"> &nbsp; &nbsp;|-  【综合交流】</option>
+<option value="83"> &nbsp; &nbsp;|-  【好物收集】</option>
+<option value="81"> &nbsp; &nbsp;|-  【交易求购】</option>
+<option value="95"> &nbsp;|- 【澄空放送部】</option>
+<option value="111"> &nbsp; &nbsp;|-  【放送策划室】</option>
+<option value="27"> &nbsp;|- 【水下乐园LeMU】</option>
+<option value="46"> &nbsp; &nbsp;|-  【美工作品收藏室】</option>
+<option value="26"> &nbsp; &nbsp;|-  【COS自爆馆】</option>
+<option value="90"> &nbsp; &nbsp;|-  【澄空期刊室】</option>
+<option value="71"> &nbsp;|- 【澄空演剧部】</option>
+<option value="9"> &nbsp; &nbsp;|-  演剧部排练室</option>
+<option value="52"> &nbsp;|- 【废帖回收站】</option>
+<option value="29">&gt;&gt; 『澄空学园 好物交流站』</option>
+<option value="50"> &nbsp;|- 【澄空学园字幕作品】</option>
+<option value="51"> &nbsp;|- 【澄空学园漫画作品】</option>
+<option value="77"> &nbsp;|- 【游戏汉化交流区】</option>
+<option value="28"> &nbsp; &nbsp;|-  【CK-GAL中文化小组】</option>
+<option value="106"> &nbsp; &nbsp;|-  【PRO2】</option>
+<option value="49"> &nbsp; &nbsp;|-      【桜】</option>
+<option value="30"> &nbsp;|- 【资源求助区】</option>
+<option value="32"> &nbsp;|- 【澄空音乐厅】</option>
+<option value="33"> &nbsp;|- 【澄空美术馆】</option>
+<option value="34"> &nbsp;|- 【动漫租售屋】</option>
+<option value="44">&gt;&gt; 『澄空学园 课余工作区』</option>
+<option value="45"> &nbsp;|- 【澄空漫画汉化组】</option>
+<option value="48"> &nbsp;|-  【澄空学园字幕组】</option>
+<option value="101"> &nbsp; &nbsp;|-  字幕组资料区</option>
+<option value="72"> &nbsp;|- 【澄空学园分流组】</option>
+<option value="87"> &nbsp;|- 【澄空学园新闻组】</option>
+<option value="96"> &nbsp;|- 【澄空学园文学社】</option>
+<option value="75"> &nbsp;|- 【澄空学园百合社】</option>
+<option value="112"> &nbsp;|- 【澄空学园编辑部】</option>
+<option value="114"> &nbsp;|- 【澄空学园美工部】</option>
+<option value="121"> &nbsp;|-  【澄空祭运行委员会】</option>
+</select></td>
+		
+	</tr>
+	<tr><td style="padding-top: 12px;text-align: left;"><img src="assets/1570958422-ca4a91079181c2a5cb3514b2e5b5f035.gif" align="absbottom"> <b><a href="https://bbs.sumisora.net/index.php" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">『澄空学园』</a> » <a href="https://bbs.sumisora.net/thread.php?fid=78&amp;page=6" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">【汉化破解研讨室】</a></b> </td>
+	<td style="padding-top: 12px;text-align: right;"><a href="https://bbs.sumisora.net/post.php?action=reply&amp;fid=78&amp;tid=10997713" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1570958422-132cb83b134d7ecd9b390389d489bc43.png"></a>
+
+<a href="https://bbs.sumisora.net/post.php?fid=78" style="margin-left:.5em" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1570958422-8cab7ee31ae503cf78e5410d40cec291.png" id="td_post1"></a>
+</td>
+	</tr>
+</tbody></table></div>
+
+
+
+
+<form name="FORM" method="post" action="post.php?" enctype="multipart/form-data" onsubmit="return checkpost(document.FORM);">
+<div class="t" style="margin-top:8px"><table cellspacing="0" cellpadding="0" align="center" width="100%">
+	<tbody><tr>
+		<td class="h" colspan="3"><b>快速发帖</b></td>
+	</tr>
+	<tr></tr>
+	<tr class="tr2"><td colspan="100" style="border-bottom: 0px; --darkreader-inline-border-bottom: initial;" data-darkreader-inline-border-bottom=""></td></tr>
+	<tr>
+		<td valign="top" width="20%" class="f_one" style="padding:7px">
+		<fieldset id="smiliebox" style="border: 1px solid rgb(213, 229, 232); --darkreader-inline-border-top:#354e51; --darkreader-inline-border-right:#354e51; --darkreader-inline-border-bottom:#354e51; --darkreader-inline-border-left:#354e51;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+		<legend>内容</legend>
+		<br>
+		<input type="checkbox" name="atc_usesign" value="1" checked="">使用签名<br>
+		<input type="checkbox" name="atc_convert" value="1" checked="">Wind Code自动转换 <br>
+	 	<input type="checkbox" id="atc_autoimg" name="atc_autoimg" value="1" onchange="onAutoImgchange()" checked="" title="此设置会记在浏览器中"><label for="atc_autoimg" title="此设置会记在浏览器中">自动分析img</label><br><br>
+	 	
+		<input type="checkbox" name="atc_requiresell" value="1" disabled="">出售此帖
+		<input class="input" type="text" maxlength="3" size="3" name="atc_money" value="0">
+		<br>
+		<input type="checkbox" name="atc_requirervrc" value="1">加密此帖
+		<input class="input" type="text" maxlength="6" size="3" name="atc_rvrc" value="0">
+		<br>
+		<br><br><a href="https://bbs.sumisora.net/read.php?tid=10925672" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">如何在帖子中贴图？</a>
+		<br><a href="https://bbs.sumisora.net/read.php?tid=10942243" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Wind Code使用教程</a>
+		<br><a href="https://bbs.sumisora.net/yume/recover/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">恢复帖子内容</a>
+		</fieldset>
+		</td>
+		<td width="60%" class="f_one" style="padding:7px">
+		<div>
+
+
+<blockquote style="width: 96%;" class="blockquote">澄空娘：『在手机上使用受姬版可以节省流量
+』</blockquote>
+
+		<input type="text" class="input" name="atc_title" value="Re:DirectX 9引擎3D游戏逆向分析及汉化实例" size="65">
+		
+
+		 认证码: <input class="input" type="text" name="gdcode" size="5" tabindex="6" onfocus="try{opencode('menu_gd',this)}catch(e){}"><br>
+		
+
+		</div><div style="padding:.3em 0">
+		</div>
+		<textarea onkeydown="quickpost(event)" id="atc_content" name="atc_content" rows="8" style="width:96%"></textarea>
+		
+		
+		
+		
+		
+		<div style="margin:5px 0">
+		<div style="padding: 4px 10px 0px 0px; float: left; color: rgb(136, 136, 136); --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">按 Ctrl+Enter 直接提交</div>
+		<input class="btn" type="submit" name="Submit" value=" 提 交 "></div>
+		</td>
+		<td width="20%" class="f_one">
+		<div style="padding:3px; text-align:center; width:200px;">
+		<fieldset id="smiliebox" style="border: 1px solid rgb(213, 229, 232); --darkreader-inline-border-top:#354e51; --darkreader-inline-border-right:#354e51; --darkreader-inline-border-bottom:#354e51; --darkreader-inline-border-left:#354e51;" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+			<legend>表情</legend>
+			<div id="menu_show"></div>
+<span style="float:right; margin:3px 10px 5px;"><a id="td_face" style="cursor:pointer;" onclick="showDefault();" align="absmiddle" unselectable="on" data-mx-warn="Empty URL">[更多]</a></span>
+<span style="float:left; margin:3px 10px 5px;"><a id="td_generalface" style="cursor:pointer;" onclick="showfaces();$('#td_generalface').fadeOut();" align="absmiddle" data-mx-warn="Empty URL">[显示表情]</a></span>
+		</fieldset></div>
+		
+		
+		</td>
+	</tr>
+</tbody></table></div></form>
+
+
+
+
+
+
+
+</div>
+<div id="bottom"></div><br>
+<center class="gray">
+<small><span id="windspend">Total 0.041064(s) query 6, Time is now 10-13 17:15, 
+Load is low.
+</span> <br>
+Powered by <a href="http://www.phpwind.net/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><b>PHPWind</b></a> <a href="http://www.phpwind.net/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><b style="color: rgb(255, 153, 0); --darkreader-inline-color:#f7b24b;" data-darkreader-inline-color="">v6.3.2</b></a> Code © 2003-08 <a href="http://www.phpwind.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><b>PHPWind.com</b></a> Corporation</small>
+</center><br>
+<div id="footer">
+	<span class="f12 fl"></span><a href="https://bbs.sumisora.net/sendmail.php" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Contact us</a>
+
+</div>
+</div>
+        
+      </div>
+    </body>
+  </html>

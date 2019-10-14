@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="zh-CN" itemscope="itemscope" itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="msapplication-tap-highlight" content="no">
+  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,minimum-scale=1,maximum-scale=1">
+  <title data-back=" | 又拍图片管家"> 升级公告 | 又拍图片管家</title>
+  
+  
+  
+  <meta name="theme-color" content="#49bc85" data-online="#49bc85" data-offline="#c95050">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" itemprop="name" content="升级公告">
+  <meta name="msapplication-TileColor" content="#49bc85">
+
+  
+  
+
+  <link rel="manifest" href="/manifest.webmanifest">
+
+  <meta name="google-site-verification" content="-r64vf-Oy9kGPN7Er4PREto_oyuVQPkLU55QBamqid0">
+  <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/icfjdnpipadcgbglphhojajmihnakpnp">
+
+
+<!--[if lt IE 9]>
+ <script>
+    (function(){if(!/*@cc_on!@*/0)return;var e ="main, abbr,article,aside,audio,canvas,datalist,details,dialog,eventsource,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,time,video".split(','),i=e.length;while(i--){document.createElement(e[i])}})();
+    (function(){
+      // IE 8 只能使用在 DOM 上
+      Object._defineProperty = Object.defineProperty;
+      Object.defineProperty = function (obj, prop, opt) {
+        if (obj instanceof Element || obj === Element.prototype) return Object._defineProperty(obj, prop, opt);
+        obj[prop] = opt.value;
+      }
+    })();
+ </script>
+<![endif]-->
+<noscript>
+  <style>
+  * {
+    -ms-animation-play-state: running !important;
+    -o-animation-play-state: running !important;
+    -webkit-animation-play-state: running !important;
+    -moz-animation-play-state: running !important;
+    animation-play-state: running !important;
+  }
+  </style>
+</noscript>
+
+          <link rel="apple-touch-icon" href="https://s.yupoo.com/website/4.8.2/icons/logo1@128.png">
+          <meta name="msapplication-TileImage" content="https://s.yupoo.com/website/4.8.2/icons/logo@558.png">
+          <meta itemprop="image" content="https://s.yupoo.com/website/4.8.2/icons/logo1@558.png">
+          <link rel="shortcut icon" href="https://s.yupoo.com/website/4.8.2/favicon.ico"><link href="https://s.yupoo.com/website/4.8.2/styles/bulletin.css?c135655a795692ada9c1" rel="stylesheet"></head>
+        
+<body>
+          <div style="display: none">
+            <img src="https://s.yupoo.com/website/4.8.2/icons/logo1@558.png">
+          </div>
+<div class="none_select header__wrap header__transparent">
+    <div class="header__main header2__main header2__color">
+        <div class="header__logo" data-offline="离线">
+            <a href="//x.yupoo.com">
+                <img src="https://s.yupoo.com/website/4.8.2/imgs/logo@2x.png" alt="Yupoo" id="yupoologo"/>
+            </a>
+        </div>
+        <ul class="header2__link onlydesktop">
+            <li><a href="//x.yupoo.com/">首页</a></li>
+            <li><a href="//x.yupoo.com/price">价格方案</a></li>
+            <li><a href="//x.yupoo.com/updates">产品公告</a></li>
+            <li><a href="//x.yupoo.com/extension">搬家工具</a></li>
+            <li><a href="//x.yupoo.com/miniprogram">又拍小程序</a> <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IuWbvuWxgl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgd2lkdGg9IjM4cHgiIGhlaWdodD0iMjRweCIgdmlld0JveD0iMCAwIDM4IDI0IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAzOCAyNCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8cGF0aCBmaWxsPSIjRjE2ODQ0IiBkPSJNMjcuMDUsMmgtMTYuMWMtNS41MjMsMC0xMCw0LjQ3Ny0xMCwxMGMwLDUuNTIxLDQuNDc3LDEwLDEwLDEwaDE2LjEzNmM1LjQ4NSwwLDkuOTY1LTQuNDc5LDkuOTY1LTEwDQoJQzM3LjA1MSw2LjQ3NywzMi41NzEsMiwyNy4wNSwyeiIvPg0KPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTEzLjE4OCwxNi4xNWgtMS45NTFsLTMuMjg1LTUuMjMzYy0wLjE0My0wLjI1My0wLjI4Ny0wLjUwNi0wLjQ2OS0wLjc1OA0KCWMwLjAzNywwLjM2LDAuMDM3LDAuODI5LDAuMDM3LDEuNDA3djQuNTg0SDUuNzVWNy44NDhoMi4wNmwzLjE3Niw1LjEyN2MwLjAzNSwwLjAzNywwLjA3MiwwLjEwOSwwLjEwOSwwLjE4DQoJYzAuMTgsMC4yODksMC4yODcsMC41MDcsMC4zMjMsMC42NVYxMy43N1Y3Ljg0OGgxLjc3MVYxNi4xNXoiLz4NCjxwb2x5Z29uIGZpbGw9IiNGRkZGRkYiIHBvaW50cz0iMjEuMDIxLDE2LjE1IDE0LjQ4NywxNi4xNSAxNC40ODcsNy44NDggMjAuOTEyLDcuODQ4IDIwLjkxMiw5LjQgMTYuMzY0LDkuNCAxNi4zNjQsMTEuMTY5IA0KCTIwLjYyNSwxMS4xNjkgMjAuNjI1LDEyLjcyMyAxNi4zNjQsMTIuNzIzIDE2LjM2NCwxNC43MDcgMjEuMDIxLDE0LjcwNyAiLz4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0zMC40MDgsMTYuMTVoLTIuMTMybC0xLjI5Ny01LjM0MmMtMC4wNzQtMC4yODktMC4xNDYtMC41NzgtMC4xNDYtMC45MzgNCgljLTAuMDM2LDAuMzk3LTAuMDcyLDAuNzIyLTAuMTQ2LDAuOTM4bC0xLjM3MSw1LjM0MmgtMi4ybC0xLjgwNi04LjM0aDEuOTQ4bDAuOTM4LDUuNTYyYzAuMDM3LDAuMTQ0LDAuMDM3LDAuMzYsMC4wNzIsMC43MjQNCgljMC0wLjA3NCwwLDAsMC4wMzUsMC4yNTJoMC4wMzdjMC4wMzUtMC4yODksMC4wNzEtMC42MTMsMC4xNDUtMC45NzZsMS4yOTktNS41NjJoMi4wMjNsMS4zNzMsNS42MzNjMCwwLjAzNywwLDAuMTQ2LDAuMDM2LDAuMjE3DQoJYzAuMDM2LDAuMjg3LDAuMDcxLDAuNTA1LDAuMDcxLDAuNjg4aDAuMDM1YzAuMDM3LTAuMzYxLDAuMDcyLTAuNjg4LDAuMTA5LTAuOTM5bDAuOTAxLTUuNTk2aDEuODc4TDMwLjQwOCwxNi4xNXoiLz4NCjwvc3ZnPg0K" alt="miniprogramNew"> </li>
+            <li><a href="//x.yupoo.com/join">小程序加盟</a></li>
+            <li><a href="//x.yupoo.com/bulletin">旧版又拍社区入口</a></li>
+        </ul>
+        <div class="header__dashbord header__tips displaynone">
+            <a href="https://x.yupoo.com/home" title="进入后台管理"></a>
+            <span class="header__separator"></span>
+            <a data-action="signout" class="clickable">退出</a>
+        </div>
+        <div class="header__login header__tips ">
+            <a href="https://x.yupoo.com/login">登录</a>
+            <span class="header__separator"></span>
+            <a href="https://x.yupoo.com/register" onclick="_hmt.push(['_trackEvent', 'Button', 'click', 'homepageNavReg'])">注册</a>
+        </div>
+    </div>
+</div><main class="index__main">
+  <section class="index__bulletin">
+    <div>
+      <a href="http://period.yupoo.com" class="index__button" target="_blanck">社区图片备份工具</a>
+      <h3>又拍社区业务升级维护公告</h3>
+      <div class="index__paragraph">
+        <p>亲爱的YUPOOER：</p>
+        <p>
+          从2005年上线以来，又拍社区致力于为热爱摄影、乐于分享的朋友们服务。2008年，又拍社区面向不同需求，为用户提供了社区照片分享平台和图片管家平台。发展至今，我们希望带来一些新变化：2018年11月28日起，又拍社区业务将关闭注册、上传等各项服务，进入关闭维护状态。<br/>
+          又拍图片管家业务将全面启用新站点 <a href="http://x.yupoo.com" class="index__link">http://x.yupoo.com</a>，持续提供图片、视频、小程序等服务。<br/>
+        </p>
+        <p>又拍社区用户可继续使用至11月27日，同时我们将尽快提供数据备份工具，2019年5月31日前您都可以通过该工具，将历史照片保存到本地；尚未到期的社区VIP用户可提供支付宝购买记录，联系我们退款。</p>
+        <p>
+          如您需要帮助，或有其他疑问，请通过以下方式联系我们：<br/>
+          客服邮箱：faq@yupoo-inc.com<br/>
+          客服QQ：1396072544 1346754578<br/>
+          工作时间：9:30-18:00<br/>
+        </p>
+        
+        <p>又小拍在这里感谢每一位YUPOOER对社区的热爱与关注，感谢大家与我们携手走过十多年的时光，留下无数丰富美好、饱含热情和回忆的瞬间。<br/>相信我们将在未来某一契机重逢，再次与你同行。</p>
+
+        <p>
+          又拍社区<br />
+          2018.11.5
+        </p>
+        <br />
+
+        <p class="index__update">
+          ------------ 11月27日公告更新 ------------<br />
+          <br />
+          又拍社区图片备份工具，<a href="http://period.yupoo.com " class="index__link">http://period.yupoo.com </a> ，在浏览器中访问该地址，输入又拍社区用户名和密码即可备份下载。
+        </p>
+      </div>
+      
+      <div class="index__paragraph">
+        <p>Dear YUPOOER:</p>
+        <p>
+          Since its launch in 2005, www.yupoo.com has been dedicated to serving friends who love photography and share their lives. In 2008, the Yupoo.com provided a photo sharing platform and a photo storge platform for different needs. Up to now, we hope to bring some new changes: from November 28, 2018, we will stop provide signing up and uploading services , and enter the maintenance status.<br/>
+          The photo storge website will fully activate the new url : <a href="http://x.yupoo.com" class="index__link">http://x.yupoo.com</a>, providing services such as pictures, videos, and wechat applets.
+        </p>
+        <p>
+          Yupooers can continue to use until November 27, at the same time,We will provide a data backup tool as soon as possible. You would use this tool to save historical photos before May 31, 2019.
+          www.yupoo.com VIP ( “99yuan VIP” )users who have not yet expired can provide Alipay purchase records and contact us for a refund.
+        </p>
+        <p>
+          If you need help, or have other questions, please contact us :<br/>
+          Customer Service Email: faq@yupoo-inc.com<br/>
+          Customer Service QQ: 1396072544 1346754578<br/>
+          Working hours: 9:30-18:00<br/>
+        </p>
+        <p>
+          Yupoo team thank every Yupooers for your love and attention. Thank you for joining us for more than ten years, leaving countless rich, passionate and memorable moments. <br/>We believe we will meet again in the future.	 
+        </p>
+        <p>
+          Yupoo<br/>
+          2018.11.5	
+        </p>
+        <br />
+         <p class="index__update">
+          ------------ November 27  update ------------<br />
+          <br />
+          <a href="http://period.yupoo.com" class="index__link">http://period.yupoo.com </a>click this page,  type in your user's name and password, than the  tool will help you to download your photos  on www.yupoo.com .
+        </p>
+        <a href="http://period.yupoo.com " class="index__button" target="_blanck">Yupoo Backup Tool</a>
+      </div>
+    </div>
+  </section>
+</main><div class="footer__main none_select">
+  <div class="footer__links">
+    <nav class="footerlink__links ">
+      <a class="footerlink__link"  href="/about">关于我们</a>
+      <a class="footerlink__link"  href="/privacy">隐私声明</a>
+      <a class="footerlink__link"  href="/price">价格方案</a>
+      <a class="footerlink__link"  href="/help">帮助中心</a>
+      <a class="footerlink__link"  href="/contact">联系我们</a>
+      <div class="language__link footerlink__link">
+        <span class="language__currentlang" id="setLanguage">简体中文</span>
+        <i class="icon_dropdown"></i>
+        <ul id="languageSelect">
+          <a href="/bulletin"><li data-lang="en-US">english</li></a>
+          <a href="/bulletin"><li data-lang="zh-TW">繁體中文</li></a>
+          <a href="/bulletin"><li data-lang="es">español</li></a>
+        </ul>
+      </div>  <a class="footerlink__link" target="_blanck" href="https://ykf.yupoo.com">点击在线咨询</a>
+    </nav>    <nav class="footerlink__links friendlink__links">
+      <span class="footerlink__link friendlink__title">友情链接</span>
+      <a class="footerlink__link" href="https://www.upyun.com" rel="nofollow" target="_blank">又拍云</a>
+      <a class="footerlink__link" href="http://bbs.fobshanghai.com" rel="nofollow" target="_blank">福步外贸论坛</a>
+      <a class="footerlink__link" href="https://shangzhibo.tv" rel="nofollow" target="_blank">上直播</a>
+    </nav>  </div>
+  <p class="footer__copyright">
+    <a class="footer__reportAbuse">
+      增值电信业务经营许可证：浙B2-20160025 浙ICP备15031660号-10
+    </a>
+    <span class="footer__reportAbuse">
+      <a href="/privacy?type=ipstatement" class="footer__ipstatement">产权保护</a>不良信息举报QQ：1220575721（交易咨询恕不接待/ For report abuse ONLY)
+    </span>
+    <span>Copy<a href="/mini/">right</a>© 2005-2019, </span>
+    <span>版权所有</span>
+    <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33010602002268" ref="nofollow">
+      浙公网安备 33010602002268 号
+    </a>
+  </p>
+</div>
+<script type="text/javascript">window.VERSION="4.8.2",window.COOKIEHOST="x.yupoo.com",window.USER_ID="",window.VIP_RATING=Number(""),window.REFRESH_TOKEN="",window.TOKEN="",window.API_ORIGIN="/api",window.APP_ORIGIN="https://x.yupoo.com",window.WEBSITE="//x.yupoo.com",window.PRE_PATH="",window.OWNER="",window.OWNER_ID="",window.IMAGE_ORIGIN="//photo.yupoo.com",window.VIDEO_ORIGIN="//uvd.yupoo.com";var _hmt=_hmt||[];!function(){var e=document.createElement("script");e.src="https://hm.baidu.com/hm.js?28019b8719a5fff5b26dfb4079a63dab";var i=document.getElementsByTagName("script")[0];i.parentNode.insertBefore(e,i)}()</script>
+  <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.bootcss.com/distpicker/2.0.5/distpicker.js"></script>
+  <link href="https://cdn.bootcss.com/social-share.js/1.0.16/css/share.min.css" rel="stylesheet">
+  <script src="https://cdn.bootcss.com/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+          <script type="text/javascript" src="https://s.yupoo.com/website/4.8.2/vendors.js?c135655a795692ada9c1"></script><script type="text/javascript" src="https://s.yupoo.com/website/4.8.2/bulletin.js?c135655a795692ada9c1"></script></body>
+        
+</html>

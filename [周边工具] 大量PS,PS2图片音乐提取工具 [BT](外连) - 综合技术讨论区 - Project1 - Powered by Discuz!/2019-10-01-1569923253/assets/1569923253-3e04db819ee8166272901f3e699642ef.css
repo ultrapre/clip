@@ -1,0 +1,42 @@
+ 
+.yah{font-family:'Hiragino Sans GB','Microsoft YaHei','Helvetica Neue',Helvetica,Arial,sans-serif!important;}
+#yeei_login_ad{position:fixed;display:none;z-index:200;text-align:center;}
+
+#yeei-login-Top {width:100%;position:fixed;top:0px;left:0px; display:none; z-index:200}
+#yeei-login-Top #closes{
+	width:32px;
+	height:32px;
+	background:url("") no-repeat 0 0;
+	display:block;
+	position: absolute;right:10px;top:15px;
+}
+#yeei-login-Top .con { background:#2267B5; padding: 15px 10px;}
+#yeei-login-Top .remi{ font-size:18px; color:#fff; background:url("") no-repeat 0 50%; text-indent:30px;padding-top:2px;}
+
+#yeei-login-Top .y td{}
+#yeei-login-Top .y .ipo{ height:18px; width:130px; line-height:18px;line-height:20px\9;overflow:hidden; font-size:14px; display:inline-block; color:#666; padding:6px 5px; background:#DDEAF7; border:none; margin-right:5px;}
+#yeei-login-Top .y .ipoS{ background:#fff;}
+#yeei-login-Top .y .reg{ background:url("") no-repeat 0 -64px;display:inline-block;height:30px;line-height:30px;line-height:31px\9; font-size:14px;padding:0px; margin-right:5px;}
+#yeei-login-Top .y .reg em{ background:url("") no-repeat 100% -94px; display:inline-block; height:30px;font-style: normal; padding:0 12px 0 12px; margin-right:-5px; color:#323D01;font-weight:700}
+#yeei-login-Top .y .push{background:url("") no-repeat 0 0; color:#333;display:inline-block; width:74px; border:none; text-align:left; text-indent:8px;*text-indent:15px;height:30px;line-height:30px;line-height:31px\9; font-size:14px;font-weight:700;cursor: pointer;}
+#yeei-login-Top .y .push em{font-style: normal;}
+#yeei-login-Top .y .push.a {background:url("") no-repeat 0 -32px; color:#444;position: relative; z-index:302!important;}
+#yeei-login-Top .y .push:hover{text-decoration: none;}
+#yeei-login-Top .y .ls {color:#fff; margin-top:1px;margin-top:4px\9; font-family:Arial, Helvetica, sans-serif}
+#yeei-login-Top .y .ls .pc{ border:none}
+#yeei-login-Top .bot{ padding-top:8px; margin-bottom:5px; }
+#yeei-login-Top .bot a{ color:#E9FF8D}
+.yeei_login_menu {margin-top:-1px;width:136px; padding:10px 10px 0 10px;z-index:301!important; margin-left:0px; _margin-left:-1px; border:1px solid #ddd; border-top:none;margin-top:0px; background:#fff;font-family:Arial, Helvetica, sans-serif}
+.yeei_login_menu { padding-bottom:5px}
+.yeei_login_menu a{ color:#667D00}
+.yeei_login_menu .fast{margin-bottom:6px; border-top:1px dotted #ddd; padding-top:5px;}
+.yeei_login_menu .fast a{background:url("") no-repeat 0 0; width:16px;  height:16px; display:inline-block; margin:0 2px}
+.yeei_login_menu .fast a.qqurl{background-position: 0 0;}
+.yeei_login_menu .fast a.sinaurl{background-position: -19px 0; }
+.yeei_login_menu .fast a.baiduurl{background-position: -80px 0; }
+.yeei_login_menu .fast a.taobaourl{background-position: -40px 0; }
+.yeei_login_menu .fast a.sllurl{background-position: -60px 0; }
+.yeei_login_menu .fastlg_fm{ float:left; padding-bottom:5px; border:none!important; margin-right:0px!important; padding-right:0px!important;}
+.yeei_login_menu .fastlg_fm a{ background:none!important; border:none; padding-bottom:0px; margin-bottom:0px}
+.yeei_login_menu .fastlg_fm .hm{display: none;}
+

@@ -1,0 +1,257 @@
+
+  <!DOCTYPE html>
+  <html id="" class="">
+    <!-- OriginalSrc: https://web.archive.org/web/20081106143316/http://blog.roodo.com/toheart/archives/5537303.html -->
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <title>美少女遊戲實驗室(謎:美少女遊戲泛用系統 (3)-檔案拆解 - 樂多日誌</title>
+      
+
+<link rel="stylesheet" type="text/css" href="assets/1570952802-7d8615ffad0397de253976c03119d074.css" referrerpolicy="no-referrer">
+<link rel="stylesheet" type="text/css" href="assets/1570952802-32a1290393936a63a45283a71d7c7890.css" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="assets/1570952802-e5c76d5e609dc0eba7461bf6a0e1a2db.css" type="text/css" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="assets/1570952802-0fae3740021a1dcc911c8270a6009b6d.css" type="text/css" referrerpolicy="no-referrer">
+
+
+<style type="text/css">@keyframes fadeInOpacity{0%{opacity:0}to{opacity:1}}:hover>*>.fbvd--wrapper{animation-name:fadeInOpacity;animation-duration:.3s;opacity:1}.fbvd--wrapper{position:absolute;top:10px;left:10px;opacity:0;text-align:center;margin:0;z-index:5}.fbvd--wrapper a{background: url("") no-repeat 3px 4.55px; background-color: #fff; display:inline-block;font:700 14px Helvetica,Arial,sans-serif;color:#4b4f56;text-decoration:none;vertical-align:middle;padding:0px 8px 0px;margin-right:8px;border-radius:2px; line-height: 22px; padding-left:19px; border: 1px solid #e7e7e7; background-size: 13px}.fbvd--wrapper a:last-child{margin-right:0}.fbvd--wrapper a:hover{text-decoration:none}.fbvd--wrapper a:focus{box-shadow:0 0 1px 2px rgba(88,144,255,.75),0 1px 1px rgba(0,0,0,.15);outline:none}.fbvd--wrapper b{font-size:13px;position:relative;top:1px;color:#3b5998;font-weight:400}</style>
+<style type="text/css">
+body {
+  margin-top:0 !important;
+  padding-top:0 !important;
+   
+}
+.wb-autocomplete-suggestions {
+    text-align: left; cursor: default; border: 1px solid #ccc; border-top: 0; background: #fff; box-shadow: -1px 1px 3px rgba(0,0,0,.1);
+    position: absolute; display: none; z-index: 2147483647; max-height: 254px; overflow: hidden; overflow-y: auto; box-sizing: border-box;
+}
+.wb-autocomplete-suggestion { position: relative; padding: 0 .6em; line-height: 23px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 1.02em; color: #333; }
+.wb-autocomplete-suggestion b { font-weight: bold; }
+.wb-autocomplete-suggestion.selected { background: #f0f0f0; }
+</style>
+
+      <style class="mx-wc-style">
+        .mx-wc-main img {max-width: 100%;}
+        .mx-wc-main{
+          box-sizing: content-box;
+          background-color: rgb(251, 232, 229) !important;
+          margin: 0 auto;
+          margin-top: 20px;
+          max-width: 800px;
+        }
+        @media (min-width: 768px) {
+          .mx-wc-main { padding: 15px 15px 80px 15px }
+        }
+        @media (max-width: 767px) {
+          .mx-wc-main { padding: 15px 3px 80px 3px }
+        }
+  
+      </style>
+    </head>
+    <body style="background-color: #ffffff !important; min-height: 100%; height: auto; position: static !important; overflow: auto !important; padding-bottom: 0px !important;" id="" class="">
+      <div class="mx-wc-main">
+        <div id="container" class="mx-wc-selected-elem mx-wc-1570952802" style="display: block; float: none !important; position: relative !important; top: 0px !important; left: 0px !important; margin: 0px !important; flex: unset !important; width: 100% !important; max-width: 100% !important; box-sizing: border-box !important;">
+	<div id="banner">
+		<h1 class="blogtitle"><a href="https://web.archive.org/web/20081106143316/http://blog.roodo.com/toheart" accesskey="1" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">美少女遊戲實驗室(謎</a></h1>
+		<div class="description">美少女遊戲的小感&amp;抽檔備忘錄</div>
+	</div>
+	<div class="blog">
+	<div class="dir">
+	<a class="amenu" href="https://web.archive.org/web/20081106143316/http://blog.roodo.com/toheart/archives/5528509.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">&lt;&lt; 美少女遊戲泛用系統 (2)-結構辨識,part2</a>	| <a class="amenu" href="https://web.archive.org/web/20081106143316/http://blog.roodo.com/toheart/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">回blog首頁</a> |
+	<a class="amenu" href="https://web.archive.org/web/20081106143316/http://blog.roodo.com/toheart/archives/5543593.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">美少女遊戲汎用系統 (3)-檔案拆解,part2 &gt;&gt;</a>	</div>
+	<h2 class="date">February 13,2008</h2>
+		<div class="blogbody">
+		<h3 class="title">
+						美少女遊戲泛用系統 (3)-檔案拆解
+		</h3>
+						<div class="main">
+										<div class="pict"><a href="https://web.archive.org/web/20081106143316/http://blog.roodo.com/toheart/79d312ed.jpg" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1570952802-5124fa550ddf5e47f2124d1abdf2389c.jpg" width="160" height="98" border="0" alt="other01.JPG" hspace="5" class="pict" align="left"></a></div>
+終於進到最後一步,就是拆解檔案...<br>
+不過這邊需要事先聲明,我不是programmer,也不會disassembly程式或trace檔案,這邊所用的都是現成的工具...所以不要期望太大,因為如果目前沒有拆解工具的話我也變不出來...|||<br>
+在進入這篇以前,建議先去看一下我以前貼的<a href="https://web.archive.org/web/20081106143316/http://blog.roodo.com/toheart/archives/671340.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">常用工具</a>,應該會有幫助...<br>
+另外,有些工具的作者有特別聲明禁止連結或重新配布,所以可能不會放連結,但是我絕對會提供最大線索(?)只要拜一下google一定找的到(w<div></div><br clear="all"></div>
+				<a name="more" data-mx-warn="Empty URL"></a>
+				<div class="main"><b>Nscripter:</b><br>
+圖檔和音聲,SE通常都是包裝在不同的資料檔裡,推薦使用<a href="https://web.archive.org/web/20081106143316/http://homepage3.nifty.com/kagaya~/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">神我夜</a>公開的"Spi_NScripter",對新舊版本的檔案都支援的很好...<a href="https://web.archive.org/web/20081106143316/http://atelibet.s11.xrea.com/side_yuu/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">ExtractData</a>同樣對應,但是對舊的sar格式支援性不佳<br>
+Nscripter沒有特殊格式的圖檔或音聲檔,抽出的檔案都是常見的bmp/png和ogg/wav,不需作特別處理; BGM有時沒有經過包裝,音樂檔案直接放在BGM子目錄下(更舊的遊戲有時甚至可見CDDA)<br>
+劇本:所有版本的nscripter劇本都是在執行檔同樣目錄下的"nscript.dat"這個檔案,用<a href="https://web.archive.org/web/20081106143316/http://www.linkclub.or.jp/~kiyohiko/red/works/softwear.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">NSDEC</a>這個工具可以對應...<br>
+<br>
+※05年圈圈社的"<a href="https://web.archive.org/web/20081106143316/http://www.studio-ring.co.jp/HAJI_OTE/haji-ote.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">はじおて</a>"抽出的劇本和CG<br>
+<div class="pict"><img src="assets/1570952802-03a785216a6edb533e6277deff902fab.jpg" width="884" height="491" border="0" alt="ns01.JPG" hspace="5" class="pict" align="left"></div><br clear="all">
+<br>
+※01年貓貓社的"水色"名場面...(謎<br>
+<div class="pict"><img src="assets/1570952802-4fd8dedb364c5066426d0943a1a08dab.jpg" width="724" height="642" border="0" alt="ns02.JPG" hspace="5" class="pict" align="left"></div><br clear="all">
+<br>
+<b>Majiro script</b><br>
+貓貓在放棄Nscripter後繼改用的系統,目前可以看到V1.000和V2.000兩種版本<br>
+CG和音效分散在data*/slowdata*/fastdata*這些檔案裡面,CG的畫像格式則是Majiro專用的rct/rc8圖檔,檔案含有alpha-channal資訊,其中對V1版本,<a href="https://web.archive.org/web/20081106143316/http://www.yggdrasil.nu/zz/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">ZZ'z Factory</a>有公開susie plugin,但是對CG處理有問題,所以建議只在抽劇本時使用,至於<a href="https://web.archive.org/web/20081106143316/http://atelibet.s11.xrea.com/side_yuu/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">ExtractData</a>則同時支援V1和V2兩種版本<br>
+劇本:所有劇本存在於scenario*.arc(或update*)中,裡面是經過加密的mjo(MajiroObject)格式,這個要利用<a href="https://web.archive.org/web/20081106143316/http://dev.haeleth.net/majiro.shtml" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Majiro Development kit</a>來拆解,該程式似乎是有人為了開發其他語言版本用的工具<br>
+如果是MajiroV1,直接用上面提到的susie將mjo劇本檔抓出,然後用mjdev裡面的"mjcrypt.exe"先將mjo檔案轉換成bytecode檔,然後用"mjdisasm.exe"將bytecode檔轉換成sjs劇本檔和mjs腳本<br><br>
+※使用MajiroV1的貓貓"Scarlett"的arc中身和抽出的其中一個劇本檔<br>
+<div class="pict"><img src="assets/1570952802-bfe21090fc1bc29ea4f7aa06bd1ae9dd.jpg" width="814" height="695" border="0" alt="majiro01.JPG" hspace="5" class="pict" align="left"></div><br clear="all">
+MajiroV2就完全利用ExtractData來抽取,但是注意抽出的劇本是.txt檔,內容已經是bytecode格式,但是這個檔案餵給"mjdisasm.exe"卻不能轉換,因為缺了檔頭,所以要自己加上去：<br><br>
+ExtractData抽出的bytecode劇本檔<br>
+<div class="pict"><img src="assets/1570952802-489561f0cffb2cdac6829e5d92a9a486.jpg" width="625" height="496" border="0" alt="majiro02.JPG" hspace="5" class="pict" align="left"></div><br clear="all">
+↓<br>
+加上40 byte的檔頭之後<br>
+<div class="pict"><img src="assets/1570952802-8ee855544f6fac334e1682e94e965259.jpg" width="625" height="496" border="0" alt="majiro03.JPG" hspace="5" class="pict" align="left"></div><br clear="all">
+<br>
+※使用MajiroV2的SIESTA社"<a href="https://web.archive.org/web/20081106143316/http://www.siesta-soft.com/product/pastel/top.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">ぱすてる</a>"拆解狀況<br>
+<div class="pict"><img src="assets/1570952802-89904a1fb7dddead28e110a2be7acda5.jpg" width="1015" height="689" border="0" alt="majiro04.JPG" hspace="5" class="pict" align="left"></div><br clear="all">
+其實還有比較簡單的方法,留待下次吧...@@#<br>
+<br>
+<b>YU-RIS:</b><br>
+老實說,對這個系統根本不熟,因為只碰到過一次,所以只能拿那一片來舉例...@@;<br>
+劇本/CG/音聲/BGM都是包裝在ypf檔案中,所有的檔案都可以用<a href="https://web.archive.org/web/20081106143316/http://atelibet.s11.xrea.com/side_yuu/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">ExtractData</a>拆開,抽出的圖檔和音聲分別是常見的bmp和ogg格式,並沒有其他特殊規格,唯腳本是格式不明的.ybn檔(檔頭YSTB),尚未發現拆解法<br>
+<br>
+※05年Symphony社的"<a href="https://web.archive.org/web/20081106143316/http://www.symphony-soft.com/ojo/index.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">大小姐組曲</a>"CG檔內容<br>
+<div class="pict"><img src="assets/1570952802-d8ec3f263e2c2504f358bdee9dfdc07c.jpg" width="679" height="698" border="0" alt="yuris01.JPG" hspace="5" class="pict" align="left"></div><br clear="all">
+<br>
+<b>Macromedia director:</b><br>
+這是商用程式編出來的東西,搞不好有該程式的人就可以直接讀取也不一定(沒試過)
+CG/BGM等資料和腳本都存在cxt或dxr檔中,從某所(連結非公開)的"AXDXR.SPI"可以拆開,唯只有CG檔案可以辨識,拆出dx_的CG檔再用"IFDXR.SPI"可以讀取...<br>
+<br>
+※白金標籤社"<a href="https://web.archive.org/web/20081106143316/http://www.softpal.co.jp/platinum/project/sukisyo3.html" tsrget="_blank" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">すきしょ３</a>"的CG內容,別問我為什麼會有這片...(死<br>
+<div class="pict"><img src="assets/1570952802-132bac7ffe087e31a1464a847344e268.jpg" width="843" height="581" border="0" alt="dir01.JPG" hspace="5" class="pict" align="left"></div><br clear="all">
+<br>
+※"Pia3 Funbox"的CG內容,Acdsee掛上"IFDXR.SPI"可以直接讀取<br>
+<div class="pict"><img src="assets/1570952802-9fbf0ddcf22bf2e61faae6ca5c5e4d71.jpg" width="679" height="575" border="0" alt="dir02.JPG" hspace="5" class="pict" align="left"></div><br clear="all">
+<br>
+...<a href="https://web.archive.org/web/20081106143316/http://blog.roodo.com/toheart/archives/5543593.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Part2</a><br>
+<br>
+--<br>
+<font size="1" style="font-size:8pt">(C)Studio ring, Nekoneko soft, SIESTA, Symphony, Softpal, holon</font><br><div></div><br clear="all"></div>
+				<div class="posted">Posted by hikaru613 at <a class="aposted" href="https://web.archive.org/web/20081106143316/http://www.roodo.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">樂多Roodo!</a> │21:31
+				 │<a class="aposted" href="#comments">回應(4)</a>
+						 │<a class="aposted" href="#trackback">引用(0)</a>
+						 │<a class="aposted" href="https://web.archive.org/web/20081106143316/http://blog.roodo.com/toheart/archives/cat_299325.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">特集</a>
+				<br>
+		<div class="tools">
+				樂多分類：<a class="aposted" href="https://web.archive.org/web/20081106143316/http://blog.roodo.com/categories/game" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">遊戲</a>
+						共同主題：<a class="aposted" href="https://web.archive.org/web/20081106143316/http://blog.roodo.com/topic/5783" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">美少女遊戲</a>
+				工具：<a class="aposted" href="javascript:location.href='https://web.archive.org/web/20081106143316/http://cliip.roodo.com/Main.php?do=Cliip&amp;url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title)+'&amp;digest='+encodeURIComponent((window.getSelection?window.getSelection().toString():document.selection.createRange().text).slice(0,400))" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">加入樂多書籤</a>│<a class="aposted" href="https://web.archive.org/web/20081106143316/http://adm.blog.roodo.com/article/edit&amp;aID=5537303" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">編輯本文</a>
+		</div>		
+		</div>
+		<div class="main">
+<div class="adbox">
+	<center>
+  <table cellspacing="0" cellpadding="0" border="0" align="center">
+    <tbody>
+      <tr>
+        <td>
+<!--/* Blog文章頁圖文A */-->
+
+
+       
+        </td>
+        <td>
+<!--/* Blog文章頁圖文B */-->
+
+
+        
+        </td>
+      </tr>
+      <tr>
+        <td align="right" colspan="2" class="adtext"><a href="https://web.archive.org/web/20081106143316/http://www.roodo.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Ads by Roodo!</a>&nbsp;</td>
+      </tr>
+    </tbody>
+  </table>
+</center>
+</div>
+</div>		
+						<a name="trackback" data-mx-warn="Empty URL"></a>
+				<h3 class="title">引用URL</h3>
+				<div class="trackback-url">http://cgi.blog.roodo.com/trackback/5537303  <input type="image" src="https://web.archive.org/web/20081106143316im_/http://static.roodo.com/blog/copy_trackbck.gif" onclick="javascript:CopyText('https://web.archive.org/web/20081106143316/http://cgi.blog.roodo.com/trackback/5537303');"></div>
+				
+								<a name="comments" data-mx-warn="Empty URL"></a>
+<div class="comments-head">回應文章 <a href="https://web.archive.org/web/20081106143316/http://blog.roodo.com/toheart/archives/5537303-comment.xml" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1570952802-9c52adea4040cc614dff89e6c2e1a562.gif" align="top" border="0" width="27" height="15"></a></div>
+<a name="comment-15830577" data-mx-warn="Empty URL"></a>
+	<div class="comments-body">
+			
+	<a href="https://web.archive.org/web/20081106143316/http://sourceforge.net/project/showfiles.php?group_id=158762" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"></a><a href="https://web.archive.org/web/20081106143316/http://sourceforge.net/project/showfiles.php?group_id=158762" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">http://sourceforge.net/project/showfiles.php?group_id=158762</a> 上的NetScripter Script Encoder似乎在解nscript.dat方面速度比NSDEC快上不少,不過實際對應上不太清楚,而且開發也好像停止了很久</div>
+<div class="comments-post">Posted by kazuma
+    
+at	February 23,2008 13:00
+</div>
+<a name="comment-16903017" data-mx-warn="Empty URL"></a>
+	<div class="comments-body">
+			
+	樓主我問一下,有哪些遊戲或特定公司是使用nsa或sar封裝的?近期有哪些遊戲仍在使用?有人能給我這方面的詳細資料嗎?</div>
+<div class="comments-post">Posted by 荒
+    
+at	July 21,2008 15:21
+</div>
+<a name="comment-17637227" data-mx-warn="Empty URL"></a>
+	<div class="comments-body">
+			
+	您好<br>
+※白金標籤社"すきしょ３"的CG內容,別問我為什麼會有這片...(死<br>
+<br>
+請問下面這張圖有開關大小旋轉的<br>
+程式名稱是什麼?好久以前有用過一次<br>
+可是不記得名稱了..謝謝您</div>
+<div class="comments-post">Posted by 站長您好
+    
+at	October 10,2008 11:03
+</div>
+<a name="comment-17637353" data-mx-warn="Empty URL"></a>
+	<div class="comments-body">
+			
+	susie</div>
+<div class="comments-post">Posted by <a class="aposted" href="https://web.archive.org/web/20081106143316/http://blog.roodo.com/toheart/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Hikaru</a>
+    
+at	October 10,2008 11:44
+</div>
+							<a name="commentForm" data-mx-warn="Empty URL"></a>
+		<table cellpadding="5" cellspacing="0" border="0" class="form">
+		
+		
+		
+		
+		
+		
+		<tbody><tr>
+			<td><label for="author">姓名 : </label></td>
+			<td><input id="author" name="author"></td> 
+		</tr>
+		<tr>
+			<td valign="top"><label for="email">Email : </label></td>
+			<td><input id="email" name="email"></td>
+		</tr>
+		<tr>
+			<td valign="top"><label for="url">URL : </label></td>
+			<td><input id="url" name="url"></td>
+		</tr>
+				<tr><td valign="top"><label for="url">驗證碼 : </label></td><td>
+		<img src="assets/1570952802-5c1229d31ff09f2bb73c32e5492e4287" style="vertical-align: middle;">&nbsp;<input id="ccode_ans" name="ccode_ans">&nbsp;<label for="ccode_ans"><span class="ccode_info">( 請依顯示文字填入 )<br><a href="https://web.archive.org/web/20081106143316/JavaScript:rebuildimg()" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">重新產生驗證碼</a></span></label></td>
+		</tr>
+				<tr>
+			<td valign="top">
+						</td>
+			<td>
+			<input id="bake" type="checkbox" name="cookie" style="padding:0;margin:0px;"> <label for="bake">記住我的資訊</label><br>
+						</td>
+		</tr>		
+		<tr>
+			<td valign="top" colspan="2"><label for="text">回應內容 : </label><br>
+			<textarea id="text" name="comments" rows="10" cols="10"></textarea></td>
+		</tr>
+		<tr>
+			<td colspan="2"><input name="preview" type="submit" value=" 預覽內容 "> <input name="save" type="submit" value=" 直接送出 "></td>
+		</tr>
+		
+		</tbody></table>
+			<div class="pagetop"><a class="aposted" href="#top">回最上方</a></div>
+
+	</div>
+
+</div>
+<div id="footer"></div>
+<div style="CLEAR: both">&nbsp;</div>
+
+</div>
+        
+      </div>
+    </body>
+  </html>

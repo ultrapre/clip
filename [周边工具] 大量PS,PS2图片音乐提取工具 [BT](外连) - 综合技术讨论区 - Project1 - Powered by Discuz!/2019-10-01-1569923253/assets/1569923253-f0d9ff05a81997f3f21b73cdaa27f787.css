@@ -1,0 +1,117 @@
+#scbar, #pt, #chart,#scrolltop{
+    display: none;
+}
+#nv{
+    padding: .5em 0;
+    background: #2b92a2;
+    border-radius: 5px;
+}
+#ct{
+    margin-top: 2em;
+    margin-right: 0;
+}
+#nv li.hover a:hover, #nv li.hover a, #nv li a:hover{
+    background: none;
+}
+#ct.ct2 .mn{
+    width: 80%;
+}
+#ct.ct2 #sd{
+    width: 19%;
+    margin-right: 0;
+}
+.fl .bm_h{
+    background-color: #ffffff;
+}
+.xi2, .xi2 a, .xi3 a{
+    color: #7EC0EE;;
+}
+.p_pop, .p_pof, .sllt{
+    background-color: white;
+}
+.p_pop a:hover, .p_pop a.a, #sctype_menu .sca{
+    background-color: #2b92a2;
+    color: white;
+}
+.bmw .bm_h a{
+    color: #2b92a2;
+}
+.xi1, .t_f a{
+    color: #336699;
+}
+.ratl .xw1 .xi1{
+    background: #336699;
+    color: white;
+}
+.ad .pls, .ad .plc{
+    background: #336699;
+    height: 1px;
+}
+.ttp .a a{
+    background: white;
+    color: #336699;
+}
+#pt{
+    display: inherit;
+    padding: 1em 0 0;
+    margin-bottom: -1em
+}
+#pt .z>a:first-child{
+    display: none;
+}
+.ct2_a, .ct3_a{
+    background: white;
+}
+.xlda dd a{
+    color: #336699;
+}
+body{
+    background: none;
+}
+#p_btn a, #p_btn i, .sharep, #nv li.a{
+    background: none;
+}
+#ct .frame{
+    padding: 2em;
+    border-radius: 5px;
+}
+.psta{
+    width: auto;
+}
+#pt{
+    background-color: white;
+    border-radius: 5px;
+    padding-top: 0;
+    margin-top: 1em;
+}
+#modmenu,.xi2.mbm.pbm.bbs{
+    background: white;
+}
+.m5-20160815-tips:after{
+    content: url(https://rpg.blue/template/lightsail_mwt1/extend/m5tips_2017_1.png);
+    display: block;
+    position: relative;
+    left: -7px;
+}
+a.button-moe, a.button-moe:hover{
+    position: relative;
+    background: #e08e5e;
+    padding: .8em 0;
+    display: none;
+    width: 20em;
+    height: 1.4em;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 1em;
+    color: white;
+    font-size: 1.1em;
+    box-shadow: 0 0 5px #CCC;
+    font-weight: bolder;
+    border-bottom: 2px solid #EF5350;
+    text-shadow: 0 1px 2px #d74545;
+    float: right;
+    margin-top: 5px;
+}
+a.button-moe:hover{
+    background: #EF5350;
+}

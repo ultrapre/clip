@@ -1,0 +1,14 @@
+ 
+.card { padding: 0; width: 450px !important; border-color: #d9d9d9; background: #fff; box-shadow: 0 0 2px #ccc; }
+	.card .o { height: auto; padding: 0 5px 0 5px; }
+		.card .o a { float: left; margin: 8px 0 8px 0; padding: 0 5px; width: auto; border: 0; background: none; line-height: 16px; text-align: center; border-right: 1px solid #d9d9d9; height:16px; }
+	.card .avt img { -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; border: 1px solid #d9d9d9; width:68px; height:68px; }
+	.card .pbn strong { font-size: 14px; }
+		.card_mn, .card_info {padding: 10px 10px 10px 100px;}
+		.card_mn .c { padding:10px; border-radius:8px; background:rgba(255, 255, 255, 0.1);filter:Alpha(opacity=10);}
+		.card .avt { width:90px; margin-left:-90px;}
+		.k_usercard_gender_1, .k_usercard_gender_2, .k_usercard_gender_0 { background: url("") no-repeat 0 0; width:16px; height:18px; display:block !important; float:left;}
+		.k_usercard_gender_0 { background:none;}
+		.k_usercard_gender_1 {background-position: 0px 2px;}
+		.k_usercard_gender_2 {background-position: -16px 2px;}
+		.card_gender_0, .card_gender_1, .card_gender_2 { border-radius:5px;}

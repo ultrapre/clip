@@ -1,0 +1,588 @@
+
+  <!DOCTYPE html>
+  <html id="" class="">
+    <!-- OriginalSrc: http://kcddp.keyfc.net/bbs/viewthread.php?tid=454&extra=page%3D1 -->
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <title>krkr2加解密插件编写方法 - 高级技术区 - KCDDP ADV综合创作站 - Powered by Discuz!</title>
+      
+
+<link rel="stylesheet" type="text/css" id="css" href="assets/1570940527-9241f0a5b896d2d6857a4b731ec96f5f.css" referrerpolicy="no-referrer">
+
+
+<style class="darkreader darkreader--fallback" media="screen"></style>
+<style class="darkreader darkreader--text" media="screen"></style>
+<style class="darkreader darkreader--invert" media="screen"></style>
+<style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}</style>
+<style class="darkreader darkreader--user-agent" media="screen">html {
+    background-color: #191a1b !important;
+}
+html, body, input, textarea, select, button {
+    background-color: #191a1b;
+}
+html, body, input, textarea, select, button {
+    border-color: #5a5956;
+    color: #f0ebe2;
+}
+a {
+    color: #4791e7;
+}
+table {
+    border-color: #4f4e4c;
+}
+::placeholder {
+    color: #bfb9ac;
+}
+::selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+::-moz-selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #565a0f !important;
+    color: #f0ebe2 !important;
+}
+::-webkit-scrollbar {
+    background-color: #1d1f1f;
+    color: #cbc5b9;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #2c2d2d;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #343636;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #404142;
+}
+::-webkit-scrollbar-corner {
+    background-color: #191a1b;
+}
+* {
+    scrollbar-color: #2c2d2d #1d1f1f;
+}</style>
+<style type="text/css"><!--BODY {background-image: URL(images/sky2007/beijing.gif);background-position: center;}--></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--override" media="screen">.jfk-bubble {
+    background-color: #000000 !important;
+}
+.vimvixen-hint {
+    background-color: #765500 !important;
+    border-color: #d5b22e !important;
+    color: #f9edcc !important;
+}</style>
+<style type="text/css">@keyframes fadeInOpacity{0%{opacity:0}to{opacity:1}}:hover>*>.fbvd--wrapper{animation-name:fadeInOpacity;animation-duration:.3s;opacity:1}.fbvd--wrapper{position:absolute;top:10px;left:10px;opacity:0;text-align:center;margin:0;z-index:5}.fbvd--wrapper a{background: url("") no-repeat 3px 4.55px; background-color: #fff; display:inline-block;font:700 14px Helvetica,Arial,sans-serif;color:#4b4f56;text-decoration:none;vertical-align:middle;padding:0px 8px 0px;margin-right:8px;border-radius:2px; line-height: 22px; padding-left:19px; border: 1px solid #e7e7e7; background-size: 13px}.fbvd--wrapper a:last-child{margin-right:0}.fbvd--wrapper a:hover{text-decoration:none}.fbvd--wrapper a:focus{box-shadow:0 0 1px 2px rgba(88,144,255,.75),0 1px 1px rgba(0,0,0,.15);outline:none}.fbvd--wrapper b{font-size:13px;position:relative;top:1px;color:#3b5998;font-weight:400}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+
+      <style class="mx-wc-style">
+        .mx-wc-main img {max-width: 100%;}
+        .mx-wc-main{
+          box-sizing: content-box;
+          background-color: rgb(25, 26, 27) !important;
+          margin: 0 auto;
+          margin-top: 20px;
+          max-width: 1349px;
+        }
+        @media (min-width: 768px) {
+          .mx-wc-main { padding: 15px 15px 80px 15px }
+        }
+        @media (max-width: 767px) {
+          .mx-wc-main { padding: 15px 3px 80px 3px }
+        }
+  
+      </style>
+    </head>
+    <body style="background-color: #ffffff !important; min-height: 100%; height: auto; position: static !important; overflow: auto !important; padding-bottom: 0px !important;" id="" class="">
+      <div class="mx-wc-main">
+        <center class="mx-wc-selected-elem mx-wc-1570940527" style="display: block; float: none !important; position: relative !important; top: 0px !important; left: 0px !important; margin: 0px !important; flex: unset !important; width: 100% !important; max-width: 100% !important; box-sizing: border-box !important;">
+<table height="130" cellspacing="0" cellpadding="0" width="100%" align="center" background="images/sky2007/top_bg1.gif">
+<tbody>
+<tr>
+<td>
+<table height="130" cellspacing="0" cellpadding="0" width="1003" align="center">
+<tbody>
+<tr>
+<td><img src="assets/1570940527-c8ccb51ae72e4ff401ed344f3ed7de3c.gif"></td>
+<td width="420" background="images/sky2007/top_c_bg.gif">
+</td><td align="right">
+<table cellspacing="0" cellpadding="0" width="258" border="0">
+<tbody>
+<tr>
+<td colspan="5"><img height="49" src="assets/1570940527-b01406bb19a6058fedbad75f68b0ce38.gif" width="258"></td></tr>
+<tr>
+<td><img height="23" src="assets/1570940527-e9207eb90eea75016591b00ff091b13a.gif" width="38"></td>
+<td><a title="返回首页" href="http://kcddp.zymichost.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img height="23" src="assets/1570940527-c6da89f305c55b00e422e5da5bfd19fd.gif" width="40" border="0"></a></td>
+<td><a title="欢迎加入[Key" fans="" club]="" the="" council="" of="" doujin-game="" development="" and="" promotion="" href="http://kcddp.keyfc.net/bbs/register.php?sid=4d2egG" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img height="23" src="assets/1570940527-f5b0799ac5fa46637c7dfbf901a0de52.gif" width="46" border="0"></a></td>
+<td><span title="将本站加入收藏夹" style="CURSOR: hand" onclick="window.external.addFavorite ('http://kcddp.zymichost.com/','[Key Fans Club] the Council of Doujin-game Development and Promotion ')"><img height="23" src="assets/1570940527-0a2bbf2f036d6b37ef67a1485fc6dd7d.gif" width="44" border="0"></span></td>
+<td><img height="23" src="assets/1570940527-c939d0b4b994782ccb0fb14d14a11055.gif" width="90"></td></tr>
+<tr>
+<td colspan="5"><img height="58" src="assets/1570940527-e7246e599d7bcc1741d31a3118d26240.gif" width="258"></td>
+</tr>
+</tbody></table></td></tr></tbody></table></td></tr></tbody></table>
+<table height="51" cellspacing="0" cellpadding="0" width="100%" align="center" background="images/sky2007/top_bg2.gif" border="0">
+<tbody>
+<tr>
+<td>
+<table cellspacing="0" cellpadding="0" width="820" align="center">
+<tbody>
+<tr>
+<td>
+<img src="assets/1570940527-ff0b9ff5e2367308a0e0d133370e4a9d.gif"></td></tr>
+</tbody></table></td></tr></tbody></table>
+<table cellspacing="0" cellpadding="0" width="100%" align="center" background="images/sky2007/top_bg3.gif">
+<tbody>
+<tr>
+<td>
+<table cellspacing="0" cellpadding="0" width="1003" align="center" bgcolor="#e6e6e6" data-darkreader-inline-bgcolor="" style="--darkreader-inline-bgcolor:#202222;">
+<tbody>
+<tr>
+<td width="92" height="47"><img src="assets/1570940527-bb2a27a68260deaca59a7c7c995a6410.gif"></td>
+<td id="menu" background="images/sky2007/top_bar_c.gif">
+<span class="bold">游客: &nbsp;</span><a href="http://kcddp.keyfc.net/bbs/register.php?sid=4d2egG" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">注册</a>
+| <a href="http://kcddp.keyfc.net/bbs/logging.php?action=login&amp;sid=4d2egG" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">登录</a>
+| <a href="http://kcddp.keyfc.net/bbs/member.php?action=list&amp;sid=4d2egG" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">会员</a> 
+| <a href="http://kcddp.keyfc.net/bbs/search.php?sid=4d2egG" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">搜索</a> 
+| <a href="http://kcddp.keyfc.net/bbs/faq.php?sid=4d2egG" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">帮助</a>
+</td>
+<td align="right" background="images/sky2007/top_bar_c.gif"><a href="http://kcddp.zymichost.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img height="16" src="assets/1570940527-b02a4f6f05304fa706e8d9e4b08cbd59.gif" border="0"></a></td>
+<td width="91"><img src="assets/1570940527-70410f8e05a841060efcdc66c28e1fac.gif"></td></tr></tbody></table></td></tr></tbody></table>
+
+<table cellspacing="0" cellpadding="0" width="100%" align="center" background="images/sky2007/top_bg4.gif">
+<tbody>
+<tr>
+<td>
+<table cellspacing="0" cellpadding="0" width="1003" align="center" bgcolor="#e6e6e6" data-darkreader-inline-bgcolor="" style="--darkreader-inline-bgcolor:#202222;">
+<tbody>
+<tr>
+<td align="right" background="images/sky2007/top_xxx.gif" height="60"><br>
+<p><br>&nbsp;</p></td></tr></tbody></table></td></tr></tbody></table>
+
+<div class="maintable"><br>
+<div class="subtable nav" style="width:822">
+<span id="forumlist" onmouseover="showMenu(this.id)"><a href="http://kcddp.keyfc.net/bbs/index.php?sid=4d2egG" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">KCDDP ADV综合创作站</a></span>
+ » <a href="http://kcddp.keyfc.net/bbs/forumdisplay.php?fid=18&amp;page=1&amp;sid=4d2egG" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">高级技术区</a> » krkr2加解密插件编写方法</div><br></div>
+<div class="maintable">
+<table width="822" cellspacing="0" cellpadding="0" align="center" style="clear: both;">
+<tbody><tr><td valign="bottom">
+<div style="margin-bottom: 4px">
+<a href="http://kcddp.keyfc.net/bbs/redirect.php?fid=18&amp;tid=454&amp;goto=nextoldset&amp;sid=4d2egG" style="font-weight: normal" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"> ‹‹ 上一主题</a> | <a href="http://kcddp.keyfc.net/bbs/redirect.php?fid=18&amp;tid=454&amp;goto=nextnewset&amp;sid=4d2egG" style="font-weight: normal" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">下一主题 ››</a><br>
+</div>
+</td><td width="40%" align="right" valign="bottom">
+<div class="right">&nbsp;<a href="http://kcddp.keyfc.net/bbs/post.php?action=reply&amp;fid=18&amp;tid=454&amp;extra=page%3D1&amp;sid=4d2egG" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1570940527-e59b5f2f2113c4ae082422b420ee6f61.gif" border="0" alt=""></a></div>
+<div id="newspecialheader" class="right" onmouseover="showMenu(this.id)"><a href="http://kcddp.keyfc.net/bbs/post.php?action=newthread&amp;fid=18&amp;extra=page%3D1&amp;sid=4d2egG" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1570940527-5e364ca367a7e6877aefe8498292072e.gif" border="0" alt=""></a><a href="###"></a></div>
+
+</td></tr></tbody></table></div>
+
+
+<div class="maintable">
+<div class="spaceborder" style="width: 822px; border-bottom: none; --darkreader-inline-border-bottom: initial;" data-darkreader-inline-border-bottom="">
+<table cellspacing="0" cellpadding="4" width="100%" align="center">
+<tbody><tr class="header"><td colspan="2" style="color: rgb(255, 255, 255); --darkreader-inline-color:#fffffd;" data-darkreader-inline-color="">
+<div class="right" style="font-weight: normal">
+<a href="http://kcddp.keyfc.net/bbs/viewthread.php?action=printable&amp;tid=454&amp;sid=4d2egG" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">打印</a> |
+<a href="http://kcddp.keyfc.net/bbs/misc.php?action=emailfriend&amp;tid=454&amp;sid=4d2egG" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">推荐</a> |
+<a href="http://kcddp.keyfc.net/bbs/my.php?item=subscriptions&amp;subadd=454&amp;sid=4d2egG" id="ajax_subscription" onclick="ajaxmenu(event, this.id)" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">订阅</a> |
+<a href="http://kcddp.keyfc.net/bbs/my.php?item=favorites&amp;tid=454&amp;sid=4d2egG" id="ajax_favorite" onclick="ajaxmenu(event, this.id)" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">收藏</a>
+</div>
+标题:
+krkr2加解密插件编写方法</td></tr>
+</tbody></table></div>
+
+<form method="post" name="delpost" action="topicadmin.php?action=delpost&amp;fid=18&amp;tid=454&amp;page=1">
+
+
+<div class="spaceborder" style="width: 822px; margin-bottom: 4px; border-top: none; --darkreader-inline-border-top: initial;" data-darkreader-inline-border-top="">
+<table cellspacing="0" cellpadding="4" width="100%" align="center" class="t_row">
+<tbody><tr style="height: 100%">
+<td width="18%" valign="top" class="t_user"><a name="pid2600" data-mx-warn="Empty URL"></a>  <a name="lastpost" data-mx-warn="Empty URL"></a><a href="http://kcddp.keyfc.net/bbs/space.php?uid=153&amp;sid=4d2egG" target="_blank" class="bold" referrerpolicy="no-referrer" rel="noopener noreferrer">keakon</a>
+<br><div class="smalltxt">
+会员<br>
+<img src="assets/1570940527-042b857e30a15607101bdb9703af6dcb.gif" alt="Rank: 1"><br>
+TomoFansClub会长<br>
+<br>
+<table width="95%" border="0" cellspacing="0" cellpadding="0" style="table-layout: fixed; overflow: hidden">
+<tbody><tr><td align="center"><div class="avatar" style="width: 75"><img src="assets/1570940527-01dd473c06bbf00377a6914063c36075.jpg" width="75" height="100" border="0" alt=""></div></td></tr></tbody></table><br>
+UID 153<br>
+精华 
+0<br>
+积分 273<br>
+帖子 180<br>
+阅读权限 5<br>
+注册 2007-4-8<br>
+</div>
+</td>
+<td width="82%" valign="top" style="padding: 0px">
+<table border="0" cellspacing="0" cellpadding="4" class="t_msg">
+<tbody><tr><td>
+<div>
+<div class="right t_number"><a href="###" class="bold" title="复制帖子链接到剪贴板" onclick="setcopy('http://kcddp.keyfc.net/bbs/viewthread.php?tid=454&amp;page=1#pid2600', '已经复制到剪贴板')">#1</a></div>
+<span class="right">&nbsp;</span>
+<a href="###" class="right t_number" style="background-color: rgb(247, 247, 247); --darkreader-inline-bgcolor:#1c1d1d;" onclick="$('message2600').className='t_bigfont'" data-darkreader-inline-bgcolor="">大</a>
+<a href="###" class="right t_number" style="background-color: rgb(247, 247, 247); --darkreader-inline-bgcolor:#1c1d1d;" onclick="$('message2600').className='t_msgfont'" data-darkreader-inline-bgcolor="">中</a>
+<a href="###" class="right t_number" style="background-color: rgb(247, 247, 247); --darkreader-inline-bgcolor:#1c1d1d;" onclick="$('message2600').className='t_smallfont'" data-darkreader-inline-bgcolor="">小</a>
+<div class="right" style="padding-top: 4px;"><a href="http://kcddp.keyfc.net/bbs/magic.php?action=user&amp;pid=2600&amp;sid=4d2egG" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">使用道具</a>&nbsp;&nbsp;</div>
+<div style="padding-top: 4px;">
+发表于 2007-9-21 13:43&nbsp;
+<a href="http://kcddp.keyfc.net/bbs/viewpro.php?uid=153&amp;sid=4d2egG" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">资料</a>&nbsp;
+<a href="http://kcddp.keyfc.net/bbs/pm.php?action=send&amp;uid=153&amp;sid=4d2egG" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">短消息</a>&nbsp;
+<a href="http://kcddp.keyfc.net/bbs/memcp.php?action=buddylist&amp;newbuddyid=153&amp;buddysubmit=yes&amp;sid=4d2egG" target="_blank" id="ajax_buddy_0" onclick="ajaxmenu(event, this.id)" referrerpolicy="no-referrer" rel="noopener noreferrer">加为好友</a>&nbsp;
+</div></div>
+</td></tr>
+<tr><td valign="top" class="line" height="100%" style="padding-top: 10px;">
+<div style="float: right" align="right">
+<a href="http://kcddp.keyfc.net/bbs/misc.php?action=viewratings&amp;tid=454&amp;pid=2600&amp;sid=4d2egG" title="评分 0" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"></a>
+</div>
+<span class="bold">krkr2加解密插件编写方法</span><br><br>
+<div id="message2600" class="t_msgfont">一、<br>
+关于为什么要加密，以及加密的方法就不详述了。前者，每人都有自己的理由，比如保护自己的版权；后者请翻翻论坛的老帖。<br>
+<br>
+插件的编写需要会用VC++6.0，能用C/C++写程序（并不需要会写WIN32程序）；否则可以54该文了。以上。<br>
+<br>
+二、<br>
+要加/解密XP3文件，还是先来研究下XP3文件的结构吧。（了解就行了，并不用理解）<br>
+以下部分摘自别人的资料：<br><br><div class="msgbody"><div class="msgheader">QUOTE:</div><div class="msgborder">文件开头是文件标志，为"XP3"<br>
+偏移11处是文件信息表的位置，uint64<br>
+从上面的值指示跳到文件信息表处，有以下一个结构：<br>
+struct&nbsp; &nbsp; sXP3Info<br>
+{<br>
+&nbsp; &nbsp; byte_t&nbsp; &nbsp; zlib; // 文件信息表是否用zlib压缩过<br>
+&nbsp; &nbsp; uint64&nbsp; &nbsp; psize; // 文件信息表在包文件中的大小<br>
+#if zlib<br>
+&nbsp; &nbsp; uint64&nbsp; &nbsp; rsize; // 文件信息表解压后的大小<br>
+#endif<br>
+&nbsp; &nbsp; byte_t&nbsp; &nbsp; fileInfo[psize]; // 文件信息表数据<br>
+};<br>
+<br>
+成功获取文件信息表数据后可以得到以下一组结构的数组，用于描述包中文件的信息：<br>
+struct&nbsp; &nbsp; sXP3File<br>
+{<br>
+&nbsp; &nbsp; uint32&nbsp; &nbsp; tag1; // 标志1，"File" 0x656c6946<br>
+&nbsp; &nbsp; uint64&nbsp; &nbsp; fileSize; // 文件信息数据大小<br>
+<br>
+&nbsp; &nbsp; uint32&nbsp; &nbsp; tag2; // 标志2，"info" 0x6f666e69<br>
+&nbsp; &nbsp; uint64&nbsp; &nbsp; infoSize; // 文件基本数据大小<br>
+&nbsp; &nbsp; uint32&nbsp; &nbsp; protect; // 估计是表示此文件是否加过密<br>
+&nbsp; &nbsp; uint64&nbsp; &nbsp; rsize; // 文件原始大小<br>
+&nbsp; &nbsp; uint64&nbsp; &nbsp; psize; // 文件包中大小<br>
+&nbsp; &nbsp; uint16&nbsp; &nbsp; nameLen; // 文件名长度（指的是UTF-16字符个数）<br>
+&nbsp; &nbsp; wchar_t fileName[nameLen]; // 文件名(UTF-16LE编码，无0结尾)<br>
+<br>
+&nbsp; &nbsp; uint32&nbsp; &nbsp; tag3; // 标志3，"segm" 0x6d676573<br>
+&nbsp; &nbsp; uint64&nbsp; &nbsp; segmSize; // 文件段数据大小<br>
+&nbsp; &nbsp; uint32&nbsp; &nbsp; compress; // 文件是否用zlib压缩过<br>
+&nbsp; &nbsp; uint64&nbsp; &nbsp; offset; // 文件开始的位置<br>
+&nbsp; &nbsp; uint64&nbsp; &nbsp; rsize;<br>
+&nbsp; &nbsp; uint64&nbsp; &nbsp; psize;<br>
+#if fileSize - infoSize - segmSize - 24 &gt; 0<br>
+&nbsp; &nbsp; uint32&nbsp; &nbsp; tag4; // 标志4，"adlr" 0x726c6461<br>
+&nbsp; &nbsp; uint64&nbsp; &nbsp; adlrSize; // 文件附加数据大小，一般是4<br>
+&nbsp; &nbsp; uint32&nbsp; &nbsp; key; // 附加数据，用于加密<br>
+#endif<br>
+};</div></div><br>这些数据显示，XP3文件会有个文件信息表，存储了其中的文件信息。<br>
+这些信息中，某些可以用于加/解密。<br>
+<br>
+三、<br>
+Miliardo様已经在《关于加密插件的编写》（<a href="http://kcddp.keyfc.net/bbs/viewthread.php?tid=272" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">http://kcddp.keyfc.net/bbs/viewthread.php?tid=272</a>）中翻译了一个例子，就从这开始编写加密插件吧。<br>
+<br>
+运行VC++6.0，新建一个win32 dynamic-link library项目。<br>
+再新建一个C++ source file，文件名最好取为xp3enc.cpp（否则需把输出文件改名为xp3enc.dll），将《关于加密插件的编写》一文的第一段代码复制进去，保存。<br>
+再新建一个文本文件，把第2段代码复制进去，保存为xp3enc.def。<br>
+打开xp3enc.cpp，选择“build-build xp3enc.dll”，这样就应该生成好加密插件了。<br>
+<br>
+用同样的方法新建个dll项目，将第3、4段代码分别保存成cpp和def文件。<br>
+然后下载吉里吉里外部C++接口库（<a href="http://kcddp.keyfc.net/bbs/viewthread.php?tid=273" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">http://kcddp.keyfc.net/bbs/viewthread.php?tid=273</a>），解压后添加到该工程内。<br>
+最后build成dll文件，改后缀名为tpm文件（或选“project-settings-link”，把output file name改为tpm文件，当然也能改路径。）<br>
+<br>
+再用上述2个文件测试下加密结果吧，方法就不说了，自己翻帖。<br>
+成功的话就可以继续了，否则我也没什么好说的了。<br>
+<br>
+四、<br>
+下面开始分析这2个文件吧，先从加密开始。<br>
+<br>
+对于我们来说，唯一要写的就是XP3ArchiveAttractFilter_v2这个函数，所以这里只介绍它。<br><br><div class="msgbody"><div class="msgheader"><div class="right"><a href="###" class="smalltxt" onclick="copycode($('code0'));">[Copy to clipboard]</a> <a class="smalltxt" href="###" onclick="toggle_collapse('code0');">[ <span id="code0_symbol">-</span> ]</a></div>CODE:</div><div class="msgborder" id="code0">extern "C" void __stdcall XP3ArchiveAttractFilter_v2(<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;unsigned __int32 hash,<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;unsigned __int64 offset, void * buffer, long bufferlen)<br>
+{<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;// 接口版本 2 可以接受并使用以下的参数<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;// hash&nbsp; &nbsp;&nbsp; &nbsp;: 输入文件（解密后）内容的32位 Hash （散列）值<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;// offset&nbsp; &nbsp; : "Buffer" 成员所指向的数据偏离这个文件头部的偏移值<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;//&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; （当文件被压缩时，将显示文件为压缩状态下的字节偏移<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;//&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;值）<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;// buffer&nbsp; &nbsp; : 指向要加密的数据的指针。当文件被压缩时，给出的是文<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;//&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; 件被压缩前的数据。<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;//&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; ( 本函数不能更改压缩后的文件数据 )<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;// bufferlen : "buffer" 参数给出的数据块的长度<br>
+<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;// 在这里作为范例，我们示范把数据和 hash 最后一字节进行 XOR 的方法。<br>
+<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;int i;<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;for(i = 0; i &lt; bufferlen; i++) ((unsigned char*)buffer)[i] ^= hash;<br>
+<br>
+}</div></div><br>函数声明就不说了，必须这么写。<br>
+注释已经很清楚了，加密时可以用到4个值：<br>
+hash是解密后的文件hash值，这个编写解密插件时也能获取，所以我们可以用它来加密。<br>
+buffer是该块的指针。加密时，1个文件可能被分成多个块，每个块对应一个buffer。<br>
+offset是该块的块头与文件头的偏移量。对于该块的第i个字节，它对于文件头的偏移量应为offset+i字节。<br>
+bufferlen是该块的长度，因为解密时可能块长不是一样的，所以一般不会用这个来加密（否则没法解密了）。<br>
+<br>
+再研究这句吧：<br><br><div class="msgbody"><div class="msgheader"><div class="right"><a href="###" class="smalltxt" onclick="copycode($('code1'));">[Copy to clipboard]</a> <a class="smalltxt" href="###" onclick="toggle_collapse('code1');">[ <span id="code1_symbol">-</span> ]</a></div>CODE:</div><div class="msgborder" id="code1">for(i = 0; i &lt; bufferlen; i++) //在这个块中遍历<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;((unsigned char*)buffer)[i] ^= hash;//对于块中的每个字节（((unsigned char*)buffer)[i]），都与hash异或。因为只有一个字节，所以实际上是和hash的最后1个字节异或。</div></div><br>然后是解密。也只研究1个函数：TVPXP3ArchiveExtractionFilter。<br><br><div class="msgbody"><div class="msgheader"><div class="right"><a href="###" class="smalltxt" onclick="copycode($('code2'));">[Copy to clipboard]</a> <a class="smalltxt" href="###" onclick="toggle_collapse('code2');">[ <span id="code2_symbol">-</span> ]</a></div>CODE:</div><div class="msgborder" id="code2">void TVP_tTVPXP3ArchiveExtractionFilter_CONVENTION<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;TVPXP3ArchiveExtractionFilter(tTVPXP3ExtractionFilterInfo *info)<br>
+{<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;// TVPXP3ArchiveExtractionFilter 函数是会从吉里吉里本体调用的回调函数。<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;// 能得到的参数只有一个，就是对 tTVPXP3ExtractionFilterInfo 结构体的指针。<br>
+<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;// TVPXP3ArchiveExtractionFilter 需要在后述的 V2Link 函数内使用<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;// 吉里吉里本体的 TVPSetXP3ArchiveExtractionFilter 函数设定。<br>
+<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;// 这个样例只是纯粹的对 xp3enc.dll 样例代码加密的 XP3 文件包解密<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;// 将所有的数据以 FileHash 的最后一个字节作异或（XOR）运算<br>
+<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;// 请注意，这个函数有可能在多个线程中被调用。<br>
+<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;/*<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; tTVPXP3ExtractionFilterInfo 的成员如下<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; * SizeOfSelf&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;: 结构体自身的大小<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; * Offset&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;: "Buffer" 成员所指向的数据偏离这个文件头部的偏移值<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; * Buffer&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;: 数据本体<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; * BufferSize&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;: "Buffer" 成员所指向的数据的大小（字节单位）<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; * FileHash&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; : 解密后文件内容的32位 Hash （散列）值<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;*/<br>
+<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;// 检查结构体的大小<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;if(info-&gt;SizeOfSelf != sizeof(tTVPXP3ExtractionFilterInfo))<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;{<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; // 当结构体的大小错误，则最好投出异常<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; TVPThrowExceptionMessage(TJS_W("Incompatible tTVPXP3ExtractionFilterInfo size"));<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;// TVPThrowExceptionMessage 是用于投出异常的函数<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;// 本函数不会返回。<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;}<br>
+<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;// 復号<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;tjs_uint i;<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;for(i = 0; i &lt; info-&gt;BufferSize; i++)<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; ((unsigned char *)info-&gt;Buffer)[i] ^= info-&gt;FileHash;<br>
+}</div></div><br>注释中也能看到，我们可以获取5个参数。<br>
+FileHash等于加密时用到的hash变量。<br>
+Buffer是解密时的块。据我分析，解密时应该是XP3内包含多个文件，每个文件分成多个块。<br>
+Offset是该块的块头与XP3中对应文件的文件头的偏移量。<br>
+BufferSize是该块大小，可能和加密时的bufferlen不同，所以一般不用。<br>
+SizeOfSelf是结构体的大小，用于检查的。<br>
+<br>
+再分析下函数的主体：<br><br><div class="msgbody"><div class="msgheader"><div class="right"><a href="###" class="smalltxt" onclick="copycode($('code3'));">[Copy to clipboard]</a> <a class="smalltxt" href="###" onclick="toggle_collapse('code3');">[ <span id="code3_symbol">-</span> ]</a></div>CODE:</div><div class="msgborder" id="code3">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;tjs_uint i;//定义一个无符号整型变量<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;for(i = 0; i &lt; info-&gt;BufferSize; i++)<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; ((unsigned char *)info-&gt;Buffer)[i] ^= info-&gt;FileHash;//((unsigned char *)info-&gt;Buffer)[i]就是块中的元素，照样还是和info-&gt;FileHash异或。</div></div><br>补充下异或的常识吧：<br>
+a ^ b ^ b == a。<br>
+<br>
+因此就完成解密了。<br>
+<br>
+五、<br>
+下面开始做我们自己的加解密插件吧。<br>
+先补充下解密的常识。解密函数必须是加密函数的反函数，即对于数据data，加密后为code(data)，解密后为encode(code(data))，其值应等于data。<br>
+<br>
+反函数有很多，比如异或和异或，加和减，循环左移和循环右移等。但有些反函数可能会丢失数据，如乘和除，乘方和对数，正切和反正切，左移和右移，所以这些一般是不能用的。<br>
+<br>
+另外反函数是可以组合的。比如f2'(f1'(f1(f2(data)))) == data。（'用于表示反函数，因为没法写上标的-1）。也就是只要按相反的顺序解密就行了。<br>
+<br>
+下面来试着做吧。<br>
+1.先来最简单的，所有的数都加1。<br><br><div class="msgbody"><div class="msgheader"><div class="right"><a href="###" class="smalltxt" onclick="copycode($('code4'));">[Copy to clipboard]</a> <a class="smalltxt" href="###" onclick="toggle_collapse('code4');">[ <span id="code4_symbol">-</span> ]</a></div>CODE:</div><div class="msgborder" id="code4">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;for(int i = 0; i &lt; bufferlen; i++) ((unsigned char*)buffer)[i] += 1;</div></div><br>相应的解密插件为<br><br><div class="msgbody"><div class="msgheader"><div class="right"><a href="###" class="smalltxt" onclick="copycode($('code5'));">[Copy to clipboard]</a> <a class="smalltxt" href="###" onclick="toggle_collapse('code5');">[ <span id="code5_symbol">-</span> ]</a></div>CODE:</div><div class="msgborder" id="code5">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;for(tjs_uint i = 0; i &lt; info-&gt;BufferSize; i++)<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; ((unsigned char *)info-&gt;Buffer)[i] -= 1;</div></div><br>忘说了unsigned char类型的数据，值为[0, 255]，处于2端时，0 - 1 == 255，255 + 1 == 0，所以这个是没问题的。<br>
+<br>
+2.再改为与偏移量相加吧。<br><br><div class="msgbody"><div class="msgheader"><div class="right"><a href="###" class="smalltxt" onclick="copycode($('code6'));">[Copy to clipboard]</a> <a class="smalltxt" href="###" onclick="toggle_collapse('code6');">[ <span id="code6_symbol">-</span> ]</a></div>CODE:</div><div class="msgborder" id="code6">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;for(int i = 0; i &lt; bufferlen; i++) ((unsigned char*)buffer)[i] += (i + offset);</div></div><br>解密插件为<br><br><div class="msgbody"><div class="msgheader"><div class="right"><a href="###" class="smalltxt" onclick="copycode($('code7'));">[Copy to clipboard]</a> <a class="smalltxt" href="###" onclick="toggle_collapse('code7');">[ <span id="code7_symbol">-</span> ]</a></div>CODE:</div><div class="msgborder" id="code7">&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;for(tjs_uint i = 0; i &lt; info-&gt;BufferSize; i++)<br>
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; ((unsigned char *)info-&gt;Buffer)[i] -= (i + info-&gt;Offset);</div></div><br>记住别忘了加offset，因为加解密时分块可能不一样。<br>
+<br>
+3.接下来试试循环左/右移。<br><br><div class="msgbody"><div class="msgheader"><div class="right"><a href="###" class="smalltxt" onclick="copycode($('code8'));">[Copy to clipboard]</a> <a class="smalltxt" href="###" onclick="toggle_collapse('code8');">[ <span id="code8_symbol">-</span> ]</a></div>CODE:</div><div class="msgborder" id="code8">unsigned char code, left, right;&nbsp; &nbsp; &nbsp; &nbsp; //分别为加密后的1个字符，左移后的字符，右移后的字符<br>
+<br>
+for (int index = 0; index &lt; bufferlen; ++index, ++offset)&nbsp; &nbsp; &nbsp; &nbsp; //此处offset实际是offset + index<br>
+{<br>
+&nbsp; &nbsp; &nbsp; &nbsp; code = ((unsigned char*)buffer)[index];<br>
+<br>
+&nbsp; &nbsp; &nbsp; &nbsp; //循环左移(index % 8)位，不知道为何要转换成unsigned char，否则会警告。<br>
+&nbsp; &nbsp; &nbsp; &nbsp; left = unsigned char(code &lt;&lt; (offset % 8));<br>
+&nbsp; &nbsp; &nbsp; &nbsp; right = unsigned char(code &gt;&gt; (8 - (offset % 8)));<br>
+&nbsp; &nbsp; &nbsp; &nbsp; code = unsigned char(left | right);<br>
+<br>
+&nbsp; &nbsp; &nbsp; &nbsp; ((unsigned char*)buffer)[index] = code;<br>
+}</div></div><br>相应的加密插件，循环部分就不写了。<br><br><div class="msgbody"><div class="msgheader"><div class="right"><a href="###" class="smalltxt" onclick="copycode($('code9'));">[Copy to clipboard]</a> <a class="smalltxt" href="###" onclick="toggle_collapse('code9');">[ <span id="code9_symbol">-</span> ]</a></div>CODE:</div><div class="msgborder" id="code9">left = encode &lt;&lt; (8 - (offset % 8));<br>
+right = encode &gt;&gt; (offset % 8);<br>
+encode = left | right;</div></div><br>当然，循环移位可以用汇编来实现，但我感觉汇编还没这段C代码快，所以就不给例子了。<br>
+<br>
+4.然后再试试分段加密。<br><br><div class="msgbody"><div class="msgheader"><div class="right"><a href="###" class="smalltxt" onclick="copycode($('code10'));">[Copy to clipboard]</a> <a class="smalltxt" href="###" onclick="toggle_collapse('code10');">[ <span id="code10_symbol">-</span> ]</a></div>CODE:</div><div class="msgborder" id="code10">if (offset == 12)<br>
+{<br>
+&nbsp; &nbsp; &nbsp; &nbsp; code ^= 34;<br>
+}<br>
+else if (offset == 56)<br>
+{<br>
+&nbsp; &nbsp; &nbsp; &nbsp; code ^= 78;<br>
+}<br>
+else<br>
+{<br>
+&nbsp; &nbsp; &nbsp; &nbsp; code ^= 90;<br>
+}</div></div><br>解密代码实际是一样的，所以不重复了。<br>
+<br>
+5.接着来试试交换每个字节的第2和第8位。<br><br><div class="msgbody"><div class="msgheader"><div class="right"><a href="###" class="smalltxt" onclick="copycode($('code11'));">[Copy to clipboard]</a> <a class="smalltxt" href="###" onclick="toggle_collapse('code11');">[ <span id="code11_symbol">-</span> ]</a></div>CODE:</div><div class="msgborder" id="code11">struct BitCode<br>
+{<br>
+&nbsp; &nbsp; &nbsp; &nbsp; unsigned b1 : 1;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; unsigned b2 : 1;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; unsigned b3to7 : 5;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; unsigned b8 : 1;<br>
+};<br>
+<br>
+union ByteCode<br>
+{<br>
+&nbsp; &nbsp; &nbsp; &nbsp; unsigned char code;<br>
+&nbsp; &nbsp; &nbsp; &nbsp; BitCode bitCode;<br>
+}byteCode;<br>
+<br>
+//交换第2、8位<br>
+byteCode.code = ((unsigned char*)buffer)[index];<br>
+BitCode tempCode = byteCode.bitCode;<br>
+tempCode.b8 = byteCode.bitCode.b2;<br>
+tempCode.b2 = byteCode.bitCode.b8;<br>
+byteCode.bitCode&nbsp;&nbsp;= tempCode;<br>
+((unsigned char*)buffer)[index] = byteCode.code;</div></div><br>解密时仍然是相同的代码，不重复了。也可以试着用汇编，我是懒得用了。<br>
+<br>
+6.最后试试怎么用伪随机数加密吧。<br>
+先补充下常识。C/C++库中的随机函数是伪随机数，使用前要先设定种子。对于相同的种子，生成的随机数列是相同的。<br>
+所以我们只要给加密与解密相同的种子，就能生成相同的随机数列了。而这个种子自然可以直接选hash。<br>
+另外，别忘了文件可能很大，如果加密1个1G的文件，就得计算10亿次随机数了。我们当然不会这么做，其实只要一段随机数就足够了。<br>
+下面来看看实际的代码。<br><br><div class="msgbody"><div class="msgheader"><div class="right"><a href="###" class="smalltxt" onclick="copycode($('code12'));">[Copy to clipboard]</a> <a class="smalltxt" href="###" onclick="toggle_collapse('code12');">[ <span id="code12_symbol">-</span> ]</a></div>CODE:</div><div class="msgborder" id="code12">#include &lt;stdlib.h&gt; //这个请放在文件开头，调用随机函数用的。<br>
+<br>
+int const CODE_SIZE = 512;&nbsp; &nbsp; &nbsp; &nbsp; //随机数列的大小<br>
+unsigned char codes[CODE_SIZE];<br>
+<br>
+//生成随机数列<br>
+srand(hash);<br>
+for (int index = 0; index &lt; CODE_SIZE; ++index)<br>
+{<br>
+&nbsp; &nbsp; &nbsp; &nbsp; codes[index] = rand();<br>
+}<br>
+<br>
+for (index = 0; index &lt; bufferlen; ++index, ++offset)&nbsp; &nbsp; &nbsp; &nbsp; //此处offset实际是offset + index<br>
+{<br>
+&nbsp; &nbsp; &nbsp; &nbsp; //和随机数列异或<br>
+&nbsp; &nbsp; &nbsp; &nbsp; ((unsigned char*)buffer)[index] ^= codes[offset % CODE_SIZE];<br>
+}</div></div><br>解密代码实际和加密非常相似，大家有兴趣自己试试吧。<br>
+<br>
+六、<br>
+其实还有很多方法可以用，大家开动脑筋想想自己的算法吧，我只是提个思路而已。其实随意几个算法组合起来就已经够难破解了。<br>
+另外，解密时必须能够直接得到1个文件任意偏移量出的实际值。也就是说解密文件a的第100个字节时，不能依赖该文件其他字节的值，如第99个字节。<br>
+最后别忘了发布时设置为release模式，不然会带很多调试信息，使插件变大变慢，而且易破解。如果还想进一步保护的话，可以试试加壳，但千万别清除导出表（即def文件生成的信息），不然无法使用。<br>
+<br>
+[<i> 本帖最后由 keakon 于 2007-9-21 13:56 编辑 </i>]</div>
+<br style="clear: both"><font style="color: rgb(0, 0, 0); font: 12px Tahoma, Verdana; --darkreader-inline-color:#f0ebe2;" data-darkreader-inline-color="">
+</font>
+</td></tr>
+<tr><td valign="bottom">
+<br><br><br><img src="assets/1570940527-631ee9f27f4df749fc59c33d2fc690dd.gif" alt=""><br><div class="t_signature" style="overflow: hidden; max-height: 20em; maxHeightIE: 245px;">在我眼中，只要萌的都是loli。不管她有多老，是男的也好，是机器人也罢，就算没有实体，我也一定要萌上她！<br>
+<a href="http://www.keakon.cn/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><u><font color="red" data-darkreader-inline-color="" style="--darkreader-inline-color:#e63f3c;">智代after PS2汉化移植完毕</font></u></a></div>
+</td></tr>
+<tr><td align="right">
+<a href="###" onclick="scroll(0,0)"><img src="assets/1570940527-129c1d7d3a161c34a34c8eed2a20424c.gif" border="0" alt="顶部"></a>
+</td></tr>
+</tbody></table></td></tr></tbody></table></div>
+</form>
+</div>
+<div class="maintable" style="clear:both">
+<table width="822" cellspacing="0" cellpadding="0" align="center">
+<tbody><tr><td valign="top"></td><td width="40%" align="right">
+<div class="right">&nbsp;<a href="http://kcddp.keyfc.net/bbs/post.php?action=reply&amp;fid=18&amp;tid=454&amp;extra=page%3D1&amp;sid=4d2egG" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1570940527-e59b5f2f2113c4ae082422b420ee6f61.gif" border="0" alt=""></a></div>
+<div id="newspecialfooter" class="right" onmouseover="showMenu(this.id)"><a href="http://kcddp.keyfc.net/bbs/post.php?action=newthread&amp;fid=18&amp;extra=page%3D1&amp;sid=4d2egG" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1570940527-5e364ca367a7e6877aefe8498292072e.gif" border="0" alt=""></a><a href="###"></a></div>
+
+</td></tr></tbody></table><br></div>
+
+<br>
+<br>
+
+
+<div class="maintable" style="color: rgb(102, 102, 102); clear: both; --darkreader-inline-color:#c9c3b7;" data-darkreader-inline-color="">
+<a href="http://kcddp.keyfc.net/bbs/member.php?action=clearcookies&amp;formhash=bad609ba&amp;sid=4d2egG" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">清除 Cookies</a> - <a href="mailto:miliardo.p@gmail.com" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">联系我们</a> - <a href="http://kcddp.zymichost.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">[Key Fans Club] the Council of Doujin-game Development and Promotion </a>
+ - <a href="http://kcddp.keyfc.net/bbs/archiver/?sid=4d2egG" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Archiver</a>
+ - <a href="http://kcddp.keyfc.net/bbs/wap/?sid=4d2egG" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">WAP</a>
+<select onchange="if(this.options[this.selectedIndex].value != '') {
+var thisurl = document.URL.replace(/[&amp;?]styleid=.+?&amp;sid=.+?$/i, '');
+top.location=(thisurl.replace(/\#.+$/, '')+(thisurl.match(/\?/) ? '&amp;' : '?')+'styleid='+this.options[this.selectedIndex].value+'&amp;sid=4d2egG') }">
+<option value="">界面风格</option>
+<option value="">----------</option>
+<option value="1">默认风格</option>
+<option value="2">iuv2_blue</option>
+<option value="5">天高云淡</option>
+</select>
+<br></div>
+
+<table cellspacing="0" cellpadding="0" border="0" style="padding: 5px 0px;">
+<tbody><tr align="center">
+<td width="50">
+<a href="http://www.discuz.net/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1570940527-e7734d6ab8a39f0423357e4ff30b5d4a.gif" border="0" alt=""></a></td>
+<td style="font-size: 11px">
+Powered by <a href="http://www.discuz.net/" target="_blank" style="color: blue; --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="" referrerpolicy="no-referrer" rel="noopener noreferrer"><b>Discuz!</b></a> <b style="color: rgb(104, 211, 0); --darkreader-inline-color:#b6fb66;" data-darkreader-inline-color="">5.5.0</b>
+ © 2001-2006 <a href="http://www.comsenz.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Comsenz Inc.</a>
+<br>Processed in 1.035000 second(s), 7 queries
+, Gzip enabled
+<br><a href="http://www.miibeian.gov.cn/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">粤ICP备05060595号</a><br>
+</td>
+</tr></tbody></table>
+<center>[ 当前模板 - 天高云淡 <font face="Wingdings" color="#7ba2e7" data-darkreader-inline-color="" style="--darkreader-inline-color:#8ab3da;">v</font> 设计制作 - <a title="按此可以下载该模板" href="http://www.leobbsx.net/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">七星论坛</a> <font face="Wingdings" color="#7ba2e7" data-darkreader-inline-color="" style="--darkreader-inline-color:#8ab3da;">v</font> 请使用1024*768或以上分辨率浏览本模板 ]</center>
+<table cellspacing="0" cellpadding="0" width="100%" align="center" background="images/sky2007/end_x_bg.gif" border="0">
+<tbody>
+<tr>
+<td align="middle"><img src="assets/1570940527-aabe10d0bbd99a170091841d71bc4850.gif"></td></tr></tbody></table>
+<table cellspacing="0" cellpadding="0" width="100%" align="center" background="images/sky2007/end_xx_bg.gif" border="0">
+<tbody>
+<tr>
+<td>
+<table cellspacing="0" cellpadding="0" width="1003" align="center" border="0">
+<tbody>
+<tr>
+<td><img src="assets/1570940527-16a65c5dbdd0ab45cdca2e0560078a39.gif"></td>
+<td width="100%" background="images/sky2007/end_xx_bg2.gif"></td>
+<td align="right"><img src="assets/1570940527-9335a02f8b34231c25c897e4a16cc82d.gif"><a href="http://www.leobbsx.net/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img alt="请勿删除或修改此处版权图示" src="assets/1570940527-440702365787e1ce1cbbe54525a66c7f.jpg" border="0"></a><img src="assets/1570940527-3aff60f73878ec733d3406591b14f8de.gif"></td></tr></tbody></table></td></tr></tbody></table>
+<a name="bottom" data-mx-warn="Empty URL"></a>
+</center>
+        
+      </div>
+    </body>
+  </html>

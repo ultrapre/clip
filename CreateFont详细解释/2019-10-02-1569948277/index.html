@@ -1,0 +1,1287 @@
+
+  <!DOCTYPE html>
+  <html id="" class="">
+    <!-- OriginalSrc: https://www.cnblogs.com/mengfanrong/p/4567336.html -->
+    <head>
+      <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <title>CreateFont详细解释 - mengfanrong - 博客园</title>
+      
+
+<link rel="stylesheet" href="assets/1569948277-d4b73980e5ecba85aa25d546f104e1c7.css" referrerpolicy="no-referrer">
+<link id="MainCss" rel="stylesheet" href="assets/1569948277-8dd197ff443ad67d6175d6c686798b97.css" referrerpolicy="no-referrer">
+<link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="assets/1569948277-7e5afe49e0e8a802d4665c6d8e3b349a.css" referrerpolicy="no-referrer">
+
+
+<style class="darkreader darkreader--fallback" media="screen"></style>
+<style class="darkreader darkreader--text" media="screen"></style>
+<style class="darkreader darkreader--invert" media="screen"></style>
+<style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}</style>
+<style class="darkreader darkreader--user-agent" media="screen">html {
+    background-color: #191a1b !important;
+}
+html, body, input, textarea, select, button {
+    background-color: #191a1b;
+}
+html, body, input, textarea, select, button {
+    border-color: #5a5956;
+    color: #f0ebe2;
+}
+a {
+    color: #4791e7;
+}
+table {
+    border-color: #4f4e4c;
+}
+::placeholder {
+    color: #bfb9ac;
+}
+::selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+::-moz-selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #565a0f !important;
+    color: #f0ebe2 !important;
+}
+::-webkit-scrollbar {
+    background-color: #1d1f1f;
+    color: #cbc5b9;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #2c2d2d;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #343636;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #404142;
+}
+::-webkit-scrollbar-corner {
+    background-color: #191a1b;
+}
+* {
+    scrollbar-color: #2c2d2d #1d1f1f;
+}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">@keyframes fadeInOpacity{0%{opacity:0}to{opacity:1}}:hover>*>.fbvd--wrapper{animation-name:fadeInOpacity;animation-duration:.3s;opacity:1}.fbvd--wrapper{position:absolute;top:10px;left:10px;opacity:0;text-align:center;margin:0;z-index:5}.fbvd--wrapper a{background: url("") no-repeat 3px 4.55px; background-color: #fff; display:inline-block;font:700 14px Helvetica,Arial,sans-serif;color:#4b4f56;text-decoration:none;vertical-align:middle;padding:0px 8px 0px;margin-right:8px;border-radius:2px; line-height: 22px; padding-left:19px; border: 1px solid #e7e7e7; background-size: 13px}.fbvd--wrapper a:last-child{margin-right:0}.fbvd--wrapper a:hover{text-decoration:none}.fbvd--wrapper a:focus{box-shadow:0 0 1px 2px rgba(88,144,255,.75),0 1px 1px rgba(0,0,0,.15);outline:none}.fbvd--wrapper b{font-size:13px;position:relative;top:1px;color:#3b5998;font-weight:400}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--override" media="screen">.jfk-bubble {
+    background-color: #000000 !important;
+}
+.vimvixen-hint {
+    background-color: #765500 !important;
+    border-color: #d5b22e !important;
+    color: #f9edcc !important;
+}</style>
+
+      
+    </head>
+    <body style="" class="mx-wc-selected-elem mx-wc-1569948277">
+    <a name="top" data-mx-warn="Empty URL"></a>
+    
+    <div id="home">
+    <div id="header">
+        <div id="blogTitle">
+            
+<div class="title"><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/mengfanrong/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Brenda</a>
+</div>
+<div class="subtitle">
+
+</div>
+
+        </div>
+        <div id="navigator">
+            
+<ul id="navList">
+    <li id="nav_sitehome"><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+博客园</a>
+</li>
+    <li id="nav_myhome">
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/mengfanrong/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+首页</a>
+</li>
+    <li id="nav_newpost">
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+新随笔</a>
+</li>
+    <li id="nav_contact">
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/mengfanrong" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+联系</a></li>
+    <li id="nav_rss">
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/mengfanrong/rss/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+订阅</a></li>
+    <li id="nav_admin">
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+管理</a>
+</li>
+</ul>
+
+            <div class="blogStats">
+                
+<span id="stats_post_count">随笔 - 
+7163&nbsp;</span>
+<span id="stats_article_count">文章 - 
+0&nbsp;</span>
+<!-- <span id="stats-comment_count"></span> -->
+<span id="stats_comment_count">评论 - 
+56</span>
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <div id="mainContent">
+            <div class="forFlow">
+                <div id="post_detail">
+    <div id="topics">
+        <div class="post">
+            <h1 class="postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/mengfanrong/p/4567336.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">CreateFont详细解释</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                
+<div id="cnblogs_post_body" class="blogpost-body ">
+    <div id="article_content" class="article_content">
+<p><br>&nbsp;CFont * f; <br>&nbsp;&nbsp; f = new CFont; <br>&nbsp;&nbsp; f-&gt;CreateFont(10, // nHeight <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0, // nWidth <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0, // nEscapement <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0, // nOrientation <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FW_BOLD, // nWeight <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FALSE, // bItalic <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; FALSE, // bUnderline <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0, // cStrikeOut <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ANSI_CHARSET, // nCharSet <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; OUT_DEFAULT_PRECIS, // nOutPrecision <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CLIP_DEFAULT_PRECIS, // nClipPrecision <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DEFAULT_QUALITY, // nQuality <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DEFAULT_PITCH | FF_SWISS, // nPitchAndFamily <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _T("Arial")); // lpszFac </p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>cHeight是字体的高度。<br>cWidth是字体的宽度。<br>cEscapement是字体的倾斜角。<br>cOrientation是字体的倾斜角。<br>cWeight是字体的粗细。<br>bItalic是字体是否斜体。</p><p><br>bUnderline是字体是否有下划线。<br>bStrikeOut是字体是否有删除线。</p><p><br>iCharSet是字体使用的字符集。<br>iOutPrecision是指定怎样选择合适的字体。</p><p><br>iClipPrecision是用来确定裁剪的精度。<br>iQuality是怎么样跟选择的字体相符合。<br>iPitchAndFamily是间距标志和属性标志。<br>pszFaceName是字体的名称。</p><p></p>
+<p>&nbsp;</p>
+<p><br>函数功能：该函数创建一种有特殊性的逻辑字体。此逻辑字体能够在后面被不论什么设备选择。</p>
+<p>&nbsp;&nbsp;&nbsp; 函数原型：HFONT CreateFont(int nHeight, int nWidth, int nEscapement, int nOrientation, int fnWeight, DWORD fdwltalic, DWORD fdwUnderline, DWORD fdwStrikeOut, DWORD </p>
+<p>fdwCharSet, DWORD fdwOutputPrecision, DWORD fdwClipPrecision, DWORD fdwQuality, DWORD fdwPitchAndFamily, LPCTSTR lpszFace)。</p>
+<p>&nbsp;&nbsp;&nbsp; 參数：</p>
+<p>&nbsp;&nbsp;&nbsp; nHeight：指定字体的字符单元或字符的逻辑单位高度。字符的高度值（也被称为em高度）是指字符单元高度值减去内部标头值。字体映射器以例如以下方式解释nHeight指定的值，各值含义</p>
+<p>为：</p>
+<p>&nbsp;&nbsp;&nbsp; &gt;0：字体映射器转换这个值以设备单位，并和已有字体的单元高度相匹配。</p>
+<p>&nbsp;&nbsp;&nbsp; 0：字体映射器转换在选择匹配时用一个缺省的高度值。</p>
+<p>&nbsp;&nbsp;&nbsp; &lt;0：字体映射器转换这个值到设备单位，并将它的绝对值和已有字体的字符高度相匹配。</p><p></p>
+<p>&nbsp;&nbsp;&nbsp; 比較全部的高度，字体映射器选择不超过要求大小的最大字体。</p>
+<p>&nbsp;&nbsp;&nbsp; 此映射当字体第一次被使用时发生。</p>
+<p>&nbsp;&nbsp;&nbsp; 对于MM_TEXT映射方式，能够用以下的公式为一种指定了点大小的字体确定高度：</p>
+<p>&nbsp;&nbsp;&nbsp; nHeight=-MulDiv(PointSize, GetDeviceCaps(hDC, LOGPIXELSY),72)</p>
+<p>&nbsp;&nbsp;&nbsp; nWidth：指定所要求字体的字符的逻辑单位的平均宽度。假设此值为0，字体映射器选择一个closest match值。closest match值是由比較当前设备的特征系数与可使用字体的数字化特征</p>
+<p>系数之差的绝对值而确定的。</p><p></p>
+<p>&nbsp;&nbsp;&nbsp; nEscapement：指定移位向量和设备X轴之间的一个角度。以十分之中的一个度为单位。</p><p>移位向量平行于正文行的基线。</p>
+<p>&nbsp;&nbsp;&nbsp; Windows NT：当图形设备设置为GM_ADVANCED时。能够不依赖字符串的字符的定位角而指定字符串的移位角。</p>
+<p>&nbsp;&nbsp;&nbsp; 当图形模式被设置为GM_COMPATIBLE时，nEscapement同一时候指定移位角和定位角，能够设置nEscapement和nOrientation为同样的值。</p>
+<p>&nbsp;&nbsp;&nbsp; Windows 95：nEscapement同一时候指定移位角和定位角，可设置nEscapement和nOrientation为同样的值。</p>
+<p>&nbsp;&nbsp;&nbsp; nOrientation：指定每一个字符的基线和设备X轴之间的角度。</p>
+<p>&nbsp;&nbsp;&nbsp; FnWeight：在0到1000之间指定字体的权值。如400表示标准体，700表示黑（粗）体。假设此值为0，则使用缺省的权值。</p>
+<p>&nbsp;&nbsp;&nbsp; 为方便定义，可使用例如以下值：</p>
+<p>&nbsp;&nbsp;&nbsp; FW_DONTCARE：0；FW_THIN；100；FW_EXTRALIGHT；200；FW_ULTRALIGHT；200；FW_LIGHT。300；</p>
+<p>&nbsp;&nbsp;&nbsp; FW_NORMAL：400；FW_REGULAR；400。FW_MEDIUM。500；FW_SEMIBOLD；600；FW_DEMIBOLD；600。</p>
+<p>&nbsp;&nbsp;&nbsp; FW_BOLD：700；FW_EXTRABOLD。800；FW_ULTRABOLD；800；FW_HEAVY；900；FW_BLACK；900。</p>
+<p>&nbsp;&nbsp;&nbsp; fdwItalic：假设设置为TRUE则指定斜体。</p>
+<p>&nbsp;&nbsp;&nbsp; fdwUnderline：假设设置为TRUE，则指定加下划线的字全。</p>
+<p>&nbsp;&nbsp;&nbsp; fdwStrikeOut：假设设置为TRUE，则strikeout指定字体。</p>
+<p>&nbsp;&nbsp;&nbsp; fdwCharSet：指定字符集。下列值是提前定义的：</p>
+<p>&nbsp;&nbsp;&nbsp; ANSI_CHARSET; BALTIC_CHARSET; CHINESEBIG5_CHARSET; DEFAULT_CHARSET;</p>
+<p>&nbsp;&nbsp;&nbsp; EASTEUROPE_CHARSET; GB2312_CHARSET; GREEK_CHARSET; HANGUL_CHARSET; MAC_CHARSET; OEM_CHARSET; RUSSIAN_CHARSET; SHIFTJIS_CHARSET;</p>
+<p>&nbsp;&nbsp;&nbsp; SYMBOL_CHARSET; TURKISH_CHARSET。</p>
+<p>&nbsp;&nbsp;&nbsp; 韩国Windows：JOHAB_CHARSET；</p>
+<p>&nbsp;&nbsp;&nbsp; 中东地区Windows：HEBREW_CHARSSET; ARABIC_CHARSET</p>
+<p>&nbsp;&nbsp;&nbsp; 泰国Windows：THAI_CHARSET</p>
+<p>&nbsp;&nbsp;&nbsp; OEM_CHARSET指定的字符集与操作系统有关。</p>
+<p>&nbsp;&nbsp;&nbsp; 能够使用DEFAULT_CHARSET值来同意字体的名字和大小来充分描写叙述逻辑字体。</p><p>假设指定的字体名不存在，不论什么字符集的字体都能够替代指定的字体。所以应该小心地用</p>
+<p>DEFAULT_CHARSET来避免不期望的结果出现。</p>
+<p>&nbsp;&nbsp;&nbsp; 操作系统中存在其它字符集的字体。假设一个应用程序用一种未知字符集的字体，则应用程序不会试图去翻译或解释用那种字体写出来的字符串。</p>
+<p>&nbsp;&nbsp;&nbsp; 在字体映射过程中此參数非常重要。为确保获得一致的结果。指定一个特殊的字符集。</p><p>假设在lpszFace參数中指定了一个字体名。确定fdwCharSet值与由lpszFace指定的字体字符集是否匹</p>
+<p>配。</p>
+<p>&nbsp;&nbsp;&nbsp; fdwOutputPrecision：指定输出精度，输出精度义输出与要求的字体高度、宽度、字符定位、移位、字符间距和字符类型的匹配程序。它可取下列值之中的一个：</p>
+<p>&nbsp;&nbsp;&nbsp; OUT_CHARACTER_PRECIS。未用。</p>
+<p>&nbsp;&nbsp;&nbsp; OUT_DEFAULT_PRECIS：指定缺省的字体映射器状态。</p>
+<p>&nbsp;&nbsp;&nbsp; OUT_DEVICE_PRECIS：指示字体映射器在当系统里有多种字体使用同一个字体使用同一个名字时选择一种设备字体。</p><p></p>
+<p>&nbsp;&nbsp;&nbsp; OUT_OUTLINE_PRCIS：在Windows NT中此值指示字体映射器从TrueType和其它基于边框的字体中选择。</p>
+<p>&nbsp;&nbsp;&nbsp; OUT_RASTER_PRECIS：指示字体映射器在当系统里有多种字体使用同一个名字时选择一种光栅字体。</p>
+<p>&nbsp;&nbsp;&nbsp; OUT_STRING_PRECIS：此值没有被字全映射器使用。可是当扫描字体被列举时作为返回值。</p>
+<p>&nbsp;&nbsp;&nbsp; OUT_STROKE_PRECIS：在Windows NT中此值没有被字体映射器使用。可是当TrueType字体、其它基于边框的字体和向量字体被列举时，作为返回值。</p><p></p>
+<p>&nbsp;&nbsp;&nbsp; Windows 95：此值没有被字体映射器使用。可是当TrueType字体或向量字体被列举时，作为返回值。</p><p></p>
+<p>&nbsp;&nbsp;&nbsp; OUT_TT_ONLY_PRECIS：指示字体映射器仅从TrueType字体中选择，假设系统中没有安装TrueType字体，则字体映射返回缺省状态。、</p>
+<p>&nbsp;&nbsp;&nbsp; OUT_TT_PRECIS：指示字体映射器在当系统里有多种同名的字体时选择一种TrueType字体。</p>
+<p>&nbsp;&nbsp;&nbsp; 当操作系统含有多种与指定名字同名的字体时。应用程序能够使用OUT_DEVICE_PRECIS,OUT_RASTER_PRECIS和OUT_TT_PRECIS值来控制字体映射器怎样选择一种字体，比如。</p>
+<p>假设操作系统含有名字Symbol的光栅和TrueType两种字体，指定OUT_TT_PRECIS使字体映射器选择TrueType方式。</p><p>指定OUT_TT_ONLY_PRECIS使字体映射器选择一种TrueType字体。</p>
+<p>虽然这会给TrueType字体换一个名字。</p>
+<p>&nbsp;&nbsp;&nbsp; fdwClipPrecision；指定裁剪精度。裁剪精度定义怎样裁剪部分超出裁剪区的字符。它可取一个或多个下列值：</p>
+<p>&nbsp;&nbsp;&nbsp; CLIP_DEFAULT_PRECIS：指定缺省裁剪状态。</p><p>CLIP_CHARACTER_PRECIS：未用。</p><p></p>
+<p>&nbsp;&nbsp;&nbsp; CLIP_STROKE_PRECIS：未被字体映射器使用。可是当光栅字体、向量字体或TrueType字体被列举时作为返回值。</p><p>在Windows环境下。为保证兼容性，当列举字体时这个值总被返回。</p>
+<p>&nbsp;&nbsp;&nbsp; CLIP_MASK：未用。</p><p>CLIP_EMBEDDED：要使用嵌入式仅仅读字体必须使用此标志。</p>
+<p>&nbsp;&nbsp;&nbsp; CLIP_LH_ANGLES：当此值被使用时。全部字体的旋转依赖于坐标系统的定位是朝左的还是朝右的。</p>
+<p>&nbsp;&nbsp;&nbsp; 假设未使用此值，设备字体总是逆时针方向旋转。但其它字体的旋转依赖于坐标系统的定向。要得到很多其它关于坐标系统定向的信息。參见參数orientation。</p><p></p>
+<p>&nbsp;&nbsp;&nbsp; CLIP_TT_ALWAYS：未用。</p>
+<p>&nbsp;&nbsp;&nbsp; fdwQuality：指向输出质量。输出质量定义GDI怎样细致地将逻辑字体属性与实际物理字体属性相匹配。它可取下列值之中的一个：</p>
+<p>&nbsp;&nbsp;&nbsp; DEFAULT_QUALITY：字体的外观不重要。</p>
+<p>&nbsp;&nbsp;&nbsp; DRAFT_QUALITY：字体外观的重要性次于使用PROOF_QUALITY时。对GDI光栅字体。缩放比例是活动的，这意味着多种字体大小可供选择，但质量可能不高，假设有必要。粗体、斜体</p>
+<p>、下划线、strikeout字体可被综合起来使用。</p><p></p>
+<p>&nbsp;&nbsp;&nbsp; PROOF_QUALITY：字符质量比精确匹配逻辑字体字体属性更重要。对GDI扫描字体，缩放比例是活动的。并选择最接近的大小。虽然当使用PROOF_QUALITY时，选择字体大小并不完</p>
+<p>全匹配。但字体的质量非常高，并没有外观上的变形。假设有必要，粗体、斜体、下划线、strikeout字体可被综合起来使用。</p><p></p>
+<p>&nbsp;&nbsp;&nbsp; fdwPitchAndFamily：指定字体间距和字体族，低端二位指定字体的字符间距，它可取下列值之中的一个：</p>
+<p>&nbsp;&nbsp;&nbsp; DEFAULT_PITCH；FIXED_PITCH; VARIABLE_PITCH</p>
+<p>&nbsp;&nbsp;&nbsp; 高端四位指定字体族，可取下列值之中的一个：</p>
+<p>&nbsp;&nbsp;&nbsp; FF_DECORATIVE：新鲜的字体。如老式英语（Old English）。FF_DONTCARE：不关心或不知道。</p><p></p>
+<p>&nbsp;&nbsp;&nbsp; FF_MDERN：笔划宽度固定的字体，有或者无衬线。如Pica、Elite和Courier New。</p>
+<p>&nbsp;&nbsp;&nbsp; FF_ROMAN：笔划宽度变动的字体，有衬线。如MS Serif。</p>
+<p>&nbsp;&nbsp;&nbsp; FF_SCRIPT：设计成看上去象手写体的字体。如Script和Cursive。</p>
+<p>&nbsp;&nbsp;&nbsp; FF_SWISS：笔划宽度变动的字体，无斜线。如MS Sans Serif。</p>
+<p>&nbsp;&nbsp;&nbsp; 应用程序能够用运算符OR将字符间距和字体族组合起来给fdwPitchAndFamily赋值。</p>
+<p>&nbsp;&nbsp;&nbsp; 字体族描写叙述一种字体的普通外观，当全部的精确字样都不能使用时，可用它们来指定字体。</p>
+<p>&nbsp;&nbsp;&nbsp; lpszface：指向指定字体的字样名的、以/0结束的字符串指针，字符串的长度不能超过32个字符（包含字符/0）。函数EnumFontFamilies可用来列举全部当前可用字体的字样名。</p>
+<p>&nbsp;&nbsp;&nbsp; 假设lpszFace为NULL或指向一个空串，GDI使用能匹配其它属性的第一种字体。</p>
+<p>&nbsp;&nbsp;&nbsp; 返回值：假设函数调用成功，返回值是一种逻辑字体句柄。假设函数调用失败，返回值为NULL。</p>
+<p>&nbsp;&nbsp;&nbsp; Windows NT：若想获得很多其它错误信息，请调用GetLastError函数。</p><p></p>
+<p>&nbsp;&nbsp;&nbsp; 备注：当一种字体不再使用时。可用DeleteObject来删除。</p>
+<p>&nbsp;&nbsp;&nbsp; 为保护那些提供字体给Windows和Windows NT的卖主的版权，基于Win32的应用程序总是列出所选择字体的准确名字。因为不同的系统会使用不同的字体，不要觉得所选择字体就是要</p>
+<p>求的字体。比如。假设要求名叫Palatino的字体，但系统没提供那样一种字体。则字体映射器将会以一种不同名但有类似属性的字体取代替。该系统将始终报告用户选择的字体名称出。</p>
+<p>&nbsp;&nbsp;&nbsp; 快速搜索：Windows NT：3.1以上数字；Windows：95以上数字。Windows CE：不支持。头：wingdi.h；库文件：gdi32.lib；Unicode：在Windows NT环境，Unicode和ANSI</p>
+<p>两种方式。<br></p></div>
+<a href="http://t.cn/RnYQKp5" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><u><font color="green" size="5" data-darkreader-inline-color="" style="--darkreader-inline-color:#96fb8d;">【众安尊享e生】－国民百万医疗保险，投保详解及案例分析,每年最低112元——马云杀手锏</font></u></a></div>
+
+<div class="clear"></div>
+<div id="blog_post_info_block">
+
+
+    <div id="blog_post_info">
+<div id="green_channel">
+        <a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(4567336,cb_blogId,1);green_channel_success(this,'谢谢推荐！');" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">好文要顶</a>
+        <a id="green_channel_follow" onclick="follow('4b40420b-63cf-dd11-9e4d-001cf0cd104b');" href="javascript:void(0);" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">关注我</a>
+    <a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">收藏该文</a>
+    <a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569948277-3212f7b914cc9773fb30bbf4656405fc.png" alt=""></a>
+    <a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信" onclick="shareOnWechat()" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569948277-cb7153d1c13a5d9aef10ebab342f6f71.png" alt=""></a>
+</div>
+<div id="author_profile">
+    <div id="author_profile_info" class="author_profile_info">
+        <div id="author_profile_detail" class="author_profile_info">
+            <a href="https://home.cnblogs.com/u/mengfanrong/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">mengfanrong</a><br>
+            <a href="https://home.cnblogs.com/u/mengfanrong/followees/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">关注 - 0</a><br>
+            <a href="https://home.cnblogs.com/u/mengfanrong/followers/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">粉丝 - 208</a>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="author_profile_honor"></div>
+    <div id="author_profile_follow">
+                <a href="javascript:void(0);" onclick="follow('4b40420b-63cf-dd11-9e4d-001cf0cd104b');return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">+加关注</a>
+    </div>
+</div>
+<div id="div_digg">
+    <div class="diggit" onclick="votePost(4567336,'Digg')">
+        <span class="diggnum" id="digg_count">0</span>
+    </div>
+    <div class="buryit" onclick="votePost(4567336,'Bury')">
+        <span class="burynum" id="bury_count">0</span>
+    </div>
+    <div class="clear"></div>
+    <div class="diggword" id="digg_tips">
+    </div>
+</div>
+
+</div>
+    <div class="clear"></div>
+    <div id="post_next_prev">
+
+    <a href="https://www.cnblogs.com/mengfanrong/p/4567182.html" class="p_n_p_prefix" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">« </a> 上一篇：    <a href="https://www.cnblogs.com/mengfanrong/p/4567182.html" title="发布于 2015-06-10 20:09" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">六白话经典算法系列 高速分拣 高速GET</a>
+    <br>
+    <a href="https://www.cnblogs.com/mengfanrong/p/4567996.html" class="p_n_p_prefix" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">» </a> 下一篇：    <a href="https://www.cnblogs.com/mengfanrong/p/4567996.html" title="发布于 2015-06-11 08:36" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">cocos2d-x3.0  经常使用绘图方法</a>
+
+</div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2015-06-10 21:35</span>&nbsp;<a href="https://www.cnblogs.com/mengfanrong/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">mengfanrong</a> 阅读(<span id="post_view_count">5416</span>) 评论(<span id="post_comment_count">0</span>) <a href="https://i.cnblogs.com/EditPosts.aspx?postid=4567336" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"> 编辑</a> <a href="javascript:void(0)" onclick="AddToWz(4567336); return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">收藏</a>
+</div>
+        </div>
+
+
+<a name="!comments" data-mx-warn="Empty URL"></a>
+<div id="blog-comments-placeholder"></div>
+
+
+<div id="comment_form" class="commentform">
+    <a name="commentform" data-mx-warn="Empty URL"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"><div class="login_tips">
+    注册用户登录后才能发表评论，请 
+    <a rel="noopener noreferrer" href="javascript:void(0);" class="underline" onclick="return login('commentform');" target="_blank" referrerpolicy="no-referrer">登录</a>
+     或 
+    <a rel="noopener noreferrer" href="javascript:void(0);" class="underline" onclick="return register();" target="_blank" referrerpolicy="no-referrer">注册</a>，
+    <a href="https://www.cnblogs.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">访问</a> 网站首页。
+</div></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"><a href="http://www.ucancode.com/index.htm" target="_blank" onclick="ga('send', 'event', 'Link', 'click', 'T2-工控')" referrerpolicy="no-referrer" rel="noopener noreferrer">【推荐】超50万行VC++源码: 大型组态工控、电力仿真CAD与GIS源码库</a><br><a href="https://www.jdcloud.com/cn/activity/year-end?utm_source=DMT_cnblogs&amp;utm_medium=CH&amp;utm_campaign=q4vm&amp;utm_term=Virtual-Machines" target="_blank" onclick="ga('send', 'event', 'Link', 'click', 'T2-京东云')" referrerpolicy="no-referrer" rel="noopener noreferrer">【活动】京东云服务器_云主机低于1折，低价高性能产品备战双11</a><br><a href="https://www.cnblogs.com/cmt/p/11612966.html" target="_blank" onclick="ga('send', 'event', 'Link', 'click', 'T2-华为云-AI有奖训练营')" referrerpolicy="no-referrer" rel="noopener noreferrer">【福利】学AI有奖：博客园&amp;华为云&nbsp;Modelarts 有奖训练营开战啦</a><br></div>
+    <div id="opt_under_post"></div>
+    
+    
+    
+    
+    <div id="under_post_news"><div class="recomm-block"><b>相关博文：</b><br>·  <a title="CreateFont详细解释" href="https://www.cnblogs.com/mengfanrong/p/4593409.html" target="_blank" onclick="clickRecomItmem(4593409)" referrerpolicy="no-referrer" rel="noopener noreferrer">CreateFont详细解释</a><br>·  <a title="CreateFont具体解释" href="https://www.cnblogs.com/zfyouxi/p/4295391.html" target="_blank" onclick="clickRecomItmem(4295391)" referrerpolicy="no-referrer" rel="noopener noreferrer">CreateFont具体解释</a><br>·  <a title="CreateFont具体解释" href="https://www.cnblogs.com/gcczhongduan/p/3986683.html" target="_blank" onclick="clickRecomItmem(3986683)" referrerpolicy="no-referrer" rel="noopener noreferrer">CreateFont具体解释</a><br>·  <a title="CreateFont具体解释" href="https://www.cnblogs.com/mengfanrong/p/4003508.html" target="_blank" onclick="clickRecomItmem(4003508)" referrerpolicy="no-referrer" rel="noopener noreferrer">CreateFont具体解释</a><br>·  <a title="CreateFont具体解释" href="https://www.cnblogs.com/mengfanrong/p/3994186.html" target="_blank" onclick="clickRecomItmem(3994186)" referrerpolicy="no-referrer" rel="noopener noreferrer">CreateFont具体解释</a><br></div></div>
+    
+    <div id="under_post_kb">
+</div>
+    
+    
+</div>    </div>
+</div>
+            </div>
+        </div>
+
+        <div id="sideBar">
+            <div id="sideBarMain">
+                
+<div id="sidebar_news" class="newsItem">
+<h3 class="catListTitle">公告</h3>
+
+<div id="blog-news">
+    
+    <div id="profile_block">
+        昵称：
+        <a href="https://home.cnblogs.com/u/mengfanrong/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+            mengfanrong
+        </a>
+        <br>
+        园龄：
+        <a href="https://home.cnblogs.com/u/mengfanrong/" title="入园时间：2008-06-11" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+            11年3个月
+        </a>
+        <br>
+        粉丝：
+        <a href="https://home.cnblogs.com/u/mengfanrong/followers/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+            208
+        </a>
+        <br>
+        关注：
+        <a href="https://home.cnblogs.com/u/mengfanrong/followees/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+            0
+        </a>
+        <div id="p_b_follow">
+<a href="javascript:void(0)" onclick="follow('4b40420b-63cf-dd11-9e4d-001cf0cd104b')" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">+加关注</a></div>
+        
+    </div>
+</div></div>
+
+                <div id="calendar"><div id="blog-calendar" style="">
+
+<table id="blogCalendar" class="Cal" cellspacing="0" cellpadding="0" title="Calendar" border="0">
+    <tbody>
+        <tr>
+            <td colspan="7">
+                <table class="CalTitle" cellspacing="0" border="0">
+                    <tbody>
+                        <tr>
+                            <td class="CalNextPrev">
+                                <a href="javascript:void(0);" onclick="loadBlogCalendar('2019/09/01'); return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">&lt;</a>
+                            </td>
+                            <td align="center">2019年10月</td>
+                            <td align="right" class="CalNextPrev">
+                                <a href="javascript:void(0);" onclick="loadBlogCalendar('2019/11/01'); return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">&gt;</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+                    <th class="CalDayHeader" align="center" abbr="日" scope="col">日</th>
+                    <th class="CalDayHeader" align="center" abbr="一" scope="col">一</th>
+                    <th class="CalDayHeader" align="center" abbr="二" scope="col">二</th>
+                    <th class="CalDayHeader" align="center" abbr="三" scope="col">三</th>
+                    <th class="CalDayHeader" align="center" abbr="四" scope="col">四</th>
+                    <th class="CalDayHeader" align="center" abbr="五" scope="col">五</th>
+                    <th class="CalDayHeader" align="center" abbr="六" scope="col">六</th>
+        </tr>
+            <tr>
+                            <td class="CalOtherMonthDay" align="center">29</td>
+                            <td class="CalOtherMonthDay" align="center">30</td>
+                        <td class="CalTodayDay" align="center">
+                            1
+                        </td>
+                        <td class="" align="center">
+                            2
+                        </td>
+                        <td class="" align="center">
+                            3
+                        </td>
+                        <td class="" align="center">
+                            4
+                        </td>
+                    <td class="CalWeekendDay" align="center">
+                        5
+                    </td>
+            </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            6
+                        </td>
+                            <td class="" align="center">
+                                7
+                            </td>
+                            <td class="" align="center">
+                                8
+                            </td>
+                            <td class="" align="center">
+                                9
+                            </td>
+                            <td class="" align="center">
+                                10
+                            </td>
+                            <td class="" align="center">
+                                11
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            12
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            13
+                        </td>
+                            <td class="" align="center">
+                                14
+                            </td>
+                            <td class="" align="center">
+                                15
+                            </td>
+                            <td class="" align="center">
+                                16
+                            </td>
+                            <td class="" align="center">
+                                17
+                            </td>
+                            <td class="" align="center">
+                                18
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            19
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            20
+                        </td>
+                            <td class="" align="center">
+                                21
+                            </td>
+                            <td class="" align="center">
+                                22
+                            </td>
+                            <td class="" align="center">
+                                23
+                            </td>
+                            <td class="" align="center">
+                                24
+                            </td>
+                            <td class="" align="center">
+                                25
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            26
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            27
+                        </td>
+                            <td class="" align="center">
+                                28
+                            </td>
+                            <td class="" align="center">
+                                29
+                            </td>
+                            <td class="" align="center">
+                                30
+                            </td>
+                            <td class="" align="center">
+                                31
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                1
+                            </td>
+                        <td class="CalOtherMonthDay" align="center">
+                            2
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalOtherMonthDay" align="center">
+                            3
+                        </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                4
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                5
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                6
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                7
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                8
+                            </td>
+                        <td class="CalOtherMonthDay" align="center">
+                            9
+                        </td>
+                </tr>
+    </tbody>
+</table></div></div>                
+                
+                <div id="leftcontentcontainer">
+                    <!-- begin:SingleColumn -->
+                    <div id="blog-sidecolumn">
+
+<!-- 搜索 -->
+<div id="sidebar_search" class="sidebar-block">
+    <div id="sidebar_search" class="mySearch">
+        <h3 class="catListTitle">搜索</h3>
+        <div id="sidebar_search_box">
+            <div id="widget_my_zzk" class="div_my_zzk">
+                <input type="text" id="q" onkeydown="return zzk_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="zzk_go()" type="button" value="找找看" id="btnZzk" class="btn_my_zzk">
+            </div>
+            <div id="widget_my_google" class="div_my_zzk">
+                <input type="text" name="google_q" id="google_q" onkeydown="return google_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="google_go()" type="button" value="谷歌搜索" class="btn_my_zzk">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 常用链接 -->
+<div id="sidebar_shortcut" class="sidebar-block">
+    
+<h3 class="catListTitle">
+常用链接
+</h3>
+<ul>
+        <li>
+
+<a href="https://www.cnblogs.com/mengfanrong/p/" title="我的博客的随笔列表" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">我的随笔</a>
+</li>
+        <li>
+
+<a href="https://www.cnblogs.com/mengfanrong/MyComments.html" title="我的发表过的评论列表" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">我的评论</a>
+</li>
+        <li>
+
+<a href="https://www.cnblogs.com/mengfanrong/OtherPosts.html" title="我评论过的随笔列表" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">我的参与</a>
+</li>
+        <li>
+
+<a href="https://www.cnblogs.com/mengfanrong/RecentComments.html" title="我的博客的评论列表" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">最新评论</a>
+</li>
+        <li>
+
+<a href="https://www.cnblogs.com/mengfanrong/tag/" title="我的博客的标签列表" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">我的标签</a>
+</li>
+</ul>
+
+<!-- TODO: 检查是否有使用这一部分的控件，如果没有则应该删除。 -->
+
+
+</div>
+
+<!-- 最新随笔 -->
+
+
+
+<!-- 我的标签 -->
+<div id="sidebar_toptags" class="sidebar-block">
+    
+</div>
+
+<!-- 积分与排名 -->
+
+
+<!-- 随笔分类、随笔档案、文章分类、新闻分类、相册、链接 -->
+<div id="sidebar_categories">
+    
+        <div class="catList">
+            <h3 class="catListTitle">
+                
+
+友情链接
+
+
+
+            </h3>
+            <ul>
+                        <li>
+                            
+<a href="http://blog.sina.com.cn/s/blog_166ab63da0102wz1o.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    买“尊享e生”之前，一定要搞明白这个问题
+</a>
+
+                            
+
+                        </li>
+                        
+                        <li>
+                            
+<a href="http://blog.sina.com.cn/s/blog_166ab63da0102wruh.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    i云保app使用介绍
+</a>
+
+                            
+
+                        </li>
+                        
+            </ul>
+        </div>
+
+</div>
+
+<!-- 最新评论 -->
+<div id="sidebar_recentcomments" class="sidebar-block">
+    <div id="recent_comments_wrap" class="RecentComment">
+    <h3 class="catListTitle">最新评论</h3>
+    <div class="RecentCommentBlock">
+        <ul>
+                    <li class="recent_comment_title"><a href="https://www.cnblogs.com/mengfanrong/p/5079533.html#4339795" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">1. Re:一张图让你看清Java集合类（Java集合类的总结）</a></li>
+                    <li class="recent_comment_body">下篇预告：对中间的经常使用集合类（绿色部分的经常使用实现类）进行一个更加具体的解读。求这篇文章的链接</li>
+                    <li class="recent_comment_author">--秋雨|梧桐</li>
+                    <li class="recent_comment_title"><a href="https://www.cnblogs.com/mengfanrong/p/4744942.html#4333800" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">2. Re:3D人脸识别预处理,3D face recognition preprocess</a></li>
+                    <li class="recent_comment_body">@ zhaoqing0817发愁中，请告知。qq 2691120698...</li>
+                    <li class="recent_comment_author">--liyumei666</li>
+                    <li class="recent_comment_title"><a href="https://www.cnblogs.com/mengfanrong/p/4744942.html#4333797" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">3. Re:3D人脸识别预处理,3D face recognition preprocess</a></li>
+                    <li class="recent_comment_body">@ zhaoqing0817你好，你找到相关人脸数据集了吗？...</li>
+                    <li class="recent_comment_author">--liyumei666</li>
+                    <li class="recent_comment_title"><a href="https://www.cnblogs.com/mengfanrong/p/4676083.html#4316036" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">4. Re:使用Scala操作Mongodb</a></li>
+                    <li class="recent_comment_body">请问，mongodb在Scala中使用批量处理和mapredure的怎么用，可以在api看到，模式但是不知道具体怎么使用？</li>
+                    <li class="recent_comment_author">--~~。</li>
+                    <li class="recent_comment_title"><a href="https://www.cnblogs.com/mengfanrong/p/4758069.html#4304374" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">5. Re:算法很重要，但是，并非所有，并不是每个人的选择</a></li>
+                    <li class="recent_comment_body">原来如此，多谢解惑。</li>
+                    <li class="recent_comment_author">--涂山树下</li>
+        </ul>
+    </div>
+</div>
+</div>
+
+
+
+<!-- 阅读排行榜 -->
+<div id="sidebar_topviewedposts" class="sidebar-block">
+    
+<div id="topview_posts_wrap">
+    <h3 class="catListTitle">阅读排行榜</h3>
+    <div id="TopViewPostsBlock">
+        <ul style="word-break:break-all">
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/4034950.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            1. 常见hash算法的原理(57929)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/3792955.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            2. ORACLE  EXP命令(51924)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/3770971.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            3. C++Vector使用方法(45975)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/5069719.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            4. linux VIM基本命令(43187)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/4369545.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            5. 正态分布（Normal distribution）又名高斯分布（Gaussian distribution）(39617)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/4911592.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            6. MySQL定义和变量赋值(28660)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/4009384.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            7. 关于成本核算方法、步骤、成本分析的简单回复(26299)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/3850311.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            8. vmware 几种联网的方式，怎样实现虚拟机上网(23300)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/5341512.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            9. Qt技巧：QProcess与外部程序的调用(20091)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/4284782.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            10. windows下利用OpenVPN搭建VPNserver(19937)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/3854044.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            11. 全排列算法及实现(16961)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/4184496.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            12. 什么是WEBserver？ 经常使用的WEBserver有哪些？(16761)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/4714776.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            13. 如何查看IC卡燃气表读数和剩余量？(16246)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/3751041.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            14. 使用AndroidStudio编译NDK的方法及错误解决方式(15249)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/3986210.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            15. 无法定位序数XX于动态链接库XX.dll的解决的方法(13240)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/4843274.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            16. Msgbox消息框(11315)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/5096590.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            17. ssh远程登录报错REMOTE HOST IDENTIFICATION HAS CHANGED!解决方式及原因(11263)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/3809843.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            18. oracle递归函数(11246)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/5168805.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            19. Matlab---串口操作---数据採集篇(11107)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/4388282.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            20. 相关分析和回归分析(10744)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/5169548.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            21. 一文读懂机器学习，大数据/自然语言处理/算法全有了……(10721)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/4739405.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            22. springMVC 获取本地项目路径 及后整理上传文件的方法(10599)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/5079533.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            23. 一张图让你看清Java集合类（Java集合类的总结）(10517)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/3896447.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            24. MessageDigest简单介绍(10347)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/5206458.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            25. oracle decode函数用法(10142)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/5412216.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            26. ORACLE SEQUENCE 具体解释(10072)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/3801236.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            27. 各种机械键盘轴的差别，究竟什么轴好(9886)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/3984513.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            28. Tuxedo入门学习(9664)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/5090045.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            29. linux下串口调试工具/串口终端推荐: picocom(9637)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/3839999.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            30. 编程基本功训练：流程图画法及练习(9272)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/3762472.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            31. html的下拉框的几个基本使用方法(8952)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/3820366.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            32. 怎样学好C语言，一个成功人士的心得！(8851)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/5203973.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            33. Java中byte转int的方法(8760)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/5225506.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            34. JVM工作原理和特点(一些二逼的逼神面试官会问的问题)(8567)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/4594710.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            35. 我们应该怎么做需求分析(8524)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/5205517.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            36. C++中搜索、截取字符串(8224)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/3840836.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            37. oracle实例名,数据库名,服务名等概念差别与联系(8101)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/5223462.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            38. Android 完美实现图片圆角和圆形（对实现进行分析）(7916)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/3893251.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            39. Android反编译-逆天的反编译(7914)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/4007456.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            40. Java 对象的生命周期(7890)
+                        </a>
+                    </li>
+        </ul>
+    </div>
+</div>
+</div>
+
+<!-- 评论排行榜 -->
+<div id="sidebar_topcommentedposts" class="sidebar-block">
+    
+<div id="topfeedback_posts_wrap">
+    <h3 class="catListTitle">评论排行榜</h3>
+    <div id="TopFeedbackPostsBlock">
+        <ul style="word-break:break-all">
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/4034950.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            1. 常见hash算法的原理(3)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/5212954.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            2. Floodlight中 处理packetin消息的顺序（1）(3)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/4744942.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            3. 3D人脸识别预处理,3D face recognition preprocess(3)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/5023770.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            4. XStream 用法汇总(2)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/3714070.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            5. 中国特色程序猿的「钱途」(2)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/5169548.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            6. 一文读懂机器学习，大数据/自然语言处理/算法全有了……(2)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/4008635.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            7. 非常特别的一个动态规划新手教程(2)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/4003200.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            8. 机房重构---我们“重构”出了什么？(2)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/3984841.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            9. ByteBuffer的allocate和allocateDirect(2)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/3984513.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            10. Tuxedo入门学习(1)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/3909756.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            11. leetcode第一刷_Sqrt(x)(1)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/4676083.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            12. 使用Scala操作Mongodb(1)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/4606125.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            13. springmvc和servlet在上传和下载文件（保持文件夹和存储数据库Blob两种方式）(1)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/4008551.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            14. 能够免费做商业站点的CMS讨论(1)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/4032655.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            15. Java NIO框架Netty教程（一） – Hello Netty(1)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/3751278.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            16. C#窗口皮肤制作(二)：创建窗口库项目以及最小化、最大化、关闭button的实现(1)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/3783713.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            17. SpringNote02.Blog系统迁移到Linux下(1)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/3780774.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            18. java中接口的定义与实现(1)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/3808698.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            19. MC, MCMC, Gibbs採样 原理&amp;amp;实现（in R）(1)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/3793505.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            20. [Unity3d][NGUI]两种思路解决AssetBundle的依赖关系.(1)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/3789119.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            21. 语音控制的tab选项卡(1)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/3885589.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            22. lua中打印所以类型功能实现table嵌套table(1)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/3836471.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            23. Linux编程---套接字(1)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/3832237.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            24. W5500问题集锦（持续更新中）(1)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/mengfanrong/p/3821274.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            25. 总结一下用caffe跑图片数据的研究流程(1)
+                        </a>
+                    </li>
+        </ul>
+    </div>
+</div>
+</div>
+
+<!-- 推荐排行榜 -->
+<div id="sidebar_topdiggedposts" class="sidebar-block">
+    
+<div id="topdigg_posts_wrap">
+    <div class="catListView">
+        <h3 class="catListTitle">推荐排行榜</h3>
+        <div id="TopDiggPostsBlock">
+            <ul style="word-break: break-all">
+                        <li>
+                            <a href="https://www.cnblogs.com/mengfanrong/p/3820366.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                                1. 怎样学好C语言，一个成功人士的心得！(3)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/mengfanrong/p/4034950.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                                2. 常见hash算法的原理(2)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/mengfanrong/p/3770971.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                                3. C++Vector使用方法(2)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/mengfanrong/p/4369545.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                                4. 正态分布（Normal distribution）又名高斯分布（Gaussian distribution）(2)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/mengfanrong/p/5282042.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                                5. leetCode 53.Maximum Subarray (子数组的最大和) 解题思路方法(2)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/mengfanrong/p/5169548.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                                6. 一文读懂机器学习，大数据/自然语言处理/算法全有了……(2)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/mengfanrong/p/4850725.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                                7. 做ACM该伤不起啊！！(2)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/mengfanrong/p/4844808.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                                8. Ubuntu 12.04 64bit  安装编译GCC 4.1.2 绝对原创(1)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/mengfanrong/p/4803567.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                                9. 左右lcm,gcd一些性质(1)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/mengfanrong/p/4792547.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                                10. Android Bluetooth Stack: Bluedroid（五岁以下儿童）：The analysis of A2DP Source(1)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/mengfanrong/p/4758069.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                                11. 算法很重要，但是，并非所有，并不是每个人的选择(1)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/mengfanrong/p/4739405.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                                12. springMVC 获取本地项目路径 及后整理上传文件的方法(1)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/mengfanrong/p/4736474.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                                13. MySQL 一般查询日志(General Query Log)(1)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/mengfanrong/p/5155264.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                                14. 软考概述(1)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/mengfanrong/p/5139242.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                                15. 菜鸟要做架构师（一）——怎样高速开发中小型系统(1)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/mengfanrong/p/5137710.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                                16. OpenCV Haar AdaBoost源代码改进（比EMCV快6倍）(1)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/mengfanrong/p/5135286.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                                17. Windows+Atlassian-Jira-6.0.4+MySql5.0安装破解汉化(1)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/mengfanrong/p/5114299.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                                18. CentOS配置smaba与Windows共享文件(1)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/mengfanrong/p/5094123.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                                19. C# 字段、属性、成员变量(1)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/mengfanrong/p/5069719.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                                20. linux VIM基本命令(1)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/mengfanrong/p/5057247.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                                21. java生成二维码（带logo）(1)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/mengfanrong/p/5035122.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                                22. 解决opengl计算顶点的法线问题(1)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/mengfanrong/p/5023770.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                                23. XStream 用法汇总(1)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/mengfanrong/p/4905529.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                                24. 数据源和连接池(1)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/mengfanrong/p/4889231.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                                25. Android手游《》斗地主完整的源代码（支持单机和网络对战）(1)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/mengfanrong/p/5264466.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                                26. Qt Quick 事件处理之信号与槽(1)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/mengfanrong/p/5259597.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                                27. Unity3D 集成 Face++ FacePlusPlus httpClient http协议 byte数组转string(1)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/mengfanrong/p/5238844.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                                28. swift   创建tableView 并实现协议(1)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/mengfanrong/p/5195148.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                                29. Boost.Asio基础（三）(1)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/mengfanrong/p/5190209.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                                30. DataSource绑定DataTable.Select()显示system.data.DataRow问题解决的方法(1)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/mengfanrong/p/5184382.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                                31. 远程调用的几种方式(1)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/mengfanrong/p/5176409.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                                32. MVVM Light须要注意的10个问题(1)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/mengfanrong/p/5174967.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                                33. 高逼格UI-ASD(Android Support Design)(1)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/mengfanrong/p/5171036.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                                34. c++重载ostream的实现(1)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/mengfanrong/p/4357262.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                                35. 【POJ3037】Skiing 最短路(1)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/mengfanrong/p/4352708.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                                36. ym——android源代码大放送（实战开发必备）(1)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/mengfanrong/p/4288792.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                                37. Java 过滤器的作用(1)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/mengfanrong/p/4090349.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                                38. 2014年辛星全然解读html第八节(1)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/mengfanrong/p/4085672.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                                39. 【IOS 开发】Object－C 入门  Xcode 环境具体解释(1)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/mengfanrong/p/3741350.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                                40. C/C++产生随机数(1)
+                            </a>
+                        </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div></div>
+                    
+                    <!-- end:  SingleColumn -->
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+    
+</div>
+
+    <div id="page_end_html">
+        <span id="cnzz_stat_icon_5897703"><a href="https://www.cnzz.com/stat/website.php?web_id=5897703" target="_blank" title="站长统计" referrerpolicy="no-referrer" rel="noopener noreferrer"><img border="0" hspace="0" vspace="0" src="assets/1569948277-a7832784a5c92df8aa5831098fbb3328.gif"></a></span>
+    </div>
+
+
+<span id="copylAddress" style="display: inline-block; position: absolute; left: -9999em;"></span><a href="" download="" data-mx-warn="Empty URL"></a><div data-mx-warn="extension url was not captured by MaoXian" data-mx-original-src="chrome-extension://kjahokgdcbohofgdidndeiaigkehdjdc/pages/ui-selection.html?t=aHR0cHM6Ly93d3cuY25ibG9ncy5jb20="></div><div data-mx-warn="extension url was not captured by MaoXian" data-mx-original-src="chrome-extension://kjahokgdcbohofgdidndeiaigkehdjdc/pages/ui-control.html?t=aHR0cHM6Ly93d3cuY25ibG9ncy5jb20="></div>
+</body>
+  </html>

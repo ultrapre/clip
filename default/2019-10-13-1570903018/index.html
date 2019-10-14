@@ -1,0 +1,208 @@
+
+  <!DOCTYPE html>
+  <html id="" class="translated-ltr">
+    <!-- OriginalSrc: http://dev.haeleth.net/rldev.shtml -->
+    <head>
+      <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <title>haeleth-RLdev</title>
+      
+
+<link rel="StyleSheet" href="assets/1570903018-acd9d421aad84b841c4b873ba1919958.css" type="text/css" media="screen" title="默认" referrerpolicy="no-referrer">
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="assets/1570903018-bf6e8ede6c9939560d4ea3bd7e88d251.css" referrerpolicy="no-referrer">
+
+
+<style class="darkreader darkreader--fallback" media="screen"></style>
+<style class="darkreader darkreader--text" media="screen"></style>
+<style class="darkreader darkreader--invert" media="screen"></style>
+<style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}</style>
+<style class="darkreader darkreader--user-agent" media="screen">html {
+    background-color: #191a1b !important;
+}
+html, body, input, textarea, select, button {
+    background-color: #191a1b;
+}
+html, body, input, textarea, select, button {
+    border-color: #5a5956;
+    color: #f0ebe2;
+}
+a {
+    color: #4791e7;
+}
+table {
+    border-color: #4f4e4c;
+}
+::placeholder {
+    color: #bfb9ac;
+}
+::selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+::-moz-selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #565a0f !important;
+    color: #f0ebe2 !important;
+}
+::-webkit-scrollbar {
+    background-color: #1d1f1f;
+    color: #cbc5b9;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #2c2d2d;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #343636;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #404142;
+}
+::-webkit-scrollbar-corner {
+    background-color: #191a1b;
+}
+* {
+    scrollbar-color: #2c2d2d #1d1f1f;
+}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--override" media="screen">.jfk-bubble {
+    background-color: #000000 !important;
+}
+.vimvixen-hint {
+    background-color: #765500 !important;
+    border-color: #d5b22e !important;
+    color: #f9edcc !important;
+}</style>
+<style type="text/css">@keyframes fadeInOpacity{0%{opacity:0}to{opacity:1}}:hover>*>.fbvd--wrapper{animation-name:fadeInOpacity;animation-duration:.3s;opacity:1}.fbvd--wrapper{position:absolute;top:10px;left:10px;opacity:0;text-align:center;margin:0;z-index:5}.fbvd--wrapper a{background: url("") no-repeat 3px 4.55px; background-color: #fff; display:inline-block;font:700 14px Helvetica,Arial,sans-serif;color:#4b4f56;text-decoration:none;vertical-align:middle;padding:0px 8px 0px;margin-right:8px;border-radius:2px; line-height: 22px; padding-left:19px; border: 1px solid #e7e7e7; background-size: 13px}.fbvd--wrapper a:last-child{margin-right:0}.fbvd--wrapper a:hover{text-decoration:none}.fbvd--wrapper a:focus{box-shadow:0 0 1px 2px rgba(88,144,255,.75),0 1px 1px rgba(0,0,0,.15);outline:none}.fbvd--wrapper b{font-size:13px;position:relative;top:1px;color:#3b5998;font-weight:400}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--cors" media="screen">.goog-te-banner-frame{left:0px;top:0px;height:39px;width:100%;z-index:10000001;position:fixed;border:none;border-bottom:1px solid #6b90da;margin:0;-moz-box-shadow:0 0 8px 1px #999999;-webkit-box-shadow:0 0 8px 1px #999999;box-shadow:0 0 8px 1px #999999;_position:absolute}.goog-te-menu-frame{z-index:10000002;position:fixed;border:none;-moz-box-shadow:0 3px 8px 2px #999999;-webkit-box-shadow:0 3px 8px 2px #999999;box-shadow:0 3px 8px 2px #999999;_position:absolute}.goog-te-ftab-frame{z-index:10000000;border:none;margin:0}.goog-te-gadget{font-family:arial;font-size:11px;color:#666;white-space:nowrap}.goog-te-gadget img{vertical-align:middle;border:none}.goog-te-gadget-simple{background-color:#fff;border-left:1px solid #d5d5d5;border-top:1px solid #9b9b9b;border-bottom:1px solid #e8e8e8;border-right:1px solid #d5d5d5;font-size:10pt;display:inline-block;padding-top:1px;padding-bottom:2px;cursor:pointer;zoom:1;*display:inline}.goog-te-gadget-icon{margin-left:2px;margin-right:2px;width:19px;height:19px;border:none;vertical-align:middle}.goog-te-combo{margin-left:4px;margin-right:4px;vertical-align:baseline;*vertical-align:middle}.goog-te-gadget .goog-te-combo{margin:4px 0}.goog-logo-link,.goog-logo-link:link,.goog-logo-link:visited,.goog-logo-link:hover,.goog-logo-link:active{font-size:12px;font-weight:bold;color:#444;text-decoration:none}.goog-te-banner .goog-logo-link,.goog-close-link{display:block;margin:0px 10px}.goog-te-banner .goog-logo-link{padding-top:2px;padding-left:4px}.goog-te-combo,.goog-te-banner *,.goog-te-ftab *,.goog-te-menu *,.goog-te-menu2 *,.goog-te-balloon *{font-family:arial;font-size:10pt}.goog-te-banner{margin:0;background-color:#e4effb;overflow:hidden}.goog-te-banner img{border:none}.goog-te-banner-content{color:#000}.goog-te-banner-content img{vertical-align:middle}.goog-te-banner-info{color:#666;vertical-align:top;margin-top:0px;font-size:7pt}.goog-te-banner-margin{width:8px}.goog-te-button{border-color:#e7e7e7;border-style:none solid solid none;border-width:0 1px 1px 0}.goog-te-button div{border-color:#cccccc #999999 #999999 #cccccc;border-right:1px solid #999999;border-style:solid;border-width:1px;height:20px}.goog-te-button button{background:transparent;border:none;cursor:pointer;height:20px;overflow:hidden;margin:0;vertical-align:top;white-space:nowrap}.goog-te-button button:active{background:none repeat scroll 0 0 #cccccc}.goog-te-ftab{margin:0px;background-color:#fff;white-space:nowrap}.goog-te-ftab-link{text-decoration:none;font-weight:bold;font-size:10pt;border:1px outset #888;padding:6px 10px;white-space:nowrap;position:absolute;left:0px;top:0px}.goog-te-ftab-link img{margin-left:2px;margin-right:2px;width:19px;height:19px;border:none;vertical-align:middle}.goog-te-ftab-link span{text-decoration:underline;margin-left:2px;margin-right:2px;vertical-align:middle}.goog-float-top .goog-te-ftab-link{padding:2px 2px;border-top-width:0px}.goog-float-bottom .goog-te-ftab-link{padding:2px 2px;border-bottom-width:0px}.goog-te-menu-value{text-decoration:none;color:#0000cc;white-space:nowrap;margin-left:4px;margin-right:4px}.goog-te-menu-value span{text-decoration:underline}.goog-te-menu-value img{margin-left:2px;margin-right:2px}.goog-te-gadget-simple .goog-te-menu-value{color:#000}.goog-te-gadget-simple .goog-te-menu-value span{text-decoration:none}.goog-te-menu{background-color:#ffffff;text-decoration:none;border:2px solid #c3d9ff;overflow-y:scroll;overflow-x:hidden;position:absolute;left:0;top:0}.goog-te-menu-item{padding:3px;text-decoration:none}.goog-te-menu-item,.goog-te-menu-item:link{color:#0000cc;background:#ffffff}.goog-te-menu-item:visited{color:#551a8b}.goog-te-menu-item:hover{background:#c3d9ff}.goog-te-menu-item:active{color:#0000cc}.goog-te-menu2{background-color:#ffffff;text-decoration:none;border:1px solid #6b90da;overflow:hidden;padding:4px}.goog-te-menu2-colpad{width:16px}.goog-te-menu2-separator{margin:6px 0;height:1px;background-color:#aaa;overflow:hidden}.goog-te-menu2-item div,.goog-te-menu2-item-selected div{padding:4px}.goog-te-menu2-item .indicator{display:none}.goog-te-menu2-item-selected .indicator{display:auto}.goog-te-menu2-item-selected .text{padding-left:4px;padding-right:4px}.goog-te-menu2-item,.goog-te-menu2-item-selected{text-decoration:none}.goog-te-menu2-item div,.goog-te-menu2-item:link div,.goog-te-menu2-item:visited div,.goog-te-menu2-item:active div{color:#0000cc;background:#ffffff}.goog-te-menu2-item:hover div{color:#ffffff;background:#3366cc}.goog-te-menu2-item-selected div,.goog-te-menu2-item-selected:link div,.goog-te-menu2-item-selected:visited div,.goog-te-menu2-item-selected:hover div,.goog-te-menu2-item-selected:active div{color:#000;font-weight:bold}.goog-te-balloon{background-color:#ffffff;overflow:hidden;padding:8px;border:none;-moz-border-radius:10px;border-radius:10px}.goog-te-balloon-frame{background-color:#ffffff;border:1px solid #6b90da;-moz-box-shadow:0 3px 8px 2px #999999;-webkit-box-shadow:0 3px 8px 2px #999999;box-shadow:0 3px 8px 2px #999999;-moz-border-radius:8px;border-radius:8px}.goog-te-balloon img{border:none}.goog-te-balloon-text{margin-top:6px}.goog-te-balloon-zippy{margin-top:6px;white-space:nowrap}.goog-te-balloon-zippy *{vertical-align:middle}.goog-te-balloon-zippy .minus{background-image:url("http://www.google.com/images/zippy_minus_sm.gif")}.goog-te-balloon-zippy .plus{background-image:url("http://www.google.com/images/zippy_plus_sm.gif")}.goog-te-balloon-zippy span{color:#00c;text-decoration:underline;cursor:pointer;margin:0 4px}.goog-te-balloon-form{margin:6px 0 0 0}.goog-te-balloon-form form{margin:0}.goog-te-balloon-form form textarea{margin-bottom:4px;width:100%}.goog-te-balloon-footer{margin:6px 0 4px 0}.goog-te-spinner-pos{z-index:1000;position:fixed;transition-delay:0.6s;left:-1000px;top:-1000px}.goog-te-spinner-animation{background:#ccc;display:flex;align-items:center;justify-content:center;width:104px;height:104px;border-radius:50px;background:#fff url("") 50% 50% no-repeat;transition:all 0.6s ease-in-out;transform:scale(0.4);opacity:0}.goog-te-spinner-animation-show{transform:scale(0.5);opacity:1}.goog-te-spinner{margin:2px 0 0 2px;animation:goog-te-spinner-rotator 1.4s linear infinite}@keyframes goog-te-spinner-rotator{0%{transform:rotate(0deg)}100%{transform:rotate(270deg)}}.goog-te-spinner-path{stroke-dasharray:187;stroke-dashoffset:0;stroke:#4285f4;transform-origin:center;animation:goog-te-spinner-dash 1.4s ease-in-out infinite}@keyframes goog-te-spinner-dash{0%{stroke-dashoffset:187}50%{stroke-dashoffset:46.75;transform:rotate(135deg)}100%{stroke-dashoffset:187;transform:rotate(450deg)}}#goog-gt-tt html,#goog-gt-tt body,#goog-gt-tt div,#goog-gt-tt span,#goog-gt-tt iframe,#goog-gt-tt h1,#goog-gt-tt h2,#goog-gt-tt h3,#goog-gt-tt h4,#goog-gt-tt h5,#goog-gt-tt h6,#goog-gt-tt p,#goog-gt-tt a,#goog-gt-tt img,#goog-gt-tt ol,#goog-gt-tt ul,#goog-gt-tt li,#goog-gt-tt table,#goog-gt-tt form,#goog-gt-tt tbody,#goog-gt-tt tr,#goog-gt-tt td{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;text-align:left;line-height:normal}#goog-gt-tt ol,#goog-gt-tt ul{list-style:none}#goog-gt-tt table{border-collapse:collapse;border-spacing:0}#goog-gt-tt caption,#goog-gt-tt th,#goog-gt-tt td{text-align:left;font-weight:normal}#goog-gt-tt input::-moz-focus-inner{border:0}div#goog-gt-tt{padding:10px 14px}#goog-gt-tt{color:#222;background-color:#ffffff;border:1px solid #eee;box-shadow:0 4px 16px rgba(0,0,0,.2);-moz-box-shadow:0 4px 16px rgba(0,0,0,.2);-webkit-box-shadow:0 4px 16px rgba(0,0,0,.2);display:none;font-family:arial;font-size:10pt;width:420px;padding:12px;position:absolute;z-index:10000}#goog-gt-tt .original-text,.gt-hl-layer{clear:both;font-size:10pt;position:relative;text-align:justify;width:100%}#goog-gt-tt .title{color:#999;font-family:arial,sans-serif;margin:4px 0;text-align:left}#goog-gt-tt .close-button{display:none}#goog-gt-tt .logo{float:left;margin:0px}#goog-gt-tt .activity-links{display:inline-block}#goog-gt-tt .started-activity-container{display:none;width:100%}#goog-gt-tt .activity-root{margin-top:20px}#goog-gt-tt .left{float:left}#goog-gt-tt .right{float:right}#goog-gt-tt .bottom{min-height:15px;position:relative;height:1%}#goog-gt-tt .status-message{background:-moz-linear-gradient(top,#29910d 0%,#20af0e 100%);background:-webkit-linear-gradient(top,#29910d 0%,#20af0e 100%);background:-o-linear-gradient(top,#29910d 0%,#20af0e 100%);background:-ms-linear-gradient(top,#29910d 0%,#20af0e 100%);background:linear-gradient(top,#29910d 0%,#20af0e 100%);background:#29910d;border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;box-shadow:inset 0px 2px 2px #1e6609;-moz-box-shadow:inset 0px 2px 2px #1e6609;-webkit-box-shadow:inset 0px 2px 2px #1e6609;color:white;font-size:9pt;font-weight:bolder;margin-top:12px;padding:6px;text-shadow:1px 1px 1px #1e6609}#goog-gt-tt .activity-link{color:#1155cc;cursor:pointer;font-family:arial;font-size:11px;margin-right:15px;text-decoration:none}#goog-gt-tt textarea{font-family:arial;resize:vertical;width:100%;margin-bottom:10px;-webkit-border-radius:1px;-moz-border-radius:1px;border-radius:1px;border:1px solid #d9d9d9;border-top:1px solid silver;font-size:13px;height:auto;overflow-y:auto;padding:1px}#goog-gt-tt textarea:focus{-webkit-box-shadow:inset 0 1px 2px rgba(0,0,0,0.3);-moz-box-shadow:inset 0 1px 2px rgba(0,0,0,0.3);box-shadow:inset 0 1px 2px rgba(0,0,0,0.3);border:1px solid #4d90fe;outline:none}#goog-gt-tt .activity-cancel{margin-right:10px}#goog-gt-tt .translate-form{min-height:25px;vertical-align:middle;padding-top:8px}#goog-gt-tt .translate-form .activity-form{margin-bottom:5px;margin-bottom:0px}#goog-gt-tt .translate-form .activity-form input{display:inline-block;min-width:54px;*min-width:70px;border:1px solid #dcdcdc;border:1px solid rgba(0,0,0,0.1);text-align:center;color:#444;font-size:11px;font-weight:bold;height:27px;outline:0;padding:0 8px;vertical-align:middle;line-height:27px;margin:0 16px 0 0;box-shadow:0 1px 2px rgba(0,0,0,.1);-moz-box-shadow:0 1px 2px rgba(0,0,0,.1);-webkit-box-shadow:0 1px 2px rgba(0,0,0,.1);-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;-webkit-transition:all 0.218s;-moz-transition:all 0.218s;-o-transition:all 0.218s;transition:all 0.218s;background-color:#f5f5f5;background-image:-webkit-gradient(linear,left top,left bottom,from(#f5f5f5),to(#f1f1f1));background-image:-webkit-linear-gradient(top,#f5f5f5,#f1f1f1);background-image:-moz-linear-gradient(top,#f5f5f5,#f1f1f1);background-image:-ms-linear-gradient(top,#f5f5f5,#f1f1f1);background-image:-o-linear-gradient(top,#f5f5f5,#f1f1f1);background-image:linear-gradient(top,#f5f5f5,#f1f1f1);-webkit-user-select:none;-moz-user-select:none;cursor:default}#goog-gt-tt .translate-form .activity-form input:hover{border:1px solid #c6c6c6;color:#222;-webkit-transition:all 0.0s;-moz-transition:all 0.0s;-o-transition:all 0.0s;transition:all 0.0s;background-color:#f8f8f8;background-image:-webkit-gradient(linear,left top,left bottom,from(#f8f8f8),to(#f1f1f1));background-image:-webkit-linear-gradient(top,#f8f8f8,#f1f1f1);background-image:-moz-linear-gradient(top,#f8f8f8,#f1f1f1);background-image:-ms-linear-gradient(top,#f8f8f8,#f1f1f1);background-image:-o-linear-gradient(top,#f8f8f8,#f1f1f1);background-image:linear-gradient(top,#f8f8f8,#f1f1f1)}#goog-gt-tt .translate-form .activity-form input:active{border:1px solid #c6c6c6;color:#333;background-color:#f6f6f6;background-image:-webkit-gradient(linear,left top,left bottom,from(#f6f6f6),to(#f1f1f1));background-image:-webkit-linear-gradient(top,#f6f6f6,#f1f1f1);background-image:-moz-linear-gradient(top,#f6f6f6,#f1f1f1);background-image:-ms-linear-gradient(top,#f6f6f6,#f1f1f1);background-image:-o-linear-gradient(top,#f6f6f6,#f1f1f1);background-image:linear-gradient(top,#f6f6f6,#f1f1f1)}#goog-gt-tt .translate-form .activity-form input:focus #goog-gt-tt .translate-form .activity-form input.focus #goog-gt-tt .translate-form .activity-form input:active,#goog-gt-tt .translate-form .activity-form input:focus:active,#goog-gt-tt .translate-form .activity-form input:.focus:active{box-shadow:inset 0 0 0 1px rgba(255,255,255,0.5);-webkit-box-shadow:inset 0 0 0 1px rgba(255,255,255,0.5);-moz-box-shadow:inset 0 0 0 1px rgba(255,255,255,0.5)}#goog-gt-tt .translate-form .activity-form input:focus,#goog-gt-tt .translate-form .activity-form input.focus{outline:none;border:1px solid #4d90fe;z-index:4!important}#goog-gt-tt .translate-form .activity-form input.selected{background-color:#eeeeee;background-image:-webkit-gradient(linear,left top,left bottom,from(#eeeeee),to(#e0e0e0));background-image:-webkit-linear-gradient(top,#eeeeee,#e0e0e0);background-image:-moz-linear-gradient(top,#eeeeee,#e0e0e0);background-image:-ms-linear-gradient(top,#eeeeee,#e0e0e0);background-image:-o-linear-gradient(top,#eeeeee,#e0e0e0);background-image:linear-gradient(top,#eeeeee,#e0e0e0);-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);border:1px solid #ccc;color:#333}#goog-gt-tt .translate-form .activity-form input.activity-submit{color:white;border-color:#3079ed;background-color:#4d90fe;background-image:-webkit-gradient(linear,left top,left bottom,from(#4d90fe),to(#4787ed));background-image:-webkit-linear-gradient(top,#4d90fe,#4787ed);background-image:-moz-linear-gradient(top,#4d90fe,#4787ed);background-image:-ms-linear-gradient(top,#4d90fe,#4787ed);background-image:-o-linear-gradient(top,#4d90fe,#4787ed);background-image:linear-gradient(top,#4d90fe,#4787ed)}#goog-gt-tt .translate-form .activity-form input.activity-submit:hover #goog-gt-tt .translate-form .activity-form input.activity-submit:focus,#goog-gt-tt .translate-form .activity-form input.activity-submit.focus #goog-gt-tt .translate-form .activity-form input.activity-submit:active{border-color:#3079ed;background-color:#357ae8;background-image:-webkit-gradient(linear,left top,left bottom,from(#4d90fe),to(#357ae8));background-image:-webkit-linear-gradient(top,#4d90fe,#357ae8);background-image:-moz-linear-gradient(top,#4d90fe,#357ae8);background-image:-ms-linear-gradient(top,#4d90fe,#357ae8);background-image:-o-linear-gradient(top,#4d90fe,#357ae8);background-image:linear-gradient(top,#4d90fe,#357ae8)}#goog-gt-tt .translate-form .activity-form input.activity-submit:hover{box-shadow:inset 0 0 0 1px #fff,0px 1px 1px rgba(0,0,0,0.1);-webkit-box-shadow:inset 0 0 0 1px #fff,0px 1px 1px rgba(0,0,0,0.1);-moz-box-shadow:inset 0 0 0 1px #fff,0px 1px 1px rgba(0,0,0,0.1)}#goog-gt-tt .translate-form .activity-form input:focus,#goog-gt-tt .translate-form .activity-form input.focus,#goog-gt-tt .translate-form .activity-form input:active,#goog-gt-tt .translate-form .activity-form input:hover,#goog-gt-tt .translate-form .activity-form input.activity-submit:focus,#goog-gt-tt .translate-form .activity-form input.activity-submit.focus,#goog-gt-tt .translate-form .activity-form input.activity-submit:active,#goog-gt-tt .translate-form .activity-form input.activity-submit:hover{border-color:#3079ed}#goog-gt-tt .gray{color:#999;font-family:arial,sans-serif}#goog-gt-tt .alt-helper-text{color:#999;font-size:11px;font-family:arial,sans-serif;margin:15px 0px 5px 0px}#goog-gt-tt .alt-error-text{color:#800;display:none;font-size:9pt}.goog-text-highlight{background-color:#c9d7f1;-webkit-box-shadow:2px 2px 4px #9999aa;-moz-box-shadow:2px 2px 4px #9999aa;box-shadow:2px 2px 4px #9999aa;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;position:relative}#goog-gt-tt .alt-menu.goog-menu{background:#ffffff;border:1px solid #dddddd;-webkit-box-shadow:0px 3px 3px #888;-moz-box-shadow:0px 2px 20px #888;box-shadow:0px 2px 4px #99a;min-width:0;outline:none;padding:0;position:absolute;z-index:2000}#goog-gt-tt .alt-menu .goog-menuitem{cursor:pointer;padding:2px 5px 5px;margin-right:0px;border-style:none}#goog-gt-tt .alt-menu div.goog-menuitem:hover{background:#ddd}#goog-gt-tt .alt-menu .goog-menuitem h1{font-size:100%;font-weight:bold;margin:4px 0px}#goog-gt-tt .alt-menu .goog-menuitem strong{color:#345aad}#goog-gt-tt .goog-submenu-arrow{text-align:right;position:absolute;right:0;left:auto}#goog-gt-tt .goog-menuitem-rtl .goog-submenu-arrow{text-align:left;position:absolute;left:0;right:auto}#goog-gt-tt .gt-hl-text,#goog-gt-tt .trans-target-highlight{background-color:#f1ea00;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;-moz-box-shadow:rgba(0,0,0,.5) 3px 3px 4px;-webkit-box-shadow:rgba(0,0,0,.5) 3px 3px 4px;box-shadow:rgba(0,0,0,.5) 3px 3px 4px;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;color:#f1ea00;cursor:pointer;margin:-2px -2px -2px -3px;padding:2px 2px 2px 3px;position:relative}#goog-gt-tt .trans-target-highlight{color:#222}#goog-gt-tt .gt-hl-layer{color:white;position:absolute!important}#goog-gt-tt .trans-target,#goog-gt-tt .trans-target .trans-target-highlight{background-color:#c9d7f1;border-radius:4px 4px 0px 0px;-webkit-border-radius:4px 4px 0px 0px;-moz-border-radius:4px 4px 0px 0px;-moz-box-shadow:rgba(0,0,0,.5) 3px 3px 4px;-webkit-box-shadow:rgba(0,0,0,.5) 3px 3px 4px;box-shadow:rgba(0,0,0,.5) 3px 3px 4px;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;cursor:pointer;margin:-2px -2px -2px -3px;padding:2px 2px 3px 3px;position:relative}#goog-gt-tt span:focus{outline:none}#goog-gt-tt .trans-edit{background-color:transparent;border:1px solid #4d90fe;border-radius:0em;-webkit-border-radius:0em;-moz-border-radius:0em;margin:-2px;padding:1px}#goog-gt-tt .gt-trans-highlight-l{border-left:2px solid red;margin-left:-2px}#goog-gt-tt .gt-trans-highlight-r{border-right:2px solid red;margin-right:-2px}#goog-gt-tt #alt-input{padding:2px}#goog-gt-tt #alt-input-text{font-size:11px;padding:2px 2px 3px;margin:0;background-color:#fff;color:#333;border:1px solid #d9d9d9;border-top:1px solid #c0c0c0;display:inline-block;vertical-align:top;height:21px;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-webkit-border-radius:1px}#goog-gt-tt #alt-input-text:hover{border:1px solid #b9b9b9;border-top:1px solid #a0a0a0;-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1)}#goog-gt-tt #alt-input-text:focus{-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);outline:none;border:1px solid #4d90fe}#goog-gt-tt #alt-input-submit{font-size:11px;padding:2px 6px 3px;margin:0 0 0 2px;height:21px}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+
+      
+    </head>
+    <body class="mx-wc-selected-elem mx-wc-1570903018">
+<div id="menu">
+<p class="top"><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">发展历程</font></font></em></p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+[在执行此命令时出现的错误]
+</font></font><p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">发展历程</font></font></p>
+<ul>
+<li><a href="http://dev.haeleth.net/index.shtml" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">家</font></font></a></li>
+<li><a href="http://svn.haeleth.net/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">颠覆</font></font></a></li>
+</ul>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">专案</font></font></p>
+<ul>
+<li><a href="http://dev.haeleth.net/onscripter.shtml" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ONScripter</font></font></a></li>
+<li><a href="http://dev.haeleth.net/rldev.shtml" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">雷德夫</font></font></a></li>
+<li><a href="http://dev.haeleth.net/kpac.shtml" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">卡帕克</font></font></a></li>
+<li><a href="http://dev.haeleth.net/majiro.shtml" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Majiro的东西</font></font></a></li>
+<li><a href="http://dev.haeleth.net/xclannad.shtml" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">xclannad补丁</font></font></a></li>
+<li><a href="http://dev.haeleth.net/xkanon.shtml" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">xkanon补丁</font></font></a></li>
+<li><a href="http://dev.haeleth.net/kurokoge.shtml" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">黑子重</font></font></a></li>
+</ul>
+
+</div>
+<div class="content">
+
+<p class="contentheader" id="top"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">雷德夫</font></font></p>
+
+<div class="item">
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">RLdev是一个基本的RealLive开发工具包，其中包含一个存档器/反汇编器，一个编译器和一个图形转换工具。</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">本质的に，RLdevはRealLiveのコンパイラーと逆アセンブラーです。</font></font></p>
+<p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">最新版本：1.40</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（2006-6-22）</font></font><a href="http://dev.haeleth.net/rldev/CHANGES" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">-changelog</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+</div>
+
+<div class="item">
+<p><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">警告：该程序尚未真正准备好供公众使用。</font><font style="vertical-align: inherit;">继续需要您自担风险。</font></font></em></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">RLdev当前未得到积极开发或维护。</font><font style="vertical-align: inherit;">您可以根据需要向我报告错误，但是我可能没有时间调查或修复错误。</font><font style="vertical-align: inherit;">但是，由于这是开源软件，也许您可​​以找到其他程序员来解决您的问题...</font></font></p>
+<p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">注意</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：このプログラグムはまだ公开できるほど完全ではありません。使ってみたければ嬉しいですが，気をつけてください。</font></font></p>
+</div>
+
+<div class="item">
+<p class="itemheader"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">资料下载</font></font></p>
+<ul>
+<li><a href="http://dev.haeleth.net/rldev/rldev-1.40.tar.bz2" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">源代码</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（639 kb）</font></font></li>
+<li><a href="http://dev.haeleth.net/rldev/rldev-1.40-cygwin.tar.bz2" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cygwin二进制文件</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（1.36 mb）</font></font></li>
+<li><a href="http://dev.haeleth.net/rldev/rldev-1.40-win32.rar" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Win32二进制文件</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（1.42 mb）-您还将需要</font></font><a href="http://www.haeleth.net/temp/kprl.exe" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">此错误修复</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></li>
+<li><a href="http://dev.haeleth.net/rldev/rldev-1.37.tbz" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">适用于x86的</font><a href="http://dev.haeleth.net/rldev/rldev-1.37.tbz" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;">FreeBSD二进制软件包</font></a><font style="vertical-align: inherit;">（旧版本1.37：1.30 mb，使用pkg_add安装）</font></font></li>
+</ul>
+<p class="itemheader"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">其他实用程序</font></font></p>
+<ul>
+<li><a href="http://dev.haeleth.net/rldev/rlBabel-src-1.43.rar" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">rlBabel源代码</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（120 kb）</font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+编译的二进制文件包含在所有RLdev发行版中。</font></font></li>
+<li><a href="http://dev.haeleth.net/rldev/rlBabel-GenMap-1.43.rar" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">rlBabel-GenMap</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（93 kb）</font></font><br><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+生成rlBabel映射文件。</font><font style="vertical-align: inherit;">大多数用户将不需要此功能，因为RLdev中包含许多当前解释器的映射。</font></font></li>
+</ul>
+<p class="itemheader"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在线文件</font></font></p>
+<ul>
+<li><a href="http://dev.haeleth.net/rldev/manual.pdf" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">PDF格式</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（1.35 mb）</font></font></li>
+<li><a href="http://dev.haeleth.net/rldev/manual.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">HTML格式</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（702 kb）</font></font></li>
+</ul>
+<p class="itemheader"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">开发版</font></font></p>
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">可通过</font></font><a href="http://svn.haeleth.net/pub" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">svn.haeleth.net/pub</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">上的公共Subversion存储库访问最新的（通常是不稳定的）源代码</font><font style="vertical-align: inherit;">。</font><font style="vertical-align: inherit;">检出任何内容之前，</font><font style="vertical-align: inherit;">请参阅</font></font><a href="http://svn.haeleth.net/pub/README" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">自述文件</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<p><font style="vertical-align: inherit;"></font><a href="http://svn.haeleth.net/doc/manual.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">此处</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">提供了有关开发版本的最新HTML手册</font><font style="vertical-align: inherit;">。</font><font style="vertical-align: inherit;">只要修改文档源，就会自动重新构建。</font></font></p>
+</div>
+
+<div class="item">
+<p class="itemheader"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">已知问题和解决方法</font></font></p>
+<ul>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">用于</font></font><cite><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Little Busters</font></font></cite><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">的RealLive版本</font><cite><font style="vertical-align: inherit;">！</font></cite><font style="vertical-align: inherit;">
+    在压缩下利用了额外的加密。</font><font style="vertical-align: inherit;">当前的kprl版本未处理此问题。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">还将文件放置在SEEN.TXT的指针表中，导致它无法通过严格的验证，因此kprl无法从其中提取文件。</font><font style="vertical-align: inherit;">但是手工提取它们是微不足道的（您可以说“ Perl单线”吗？），所以我对此并不担心。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">rlBabel不适用于RealLive 1.4版及更高版本。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如果在启动时使用kprl或rlc segfault，请尝试使用-f选项手动指定解释器版本。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">rlBabel的中文和韩语模式中存在许多错误和不足之处。</font><font style="vertical-align: inherit;">幸运的是，由于rlBabel DLL是用C ++编写的，因此您会发现找到能够解决其中问题的其他人更加容易。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在Win32版本中，将文件插入存档的操作已损坏。</font><font style="vertical-align: inherit;">使用</font></font><a href="http://www.haeleth.net/temp/kprl.exe" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">此错误修复程序</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">可以解决此问题。</font></font></li>
+<li><tt><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在</font></font></tt><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">基于NAME_MOD </font><font style="vertical-align: inherit;">
+    设置为1的</font><font style="vertical-align: inherit;">文本窗口中，基于</font><tt><font style="vertical-align: inherit;">#NAMAE</font></tt><font style="vertical-align: inherit;">的文本着色不能与rlBabel格式的文本</font><font style="vertical-align: inherit;">一起使用。（我</font></font><tt><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">拒绝</font></font></tt><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">任何人关心。）</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在</font></font><tt><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">gosub</font></font></tt><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> 
+    和friends </font><font style="vertical-align: inherit;">存在的情况下，变量分配是不安全的</font><font style="vertical-align: inherit;">。</font></font></li>
+<li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">未记录的功能中存在许多不安全的行为-这就是为什么未记录它们的原因。</font></font></li>
+</ul>
+</div>
+
+</div>
+
+
+<a href="" download="" data-mx-warn="Empty URL"></a><div class="goog-te-spinner-pos"><div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66"><circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30" data-darkreader-inline-fill="" style="--darkreader-inline-fill:none;"></circle></svg></div></div><div data-mx-warn="extension url was not captured by MaoXian" data-mx-original-src="chrome-extension://kjahokgdcbohofgdidndeiaigkehdjdc/pages/ui-selection.html?t=aHR0cDovL2Rldi5oYWVsZXRoLm5ldA=="></div><div data-mx-warn="extension url was not captured by MaoXian" data-mx-original-src="chrome-extension://kjahokgdcbohofgdidndeiaigkehdjdc/pages/ui-control.html?t=aHR0cDovL2Rldi5oYWVsZXRoLm5ldA=="></div>
+</body>
+  </html>

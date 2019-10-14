@@ -1,0 +1,1353 @@
+
+  <!DOCTYPE html>
+  <html id="" class="">
+    <!-- OriginalSrc: https://web.archive.org/web/20080308155103/http://sekai.insani.org/archives/18 -->
+    <head>
+      <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <title>sekai.insani.org » So You Want To Be a Hacker? Part III: Code Prototyping</title>
+      
+
+<link rel="stylesheet" type="text/css" href="assets/1570957838-7d8615ffad0397de253976c03119d074.css" referrerpolicy="no-referrer">
+<link rel="stylesheet" type="text/css" href="assets/1570957838-32a1290393936a63a45283a71d7c7890.css" referrerpolicy="no-referrer">
+
+
+<style class="darkreader darkreader--fallback" media="screen"></style>
+<style class="darkreader darkreader--text" media="screen"></style>
+<style class="darkreader darkreader--invert" media="screen">#wm-sparkline-canvas, .yt, .sparkline-canvas, .sparkline-mouse-highlight, .search-toolbar-logo, #wm-logo {
+    filter: invert(100%) hue-rotate(180deg) contrast(90%) grayscale(10%) sepia(10%) !important;
+}</style>
+<style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}</style>
+<style class="darkreader darkreader--user-agent" media="screen">html {
+    background-color: #191a1b !important;
+}
+html, body, input, textarea, select, button {
+    background-color: #191a1b;
+}
+html, body, input, textarea, select, button {
+    border-color: #5a5956;
+    color: #f0ebe2;
+}
+a {
+    color: #4791e7;
+}
+table {
+    border-color: #4f4e4c;
+}
+::placeholder {
+    color: #bfb9ac;
+}
+::selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+::-moz-selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #565a0f !important;
+    color: #f0ebe2 !important;
+}
+::-webkit-scrollbar {
+    background-color: #1d1f1f;
+    color: #cbc5b9;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #2c2d2d;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #343636;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #404142;
+}
+::-webkit-scrollbar-corner {
+    background-color: #191a1b;
+}
+* {
+    scrollbar-color: #2c2d2d #1d1f1f;
+}</style>
+<style class="darkreader darkreader--override" media="screen">.jfk-bubble {
+    background-color: #000000 !important;
+}
+.vimvixen-hint {
+    background-color: #765500 !important;
+    border-color: #d5b22e !important;
+    color: #f9edcc !important;
+}
+.measure {
+    z-index: 0 !important;
+}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css" media="screen">
+		@import url("assets/1570957838-3003e9266d7ff7095d45e2fe843c999e.css");
+		
+body{
+			background: #6C7C8B url("") repeat-x;
+		}
+	</style>
+<style class="darkreader darkreader--cors" media="screen">body {
+
+  margin:0px;
+
+  padding:0px;
+
+  text-align:center;
+
+  font:11px/15px Georgia,"Times New Roman",Serif;
+
+	color: #555558;background:#73868C;
+
+}
+
+#maincol {
+
+  width:70%;
+
+  background:#fff;
+
+  float:left;
+
+}
+
+#maincol .col {
+
+	padding-bottom: 5px;
+
+	padding-left:25px;
+
+	padding-right:25px;
+
+	line-height:1.6em;
+
+	margin-top:30px;
+
+}
+
+#headbar{
+
+
+
+	background:#6C6a6A;
+
+	height:8px;
+
+border-bottom:1px solid #636161;
+
+}
+
+#navcol {
+
+	padding:5px;
+
+	padding-top: 20px;
+
+	clear:right;
+
+
+
+        right:0px;
+
+	float:right;
+
+  font-size:1em;
+
+  }
+
+#container{
+
+	
+
+ width:90%;
+
+ text-align:left;
+
+ margin-left: auto;
+
+ display:block;
+
+  margin-right: auto;
+
+ background:#fff;
+
+ border-left: 2px solid #777;
+
+ border-right: 2px solid #777;
+
+ padding-bottom:0;
+
+}
+
+#container:after {
+
+    content: "."; 
+
+    display: block; 
+
+    height: 0; 
+
+    clear: both; 
+
+    visibility: hidden;
+
+}
+
+a{
+
+	text-decoration:none;
+
+}
+
+a{
+
+	color: #3C657B;
+
+	text-decoration: none;
+
+	}
+
+#footer{
+
+border-top:1px solid #111;
+
+border-bottom:1px solid #111;
+
+color: #eee;
+
+background: #555;
+
+clear:both;
+
+padding: 5px;
+
+ text-align:center;
+
+ margin-left: auto;
+
+ display:block;
+
+  margin-right: auto;
+
+  font-size: 0.9em;
+
+  font-family:"Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;
+
+}
+
+#footer a{
+
+	color: #fff;
+
+	font-weight:bold;
+
+}
+
+a:hover {
+
+	text-decoration:underline;
+
+}
+
+.entry{
+
+	padding-bottom: 20px;
+
+}
+
+
+
+h1, h2, h3, h4 {
+
+font-family:"Century Gothic", "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;
+
+}
+
+#header {
+
+	padding: 0px;	
+
+	margin-top: 3px;
+
+	padding-top:50px;
+
+	
+
+	padding-bottom:10px;
+
+	border-bottom: 1px solid #bab1b1;
+
+	background: #404040;
+
+	text-align:right;
+
+	padding-right:20px;
+
+	padding-left:5px;
+
+}
+
+#header h1{
+
+	padding:0px;
+
+	margin: 0px;
+
+	margin-bottom:10px;
+
+	font-size: 2.4em;
+
+	letter-spacing:0.1em;
+
+	
+
+}
+
+#header h1 a {
+
+	color: #ffffef;
+
+}
+
+#header h1 a:hover {
+
+	text-decoration:none;
+
+	color: #bb4444;
+
+}
+
+#header img {
+
+	border:none;
+
+}
+
+#subtitle {
+
+	font-family:"Century Gothic", "Lucida Grande", "Lucida Sans Unicode", Verdana, Helvetica, Arial, sans-serif;
+
+	margin-bottom:3px;
+
+	font-size: 0.9em;
+
+	text-transform:uppercase;
+
+	color:#bbb;
+
+}
+
+
+
+h2 {
+
+font-size: 1.2em;
+
+margin-bottom:5px;
+
+}
+
+h2.entrydate{
+
+margin-bottom:1px;
+
+font-size: 1.8em;
+
+font-weight:normal;
+
+text-transform:uppercase;
+
+}
+
+.entrymeta{
+
+	font-size: 0.9em;background:#eee;
+
+}
+
+h3.entrytitle{
+
+margin-top:0px;
+
+margin-bottom:1px;
+
+font-size: 1.8em;
+
+font-weight:normal;
+
+}
+
+.entry{
+
+margin-top:8px;
+
+}
+
+.entrybody p a{
+
+font-weight:bold;
+
+}
+
+.entrybody p {
+
+	margin-top:8px;
+
+	margin-bottom:16px;
+
+}
+
+
+
+
+
+ul {
+
+ margin:0 0 1em 0;
+
+ padding-left:0px;
+
+ list-style-type:square;
+
+}
+
+ul.extern {
+
+	font-style:italic;	
+
+}
+
+ul.children {
+
+ list-style-type:disc;
+
+}
+
+ul.nomarginchildren {
+ list-style-type:disc;
+ margin: 0 0 0 0;
+}
+
+
+
+
+
+h2#comments{
+
+text-align:center;
+
+border-top:1px solid #acb1ba;
+
+background:#9ba1aa;
+
+padding:7px;
+
+border-bottom:1px solid #acb1ba;
+
+margin-bottom:10px;
+
+margin-top:80px;
+
+}
+
+ol#commentlist {
+
+margin-top:0px;
+
+
+
+ padding: 5px;
+
+ margin-left: 0px;
+
+ color: #9b9b9b;
+
+ list-style-type: none;
+
+ font-size:0.9em;
+
+}
+
+#commentlist li  p{
+
+ padding: 0px;
+
+ margin: 0px 0px 0px 0px;
+
+}
+
+.commentname {
+
+ float: left;
+
+ margin: 0;
+
+ padding: 0  0 2px 0;
+
+
+
+}
+
+.commentinfo{
+
+ width: 200px;
+
+ float: right;
+
+ text-align: right;
+
+}
+
+.commenttext {
+
+ clear: both;
+
+ padding-top: 0px;
+
+ margin-top: 0px;
+
+ margin-bottom: 30px;
+
+ border-top: 1px solid #ebebeb;
+
+ line-height:12px;
+
+ color: #5b5b5b;
+
+}
+
+#commentsformheader{
+
+padding-left:18px;
+
+font-size: 1.4em;
+
+}
+
+#commentsform{
+
+	margin-top:none;
+
+	text-align:center;
+
+	border:1px solid #ddd;
+
+	background:#ededed;
+
+	padding:0px 10px;
+
+}
+
+#commentsform form{
+
+text-align:left;
+
+margin:0px;
+
+}
+
+#commentsform p{
+
+	margin:5px;
+
+}
+
+#commentsform form textarea{
+
+	width:100%;
+
+}
+
+
+
+code{
+
+	font-family: 'lucida console', 'Courier New', monospace;
+
+	font-size: 0.8em;
+
+	display:block;
+
+	padding:5px;
+
+	background-color: #eee;
+
+	border: 1px solid #d3d3d6;
+
+}
+
+input[type="text"], textarea {
+
+	padding:3px;
+
+	border: 1px solid #d3d3d6;
+
+	color: #535356;
+
+	-moz-border-radius: 3px;
+
+}
+
+input[type="submit"]{
+
+	padding:2px;
+
+	font-size: 1.25em;
+
+	border: 1px solid #d3d3d3;
+
+	background: #fff;
+
+	-moz-border-radius: 3px;
+
+}
+
+blockquote {
+
+	border-left: 3px solid #686868;
+
+	color: #888;
+
+	padding-left: 8px;
+
+	margin-left: 25px;
+
+}
+
+a img {
+
+border:none;
+
+}
+
+
+
+p.footer {
+
+	color:#777;
+
+}
+		
+body{
+			background: #6C7C8B url("") repeat-x;
+		}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">@keyframes fadeInOpacity{0%{opacity:0}to{opacity:1}}:hover>*>.fbvd--wrapper{animation-name:fadeInOpacity;animation-duration:.3s;opacity:1}.fbvd--wrapper{position:absolute;top:10px;left:10px;opacity:0;text-align:center;margin:0;z-index:5}.fbvd--wrapper a{background: url("") no-repeat 3px 4.55px; background-color: #fff; display:inline-block;font:700 14px Helvetica,Arial,sans-serif;color:#4b4f56;text-decoration:none;vertical-align:middle;padding:0px 8px 0px;margin-right:8px;border-radius:2px; line-height: 22px; padding-left:19px; border: 1px solid #e7e7e7; background-size: 13px}.fbvd--wrapper a:last-child{margin-right:0}.fbvd--wrapper a:hover{text-decoration:none}.fbvd--wrapper a:focus{box-shadow:0 0 1px 2px rgba(88,144,255,.75),0 1px 1px rgba(0,0,0,.15);outline:none}.fbvd--wrapper b{font-size:13px;position:relative;top:1px;color:#3b5998;font-weight:400}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+
+      
+    </head>
+    <body id="home" class="log mx-wc-selected-elem mx-wc-1570957838"><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+
+
+
+
+<div id="wm-ipp-base" lang="en" style="display: block; direction: ltr;">
+</div>
+<!-- END WAYBACK TOOLBAR INSERT -->
+	<div id="container">
+		<!-- The header begins  -->
+		<div id="header">
+			<h1><a href="https://web.archive.org/web/20080308155103/http://sekai.insani.org/" title="sekai.insani.org" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">:world of insanity</a></h1>
+			<div id="subtitle">
+				<!-- Here's the tagline  -->
+				insani’s production journal			</div>
+		</div>
+		<div id="headbar"></div>
+		<!-- The header ends  -->
+		<div id="maincol"><!-- The main content column begins  -->
+			<div class="col"><div class="entry">
+			<!--
+				<h2 class="entrydate">June 12, 2006</h2>
+			-->
+			<h3 class="entrytitle" id="post-18">
+				<a href="https://web.archive.org/web/20080308155103/http://sekai.insani.org/archives/18" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">So You Want To Be a Hacker? Part III: Code Prototyping</a>
+			</h3>
+			<div class="entrybody">
+				<div class="entrymeta">
+					Posted by Edward Keyes on June 12th 2006 to <a href="https://web.archive.org/web/20080308155103/http://sekai.insani.org/archives/category/production-process/" title="View all posts in Production Process" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Production Process</a>, <a href="https://web.archive.org/web/20080308155103/http://sekai.insani.org/archives/category/production-process/so-you-want-to-be-a-hacker/" title="View all posts in So You Want To Be a Hacker?" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">So You Want To Be a Hacker?</a>				</div>
+				<p>In the last installment, we analyzed the Cross+Channel archive format with our trusty hex editor, and after a proof-of-concept manual image extraction, we believe we know what’s going on in that file.  But of course there’s only one way to be sure: build some tools, and try to modify the game!</p>
+<p>So today we’re going to run through some quick code prototyping to create some suitable tools for dealing with the archives.  My intention is to make this as simple and straightforward as possible, so if you come out of this installment saying, “You mean <em>that’s</em> all I have to write to hack a game?!” then… mission accomplished.<a id="more-18" data-mx-warn="Empty URL"></a></p>
+<p>What language should we use?  Ordinarily I work in C, but I want to get something out of this series too, so instead we’re going to use <a href="https://web.archive.org/web/20080308155103/http://www.python.org/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Python</a>, which is a bit of a learning experience for me as well.  The main advantages of this are:</p>
+<ul>
+<li>Cross-platform.  It’s available for Windows, Linux, and Mac OS, and it unifies some inherent differences like directory-path separators.</li>
+<li>Good mix of levels.  There are flexible high-level data structures, like hash-table dictionaries and function continuations, as well as decent low-level bit manipulations.</li>
+<li>Intuitive syntax.  Python is almost like executable pseudocode, so if you know virtually any other language, you should be able to read it without trouble.
+</li>
+<li>Interactive mode.  If you want to, you can just type in commands one by one and have them execute immediately.  This is great for avoiding a slow edit-recompile-test step during prototyping.
+</li>
+</ul>
+<p>The main disadvantage, unfortunately, is speed.  Python just can’t compare to C or other to-the-metal compiled languages for serious bit-crunching.  For our purposes this isn’t very important yet, and when it becomes an issue there’s actually some pretty good Python/C interface features available for us to mix and match code when we need to.</p>
+<p>So, if you’re on Mac OS X, you probably have Python already.  If you’re on Linux, you either have it or can grab a package for your distribution without much trouble.  If you’re on Windows, there’s an <a href="https://web.archive.org/web/20080308155103/http://www.python.org/download/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">installer</a> for you too.  Grab a copy and follow along!</p>
+<p>What sorts of routines will we need to get started?  Well, let’s review the archive format we determined last time:</p>
+<ol>
+<li>Signature string <samp>PackOnly</samp></li>
+<li>56 bytes of zeroes</li>
+<li>8-byte little-endian file count</li>
+<li>144-byte file entry records consisting of:
+<ol>
+<li>128-byte filename, zero-terminated</li>
+<li>8-byte little-endian file offset (from beginning of archive)</li>
+<li>8-byte little-endian file size</li>
+</ol>
+</li>
+<li>The files, uncompressed and unencrypted, at their offsets.</li>
+</ol>
+<p>So it looks like we’ll need routines to:</p>
+<ul>
+<li>Read/write integers of specific lengths and endianness</li>
+<li>Read/write zero-terminated strings</li>
+<li>Check signatures and known runs of zeroes</li>
+</ul>
+<p>No sweat!  These sorts of utility routines will come in handy from here on out, so once we write them we can use them for subsequent games as well.  Let’s attack the integers for example:</p>
+<pre>def read_unsigned(infile, size = 4, endian = LITTLE_ENDIAN) :
+   result = long(0)
+   for i in xrange(size) :
+      temp = long(ord(infile.read(1)))
+      if endian == LITTLE_ENDIAN :
+         result |= (temp &lt;&lt; (8*i))
+      elif endian == BIG_ENDIAN :
+         result = (result &lt;&lt; 8) | temp
+   return result
+</pre>
+<p>Depending on your background, this code snippet is either completely trivial or completely confusing.  Basically, it’s just reading one byte at a time from a file, and shifting those bits to the proper numerical value to build up a multi-byte number, depending on whether the bytes are ordered least-significant-digit-first (little endian), or most-significant-digit-first (big endian).</p>
+<p>The rest of the stuff we’ll need is similar, and honestly not really worth discussing in detail.  I’ve helpfully put together a quick package of utility routines which you can download as <a href="https://web.archive.org/web/20080308155103/http://www.insani.org/tools/insani.py" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">insani.py</a> and use if you like.</p>
+<p>Now we get on to the meat of the problem, reading and writing the archive!</p>
+<p>We can basically just run through our archive specification above and turn it into code.  First the signature and header:</p>
+<pre>from insani import *
+arcfile = open('cg.pd','rb')
+assert_string(arcfile,'PackOnly',ERROR_ABORT)
+assert_zeroes(arcfile,56,ERROR_WARNING)
+numfiles = read_unsigned(arcfile,LONG_LENGTH)
+print 'Extracting %d files...' % numfiles
+</pre>
+<p>Here I’m using the <samp>assert_string()</samp> and <samp>assert_zeroes()</samp> utility routines from <strong>insani.py</strong> to check for the file signature and the zeroes we expect.  The <samp>LONG_LENGTH</samp> constant is just 8, the length of our integer, and little-endianness is implied as the default value.</p>
+<p>The major thing to make note of here is error-checking.  I don’t mean “normal” error-checking like making sure the file opened properly or that you have enough memory to read an 8-byte integer, etc.  That’s kind of silly for a prototype tool: we don’t care a whole lot if it crashes when the file can’t be read, as that’s sort of the behavior we want.</p>
+<p>No, I mean, error-checking our assumptions about the archive.  You see, we <em>could</em> have just skipped the first 64 bytes of the file entirely and jumped right to that <samp>numfiles</samp> read statement.  That’s the only information we actually need, right?  Why are we bothering to check the signature, or check those zeroes?</p>
+<p>We’re doing that because we’re still testing our understanding of the file… we’ve only really looked at a small percentage of one archive file from one game.  Are those 56 zeroes <em>really</em> useless?  <em>Always?</em>  We’re just not sure.  So if the tool runs across something that it doesn’t expect — i.e. that <em>we</em> don’t expect — then we want to know about it, and either abort for “now I’m totally confused” cases or at least print a warning for less critical discrepancies so we can inspect the situation more carefully and revise the tool.</p>
+<p>Okay, enough about that.  Just trust me: build in the extra logic to check your assumptions rather than always jumping to the known-important info.  Now on to reading the index:</p>
+<pre>print 'Reading archive index...'
+entries = []
+for i in xrange(numfiles) :
+   filename = read_string(arcfile)
+   assert_zeroes(arcfile,128-len(filename)-1)
+   position = read_unsigned(arcfile,LONG_LENGTH)
+   size = read_unsigned(arcfile,LONG_LENGTH)
+   entries.append( (filename, position, size) )
+assert_zeroes(arcfile,144*(16384-numfiles),ERROR_WARNING)
+</pre>
+<p>Here we’re using some Python magic to make our lives easier.  After reading the filename, position, and size, we just collect the three variables together into a “tuple” denoted by the extra parentheses, and push that onto the end of our <samp>entries</samp> linked list.  Doing the same thing in C would be a bit more complicated, but here it’s almost pseudocode.  Again, notice the assertion statements: every single byte of this file is getting examined, and either its data is being used or its status as uninteresting is being checked.</p>
+<p>Now, we complete the process, and actually write out the files, and do a little clean-up:</p>
+<pre>for (filename, position, size) in entries :
+   print 'Extracting %s (%d bytes) from offset 0x%X' % \
+    (filename, size, position)
+   outfile=open(filename,'wb')
+   assert (arcfile.tell() == position)
+   outfile.write( arcfile.read(size) )
+   outfile.close()
+assert (arcfile.read(1) == '')
+arcfile.close()
+</pre>
+<p>The loop structure is another nice bit of Python: we can just iterate through our <samp>entries</samp> list trivially, pulling off a whole tuple at a time and using those variables again.  Instead of the <samp>assert</samp> statement, we could have just done a <samp>arcfile.seek(position)</samp> command to jump to the offset we know we want, but here we’re still testing our knowledge of the archive format: are the files stored in order, with no gaps between them like we think?  And after all the files, are we really at the end of the archive, or is there more data we’ve neglected?</p>
+<p>If we’ve done everything correctly, there shouldn’t be any surprises.  So let’s try it.  You can download <a href="https://web.archive.org/web/20080308155103/http://www.insani.org/tools/crosschannel-extract1.py" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">crosschannel-extract1.py</a> if you like, but I’d recommend you implement your own, or at least type it in to get a feel for the language:</p>
+<pre>% python crosschannel-extract1.py
+Extracting 545 files...
+Reading archive index...
+Extracting bgcc0000e.png (8370 bytes) from offset 0x240048
+Extracting bgcc0023.png (538382 bytes) from offset 0x2420FA
+...
+Extracting TCYM0005c.png (156881 bytes) from offset 0x566E1B4
+</pre>
+<p>Seems to have worked, and all of the PNG files are viewable in your favorite image editor.  Ummm, although a few of them are NSFW, by the way.  ^^;</p>
+<p>The proof-of-concept extraction works.  Now we can improve things just a little bit, since that hard-coded archive filename certainly sucks.  The revised version is <a href="https://web.archive.org/web/20080308155103/http://www.insani.org/tools/crosschannel-extract2.py" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">crosschannel-extract2.py</a>, which adds some routines from the Python operating-system interface libraries to read parameters from the command line and allow us to extract files to a new subdirectory, etc.  I’ve also tweaked the error-checking a little bit, to allow for out-of-order files if we ever run across them, as well as aborting early if we find a position or file size that is “obviously” wrong.  Have a look if you like, though it’s not really vital to the thrust of this article.</p>
+<p>What we really should be doing is rebuilding the archive now!  No sweat.  We can just take our code, and adapt it pretty easily to the opposite case.  First we need to collect info about the files we want to repack, from a subdirectory name passed on the command line:</p>
+<pre>import sys, os
+from insani import *
+
+dirname = sys.argv[1]
+rawnames = os.listdir(dirname)
+
+numfiles = 0
+position = 144*16384+72
+entries = []
+for filename in rawnames :
+   fullpath = os.path.join(dirname,filename)
+   if os.path.isfile(fullpath) :  # Skip any subdirectories
+      numfiles += 1
+      size = os.stat(fullpath).st_size
+      entries.append( (filename, fullpath, position, size) )
+      position += size;
+</pre>
+<p>While we do this we can compute the ultimate position of each file based on the file sizes and the known sizes of the header and the index.  Next we can write those out:</p>
+<pre>print 'Packing %d files...' % numfiles
+arcfile = open(sys.argv[2],'wb')
+arcfile.write('PackOnly')
+write_zeroes(arcfile,56)
+write_unsigned(arcfile,numfiles,LONG_LENGTH)
+
+print 'Writing archive index...'
+for (filename, fullpath, position, size) in entries :
+   write_string(arcfile,filename)
+   write_zeroes(arcfile,128-len(filename)-1)
+   write_unsigned(arcfile,position,LONG_LENGTH)
+   write_unsigned(arcfile,size,LONG_LENGTH)
+write_zeroes(arcfile,144*(16384-numfiles))
+</pre>
+<p>This is actually kind of easier, since we don’t need to check anything: we are just writing exactly what we know… no uncertainty.  You’ll also notice how closely the structure maps to our initial archive description: it’s good to have utility routines so that you can take care of each item in your spec with just a line or two of code.  And now we write the files themselves:</p>
+<pre>for (filename, fullpath, position, size) in entries :
+   print 'Packing %s (%d bytes) at offset 0x%X' % \
+    (filename, size, position)
+   assert (arcfile.tell() == position)
+   infile = open(fullpath,'rb')
+   arcfile.write(infile.read(size))
+   infile.close()
+arcfile.close()
+</pre>
+<p>Here we’re doing a little bit of sanity-checking with the <samp>assert</samp> statement, but really that’s just a “stupid programmer” check rather than anything else: if we’ve written everything correctly, that assertion will always be true, regardless of the archive format details.  That’s one of the classic uses of an abort-if-false <samp>assert</samp> statement: to quickly check something which cannot possibly be wrong when the program is operating correctly.</p>
+<p>You can grab <a href="https://web.archive.org/web/20080308155103/http://www.insani.org/tools/crosschannel-repack1.py" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">crosschannel-repack1.py</a> if you like, but again I’d encourage you to write your own.  Let’s test:</p>
+<pre>% python crosschannel-repack1.py temp temp.pd
+Packing 545 files...
+Writing archive index...
+Packing bgcc0000a.png (408458 bytes) at offset 0x240048
+Packing bgcc0000b.png (436171 bytes) at offset 0x2A3BD2
+...
+Packing xiconp.png (2399 bytes) at offset 0x5693D26
+</pre>
+<p>The gold standard of a successful tool is to be able to extract and repack an archive to a bit-perfect replica of the original.  Have we succeeded?</p>
+<pre>% diff cg.pd temp.pd
+Binary files cg.pd and temp.pd differ
+</pre>
+<p>Urgh, no.  Well, it’s kind of to be expected… the files aren’t getting packed in the same order, since our repackaged archive gets its directory list in alphabetical order, whereas the original archive is more random.  Does that matter?  We’re not sure.</p>
+<p>The <em>silver</em> standard of a successful tool is to be able to extract its own archives successfully.  So we extract, repack, and then extract again and make sure the first extraction is identical to the second.</p>
+<pre>% python crosschannel-extract2.py temp.pd temp2
+Extracting 545 files...
+...
+% diff -r temp temp2
+</pre>
+<p>And that works.  Okay, so our extraction and repacking tools are internally compatible.  Are they compatible with the <em>game</em>, though?</p>
+<p>Here is one helpful trick of the trade.  The first time you test a rebuilt archive, <em>change nothing</em>.  Just extract the game’s own archive, repack it, and see if the game still runs.  This way you can see whether, for instance, the game has an MD5 checksum for the archive stored in the executable, or whether you’re missing something about the archive format.  Once you pass this hurdle, <em>then</em> you can start changing files and inserting English and so forth.</p>
+<p>To make a long story short, that works.  There thankfully doesn’t seem to be any checksum weirdness going on, or features of the archive we haven’t fully reproduced (the file ordering <em>could</em> have mattered, after all).</p>
+<p>The next step is to try altering something.  How about the main title screen graphic?  That happens to be <strong>x0000.png</strong>, so we can just drop in our own 640×480 PNG file, rebuild the archive, and see what happens…</p>
+<p><img id="image19" src="assets/1570957838-3d67896f799358adf0d440760cf95780.png" alt="Cross+Channel NNS screenshot"></p>
+<p>The extra colored rectangle is part of the main menu highlighting system.  Looks like we’re doing pretty well… most of the UI resources are just stored as PNGs, so our translator and graphic editor ought to be able to make over this game’s interface with these tools, no problem.</p>
+<p>But wait… what about the game script!</p>
+<pre>% python crosschannel_extract2.py script.pd script
+Expected "PackOnly" at position 0x0 but saw "PackPlus".
+Aborting!
+Traceback (most recent call last):
+...
+</pre>
+<p>Pack<em>Plus</em>?!  Uh-oh.  But now the wisdom of our error-checking is somewhat revealed… we know immediately that something weird is going on in the script archive, rather than extracting garbage and trying to make sense of it at some later step.  Let’s fall back on our hex editor and take a look.</p>
+<p><img id="image20" src="assets/1570957838-3385734422221ca2c08ebc06c02980f2.png" alt="Cross Channel hex 04"></p>
+<p>Well, it looks pretty normal, actually.  All the zeroes are still there; there’s what looks like a file-count, and filenames, positions, and sizes.  If you scroll down you’ll see nothing but zeroes out to offset 0×240048, just like before.  So the entire header and index is the same, apart from the file signature itself.  Is this a complete no-op?</p>
+<p>Ah, but look at the files themselves:</p>
+<p><img id="image21" src="assets/1570957838-ce55a9ca4e43cb76fa6cb5b628bbe5d0.png" alt="Cross Channel hex 05"></p>
+<p>This is kind of weird.  The bytes aren’t random-looking — there are long strings of constant values — so it’s probably not really compressed or encrypted.  There’s also a high proportion of large values, above 0×80, which is unusual.</p>
+<p>So we’re probably looking at some sort of basic “encryption” here, the ever-popular XOR/add-with-a-constant-byte algorithm, suitable for protecting your files from your six-year-old sister… assuming she doesn’t code, anyway.</p>
+<p>We could just guess the answer… and in fact if you guess you’ll get it right.  But you know what, I’m lazy, so I’m just going to brute-force this with some quick code.</p>
+<pre>arcfile=open('script.pd','rb')
+arcfile.seek(0x240076)
+data=arcfile.read(16)
+outfile=open('bruteforce.dat','wb')
+for i in xrange(256) :
+   for temp in data :
+      outfile.write(chr(ord(temp) ^ i))
+   for temp in data :
+      outfile.write(chr((ord(temp) + i) &amp; 0x00FF))
+outfile.close()
+arcfile.close()
+</pre>
+<p>I’m just reading in 16 bytes of data (chosen to match my hex-editor width) at an interesting-looking offset, XORing and adding all possible byte values to that string, and writing it out to a file to examine.  Scanning through this 8KB file by eye takes like 10 seconds, and we find:</p>
+<p><img id="image22" src="assets/1570957838-834a9eaa1d3fd930e2810006d8206a47.png" alt="Cross Channel hex 06"></p>
+<p>Wow, recognizable text, at the very end of the file… always in the last place you look.  So this corresponds to an XOR by 0xFF, or just flipping all the bits in the file, which is precisely what you might have guessed anyway.  My point here is really that when you’re not sure, don’t be afraid to do a little experimentation… writing the above code snippet and scanning through some possibilities is the work of 5 minutes, tops, whereas you can easily bang your head against some unknown simple encryption for hours or days if you’re not feeling sufficiently clever sometimes.</p>
+<p>Now we can update our extraction tool to account for this.  It’s a pretty easy modification to the header code:</p>
+<pre>signature = arcfile.read(8)
+if signature == 'PackOnly' :
+   xorbyte = 0
+elif signature == 'PackPlus' :
+   xorbyte = 0x00FF
+else :
+   print 'Unknown file signature %s, aborting.' % \
+    escape_string(signature)
+   sys.exit(0)
+</pre>
+<p>and to the file-reading code:</p>
+<pre>   data = array('B',arcfile.read(size))
+   if xorbyte != 0 :
+      for i in xrange(len(data)) :
+         data[i] ^= xorbyte
+   outfile.write(data.tostring())
+</pre>
+<p>This part is slightly confusing if you’re not familiar with Python.  The standard Python string is an immutable data type, so you can’t just XOR all the bytes without making a zillion new copies of the string.  Instead we read it into a mutable unsigned-byte array.  You’ll need to add a <samp>from array import array</samp> line at the top of your file to allow this too, since the array module isn’t part of the core language.  The new version is <a href="https://web.archive.org/web/20080308155103/http://www.insani.org/tools/crosschannel-extract3.py" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">crosschannel-extract3.py</a>.</p>
+<pre>% python crosschannel-extract3.py script.pd script
+Extracting 54 files...
+Reading archive index...
+Extracting adstart.dsf (236 bytes) from offset 0x240048
+Extracting cca0001.dsf (934 bytes) from offset 0x240134
+...
+Extracting cca0011c.dsf (6674 bytes) from offset 0x297376
+</pre>
+<p>Looks like we’re in business.  The extracted scripts open normally in a text editor, using Shift-JIS character encoding.  With a little snooping around, we can see that the file <strong>cca0001.dsf</strong> is the start of the main game script.  A little editing, a quick repack (we don’t even need to bother with PackPlus when we make our own archive), and presto!</p>
+<p><img id="image23" src="assets/1570957838-dacf69f40577215339482745a6d27926.png" alt="Cross Channel script screenshot 01"></p>
+<p>Note that I have skipped over some complexity in that last step, doing things like word-wrapping the line manually and making sure that the game engine gets CR-LF line breaks as opposed to just LF.  There’s more weirdness lurking there too… I don’t mean to imply that the script format is trivial, merely that it’s now open to further experimentation beyond the scope of this article.</p>
+<p>Where to go from here?  As a homework assignment, you should try experimenting with this code, or even better writing your own in your language of choice.  And how about those 2.3MB of zeroes in the archive format… will the engine object if you take that out and start file storage right after the index to save space?  Can you write a routine which will word-wrap the script automatically when packing it into an archive?  How about the kanji in the window title bar?  What other problems will you run across in trying to do a full translation of this title?</p>
+<p>But for now, this is all that I plan to use Cross+Channel for… we’ve cracked it wide open, and there’s not a huge amount more to learn here.  This is a legitimate accomplishment, because this is a real game that’s on the market and that people would like to translate.  However, it’s also a very simple example.  The archive had no compression and minimal encryption; the graphics files were a standard format; the script files are plaintext; and there was no integrity checking in the game or need to touch the executable at all.</p>
+<p>Any or all of these characteristics could have meant a lot of work for us if they went the other way.  So, in the next few installments, I’ll be picking other games to give good examples of more complicated situations, focusing on one of these areas at a time.  Feel free to suggest games that you would like to see covered, though there’s no guarantee I’ll know anything about them, of course.  Heh.</p>
+				<p class="comments_link">
+									</p>
+			</div>
+	<!--
+	<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+	    xmlns:dc="http://purl.org/dc/elements/1.1/"
+	    xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+		<rdf:Description rdf:about="http://sekai.insani.org/archives/18"
+    dc:identifier="http://sekai.insani.org/archives/18"
+    dc:title="So You Want To Be a Hacker? Part III: Code Prototyping"
+    trackback:ping="http://sekai.insani.org/archives/18/trackback/" />
+</rdf:RDF>	-->
+</div>
+
+<!--comments area-->
+	<div id="commentblock">
+		<h2 id="comments">
+			16 Responses to “So You Want To Be a Hacker? Part III: Code Prototyping”
+		</h2>
+		<ol id="commentlist">
+							<li class="alt" id="comment-37">
+					<div class="commentname">
+						<span class="commentauthor"><a href="https://web.archive.org/web/20080308155103/http://wsyntax.com/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">cyanoacry</a></span>
+					</div>
+										<div class="commentinfo">
+						<span class="commentdate">
+							June 13th, 2006 | 
+							<a href="#comment-37" title="comment link url">1:45 am</a>
+						</span>
+					</div>
+					<div class="commenttext"><p>Wow! Great article, Ed; I never knew that bit fiddling and reading could be so -easy-!</p>
+<p>I really can’t believe that’s -it-.
+</p>
+</div>
+				</li>
+											<li class="standard" id="comment-38">
+					<div class="commentname">
+						<span class="commentauthor"><a href="https://web.archive.org/web/20080308155103/http://www.haeleth.net/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Haeleth</a></span>
+					</div>
+										<div class="commentinfo">
+						<span class="commentdate">
+							June 13th, 2006 | 
+							<a href="#comment-38" title="comment link url">5:59 am</a>
+						</span>
+					</div>
+					<div class="commenttext"><p>Bah, Python.  You should have used OCaml, which has all the same advantages without any of Python’s disadvantages (slow as molasses, no ahead-of-time type checking, significant whitespace).</p>
+<p>Thinking purely from systems I’ve hacked myself: Majiro has a nice proprietary graphics format which is ugly rather than complex (it’s a silly RLE-taken-to-extremes system). AVG32 has simple compression (without encryption) and a relatively simple bytecode format, but more importantly has some interesting bugs that one has to work around; it’s also a good example of a case where there’s existing Japanese work that can be built on by the Western hacker. And, as you know all too well, RealLive is a great example of a system where tools already exist but are so flaky and unreliable that using them is practically a hacking experience in itself. No, wait, scratch that last one… :P
+</p>
+</div>
+				</li>
+											<li class="alt" id="comment-39">
+					<div class="commentname">
+						<span class="commentauthor"><a href="https://web.archive.org/web/20080308155103/http://www.haeleth.net/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Haeleth</a></span>
+					</div>
+										<div class="commentinfo">
+						<span class="commentdate">
+							June 13th, 2006 | 
+							<a href="#comment-39" title="comment link url">6:00 am</a>
+						</span>
+					</div>
+					<div class="commenttext"><p>Oops, the blasted software stripped out my &lt;bigotry type=”flamebait”&gt; tags around the first paragraph there…
+</p>
+</div>
+				</li>
+											<li class="standard" id="comment-40">
+					<div class="commentname">
+						<span class="commentauthor"><a href="https://web.archive.org/web/20080308155103/http://www.bishoujo.us/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">PyTom</a></span>
+					</div>
+										<div class="commentinfo">
+						<span class="commentdate">
+							June 13th, 2006 | 
+							<a href="#comment-40" title="comment link url">6:55 am</a>
+						</span>
+					</div>
+					<div class="commenttext"><p>I would suggest that the python struct module may be quite useful for something like this. With this module, the code to read a file entry from the archive becomes:</p>
+<p><em>(Snipped, see below. -Ed)</em></p>
+<p>Not tested or anything, but the use of struct.unpack should simplify the handling of binary data.
+</p>
+</div>
+				</li>
+											<li class="alt" id="comment-42">
+					<div class="commentname">
+						<span class="commentauthor"><a href="https://web.archive.org/web/20080308155103/http://www.insani.org/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Edward Keyes</a></span>
+					</div>
+										<div class="commentinfo">
+						<span class="commentdate">
+							June 13th, 2006 | 
+							<a href="#comment-42" title="comment link url">7:30 am</a>
+						</span>
+					</div>
+					<div class="commenttext"><p>Sorry about Wordpress screwing up the formatting.  Here’s PyTom’s code:</p>
+<pre>print 'Reading archive index...'
+entries = []
+for i in xrange(numfiles) :
+   data = arcfile.read(144)
+   filename, position, size = struct.unpack("&lt;128sqq")
+   filename = filename.strip("\0")
+   entries.append( (filename, position, size) )
+assert_zeroes(arcfile,144*(16384-numfiles),ERROR_WARNING)
+</pre>
+<p>Indeed, that’s an awesome tip, thanks!  Should have known someone else had already solved that problem for me.
+</p>
+</div>
+				</li>
+											<li class="standard" id="comment-43">
+					<div class="commentname">
+						<span class="commentauthor"><a href="https://web.archive.org/web/20080308155103/http://insani.org/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Seung Park</a></span>
+					</div>
+										<div class="commentinfo">
+						<span class="commentdate">
+							June 13th, 2006 | 
+							<a href="#comment-43" title="comment link url">8:54 am</a>
+						</span>
+					</div>
+					<div class="commenttext"><p>“… a great example of a system where tools already exist but are so flaky and unreliable that using them is practically a hacking experience in itself.”</p>
+<p>Are you sure you’re not talking about onscripter-insani here? -_-
+</p>
+</div>
+				</li>
+											<li class="alt" id="comment-44">
+					<div class="commentname">
+						<span class="commentauthor">roxfan</span>
+					</div>
+										<div class="commentinfo">
+						<span class="commentdate">
+							June 15th, 2006 | 
+							<a href="#comment-44" title="comment link url">6:26 pm</a>
+						</span>
+					</div>
+					<div class="commenttext"><p>I copy-paste these functions in most of my dumping scripts:<br>
+</p><pre><code>
+def getByte(f):
+    return struct.unpack("&lt;b&gt;
+etc.&lt;/b&gt;</code></pre>
+<p></p>
+</div>
+				</li>
+											<li class="standard" id="comment-45">
+					<div class="commentname">
+						<span class="commentauthor">roxfan</span>
+					</div>
+										<div class="commentinfo">
+						<span class="commentdate">
+							June 15th, 2006 | 
+							<a href="#comment-45" title="comment link url">7:19 pm</a>
+						</span>
+					</div>
+					<div class="commenttext"><p>Me-Wordpress 0:1<br>
+orz
+</p>
+</div>
+				</li>
+											<li class="alt" id="comment-49">
+					<div class="commentname">
+						<span class="commentauthor"><a href="https://web.archive.org/web/20080308155103/http://www.insani.org/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Edward Keyes</a></span>
+					</div>
+										<div class="commentinfo">
+						<span class="commentdate">
+							June 16th, 2006 | 
+							<a href="#comment-49" title="comment link url">8:48 pm</a>
+						</span>
+					</div>
+					<div class="commenttext"><p>I sincerely apologize for Wordpress messing up code snippets… I’ve now installed a plugin which should fix this, so code enclosed within &lt;code&gt; &lt;/code&gt; tags ought to preserve formatting and autoescape special characters now.</p>
+<p>roxfan, care to give that a second try?  Alternately you can email me what you wanted to post and I can fix your previous comment.
+</p>
+</div>
+				</li>
+											<li class="standard" id="comment-50">
+					<div class="commentname">
+						<span class="commentauthor">roxfan</span>
+					</div>
+										<div class="commentinfo">
+						<span class="commentdate">
+							June 16th, 2006 | 
+							<a href="#comment-50" title="comment link url">10:44 pm</a>
+						</span>
+					</div>
+					<div class="commenttext"><p>Try #2<br>
+</p><pre><code>
+def getByte(f):
+    return struct.unpack("&lt;B",f.read(1))[0]
+
+def getWord(f):
+    return struct.unpack("&lt;H",f.read(2))[0]
+
+def getDWord(f):
+    return struct.unpack("&lt;I",f.read(4))[0]
+
+def getQWord(f):
+    return struct.unpack("&lt;Q",f.read(8))[0]
+</code></pre><p></p>
+<p>It’s nothing special but having these snippets handy helps me quite often.
+</p>
+</div>
+				</li>
+											<li class="alt" id="comment-56">
+					<div class="commentname">
+						<span class="commentauthor"><a href="https://web.archive.org/web/20080308155103/http://blog.shishnet.org/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Shish</a></span>
+					</div>
+										<div class="commentinfo">
+						<span class="commentdate">
+							July 1st, 2006 | 
+							<a href="#comment-56" title="comment link url">4:31 am</a>
+						</span>
+					</div>
+					<div class="commenttext"><p>A predictable, but noteworthy observation — the game doesn’t care which of the two formats it’s archives are in. In the case of simple XOR encryption this isn’t much use, but in cases where decryption and encryption are separate it might be useful to try replacing an encrypted archive with an unencrypted one. (eg, would this have worked for Planetarian, where AFAIR decryption was circumvented by grabbing the files from RAM? That RealLive looks for files on disk before it looks for them in archives is even easier, but perhaps something to consider should that feature ever be removed…)
+</p>
+</div>
+				</li>
+											<li class="standard" id="comment-57">
+					<div class="commentname">
+						<span class="commentauthor"><a href="https://web.archive.org/web/20080308155103/http://www.insani.org/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Edward Keyes</a></span>
+					</div>
+										<div class="commentinfo">
+						<span class="commentdate">
+							July 1st, 2006 | 
+							<a href="#comment-57" title="comment link url">10:16 am</a>
+						</span>
+					</div>
+					<div class="commenttext"><p>Yep, that does come up a lot.  Games will sometimes have a separate method to read data, especially as a debugging or a patch-insertion mechanism, such as “check to see if the file just exists on disk, then look in the archive if it’s not there”.  Alternately, there’s often an uncompressed storage format within the archive you can use for simplicity… as long as the compression flag itself is part of the data format, the game engine will read it correctly.  And last but not least, you can sometimes save yourself a lot of work by implementing a graphics format or a compression algorithm “stupidly” and quickly, i.e. if the compression algorithm allows you to use an escape code to insert a raw byte into a compressed data stream, just escape every byte!  (It’s nice to go back and do it properly for the final release, though.)</p>
+<p>For the full version of Planetarian the DRM meant that we couldn’t alter some files without some serious effort, but fortunately there was a back-door method of having the engine read an unprotected version instead.  Saved a lot of work, and maybe even made the whole thing possible at all, since disabling the DRM entirely would have been something of an ethical problem for us.
+</p>
+</div>
+				</li>
+											<li class="alt" id="comment-58">
+					<div class="commentname">
+						<span class="commentauthor"><a href="https://web.archive.org/web/20080308155103/http://www.haeleth.net/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Haeleth</a></span>
+					</div>
+										<div class="commentinfo">
+						<span class="commentdate">
+							July 1st, 2006 | 
+							<a href="#comment-58" title="comment link url">7:38 pm</a>
+						</span>
+					</div>
+					<div class="commenttext"><p>Note, however, that RealLive’s “external” files are in fact compressed and slightly encrypted, because RealLive handles compression on the file level not the archive level.  So while there was a gain for a Kinetic Novel, because it has an additional global archive layer with hideous encryption, this would not have been a useful shortcut for a regular RealLive game: the engine requires you to do all the hard work of compression and encryption whether the file goes in an archive or not.</p>
+<p>Another similar thing to look out for is games that accept standard formats in addition to their  private ones.  For example, most Majiro games seem to use the proprietary and icky Rokucho format for their images, but I haven’t wasted any time trying to write a decent Rokucho compressor because the engine will just as happily use PNGs.  And many RealLive games insist on using the proprietary NWA format for audio — but if you want to edit or replace the audio, you can just use Ogg Vorbis.
+</p>
+</div>
+				</li>
+											<li class="standard" id="comment-8559">
+					<div class="commentname">
+						<span class="commentauthor">y</span>
+					</div>
+										<div class="commentinfo">
+						<span class="commentdate">
+							February 10th, 2008 | 
+							<a href="#comment-8559" title="comment link url">9:25 am</a>
+						</span>
+					</div>
+					<div class="commenttext"><p>if you want to put the code in a website wher can you put it
+</p>
+</div>
+				</li>
+											<li class="alt" id="comment-8814">
+					<div class="commentname">
+						<span class="commentauthor"><a href="https://web.archive.org/web/20080308155103/http://www.voy.com/214645" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">debtfree windows</a></span>
+					</div>
+										<div class="commentinfo">
+						<span class="commentdate">
+							February 16th, 2008 | 
+							<a href="#comment-8814" title="comment link url">12:40 am</a>
+						</span>
+					</div>
+					<div class="commenttext"><p>for debtfree <a href="https://web.archive.org/web/20080308155103/http://www.voy.com/214645" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">for debtfree</a>
+</p>
+</div>
+				</li>
+											<li class="standard" id="comment-9454">
+					<div class="commentname">
+						<span class="commentauthor"><a href="https://web.archive.org/web/20080308155103/http://www.voy.com/215582" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">avenged sevenfold of</a></span>
+					</div>
+										<div class="commentinfo">
+						<span class="commentdate">
+							February 28th, 2008 | 
+							<a href="#comment-9454" title="comment link url">12:25 pm</a>
+						</span>
+					</div>
+					<div class="commenttext"><p>avenged sevenfold desease <a href="https://web.archive.org/web/20080308155103/http://www.voy.com/215582" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">sevenfold of avenged</a>
+</p>
+</div>
+				</li>
+									</ol>
+
+<!--comments form -->
+<h2 id="commentsformheader">Leave a reply</h2>
+			<div id="commentsform">
+			<form action="https://web.archive.org/web/20080308155103/http://sekai.insani.org/wp-comments-post.php" method="post" id="commentform">
+							<p>
+					<input type="text" name="author" id="author" value="" size="22" tabindex="1">
+					<label for="author"><small>name </small></label>
+				</p>
+				<p>
+					<input type="text" name="email" id="email" value="" size="22" tabindex="2">
+					<label for="email"><small>email (will not be shown) </small></label>
+				</p>
+				<p>
+					<input type="text" name="url" id="url" value="" size="22" tabindex="3">
+					<label for="url"><small>website</small></label>
+				</p>
+						<!--<p><small><strong>XHTML:</strong> You can use these tags: &lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;code&gt; &lt;em&gt; &lt;i&gt; &lt;strike&gt; &lt;strong&gt; </small></p>-->
+			<p>
+				<textarea name="comment" id="comment" cols="50" rows="10" tabindex="4"></textarea>
+			</p>
+			<p>
+				<input name="submit" type="submit" id="submit" tabindex="5" value="Submit Comment">
+				
+			</p>
+					</form>
+	</div></div>
+	
+
+</div>
+</div><!-- The main content column ends  -->
+﻿<!-- begin sidebar -->
+
+<div id="navcol">
+
+		<h2>Urbi Et Orbi</h2>
+
+		<ul>
+
+			<li><a href="https://web.archive.org/web/20080308155103/http://sekai.insani.org/wp-register.php" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Register</a></li>
+			<li><a href="https://web.archive.org/web/20080308155103/http://sekai.insani.org/wp-login.php" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Login</a></li>
+
+			<li class="sidebullet">
+
+			<a href="https://web.archive.org/web/20080308155103/http://sekai.insani.org/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Home</a></li>
+
+			<li><a href="https://web.archive.org/web/20080308155103/http://sekai.insani.org/feed/" title="Syndicate this site using RSS" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><abbr title="Really Simple Syndication">RSS</abbr></a></li>
+
+			<li><a href="https://web.archive.org/web/20080308155103/http://www.insani.org/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">insani.org</a></li>
+		</ul>
+		
+		<h2>Der Gedeuteten Welt</h2>
+		<ul>	
+			<li><a href="https://web.archive.org/web/20080308155103/http://altogether.insani.org/2005" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">al|together 2005</a></li>
+			<li><a href="https://web.archive.org/web/20080308155103/http://altogether.insani.org/2006" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">al|together 2006</a></li>
+			<li><a href="https://web.archive.org/web/20080308155103/http://www.haeleth.net/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Hæleþes áwendende</a></li>
+			<li><a href="https://web.archive.org/web/20080308155103/http://dekadenbiyori.blog40.fc2.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">でかだんびより</a></li>
+		</ul>
+
+		<h2>Archives</h2>
+
+		<ul>
+
+				<li><a href="https://web.archive.org/web/20080308155103/http://sekai.insani.org/archives/date/2006/08/" title="August 2006" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">August 2006</a></li>
+	<li><a href="https://web.archive.org/web/20080308155103/http://sekai.insani.org/archives/date/2006/07/" title="July 2006" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">July 2006</a></li>
+	<li><a href="https://web.archive.org/web/20080308155103/http://sekai.insani.org/archives/date/2006/06/" title="June 2006" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">June 2006</a></li>
+	<li><a href="https://web.archive.org/web/20080308155103/http://sekai.insani.org/archives/date/2006/05/" title="May 2006" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">May 2006</a></li>
+
+		</ul>
+
+		
+
+		<h2>Categories</h2>
+
+		<ul>
+
+				<li><a href="https://web.archive.org/web/20080308155103/http://sekai.insani.org/archives/category/production-process/" title="Posts that entail what our production processes are like, or comment on someone else’s production processes." target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Production Process</a> (9)
+		<ul class="children">	<li><a href="https://web.archive.org/web/20080308155103/http://sekai.insani.org/archives/category/production-process/letters-to-a-young-translator/" title="The “Letters to a Young Translator” series of production-process commentary." target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Letters to a Young Translator</a> (3)
+</li>
+	<li><a href="https://web.archive.org/web/20080308155103/http://sekai.insani.org/archives/category/production-process/so-you-want-to-be-a-hacker/" title="The “So You Want To Be a Hacker?” series of production-process commentary." target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">So You Want To Be a Hacker?</a> (4)
+</li>
+	<li><a href="https://web.archive.org/web/20080308155103/http://sekai.insani.org/archives/category/production-process/project-debriefs/" title="Discussion of how projects went, lessons learned, etc." target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Project Debriefs</a> (2)
+</li>
+		</ul>
+</li>
+	<li><a href="https://web.archive.org/web/20080308155103/http://sekai.insani.org/archives/category/translation/" title="Draft translations, or tidbits of works-in-progress" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Translation</a> (3)
+		<ul class="children">	<li><a href="https://web.archive.org/web/20080308155103/http://sekai.insani.org/archives/category/translation/french/" title="Original language: French" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">French</a> (3)
+</li>
+		</ul>
+</li>
+
+		</ul>
+
+		<ul id="linkslist">
+
+		
+		
+		</ul>		
+
+		
+		<div id="searchdiv">
+
+		<form id="searchform" method="get" action="">
+
+			<input type="text" name="s" size="15">
+
+		</form>
+
+		</div>
+
+	</div>
+
+<!-- end sidebar --><!-- begin footer -->
+<div id="footer">
+		<p class="footer">
+			«Und was gab das den Frauen für eine wehmütige Schönheit, wenn sie schwanger waren und standen, und in ihrem großen Leib, auf welchem die schmalen Hände unwillkürlich liegen blieben, waren zwei Früchte: ein Kind und ein Tod. Kam das dichte, beinah nahrhafte Lächeln in ihrem ganz ausgeräumten Gesicht nicht davon her, daß sie manchmal meinten, es wüchsen beide?»<br>Rainer Maria Rilke, <em>Die Aufzeichnungen des Malte Laurids Brigge</em>
+		</p>
+	</div>
+</div>
+
+
+<!--
+playback timings (ms):
+  exclusion.robots: 0.422
+  PetaboxLoader3.datanode: 129.809 (4)
+  load_resource: 114.547
+  captures_list: 182.578
+  LoadShardBlock: 104.656 (3)
+  CDXLines.iter: 18.212 (3)
+  exclusion.robots.policy: 0.401
+  RedisCDXSource: 54.598
+  esindex: 0.02
+  PetaboxLoader3.resolve: 66.825
+--><a href="" download="" data-mx-warn="Empty URL"></a><div data-mx-warn="extension url was not captured by MaoXian" data-mx-original-src="chrome-extension://kjahokgdcbohofgdidndeiaigkehdjdc/pages/ui-selection.html?t=aHR0cHM6Ly93ZWIuYXJjaGl2ZS5vcmc="></div><div data-mx-warn="extension url was not captured by MaoXian" data-mx-original-src="chrome-extension://kjahokgdcbohofgdidndeiaigkehdjdc/pages/ui-control.html?t=aHR0cHM6Ly93ZWIuYXJjaGl2ZS5vcmc="></div>
+</body>
+  </html>

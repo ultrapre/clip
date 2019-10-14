@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width">
+	<title>Circus [サーカス]</title>
+	<link rel="stylesheet" href="/base_style2018.css" media="screen" />
+	<link rel="stylesheet" href="/limited_style2018.css" />
+	<link rel="stylesheet" href="/top_style2018.css?1811201600" media="screen" />
+	<link rel="stylesheet" href="/information/_infolist.css" media="screen" />
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="favicon.ico" />
+	<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico" />
+	<meta name="Description" content="美少女ゲームメーカー・サーカスのウェブサイト" />
+	<meta name="Keywords" content="ダ・カーポ,D.C.,水夏,インファンタリア,アリエス,最終試験くじら,エターナルファンタジー,ヴァルキリーコンプレックス,あるぴじ学園,水夏弐律" />
+	<script src="/base_script2018.js"></script>
+	<script src="/top_script2018.js?1801191000"></script>
+</head>
+<body>
+	
+	
+	<div id="group-navigation">
+		<ul>
+			<li class="current"><a href="https://circus-co.jp/">CIRCUS</a></li>
+			<li><a href="https://mycircusid.fc-soft.com/">MyCIRCUS ID</a></li>
+			<li><a href="https://circus.fc-soft.com/?">FANCLUB</a></li>
+		</ul>
+	</div>
+	
+	<header>
+		
+		<div id="site-title">
+			<a id="site-title-string" href="/"><span>Circus Official Site</span></a>
+			<ul id="site-social">
+				<li class="twitter_btn"><a href="https://twitter.com/share" class="twitter-share-button" data-lang="ja" data-count="none" data-text="Circus Official Site" data-url="https://circus-co.jp/">ツイート</a></li>
+			</ul>
+		</div>
+		
+		<div id="site-menu">
+			<ul>
+				<li><a class="news" href="/information/"><span class="wostyle">ニュース</span></a></li>
+				<li><a class="product" href="/product/"><span class="wostyle">製品情報</span></a></li>
+				<li><a class="event" href="/event/"><span class="wostyle">イベント</span></a></li>
+				<li><a class="goods" href="/goods/"><span class="wostyle">グッズ</span></a></li>
+				<li><a class="netorder"><span class="wostyle">通信販売</span></a></li>
+				<li><a class="support" href="/support/"><span class="wostyle">サポート・お問い合わせ</span></a></li>
+			</ul>
+		</div>
+		
+	</header>
+	
+	<div id="top-contents">
+		
+		<div id="promotion-banners">
+			
+			<ul>
+				
+				<li>
+					<a target="_blank" href="/information/ext/dc_superlive_ii/" data-delay="7000">
+						<img 
+						 src="/images/promotion/prom_191007_dcslive2.jpg"
+						 alt="D.C.～ダ・カーポ～ Super Live Ⅱ クラウドファンディング受付中！"
+						 title="">
+					</a>
+					
+				</li>
+				<li>
+					<a target="_blank" href="/product/dc4/" data-delay="7000">
+						<img 
+						 src="/images/promotion/prom_190719_dc4.jpg"
+						 alt="「D.C.4 ～ダ・カーポ4～」好評発売中！　ダウンロード販売中！「D.C.4」キャラクターがLINEスタンプに登場！　体験版、出演キャストコメント、OPムービー等公開中　この恋は、世界を変える"
+						 title="">
+					</a>
+					
+				</li>
+				<li>
+					<a target="_blank" href="/product/dc_archives/" data-delay="7000">
+						<img 
+						 src="/images/promotion/prom_190125_dcarchives.jpg"
+						 alt="D.C.～ダ・カーポ～アーカイブス　SAKURA Edition　2019年1月25日発売　完全受注生産特別限定版"
+						 title="">
+					</a>
+					
+				</li>
+				<li>
+					<a target="_blank" href="/product/spacelive/" data-delay="7000">
+						<img 
+						 src="/images/promotion/prom_181207_spacelive.jpg"
+						 alt="スペースライブ ダウンロード販売中！"
+						 title="">
+					</a>
+					
+				</li>
+				<li>
+					<a target="_blank" href="/product/tenpure/" data-delay="7000">
+						<img 
+						 src="/images/promotion/prom_180629_tenpure.jpg"
+						 alt="てんぷれっ!!　ダウンロード販売中！"
+						 title="">
+					</a>
+					
+				</li>
+				<li>
+					<a target="_blank" href="/product/ds/" data-delay="7000">
+						<img 
+						 src="/images/promotion/prom_180323_ds.jpg"
+						 alt="PS4/Vita版 D.S. -Dal Segno- 好評発売中！"
+						 title="">
+					</a>
+					
+				</li>
+				
+			</ul>
+			
+		</div><!-- #promotion-banners -->
+		
+		
+		<div id="main-wrapper">
+		
+			<div id="left-wrapper">
+			
+				<div id="latest-information" class="frame-style information-list">
+					<h2>最新情報</h2>
+					
+					<div class="article">
+						
+						<div class="banners">
+							<img class="banner" alt="" src="/images/information/info_190828_dcslive2.jpg">
+						</div>
+						
+						<div class="detail">
+							
+							<div class="title-and-text">
+								<h3><img alt="イベント" src="/images/information/category_event.jpg"><a  target="_blank" href="https://circus-co.jp/information/ext/dc_superlive_ii/">D.C.～ダ・カーポ～ Super Live Ⅱ クラウドファンディング支援受付中！</a></h3>
+								<div class="text">
+									<p>『D.C.～ダ・カーポ～ Super Live Ⅱ』のクラウドファンディング支援受付中！ 受け付け開始翌日に支援金額3,000万円突破、誠にありがとうございました！</p>
+								</div>
+							</div>
+							
+							<div class="readmore-and-date csoon">
+								<div class="readmore"><a  target="_blank" href="https://circus-co.jp/information/ext/dc_superlive_ii/">詳細を見る &raquo;</a></div>
+								<div class="date">Pickup!</div>
+							</div>
+							
+						</div><!-- .detail -->
+						
+					</div><!-- .article -->
+					
+					<div class="article">
+						
+						<div class="banners">
+							<img class="banner" alt="" src="/images/information/info_190809_niconama.jpg">
+						</div>
+						
+						<div class="detail">
+							
+							<div class="title-and-text">
+								<h3><img alt="お知らせ" src="/images/information/category_notify.jpg"><a  href="https://circus-co.jp/information/2019/info_15">10/12(土)予定ニコニコ生放送「CIRCUS20周年特別企画　CFミーティング」中止のお知らせ</a></h3>
+								<div class="text">
+									<p>10/7(月)配信のツイキャスで先行してお知らせしておりましたニコニコ生放送「CIRCUS20周年特別企画　CFミーティング」ですが、今週末10/12(土)につきましては、台風の影響により開催を中止させて頂きます。</p>
+								</div>
+							</div>
+							
+							<div class="readmore-and-date">
+								<div class="readmore"><a  href="https://circus-co.jp/information/2019/info_15">詳細を見る &raquo;</a></div>
+								<div class="date">2019-10-11</div>
+							</div>
+							
+						</div><!-- .detail -->
+						
+					</div><!-- .article -->
+					
+					<div class="article">
+						
+						<div class="banners">
+							<img class="banner" alt="" src="/images/information/info_190101_dc4_nino.jpg">
+						</div>
+						
+						<div class="detail">
+							
+							<div class="title-and-text">
+								<h3><img alt="ゲーム" src="/images/information/category_game.jpg"><a  target="_blank" href="http://www.entergram.co.jp/dc4/">「D.C.4 ～ダ・カーポ4～」PS4/Switch版12月19日発売予定！</a></h3>
+								<div class="text">
+									<p>サーカス最新作『D.C.4 ～ダ・カーポ4～』はPlayStation 4とNintendo Switchで12月19日発売予定！</p>
+								</div>
+							</div>
+							
+							<div class="readmore-and-date csoon">
+								<div class="readmore"><a  target="_blank" href="http://www.entergram.co.jp/dc4/">詳細を見る &raquo;</a></div>
+								<div class="date">Pickup!</div>
+							</div>
+							
+						</div><!-- .detail -->
+						
+					</div><!-- .article -->
+					
+					<div class="article">
+						
+						<div class="banners">
+							<img class="banner" alt="" src="/images/information/info_190719_line.jpg">
+						</div>
+						
+						<div class="detail">
+							
+							<div class="title-and-text">
+								<h3><img alt="ショップ" src="/images/information/category_shop.jpg"><a  href="https://circus-co.jp/product/linestamp/">D.C.4 LINEスタンプ販売開始！</a></h3>
+								<div class="text">
+									<p>D.C.4のキャラクターや作中使用の可愛いスタンプがLINEスタンプに登場！</p>
+								</div>
+							</div>
+							
+							<div class="readmore-and-date csoon">
+								<div class="readmore"><a  href="https://circus-co.jp/product/linestamp/">詳細を見る &raquo;</a></div>
+								<div class="date">Pickup!</div>
+							</div>
+							
+						</div><!-- .detail -->
+						
+					</div><!-- .article -->
+					
+					<div class="article">
+						
+						<div class="banners">
+							<img class="banner" alt="" src="/images/information/info_circus.jpg">
+						</div>
+						
+						<div class="detail">
+							
+							<div class="title-and-text">
+								<h3><img alt="お知らせ" src="/images/information/category_notify.jpg"><a  href="https://circus-co.jp/information/2019/info_05">「D.C.～ダ・カーポ～アーカイブス」同梱ボーカルCD及びD.C. Special Song＆MusicBook不備について</a></h3>
+								<div class="text">
+									<p>「D.C.～ダ・カーポ～アーカイブス」同梱ボーカルCD「D.C. Special Song Archives」不備のディスク交換一次受付分を発送を致しました。また、同梱冊子「D.C. Special Song＆MusicBook」不備についてのお知らせです。</p>
+								</div>
+							</div>
+							
+							<div class="readmore-and-date csoon">
+								<div class="readmore"><a  href="https://circus-co.jp/information/2019/info_05">詳細を見る &raquo;</a></div>
+								<div class="date">Pickup!</div>
+							</div>
+							
+						</div><!-- .detail -->
+						
+					</div><!-- .article -->
+					
+					<div class="article">
+						
+						<div class="banners">
+							<img class="banner" alt="" src="/images/information/info_circus.jpg">
+						</div>
+						
+						<div class="detail">
+							
+							<div class="title-and-text">
+								<h3><img alt="お知らせ" src="/images/information/category_notify.jpg"><a  href="https://circus-co.jp/information/2019/info_04">メール・フォームお問い合わせの際のお願い</a></h3>
+								<div class="text">
+									<p>現在メールやフォームで頂いているお問い合わせの内、複数のメール返信にてエラーが発生し、返信が完了しないことがございます。こちらの情報をご参照の上、ご対応の程宜しくお願い致します。</p>
+								</div>
+							</div>
+							
+							<div class="readmore-and-date csoon">
+								<div class="readmore"><a  href="https://circus-co.jp/information/2019/info_04">詳細を見る &raquo;</a></div>
+								<div class="date">Pickup!</div>
+							</div>
+							
+						</div><!-- .detail -->
+						
+					</div><!-- .article -->
+					
+				</div><!-- #latest-information -->
+				
+				<div id="new-information" class="frame-style information-list">
+					<h2>新着情報</h2>
+					
+					<div class="article">
+						
+						<div class="banners">
+							<img class="banner" alt="" src="/images/information/info_190828_dcslive2.jpg">
+						</div>
+						
+						<div class="detail">
+							
+							<div class="title-and-text">
+								<h3><img alt="イベント" src="/images/information/category_event.jpg"><a  target="_blank" href="https://circus-co.jp/information/ext/dc_superlive_ii/">D.C.～ダ・カーポ～ Super Live Ⅱ クラウドファンディング支援受付中！</a></h3>
+								<div class="text">
+									<p>『D.C.～ダ・カーポ～ Super Live Ⅱ』のクラウドファンディング支援受付中！ 受け付け開始翌日に支援金額3,000万円突破、誠にありがとうございました！</p>
+								</div>
+							</div>
+							
+							<div class="readmore-and-date">
+								<div class="readmore"><a  target="_blank" href="https://circus-co.jp/information/ext/dc_superlive_ii/">詳細を見る &raquo;</a></div>
+								<div class="date">2019-10-07</div>
+							</div>
+							
+						</div><!-- .detail -->
+						
+					</div><!-- .article -->
+					
+					<div class="article">
+						
+						<div class="banners">
+							<img class="banner" alt="" src="/images/information/info_190101_dc4_arisu.jpg">
+						</div>
+						
+						<div class="detail">
+							
+							<div class="title-and-text">
+								<h3><img alt="ゲーム" src="/images/information/category_game.jpg"><a  target="_blank" href="https://circus-co.jp/product/dc4/">「D.C.4 ～ダ・カーポ4～」D.C.4紹介マンガ fr.4 更新！</a></h3>
+								<div class="text">
+									<p>D.C.4紹介マンガ fr.4 を更新！ D.C.4 ダウンロード版も好評発売中！</p>
+								</div>
+							</div>
+							
+							<div class="readmore-and-date csoon">
+								<div class="readmore"><a  target="_blank" href="https://circus-co.jp/product/dc4/">詳細を見る &raquo;</a></div>
+								<div class="date">Pickup!</div>
+							</div>
+							
+						</div><!-- .detail -->
+						
+					</div><!-- .article -->
+					
+					<div class="article">
+						
+						<div class="banners">
+							<img class="banner" alt="" src="/images/information/info_190809_niconama.jpg">
+						</div>
+						
+						<div class="detail">
+							
+							<div class="title-and-text">
+								<h3><img alt="メディア" src="/images/information/category_media.jpg"><a  href="https://circus-co.jp/information/2019/info_14">ニコニコ生放送「CFミーティング第7回」ダ・カーポ組曲＆yozuca*ミニライブ開催！</a></h3>
+								<div class="text">
+									<p>いよいよ10月5日(土)21:30より、クラウドファンディグの支援受付がCAMPFIREにて始まります！ という事で、今回はCFミーティングも特別版！ 「ダ・カーポ組曲」と、yozuca*さんを招いてミニライブを開催します！</p>
+								</div>
+							</div>
+							
+							<div class="readmore-and-date">
+								<div class="readmore"><a  href="https://circus-co.jp/information/2019/info_14">詳細を見る &raquo;</a></div>
+								<div class="date">2019-10-04</div>
+							</div>
+							
+						</div><!-- .detail -->
+						
+					</div><!-- .article -->
+					
+					<div class="article">
+						
+						<div class="banners">
+							<img class="banner" alt="" src="/images/information/info_190101_dc4_arisu.jpg">
+						</div>
+						
+						<div class="detail">
+							
+							<div class="title-and-text">
+								<h3><img alt="ゲーム" src="/images/information/category_game.jpg"><a  target="_blank" href="https://circus-co.jp/product/dc4/">「D.C.4 ～ダ・カーポ4～」D.C.4紹介マンガ fr.4 更新！</a></h3>
+								<div class="text">
+									<p>D.C.4紹介マンガ fr.4 を更新！ D.C.4 ダウンロード版も好評発売中！</p>
+								</div>
+							</div>
+							
+							<div class="readmore-and-date">
+								<div class="readmore"><a  target="_blank" href="https://circus-co.jp/product/dc4/">詳細を見る &raquo;</a></div>
+								<div class="date">2019-10-04</div>
+							</div>
+							
+						</div><!-- .detail -->
+						
+					</div><!-- .article -->
+					
+					<div class="article">
+						
+						<div class="banners">
+							<img class="banner" alt="" src="/images/information/info_191003_goods.jpg">
+						</div>
+						
+						<div class="detail">
+							
+							<div class="title-and-text">
+								<h3><img alt="ショップ" src="/images/information/category_shop.jpg"><a  href="https://circus-co.jp/goods/">二次元コスパから「D.C.4 ～ダ・カーポ4～」のグッズが登場！</a></h3>
+								<div class="text">
+									<p>二次元コスパからCIRCUS最新作「D.C.4 ～ダ・カーポ4～」の「フルグラフィックTシャツ」「Tシャツ」「湯のみ」が登場！</p>
+								</div>
+							</div>
+							
+							<div class="readmore-and-date">
+								<div class="readmore"><a  href="https://circus-co.jp/goods/">詳細を見る &raquo;</a></div>
+								<div class="date">2019-10-03</div>
+							</div>
+							
+						</div><!-- .detail -->
+						
+					</div><!-- .article -->
+					
+					<div class="article">
+						
+						<div class="banners">
+							<img class="banner" alt="" src="/images/information/info_190828_dcslive2.jpg">
+						</div>
+						
+						<div class="detail">
+							
+							<div class="title-and-text">
+								<h3><img alt="イベント" src="/images/information/category_event.jpg"><a  target="_blank" href="https://circus-co.jp/information/ext/dc_superlive_ii/">D.C.～ダ・カーポ～ Super Live Ⅱ CF受付開始日時決定！</a></h3>
+								<div class="text">
+									<p>9/28に『D.C.～ダ・カーポ～ Super Live Ⅱ』の公式サイトが公開！ CAMPFIREでのクラウドファンディング受付開始も10月5日(土)21:30(予定)に決定しました。</p>
+								</div>
+							</div>
+							
+							<div class="readmore-and-date">
+								<div class="readmore"><a  target="_blank" href="https://circus-co.jp/information/ext/dc_superlive_ii/">詳細を見る &raquo;</a></div>
+								<div class="date">2019-09-30</div>
+							</div>
+							
+						</div><!-- .detail -->
+						
+					</div><!-- .article -->
+					
+					<div class="article">
+						
+						<div class="banners">
+							<img class="banner" alt="" src="/images/information/info_190828_dcslive2.jpg">
+						</div>
+						
+						<div class="detail">
+							
+							<div class="title-and-text">
+								<h3><img alt="イベント" src="/images/information/category_event.jpg"><a  target="_blank" href="https://circus-co.jp/information/ext/dc_superlive_ii/">D.C.～ダ・カーポ～ Super Live Ⅱ 公式サイト公開！</a></h3>
+								<div class="text">
+									<p>20周年特別企画として発表された『D.C.～ダ・カーポ～ Super Live Ⅱ』の公式サイト公開！</p>
+								</div>
+							</div>
+							
+							<div class="readmore-and-date">
+								<div class="readmore"><a  target="_blank" href="https://circus-co.jp/information/ext/dc_superlive_ii/">詳細を見る &raquo;</a></div>
+								<div class="date">2019-09-28</div>
+							</div>
+							
+						</div><!-- .detail -->
+						
+					</div><!-- .article -->
+					
+					<div class="article">
+						
+						<div class="banners">
+							<img class="banner" alt="" src="/images/information/info_190809_niconama.jpg">
+						</div>
+						
+						<div class="detail">
+							
+							<div class="title-and-text">
+								<h3><img alt="メディア" src="/images/information/category_media.jpg"><a  href="https://circus-co.jp/information/2019/info_12">ニコニコ生放送「CIRCUS20周年特別企画　CFミーティング第6回」</a></h3>
+								<div class="text">
+									<p>20周年特別企画として発表された『D.C.～ダ・カーポ～ Super Live Ⅱ』開催！ 調整したリターン内容をもとにクラウドファンディングの準備をちゃくちゃくと進めています。今回は一部描き下ろしイラストの進捗報告、そして各種グッズのサンプルを発表しちゃいます！</p>
+								</div>
+							</div>
+							
+							<div class="readmore-and-date">
+								<div class="readmore"><a  href="https://circus-co.jp/information/2019/info_12">詳細を見る &raquo;</a></div>
+								<div class="date">2019-09-27</div>
+							</div>
+							
+						</div><!-- .detail -->
+						
+					</div><!-- .article -->
+					
+					<div class="article">
+						
+						<div class="banners">
+							<img class="banner" alt="" src="/images/information/info_190101_dc4_arisu.jpg">
+						</div>
+						
+						<div class="detail">
+							
+							<div class="title-and-text">
+								<h3><img alt="ゲーム" src="/images/information/category_game.jpg"><a  target="_blank" href="https://circus-co.jp/product/dc4/">「D.C.4 ～ダ・カーポ4～」D.C.4紹介マンガ fr.4 更新！</a></h3>
+								<div class="text">
+									<p>D.C.4紹介マンガ fr.4 を更新！ D.C.4 ダウンロード版も好評発売中！</p>
+								</div>
+							</div>
+							
+							<div class="readmore-and-date">
+								<div class="readmore"><a  target="_blank" href="https://circus-co.jp/product/dc4/">詳細を見る &raquo;</a></div>
+								<div class="date">2019-09-27</div>
+							</div>
+							
+						</div><!-- .detail -->
+						
+					</div><!-- .article -->
+					
+					<div class="article">
+						
+						<div class="banners">
+							<img class="banner" alt="" src="/images/information/info_190927_craneparty.jpg">
+						</div>
+						
+						<div class="detail">
+							
+							<div class="title-and-text">
+								<h3><img alt="ショップ" src="/images/information/category_shop.jpg"><a  href="https://circus-co.jp/information/2019/info_13">【D.C.4祭り】～クレパ×D.C.4～開催！</a></h3>
+								<div class="text">
+									<p>オンラインクレーンゲーム「クレーンパーティー」でD.C.4レアグッズが登場！ アクリルフィギュアやタオルなど、通常のクレーンゲームにはないクオリティのグッズが10種類以上！ クレパでしか手に入らないのでお見逃しなく！</p>
+								</div>
+							</div>
+							
+							<div class="readmore-and-date">
+								<div class="readmore"><a  href="https://circus-co.jp/information/2019/info_13">詳細を見る &raquo;</a></div>
+								<div class="date">2019-09-27</div>
+							</div>
+							
+						</div><!-- .detail -->
+						
+					</div><!-- .article -->
+					
+					<div class="readlist"><a href="/information/index.php">&raquo;その他の新着情報</a></div>
+					
+				</div><!-- #new-information -->
+				
+
+				
+			</div><!-- #left-wrapper -->
+			
+			<div id="right-wrapper">
+				<div id="pickup-list" class="frame-style">
+					<h2>ピックアップ</h2>
+					<ul>
+						<li>
+							<a target="_blank" href="/information/ext/dc_superlive_ii/">
+								<img 
+								 src="/images/pickup/pick_191007_dcslive2.png"
+								 alt="D.C.～ダ・カーポ～ Super Live Ⅱ クラウドファンディング受付中！"
+								 title="">
+							</a>
+						</li>
+						
+						<li>
+							<a target="_blank" href="/product/dc4/">
+								<img 
+								 src="/images/pickup/pick_190628_dc4.png"
+								 alt="「D.C.4 ～ダ・カーポ4～」好評発売中！　ダウンロード販売中"
+								 title="">
+							</a>
+						</li>
+						
+						<li>
+							<a target="_blank" href="/product/dc_archives/">
+								<img 
+								 src="/images/pickup/pick_190125_dcarchives.png"
+								 alt="D.C.～ダ・カーポ～アーカイブス　SAKURA Edition　2019年1月25日発売"
+								 title="">
+							</a>
+						</li>
+						
+						<li>
+							<a target="_blank" href="/product/spacelive/">
+								<img 
+								 src="/images/pickup/pick_181207_spacelive.png"
+								 alt="スペースライブ ダウンロード販売中！"
+								 title="">
+							</a>
+						</li>
+						
+						<li>
+							<a target="_blank" href="/product/tenpure/">
+								<img 
+								 src="/images/pickup/pick_180629_tenpure.png"
+								 alt="てんぷれっ!!　ダウンロード販売中！"
+								 title="">
+							</a>
+						</li>
+						
+						<li>
+							<a target="_blank" href="/product/ds/">
+								<img 
+								 src="/images/pickup/pick_171116_ds_m.png"
+								 alt="PS4/Vita版 D.S. -Dal Segno- 発売決定！ 2018.3.22 ON SALE!"
+								 title="">
+							</a>
+						</li>
+						
+						<li>
+							<a href="/product/dl/">
+								<img 
+								 src="/images/pickup/pick_140704_dlsell.png"
+								 alt="ダウンロード販売中タイトル♪"
+								 title="">
+							</a>
+						</li>
+						
+						<li>
+							<a href="/product/linestamp/">
+								<img 
+								 src="/images/pickup/pick_190719_line.png"
+								 alt="サーカスLINEスタンプ情報！"
+								 title="">
+							</a>
+						</li>
+						
+					</ul>
+
+				</div><!-- #pickup-list -->
+				
+				<div id="relative-list" class="frame-style">
+					<h2>関連情報</h2>
+					
+					<ul>
+						<li>
+							<a target="_blank" href="https://twitter.com/circus_info">
+								<img 
+								 src="/images/relative/twitter_circus.png"
+								 alt="@circus_info twitter"
+								 title="">
+							</a>
+						</li>
+						
+						<li>
+							<a target="_blank" href="http://www.facebook.com/circus1111">
+								<img 
+								 src="/images/relative/facebook_circus.png"
+								 alt="CIRCUS facebook"
+								 title="">
+							</a>
+						</li>
+						
+						<li>
+							<a target="_blank" href="http://ch.nicovideo.jp/circus">
+								<img 
+								 src="/images/relative/rela_130517_circhannel_ss.png"
+								 alt="CIRCUSチャンネル 最新動画はこちら！"
+								 title="">
+							</a>
+						</li>
+						
+						<li>
+							<a target="_blank" href="http://yahoo-mbga.jp/avatar/gacha_coin/48cfg61N?_ref=aff%3D0000168">
+								<img 
+								 src="/images/relative/rela_150213_mobage_s.png"
+								 alt="Mobage アバターコインガチャ『D.C.Ⅲ』"
+								 title="">
+							</a>
+						</li>
+						
+					</ul>
+
+					
+				</div><!-- #relative-list -->
+				
+			</div><!-- #right-wrapper -->
+			
+		</div><!-- #main-wrapper -->
+		
+	</div><!-- #top-contents -->
+	
+	<div id="footet-banner">
+		
+		<ul>
+		
+			<li>
+				<a target="_blank" href="/product/linestamp/">
+					<img 
+					 src="/images/promotion_sub/promsub_150109_line.jpg"
+					 alt="LINEスタンプが販売中！！"
+					 title="">
+				</a>
+				
+			</li>
+		</ul>
+		
+	</div>
+	
+
+	
+	<footer>
+		
+		<ul class="menu">
+			<li><a href="/">トップ</a></li>
+			<li><a href="/recruit/">リクルート情報</a></li>
+			<li><a href="/terms/">ご利用規約/プライバシーポリシー</a></li>
+			<li><a target="_blank" href="/information/2013/info_11.html">オンラインユーザー登録・変更について</a></li>
+			<li><a href="/licensing/">サーカス作品ライセンス窓口</a></li>
+		</ul>
+		
+		<div class="attention">
+			<p>当ページに掲載されている製品名および会社名は各社の商標または登録商標です。</p>
+			<p>Circus HomePageに掲載されている記事および、グラフィックなどの全ての著作物の無断使用・無断転載を禁じます。</p>
+			<p>当ページには、18歳未満（高校生の方含む）の方の閲覧に適さない内容が掲載されております。</p>
+			<p>年齢制限を守り、正しくご閲覧頂きますようお願い申し上げます。</p>
+		</div>
+		
+		<p class="copyrights">
+			Copyrights &copy;CIRCUS
+		</p>
+		
+	</footer>
+	
+	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+	
+	
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		
+		ga('create', 'UA-98131244-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+	
+	
+</body>
+</html>

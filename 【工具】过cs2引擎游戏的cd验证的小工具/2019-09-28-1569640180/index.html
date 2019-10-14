@@ -1,0 +1,1620 @@
+
+  <!DOCTYPE html>
+  <html id="" class="">
+    <!-- OriginalSrc: https://bbs.zdfx.net/thread-389662-1-3.html -->
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <title>【工具】过cs2引擎游戏的cd验证的小工具 - 教程区 - 终点分享</title>
+      
+<link rel="shortcut icon" href="assets/1569640180-e81b5947c7abaae78e35cec3bad71fe7.ico" referrerpolicy="no-referrer">
+
+
+<link rel="stylesheet" type="text/css" href="assets/1569640180-85caba8cb02aef16de7600ede53263d0.css" referrerpolicy="no-referrer">
+<link rel="stylesheet" type="text/css" href="assets/1569640180-a71dc544038114b44c836ab7027dd5d6.css" referrerpolicy="no-referrer">
+<link rel="stylesheet" type="text/css" href="assets/1569640180-11a323f273480852d22a0b0679c3f978.css" referrerpolicy="no-referrer">
+<link id="layuicss-skinlayimcss" rel="stylesheet" href="assets/1569640180-f6690d2203f1851c541d835534fa98da.css" media="all" referrerpolicy="no-referrer">
+<link id="layuicss-layer" rel="stylesheet" href="assets/1569640180-f047d528d2d6935b6a85a420adabfcd3.css" media="all" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="assets/1569640180-0c06e8425b20c168d075ae68bb660e4d.css" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="assets/1569640180-e63ef21268f8c65167dde24ff3a4e783.css" referrerpolicy="no-referrer">
+<link rel="stylesheet" type="text/css" href="assets/1569640180-6f1b46eaa6b3295a424d6a3902b5981f.css" referrerpolicy="no-referrer">
+<link rel="stylesheet" type="text/css" href="assets/1569640180-8ab4276818474108cdb71c9a262f61ca.css" referrerpolicy="no-referrer">
+
+
+<style type="text/css">@keyframes fadeInOpacity{0%{opacity:0}to{opacity:1}}:hover>*>.fbvd--wrapper{animation-name:fadeInOpacity;animation-duration:.3s;opacity:1}.fbvd--wrapper{position:absolute;top:10px;left:10px;opacity:0;text-align:center;margin:0;z-index:5}.fbvd--wrapper a{background: url("") no-repeat 3px 4.55px; background-color: #fff; display:inline-block;font:700 14px Helvetica,Arial,sans-serif;color:#4b4f56;text-decoration:none;vertical-align:middle;padding:0px 8px 0px;margin-right:8px;border-radius:2px; line-height: 22px; padding-left:19px; border: 1px solid #e7e7e7; background-size: 13px}.fbvd--wrapper a:last-child{margin-right:0}.fbvd--wrapper a:hover{text-decoration:none}.fbvd--wrapper a:focus{box-shadow:0 0 1px 2px rgba(88,144,255,.75),0 1px 1px rgba(0,0,0,.15);outline:none}.fbvd--wrapper b{font-size:13px;position:relative;top:1px;color:#3b5998;font-weight:400}</style>
+<style>video::-internal-media-controls-download-button {display:none;}video::-webkit-media-controls-enclosure {overflow:hidden;}video::-webkit-media-controls-panel {width: calc(100% + 30px); }audio::-internal-media-controls-download-button {display:none;}audio::-webkit-media-controls-enclosure {overflow:hidden;}audio::-webkit-media-controls-panel {width: calc(100% + 30px); }</style>
+<style type="text/css">
+#fastposteditor{
+position:relative;
+}
+#fastposteditor .tedt{
+position:relative;
+z-index:1;
+}
+#fastposteditor .tedt .area{
+background:none;
+}
+#fastposteditor .tedt .pt{
+background:none;
+}
+#rsf_lgf_bg{
+width:auto;
+height:auto;
+position:absolute;
+top:26px;
+left:1px;
+z-index:0;
+max-height:130px;
+overflow:hidden;
+text-align:center;
+}
+#rsf_lgf_bg img{
+width:auto;
+max-height:130px;
+margin:0 auto;
+filter:alpha(opacity='90');
+zoom:1;	
+}
+</style>
+<style>.cardstyle_277 { background: url("") !important;}.cardstyle_277 { color: #000000;}.cardstyle_277 a { color: #000000;}.cardstyle_277 a:hover { color: #000000;}.cardstyle_277 .xi2 { color: #000000;}.cardstyle_277 .xi1 { color: #F26C4F;}.cardstyle_276 { background: url("") !important;}.cardstyle_276 { color: #000000;}.cardstyle_276 a { color: #000000;}.cardstyle_276 a:hover { color: #000000;}.cardstyle_276 .xi2 { color: #000000;}.cardstyle_276 .xi1 { color: #F26C4F;}.cardstyle_275 { background: url("") !important;}.cardstyle_275 { color: #000000;}.cardstyle_275 a { color: #000000;}.cardstyle_275 a:hover { color: #000000;}.cardstyle_275 .xi2 { color: #000000;}.cardstyle_275 .xi1 { color: #F26C4F;}.cardstyle_274 { background: url("") !important;}.cardstyle_274 { color: #000000;}.cardstyle_274 a { color: #000000;}.cardstyle_274 a:hover { color: #000000;}.cardstyle_274 .xi2 { color: #000000;}.cardstyle_274 .xi1 { color: #F26C4F;}.cardstyle_273 { background: url("") !important;}.cardstyle_273 { color: #66FF66;}.cardstyle_273 a { color: #66FF66;}.cardstyle_273 a:hover { color: #66FF66;}.cardstyle_273 .xi2 { color: #66FF66;}.cardstyle_273 .xi1 { color: #F26C4F;}.cardstyle_272 { background: url("") !important;}.cardstyle_272 { color: #000000;}.cardstyle_272 a { color: #000000;}.cardstyle_272 a:hover { color: #000000;}.cardstyle_272 .xi2 { color: #000000;}.cardstyle_272 .xi1 { color: #F26C4F;}.cardstyle_271 { background: url("") !important;}.cardstyle_271 { color: #0033FF;}.cardstyle_271 a { color: #0033FF;}.cardstyle_271 a:hover { color: #0033FF;}.cardstyle_271 .xi2 { color: #0033FF;}.cardstyle_271 .xi1 { color: #F26C4F;}.cardstyle_270 { background: url("") !important;}.cardstyle_270 { color: #00FF00;}.cardstyle_270 a { color: #00FF00;}.cardstyle_270 a:hover { color: #00FF00;}.cardstyle_270 .xi2 { color: #00FF00;}.cardstyle_270 .xi1 { color: #F26C4F;}.cardstyle_269 { background: url("") !important;}.cardstyle_269 { color: #000000;}.cardstyle_269 a { color: #000000;}.cardstyle_269 a:hover { color: #000000;}.cardstyle_269 .xi2 { color: #000000;}.cardstyle_269 .xi1 { color: #F26C4F;}.cardstyle_268 { background: url("") !important;}.cardstyle_268 { color: #0000FF;}.cardstyle_268 a { color: #0000FF;}.cardstyle_268 a:hover { color: #0000FF;}.cardstyle_268 .xi2 { color: #0000FF;}.cardstyle_268 .xi1 { color: #F26C4F;}.cardstyle_267 { background: url("") !important;}.cardstyle_267 { color: #CC9966;}.cardstyle_267 a { color: #CC9966;}.cardstyle_267 a:hover { color: #CC9966;}.cardstyle_267 .xi2 { color: #CC9966;}.cardstyle_267 .xi1 { color: #F26C4F;}.cardstyle_266 { background: url("") !important;}.cardstyle_266 { color: #000000;}.cardstyle_266 a { color: #000000;}.cardstyle_266 a:hover { color: #000000;}.cardstyle_266 .xi2 { color: #000000;}.cardstyle_266 .xi1 { color: #F26C4F;}.cardstyle_265 { background: url("") !important;}.cardstyle_265 { color: #66FF99;}.cardstyle_265 a { color: #66FF99;}.cardstyle_265 a:hover { color: #66FF99;}.cardstyle_265 .xi2 { color: #66FF99;}.cardstyle_265 .xi1 { color: #F26C4F;}.cardstyle_264 { background: url("") !important;}.cardstyle_264 { color: #0066FF;}.cardstyle_264 a { color: #0066FF;}.cardstyle_264 a:hover { color: #0066FF;}.cardstyle_264 .xi2 { color: #0066FF;}.cardstyle_264 .xi1 { color: #F26C4F;}.cardstyle_263 { background: url("") !important;}.cardstyle_263 { color: #FFFF99;}.cardstyle_263 a { color: #FFFF99;}.cardstyle_263 a:hover { color: #FFFF99;}.cardstyle_263 .xi2 { color: #FFFF99;}.cardstyle_263 .xi1 { color: #F26C4F;}.cardstyle_262 { background: url("") !important;}.cardstyle_262 { color: #66FF99;}.cardstyle_262 a { color: #66FF99;}.cardstyle_262 a:hover { color: #66FF99;}.cardstyle_262 .xi2 { color: #66FF99;}.cardstyle_262 .xi1 { color: #F26C4F;}.cardstyle_261 { background: url("") !important;}.cardstyle_261 { color: #FFFFFF;}.cardstyle_261 a { color: #FFFFFF;}.cardstyle_261 a:hover { color: #FFFFFF;}.cardstyle_261 .xi2 { color: #FFFFFF;}.cardstyle_261 .xi1 { color: #F26C4F;}.cardstyle_260 { background: url("") !important;}.cardstyle_260 { color: #99FF66;}.cardstyle_260 a { color: #99FF66;}.cardstyle_260 a:hover { color: #99FF66;}.cardstyle_260 .xi2 { color: #99FF66;}.cardstyle_260 .xi1 { color: #F26C4F;}.cardstyle_259 { background: url("") !important;}.cardstyle_259 { color: #0066FF;}.cardstyle_259 a { color: #0066FF;}.cardstyle_259 a:hover { color: #0066FF;}.cardstyle_259 .xi2 { color: #0066FF;}.cardstyle_259 .xi1 { color: #F26C4F;}.cardstyle_258 { background: url("") !important;}.cardstyle_258 { color: #FFFF66;}.cardstyle_258 a { color: #FFFF66;}.cardstyle_258 a:hover { color: #FFFF66;}.cardstyle_258 .xi2 { color: #FFFF66;}.cardstyle_258 .xi1 { color: #F26C4F;}.cardstyle_257 { background: url("") !important;}.cardstyle_257 { color: #000000;}.cardstyle_257 a { color: #000000;}.cardstyle_257 a:hover { color: #000000;}.cardstyle_257 .xi2 { color: #000000;}.cardstyle_257 .xi1 { color: #F26C4F;}.cardstyle_256 { background: url("") !important;}.cardstyle_256 { color: #000000;}.cardstyle_256 a { color: #000000;}.cardstyle_256 a:hover { color: #000000;}.cardstyle_256 .xi2 { color: #000000;}.cardstyle_256 .xi1 { color: #F26C4F;}.cardstyle_255 { background: url("") !important;}.cardstyle_255 { color: #000000;}.cardstyle_255 a { color: #000000;}.cardstyle_255 a:hover { color: #000000;}.cardstyle_255 .xi2 { color: #000000;}.cardstyle_255 .xi1 { color: #F26C4F;}.cardstyle_254 { background: url("") !important;}.cardstyle_254 { color: #FFFFFF;}.cardstyle_254 a { color: #FFFFFF;}.cardstyle_254 a:hover { color: #FFFFFF;}.cardstyle_254 .xi2 { color: #FFFFFF;}.cardstyle_254 .xi1 { color: #F26C4F;}.cardstyle_253 { background: url("") !important;}.cardstyle_253 { color: #FF0000;}.cardstyle_253 a { color: #FF0000;}.cardstyle_253 a:hover { color: #FF0000;}.cardstyle_253 .xi2 { color: #FF0000;}.cardstyle_253 .xi1 { color: #F26C4F;}.cardstyle_250 { background: url("") !important;}.cardstyle_250 { color: #FFFFFF;}.cardstyle_250 a { color: #FFFFFF;}.cardstyle_250 a:hover { color: #FFFFFF;}.cardstyle_250 .xi2 { color: #FFFFFF;}.cardstyle_250 .xi1 { color: #F26C4F;}.cardstyle_249 { background: url("") !important;}.cardstyle_249 { color: #FFFFFF;}.cardstyle_249 a { color: #FFFFFF;}.cardstyle_249 a:hover { color: #FFFFFF;}.cardstyle_249 .xi2 { color: #FFFFFF;}.cardstyle_249 .xi1 { color: #F26C4F;}.cardstyle_248 { background: url("") !important;}.cardstyle_248 { color: #000000;}.cardstyle_248 a { color: #000000;}.cardstyle_248 a:hover { color: #000000;}.cardstyle_248 .xi2 { color: #000000;}.cardstyle_248 .xi1 { color: #F26C4F;}.cardstyle_245 { background: url("") !important;}.cardstyle_245 { color: #000000;}.cardstyle_245 a { color: #000000;}.cardstyle_245 a:hover { color: #000000;}.cardstyle_245 .xi2 { color: #000000;}.cardstyle_245 .xi1 { color: #F26C4F;}.changestyle {display: block;position: absolute;right: 0;top: 0;height: 25px;width: 25px;background: url("");}.card {border-radius: 6px;}</style>
+<style type="text/css"> 
+#scrolltop {
+   display: none;
+}
+ul#navmenu ul
+{ 
+display: none; 
+position: absolute; 
+left: -233px;
+bottom: 5px;
+} 
+ul#navmenu li:hover ul ul, 
+ul#navmenu li.iehover ul ul,  { 
+display: none; 
+} 
+ul#navmenu li:hover ul, 
+ul#navmenu ul li:hover ul, 
+ul#navmenu ul ul li:hover ul, 
+ul#navmenu li.iehover ul, 
+ul#navmenu ul li.iehover ul, 
+ul#navmenu ul ul li.iehover ul { 
+display: block; 
+} 
+
+#jz52top a {margin: 6px 0;}
+
+#jz52top { z-index: 200; visibility: visible; right: 8px; }
+
+#jz52topa { visibility: hidden;}
+#jz52top, #jz52top a { border: none;}
+
+#jz52top { position: fixed; bottom: 290px; display: block; width: 50px; background: none repeat scroll 0% 0% transparent; border: 0px #cdcdcd solid; border-radius: 3px; border-top: 0; cursor: pointer; }
+#jz52top:hover { text-decoration: none; }
+
+#jz52top a { display: block; width: 50px; height: 50px; padding: 0; line-height: 12px; text-align: center; color: #787878; text-decoration: none; background: #7f7f7f url("") no-repeat 0 0; border-top: 0px #cdcdcd solid; }
+
+                a.jz52topa:hover { background-position: -50px 0px !important;}
+a.replyfast { background-position: 0 -50px !important; }
+a.replyfast:hover { background-position: -50px -50px !important;}
+a.returnlist { background-position: 0 -100px !important; }
+a.returnlist:hover { background-position: -50px -100px !important;}
+a.returnboard { background-position: -100px -300px !important; }
+a.returnboard:hover { background-position: -150px -300px !important;}
+a.jzqr { background-position: 0 -150px !important; }
+a.jzqr:hover { background-position: -50px -150px !important;}	
+                a.jzwx { background-position: 0 -400px !important; }
+a.jzwx:hover { background-position: -50px -400px !important;}				
+a.jzkf { background-position: -100px 0px !important; }
+a.jzkf:hover { background-position: -150px -0px !important;}
+a.jzfx { background-position: -100px -50px !important; }
+a.jzfx:hover { background-position: -150px -50px !important;}
+.jzfxn { background: #fff !important; width: 231px !important; height: 260px !important; }
+a.jzlast { background-position: -100px -100px !important; }
+a.jzlast:hover { background-position: -150px -100px !important;}
+a.jznext { background-position: -100px -150px !important; }
+a.jznext:hover { background-position: -150px -150px !important;}	
+                a.jzxyy { background-position: -100px -150px !important; }
+a.jzxyy:hover { background-position: -150px -450px !important;}					
+a.jzsct { background-position: 0px -200px !important; }
+a.jzsct:hover { background-position: -50px -200px !important;}				
+a.jzscb { background-position: -100px -200px !important; }
+a.jzscb:hover { background-position: -150px -200px !important;}				
+a.jzqqq { background-position: 0px -250px !important; }
+a.jzqqq:hover { background-position: -50px -250px !important;}
+                a.jzsoso { background-position: -100px -400px !important; }
+a.jzsoso:hover { background-position: -150px -400px !important;}					
+a.jzwo { background-position: -100px -250px !important; }
+a.jzwo:hover { background-position: -150px -250px !important;}
+a.jzzdy { background-position: 0px -300px !important; }
+a.jzzdy:hover { background-position: -50px -300px !important;}
+a.jzfbzt { background-position: 0px -350px !important; }
+a.jzfbzt:hover { background-position: -50px -350px !important;}
+a.jzkfzx { background-position: -100px -350px !important; }
+a.jzkfzx:hover { background-position: -150px -350px !important;}
+
+
+
+#jzqrn { background: #fff !important; width: 231px !important; height: 260px !important; }
+#jzqrn { border: 1px solid rgb(210, 210, 210); text-align: center; }
+#jzqrn p {
+    font-size: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+color: #999;
+    font-family: Microsoft YaHei;
+}
+#jzwon { background: #fff !important; width: 231px !important; height: 260px !important; }
+#jzwon { border: 1px solid rgb(210, 210, 210); }
+#jzfxn { border: 1px solid rgb(210, 210, 210); }
+#jzfxn h3 {
+    height: 23px;
+    background: none repeat scroll 0% 0% rgb(250, 250, 250);
+    border-bottom: 1px solid rgb(236, 236, 236);
+    padding: 10px 0px 0px 10px;
+}
+#jzfxn .bdsharebuttonbox { padding: 13px 0px 0px 20px; }
+#jzfxn .bdsharebuttonbox a, #jzfxn .bdsharebuttonbox .bds_more {
+    float: left;
+    font-size: 12px;
+    padding-left: 25px;
+    line-height: 16px;
+text-align: left;
+    height: 16px;
+    background: url("") no-repeat scroll 0px 0px ;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    margin: 6px 6px 6px 0px;
+text-indent: 0;
+    overflow: hidden;
+width: 68px;
+}
+#jzfxn .bdsharebuttonbox .bds_qzone {
+    background-position: 0px -52px !important;
+}
+#jzfxn .bdsharebuttonbox .bds_tsina {
+    background-position: 0px -104px !important;
+}
+#jzfxn .bdsharebuttonbox .bds_tqq {
+    background-position: 0px -260px !important;
+}
+#jzfxn .bdsharebuttonbox .bds_renren {
+    background-position: 0px -208px !important;
+}
+#jzfxn .bdsharebuttonbox .bds_tqf {
+    background-position: 0px -364px !important;
+}
+#jzfxn .bdsharebuttonbox .bds_tieba {
+    background-position: 0px -728px !important;
+}
+#jzfxn .bdsharebuttonbox .bds_sqq {
+    background-position: 0px -2652px !important;
+}
+#jzfxn .bdsharebuttonbox .bds_hi {
+    background-position: 0px -416px !important;
+}
+#jzfxn .bdsharebuttonbox .bds_isohu {
+    background-position: 0px -3016px !important;
+}
+#jzfxn .bdsharebuttonbox .bds_weixin {
+    background-position: 0px -1612px !important;
+}
+#jzfxn .bdsharebuttonbox .bds_t163 {
+    background-position: 0px -832px !important;
+}
+#jzfxn .bdsharebuttonbox .bds_tsohu {
+    background-position: 0px -520px !important;
+}
+#jzfxn .bdsharebuttonbox .bds_baidu {
+    background-position: 0px -2600px !important;
+}
+#jzfxn .bdsharebuttonbox .bds_qq {
+    background-position: 0px -624px !important;
+}
+#jz52top a b {
+    visibility: hidden;
+    font-weight: normal;
+}
+</style>
+<style type="text/css">
+
+#jzmms{padding: 2px; text-align: right; }
+.navbar-unread {
+    background-color: #E74C3C;
+    border-radius: 30px;
+    color: #FFF;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 17px;
+    min-width: 8px;
+    padding: 0px 4px;
+    right: 0px;
+    text-align: center;
+    text-shadow: none;
+    z-index: 10;
+align: right;
+}
+
+.navbar-unreadn {
+    background: url("") no-repeat scroll 0px 0px ;
+    border-radius: 30px;
+    color: #FFF;
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 17px;
+    min-width: 8px;
+    padding: 0px 4px;
+    right: 0px;
+    text-align: center;
+    text-shadow: none;
+    z-index: 10;
+align: right;
+}	
+
+#jzgrzxkp {
+height: 260px;
+width: 231px;
+background:#f2f6f8;
+font-family: Microsoft YaHei;
+}
+
+#jzgrzxkp .jzgrzxkptop {
+height: 140px;
+background:  url("") no-repeat 0 0 #0079b8 ;
+color: #fff;
+}
+#jzgrzxkp .jzgrzxkptop a{
+
+color: #fff;
+}
+
+#jzgrzxkp .jzgrzxkptop h3 {
+ height: 16px;
+font-weight:normal;
+    padding: 8px 0px 0px 10px;
+font-size: 16px;
+}
+
+#jzgrzxkp .jzgrzxkptop .jzgrzxkpthtle {
+height: 35px;
+}
+#jzgrzxkp .jzgrzxkptop .jzgrzxkpimg {
+height: 65px;
+text-align:center;
+}
+
+#jzgrzxkp .jzgrzxkptop .jzgrzxkpimg img {
+width: 54px;
+width: 54px;
+border-radius: 100px;
+margin-top: 2px;
+
+
+}
+
+#jzgrzxkp .jzgrzxkptop .jzgrzxkpimg .jzgrzxkpimgn {
+width: 58px;
+height: 58px;
+border-radius: 100px;
+background: none repeat scroll 0% 0% #fff;
+margin-top: 5px;
+margin-right: auto;
+    margin-left: auto;
+}
+
+#jzgrzxkp .jzyhm {
+    font-size: 15px;
+    line-height: 22px;
+text-align: center;
+padding-bottom: 10px;
+text-align:center;
+}
+
+#jzgrzxkp .jzyhm a {
+    width: 231px;
+    height: 15px;
+text-align:center;
+background: none ;
+}
+
+#jzgrzxkp .jzgrzxkpbox  { height: 120px; background:#f1f1f1;}
+
+#jzgrzxkp .jzgrzxkpbox a { background:url("") no-repeat 0 0  ;  width:57px;height:60px;float:left; margin: 0px;}
+
+.box01{background-position: 0px 0px !important;}
+.box02{background-position: -57px 0px !important;}
+.box03{background-position: -114px 0px !important;}
+.box04{background-position: -171px 0px !important;}
+
+.box05{background-position: 0px -60px !important;}
+.box06{background-position: -57px -60px !important;}
+.box07{background-position: -114px -60px !important;}
+.box08{background-position: -171px -60px !important;}
+.box09{background-position: 0px -120px !important;}
+
+
+#jz52-grzx-skin a{
+margin: 0px;
+top: 0px;
+height: 20px;
+width: 20px;
+overflow: hidden;
+background-image: url("");
+background-position: 0px 0px;
+background-repeat: no-repeat;
+position: absolute;
+display: block;
+right: 0px;
+}
+
+</style>
+
+      <style class="mx-wc-style">
+        .mx-wc-main img {max-width: 100%;}
+        .mx-wc-main{
+          box-sizing: content-box;
+          background-color: rgb(242, 242, 242) !important;
+          margin: 0 auto;
+          margin-top: 20px;
+          max-width: 1200px;
+        }
+        @media (min-width: 768px) {
+          .mx-wc-main { padding: 15px 15px 80px 15px }
+        }
+        @media (max-width: 767px) {
+          .mx-wc-main { padding: 15px 3px 80px 3px }
+        }
+  
+      </style>
+    </head>
+    <body style="background-color: #464646 !important; min-height: 100%; height: auto; position: static !important; overflow: auto !important; padding-bottom: 0px !important;" id="nv_forum" class="pg_viewthread">
+      <div class="mx-wc-main">
+        <div id="wp" class="wp mx-wc-selected-elem mx-wc-1569640180" style="display: block; float: none !important; position: relative !important; top: 0px !important; left: 0px !important; margin: 0px !important; flex: unset !important; width: 100% !important; max-width: 100% !important; box-sizing: border-box !important;">
+
+
+
+
+
+<!--[diy=diynavtop]--><div id="diynavtop" class="area"></div><!--[/diy]-->
+
+
+		
+		
+		
+		
+					
+					
+<div class="wp">
+<div class="t9_discuz_n_01">
+<div class="t9_discuz_r_a_01"><div class="t9_discuz_r_m_01"><div class="t9_discuz_r_c_01">
+<div class="t9_discuz_r_a_02"><div class="t9_discuz_r_m_02"><div class="t9_discuz_r_c_02">
+<div class="t9_1309141028"><!--[diy=t9_1309141028]--><div id="t9_1309141028" class="area"></div><!--[/diy]--></div></div></div>
+<div class="t9_discuz_r_02"><div class="t9_1309091306"><!--[diy=t9_1309091306]--><div id="t9_1309091306" class="area"></div><!--[/diy]--></div></div></div></div></div>
+<div class="t9_discuz_r_01"><div class="t9_1309091307"><!--[diy=t9_1309091307]--><div id="t9_1309091307" class="area"></div><!--[/diy]--></div></div></div>
+
+</div>
+<!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]-->
+</div>
+
+<div id="pt" class="bm cl">
+<div class="z">
+<a href="https://bbs.zdfx.net/" class="nvhm" title="首页" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">终点分享</a><em>»</em><a href="https://bbs.zdfx.net/forum.php" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">论坛</a> <em>›</em> <a href="https://bbs.zdfx.net/forum.php?gid=48" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">综合区</a> <em>›</em> <a href="https://bbs.zdfx.net/forum-69-3.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">教程区</a> <em>›</em> <a href="https://bbs.zdfx.net/thread-389662-1-1.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">【工具】过cs2引擎游戏的cd验证的小工具 ...</a>
+</div>
+</div>
+
+<div id="ct" class="wp cl">
+<div id="pgt" class="pgs mbm cl ">
+<div class="pgt"></div>
+<span class="y pgb" id="visitedforums" onmouseover="$('visitedforums').id = 'visitedforumstmp';this.id = 'visitedforums';showMenu({'ctrlid':this.id,'pos':'34'})"><a href="https://bbs.zdfx.net/forum-69-3.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">返回列表</a></span>
+<a id="newspecial" onmouseover="$('newspecial').id = 'newspecialtmp';this.id = 'newspecial';showMenu({'ctrlid':this.id})" onclick="showWindow('newthread', 'forum.php?mod=post&amp;action=newthread&amp;fid=69')" href="javascript:;" title="发新帖" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">发新帖</a><a id="post_reply" onclick="showWindow('reply', 'forum.php?mod=post&amp;action=reply&amp;fid=69&amp;tid=389662')" href="javascript:;" title="回复" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">回帖</a>
+</div>
+
+
+
+<div id="postlist" class="pl bm">
+<table cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="pls ptn pbn">
+<div class="hm ptn">
+<span class="xg1">查看:</span> <span class="xi1">85</span><span class="pipe">|</span><span class="xg1">回复:</span> <span class="xi1">7</span>
+</div>
+</td>
+<td class="plc ptm pbn vwthd">
+<div class="y">
+<a href="https://bbs.zdfx.net/forum.php?mod=viewthread&amp;action=printable&amp;tid=389662" title="打印" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-385cc10da211075d1f6fc31722e7304e.png" alt="打印" class="vm"></a>
+<a href="https://bbs.zdfx.net/forum.php?mod=redirect&amp;goto=nextoldset&amp;tid=389662" title="上一主题" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-0eed1b52553a43bc13f11e632301cfbb.png" alt="上一主题" class="vm"></a>
+<a href="https://bbs.zdfx.net/forum.php?mod=redirect&amp;goto=nextnewset&amp;tid=389662" title="下一主题" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-e59d2bc1ffcebf8474e63279cfb5110e.png" alt="下一主题" class="vm"></a>
+</div>
+<h1 class="ts">
+<span id="thread_subject">【工具】过cs2引擎游戏的cd验证的小工具</span>
+</h1>
+<span class="xg1">
+<a href="https://bbs.zdfx.net/thread-389662-1-1.html" onclick="return copyThreadUrl(this, '终点分享')" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">[复制链接]</a>
+</span>
+</td>
+</tr>
+</tbody></table>
+
+<div id="post_4698407"><div id="threadstamp"><img src="assets/1569640180-65cf462e2637d4ff4bffa9af796a0060.png" title="精华"></div>
+<table id="pid4698407" class="plhin" summary="pid4698407" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="pls" rowspan="2">
+<div id="favatar4698407" class="pls favatar" style="top: -228px; position: fixed;">
+ <div class="pi">
+<div class="authi"><a href="https://bbs.zdfx.net/space-uid-20761.html" target="_blank" class="xw1" referrerpolicy="no-referrer" rel="noopener noreferrer">nds9173</a><a href="https://bbs.zdfx.net/home.php?mod=spacecp&amp;ac=profile&amp;op=verify&amp;vid=6" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-91fce1979c07bf790eadb0318aa97955.png" class="vms" alt="实名认证" title="实名认证"></a>
+
+</div>
+</div>
+
+<div>
+<div class="avatar" onmouseover="showauthor(this, 'userinfo4698407')"><a href="https://bbs.zdfx.net/space-uid-20761.html" class="avtm" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-f157261e188a9fb37ef088ce1f44e48c.php"></a></div>
+</div>
+<div style="border: 2px #71ffe580 outset;margin: auto 1px 10px;padding:2px 5px;text-align: center;background-color: #8effe017;cursor: pointer;" onclick="location.href=&quot;plugin.php?id=tianshicard:userpage&amp;userinfo=20761&quot;;" title="点击查看用户详细信息"><div class="cardwidget"><div class="caileft"><span class="caisezdl">战斗力：</span><span class="layui-badge" id="zhandouli">11W</span><br><span class="caisezdl">卡牌数：</span><span class="layui-badge layui-bg-orange" id="kapai">237</span></div><div class="caileft"><span class="caisezdl">碎片数：</span><span class="layui-badge layui-bg-blue" id="suipian">331</span><br><span class="caisezdl">现等级：</span><span class="layui-badge layui-bg-green" id="jinbi">53</span></div></div><div class="paim">【竞技场排名：全服第5名！】</div><div class="row"><div id="zbcard1" class="showcard"><img class="cardimg" src="assets/1569640180-2c5b9bd2d7a892d9083aee149ecb11c1.jpg"></div><div id="zbcard2" class="showcard"><img class="cardimg" src="assets/1569640180-9424f444ba81bbd47e60ecf1783177ba.jpg"></div><div id="zbcard3" class="showcard"><img class="cardimg" src="assets/1569640180-bc4d93d1c8f012536ce225761b620b77.jpg"></div><div id="zbcard4" class="showcard"><img class="cardimg" src="assets/1569640180-1e522009cb7ab4904a0f4669eefa4ba8.jpg"></div></div><div class="row"><div id="zbcard5" class="showcard"><img class="cardimg" src="assets/1569640180-9957d2961ce436a5622dd3b3a45858bf.jpg"></div><div id="zbcard6" class="showcard"><img class="cardimg" src="assets/1569640180-c6f7b65ca624b8eb8daf088b22cd5940.jpg"></div><div id="zbcard7" class="showcard"><img class="cardimg" src="assets/1569640180-e3807ce063d17b3d8441e0c1241b8ae6.jpg"></div><div id="zbcard8" class="showcard"><img class="cardimg" src="assets/1569640180-71547cbb64f11a470593ef0b8038748b.jpg"></div></div></div>
+
+<fieldset style="text-align:center;margin:10px;padding:5px 0px;border:1px dashed #cccccc;border-radius:8px;">
+
+</fieldset>
+
+<div style="border:2px #ccc dashed; margin:auto 14px 10px;padding:2px 5px">累计签到：1037 天<br>连续签到：2 天<br></div><div class="tns xg2"><table cellspacing="0" cellpadding="0"><tbody><tr><th><p><a href="https://bbs.zdfx.net/home.php?mod=space&amp;uid=20761&amp;do=thread&amp;type=thread&amp;view=me&amp;from=space" class="xi2" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">1510</a></p>主题</th><th><p><a href="https://bbs.zdfx.net/home.php?mod=space&amp;uid=20761&amp;do=thread&amp;type=reply&amp;view=me&amp;from=space" class="xi2" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">3569</a></p>帖子</th><td><p><a href="https://bbs.zdfx.net/home.php?mod=space&amp;uid=20761&amp;do=profile" class="xi2" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><span title="22975">2万</span></a></p>积分</td></tr></tbody></table></div>
+
+<p><a href="https://bbs.zdfx.net/home.php?mod=spacecp&amp;ac=usergroup&amp;gid=37" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-4dd0ca31b65bf2379f763c48aef4709a.gif" alt="" class="vm"></a></p>
+<p><em><a href="https://bbs.zdfx.net/home.php?mod=spacecp&amp;ac=usergroup&amp;gid=37" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">纯爱酷刑</a></em></p>
+<p class="xg1">クラーケン</p>
+
+<p><span id="g_up4698407" onmouseover="showMenu({'ctrlid':this.id, 'pos':'12!'});"><img src="assets/1569640180-b4837f61a2448f5c395c2f5e6f5ff610.gif" alt="Rank: 10"><img src="assets/1569640180-b4837f61a2448f5c395c2f5e6f5ff610.gif" alt="Rank: 10"><img src="assets/1569640180-c74600690c7109a87ffbad4f988f4d36.gif" alt="Rank: 10"></span></p>
+
+
+
+<p><span class="pbg2" id="upgradeprogress_4698407" onmouseover="showMenu({'ctrlid':this.id, 'pos':'12!', 'menuid':'g_up4698407_menu'});"><span class="pbr2" style="width:59%;"></span></span></p>
+
+
+
+<dl class="pil cl">
+	<dt>积分</dt><dd><a href="https://bbs.zdfx.net/home.php?mod=space&amp;uid=20761&amp;do=profile" target="_blank" class="xi2" referrerpolicy="no-referrer" rel="noopener noreferrer">22975</a></dd>
+	<dt>金币</dt><dd>4511 </dd>
+</dl>
+<dl class="pil cl"></dl><ul class="xl xl2 o cl">
+<li class="addflw">
+<a href="https://bbs.zdfx.net/home.php?mod=spacecp&amp;ac=follow&amp;op=add&amp;hash=f73e6dea&amp;fuid=20761" id="followmod_20761" title="收听TA" class="xi2" onclick="showWindow('followmod', this.href, 'get', 0);" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">收听TA</a>
+</li>
+<li class="pm2"><a href="https://bbs.zdfx.net/home.php?mod=spacecp&amp;ac=pm&amp;op=showmsg&amp;handlekey=showmsg_20761&amp;touid=20761&amp;pmid=0&amp;daterange=2&amp;pid=4698407&amp;tid=389662" onclick="showWindow('sendpm', this.href);" title="发消息" class="xi2" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">发消息</a></li>
+</ul>
+<p class="md_ctrl md_left"><em><img src="assets/1569640180-34a53e266335bfbf27a46b484d01ec65.gif" align="absmiddle" class="md_ctrl md_left"> <font color="#009999">版主</font></em></p><ul class="xl xl2 o cl"><li id="dsxy_4698407" onmouseover="showMenu({'ctrlid':this.id, 'pos':'12!'});" style="background: url(source/plugin/xfu_160661/image/ds_m.png) no-repeat;"><a class="xi2" title="目前单身中" href="javascript:;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">单身族</a></li><li style="background: url(source/plugin/xfu_160661/image/cupid_icon_invite.png) no-repeat;"><a class="xi2" title="目前单身中" href="javascript:;" onclick="showWindow('cupidinvite', 'plugin.php?id=xfu_160661&amp;mod=cupid&amp;action=invite&amp;uid=20761'); return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">追求他</a></li></ul><p class="md_ctrl wodexunzhang_img"><a href="https://bbs.zdfx.net/wodexunzhang-showxunzhang.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-0c5bfe0f40e527cb754721e66c893a2c.gif" alt="玲奈" onmouseover="MyshowTip(this)" tip="<h4>玲奈</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 5%</p></div>"><img src="assets/1569640180-82966918b5dd3bc719d82b27e5f63a12.gif" alt="八六" onmouseover="MyshowTip(this)" tip="<h4>八六</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 5%</p></div>"><img src="assets/1569640180-8c2bb9aa897a4be96c5b59e6a625d59e.gif" alt="森岛遥" onmouseover="MyshowTip(this)" tip="<h4>森岛遥</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 2%</p></div>"><img src="assets/1569640180-969d0cbdeacabf8fc95ab25e1d116879.gif" alt="棚町薫" onmouseover="MyshowTip(this)" tip="<h4>棚町薫</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 1%</p></div>"><img src="assets/1569640180-46e273de313c299ab37109b0e4fee3a3.gif" alt="中多纱江" onmouseover="MyshowTip(this)" tip="<h4>中多纱江</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 1%</p></div>"><img src="assets/1569640180-d5853b04c9ada87aceda4ee70c5de399.gif" alt="七咲逢" onmouseover="MyshowTip(this)" tip="<h4>七咲逢</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 2%</p></div>"><img src="assets/1569640180-4955ac9c16c92ecb9cd6f835067b9d99.gif" alt="樱井梨穗子" onmouseover="MyshowTip(this)" tip="<h4>樱井梨穗子</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 1%</p></div>"><img src="assets/1569640180-b441b049920e21fc3cdc1cb8b93ac164.gif" alt="绚辻词" onmouseover="MyshowTip(this)" tip="<h4>绚辻词</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 2%</p></div>"><img src="assets/1569640180-a7a627bd47e26a7ff0daf10cc2ae3208.gif" alt="上崎里沙" onmouseover="MyshowTip(this)" tip="<h4>上崎里沙</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 2%</p></div>"><img src="assets/1569640180-46a2dc4641d19e2e05b32e32978fd843.gif" alt="橘美也" onmouseover="MyshowTip(this)" tip="<h4>橘美也</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 1%</p></div>"><img src="assets/1569640180-b01c3668ce2b07c21a415c98188e59b0.gif" alt="冈部伦太郎" onmouseover="MyshowTip(this)" tip="<h4>冈部伦太郎</h4><p>El psy congroo.</p><div class='wode_shuxing'><p>发帖 点币 +2</p><p>触发几率 5%</p></div>"><img src="assets/1569640180-bb2cd3a94bdf3b925ecba26938726773.gif" alt="牧濑红莉栖" onmouseover="MyshowTip(this)" tip="<h4>牧濑红莉栖</h4><p>时间飞快的流逝，唯独现在，我有一种想对爱因斯坦发牢骚的心情...</p><div class='wode_shuxing'><p>发帖 点币 +2</p><p>触发几率 5%</p></div>"><img src="assets/1569640180-3ce56be6c4c5371d3858a0a74256cc66.gif" alt="八九寺真宵" onmouseover="MyshowTip(this)" tip="<h4>八九寺真宵</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 5%</p></div>"><img src="assets/1569640180-1146a9a3247ff2a849905a4d992d0c1d.gif" alt="大藏里想奈" onmouseover="MyshowTip(this)" tip="<h4>大藏里想奈</h4><p>妹妹大人</p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 5%</p></div>"><img src="assets/1569640180-3bd342d640525bb33e148a6a5c2e6eb3.gif" alt="Sion" onmouseover="MyshowTip(this)" tip="<h4>Sion</h4><p>They were only two, on the planet.</p><div class='wode_shuxing'><p>发帖 点币 +3</p><p>触发几率 5%</p></div>"><img src="assets/1569640180-1e2d85fb13e53131a8f5746d2727e5ee.gif" alt="嬉野 纱弓实" onmouseover="MyshowTip(this)" tip="<h4>嬉野 纱弓实</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>回帖 点币 +1</p><p>触发几率 1%</p></div>"><img src="assets/1569640180-3df7d2b8519adde439939a0116166138.gif" alt="和泉纱雾" onmouseover="MyshowTip(this)" tip="<h4>和泉纱雾</h4><p>我，我……我……想当的，不是你的家人——</p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 4%</p></div>"><img src="assets/1569640180-2f9f1ce9754e45a91f8d5d9de6f9b3e9.gif" alt="黑咲芽亚" onmouseover="MyshowTip(this)" tip="<h4>黑咲芽亚</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 4%</p></div>"><img src="assets/1569640180-3e3a706b450ea7850a8e81d7bed7096d.gif" alt="菈菈" onmouseover="MyshowTip(this)" tip="<h4>菈菈</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 4%</p></div>"><img src="assets/1569640180-c0ac1d32a0c705ab8de5d90c274cb10d.gif" alt="赫斯缇雅" onmouseover="MyshowTip(this)" tip="<h4>赫斯缇雅</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 5%</p></div>"><img src="assets/1569640180-16a646359c9b11340b0ab69b6327f19e.gif" alt="矢来美羽" onmouseover="MyshowTip(this)" tip="<h4>矢来美羽</h4><p>哼哼、做的到的话就试试啊、小处男</p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 1%</p></div>"><img src="assets/1569640180-d2774820f8e88542bcd03afba2476978.gif" alt="楪祈" onmouseover="MyshowTip(this)" tip="<h4>楪祈</h4><p>请使用我吧~</p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 2%</p></div>"><img src="assets/1569640180-51598da0d1dcc2a291d268d0718edde9.gif" alt="巧克力" onmouseover="MyshowTip(this)" tip="<h4><b>等级 初级</b>巧克力</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +3</p><p>触发几率 5%</p></div><div class='wode_shuxing'>下一级 <b>金币 4511/500</b></div>"><img src="assets/1569640180-92ddf1e9545d9a72f2675b9827dcb2ca.gif" alt="优" onmouseover="MyshowTip(this)" tip="<h4>优</h4><p>Eucliwood Hellscythe</p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 2%</p></div>"><img src="assets/1569640180-d6ab684fa4bda0106ae38c2e80eece42.gif" alt="八云紫" onmouseover="MyshowTip(this)" tip="<h4>八云紫</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 1%</p></div>"><img src="assets/1569640180-0c96b5ed53cf8d41359a098ae0a90037.gif" alt="幽幽子" onmouseover="MyshowTip(this)" tip="<h4>幽幽子</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 1%</p></div>"><img src="assets/1569640180-f176955befaa3fe718d7d21673569c32.gif" alt="魂魄妖梦" onmouseover="MyshowTip(this)" tip="<h4>魂魄妖梦</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 1%</p></div>"><img src="assets/1569640180-10ed8f3666d0cf51b0bad507fef7f859.gif" alt="帕秋莉" onmouseover="MyshowTip(this)" tip="<h4>帕秋莉</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 1%</p></div>"><img src="assets/1569640180-7108c5b05dbcbba4b0f5f40529f59bcd.gif" alt="射命丸文" onmouseover="MyshowTip(this)" tip="<h4>射命丸文</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 1%</p></div>"><img src="assets/1569640180-ec74a7c8d1c5cbe70322268c3e47a558.gif" alt="铃仙" onmouseover="MyshowTip(this)" tip="<h4>铃仙</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 1%</p></div>"><img src="assets/1569640180-67925704eb64c923f08d3d27e67543c9.gif" alt="十六夜咲夜" onmouseover="MyshowTip(this)" tip="<h4>十六夜咲夜</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 1%</p></div>"><img src="assets/1569640180-1084cc9812ae2df64742ecce0ef8ac30.gif" alt="成川 姫" onmouseover="MyshowTip(this)" tip="<h4>成川 姫</h4><p>其实是非常软弱，不想让任何人看到的部分……为什么我会这么开心呢？我也是个可以被拥抱的女孩子呢……自从和你交往以来，越发地这样感觉到。</p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 3%</p></div>"><img src="assets/1569640180-7a69c0b6e64a474e5aab3846698aa83a.gif" alt="朱雀院椿" onmouseover="MyshowTip(this)" tip="<h4>朱雀院椿</h4><p>三周年纪念徽章</p><div class='wode_shuxing'><p>发帖 点币 +4</p><p>触发几率 8%</p></div>"><img src="assets/1569640180-6ea8f6e1746155396080f0b9e1c0939c.gif" alt="江户川柯南" onmouseover="MyshowTip(this)" tip="<h4>江户川柯南</h4><p>万年小学生</p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 4%</p></div>"><img src="assets/1569640180-7d874cf8f169b2f62a8fbd804c718221.gif" alt="五岛润" onmouseover="MyshowTip(this)" tip="<h4>五岛润</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 2%</p></div>"><img src="assets/1569640180-2987f5c9a945b8cf2faa1169e03ab449.gif" alt="冬马和纱" onmouseover="MyshowTip(this)" tip="<h4>冬马和纱</h4><p>冬之恋曲</p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 5%</p></div>"></a></p><div class="tns xg2"></div></div>
+</td>
+<td class="plc">
+<div class="pi">
+<div id="fj" class="y">
+<label class="z">电梯直达</label>
+<input type="text" class="px p_fre z" size="2" onkeyup="$('fj_btn').href='forum.php?mod=redirect&amp;ptid=389662&amp;authorid=0&amp;postno='+this.value" onkeydown="if(event.keyCode==13) {window.location=$('fj_btn').href;return false;}" title="跳转到指定楼层">
+<a href="javascript:;" id="fj_btn" class="z" title="跳转到指定楼层" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-c390954b070b9d43f2191e5f650797c2.png" alt="跳转到指定楼层" class="vm"></a>
+</div>
+<strong>
+<a href="https://bbs.zdfx.net/thread-389662-1-1.html" id="postnum4698407" onclick="setCopy(this.href, '帖子地址复制成功');return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+楼主</a>
+</strong>
+<div class="pti">
+<div class="pdbt">
+</div>
+<div class="authi">
+<img class="authicn vm" id="authicon4698407" src="assets/1569640180-892d05bd7f5e5735987b93ba79701237.gif">
+<em id="authorposton4698407">发表于 2019-8-16 22:40</em>
+<span class="pipe">|</span>
+<a href="https://bbs.zdfx.net/forum.php?mod=viewthread&amp;tid=389662&amp;page=1&amp;authorid=20761" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">只看该作者</a>
+<span class="none"><img src="assets/1569640180-13f2593e77a7f397d04e77a0b061c066.gif" class="vm" alt="回帖奖励"></span>
+
+
+</div>
+</div>
+</div><div class="pct"><div class="pcb">
+ 
+<div class="t_fsz">
+<table cellspacing="0" cellpadding="0"><tbody><tr><td class="t_f" id="postmessage_4698407">
+<i class="pstatus"> 本帖最后由 nds9173 于 2019-9-15 14:48 编辑 </i><br>
+<br>
+生肉区有这个需要，所以抽空写了一个小工具<br>
+用途：过cs2引擎游戏的光盘验证<br>
+（栗子：未来ラジオと人工鳩、はぴねす！2 Sakura Celebration以及上个月新作ココロネ＝ペンデュラム！，所有写着cs2.exe的）<br>
+用法：把exe拖上去就好，目录下生成cs2_c.exe<br>
+ps：只用于过cd验证，exe本身如果经过比如playdrm什么的加密则无效（但貌似没遇到过）<br>
+<br>
+<br>
+长懒看的话下面不用看：<br>
+命令行工具<br>
+用法没什么好说的：kc4_cs2 cs2.exe<br>
+版本信息等参见kc4_cs2 -h<br>
+返回值为0表示成功，非0为报错<br>
+<br>
+错误代码报2的话，务必私信我提供一下游戏名称，以完善工具<img src="assets/1569640180-a732df04581c62652ae3329b04e2bdca.png" smilieid="132" border="0" alt="">其他错误号应该就不是工具的问题了<br>
+<br>
+<div class="locked">silas，如果您要查看本帖隐藏内容请<a href="https://bbs.zdfx.net/forum.php?mod=post&amp;action=reply&amp;fid=69&amp;tid=389662" onclick="showWindow('reply', this.href)" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">回帖</a></div><br>
+<br>
+<br>
+<br>
+V1.05 190915<br>
+1现在支持更低版本cs2引擎的游戏<br>
+2优化读写<br>
+3bug修复<br>
+<br>
+V1.02 190818<br>
+1现在自带vc库支持，并将debug版替换为了release版<br>
+2异常处理优化<br>
+<br>
+</td></tr></tbody></table>
+
+<div class="modact"><a href="https://bbs.zdfx.net/forum.php?mod=misc&amp;action=viewthreadmod&amp;tid=389662" title="帖子模式" onclick="showWindow('viewthreadmod', this.href)" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">本主题由 MotokoX 于 2019-8-18 12:59 分类</a></div><form method="post" autocomplete="off" id="vfastpostform" action="forum.php?mod=post&amp;action=reply&amp;fid=69&amp;tid=389662&amp;fromvf=1&amp;extra=page=3&amp;replysubmit=yes&amp;infloat=yes&amp;handlekey=vfastpost" onsubmit="this.message.value = parseurl(this.message.value);ajaxpost('vfastpostform', 'return_reply', 'return_reply', 'onerror');return false;">
+
+<div id="vfastpostseccheck"></div>				
+</form>
+
+
+</div>
+<div id="comment_4698407" class="cm">
+</div>
+
+<h3 class="psth xs1"><span class="icon_ring vm"></span>打赏</h3>
+<dl id="ratelog_4698407" class="rate">
+<dd style="margin:0">
+<div id="post_rate_4698407"></div>
+<table class="ratl">
+<tbody><tr>
+<th class="xw1" width="120"><a href="https://bbs.zdfx.net/forum.php?mod=misc&amp;action=viewratings&amp;tid=389662&amp;pid=4698407" onclick="showWindow('viewratings', this.href)" title="查看全部评分" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"> 参与人数 <span class="xi1">12</span></a></th><th class="xw1" width="80">金币 <i><span class="xi1">+12</span></i></th>
+<th>
+<a href="javascript:;" onclick="toggleRatelogCollapse('ratelog_4698407', this);" class="y xi2 op" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">收起</a>
+<i class="txt_h">理由</i>
+</th>
+</tr>
+</tbody><tbody class="ratl_l"><tr id="rate_4698407_161651">
+<td>
+<a href="https://bbs.zdfx.net/space-uid-161651.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-30fcd8f1d3f2923075b411929b01de87.php"></a> <a href="https://bbs.zdfx.net/space-uid-161651.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">凝露结霜</a>
+</td><td class="xi1"> + 1</td>
+<td class="xg1"></td>
+</tr>
+<tr id="rate_4698407_143466">
+<td>
+<a href="https://bbs.zdfx.net/space-uid-143466.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-297dafe9331df326f21a7778bac2bd4f.php"></a> <a href="https://bbs.zdfx.net/space-uid-143466.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">呵呵买就买</a>
+</td><td class="xi1"> + 1</td>
+<td class="xg1"></td>
+</tr>
+<tr id="rate_4698407_14304">
+<td>
+<a href="https://bbs.zdfx.net/space-uid-14304.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-5e5e2f97ae325c80516208c39bdf9aeb.php"></a> <a href="https://bbs.zdfx.net/space-uid-14304.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">tiger005hen</a>
+</td><td class="xi1"> + 1</td>
+<td class="xg1"></td>
+</tr>
+<tr id="rate_4698407_120944">
+<td>
+<a href="https://bbs.zdfx.net/space-uid-120944.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-c260c67fc6baa2729bbbc38e51642381.php"></a> <a href="https://bbs.zdfx.net/space-uid-120944.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Foreversky320</a>
+</td><td class="xi1"> + 1</td>
+<td class="xg1"></td>
+</tr>
+<tr id="rate_4698407_108456">
+<td>
+<a href="https://bbs.zdfx.net/space-uid-108456.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-86d13b02e65c51e5a8f0788b6533f930.php"></a> <a href="https://bbs.zdfx.net/space-uid-108456.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">wddmxy</a>
+</td><td class="xi1"> + 1</td>
+<td class="xg1"></td>
+</tr>
+<tr id="rate_4698407_161903">
+<td>
+<a href="https://bbs.zdfx.net/space-uid-161903.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-90e8332ea3a73ed7ef1067fb29bf47b2.php"></a> <a href="https://bbs.zdfx.net/space-uid-161903.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">花园蔷薇少女</a>
+</td><td class="xi1"> + 1</td>
+<td class="xg1"></td>
+</tr>
+<tr id="rate_4698407_4269">
+<td>
+<a href="https://bbs.zdfx.net/space-uid-4269.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-7ba09184cabc8a14629bcd7784346a5e.php"></a> <a href="https://bbs.zdfx.net/space-uid-4269.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">彼岸的流星雨</a>
+</td><td class="xi1"> + 1</td>
+<td class="xg1"></td>
+</tr>
+<tr id="rate_4698407_4015">
+<td>
+<a href="https://bbs.zdfx.net/space-uid-4015.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-e33ee3a4f4c167dc77b57eaaa2eb5091.php"></a> <a href="https://bbs.zdfx.net/space-uid-4015.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">赏花不如吃团子</a>
+</td><td class="xi1"> + 1</td>
+<td class="xg1"></td>
+</tr>
+<tr id="rate_4698407_65519">
+<td>
+<a href="https://bbs.zdfx.net/space-uid-65519.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-e8150c5d71a79510c037292b73637e77.php"></a> <a href="https://bbs.zdfx.net/space-uid-65519.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">wtf127</a>
+</td><td class="xi1"> + 1</td>
+<td class="xg1"></td>
+</tr>
+<tr id="rate_4698407_24573">
+<td>
+<a href="https://bbs.zdfx.net/space-uid-24573.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-e64977f8b5e58b75914c61af957b0737.php"></a> <a href="https://bbs.zdfx.net/space-uid-24573.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">神级高射炮</a>
+</td><td class="xi1"> + 1</td>
+<td class="xg1"></td>
+</tr>
+<tr id="rate_4698407_90560">
+<td>
+<a href="https://bbs.zdfx.net/space-uid-90560.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-ad61d3a78dd7dedaa3e1ebabe8f6e1a1.php"></a> <a href="https://bbs.zdfx.net/space-uid-90560.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">茉莉之淚</a>
+</td><td class="xi1"> + 1</td>
+<td class="xg1"></td>
+</tr>
+<tr id="rate_4698407_10682">
+<td>
+<a href="https://bbs.zdfx.net/space-uid-10682.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-045d150b77b20a7d636c64cb3392701f.php"></a> <a href="https://bbs.zdfx.net/space-uid-10682.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">普萝洁特</a>
+</td><td class="xi1"> + 1</td>
+<td class="xg1"></td>
+</tr>
+</tbody>
+</table>
+<p class="ratc">
+<a href="https://bbs.zdfx.net/forum.php?mod=misc&amp;action=viewratings&amp;tid=389662&amp;pid=4698407" onclick="showWindow('viewratings', this.href)" title="查看全部评分" class="xi2" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">查看全部评分</a>
+</p>
+</dd>
+</dl>
+</div>
+</div>
+
+</td></tr>
+<tr><td class="plc plm">
+<div id="p_btn" class="mtw mbm hm cl">
+
+
+<a href="https://bbs.zdfx.net/home.php?mod=spacecp&amp;ac=favorite&amp;type=thread&amp;id=389662&amp;formhash=f73e6dea" id="k_favorite" onclick="showWindow(this.id, this.href, 'get', 0);" onmouseover="this.title = $('favoritenumber').innerHTML + ' 人收藏'" title="收藏本帖" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><i><img src="assets/1569640180-bd871de28bc549bcec3dc5c18014d648.gif" alt="收藏">收藏</i></a>
+<a href="javascript:;" id="ak_rate" onclick="showWindow('rate', 'forum.php?mod=misc&amp;action=rate&amp;tid=389662&amp;pid=4698407', 'get', -1);return false;" title="打赏作者小钱钱" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><i><img src="assets/1569640180-831489aa2cadc1ba8e46871375fadbe7.gif" alt="评分">打赏</i></a>
+<a class="followp" href="https://bbs.zdfx.net/home.php?mod=spacecp&amp;ac=follow&amp;op=relay&amp;tid=389662&amp;from=forum" onclick="showWindow('relaythread', this.href, 'get', 0);" title="转播求扩散" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><i><img src="assets/1569640180-640bce41dd657c5b0d73542e1884259b.png" alt="转播">转播</i></a>
+<a id="recommend_add" href="https://bbs.zdfx.net/forum.php?mod=misc&amp;action=recommend&amp;do=add&amp;tid=389662&amp;hash=f73e6dea" onclick="ajaxmenu(this, 3000, 1, 0, '43', 'recommendupdate(1)');return false;" onmouseover="this.title = $('recommendv_add').innerHTML + ' 人赞'" title="顶一下" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><i><img src="assets/1569640180-da1558cfbf7b9c3e6865937ba84ee451.gif" alt="赞">赞</i></a>
+
+</div><div></div>
+<div class="sign" style="max-height:300px;maxHeightIE:300px;">下不了/玩不了请<font size="4"><a href="https://bbs.zdfx.net/home.php?mod=spacecp&amp;ac=pm&amp;op=showmsg&amp;handlekey=showmsg_20761&amp;touid=20761&amp;daterange=2" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font color="#ff00"><u>点此提交</u></font></a></font><br>
+附上游戏名&amp;问题</div>
+</td>
+</tr>
+<tr id="_postposition4698407"></tr>
+<tr>
+<td class="pls"></td>
+<td class="plc" style="overflow:visible;">
+<div class="po hin">
+<div class="pob cl">
+<em>
+<a class="fastre" href="https://bbs.zdfx.net/forum.php?mod=post&amp;action=reply&amp;fid=69&amp;tid=389662&amp;reppost=4698407&amp;extra=page%3D3&amp;page=1" onclick="showWindow('reply', this.href)" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">回帖</a>
+</em>
+
+<p>
+<a href="javascript:;" id="mgc_post_4698407" onmouseover="showMenu(this.id)" class="showmenu" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">使用道具</a>
+<a href="javascript:;" onclick="showWindow('miscreport4698407', 'misc.php?mod=report&amp;rtype=post&amp;rid=4698407&amp;tid=389662&amp;fid=69', 'get', -1);return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">举报</a>
+</p>
+
+
+
+</div>
+</div>
+</td>
+</tr>
+<tr class="ad">
+<td class="pls">
+</td>
+<td class="plc">
+</td>
+</tr>
+</tbody></table>
+</div><div id="post_4698421"><table id="pid4698421" class="plhin" summary="pid4698421" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="pls" rowspan="2">
+<div id="favatar4698421" class="pls favatar">
+ <div class="pi">
+<div class="authi"><a href="https://bbs.zdfx.net/space-uid-20761.html" target="_blank" class="xw1" referrerpolicy="no-referrer" rel="noopener noreferrer">nds9173</a><a href="https://bbs.zdfx.net/home.php?mod=spacecp&amp;ac=profile&amp;op=verify&amp;vid=6" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-91fce1979c07bf790eadb0318aa97955.png" class="vms" alt="实名认证" title="实名认证"></a>
+
+</div>
+</div>
+
+<div>
+<div class="avatar" onmouseover="showauthor(this, 'userinfo4698421')"><a href="https://bbs.zdfx.net/space-uid-20761.html" class="avtm" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-f157261e188a9fb37ef088ce1f44e48c.php"></a></div>
+</div>
+<div style="border: 2px #71ffe580 outset;margin: auto 1px 10px;padding:2px 5px;text-align: center;background-color: #8effe017;cursor: pointer;" onclick="location.href=&quot;plugin.php?id=tianshicard:userpage&amp;userinfo=20761&quot;;" title="点击查看用户详细信息"><div class="cardwidget"><div class="caileft"><span class="caisezdl">战斗力：</span><span class="layui-badge" id="zhandouli">11W</span><br><span class="caisezdl">卡牌数：</span><span class="layui-badge layui-bg-orange" id="kapai">237</span></div><div class="caileft"><span class="caisezdl">碎片数：</span><span class="layui-badge layui-bg-blue" id="suipian">331</span><br><span class="caisezdl">现等级：</span><span class="layui-badge layui-bg-green" id="jinbi">53</span></div></div><div class="paim">【竞技场排名：全服第5名！】</div><div class="row"><div id="zbcard1" class="showcard"><img class="cardimg" src="assets/1569640180-2c5b9bd2d7a892d9083aee149ecb11c1.jpg"></div><div id="zbcard2" class="showcard"><img class="cardimg" src="assets/1569640180-9424f444ba81bbd47e60ecf1783177ba.jpg"></div><div id="zbcard3" class="showcard"><img class="cardimg" src="assets/1569640180-bc4d93d1c8f012536ce225761b620b77.jpg"></div><div id="zbcard4" class="showcard"><img class="cardimg" src="assets/1569640180-1e522009cb7ab4904a0f4669eefa4ba8.jpg"></div></div><div class="row"><div id="zbcard5" class="showcard"><img class="cardimg" src="assets/1569640180-9957d2961ce436a5622dd3b3a45858bf.jpg"></div><div id="zbcard6" class="showcard"><img class="cardimg" src="assets/1569640180-c6f7b65ca624b8eb8daf088b22cd5940.jpg"></div><div id="zbcard7" class="showcard"><img class="cardimg" src="assets/1569640180-e3807ce063d17b3d8441e0c1241b8ae6.jpg"></div><div id="zbcard8" class="showcard"><img class="cardimg" src="assets/1569640180-71547cbb64f11a470593ef0b8038748b.jpg"></div></div></div>
+
+<fieldset style="text-align:center;margin:10px;padding:5px 0px;border:1px dashed #cccccc;border-radius:8px;">
+
+</fieldset>
+
+<div style="border:2px #ccc dashed; margin:auto 14px 10px;padding:2px 5px">累计签到：1037 天<br>连续签到：2 天<br></div><div class="tns xg2"><table cellspacing="0" cellpadding="0"><tbody><tr><th><p><a href="https://bbs.zdfx.net/home.php?mod=space&amp;uid=20761&amp;do=thread&amp;type=thread&amp;view=me&amp;from=space" class="xi2" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">1510</a></p>主题</th><th><p><a href="https://bbs.zdfx.net/home.php?mod=space&amp;uid=20761&amp;do=thread&amp;type=reply&amp;view=me&amp;from=space" class="xi2" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">3569</a></p>帖子</th><td><p><a href="https://bbs.zdfx.net/home.php?mod=space&amp;uid=20761&amp;do=profile" class="xi2" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><span title="22975">2万</span></a></p>积分</td></tr></tbody></table></div>
+
+<p><a href="https://bbs.zdfx.net/home.php?mod=spacecp&amp;ac=usergroup&amp;gid=37" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-4dd0ca31b65bf2379f763c48aef4709a.gif" alt="" class="vm"></a></p>
+<p><em><a href="https://bbs.zdfx.net/home.php?mod=spacecp&amp;ac=usergroup&amp;gid=37" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">纯爱酷刑</a></em></p>
+<p class="xg1">クラーケン</p>
+
+<p><span id="g_up4698421" onmouseover="showMenu({'ctrlid':this.id, 'pos':'12!'});"><img src="assets/1569640180-b4837f61a2448f5c395c2f5e6f5ff610.gif" alt="Rank: 10"><img src="assets/1569640180-b4837f61a2448f5c395c2f5e6f5ff610.gif" alt="Rank: 10"><img src="assets/1569640180-c74600690c7109a87ffbad4f988f4d36.gif" alt="Rank: 10"></span></p>
+
+
+
+<p><span class="pbg2" id="upgradeprogress_4698421" onmouseover="showMenu({'ctrlid':this.id, 'pos':'12!', 'menuid':'g_up4698421_menu'});"><span class="pbr2" style="width:59%;"></span></span></p>
+
+
+
+<dl class="pil cl">
+	<dt>积分</dt><dd><a href="https://bbs.zdfx.net/home.php?mod=space&amp;uid=20761&amp;do=profile" target="_blank" class="xi2" referrerpolicy="no-referrer" rel="noopener noreferrer">22975</a></dd>
+	<dt>金币</dt><dd>4511 </dd>
+</dl>
+<dl class="pil cl"></dl><ul class="xl xl2 o cl">
+<li class="addflw">
+<a href="https://bbs.zdfx.net/home.php?mod=spacecp&amp;ac=follow&amp;op=add&amp;hash=f73e6dea&amp;fuid=20761" id="followmod_20761" title="收听TA" class="xi2" onclick="showWindow('followmod', this.href, 'get', 0);" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">收听TA</a>
+</li>
+<li class="pm2"><a href="https://bbs.zdfx.net/home.php?mod=spacecp&amp;ac=pm&amp;op=showmsg&amp;handlekey=showmsg_20761&amp;touid=20761&amp;pmid=0&amp;daterange=2&amp;pid=4698421&amp;tid=389662" onclick="showWindow('sendpm', this.href);" title="发消息" class="xi2" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">发消息</a></li>
+</ul>
+<p class="md_ctrl md_left"><em><img src="assets/1569640180-34a53e266335bfbf27a46b484d01ec65.gif" align="absmiddle" class="md_ctrl md_left"> <font color="#009999">版主</font></em></p><ul class="xl xl2 o cl"><li id="dsxy_4698421" onmouseover="showMenu({'ctrlid':this.id, 'pos':'12!'});" style="background: url(source/plugin/xfu_160661/image/ds_m.png) no-repeat;"><a class="xi2" title="目前单身中" href="javascript:;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">单身族</a></li><li style="background: url(source/plugin/xfu_160661/image/cupid_icon_invite.png) no-repeat;"><a class="xi2" title="目前单身中" href="javascript:;" onclick="showWindow('cupidinvite', 'plugin.php?id=xfu_160661&amp;mod=cupid&amp;action=invite&amp;uid=20761'); return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">追求他</a></li></ul><p class="md_ctrl wodexunzhang_img"><a href="https://bbs.zdfx.net/wodexunzhang-showxunzhang.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-0c5bfe0f40e527cb754721e66c893a2c.gif" alt="玲奈" onmouseover="MyshowTip(this)" tip="<h4>玲奈</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 5%</p></div>"><img src="assets/1569640180-82966918b5dd3bc719d82b27e5f63a12.gif" alt="八六" onmouseover="MyshowTip(this)" tip="<h4>八六</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 5%</p></div>"><img src="assets/1569640180-8c2bb9aa897a4be96c5b59e6a625d59e.gif" alt="森岛遥" onmouseover="MyshowTip(this)" tip="<h4>森岛遥</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 2%</p></div>"><img src="assets/1569640180-969d0cbdeacabf8fc95ab25e1d116879.gif" alt="棚町薫" onmouseover="MyshowTip(this)" tip="<h4>棚町薫</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 1%</p></div>"><img src="assets/1569640180-46e273de313c299ab37109b0e4fee3a3.gif" alt="中多纱江" onmouseover="MyshowTip(this)" tip="<h4>中多纱江</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 1%</p></div>"><img src="assets/1569640180-d5853b04c9ada87aceda4ee70c5de399.gif" alt="七咲逢" onmouseover="MyshowTip(this)" tip="<h4>七咲逢</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 2%</p></div>"><img src="assets/1569640180-4955ac9c16c92ecb9cd6f835067b9d99.gif" alt="樱井梨穗子" onmouseover="MyshowTip(this)" tip="<h4>樱井梨穗子</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 1%</p></div>"><img src="assets/1569640180-b441b049920e21fc3cdc1cb8b93ac164.gif" alt="绚辻词" onmouseover="MyshowTip(this)" tip="<h4>绚辻词</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 2%</p></div>"><img src="assets/1569640180-a7a627bd47e26a7ff0daf10cc2ae3208.gif" alt="上崎里沙" onmouseover="MyshowTip(this)" tip="<h4>上崎里沙</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 2%</p></div>"><img src="assets/1569640180-46a2dc4641d19e2e05b32e32978fd843.gif" alt="橘美也" onmouseover="MyshowTip(this)" tip="<h4>橘美也</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 1%</p></div>"><img src="assets/1569640180-b01c3668ce2b07c21a415c98188e59b0.gif" alt="冈部伦太郎" onmouseover="MyshowTip(this)" tip="<h4>冈部伦太郎</h4><p>El psy congroo.</p><div class='wode_shuxing'><p>发帖 点币 +2</p><p>触发几率 5%</p></div>"><img src="assets/1569640180-bb2cd3a94bdf3b925ecba26938726773.gif" alt="牧濑红莉栖" onmouseover="MyshowTip(this)" tip="<h4>牧濑红莉栖</h4><p>时间飞快的流逝，唯独现在，我有一种想对爱因斯坦发牢骚的心情...</p><div class='wode_shuxing'><p>发帖 点币 +2</p><p>触发几率 5%</p></div>"><img src="assets/1569640180-3ce56be6c4c5371d3858a0a74256cc66.gif" alt="八九寺真宵" onmouseover="MyshowTip(this)" tip="<h4>八九寺真宵</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 5%</p></div>"><img src="assets/1569640180-1146a9a3247ff2a849905a4d992d0c1d.gif" alt="大藏里想奈" onmouseover="MyshowTip(this)" tip="<h4>大藏里想奈</h4><p>妹妹大人</p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 5%</p></div>"><img src="assets/1569640180-3bd342d640525bb33e148a6a5c2e6eb3.gif" alt="Sion" onmouseover="MyshowTip(this)" tip="<h4>Sion</h4><p>They were only two, on the planet.</p><div class='wode_shuxing'><p>发帖 点币 +3</p><p>触发几率 5%</p></div>"><img src="assets/1569640180-1e2d85fb13e53131a8f5746d2727e5ee.gif" alt="嬉野 纱弓实" onmouseover="MyshowTip(this)" tip="<h4>嬉野 纱弓实</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>回帖 点币 +1</p><p>触发几率 1%</p></div>"><img src="assets/1569640180-3df7d2b8519adde439939a0116166138.gif" alt="和泉纱雾" onmouseover="MyshowTip(this)" tip="<h4>和泉纱雾</h4><p>我，我……我……想当的，不是你的家人——</p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 4%</p></div>"><img src="assets/1569640180-2f9f1ce9754e45a91f8d5d9de6f9b3e9.gif" alt="黑咲芽亚" onmouseover="MyshowTip(this)" tip="<h4>黑咲芽亚</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 4%</p></div>"><img src="assets/1569640180-3e3a706b450ea7850a8e81d7bed7096d.gif" alt="菈菈" onmouseover="MyshowTip(this)" tip="<h4>菈菈</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 4%</p></div>"><img src="assets/1569640180-c0ac1d32a0c705ab8de5d90c274cb10d.gif" alt="赫斯缇雅" onmouseover="MyshowTip(this)" tip="<h4>赫斯缇雅</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 5%</p></div>"><img src="assets/1569640180-16a646359c9b11340b0ab69b6327f19e.gif" alt="矢来美羽" onmouseover="MyshowTip(this)" tip="<h4>矢来美羽</h4><p>哼哼、做的到的话就试试啊、小处男</p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 1%</p></div>"><img src="assets/1569640180-d2774820f8e88542bcd03afba2476978.gif" alt="楪祈" onmouseover="MyshowTip(this)" tip="<h4>楪祈</h4><p>请使用我吧~</p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 2%</p></div>"><img src="assets/1569640180-51598da0d1dcc2a291d268d0718edde9.gif" alt="巧克力" onmouseover="MyshowTip(this)" tip="<h4><b>等级 初级</b>巧克力</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +3</p><p>触发几率 5%</p></div><div class='wode_shuxing'>下一级 <b>金币 4511/500</b></div>"><img src="assets/1569640180-92ddf1e9545d9a72f2675b9827dcb2ca.gif" alt="优" onmouseover="MyshowTip(this)" tip="<h4>优</h4><p>Eucliwood Hellscythe</p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 2%</p></div>"><img src="assets/1569640180-d6ab684fa4bda0106ae38c2e80eece42.gif" alt="八云紫" onmouseover="MyshowTip(this)" tip="<h4>八云紫</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 1%</p></div>"><img src="assets/1569640180-0c96b5ed53cf8d41359a098ae0a90037.gif" alt="幽幽子" onmouseover="MyshowTip(this)" tip="<h4>幽幽子</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 1%</p></div>"><img src="assets/1569640180-f176955befaa3fe718d7d21673569c32.gif" alt="魂魄妖梦" onmouseover="MyshowTip(this)" tip="<h4>魂魄妖梦</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 1%</p></div>"><img src="assets/1569640180-10ed8f3666d0cf51b0bad507fef7f859.gif" alt="帕秋莉" onmouseover="MyshowTip(this)" tip="<h4>帕秋莉</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 1%</p></div>"><img src="assets/1569640180-7108c5b05dbcbba4b0f5f40529f59bcd.gif" alt="射命丸文" onmouseover="MyshowTip(this)" tip="<h4>射命丸文</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 1%</p></div>"><img src="assets/1569640180-ec74a7c8d1c5cbe70322268c3e47a558.gif" alt="铃仙" onmouseover="MyshowTip(this)" tip="<h4>铃仙</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 1%</p></div>"><img src="assets/1569640180-67925704eb64c923f08d3d27e67543c9.gif" alt="十六夜咲夜" onmouseover="MyshowTip(this)" tip="<h4>十六夜咲夜</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 1%</p></div>"><img src="assets/1569640180-1084cc9812ae2df64742ecce0ef8ac30.gif" alt="成川 姫" onmouseover="MyshowTip(this)" tip="<h4>成川 姫</h4><p>其实是非常软弱，不想让任何人看到的部分……为什么我会这么开心呢？我也是个可以被拥抱的女孩子呢……自从和你交往以来，越发地这样感觉到。</p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 3%</p></div>"><img src="assets/1569640180-7a69c0b6e64a474e5aab3846698aa83a.gif" alt="朱雀院椿" onmouseover="MyshowTip(this)" tip="<h4>朱雀院椿</h4><p>三周年纪念徽章</p><div class='wode_shuxing'><p>发帖 点币 +4</p><p>触发几率 8%</p></div>"><img src="assets/1569640180-6ea8f6e1746155396080f0b9e1c0939c.gif" alt="江户川柯南" onmouseover="MyshowTip(this)" tip="<h4>江户川柯南</h4><p>万年小学生</p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 4%</p></div>"><img src="assets/1569640180-7d874cf8f169b2f62a8fbd804c718221.gif" alt="五岛润" onmouseover="MyshowTip(this)" tip="<h4>五岛润</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 2%</p></div>"><img src="assets/1569640180-2987f5c9a945b8cf2faa1169e03ab449.gif" alt="冬马和纱" onmouseover="MyshowTip(this)" tip="<h4>冬马和纱</h4><p>冬之恋曲</p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 5%</p></div>"></a></p><div class="tns xg2"></div></div>
+</td>
+<td class="plc">
+<div class="pi">
+<strong>
+<a href="https://bbs.zdfx.net/forum.php?mod=redirect&amp;goto=findpost&amp;ptid=389662&amp;pid=4698421" id="postnum4698421" onclick="setCopy(this.href, '帖子地址复制成功');return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+沙发</a>
+</strong>
+<div class="pti">
+<div class="pdbt">
+</div>
+<div class="authi">
+<img class="authicn vm" id="authicon4698421" src="assets/1569640180-3b551d651ce39dac3a7ad7b653e93edb.png">
+&nbsp;楼主<span class="pipe">|</span>
+<em id="authorposton4698421">发表于 2019-8-16 22:42</em>
+<span class="pipe">|</span>
+<a href="https://bbs.zdfx.net/forum.php?mod=viewthread&amp;tid=389662&amp;page=1&amp;authorid=20761" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">只看该作者</a>
+</div>
+</div>
+</div><div class="pct"><div class="pcb">
+<div class="t_fsz">
+<table cellspacing="0" cellpadding="0"><tbody><tr><td class="t_f" id="postmessage_4698421">
+<img src="assets/1569640180-e635cfe33dca926236aee861f5443af9.png" smilieid="97" border="0" alt="">金币不是我收的阿，系统收的，没看清-5就点下载的建议找点大索赔</td></tr></tbody></table>
+
+
+</div>
+<div id="comment_4698421" class="cm">
+</div>
+
+<div id="post_rate_div_4698421"></div>
+<div class="tshuz_floor" id="floor_4698421">
+<div class="tshuz_title">回复</div>
+    
+</div>
+<span style="clear:both"></span>
+</div>
+</div>
+
+</td></tr>
+<tr><td class="plc plm">
+<div class="sign" style="max-height:300px;maxHeightIE:300px;">下不了/玩不了请<font size="4"><a href="https://bbs.zdfx.net/home.php?mod=spacecp&amp;ac=pm&amp;op=showmsg&amp;handlekey=showmsg_20761&amp;touid=20761&amp;daterange=2" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font color="#ff00"><u>点此提交</u></font></a></font><br>
+附上游戏名&amp;问题</div>
+</td>
+</tr>
+<tr id="_postposition4698421"></tr>
+<tr>
+<td class="pls"></td>
+<td class="plc" style="overflow:visible;">
+<div class="po hin">
+<div class="pob cl">
+<em>
+<a class="fastre" href="https://bbs.zdfx.net/forum.php?mod=post&amp;action=reply&amp;fid=69&amp;tid=389662&amp;repquote=4698421&amp;extra=page%3D3&amp;page=1" onclick="showWindow('reply', this.href)" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">回帖</a>
+</em>
+
+<p>
+
+<a href="javascript:;" onclick="showWindow('rate', 'forum.php?mod=misc&amp;action=rate&amp;tid=389662&amp;pid=4698421', 'get', -1);return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">扣分</a>
+<a href="javascript:;" onclick="showWindow('miscreport4698421', 'misc.php?mod=report&amp;rtype=post&amp;rid=4698421&amp;tid=389662&amp;fid=69', 'get', -1);return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">举报</a>
+</p>
+
+
+
+</div>
+</div>
+</td>
+</tr>
+<tr class="ad">
+<td class="pls">
+</td>
+<td class="plc">
+</td>
+</tr>
+</tbody></table>
+</div><div id="post_4698577"><table id="pid4698577" class="plhin" summary="pid4698577" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="pls" rowspan="2">
+<div id="favatar4698577" class="pls favatar">
+ <div class="pi">
+<div class="authi"><a href="https://bbs.zdfx.net/space-uid-38769.html" target="_blank" class="xw1" referrerpolicy="no-referrer" rel="noopener noreferrer">享受幻想</a><a href="https://bbs.zdfx.net/home.php?mod=spacecp&amp;ac=profile&amp;op=verify&amp;vid=6" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-91fce1979c07bf790eadb0318aa97955.png" class="vms" alt="实名认证" title="实名认证"></a>
+
+</div>
+</div>
+
+<div>
+<div class="avatar" onmouseover="showauthor(this, 'userinfo4698577')"><a href="https://bbs.zdfx.net/space-uid-38769.html" class="avtm" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-45ca78f88f073deeaf8cf3cccc2159db.php"></a></div>
+</div>
+<div style="border: 2px #71ffe580 outset;margin: auto 1px 10px;padding:2px 5px;text-align: center;background-color: #8effe017;"><a href="https://bbs.zdfx.net/plugin.php?id=tianshicard:card" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">暂时没有开通卡牌</a></div>
+
+<fieldset style="text-align:center;margin:10px;padding:5px 0px;border:1px dashed #cccccc;border-radius:8px;">
+
+</fieldset>
+
+<div style="border:2px #ccc dashed; margin:auto 14px 10px;padding:2px 5px">累计签到：715 天<br>连续签到：1 天<br></div><div class="tns xg2"><table cellspacing="0" cellpadding="0"><tbody><tr><th><p><a href="https://bbs.zdfx.net/home.php?mod=space&amp;uid=38769&amp;do=thread&amp;type=thread&amp;view=me&amp;from=space" class="xi2" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">372</a></p>主题</th><th><p><a href="https://bbs.zdfx.net/home.php?mod=space&amp;uid=38769&amp;do=thread&amp;type=reply&amp;view=me&amp;from=space" class="xi2" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">2620</a></p>帖子</th><td><p><a href="https://bbs.zdfx.net/home.php?mod=space&amp;uid=38769&amp;do=profile" class="xi2" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><span title="11294">1万</span></a></p>积分</td></tr></tbody></table></div>
+
+<p><a href="https://bbs.zdfx.net/home.php?mod=spacecp&amp;ac=usergroup&amp;gid=34" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-3b0dde5cee9e2f003388f5aa55deeb85.gif" alt="" class="vm"></a></p>
+<p><em><a href="https://bbs.zdfx.net/home.php?mod=spacecp&amp;ac=usergroup&amp;gid=34" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">次元囚笼</a></em></p>
+
+
+<p><span id="g_up4698577" onmouseover="showMenu({'ctrlid':this.id, 'pos':'12!'});"><img src="assets/1569640180-b4837f61a2448f5c395c2f5e6f5ff610.gif" alt="Rank: 7"><img src="assets/1569640180-c74600690c7109a87ffbad4f988f4d36.gif" alt="Rank: 7"><img src="assets/1569640180-840acfec4fbae8e01cbaab285d0a550a.gif" alt="Rank: 7"></span></p>
+
+
+
+<p><span class="pbg2" id="upgradeprogress_4698577" onmouseover="showMenu({'ctrlid':this.id, 'pos':'12!', 'menuid':'g_up4698577_menu'});"><span class="pbr2" style="width:76%;"></span></span></p>
+
+
+
+<dl class="pil cl">
+	<dt>积分</dt><dd><a href="https://bbs.zdfx.net/home.php?mod=space&amp;uid=38769&amp;do=profile" target="_blank" class="xi2" referrerpolicy="no-referrer" rel="noopener noreferrer">11294</a></dd>
+	<dt>金币</dt><dd>1136 </dd>
+</dl>
+<dl class="pil cl"></dl><ul class="xl xl2 o cl">
+<li class="addflw">
+<a href="https://bbs.zdfx.net/home.php?mod=spacecp&amp;ac=follow&amp;op=add&amp;hash=f73e6dea&amp;fuid=38769" id="followmod_38769" title="收听TA" class="xi2" onclick="showWindow('followmod', this.href, 'get', 0);" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">收听TA</a>
+</li>
+<li class="pm2"><a href="https://bbs.zdfx.net/home.php?mod=spacecp&amp;ac=pm&amp;op=showmsg&amp;handlekey=showmsg_38769&amp;touid=38769&amp;pmid=0&amp;daterange=2&amp;pid=4698577&amp;tid=389662" onclick="showWindow('sendpm', this.href);" title="发消息" class="xi2" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">发消息</a></li>
+</ul>
+<ul class="xl xl2 o cl"><li id="dsxy_4698577" onmouseover="showMenu({'ctrlid':this.id, 'pos':'12!'});" style="background: url(source/plugin/xfu_160661/image/ds_m.png) no-repeat;"><a class="xi2" title="目前单身中" href="javascript:;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">单身族</a></li><li style="background: url(source/plugin/xfu_160661/image/cupid_icon_invite.png) no-repeat;"><a class="xi2" title="目前单身中" href="javascript:;" onclick="showWindow('cupidinvite', 'plugin.php?id=xfu_160661&amp;mod=cupid&amp;action=invite&amp;uid=38769'); return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">追求他</a></li></ul><p class="md_ctrl wodexunzhang_img"><a href="https://bbs.zdfx.net/wodexunzhang-showxunzhang.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-ebc5228853061df55dcc5d82a1b66236.gif" alt="宫国朱璃" onmouseover="MyshowTip(this)" tip="<h4>宫国朱璃</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 5%</p></div>"><img src="assets/1569640180-36d4484179a4fd05a433816d83b19d89.gif" alt="盗狮子" onmouseover="MyshowTip(this)" tip="<h4>盗狮子</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 3%</p></div>"><img src="assets/1569640180-1146a9a3247ff2a849905a4d992d0c1d.gif" alt="大藏里想奈" onmouseover="MyshowTip(this)" tip="<h4>大藏里想奈</h4><p>妹妹大人</p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 5%</p></div>"><img src="assets/1569640180-7ce0153b5392559e503f30b071efb8d4.gif" alt="稲羽 结衣" onmouseover="MyshowTip(this)" tip="<h4>稲羽 结衣</h4><p>“如果有那么大的话应该从哪里开始吃才好呢？”</p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 1%</p></div>"><img src="assets/1569640180-d008d2b0a12c605c4064326ab4ee7941.gif" alt="白鹭 茉百合" onmouseover="MyshowTip(this)" tip="<h4>白鹭 茉百合</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 1%</p></div>"><img src="assets/1569640180-3bd342d640525bb33e148a6a5c2e6eb3.gif" alt="Sion" onmouseover="MyshowTip(this)" tip="<h4>Sion</h4><p>They were only two, on the planet.</p><div class='wode_shuxing'><p>发帖 点币 +3</p><p>触发几率 5%</p></div>"><img src="assets/1569640180-a2434d6b70b551185bcced3c05c08ddc.gif" alt="武田咲夜" onmouseover="MyshowTip(this)" tip="<h4>武田咲夜</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 3%</p></div>"><img src="assets/1569640180-4e24f92c4f3439cfd1366e1edb499311.gif" alt="立华奏" onmouseover="MyshowTip(this)" tip="<h4>立华奏</h4><p>我并不是什么天使...</p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 2%</p></div>"><img src="assets/1569640180-72d49e35ab953320d52260f87d569c56.gif" alt="上月和菜" onmouseover="MyshowTip(this)" tip="<h4>上月和菜</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 4%</p></div>"><img src="assets/1569640180-799247cb8d16a1593ca02cdf16df5a92.gif" alt="艾莉丝·弗罗拉莉" onmouseover="MyshowTip(this)" tip="<h4>艾莉丝·弗罗拉莉</h4><p>“算了别在意那种小事了。反正我是你的东西”</p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 5%</p></div>"><img src="assets/1569640180-b2f6a7a9b1c9aa5c86f6b511766cb4c2.gif" alt="大幸明日香" onmouseover="MyshowTip(this)" tip="<h4>大幸明日香</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 3%</p></div>"><img src="assets/1569640180-321774eef4d5962fd394fad96099a0e3.gif" alt="赛利卡.西路菲尔" onmouseover="MyshowTip(this)" tip="<h4>赛利卡.西路菲尔</h4><p></p><div class='wode_shuxing'><p>回帖 点币 +1</p><p>触发几率 2%</p></div>"><img src="assets/1569640180-941709087783a36cf53f123c4f66bf58.gif" alt="天藤一汐" onmouseover="MyshowTip(this)" tip="<h4>天藤一汐</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 3%</p></div>"><img src="assets/1569640180-00c7772d44434b583e234bc3131640e5.gif" alt="大原枫" onmouseover="MyshowTip(this)" tip="<h4>大原枫</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 3%</p></div>"><img src="assets/1569640180-24fb8746f5b6c356bade6a89ae17dd20.gif" alt="哀泽琴美" onmouseover="MyshowTip(this)" tip="<h4>哀泽琴美</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 1%</p></div>"><img src="assets/1569640180-5968305e772f0c753ac5f46883099f50.gif" alt="大幸奈绪" onmouseover="MyshowTip(this)" tip="<h4>大幸奈绪</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 3%</p></div>"><img src="assets/1569640180-a7a627bd47e26a7ff0daf10cc2ae3208.gif" alt="上崎里沙" onmouseover="MyshowTip(this)" tip="<h4>上崎里沙</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 2%</p></div>"><img src="assets/1569640180-4955ac9c16c92ecb9cd6f835067b9d99.gif" alt="樱井梨穗子" onmouseover="MyshowTip(this)" tip="<h4>樱井梨穗子</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 1%</p></div>"><img src="assets/1569640180-b441b049920e21fc3cdc1cb8b93ac164.gif" alt="绚辻词" onmouseover="MyshowTip(this)" tip="<h4>绚辻词</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 2%</p></div>"><img src="assets/1569640180-46e273de313c299ab37109b0e4fee3a3.gif" alt="中多纱江" onmouseover="MyshowTip(this)" tip="<h4>中多纱江</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 1%</p></div>"><img src="assets/1569640180-969d0cbdeacabf8fc95ab25e1d116879.gif" alt="棚町薫" onmouseover="MyshowTip(this)" tip="<h4>棚町薫</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 1%</p></div>"><img src="assets/1569640180-8c2bb9aa897a4be96c5b59e6a625d59e.gif" alt="森岛遥" onmouseover="MyshowTip(this)" tip="<h4>森岛遥</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 2%</p></div>"><img src="assets/1569640180-34d9a19d3882e63da083f963e3285de8.gif" alt="二阶堂丽华" onmouseover="MyshowTip(this)" tip="<h4>二阶堂丽华</h4><p>「话说你好像是我的保镖吧」</p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 1%</p></div>"><img src="assets/1569640180-e1640ce4a4cf8effe42e1c0f8225a3b7.gif" alt="爱丽丝菲兹" onmouseover="MyshowTip(this)" tip="<h4>爱丽丝菲兹</h4><p>呐 小小的勇者啊~ 让余来给你训♀练一下吧~</p><div class='wode_shuxing'><p>回帖 点币 +1</p><p>发帖 点币 +5</p><p>触发几率 5%</p></div>"><img src="assets/1569640180-c0ac1d32a0c705ab8de5d90c274cb10d.gif" alt="赫斯缇雅" onmouseover="MyshowTip(this)" tip="<h4>赫斯缇雅</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 5%</p></div>"><img src="assets/1569640180-0b40304373325d3fda66f11e84f4898e.gif" alt="武帝·凑斗景明" onmouseover="MyshowTip(this)" tip="<h4>武帝·凑斗景明</h4><p>遇鬼杀鬼，逢佛弑佛，剑胄之理，正在于此</p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 1%</p></div>"></a></p><div class="tns xg2"></div></div>
+</td>
+<td class="plc">
+<div class="pi">
+<strong>
+<a href="https://bbs.zdfx.net/forum.php?mod=redirect&amp;goto=findpost&amp;ptid=389662&amp;pid=4698577" id="postnum4698577" onclick="setCopy(this.href, '帖子地址复制成功');return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+板凳</a>
+</strong>
+<div class="pti">
+<div class="pdbt">
+</div>
+<div class="authi">
+<img class="authicn vm" id="authicon4698577" src="assets/1569640180-892d05bd7f5e5735987b93ba79701237.gif">
+<em id="authorposton4698577">发表于 2019-8-16 23:12</em>
+<span class="pipe">|</span>
+<a href="https://bbs.zdfx.net/forum.php?mod=viewthread&amp;tid=389662&amp;page=1&amp;authorid=38769" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">只看该作者</a>
+</div>
+</div>
+</div><div class="pct"><div class="pcb">
+<div class="t_fsz">
+<table cellspacing="0" cellpadding="0"><tbody><tr><td class="t_f" id="postmessage_4698577">
+<i class="pstatus"> 本帖最后由 享受幻想 于 2019-8-16 23:13 编辑 </i><br>
+<br>
+好东西，感谢楼主<img src="assets/1569640180-54d59adc6cbc91d61b6d0e39f016db39.png" smilieid="119" border="0" alt=""></td></tr></tbody></table>
+
+
+</div>
+<div id="comment_4698577" class="cm">
+</div>
+
+<div id="post_rate_div_4698577"></div>
+<div class="tshuz_floor" id="floor_4698577">
+<div class="tshuz_title">回复</div>
+    
+</div>
+<span style="clear:both"></span>
+</div>
+</div>
+
+</td></tr>
+<tr><td class="plc plm">
+</td>
+</tr>
+<tr id="_postposition4698577"></tr>
+<tr>
+<td class="pls"></td>
+<td class="plc" style="overflow:visible;">
+<div class="po hin">
+<div class="pob cl">
+<em>
+<a class="fastre" href="https://bbs.zdfx.net/forum.php?mod=post&amp;action=reply&amp;fid=69&amp;tid=389662&amp;repquote=4698577&amp;extra=page%3D3&amp;page=1" onclick="showWindow('reply', this.href)" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">回帖</a>
+</em>
+
+<p>
+
+<a href="javascript:;" onclick="showWindow('rate', 'forum.php?mod=misc&amp;action=rate&amp;tid=389662&amp;pid=4698577', 'get', -1);return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">扣分</a>
+<a href="javascript:;" onclick="showWindow('miscreport4698577', 'misc.php?mod=report&amp;rtype=post&amp;rid=4698577&amp;tid=389662&amp;fid=69', 'get', -1);return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">举报</a>
+</p>
+
+
+
+</div>
+</div>
+</td>
+</tr>
+<tr class="ad">
+<td class="pls">
+</td>
+<td class="plc">
+</td>
+</tr>
+</tbody></table>
+</div><div id="post_4698858"><table id="pid4698858" class="plhin" summary="pid4698858" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="pls" rowspan="2">
+<div id="favatar4698858" class="pls favatar">
+ <div class="pi">
+<div class="authi"><a href="https://bbs.zdfx.net/space-uid-10870.html" target="_blank" class="xw1" referrerpolicy="no-referrer" rel="noopener noreferrer">月下独酌</a>
+</div>
+</div>
+
+<div>
+<div class="avatar" onmouseover="showauthor(this, 'userinfo4698858')"><a href="https://bbs.zdfx.net/space-uid-10870.html" class="avtm" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-b80da6933a9084e2f66475bb5d44bb87.php"></a></div>
+</div>
+<div style="border: 2px #71ffe580 outset;margin: auto 1px 10px;padding:2px 5px;text-align: center;background-color: #8effe017;"><a href="https://bbs.zdfx.net/plugin.php?id=tianshicard:card" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">暂时没有开通卡牌</a></div>
+
+<fieldset style="text-align:center;margin:10px;padding:5px 0px;border:1px dashed #cccccc;border-radius:8px;">
+
+</fieldset>
+
+<div style="border:2px #ccc dashed; margin:auto 14px 10px;padding:2px 5px">累计签到：1100 天<br>连续签到：1026 天<br></div><div class="tns xg2"><table cellspacing="0" cellpadding="0"><tbody><tr><th><p><a href="https://bbs.zdfx.net/home.php?mod=space&amp;uid=10870&amp;do=thread&amp;type=thread&amp;view=me&amp;from=space" class="xi2" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">8</a></p>主题</th><th><p><a href="https://bbs.zdfx.net/home.php?mod=space&amp;uid=10870&amp;do=thread&amp;type=reply&amp;view=me&amp;from=space" class="xi2" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">494</a></p>帖子</th><td><p><a href="https://bbs.zdfx.net/home.php?mod=space&amp;uid=10870&amp;do=profile" class="xi2" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><span title="11713">1万</span></a></p>积分</td></tr></tbody></table></div>
+
+<p><a href="https://bbs.zdfx.net/home.php?mod=spacecp&amp;ac=usergroup&amp;gid=34" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-3b0dde5cee9e2f003388f5aa55deeb85.gif" alt="" class="vm"></a></p>
+<p><em><a href="https://bbs.zdfx.net/home.php?mod=spacecp&amp;ac=usergroup&amp;gid=34" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">次元囚笼</a></em></p>
+
+
+<p><span id="g_up4698858" onmouseover="showMenu({'ctrlid':this.id, 'pos':'12!'});"><img src="assets/1569640180-b4837f61a2448f5c395c2f5e6f5ff610.gif" alt="Rank: 7"><img src="assets/1569640180-c74600690c7109a87ffbad4f988f4d36.gif" alt="Rank: 7"><img src="assets/1569640180-840acfec4fbae8e01cbaab285d0a550a.gif" alt="Rank: 7"></span></p>
+
+
+
+<p><span class="pbg2" id="upgradeprogress_4698858" onmouseover="showMenu({'ctrlid':this.id, 'pos':'12!', 'menuid':'g_up4698858_menu'});"><span class="pbr2" style="width:90%;"></span></span></p>
+
+
+
+<dl class="pil cl">
+	<dt>积分</dt><dd><a href="https://bbs.zdfx.net/home.php?mod=space&amp;uid=10870&amp;do=profile" target="_blank" class="xi2" referrerpolicy="no-referrer" rel="noopener noreferrer">11713</a></dd>
+	<dt>金币</dt><dd>9263 </dd>
+</dl>
+<dl class="pil cl"></dl><ul class="xl xl2 o cl">
+<li class="addflw">
+<a href="https://bbs.zdfx.net/home.php?mod=spacecp&amp;ac=follow&amp;op=add&amp;hash=f73e6dea&amp;fuid=10870" id="followmod_10870" title="收听TA" class="xi2" onclick="showWindow('followmod', this.href, 'get', 0);" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">收听TA</a>
+</li>
+<li class="pm2"><a href="https://bbs.zdfx.net/home.php?mod=spacecp&amp;ac=pm&amp;op=showmsg&amp;handlekey=showmsg_10870&amp;touid=10870&amp;pmid=0&amp;daterange=2&amp;pid=4698858&amp;tid=389662" onclick="showWindow('sendpm', this.href);" title="发消息" class="xi2" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">发消息</a></li>
+</ul>
+<ul class="xl xl2 o cl"><li id="dsxy_4698858" onmouseover="showMenu({'ctrlid':this.id, 'pos':'12!'});" style="background: url(source/plugin/xfu_160661/image/ds_m.png) no-repeat;"><a class="xi2" title="目前单身中" href="javascript:;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">单身族</a></li><li style="background: url(source/plugin/xfu_160661/image/cupid_icon_invite.png) no-repeat;"><a class="xi2" title="目前单身中" href="javascript:;" onclick="showWindow('cupidinvite', 'plugin.php?id=xfu_160661&amp;mod=cupid&amp;action=invite&amp;uid=10870'); return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">追求他</a></li></ul><p class="md_ctrl wodexunzhang_img"><a href="https://bbs.zdfx.net/wodexunzhang-showxunzhang.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-79d18706c8f44620b12b97d67db4166d.gif" alt="雨宫优子" onmouseover="MyshowTip(this)" tip="<h4>雨宫优子</h4><p>ef - a fairy tale... </p><div class='wode_shuxing'><p>发帖 点币 +5</p><p>触发几率 5%</p></div>"><img src="assets/1569640180-1e2d85fb13e53131a8f5746d2727e5ee.gif" alt="嬉野 纱弓实" onmouseover="MyshowTip(this)" tip="<h4>嬉野 纱弓实</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>回帖 点币 +1</p><p>触发几率 1%</p></div>"></a></p><div class="tns xg2"></div></div>
+</td>
+<td class="plc">
+<div class="pi">
+<strong>
+<a href="https://bbs.zdfx.net/forum.php?mod=redirect&amp;goto=findpost&amp;ptid=389662&amp;pid=4698858" id="postnum4698858" onclick="setCopy(this.href, '帖子地址复制成功');return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+地板</a>
+</strong>
+<div class="pti">
+<div class="pdbt">
+</div>
+<div class="authi">
+<img class="authicn vm" id="authicon4698858" src="assets/1569640180-892d05bd7f5e5735987b93ba79701237.gif">
+<em id="authorposton4698858">发表于 2019-8-17 00:02</em>
+<span class="pipe">|</span>
+<a href="https://bbs.zdfx.net/forum.php?mod=viewthread&amp;tid=389662&amp;page=1&amp;authorid=10870" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">只看该作者</a>
+</div>
+</div>
+</div><div class="pct"><div class="pcb">
+<div class="t_fsz">
+<table cellspacing="0" cellpadding="0"><tbody><tr><td class="t_f" id="postmessage_4698858">
+<i class="pstatus"> 本帖最后由 月下独酌 于 2019-8-17 00:14 编辑 </i><br>
+<br>
+1、这个能过key.dat那一层验证吗<br>
+2、刚刚测了一下，这个小东西好像还需要visual c++ 2015 redistributable支持，能不能改为不依靠visual c++组件运行<br>
+</td></tr></tbody></table>
+
+
+</div>
+<div id="comment_4698858" class="cm">
+</div>
+
+<div id="post_rate_div_4698858"></div>
+<div class="tshuz_floor" id="floor_4698858">
+<div class="tshuz_title nobottom">收起回复</div>
+    <div class="tshuz_reply">
+    	<ul>
+                            
+        <li>
+        	<a href="https://bbs.zdfx.net/home.php?mod=space&amp;uid=20761" target="_blank" title="nds9173的空间" class="avatar" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-b013ee3f7153982506d6b6a708d7ff80.php"></a>
+        	<div class="tshuz_cnt">
+            	<a class="tshuz_at" href="https://bbs.zdfx.net/home.php?mod=space&amp;uid=20761" target="_blank" title="nds9173的空间" referrerpolicy="no-referrer" rel="noopener noreferrer">nds9173</a>&nbsp;:&nbsp;<span class="tshuz_cnt_main">1就是用来过key.dat的= =所以其实这工具跟玩游戏的关系不大，是用来做硬盘版的。2感谢反馈，vcruntime140D。。估计错误上传了debug版本，已替换成release版并改为静态编译</span>
+                <div class="tshuz_time">
+                	2019-8-17 09:20<span class="pipe">|</span>
+                	<a href="javascript:;" onclick="dreply('4698858','20761','nds9173');" class="tshuz_at" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">回帖</a>
+                </div>
+            </div>
+        </li>
+                
+        
+        <li class="nobottom">
+                    	
+            <i class="icon-reply">我也说一句</i>
+            
+        </li>
+        </ul>
+    </div>
+</div>
+<span style="clear:both"></span>
+</div>
+</div>
+
+</td></tr>
+<tr><td class="plc plm">
+<div class="sign" style="max-height:300px;maxHeightIE:300px;"><font color="Red"><strong>月下酒一壶，对影成三人。<br>
+酒香人且醉，孤梦到天明。</strong></font></div>
+</td>
+</tr>
+<tr id="_postposition4698858"></tr>
+<tr>
+<td class="pls"></td>
+<td class="plc" style="overflow:visible;">
+<div class="po hin">
+<div class="pob cl">
+<em>
+<a class="fastre" href="https://bbs.zdfx.net/forum.php?mod=post&amp;action=reply&amp;fid=69&amp;tid=389662&amp;repquote=4698858&amp;extra=page%3D3&amp;page=1" onclick="showWindow('reply', this.href)" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">回帖</a>
+</em>
+
+<p>
+
+<a href="javascript:;" onclick="showWindow('rate', 'forum.php?mod=misc&amp;action=rate&amp;tid=389662&amp;pid=4698858', 'get', -1);return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">扣分</a>
+<a href="javascript:;" onclick="showWindow('miscreport4698858', 'misc.php?mod=report&amp;rtype=post&amp;rid=4698858&amp;tid=389662&amp;fid=69', 'get', -1);return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">举报</a>
+</p>
+
+
+
+</div>
+</div>
+</td>
+</tr>
+<tr class="ad">
+<td class="pls">
+</td>
+<td class="plc">
+</td>
+</tr>
+</tbody></table>
+</div><div id="post_4699093"><table id="pid4699093" class="plhin" summary="pid4699093" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="pls" rowspan="2">
+<div id="favatar4699093" class="pls favatar">
+ <div class="pi">
+<div class="authi"><a href="https://bbs.zdfx.net/space-uid-24521.html" target="_blank" class="xw1" referrerpolicy="no-referrer" rel="noopener noreferrer">295741393</a>
+</div>
+</div>
+
+<div>
+<div class="avatar" onmouseover="showauthor(this, 'userinfo4699093')"><a href="https://bbs.zdfx.net/space-uid-24521.html" class="avtm" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-0ebeb6a861eacef3fce20acb1e7b392b.php"></a></div>
+</div>
+<div style="border: 2px #71ffe580 outset;margin: auto 1px 10px;padding:2px 5px;text-align: center;background-color: #8effe017;"><a href="https://bbs.zdfx.net/plugin.php?id=tianshicard:card" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">暂时没有开通卡牌</a></div>
+
+<fieldset style="text-align:center;margin:10px;padding:5px 0px;border:1px dashed #cccccc;border-radius:8px;">
+
+</fieldset>
+
+<div style="border:2px #ccc dashed; margin:auto 14px 10px;padding:2px 5px">累计签到：798 天<br>连续签到：361 天<br></div><div class="tns xg2"><table cellspacing="0" cellpadding="0"><tbody><tr><th><p><a href="https://bbs.zdfx.net/home.php?mod=space&amp;uid=24521&amp;do=thread&amp;type=thread&amp;view=me&amp;from=space" class="xi2" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">0</a></p>主题</th><th><p><a href="https://bbs.zdfx.net/home.php?mod=space&amp;uid=24521&amp;do=thread&amp;type=reply&amp;view=me&amp;from=space" class="xi2" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">871</a></p>帖子</th><td><p><a href="https://bbs.zdfx.net/home.php?mod=space&amp;uid=24521&amp;do=profile" class="xi2" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">7233</a></p>积分</td></tr></tbody></table></div>
+
+<p><a href="https://bbs.zdfx.net/home.php?mod=spacecp&amp;ac=usergroup&amp;gid=33" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-fea58c2b9505188813a62310f54d9340.gif" alt="" class="vm"></a></p>
+<p><em><a href="https://bbs.zdfx.net/home.php?mod=spacecp&amp;ac=usergroup&amp;gid=33" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">绝望爱恋</a></em></p>
+
+
+<p><span id="g_up4699093" onmouseover="showMenu({'ctrlid':this.id, 'pos':'12!'});"><img src="assets/1569640180-b4837f61a2448f5c395c2f5e6f5ff610.gif" alt="Rank: 6"><img src="assets/1569640180-c74600690c7109a87ffbad4f988f4d36.gif" alt="Rank: 6"></span></p>
+
+
+
+<p><span class="pbg2" id="upgradeprogress_4699093" onmouseover="showMenu({'ctrlid':this.id, 'pos':'12!', 'menuid':'g_up4699093_menu'});"><span class="pbr2" style="width:41%;"></span></span></p>
+
+
+
+<dl class="pil cl">
+	<dt>积分</dt><dd><a href="https://bbs.zdfx.net/home.php?mod=space&amp;uid=24521&amp;do=profile" target="_blank" class="xi2" referrerpolicy="no-referrer" rel="noopener noreferrer">7233</a></dd>
+	<dt>金币</dt><dd>7357 </dd>
+</dl>
+<dl class="pil cl"></dl><ul class="xl xl2 o cl">
+<li class="addflw">
+<a href="https://bbs.zdfx.net/home.php?mod=spacecp&amp;ac=follow&amp;op=add&amp;hash=f73e6dea&amp;fuid=24521" id="followmod_24521" title="收听TA" class="xi2" onclick="showWindow('followmod', this.href, 'get', 0);" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">收听TA</a>
+</li>
+<li class="pm2"><a href="https://bbs.zdfx.net/home.php?mod=spacecp&amp;ac=pm&amp;op=showmsg&amp;handlekey=showmsg_24521&amp;touid=24521&amp;pmid=0&amp;daterange=2&amp;pid=4699093&amp;tid=389662" onclick="showWindow('sendpm', this.href);" title="发消息" class="xi2" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">发消息</a></li>
+</ul>
+<ul class="xl xl2 o cl"><li id="dsxy_4699093" onmouseover="showMenu({'ctrlid':this.id, 'pos':'12!'});" style="background: url(source/plugin/xfu_160661/image/ds_f.png) no-repeat;"><a class="xi2" title="目前单身中" href="javascript:;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">单身族</a></li><li style="background: url(source/plugin/xfu_160661/image/cupid_icon_invite.png) no-repeat;"><a class="xi2" title="目前单身中" href="javascript:;" onclick="showWindow('cupidinvite', 'plugin.php?id=xfu_160661&amp;mod=cupid&amp;action=invite&amp;uid=24521'); return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">追求她</a></li></ul><p class="md_ctrl wodexunzhang_img"><a href="https://bbs.zdfx.net/wodexunzhang-showxunzhang.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-a394cfd169046b6a8c079d6ac6b462af.gif" alt="兄贵" onmouseover="MyshowTip(this)" tip="<h4>兄贵</h4><p>亚拉那一卡♂？</p>"><img src="assets/1569640180-415ed7089bff778fd34e5656d64909f0.gif" alt="贝露·赛因" onmouseover="MyshowTip(this)" tip="<h4>贝露·赛因</h4><p>我的荣耀与自豪就是守护姬的安全，我乃是姬所拥有的大魔法『贝露·赛因』，说我可爱这种话最好还是，就是，在只有咱们俩人的时候说最好</p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 1%</p></div>"></a></p><div class="tns xg2"><div align="center" onmouseover="showauthor(this, 'userinfo')"><a href="https://bbs.zdfx.net/plugin.php?id=pokemon:pokemon&amp;index=ajax_pm&amp;petid=111131&amp;action=show&amp;cshu=2" onclick="showWindow('pokemon',this.href);return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-c3c3d3d514a31a47a1b1c7746ae1bb02.gif" border="0"></a></div><br><span class="cwjltt"><a href="https://bbs.zdfx.net/plugin.php?id=pokemon:pokemon&amp;index=ajax_pm&amp;petid=111131&amp;action=show&amp;cshu=2" onclick="showWindow('pokemon',this.href);return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">墨海马</a> Lv:15</span></div><img src="assets/1569640180-33aee875a1bb36431ab9fb5b997a6621.gif" title="宠物蛋" lv:1="" border="0"></div>
+</td>
+<td class="plc">
+<div class="pi">
+<strong>
+<a href="https://bbs.zdfx.net/forum.php?mod=redirect&amp;goto=findpost&amp;ptid=389662&amp;pid=4699093" id="postnum4699093" onclick="setCopy(this.href, '帖子地址复制成功');return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+<em>5</em><sup>#</sup></a>
+</strong>
+<div class="pti">
+<div class="pdbt">
+</div>
+<div class="authi">
+<img class="authicn vm" id="authicon4699093" src="assets/1569640180-892d05bd7f5e5735987b93ba79701237.gif">
+<em id="authorposton4699093">发表于 2019-8-17 00:51</em>
+<span class="pipe">|</span>
+<a href="https://bbs.zdfx.net/forum.php?mod=viewthread&amp;tid=389662&amp;page=1&amp;authorid=24521" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">只看该作者</a>
+</div>
+</div>
+</div><div class="pct"><div class="pcb">
+<div class="t_fsz">
+<table cellspacing="0" cellpadding="0"><tbody><tr><td class="t_f" id="postmessage_4699093">
+感谢分享</td></tr></tbody></table>
+
+
+</div>
+<div id="comment_4699093" class="cm">
+</div>
+
+<div id="post_rate_div_4699093"></div>
+<div class="tshuz_floor" id="floor_4699093">
+<div class="tshuz_title">回复</div>
+    
+</div>
+<span style="clear:both"></span>
+</div>
+</div>
+
+</td></tr>
+<tr><td class="plc plm">
+</td>
+</tr>
+<tr id="_postposition4699093"></tr>
+<tr>
+<td class="pls"></td>
+<td class="plc" style="overflow:visible;">
+<div class="po hin">
+<div class="pob cl">
+<em>
+<a class="fastre" href="https://bbs.zdfx.net/forum.php?mod=post&amp;action=reply&amp;fid=69&amp;tid=389662&amp;repquote=4699093&amp;extra=page%3D3&amp;page=1" onclick="showWindow('reply', this.href)" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">回帖</a>
+</em>
+
+<p>
+
+<a href="javascript:;" onclick="showWindow('rate', 'forum.php?mod=misc&amp;action=rate&amp;tid=389662&amp;pid=4699093', 'get', -1);return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">扣分</a>
+<a href="javascript:;" onclick="showWindow('miscreport4699093', 'misc.php?mod=report&amp;rtype=post&amp;rid=4699093&amp;tid=389662&amp;fid=69', 'get', -1);return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">举报</a>
+</p>
+
+
+
+</div>
+</div>
+</td>
+</tr>
+<tr class="ad">
+<td class="pls">
+</td>
+<td class="plc">
+</td>
+</tr>
+</tbody></table>
+</div><div id="post_4700533"><table id="pid4700533" class="plhin" summary="pid4700533" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="pls" rowspan="2">
+<div id="favatar4700533" class="pls favatar">
+ <div class="pi">
+<div class="authi"><a href="https://bbs.zdfx.net/space-uid-305.html" target="_blank" class="xw1" style="color: #009999" referrerpolicy="no-referrer" rel="noopener noreferrer">Iam柯尚</a><a href="https://bbs.zdfx.net/home.php?mod=spacecp&amp;ac=profile&amp;op=verify&amp;vid=6" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-91fce1979c07bf790eadb0318aa97955.png" class="vms" alt="实名认证" title="实名认证"></a>
+
+</div>
+</div>
+
+<div>
+<div class="avatar" onmouseover="showauthor(this, 'userinfo4700533')"><a href="https://bbs.zdfx.net/space-uid-305.html" class="avtm" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-bec2dc2264d8188233a6d8ba3b064fd2.php"></a></div>
+<div style="width:90%; margin:0 auto;"><img title="雨宫优子" style="max-width:100%; display:block;margin:10px auto;" src="assets/1569640180-2a02a9e04b2fda1f120e432728b311ed.gif"></div></div>
+<div style="border: 2px #71ffe580 outset;margin: auto 1px 10px;padding:2px 5px;text-align: center;background-color: #8effe017;cursor: pointer;" onclick="location.href=&quot;plugin.php?id=tianshicard:userpage&amp;userinfo=305&quot;;" title="点击查看用户详细信息"><div class="cardwidget"><div class="caileft"><span class="caisezdl">战斗力：</span><span class="layui-badge" id="zhandouli">1.29W</span><br><span class="caisezdl">卡牌数：</span><span class="layui-badge layui-bg-orange" id="kapai">112</span></div><div class="caileft"><span class="caisezdl">碎片数：</span><span class="layui-badge layui-bg-blue" id="suipian">426</span><br><span class="caisezdl">现等级：</span><span class="layui-badge layui-bg-green" id="jinbi">15</span></div></div><div class="paim">【竞技场排名：全服第510名！】</div><div class="row"><div id="zbcard1" class="showcard"><img class="cardimg" src="assets/1569640180-d7e4e9dbbac6cfe483dd24a06a69e8e9.jpg"></div><div id="zbcard2" class="showcard"><img class="cardimg" src="assets/1569640180-44aaa0b855cf9322224257ade9dcdbed.jpg"></div><div id="zbcard3" class="showcard"><img class="cardimg" src="assets/1569640180-792a611671e1e562637bdee6453f34b9.jpg"></div><div id="zbcard4" class="showcard"><img class="cardimg" src="assets/1569640180-792a611671e1e562637bdee6453f34b9.jpg"></div></div><div class="row"><div id="zbcard5" class="showcard"><img class="cardimg" src="assets/1569640180-792a611671e1e562637bdee6453f34b9.jpg"></div><div id="zbcard6" class="showcard"><img class="cardimg" src="assets/1569640180-792a611671e1e562637bdee6453f34b9.jpg"></div><div id="zbcard7" class="showcard"><img class="cardimg" src="assets/1569640180-792a611671e1e562637bdee6453f34b9.jpg"></div><div id="zbcard8" class="showcard"><img class="cardimg" src="assets/1569640180-792a611671e1e562637bdee6453f34b9.jpg"></div></div></div>
+
+<fieldset style="text-align:center;margin:10px;padding:5px 0px;border:1px dashed #cccccc;border-radius:8px;">
+
+</fieldset>
+
+<div style="border:2px #ccc dashed; margin:auto 14px 10px;padding:2px 5px">累计签到：1120 天<br>连续签到：1041 天<br></div><div class="tns xg2"><table cellspacing="0" cellpadding="0"><tbody><tr><th><p><a href="https://bbs.zdfx.net/home.php?mod=space&amp;uid=305&amp;do=thread&amp;type=thread&amp;view=me&amp;from=space" class="xi2" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">865</a></p>主题</th><th><p><a href="https://bbs.zdfx.net/home.php?mod=space&amp;uid=305&amp;do=thread&amp;type=reply&amp;view=me&amp;from=space" class="xi2" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">5634</a></p>帖子</th><td><p><a href="https://bbs.zdfx.net/home.php?mod=space&amp;uid=305&amp;do=profile" class="xi2" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><span title="22071">2万</span></a></p>积分</td></tr></tbody></table></div>
+
+<p><a href="https://bbs.zdfx.net/home.php?mod=spacecp&amp;ac=usergroup&amp;gid=3" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-34a53e266335bfbf27a46b484d01ec65.gif" alt="" class="vm"></a></p>
+<p><em><a href="https://bbs.zdfx.net/home.php?mod=spacecp&amp;ac=usergroup&amp;gid=3" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font color="#009999">版主</font></a></em></p>
+<p class="xg1">这个世界上没有奇迹，有的只是偶然和必然，还有谁做了什么</p>
+
+<p><span><img src="assets/1569640180-b4837f61a2448f5c395c2f5e6f5ff610.gif" alt="Rank: 12"><img src="assets/1569640180-b4837f61a2448f5c395c2f5e6f5ff610.gif" alt="Rank: 12"><img src="assets/1569640180-b4837f61a2448f5c395c2f5e6f5ff610.gif" alt="Rank: 12"></span></p>
+
+
+
+
+<dl class="pil cl">
+	<dt>积分</dt><dd><a href="https://bbs.zdfx.net/home.php?mod=space&amp;uid=305&amp;do=profile" target="_blank" class="xi2" referrerpolicy="no-referrer" rel="noopener noreferrer">22071</a></dd>
+	<dt>金币</dt><dd>55106 </dd>
+</dl>
+<dl class="pil cl"></dl><ul class="xl xl2 o cl">
+<li class="addflw">
+<a href="https://bbs.zdfx.net/home.php?mod=spacecp&amp;ac=follow&amp;op=add&amp;hash=f73e6dea&amp;fuid=305" id="followmod_305" title="收听TA" class="xi2" onclick="showWindow('followmod', this.href, 'get', 0);" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">收听TA</a>
+</li>
+<li class="pm2"><a href="https://bbs.zdfx.net/home.php?mod=spacecp&amp;ac=pm&amp;op=showmsg&amp;handlekey=showmsg_305&amp;touid=305&amp;pmid=0&amp;daterange=2&amp;pid=4700533&amp;tid=389662" onclick="showWindow('sendpm', this.href);" title="发消息" class="xi2" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">发消息</a></li>
+</ul>
+<ul class="xl xl2 o cl"><li id="dsxy_4700533" onmouseover="showMenu({'ctrlid':this.id, 'pos':'12!'});" style="background: url(source/plugin/xfu_160661/image/ds_f.png) no-repeat;"><a class="xi2" title="目前单身中" href="javascript:;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">单身族</a></li><li style="background: url(source/plugin/xfu_160661/image/cupid_icon_invite.png) no-repeat;"><a class="xi2" title="目前单身中" href="javascript:;" onclick="showWindow('cupidinvite', 'plugin.php?id=xfu_160661&amp;mod=cupid&amp;action=invite&amp;uid=305'); return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">追求她</a></li></ul><p class="md_ctrl wodexunzhang_img"><a href="https://bbs.zdfx.net/wodexunzhang-showxunzhang.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-79d18706c8f44620b12b97d67db4166d.gif" alt="雨宫优子" onmouseover="MyshowTip(this)" tip="<h4>雨宫优子</h4><p>ef - a fairy tale... </p><div class='wode_shuxing'><p>发帖 点币 +5</p><p>触发几率 5%</p></div>"><img src="assets/1569640180-3815b487b3b551375af9ab713ad9845d.gif" alt="姬野永远" onmouseover="MyshowTip(this)" tip="<h4>姬野永远</h4><p>我爱你，终...我一直爱着你~！</p><div class='wode_shuxing'><p>回帖 点币 +1</p><p>触发几率 2%</p></div>"><img src="assets/1569640180-47a07b61d95a849a512bc16ff23b0565.gif" alt="娘闪闪" onmouseover="MyshowTip(this)" tip="<h4>娘闪闪</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>发帖 金币 +1</p><p>发帖 宠物经验 +1</p><p>回帖 点币 +1</p><p>回帖 金币 +1</p><p>回帖 宠物经验 +1</p><p>触发几率 8%</p></div>"><img src="assets/1569640180-16a646359c9b11340b0ab69b6327f19e.gif" alt="矢来美羽" onmouseover="MyshowTip(this)" tip="<h4>矢来美羽</h4><p>哼哼、做的到的话就试试啊、小处男</p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 1%</p></div>"><img src="assets/1569640180-4e24f92c4f3439cfd1366e1edb499311.gif" alt="立华奏" onmouseover="MyshowTip(this)" tip="<h4>立华奏</h4><p>我并不是什么天使...</p><div class='wode_shuxing'><p>发帖 点币 +1</p><p>触发几率 2%</p></div>"><img src="assets/1569640180-3bd342d640525bb33e148a6a5c2e6eb3.gif" alt="Sion" onmouseover="MyshowTip(this)" tip="<h4>Sion</h4><p>They were only two, on the planet.</p><div class='wode_shuxing'><p>发帖 点币 +3</p><p>触发几率 5%</p></div>"></a></p><div class="tns xg2"></div></div>
+</td>
+<td class="plc">
+<div class="pi">
+<strong>
+<a href="https://bbs.zdfx.net/forum.php?mod=redirect&amp;goto=findpost&amp;ptid=389662&amp;pid=4700533" id="postnum4700533" onclick="setCopy(this.href, '帖子地址复制成功');return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+<em>6</em><sup>#</sup></a>
+</strong>
+<div class="pti">
+<div class="pdbt">
+</div>
+<div class="authi">
+<img class="authicn vm" id="authicon4700533" src="assets/1569640180-e29317a477598d19d299f8554f739175.gif">
+<em id="authorposton4700533">发表于 2019-8-17 11:53</em>
+<span class="pipe">|</span>
+<a href="https://bbs.zdfx.net/forum.php?mod=viewthread&amp;tid=389662&amp;page=1&amp;authorid=305" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">只看该作者</a>
+</div>
+</div>
+</div><div class="pct"><div class="pcb">
+<div class="t_fsz">
+<table cellspacing="0" cellpadding="0"><tbody><tr><td class="t_f" id="postmessage_4700533">
+终于不用看着CS2引擎就躲开了，有空把存货测一遍之后就发。</td></tr></tbody></table>
+
+
+</div>
+<div id="comment_4700533" class="cm">
+</div>
+
+<div id="post_rate_div_4700533"></div>
+<div class="tshuz_floor" id="floor_4700533">
+<div class="tshuz_title">回复</div>
+    
+</div>
+<span style="clear:both"></span>
+</div>
+</div>
+
+</td></tr>
+<tr><td class="plc plm">
+<div class="sign" style="max-height:300px;maxHeightIE:300px;"><font color="Red"><strong>Under the eternal sky, who would look up to the azure.</strong></font></div>
+</td>
+</tr>
+<tr id="_postposition4700533"></tr>
+<tr>
+<td class="pls"></td>
+<td class="plc" style="overflow:visible;">
+<div class="po hin">
+<div class="pob cl">
+<em>
+<a class="fastre" href="https://bbs.zdfx.net/forum.php?mod=post&amp;action=reply&amp;fid=69&amp;tid=389662&amp;repquote=4700533&amp;extra=page%3D3&amp;page=1" onclick="showWindow('reply', this.href)" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">回帖</a>
+</em>
+
+<p>
+
+<a href="javascript:;" onclick="showWindow('rate', 'forum.php?mod=misc&amp;action=rate&amp;tid=389662&amp;pid=4700533', 'get', -1);return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">扣分</a>
+<a href="javascript:;" onclick="showWindow('miscreport4700533', 'misc.php?mod=report&amp;rtype=post&amp;rid=4700533&amp;tid=389662&amp;fid=69', 'get', -1);return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">举报</a>
+</p>
+
+
+
+</div>
+</div>
+</td>
+</tr>
+<tr class="ad">
+<td class="pls">
+</td>
+<td class="plc">
+</td>
+</tr>
+</tbody></table>
+</div><div id="post_4702497"><table id="pid4702497" class="plhin" summary="pid4702497" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="pls" rowspan="2">
+<div id="favatar4702497" class="pls favatar">
+ <div class="pi">
+<div class="authi"><a href="https://bbs.zdfx.net/space-uid-120944.html" target="_blank" class="xw1" style="color: #ff9a00" referrerpolicy="no-referrer" rel="noopener noreferrer">Foreversky320</a><a href="https://bbs.zdfx.net/home.php?mod=spacecp&amp;ac=profile&amp;op=verify&amp;vid=6" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-91fce1979c07bf790eadb0318aa97955.png" class="vms" alt="实名认证" title="实名认证"></a>
+
+</div>
+</div>
+
+<div>
+<div class="avatar" onmouseover="showauthor(this, 'userinfo4702497')"><a href="https://bbs.zdfx.net/space-uid-120944.html" class="avtm" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-0f1637b018f016c9bd5fc88839d8cc90.php"></a></div>
+</div>
+<div style="border: 2px #71ffe580 outset;margin: auto 1px 10px;padding:2px 5px;text-align: center;background-color: #8effe017;cursor: pointer;" onclick="location.href=&quot;plugin.php?id=tianshicard:userpage&amp;userinfo=120944&quot;;" title="点击查看用户详细信息"><div class="cardwidget"><div class="caileft"><span class="caisezdl">战斗力：</span><span class="layui-badge" id="zhandouli">200</span><br><span class="caisezdl">卡牌数：</span><span class="layui-badge layui-bg-orange" id="kapai">113</span></div><div class="caileft"><span class="caisezdl">碎片数：</span><span class="layui-badge layui-bg-blue" id="suipian">0</span><br><span class="caisezdl">现等级：</span><span class="layui-badge layui-bg-green" id="jinbi">0</span></div></div><div class="paim">【竞技场排名：暂无排名。】</div><div class="row"><div id="zbcard1" class="showcard"><img class="cardimg" src="assets/1569640180-792a611671e1e562637bdee6453f34b9.jpg"></div><div id="zbcard2" class="showcard"><img class="cardimg" src="assets/1569640180-792a611671e1e562637bdee6453f34b9.jpg"></div><div id="zbcard3" class="showcard"><img class="cardimg" src="assets/1569640180-792a611671e1e562637bdee6453f34b9.jpg"></div><div id="zbcard4" class="showcard"><img class="cardimg" src="assets/1569640180-792a611671e1e562637bdee6453f34b9.jpg"></div></div><div class="row"><div id="zbcard5" class="showcard"><img class="cardimg" src="assets/1569640180-792a611671e1e562637bdee6453f34b9.jpg"></div><div id="zbcard6" class="showcard"><img class="cardimg" src="assets/1569640180-792a611671e1e562637bdee6453f34b9.jpg"></div><div id="zbcard7" class="showcard"><img class="cardimg" src="assets/1569640180-792a611671e1e562637bdee6453f34b9.jpg"></div><div id="zbcard8" class="showcard"><img class="cardimg" src="assets/1569640180-792a611671e1e562637bdee6453f34b9.jpg"></div></div></div>
+
+<fieldset style="text-align:center;margin:10px;padding:5px 0px;border:1px dashed #cccccc;border-radius:8px;">
+
+</fieldset>
+
+<div style="border:2px #ccc dashed; margin:auto 14px 10px;padding:2px 5px">累计签到：332 天<br>连续签到：195 天<br></div><div class="tns xg2"><table cellspacing="0" cellpadding="0"><tbody><tr><th><p><a href="https://bbs.zdfx.net/home.php?mod=space&amp;uid=120944&amp;do=thread&amp;type=thread&amp;view=me&amp;from=space" class="xi2" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">269</a></p>主题</th><th><p><a href="https://bbs.zdfx.net/home.php?mod=space&amp;uid=120944&amp;do=thread&amp;type=reply&amp;view=me&amp;from=space" class="xi2" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">1178</a></p>帖子</th><td><p><a href="https://bbs.zdfx.net/home.php?mod=space&amp;uid=120944&amp;do=profile" class="xi2" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">8265</a></p>积分</td></tr></tbody></table></div>
+
+<p><a href="https://bbs.zdfx.net/home.php?mod=spacecp&amp;ac=usergroup&amp;gid=51" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-29a809174208a9a95a5afaec393f1c3b.gif" alt="" class="vm"></a></p>
+<p><em><a href="https://bbs.zdfx.net/home.php?mod=spacecp&amp;ac=usergroup&amp;gid=51" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font color="#ff9a00">懒人组α</font></a></em></p>
+
+
+<p><span><img src="assets/1569640180-b4837f61a2448f5c395c2f5e6f5ff610.gif" alt="Rank: 8"><img src="assets/1569640180-b4837f61a2448f5c395c2f5e6f5ff610.gif" alt="Rank: 8"></span></p>
+
+
+
+
+<dl class="pil cl">
+	<dt>积分</dt><dd><a href="https://bbs.zdfx.net/home.php?mod=space&amp;uid=120944&amp;do=profile" target="_blank" class="xi2" referrerpolicy="no-referrer" rel="noopener noreferrer">8265</a></dd>
+	<dt>金币</dt><dd>165 </dd>
+</dl>
+<dl class="pil cl"></dl><ul class="xl xl2 o cl">
+<li class="addflw">
+<a href="https://bbs.zdfx.net/home.php?mod=spacecp&amp;ac=follow&amp;op=add&amp;hash=f73e6dea&amp;fuid=120944" id="followmod_120944" title="收听TA" class="xi2" onclick="showWindow('followmod', this.href, 'get', 0);" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">收听TA</a>
+</li>
+<li class="pm2"><a href="https://bbs.zdfx.net/home.php?mod=spacecp&amp;ac=pm&amp;op=showmsg&amp;handlekey=showmsg_120944&amp;touid=120944&amp;pmid=0&amp;daterange=2&amp;pid=4702497&amp;tid=389662" onclick="showWindow('sendpm', this.href);" title="发消息" class="xi2" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">发消息</a></li>
+</ul>
+<ul class="xl xl2 o cl"><li id="dsxy_4702497" onmouseover="showMenu({'ctrlid':this.id, 'pos':'12!'});" style="background: url(source/plugin/xfu_160661/image/ds_f.png) no-repeat;"><a class="xi2" title="目前单身中" href="javascript:;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">单身族</a></li><li style="background: url(source/plugin/xfu_160661/image/cupid_icon_invite.png) no-repeat;"><a class="xi2" title="目前单身中" href="javascript:;" onclick="showWindow('cupidinvite', 'plugin.php?id=xfu_160661&amp;mod=cupid&amp;action=invite&amp;uid=120944'); return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">追求她</a></li></ul><p class="md_ctrl wodexunzhang_img"><a href="https://bbs.zdfx.net/wodexunzhang-showxunzhang.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-e1640ce4a4cf8effe42e1c0f8225a3b7.gif" alt="爱丽丝菲兹" onmouseover="MyshowTip(this)" tip="<h4>爱丽丝菲兹</h4><p>呐 小小的勇者啊~ 让余来给你训♀练一下吧~</p><div class='wode_shuxing'><p>回帖 点币 +1</p><p>发帖 点币 +5</p><p>触发几率 5%</p></div>"><img src="assets/1569640180-c5fd926e7a62bf2aea239fda08c5f935.gif" alt="忍野忍" onmouseover="MyshowTip(this)" tip="<h4>忍野忍</h4><p></p><div class='wode_shuxing'><p>回帖 点币 +1</p><p>发帖 点币 +1</p><p>触发几率 10%</p></div>"><img src="assets/1569640180-743839d2e6b956ed00fabd69dbd641b4.gif" alt="牛顿" onmouseover="MyshowTip(this)" tip="<h4>牛顿</h4><p></p><div class='wode_shuxing'><p>发帖 点币 +2</p><p>触发几率 5%</p></div>"><img src="assets/1569640180-15f31af2a28aaeb3900cff575f914380.gif" alt="帕特莉西亚" onmouseover="MyshowTip(this)" tip="<h4>帕特莉西亚</h4><p>二周年纪念徽章</p><div class='wode_shuxing'><p>发帖 点币 +5</p><p>触发几率 8%</p></div>"><img src="assets/1569640180-87a7a7bc18f1cc3dd55caef8c07bacdd.gif" alt="琴里" onmouseover="MyshowTip(this)" tip="<h4>琴里</h4><p></p><div class='wode_shuxing'><p>回帖 点币 +1</p><p>触发几率 4%</p></div>"><img src="assets/1569640180-321774eef4d5962fd394fad96099a0e3.gif" alt="赛利卡.西路菲尔" onmouseover="MyshowTip(this)" tip="<h4>赛利卡.西路菲尔</h4><p></p><div class='wode_shuxing'><p>回帖 点币 +1</p><p>触发几率 2%</p></div>"><img src="assets/1569640180-ed0ee5ab92cb8d8330836a97d639ec5f.gif" alt="康纳" onmouseover="MyshowTip(this)" tip="<h4>康纳</h4><p></p><div class='wode_shuxing'><p>回帖 点币 +1</p><p>触发几率 4%</p></div>"><img src="assets/1569640180-86c2893945623343f935b81d4fd9ee8a.gif" alt="跳跳猪" onmouseover="MyshowTip(this)" tip="<h4>跳跳猪</h4><p>2019新年徽章</p><div class='wode_shuxing'><p>发帖 点币 +6</p><p>触发几率 6%</p></div>"></a></p><div class="tns xg2"><div align="center" onmouseover="showauthor(this, 'userinfo')"><a href="https://bbs.zdfx.net/plugin.php?id=pokemon:pokemon&amp;index=ajax_pm&amp;petid=118139&amp;action=show&amp;cshu=2" onclick="showWindow('pokemon',this.href);return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-ad3388413116a76f9fecb2894273cf40.gif" border="0"></a></div><br><span class="cwjltt"><a href="https://bbs.zdfx.net/plugin.php?id=pokemon:pokemon&amp;index=ajax_pm&amp;petid=118139&amp;action=show&amp;cshu=2" onclick="showWindow('pokemon',this.href);return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">泥泥鳅</a> Lv:7</span></div></div>
+</td>
+<td class="plc">
+<div class="pi">
+<strong>
+<a href="https://bbs.zdfx.net/forum.php?mod=redirect&amp;goto=findpost&amp;ptid=389662&amp;pid=4702497" id="postnum4702497" onclick="setCopy(this.href, '帖子地址复制成功');return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+<em>7</em><sup>#</sup></a>
+</strong>
+<div class="pti">
+<div class="pdbt">
+</div>
+<div class="authi">
+<img class="authicn vm" id="authicon4702497" src="assets/1569640180-892d05bd7f5e5735987b93ba79701237.gif">
+<em id="authorposton4702497">发表于 2019-8-17 19:05</em>
+<span class="pipe">|</span>
+<a href="https://bbs.zdfx.net/forum.php?mod=viewthread&amp;tid=389662&amp;page=1&amp;authorid=120944" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">只看该作者</a>
+</div>
+</div>
+</div><div class="pct"><div class="pcb">
+<div class="t_fsz">
+<table cellspacing="0" cellpadding="0"><tbody><tr><td class="t_f" id="postmessage_4702497">
+感谢提供cs2破解工具_(:з」∠)_</td></tr></tbody></table>
+
+
+</div>
+<div id="comment_4702497" class="cm">
+</div>
+
+<div id="post_rate_div_4702497"></div>
+<div class="tshuz_floor" id="floor_4702497">
+<div class="tshuz_title">回复</div>
+    
+</div>
+<span style="clear:both"></span>
+</div>
+</div>
+
+</td></tr>
+<tr><td class="plc plm">
+</td>
+</tr>
+<tr id="_postposition4702497"></tr>
+<tr>
+<td class="pls"></td>
+<td class="plc" style="overflow:visible;">
+<div class="po hin">
+<div class="pob cl">
+<em>
+<a class="fastre" href="https://bbs.zdfx.net/forum.php?mod=post&amp;action=reply&amp;fid=69&amp;tid=389662&amp;repquote=4702497&amp;extra=page%3D3&amp;page=1" onclick="showWindow('reply', this.href)" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">回帖</a>
+</em>
+
+<p>
+
+<a href="javascript:;" onclick="showWindow('rate', 'forum.php?mod=misc&amp;action=rate&amp;tid=389662&amp;pid=4702497', 'get', -1);return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">扣分</a>
+<a href="javascript:;" onclick="showWindow('miscreport4702497', 'misc.php?mod=report&amp;rtype=post&amp;rid=4702497&amp;tid=389662&amp;fid=69', 'get', -1);return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">举报</a>
+</p>
+
+
+
+</div>
+</div>
+</td>
+</tr>
+<tr class="ad">
+<td class="pls">
+</td>
+<td class="plc">
+</td>
+</tr>
+</tbody></table>
+</div><div id="post_4729043"><table id="pid4729043" class="plhin" summary="pid4729043" cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="pls" rowspan="2">
+<div id="favatar4729043" class="pls favatar">
+ <a name="lastpost" data-mx-warn="Empty URL"></a><div class="pi">
+<div class="authi"><a href="https://bbs.zdfx.net/space-uid-110316.html" target="_blank" class="xw1" referrerpolicy="no-referrer" rel="noopener noreferrer">阿狸啊</a><a href="https://bbs.zdfx.net/home.php?mod=spacecp&amp;ac=profile&amp;op=verify&amp;vid=6" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-91fce1979c07bf790eadb0318aa97955.png" class="vms" alt="实名认证" title="实名认证"></a>
+
+</div>
+</div>
+
+<div>
+<div class="avatar" onmouseover="showauthor(this, 'userinfo4729043')"><a href="https://bbs.zdfx.net/space-uid-110316.html" class="avtm" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-2fd48f5db774b0158152e9e9be8a62c6.php"></a></div>
+</div>
+<div style="border: 2px #71ffe580 outset;margin: auto 1px 10px;padding:2px 5px;text-align: center;background-color: #8effe017;"><a href="https://bbs.zdfx.net/plugin.php?id=tianshicard:card" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">暂时没有开通卡牌</a></div>
+
+<fieldset style="text-align:center;margin:10px;padding:5px 0px;border:1px dashed #cccccc;border-radius:8px;">
+
+</fieldset>
+
+<div style="border:2px #ccc dashed; margin:auto 14px 10px;padding:2px 5px">累计签到：240 天<br>连续签到：14 天<br></div><div class="tns xg2"><table cellspacing="0" cellpadding="0"><tbody><tr><th><p><a href="https://bbs.zdfx.net/home.php?mod=space&amp;uid=110316&amp;do=thread&amp;type=thread&amp;view=me&amp;from=space" class="xi2" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">16</a></p>主题</th><th><p><a href="https://bbs.zdfx.net/home.php?mod=space&amp;uid=110316&amp;do=thread&amp;type=reply&amp;view=me&amp;from=space" class="xi2" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">508</a></p>帖子</th><td><p><a href="https://bbs.zdfx.net/home.php?mod=space&amp;uid=110316&amp;do=profile" class="xi2" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">2317</a></p>积分</td></tr></tbody></table></div>
+
+<p><a href="https://bbs.zdfx.net/home.php?mod=spacecp&amp;ac=usergroup&amp;gid=31" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1569640180-6821bd19bc5931f369c9d51e742da2ab.gif" alt="" class="vm"></a></p>
+<p><em><a href="https://bbs.zdfx.net/home.php?mod=spacecp&amp;ac=usergroup&amp;gid=31" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">血池轮回</a></em></p>
+
+
+<p><span id="g_up4729043" onmouseover="showMenu({'ctrlid':this.id, 'pos':'12!'});"><img src="assets/1569640180-b4837f61a2448f5c395c2f5e6f5ff610.gif" alt="Rank: 4"></span></p>
+
+
+
+<p><span class="pbg2" id="upgradeprogress_4729043" onmouseover="showMenu({'ctrlid':this.id, 'pos':'12!', 'menuid':'g_up4729043_menu'});"><span class="pbr2" style="width:15%;"></span></span></p>
+
+
+
+<dl class="pil cl">
+	<dt>积分</dt><dd><a href="https://bbs.zdfx.net/home.php?mod=space&amp;uid=110316&amp;do=profile" target="_blank" class="xi2" referrerpolicy="no-referrer" rel="noopener noreferrer">2317</a></dd>
+	<dt>金币</dt><dd>871 </dd>
+</dl>
+<dl class="pil cl"></dl><ul class="xl xl2 o cl">
+<li class="addflw">
+<a href="https://bbs.zdfx.net/home.php?mod=spacecp&amp;ac=follow&amp;op=add&amp;hash=f73e6dea&amp;fuid=110316" id="followmod_110316" title="收听TA" class="xi2" onclick="showWindow('followmod', this.href, 'get', 0);" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">收听TA</a>
+</li>
+<li class="pm2"><a href="https://bbs.zdfx.net/home.php?mod=spacecp&amp;ac=pm&amp;op=showmsg&amp;handlekey=showmsg_110316&amp;touid=110316&amp;pmid=0&amp;daterange=2&amp;pid=4729043&amp;tid=389662" onclick="showWindow('sendpm', this.href);" title="发消息" class="xi2" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">发消息</a></li>
+</ul>
+<ul class="xl xl2 o cl"><li id="dsxy_4729043" onmouseover="showMenu({'ctrlid':this.id, 'pos':'12!'});" style="background: url(source/plugin/xfu_160661/image/ds_f.png) no-repeat;"><a class="xi2" title="目前单身中" href="javascript:;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">单身族</a></li><li style="background: url(source/plugin/xfu_160661/image/cupid_icon_invite.png) no-repeat;"><a class="xi2" title="目前单身中" href="javascript:;" onclick="showWindow('cupidinvite', 'plugin.php?id=xfu_160661&amp;mod=cupid&amp;action=invite&amp;uid=110316'); return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">追求她</a></li></ul><div class="tns xg2"></div></div>
+</td>
+<td class="plc">
+<div class="pi">
+<strong>
+<a href="https://bbs.zdfx.net/forum.php?mod=redirect&amp;goto=findpost&amp;ptid=389662&amp;pid=4729043" id="postnum4729043" onclick="setCopy(this.href, '帖子地址复制成功');return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+<em>8</em><sup>#</sup></a>
+</strong>
+<div class="pti">
+<div class="pdbt">
+</div>
+<div class="authi">
+<img class="authicn vm" id="authicon4729043" src="assets/1569640180-892d05bd7f5e5735987b93ba79701237.gif">
+<em id="authorposton4729043">发表于 2019-8-22 13:37</em>
+<span class="pipe">|</span>
+<a href="https://bbs.zdfx.net/forum.php?mod=viewthread&amp;tid=389662&amp;page=1&amp;authorid=110316" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">只看该作者</a>
+</div>
+</div>
+</div><div class="pct"><div class="pcb">
+<div class="t_fsz">
+<table cellspacing="0" cellpadding="0"><tbody><tr><td class="t_f" id="postmessage_4729043">
+感谢分享</td></tr></tbody></table>
+
+
+</div>
+<div id="comment_4729043" class="cm">
+</div>
+
+<div id="post_rate_div_4729043"></div>
+<div class="tshuz_floor" id="floor_4729043">
+<div class="tshuz_title">回复</div>
+    
+</div>
+<span style="clear:both"></span>
+</div>
+</div>
+
+</td></tr>
+<tr><td class="plc plm">
+</td>
+</tr>
+<tr id="_postposition4729043"></tr>
+<tr>
+<td class="pls"></td>
+<td class="plc" style="overflow:visible;">
+<div class="po hin">
+<div class="pob cl">
+<em>
+<a class="fastre" href="https://bbs.zdfx.net/forum.php?mod=post&amp;action=reply&amp;fid=69&amp;tid=389662&amp;repquote=4729043&amp;extra=page%3D3&amp;page=1" onclick="showWindow('reply', this.href)" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">回帖</a>
+</em>
+
+<p>
+
+<a href="javascript:;" onclick="showWindow('rate', 'forum.php?mod=misc&amp;action=rate&amp;tid=389662&amp;pid=4729043', 'get', -1);return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">扣分</a>
+<a href="javascript:;" onclick="showWindow('miscreport4729043', 'misc.php?mod=report&amp;rtype=post&amp;rid=4729043&amp;tid=389662&amp;fid=69', 'get', -1);return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">举报</a>
+</p>
+
+
+
+</div>
+</div>
+</td>
+</tr>
+<tr class="ad">
+<td class="pls">
+</td>
+<td class="plc">
+</td>
+</tr>
+</tbody></table>
+</div><div id="postlistreply" class="pl"></div>
+</div>
+
+
+<form method="post" autocomplete="off" name="modactions" id="modactions">
+
+
+
+
+
+</form>
+
+
+
+<div class="pgs mtm mbm cl">
+<span class="pgb y" id="visitedforumstmp" onmouseover="$('visitedforums').id = 'visitedforumstmp';this.id = 'visitedforums';showMenu({'ctrlid':this.id,'pos':'21'})"><a href="https://bbs.zdfx.net/forum-69-3.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">返回列表</a></span>
+<a id="newspecialtmp" onmouseover="$('newspecial').id = 'newspecialtmp';this.id = 'newspecial';showMenu({'ctrlid':this.id})" onclick="showWindow('newthread', 'forum.php?mod=post&amp;action=newthread&amp;fid=69')" href="javascript:;" title="发新帖" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">发新帖</a>
+<a id="post_replytmp" onclick="showWindow('reply', 'forum.php?mod=post&amp;action=reply&amp;fid=69&amp;tid=389662')" href="javascript:;" title="回复" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">回帖</a>
+</div>
+
+<div class="t9_1304282052"><span class="t9_hot"></span>
+<div class="t9_1304282052a"><!--[diy=t9_1304282052a]--><div id="t9_1304282052a" class="area"></div><!--[/diy]--></div>
+<div class="t9_1304282052am"><div class="t9_1304282052amn">
+<div class="t9_1304282052b">
+<div class="t9_1304282052bm"><div class="t9_1304282052bmn">
+<!--[diy=t9_1304282052b]--><div id="t9_1304282052b" class="area"></div><!--[/diy]--></div></div>
+<div class="t9_1304282052c"><!--[diy=t9_1304282052c]--><div id="t9_1304282052c" class="area"></div><!--[/diy]--></div>
+</div></div></div>
+
+</div>
+
+<!--[diy=diyfastposttop]--><div id="diyfastposttop" class="area"></div><!--[/diy]-->
+
+
+<div id="f_pst" class="pl bm bmw">
+<form method="post" autocomplete="off" id="fastpostform" action="forum.php?mod=post&amp;action=reply&amp;fid=69&amp;tid=389662&amp;extra=page%3D3&amp;replysubmit=yes&amp;infloat=yes&amp;handlekey=fastpost" onsubmit="return fastpostvalidate(this)">
+<table cellspacing="0" cellpadding="0">
+<tbody><tr>
+<td class="pls">
+<div class="avatar avtm"><img src="assets/1569640180-4575e3b8a5c3f792b567a71b21b58497.php"></div></td>
+<td class="plc">
+
+<span id="fastpostreturn"></span>
+
+
+<div class="cl">
+<div id="fastsmiliesdiv" class="y"><div id="fastsmiliesdiv_data"><div id="fastsmilies"><table cellspacing="0" cellpadding="0"><tbody><tr></tr><tr><td onmouseover="smilies_preview('fastpost', 'fastsmiliesdiv', this, 30)" onmouseout="$('smilies_preview').style.display = 'none'" onclick="seditor_insertunit('fastpost', '{:4_127:}')" id="fastpostsmilie_127_td"><img id="smilie_127" width="20" height="20" src="assets/1569640180-a111ab406dcfa9598e3012c268d6af80.png" alt="{:4_127:}"></td></tr></tbody></table></div></div></div><div class="hasfsl" id="fastposteditor">
+<div class="tedt mtn">
+<div class="bar">
+<span class="y">
+<a href="https://bbs.zdfx.net/forum.php?mod=post&amp;action=reply&amp;fid=69&amp;tid=389662" onclick="return switchAdvanceMode(this.href)" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">高级模式</a>
+</span>
+<div class="fpd">
+<a href="javascript:;" title="文字加粗" class="fbld" onclick="seditor_insertunit('fastpost', '[b]', '[/b]');doane(event);" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">B</a>
+<a href="javascript:;" title="设置文字颜色" class="fclr" id="fastpostforecolor" onclick="showColorBox(this.id, 2, 'fastpost');doane(event);" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Color</a>
+<a id="fastpostimg" href="javascript:;" title="图片" class="fmg" onclick="seditor_menu('fastpost', 'img');doane(event);" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Image</a>
+<a id="fastposturl" href="javascript:;" title="添加链接" class="flnk" onclick="seditor_menu('fastpost', 'url');doane(event);" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Link</a>
+<a id="fastpostquote" href="javascript:;" title="引用" class="fqt" onclick="seditor_menu('fastpost', 'quote');doane(event);" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Quote</a>
+<a id="fastpostcode" href="javascript:;" title="代码" class="fcd" onclick="seditor_menu('fastpost', 'code');doane(event);" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Code</a>
+<a href="javascript:;" class="fsml" id="fastpostsml" onclick="showMenu({'ctrlid':this.id,'evt':'click','layer':2});return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Smilies</a>
+
+
+<a id="fastpostat" href="javascript:;" title="@朋友" class="fat" onclick="seditor_menu('fastpost', 'at');doane(event);" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">@朋友</a>
+<span class="pipe z">|</span><span id="spanButtonPlaceholder">上传</span></div></div>
+<div class="area">
+<textarea rows="6" cols="80" name="message" id="fastpostmessage" onkeydown="seditor_ctlent(event, 'fastpostvalidate($(\'fastpostform\'))');" tabindex="4" class="pt" style="font-size: 12px; color: rgb(0, 0, 0); font-family: 微软雅黑;"></textarea>
+</div>
+</div>
+<div id="rsf_lgf_bg" style="width: 765px; height: 111px; background: rgb(255, 255, 255); text-align: right;"><img id="rsf_lgf_bg_img" src="assets/1569640180-014fdf3ab5261d4ee1ecbb5c3dddd61b.png" style="height: 111px; margin-right: 0px; margin-top: 0px; opacity: 0.9;"></div></div>
+</div>
+<div id="seccheck_fastpost">
+<div class="mtm"><span id="seccode_cSEsFPgC">验证码 <span id="seccodecSEsFPgC" onclick="showMenu(this.id)"><input name="seccodeverify" id="seccodeverify_cSEsFPgC" type="text" autocomplete="off" style="width:100px" class="txt px vm" onblur="checksec('code', 'cSEsFPgC', 0, null, 'forum::viewthread')"> <a href="javascript:;" onclick="updateseccode('cSEsFPgC');doane(event);" class="xi2" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">换一个</a><span id="checkseccodeverify_cSEsFPgC"><img src="assets/1569640180-6cbbe6a4ae3358d28e4763f435a7a75d.gif" width="16" height="16" class="vm"></span></span></span>		
+
+</div></div>
+
+
+
+
+<div class="upfl hasfsl">
+
+<div class="fieldset flash" id="attachlist"></div>
+
+</div>
+
+
+
+
+<p class="ptm pnpost">
+<a href="https://bbs.zdfx.net/home.php?mod=spacecp&amp;ac=credit&amp;op=rule&amp;fid=69" class="y" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">本版积分规则</a>
+<button type="submit" name="replysubmit" id="fastpostsubmit" class="pn pnc vm" value="replysubmit" tabindex="5"><strong>发表回复</strong></button>
+<label class="lb"><input type="checkbox" name="adddynamic" class="pc" value="1">回帖并转播</label>
+<label for="fastpostrefresh"><input id="fastpostrefresh" type="checkbox" class="pc">回帖后跳转到最后一页</label>
+
+</p>
+</td>
+</tr>
+</tbody></table>
+</form>
+</div>
+
+		
+
+
+</div>
+
+<div class="wp mtn">
+<!--[diy=diy3]--><div id="diy3" class="area"></div><!--[/diy]-->
+</div>
+
+</div>
+        
+      </div>
+    </body>
+  </html>

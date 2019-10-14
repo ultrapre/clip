@@ -1,0 +1,285 @@
+
+  <!DOCTYPE html>
+  <html id="" class="">
+    <!-- OriginalSrc: https://web.archive.org/web/20190506040333/https://shinyashimokawa.space/index.php/archives/373/ -->
+    <head>
+      <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <title>初窥Galgame汉化——以CatSystem2引擎游戏《ゆきこいめると》为例 - 下川真哉的主页</title>
+      
+<link rel="shortcut icon" href="assets/1569942419-6952614e117a8c435c026c6d78d3aceb.png" referrerpolicy="no-referrer">
+
+
+<link rel="stylesheet" type="text/css" href="assets/1569942419-7d8615ffad0397de253976c03119d074.css" referrerpolicy="no-referrer">
+<link rel="stylesheet" type="text/css" href="assets/1569942419-32a1290393936a63a45283a71d7c7890.css" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="assets/1569942419-5d7db729ad9df49bc09973ec909a86ab.css" referrerpolicy="no-referrer">
+<link href="assets/1569942419-83575e95936530ed76589833c3e9140a.css" rel="stylesheet" type="text/css" referrerpolicy="no-referrer">
+<link href="assets/1569942419-7cdcc0113f72579de20b765f31860ed7.css" rel="stylesheet" referrerpolicy="no-referrer">
+<link href="assets/1569942419-4f1668619ce0a55d9652baee24591f82.css" rel="stylesheet" referrerpolicy="no-referrer">
+
+
+<style class="darkreader darkreader--fallback" media="screen"></style>
+<style class="darkreader darkreader--text" media="screen"></style>
+<style class="darkreader darkreader--invert" media="screen">#wm-sparkline-canvas, .yt, .sparkline-canvas, .sparkline-mouse-highlight, .search-toolbar-logo, #wm-logo {
+    filter: invert(100%) hue-rotate(180deg) contrast(90%) grayscale(10%) sepia(10%) !important;
+}</style>
+<style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}</style>
+<style class="darkreader darkreader--user-agent" media="screen">html {
+    background-color: #191a1b !important;
+}
+html, body, input, textarea, select, button {
+    background-color: #191a1b;
+}
+html, body, input, textarea, select, button {
+    border-color: #5a5956;
+    color: #f0ebe2;
+}
+a {
+    color: #4791e7;
+}
+table {
+    border-color: #4f4e4c;
+}
+::placeholder {
+    color: #bfb9ac;
+}
+::selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+::-moz-selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #565a0f !important;
+    color: #f0ebe2 !important;
+}
+::-webkit-scrollbar {
+    background-color: #1d1f1f;
+    color: #cbc5b9;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #2c2d2d;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #343636;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #404142;
+}
+::-webkit-scrollbar-corner {
+    background-color: #191a1b;
+}
+* {
+    scrollbar-color: #2c2d2d #1d1f1f;
+}</style>
+<style class="darkreader darkreader--override" media="screen">.jfk-bubble {
+    background-color: #000000 !important;
+}
+.vimvixen-hint {
+    background-color: #765500 !important;
+    border-color: #d5b22e !important;
+    color: #f9edcc !important;
+}
+.measure {
+    z-index: 0 !important;
+}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style> #Snow{ position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: 99999; pointer-events: none; } </style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">@keyframes fadeInOpacity{0%{opacity:0}to{opacity:1}}:hover>*>.fbvd--wrapper{animation-name:fadeInOpacity;animation-duration:.3s;opacity:1}.fbvd--wrapper{position:absolute;top:10px;left:10px;opacity:0;text-align:center;margin:0;z-index:5}.fbvd--wrapper a{background: url("") no-repeat 3px 4.55px; background-color: #fff; display:inline-block;font:700 14px Helvetica,Arial,sans-serif;color:#4b4f56;text-decoration:none;vertical-align:middle;padding:0px 8px 0px;margin-right:8px;border-radius:2px; line-height: 22px; padding-left:19px; border: 1px solid #e7e7e7; background-size: 13px}.fbvd--wrapper a:last-child{margin-right:0}.fbvd--wrapper a:hover{text-decoration:none}.fbvd--wrapper a:focus{box-shadow:0 0 1px 2px rgba(88,144,255,.75),0 1px 1px rgba(0,0,0,.15);outline:none}.fbvd--wrapper b{font-size:13px;position:relative;top:1px;color:#3b5998;font-weight:400}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+
+      
+    </head>
+    <body class="mx-wc-selected-elem mx-wc-1569942419" gtools_scp_screen_capture_injected="true" style=""><!-- BEGIN WAYBACK TOOLBAR INSERT -->
+
+
+
+
+
+<div id="wm-ipp-base" lang="en" style="display: block; direction: ltr;">
+</div>
+<!-- END WAYBACK TOOLBAR INSERT --> <!--[if lt IE 8]> <div class="browsehappy" role="dialog"> 当前网页 <strong>不支持</strong> 你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/" target="_blank">升级你的浏览器</a>。 </div> <![endif]--> <header id="header" class="header bg-white animated headroom--not-top slideUp headroom--bottom"> <div class="navbar-container"> <a href="https://web.archive.org/web/20190506040333/https://shinyashimokawa.space/" class="navbar-logo" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"> 下川真哉的主页 </a> <div class="navbar-menu"> <a href="https://web.archive.org/web/20190506040333/https://shinyashimokawa.space/index.php/dlzc.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">登入/注册</a> <a href="https://web.archive.org/web/20190506040333/https://shinyashimokawa.space/index.php/keijipan-1.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">检索</a> <a href="https://web.archive.org/web/20190506040333/https://shinyashimokawa.space/index.php/Timeline.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">时间线</a> <a href="https://web.archive.org/web/20190506040333/https://shinyashimokawa.space/index.php/Categorys.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">分类</a> <a href="https://web.archive.org/web/20190506040333/https://shinyashimokawa.space/index.php/start-page.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">关于我</a> <a href="https://web.archive.org/web/20190506040333/https://shinyashimokawa.space/index.php/kms.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">KMS服务</a> <a href="https://web.archive.org/web/20190506040333/https://shinyashimokawa.space/index.php/j.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">原则</a> </div> <div class="navbar-search" onclick=""> <span class="icon-search"></span> <form id="search" method="post" action="https://web.archive.org/web/20190506040333/https://shinyashimokawa.space/" role="search"> <span class="search-box"> <input type="text" id="input" class="input" name="s" required="true" placeholder="Search..." maxlength="30" autocomplete="off"> </span> </form> </div>  </div> </header> if (typeof aplayers !== 'undefined'){ for (var i = 0; i &lt; aplayers.length; i++) { try {aplayers[i].destroy()} catch(e){} } } loadMeting(); <div class="post-header-thumb bg-red"> <div class="post-header-thumb-op" style="background-image:url(https://web.archive.org/web/20190506040333im_/https://shinyashimokawa.space/usr/uploads/2019/04/1281467476.png);"></div> <div class="post-header-thumb-cover"> <div class="post-header-thumb-container"> <div class="post-header-thumb-title"> 初窥Galgame汉化——以CatSystem2引擎游戏《ゆきこいめると》为例 </div> <div class="post-header-thumb-meta"> <time datetime="2019-04-04T23:52:00+08:00" itemprop="datePublished">Published on Apr 4, 2019</time> in <a href="https://web.archive.org/web/20190506040333/https://shinyashimokawa.space/index.php/category/%E9%9A%8F%E6%89%8B%E8%AE%B0/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">随手记</a> with <a href="#comments"> 0 comment</a> </div> <div class="post-tags"> </div> </div> </div> </div> <article class="main-content post-page" itemscope="" itemtype="http://schema.org/Article">  <div id="post-content" class="post-content" itemprop="articleBody">  <h2 id="directory067332697575960341">序</h2><p>最近在网上找到了苦寻多时的cs2_keypatch，可以破解CatSystem2引擎游戏防复制机能的的补丁。这下终于也可以安心地把cs2引擎的游戏转存到移动硬盘里去了。</p><p>但在找到破解补丁后，无意间却燃起了另外的兴趣，毕竟自己也在某漫画汉化组混翻译混了这么久，该尝试一下翻译以外的事情了。既然破都破解了，何不直接来体验一次游戏汉化看看呢。</p><p>首先根据了解，GAL程序有关的汉化从来说可简单概括为3方面：<br>1、解包——破解主程序，解密和解压资源包<br>2、转码——把解压所得资源转换为常见的音视频及文本格式交由相关人员处理，同时将主程序由日文编码转为中文编码<br>3、封包与测试</p><p>既然是程序上的处理，那自然少不了有关编程，有关代码的事。然而目前程序白痴的我当然不会用代码解决问题的，所以每一步也当然是尽可能地先找现成的工具和教程。但现实很残念，这些方面似乎很难找到太多现成的傻瓜式工具或教程，于是只好抱起硬着头皮上，能走多远算多远，实在不行就去抱编程大佬大腿的心态，开始了Galgame汉化的体验。</p><h2 id="directory067332697575960342">解包部分</h2><p>先来破解主程序。这个简单，把cs2.exe（为了方便后续操作，我把主程序名改成cs2.exe）拖到cs2_keypatch.exe（找这玩意可花了我好长时间···<a href="https://web.archive.org/web/20190506040333/https://pan.baidu.com/s/1gdoxu2B" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">在这里找</a>，提取码：djm0）上进行破解，此时会有破解成功的提示，游戏就可以在不同的电脑上直接打开而不用重新安装了。</p><p><img src="assets/1569942419-cdfd930113fb45fd6e9accc4626d9e68.png" alt="捕获.PNG" title="捕获.PNG"></p><p>下一步，解压资源包，由于我的主要目的放在文本上，故以下对音视图的解压转码未作要求。Cs2引擎的剧本资源均被封在scene.int文件中，这一文件用GARbro（Game Resource browser，游戏资源浏览器，支持中文，<a href="https://web.archive.org/web/20190506040333/https://github.com/morkt/GARbro/releases" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">在这里找</a>）工具亦可以轻松提取，它可以解包多款游戏的音视图文等多类资源。</p><p><img src="assets/1569942419-1aea201cdc3d4f941f66e9e5742305b0.png" alt="捕获.PNG" title="捕获.PNG"></p><h2 id="directory067332697575960343">转码部分</h2><p>1.脚本的转码</p><p>解开以后会得到很多XX.cst，这就是脚本。新建一个scene文件夹，将所有XX.cst放到其中，并把scene文件夹移到游戏安装目录下，此时scene.int就可以移出游戏安装目录备用了。至少在cs2引擎下它可以直接读取与.int压缩包同名文件夹下文件的，所以也不用再多操心把XX.cst打包到scene.int的事，要考虑的只是XX.cst与XX.txt之间的转换。</p><p>从这一步起，难度就开始增加了。第一是找工具，要找一个既能解成文本又能封回去还能转换编码的真心不容易；第二找到了之后得会用，这一步的工具基本没有GUI，得用命令行，于是此处成为我第一个原地打转比较久的点···<br>（其实确实找到一个有GUI，是由来自巴西的marcussacana大大制作的CatSceneEditor，<a href="https://web.archive.org/web/20190506040333/https://github.com/marcussacana/CatSceneEditor/releases" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">在这里找</a>，只不过那是人家英化专用的，汉化用不了，会乱码，如下图）</p><p><img src="assets/1569942419-9957062def2d06594428c20310956b0e.png" alt="55291651-7bd24380-5413-11e9-9ac4-dd46807ac110.png" title="55291651-7bd24380-5413-11e9-9ac4-dd46807ac110.png"></p><p>找了很久以后终于找到一个符合预期的，由国人AmaF大大用go语言编写的小工具。接下来开始折腾go···</p><p>准备好环境：<br>Go语言编译器 - <a href="https://web.archive.org/web/20190506040333/https://golang.org/doc/install" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">https://golang.org/doc/install</a><br>Git - <a href="https://web.archive.org/web/20190506040333/https://git-scm.com/downloads" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">https://git-scm.com/downloads</a></p><p>开始安装这个小工具：<br>打开cmd，用go get命令从网上下载并安装。值得一提的是境内由于网络原因，直接go get会报错，一番摸索之后，得出两个直接从网络下手的，比较简单的解决方案：<br>①VPN<br>②SS/SSR全局代理+Proxifier达到VPN的效果，覆盖终端类程序走代理。<br>除这两个外的替代方案虽然可以绕过网络原因，但从操作上说要复杂些，所以我没有采用。另外提一句，关于win10 uwp应用在SS/SSR代理下无法联网的问题，则需要搭配Fiddler这款软件解决。</p><pre><code class="hljs cs">go <span class="hljs-keyword">get</span> github.com/regomne/eutil/codec
+
+go <span class="hljs-keyword">get</span> github.com/regomne/eutil/textFile
+
+go <span class="hljs-keyword">get</span> github.com/regomne/chinesize/CatSystem2/cstTextProc
+</code></pre><p>三行代码执行完毕以后，在go的环境变量下bin文件夹中（默认的话就是C:/Users/xxxx/go/bin/），可以见到安装好的cstTextProc.exe，此时go的任务就完成了，正式开始转换。</p><p><img src="assets/1569942419-a47cbc42b29264393b42310b6ebfb2d7.png" alt="捕获.PNG" title="捕获.PNG"></p><p>把它移到C:/Users/xxxx/下，方便接下来cmd的操作，免得每次都要换目录执行程序。然后将想要转换的.cst放到与转换工具相同的目录下，打开cmd，先把cstTextProc.exe改名cst.exe，再拖进cmd，回车可以看到该工具的用法：</p><blockquote><p>-cp string<br>the code page used in txt (default "932")<br>-cst string<br>specify the cst name<br>-e extract cst to txt<br>-o string<br>output file name(txt or cst)<br>-p pack txt to a cst<br>-txt string<br>specify the txt name(used in pack)</p></blockquote><p>比如我下面选择展开OP01.cst（游戏中第一处剧情的脚本，方便查看接下来的测试的效果），输入命令：</p><pre><code class="hljs css"><span class="hljs-selector-tag">cst</span> <span class="hljs-selector-tag">-e</span> <span class="hljs-selector-tag">-cst</span> <span class="hljs-selector-tag">OP01</span><span class="hljs-selector-class">.cst</span> <span class="hljs-selector-tag">-o</span> <span class="hljs-selector-tag">OP01</span><span class="hljs-selector-class">.txt</span> <span class="hljs-selector-tag">-cp</span> 932
+</code></pre><blockquote><p>注释：Windows简繁日代码页 <br>936—简体中文（GBK）<br>950—繁体中文（大五码）<br>932—日文（Shift_JIS）</p></blockquote><p>这里要解开的OP01.cst用的是Shift_JIS编码，即932。<br>解开以后，打开同一目录下输出的OP01.txt，文本是可以正常显示日文的。我把其中几句先翻译成中文，保存，以做接下来的测试。</p><p><img src="assets/1569942419-7f94a21639e899f5fae61a566c99387d.png" alt="捕获.PNG" title="捕获.PNG"></p><p>输入命令：</p><pre><code class="hljs css"><span class="hljs-selector-tag">cst</span> <span class="hljs-selector-tag">-p</span> <span class="hljs-selector-tag">-cst</span> <span class="hljs-selector-tag">OP01</span><span class="hljs-selector-class">.cst</span> <span class="hljs-selector-tag">-txt</span> <span class="hljs-selector-tag">OP01</span><span class="hljs-selector-class">.txt</span> <span class="hljs-selector-tag">-o</span> <span class="hljs-selector-tag">OP01</span><span class="hljs-selector-class">.cst</span> <span class="hljs-selector-tag">-cp</span> 936
+</code></pre><p>封回用cp936，GBK的代码页，这样就完成了文本的转码。将得到的新的OP01.cst复制回游戏安装目录的scene文件夹中。</p><p>进行到这一步，我曾满心欢喜地以为这就算汉化完成了，直到我打开主程序程式cs2.exe···结果文本显示全是乱码。</p><p>其实这是因为游戏主程序的字符编码方式仍是日文。这里开始，进入主程序反编译的步骤，修改字符编码和边界检查代码。自然地，这里就成为了我第二个原地打转的点。对字符显示原理，字符编码和汇编知识储备完全为零的我来说，做这一步简直是举步维艰···</p><p>2.主程序的修改</p><p>（1）GDI32.CreateFontIndirectA</p><p>对于cs2引擎，这个函数所调用参数中字符集的值即是要修改的地方。一般日文游戏汉化经常用到的字符集有SHIFTJI_CHARSET(日文) 、GB2312_CHARSET(简中)、CHINESEBIG5_CHARSET(繁中)所对应的值分别为128、134、136，转换成十六进制为0x80、0x86、0x88。简单地说，要使程序使用简体中文，就是要把程序中字符集的值由80改成86。</p><p>下载OllyDbg，各个窗口功能如下图：</p><p><img src="assets/1569942419-d009c5bc0be887d3f9720c92fa9c9f23.jpg" alt="3262013505199821523.jpg" title="3262013505199821523.jpg"></p><p>OllyDbg中加载cs2.exe，在反汇编窗口中右键，选择图示选项</p><p><img src="assets/1569942419-9db8cda1db976cef9e1cc417f323fca2.jpg" alt="chazhao.jpg" title="chazhao.jpg"></p><p>在弹出的窗口中找到GDI32.CreateFontIndirectA，右键，如图选择设置断点</p><p><img src="assets/1569942419-d035b497ab04a3e995d638be8954dce8.jpg" alt="duandian.jpg" title="duandian.jpg"></p><p>然后在主菜单中调试－〉运行，程序在如图处停止：</p><p><img src="assets/1569942419-cf436fd10febcd048c581718c573bcc1.png" alt="捕获.PNG" title="捕获.PNG"></p><p>先在右下角堆栈窗口中的传入参数“0DC6B42C”，复制下来；再在左下角的数据窗口中右键，转到－〉表达式，粘贴。</p><p>回车，在此找到“80”。</p><p><img src="assets/1569942419-df925fa493706882292a5dffc00ae83f.png" alt="捕获.PNG" title="捕获.PNG"></p><p>在“80”上右键，断点－〉内存写入。再不断点击运行，直到反汇编窗口中定位到“80”的位置。</p><p><img src="assets/1569942419-ddc47b576a9f8860bc0f3460b88adfd8.png" alt="捕获.PNG" title="捕获.PNG"></p><p>双击它，把80相应地改成86，点汇编，再关闭汇编窗口。</p><p>到此，主程序的修改第一步完成，接下来第二步，要修改字符边界检查代码。</p><p>（2）字符边界检查代码</p><p>现在很多Galgame输出文字都使用GetGlyphOutlineA来实现。这个函数每次传入一个字符的参数，将其转换成矩阵，再利用BitBlt等函数来绘图输出文字。然而每一种编码方式都是有编码范围的，超出范围的会参数输出去会造成不可预知的错误，这个时候就要加入字符边界检查代码，检查出超范围的输进去就会跳走，显示不出字符来（我这里输出的就是一堆问号）。</p><p><img src="assets/1569942419-546ca9c0623099c6b394d80cc2cbd78e.png" alt="55487714-36a35100-5661-11e9-8520-e15e037e70b0.png" title="55487714-36a35100-5661-11e9-8520-e15e037e70b0.png"></p><p>基于前一篇笔记所记<a href="https://web.archive.org/web/20190506040333/https://shinyashimokawa.space/index.php/archives/370/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Shift_JIS与GBK编码范围的差别</a>，GBK的编码范围比Shift_JIS范围要大，中文编码在Shift_JIS范围下自然显示为问号。</p><p>所以现在要做的就是扩大它的检查范围。一般来讲检查的代码是这个样子的：</p><blockquote><p>cmp al,①<br>jbe short XXXXXXXX <br>cmp al,②<br>jb short XXXXXXXX <br>cmp al,③ <br>jb short XXXXXXXX <br>cmp al,④ <br>ja short XXXXXXXX</p><p>代码注释：汇编指令<br>cmp al,bl：将bl与al比较<br>jbe：al不高于bl时跳转<br>jb：al低于bl时跳转<br>ja：al高于bl时跳转</p></blockquote><p>以上是字元在Shift_JIS中使用一个字节来表示时的情况，两个字节表示则需要两节边界检查：</p><p><img src="assets/1569942419-ba865095586063ffc3a92d5291b495f4.png" alt="捕获.PNG" title="捕获.PNG"></p><p>发现图示恰符合笔记中0x81-0x9F、0xE0-0xEF、0x40-0x7E、0x80-0xFC的边界。此时双击灰色部分，将4个上界全部改为GBK编码的上界0xFE。</p><p>右键－〉复制到可执行文件－〉所有修改，小窗口中右键，保存文件为cs2副本.exe到安装目录下。</p><p>转码部分完成。</p><h2 id="directory067332697575960344">测试部分</h2><p>中文操作系统下直接运行cs2副本.exe，剧情文本可以显示，人名标签还是乱码。文本汉化的主要目的已经达到，剩下的就是其他方面和一些细节问题了。</p><p><img src="assets/1569942419-c3c9c5bb14dce12167502994bcafb545.png" alt="捕获.PNG" title="捕获.PNG"></p><h2 id="directory067332697575960345">后记</h2><p>程序员虽然在游戏汉化组的各职务中不是工作量最大的一个（大部分汉化工作量最大的好像都是翻译···），但却是最重要的一个，往往也是最难的一个。没有程序员解包，汉化一开始就进行不下去；没有程序员封包，其他组员就都白忙活了；没有程序员测试，玩家到时候就不买帐了（虽然大多数玩家从来没有真正买过帐···）。 这回实际体验了一次Galgame的汉化，也算是对其中的难点有了一个初步的认识，如命令行程序的用法、字符集、windows对字符的显示原理、汇编语言、程序调试等。想要真正去掌握这门手艺的话，至少在掌握编程基础知识之上还得加强这些方面知识的学习。</p><h2 id="directory067332697575960346">致谢</h2><p>感谢AmaF大大在程序修改上对我的一路指导：<br><a href="https://web.archive.org/web/20190506040333/https://github.com/regomne/chinesize/issues/16" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"></a><a href="https://web.archive.org/web/20190506040333/https://github.com/regomne/chinesize/issues/16" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">https://github.com/regomne/chinesize/issues/16</a></p><p>感谢来自巴西的marcussacana大大，来自俄亥俄的tahu157朋友对我提问的回应：<br><a href="https://web.archive.org/web/20190506040333/https://github.com/marcussacana/CatSceneEditor/issues/2" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"></a><a href="https://web.archive.org/web/20190506040333/https://github.com/marcussacana/CatSceneEditor/issues/2" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">https://github.com/marcussacana/CatSceneEditor/issues/2</a><br><a href="https://web.archive.org/web/20190506040333/https://forums.fuwanovel.net/topic/21377-csttextproc/?tab=comments#comment-500521" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"></a><a href="https://web.archive.org/web/20190506040333/https://forums.fuwanovel.net/topic/21377-csttextproc/?tab=comments#comment-500521" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">https://forums.fuwanovel.net/topic/21377-csttextproc/?tab=comments#comment-500521</a></p><p>此外，本次汉化实验还参考了以下的帖子：<br><a href="https://web.archive.org/web/20190506040333/https://bbs.sumisora.net/read.php?tid=206511&amp;fpage=0&amp;toread=&amp;page=1" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">ONE ～輝く季節へ FullVoice 汉化实战篇[完]</a><br><a href="https://web.archive.org/web/20190506040333/https://bbs.sumisora.net/read.php?tid=11042351" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Galgame 汉化破解初级教程：以 BGI 为例，从解包到测试</a><br><a href="https://web.archive.org/web/20190506040333/https://blog.csdn.net/luozhuang/article/details/3260235" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">染成茜色的坂道破解技术内幕之实战篇</a><br><a href="https://web.archive.org/web/20190506040333/https://shera.iteye.com/blog/409666" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">字符编码与游戏中的字符边界检查</a><br>在此一并感谢。</p><hr><p></p><div class="aplayer" data-id="530801030" data-server="netease" data-type="song" data-auth="20ab77603eba200c7cbe0362daa014ec" data-theme="#ad7a86" data-preload="auto" data-autoplay="false" data-listmaxheight="600px" data-order="list"></div> <p></p> <p class="post-info"> 本文由 <a href="https://web.archive.org/web/20190506040333/https://shinyashimokawa.space/index.php/author/1/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">下川真哉</a> 创作，采用 <a href="https://web.archive.org/web/20190506040333/https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">知识共享署名4.0</a> 国际许可协议进行许可<br>本站文章除注明转载/出处外，均为本站原创或翻译，转载前请务必署名<br>最后编辑时间为: Apr 16, 2019 at 03:06 am 访问: 87 次 </p> </div> </article> <div id="post-bottom-bar" class="post-bottom-bar animated headroom--not-top unpinned headroom--bottom"> <div class="bottom-bar-inner"> <div class="bottom-bar-items social-share left"> <span class="bottom-bar-item">Share : </span> <span class="bottom-bar-item bottom-bar-facebook"><a href="https://web.archive.org/web/20190506040333/https://www.facebook.com/sharer/sharer.php?u=https://shinyashimokawa.space/index.php/archives/373/" target="_blank" title="初窥Galgame汉化——以CatSystem2引擎游戏《ゆきこいめると》为例" rel="noopener noreferrer" referrerpolicy="no-referrer">facebook</a></span> <span class="bottom-bar-item bottom-bar-twitter"><a href="https://web.archive.org/web/20190506040333/https://twitter.com/intent/tweet?url=https://shinyashimokawa.space/index.php/archives/373/&amp;text=%E5%88%9D%E7%AA%A5Galgame%E6%B1%89%E5%8C%96%E2%80%94%E2%80%94%E4%BB%A5CatSystem2%E5%BC%95%E6%93%8E%E6%B8%B8%E6%88%8F%E3%80%8A%E3%82%86%E3%81%8D%E3%81%93%E3%81%84%E3%82%81%E3%82%8B%E3%81%A8%E3%80%8B%E4%B8%BA%E4%BE%8B" target="_blank" title="初窥Galgame汉化——以CatSystem2引擎游戏《ゆきこいめると》为例" rel="noopener noreferrer" referrerpolicy="no-referrer">Twitter</a></span> <span class="bottom-bar-item bottom-bar-weibo"><a href="https://web.archive.org/web/20190506040333/http://service.weibo.com/share/share.php?url=https://shinyashimokawa.space/index.php/archives/373/&amp;title=%E5%88%9D%E7%AA%A5Galgame%E6%B1%89%E5%8C%96%E2%80%94%E2%80%94%E4%BB%A5CatSystem2%E5%BC%95%E6%93%8E%E6%B8%B8%E6%88%8F%E3%80%8A%E3%82%86%E3%81%8D%E3%81%93%E3%81%84%E3%82%81%E3%82%8B%E3%81%A8%E3%80%8B%E4%B8%BA%E4%BE%8B" target="_blank" title="初窥Galgame汉化——以CatSystem2引擎游戏《ゆきこいめると》为例" rel="noopener noreferrer" referrerpolicy="no-referrer">Weibo</a></span> </div> <div class="bottom-bar-items right"> <span class="bottom-bar-item"><a href="https://web.archive.org/web/20190506040333/https://shinyashimokawa.space/index.php/archives/397/" title="If I Leave – 조수미（韩英对照歌词）" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">←</a></span> <span class="bottom-bar-item"><a href="https://web.archive.org/web/20190506040333/https://shinyashimokawa.space/index.php/archives/370/" title="Shift_JIS与GBK编码范围的差别" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">→</a></span> <span class="bottom-bar-item"><a href="#footer">↓</a></span> <span class="bottom-bar-item"><a href="#">↑</a></span> </div> </div> </div> <div id="respond-post-373" class="comment-container"> <div id="comments" class="clearfix"> <span class="response">Responses </span> <form method="post" action="https://web.archive.org/web/20190506040333/https://shinyashimokawa.space/index.php/archives/373/comment" id="comment-form" class="comment-form" role="form" onsubmit="getElementById('misubmit').disabled=true;return true;"> <input type="text" name="author" maxlength="12" id="author" class="form-control input-control clearfix" placeholder="Name (*)" value="" required=""> <input type="email" name="mail" id="mail" class="form-control input-control clearfix" placeholder="Email (*)" value="" required=""> <input type="url" name="url" id="url" class="form-control input-control clearfix" placeholder="Site (http://)" value=""> <textarea name="text" id="textarea" class="form-control" placeholder="在此处留下您的评论哦！" required=""></textarea> <button type="submit" class="submit" id="misubmit">SUBMIT</button>  </form> </div> </div> <footer id="footer" class="footer bg-white"> <div class="footer-social"> <div class="footer-container clearfix"> <div class="social-list"> <a class="social twitter" target="_blank" href="https://web.archive.org/web/20190506040333/https://twitter.com/SMKWSY" referrerpolicy="no-referrer" rel="noopener noreferrer">Twitter</a> <a class="social weibo" target="_blank" href="https://web.archive.org/web/20190506040333/https://weibo.com/bych0220" referrerpolicy="no-referrer" rel="noopener noreferrer">微博</a> <a class="social zhihu" target="_blank" href="https://web.archive.org/web/20190506040333/https://www.zhihu.com/people/bych0220" referrerpolicy="no-referrer" rel="noopener noreferrer">知乎</a> <a class="social github" target="_blank" href="https://web.archive.org/web/20190506040333/https://github.com/Shinya-Shimokawa" referrerpolicy="no-referrer" rel="noopener noreferrer">GitHub</a> </div> </div> </div> <div class="footer-meta"> <div class="footer-container"> <div class="meta-item meta-copyright"> <div class="meta-copyright-info"> <a href="https://web.archive.org/web/20190506040333/https://shinyashimokawa.space/" class="info-logo" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"> <img src="assets/1569942419-6952614e117a8c435c026c6d78d3aceb.png" alt="下川真哉的主页"> </a> <div class="info-text"> <p>Theme <a href="https://web.archive.org/web/20190506040333/https://github.com/chakhsu/pinghsu" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">"Pinghsu"</a></p> <p>Designed by <a href="https://web.archive.org/web/20190506040333/https://www.linpx.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Chakhsu</a></p> <p>Powered by <a href="https://web.archive.org/web/20190506040333/http://www.typecho.org/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">Typecho</a></p> <p>© 2019 <a href="https://web.archive.org/web/20190506040333/https://shinyashimokawa.space/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">下川真哉的主页</a></p> <p><a href="https://web.archive.org/web/20190506040333/http://www.miitbeian.gov.cn/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">宅ICP备2001124号(仮)</a></p> </div> </div> </div> <div class="meta-item meta-posts"> <h3 class="meta-title">RECENT POSTS</h3> <li><a href="https://web.archive.org/web/20190506040333/https://shinyashimokawa.space/index.php/archives/442/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">新中国六大行政区设立与撤销始末（2010）</a></li><li><a href="https://web.archive.org/web/20190506040333/https://shinyashimokawa.space/index.php/archives/428/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">俄罗斯联邦制度的现实矛盾和未来走向（2011）</a></li><li><a href="https://web.archive.org/web/20190506040333/https://shinyashimokawa.space/index.php/archives/424/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">馬關新約/日清講和条約（1895年4月17日）</a></li><li><a href="https://web.archive.org/web/20190506040333/https://shinyashimokawa.space/index.php/archives/414/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">日韓合併條約（1910年8月22日）</a></li><li><a href="https://web.archive.org/web/20190506040333/https://shinyashimokawa.space/index.php/archives/407/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">“姓氏”的小考究</a></li><li><a href="https://web.archive.org/web/20190506040333/https://shinyashimokawa.space/index.php/archives/405/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">遠く君へ-中島愛（日汉对照歌词）</a></li><li><a href="https://web.archive.org/web/20190506040333/https://shinyashimokawa.space/index.php/archives/404/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">「寧空屋也不出租」 專家點出台灣房市最主要問題</a></li><li><a href="https://web.archive.org/web/20190506040333/https://shinyashimokawa.space/index.php/archives/397/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">If I Leave – 조수미（韩英对照歌词）</a></li><li><a href="https://web.archive.org/web/20190506040333/https://shinyashimokawa.space/index.php/archives/373/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">初窥Galgame汉化——以CatSystem2引擎游戏《ゆきこいめると》为例</a></li><li><a href="https://web.archive.org/web/20190506040333/https://shinyashimokawa.space/index.php/archives/370/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Shift_JIS与GBK编码范围的差别</a></li> </div> <div class="meta-item meta-comments"> <h3 class="meta-title">RECENT COMMENTS</h3> </div> </div> </div> </footer> <div id="directory-content" class="directory-content initial headroom--not-top unpinned headroom--bottom"> <div id="directory"><ul><li><a href="#directory067332697575960341">1 序</a></li><li><a href="#directory067332697575960342">2 解包部分</a></li><li><a href="#directory067332697575960343">3 转码部分</a></li><li><a href="#directory067332697575960344">4 测试部分</a></li><li><a href="#directory067332697575960345">5 后记</a></li><li><a href="#directory067332697575960346">6 致谢</a></li></ul></div> </div>    <canvas id="Snow" width="1350" height="616"></canvas>   <div class="pio-container left static"><div class="pio-action"></div><canvas id="pio" width="200" height="350"></canvas></div>          <!--
+     FILE ARCHIVED ON 04:03:33 May 06, 2019 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 15:08:01 Oct 01, 2019.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  captures_list: 205.878
+  RedisCDXSource: 131.678
+  exclusion.robots.policy: 0.305
+  esindex: 0.011
+  exclusion.robots: 0.321
+  PetaboxLoader3.resolve: 115.96
+  LoadShardBlock: 56.513 (3)
+  CDXLines.iter: 14.79 (3)
+  PetaboxLoader3.datanode: 71.262 (4)
+  load_resource: 218.516
+--><span id="copylAddress" style="display: inline-block; position: absolute; left: -9999em;"></span><a href="" download="" data-mx-warn="Empty URL"></a><div data-mx-warn="extension url was not captured by MaoXian" data-mx-original-src="chrome-extension://kjahokgdcbohofgdidndeiaigkehdjdc/pages/ui-selection.html?t=aHR0cHM6Ly93ZWIuYXJjaGl2ZS5vcmc="></div><div data-mx-warn="extension url was not captured by MaoXian" data-mx-original-src="chrome-extension://kjahokgdcbohofgdidndeiaigkehdjdc/pages/ui-control.html?t=aHR0cHM6Ly93ZWIuYXJjaGl2ZS5vcmc="></div>
+</body>
+  </html>
