@@ -1,0 +1,83 @@
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+
+a { text-decoration: none; }
+a:hover{ text-decoration: underline; }
+
+.main {
+  padding: 25px 0px 200px 0px;
+}
+
+.search-box{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#search {
+  width: 80%;
+  height: 30px;
+  border: solid 1px #aaa;
+  padding: 0px 8px 0px 8px;
+  border-radius: 3px;
+}
+#search:focus {
+  border: solid 2px pink;
+}
+
+.history {
+  margin-top: 10px;
+}
+
+.clippings {
+  padding: 30px 5px 30px 5px;
+  border: solid 1px #ccc;
+  background-color: rgb(226, 226, 226);
+}
+
+.clipping {
+  background-color: white;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 15px 8px 5px 8px;
+  box-shadow: 0 2px 3px rgba(0,0,0,.1);
+}
+
+.clipping > .title > h4 {
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.clipping > .info > label {
+  color: #888;
+  line-height: 24px;
+  font-size: 14px;
+}
+
+.clipping > .info > .category {
+  border-bottom: dashed 1px #ccc;
+  /*border-left: solid 2px green;*/
+  padding: 2px 4px;
+  margin-right: 10px;
+}
+
+.clipping > .info > .tags {
+  margin-right: 10px;
+}
+
+.clipping > .info > .tags > code {
+  padding: 2px 8px;
+  border-radius: 5px;
+  border: solid 1px #ccc;
+  margin-left: 2px;
+  margin-right: 2px;
+  font-size: 12px;
+}
+
+.clipping > .info > .time {
+  font-size: 11px;
+  color: #aaa;
+}
