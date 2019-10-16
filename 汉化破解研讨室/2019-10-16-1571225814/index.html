@@ -1,0 +1,299 @@
+
+  <!DOCTYPE html>
+  <html id="" class="">
+    <!-- OriginalSrc: https://www.iteye.com/blog/rednaxelafx-140472 -->
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <title>ef - the first tale.的繁体中文汉化安装包的NSIS脚本 - Script Ahead, Code Behind - ITeye博客</title>
+      
+<link rel="shortcut icon" href="assets/1571225814-1cd7c6fd0de855e9efac8dbe4a274b55.ico" type="image/x-icon" referrerpolicy="no-referrer">
+
+
+<link href="assets/1571225814-86dfe308f444f6e1aa00f6b28e8b2407.css" media="screen" rel="stylesheet" type="text/css" referrerpolicy="no-referrer">
+<link href="assets/1571225814-771d0182f7eae18f5989664d94717b86.css" media="screen" rel="stylesheet" type="text/css" referrerpolicy="no-referrer">
+<link href="assets/1571225814-396dd74c56d84598b8a22d8cb10eaf3a.css" media="screen" rel="stylesheet" type="text/css" referrerpolicy="no-referrer">
+<link rel="stylesheet" type="text/css" href="assets/1571225814-9aeb703993455cc093fff678a2ad3401.css" referrerpolicy="no-referrer">
+<link rel="stylesheet" type="text/css" href="assets/1571225814-05fb66a2c1140728ea8d74162a702c22.css" referrerpolicy="no-referrer">
+
+
+<style class="darkreader darkreader--fallback" media="screen"></style>
+<style class="darkreader darkreader--text" media="screen"></style>
+<style class="darkreader darkreader--invert" media="screen"></style>
+<style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}</style>
+<style class="darkreader darkreader--user-agent" media="screen">html {
+    background-color: #191a1b !important;
+}
+html, body, input, textarea, select, button {
+    background-color: #191a1b;
+}
+html, body, input, textarea, select, button {
+    border-color: #5a5956;
+    color: #f0ebe2;
+}
+a {
+    color: #4791e7;
+}
+table {
+    border-color: #4f4e4c;
+}
+::placeholder {
+    color: #bfb9ac;
+}
+::selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+::-moz-selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #565a0f !important;
+    color: #f0ebe2 !important;
+}
+::-webkit-scrollbar {
+    background-color: #1d1f1f;
+    color: #cbc5b9;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #2c2d2d;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #343636;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #404142;
+}
+::-webkit-scrollbar-corner {
+    background-color: #191a1b;
+}
+* {
+    scrollbar-color: #2c2d2d #1d1f1f;
+}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--override" media="screen">.jfk-bubble {
+    background-color: #000000 !important;
+}
+.vimvixen-hint {
+    background-color: #765500 !important;
+    border-color: #d5b22e !important;
+    color: #f9edcc !important;
+}</style>
+<style>
+ 
+.hide-main-content{
+    position: relative;
+}
+.hide-article-box {
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    bottom: -1px;
+    width: 100%;
+    padding-top: 160px;
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(255,255,255,0)),color-stop(70%, #fff));
+    background-image: linear-gradient(-180deg,rgba(255,255,255,0) 0%,#fff 70%);
+}
+.hide-article-box #btn-readmore{
+    color: #ca0c16;
+    border: 1px solid #ca0c16;
+    margin: 10px auto;
+    padding: 0 8px;
+    display: block;
+    font-size: 14px;
+    border-radius: 4px;
+    text-align: center;
+    background-color: transparent;
+    height: 34px;
+    width: 74px;
+    line-height: 32px;
+    min-width: 72px;
+    cursor: pointer;
+}
+.hide-article-box #btn-readmore:hover{
+    background: #ca0c16;
+    color:#fff;
+    text-decoration: none;
+}
+</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">.dp-j .annotation { color: #646464; }.dp-j .number { color: #C00000; }</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--cors" media="screen">body,dd,div,dl,dt,form,h1,h2,h3,h4,h5,h6,html,input,li,ol,p,select,td,textarea,th,ul{margin:0;padding:0}*{box-sizing:border-box}body,html{min-height:100%}h1,h2,h3,h4,h5,h6{font-weight:400}.recommend-right ul,ol{list-style:none}.recommend-right img{border:none;vertical-align:middle}.recommend-right a{text-decoration:none;color:#232323}.recommend-right table{border-collapse:collapse;table-layout:fixed}.recommend-right input,textarea{outline:0;border:none}.recommend-right textarea{resize:none;overflow:auto}.clearfix:after{content:" ";display:block;height:0;visibility:hidden;clear:both}.recommend{overflow:hidden}.newbox.recommend{overflow:hidden}svg.icon{width:1em;height:1em;vertical-align:-.15em;fill:currentColor;overflow:hidden;margin-right:4px}svg.icon.icon-level{width:3em;height:1em}.recommend-right{float:right;width:300px;margin-left:8px;background-color:#fff;-webkit-box-shadow:0 2px 4px 0 rgba(0,0,0,.05);box-shadow:0 2px 4px 0 rgba(0,0,0,.05)}.recommend-right .recommend-fixed-box{background-color:#fff}.recommend-right .right-item{padding:8px 0;overflow:hidden;word-break:break-all;margin-left:8px;margin-right:8px;border-bottom:1px solid #f5f5f5;box-sizing:border-box}.recommend-right .right-item:hover .content h5{color:#ca0c16}.recommend-right .right-item .content{margin-bottom:4px}.recommend-right .right-item .content img{width:58px;height:36px}.recommend-right .right-item .content h5{display:inline;font-size:14px;color:#5c5c5c;letter-spacing:0;line-height:20px;max-height:44px;overflow:hidden;font-weight:500;margin-right:4px;white-space:nowrap;text-overflow:ellipsis}.recommend-right .right-item .content .h5width{width:76%;margin-left:8px}.recommend-right .right-item .content span{margin-right:8px;font-size:12px;color:#999;letter-spacing:0;line-height:20px}.recommend-right .right-item .content .download_mark{border:1px solid #e3e3e3;padding:2px;margin-right:4px}.recommend-right .right-item .right-item-desc{font-size:12px;color:#999;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--cors" media="screen">.{font-family:""!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.fanyi:before{content:"\e661"}.shouji:before{content:"\e66f"}.yuedushu:before{content:"\e682"}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">@keyframes fadeInOpacity{0%{opacity:0}to{opacity:1}}:hover>*>.fbvd--wrapper{animation-name:fadeInOpacity;animation-duration:.3s;opacity:1}.fbvd--wrapper{position:absolute;top:10px;left:10px;opacity:0;text-align:center;margin:0;z-index:5}.fbvd--wrapper a{background: url("") no-repeat 3px 4.55px; background-color: #fff; display:inline-block;font:700 14px Helvetica,Arial,sans-serif;color:#4b4f56;text-decoration:none;vertical-align:middle;padding:0px 8px 0px;margin-right:8px;border-radius:2px; line-height: 22px; padding-left:19px; border: 1px solid #e7e7e7; background-size: 13px}.fbvd--wrapper a:last-child{margin-right:0}.fbvd--wrapper a:hover{text-decoration:none}.fbvd--wrapper a:focus{box-shadow:0 0 1px 2px rgba(88,144,255,.75),0 1px 1px rgba(0,0,0,.15);outline:none}.fbvd--wrapper b{font-size:13px;position:relative;top:1px;color:#3b5998;font-weight:400}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style>
+  .userinfo {display: none !important;}
+  .persion_article h3{
+    background: none !important;
+    border-bottom: none!important;
+    padding: 0!important;
+    margin-bottom: 0!important;
+    line-height: 1!important;
+  }
+  .persion_article .right_box{
+    margin-top: 0!important;
+  }
+  .persion_article .footer_box .feed_new_tit span{
+    padding-left: 0!important;
+  }
+</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+
+      <style class="mx-wc-style">
+        .mx-wc-main img {max-width: 100%;}
+        .mx-wc-main{
+          box-sizing: content-box;
+          background-color: rgb(35, 36, 36) !important;
+          margin: 0 auto;
+          margin-top: 20px;
+          max-width: 706px;
+        }
+        @media (min-width: 768px) {
+          .mx-wc-main { padding: 15px 15px 80px 15px }
+        }
+        @media (max-width: 767px) {
+          .mx-wc-main { padding: 15px 3px 80px 3px }
+        }
+  
+      </style>
+    </head>
+    <body style="background-color: #464646 !important; min-height: 100%; height: auto; position: static !important; overflow: auto !important; padding-bottom: 0px !important;" id="" class="">
+      <div class="mx-wc-main">
+        <DIV id="page" style="display: block !important;float: none !important;position: relative !important;top: 0 !important;left: 0 !important;border: 0px !important;width: 100% !important;min-width: 100% !important;max-width: 100% !important;height: auto !important;min-height: auto !important;max-height: 100% !important;margin: 0px !important;padding: 0px !important;"><DIV id="content" class="clearfix" style="display: block !important;float: none !important;position: relative !important;top: 0 !important;left: 0 !important;border: 0px !important;width: 100% !important;min-width: 100% !important;max-width: 100% !important;height: auto !important;min-height: auto !important;max-height: 100% !important;margin: 0px !important;padding: 0px !important;"><div id="main" class="mx-wc-selected-elem mx-wc-1571225814" style="display: block; float: none !important; position: relative !important; top: 0px !important; left: 0px !important; margin: 0px !important; flex: unset !important; width: 100% !important; max-width: 100% !important;">
+        
+
+
+
+        
+
+
+
+
+
+<div class="blog_main">
+  
+  <div class="blog_title">
+    <h3>
+      ef - the first tale.的繁体中文汉化安装包的NSIS脚本
+      <em class="actions">      </em>
+    </h3>
+    <ul class="blog_categories"><strong>博客分类：</strong> <li><a href="https://www.iteye.com/category/22696" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">NSIS</a></li> </ul>
+        <div class="news_tag"><a href="http://www.iteye.com/blogs/tag/%E8%84%9A%E6%9C%AC" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">脚本</a><a href="http://www.iteye.com/blogs/tag/Microsoft" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Microsoft</a><a href="http://www.iteye.com/blogs/tag/Web" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Web</a><a href="http://www.iteye.com/blogs/tag/Windows" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Windows</a><a href="http://www.iteye.com/blogs/tag/%E4%B8%AD%E9%97%B4%E4%BB%B6" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">中间件</a>&nbsp;</div>
+  </div>
+
+  <div id="blog_content" class="hide-main-content">
+    
+    唉,当时没催社长把这汉化坚持做完真是太失策了.现在也只好就这么拖着,等ef - the latter tale.出的时候再鼓起干劲把它接着做完.本来是能指望跟简体版的汉化补丁同期放出的...
+<br>
+<br>之前听师兄说起他最近用NSIS的经历才又想起来.现在就先把这个安装包的NSIS脚本放出来好了.反正已经没有什么需要隐藏的东西.不过大半年前写的这脚本果然是老了啊...很多东西都很不上现在的NSIS的脚步了.
+<br>
+<br><div class="dp-highlighter" id=""><div class="bar"><div class="tools">Java代码 <embed wmode="transparent" src="/javascripts/syntaxhighlighter/clipboard_new.swf" width="14" height="15" flashvars="clipboard=%3B%20HM%20NIS%20Edit%20Wizard%20helper%20defines%0A!define%20PRODUCT_NAME%20%22ef%20-%20the%20first%20tale.%20%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E7%89%88%22%0A!define%20PRODUCT_VERSION%20%221.0%22%0A!define%20PRODUCT_PUBLISHER%20%22Router%20Buster%22%0A!define%20PRODUCT_WEB_SITE%20%22http%3A%2F%2Fshibunoheya.blog86.fc2.com%2F%22%0A!define%20PRODUCT_DIR_REGKEY%20%22Software%5CMicrosoft%5CWindows%5CCurrentVersion%5CApp%20Paths%5Cef_first_1001chs.exe%22%0A!define%20PRODUCT_UNINST_KEY%20%22Software%5CMicrosoft%5CWindows%5CCurrentVersion%5CUninstall%5C%24%7BPRODUCT_NAME%7D%22%0A!define%20PRODUCT_UNINST_ROOT_KEY%20%22HKLM%22%0A%0A%3B%20MUI%201.67%20compatible%20------%0A!include%20%22MUI.nsh%22%0A%0A%3B%20MUI%20Settings%0A!define%20MUI_ABORTWARNING%0A!define%20MUI_ICON%20%22E%3A%5Cef%20patch%20working%20folder%5Cef.ico%22%0A%3B!define%20MUI_UNICON%20%22%24%7BNSISDIR%7D%5CContrib%5CGraphics%5CIcons%5Cmodern-uninstall.ico%22%0A!define%20MUI_UNICON%20%22E%3A%5Cef%20patch%20working%20folder%5Cef.ico%22%0A%0A%3B%20Language%20Selection%20Dialog%20Settings%0A!define%20MUI_LANGDLL_REGISTRY_ROOT%20%22%24%7BPRODUCT_UNINST_ROOT_KEY%7D%22%0A!define%20MUI_LANGDLL_REGISTRY_KEY%20%22%24%7BPRODUCT_UNINST_KEY%7D%22%0A!define%20MUI_LANGDLL_REGISTRY_VALUENAME%20%22NSIS%3ALanguage%22%0A%0A%3B%20Welcome%20page%0A!insertmacro%20MUI_PAGE_WELCOME%0A%3B%20License%20page%0A!define%20MUI_LICENSEPAGE_CHECKBOX%0A!insertmacro%20MUI_PAGE_LICENSE%20%22E%3A%5Cef%20patch%20working%20folder%5Clicense.txt%22%0A%3B%20Directory%20page%0A!insertmacro%20MUI_PAGE_DIRECTORY%0A%3B%20Instfiles%20page%0A!insertmacro%20MUI_PAGE_INSTFILES%0A%3B%20Finish%20page%0A!define%20MUI_FINISHPAGE_RUN%20%22%24INSTDIR%5Cef_first_1001chs.exe%22%0A%3B!define%20MUI_FINISHPAGE_RUN%20%22%24INSTDIR%5Cef_first_1001zhh.exe%22%0A!insertmacro%20MUI_PAGE_FINISH%0A%0A%3B%20Uninstaller%20pages%0A!insertmacro%20MUI_UNPAGE_INSTFILES%0A%0A%3B%20Language%20files%0A!insertmacro%20MUI_LANGUAGE%20%22SimpChinese%22%0AVIProductVersion%20%221.0.0.0%22%0AVIAddVersionKey%20%2FLANG%3D2052%20%22FileDescription%22%20%22%24%7BPRODUCT_NAME%7D%22%0AVIAddVersionKey%20%2FLANG%3D2052%20%22Comments%22%20%22%24%7BPRODUCT_WEB_SITE%7D%22%0AVIAddVersionKey%20%2FLANG%3D2052%20%22ProductName%22%20%22%24%7BPRODUCT_NAME%7D%22%0AVIAddVersionKey%20%2FLANG%3D2052%20%22LegalCopyright%22%20%22%22%0AVIAddVersionKey%20%2FLANG%3D2052%20%22CompanyName%22%20%22%24%7BPRODUCT_PUBLISHER%7D%22%0AVIAddVersionKey%20%2FLANG%3D2052%20%22FileVersion%22%20%22%24%7BPRODUCT_VERSION%7D%22%0A%0A%3B%20MUI%20end%20------%0A%0AName%20%22%24%7BPRODUCT_NAME%7D%20%24%7BPRODUCT_VERSION%7D%22%0AOutFile%20%22Setup_chs.exe%22%0AInstallDir%20%22%24EXEDIR%22%0AInstallDirRegKey%20HKLM%20%22%24%7BPRODUCT_DIR_REGKEY%7D%22%20%22%22%0AShowInstDetails%20show%0AShowUnInstDetails%20show%0A%0AFunction%20.onInit%0A%20%20!insertmacro%20MUI_LANGDLL_DISPLAY%0A%20%20InitPluginsDir%0A%20%20ReadRegStr%20%24INSTDIR%20HKLM%20%22SOFTWARE%5Cminori%5Cef_first%22%20%22InstallDir%22%0AFunctionEnd%0A%0A%3B%3B%20CHECK%20THIS%20FOR%20FONT%20INSTALLATION%3A%20%24FONTS%0A%0ASection%20%22MainSection%22%20SEC01%0A%3B--------------------------copy-----------------------------%0A%20%20SetOutPath%20%22%24INSTDIR%22%0A%20%20DetailPrint%20%22%E6%AD%A3%E5%9C%A8%E8%A4%87%E8%A3%BD%E6%AA%94%E6%A1%88...%22%0A%20%20SetOverwrite%20ifnewer%0A%20%20File%20%22E%3A%5Cef%20patch%20working%20folder%5Cef_first_1001chs.exe%22%0A%20%20CreateDirectory%20%22%24SMPROGRAMS%5C%5C%22%0A%20%20CreateShortCut%20%22%24SMPROGRAMS%5C%5Cef%20-%20the%20first%20tale.%20%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E7%89%88.lnk%22%20%22%24INSTDIR%5Cef_first_1001chs.exe%22%0A%20%20CreateShortCut%20%22%24DESKTOP%5Cef%20-%20the%20first%20tale.%20%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E7%89%88.lnk%22%20%22%24INSTDIR%5Cef_first_1001chs.exe%22%0A%20%20SetOverwrite%20on%0A%20%20File%20%22E%3A%5Cef%20patch%20working%20folder%5Cscr.paz%22%0A%20%20File%20%22E%3A%5Cef%20patch%20working%20folder%5Cmov.paz%22%0A%20%20File%20%22E%3A%5Cef%20patch%20working%20folder%5Ctool%5Cpaz.exe%22%0A%20%20File%20%22E%3A%5Cef%20patch%20working%20folder%5Ctool%5Cpaz.ini%22%0A%3B-------------------------extract----------------------------%0A%3B%3B%20TODO%20-%20%E4%B8%8B%E9%9D%A2%E8%BF%99%E9%83%A8%E5%88%86%E5%8F%AA%E6%98%AF%E6%B5%8B%E8%AF%95!!!%0A%20%20CreateDirectory%20%22%24INSTDIR%5Cscr%22%0A%20%20nsExec%3A%3AExecToStack%20'%22cd%22%20%24INSTDIR'%0A%20%20nsExec%3A%3AExecToStack%20'%22dir%22%20%3E%20files.txt'%0A%20%20nsExec%3A%3AExecToStack%20'%22%24INSTDIR%5Cpaz.exe%22%20e%20%24INSTDIR%5Cscr.paz'%0A%3B%20%20RMDir%20%22%24INSTDIR%5C%22%0A%0A%20%20%20DetailPrint%20%22%E6%AD%A3%E5%9C%A8%E6%9B%B4%E6%96%B0%E6%AA%94%E6%A1%88...%22%0ASectionEnd%0A%0ASection%20-Post%0A%20%20WriteUninstaller%20%22%24INSTDIR%5Cuninst.exe%22%0A%20%20WriteRegStr%20HKLM%20%22%24%7BPRODUCT_DIR_REGKEY%7D%22%20%22%22%20%22%24INSTDIR%5Cef_first_1001chs.exe%22%0A%20%20WriteRegStr%20%24%7BPRODUCT_UNINST_ROOT_KEY%7D%20%22%24%7BPRODUCT_UNINST_KEY%7D%22%20%22DisplayName%22%20%22%24(%5EName)%22%0A%20%20WriteRegStr%20%24%7BPRODUCT_UNINST_ROOT_KEY%7D%20%22%24%7BPRODUCT_UNINST_KEY%7D%22%20%22UninstallString%22%20%22%24INSTDIR%5Cuninst.exe%22%0A%20%20WriteRegStr%20%24%7BPRODUCT_UNINST_ROOT_KEY%7D%20%22%24%7BPRODUCT_UNINST_KEY%7D%22%20%22DisplayIcon%22%20%22%24INSTDIR%5Cef_first_1001chs.exe%22%0A%20%20WriteRegStr%20%24%7BPRODUCT_UNINST_ROOT_KEY%7D%20%22%24%7BPRODUCT_UNINST_KEY%7D%22%20%22DisplayVersion%22%20%22%24%7BPRODUCT_VERSION%7D%22%0A%20%20WriteRegStr%20%24%7BPRODUCT_UNINST_ROOT_KEY%7D%20%22%24%7BPRODUCT_UNINST_KEY%7D%22%20%22URLInfoAbout%22%20%22%24%7BPRODUCT_WEB_SITE%7D%22%0A%20%20WriteRegStr%20%24%7BPRODUCT_UNINST_ROOT_KEY%7D%20%22%24%7BPRODUCT_UNINST_KEY%7D%22%20%22Publisher%22%20%22%24%7BPRODUCT_PUBLISHER%7D%22%0A%20%20WriteRegStr%20HKLM%20%22SOFTWARE%5Cminori%5Cef_first%22%20%22InstallKeyCode%22%20%2207303ed1%22%0A%20%20WriteRegStr%20HKLM%20%22SOFTWARE%5Cminori%5Cef_first%22%20%22SerialCode%22%20%2211111-11111-11111-11111%22%0A%20%20WriteRegStr%20HKLM%20%22SOFTWARE%5Cminori%5Cef_first%22%20%22InstallDir%22%20%22%24INSTDIR%22%0ASectionEnd%0A%0A%0AFunction%20un.onUninstSuccess%0A%20%20HideWindow%0A%20%20MessageBox%20MB_ICONINFORMATION%7CMB_OK%20%22%E3%80%8Cef%20-%20the%20first%20tale.%20%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E7%89%88%E3%80%8D%E5%B7%B2%E6%88%90%E5%8A%9F%E5%9C%B0%E4%BB%8E%E4%BD%A0%E7%9A%84%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%BB%E9%99%A4%E3%80%82%22%0AFunctionEnd%0A%0AFunction%20un.onInit%0A!insertmacro%20MUI_UNGETLANGUAGE%0A%20%20MessageBox%20MB_ICONQUESTION%7CMB_YESNO%7CMB_DEFBUTTON2%20%22%E4%BD%A0%E7%A1%AE%E5%AE%9E%E8%A6%81%E5%AE%8C%E5%85%A8%E7%A7%BB%E9%99%A4%E3%80%8Cef%20-%20the%20first%20tale.%20%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E7%89%88%E3%80%8D%EF%BC%8C%E5%85%B6%E5%8F%8A%E6%89%80%E6%9C%89%E7%B5%84%E4%BB%B6%EF%BC%9F%22%20IDYES%20%2B2%0A%20%20Abort%0AFunctionEnd%0A%0ASection%20Uninstall%0A%20%20Delete%20%22%24INSTDIR%5Cuninst.exe%22%0A%20%20Delete%20%22%24INSTDIR%5Cmov.paz%22%0A%20%20Delete%20%22%24INSTDIR%5Cscr.paz%22%0A%20%20Delete%20%22%24INSTDIR%5Cef_first_1001chs.exe%22%0A%0A%20%20%3BDelete%20%22%24DESKTOP%5Cef%20-%20the%20first%20tale.%20%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E7%89%88(for%20%E7%B9%81%E9%AB%94%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1).lnk%22%0A%20%20%3BDelete%20%22%24SMPROGRAMS%5C%5Cef%20-%20the%20first%20tale.%20%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E7%89%88(for%20%E7%B9%81%E9%AB%94%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1).lnk%22%0A%20%20Delete%20%22%24DESKTOP%5Cef%20-%20the%20first%20tale.%20%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E7%89%88(for%20%E7%AE%80%E4%BD%93%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F).lnk%22%0A%20%20Delete%20%22%24SMPROGRAMS%5C%5Cef%20-%20the%20first%20tale.%20%E7%B9%81%E9%AB%94%E4%B8%AD%E6%96%87%E7%89%88(for%20%E7%AE%80%E4%BD%93%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F).lnk%22%0A%0A%20%20RMDir%20%22%24SMPROGRAMS%5C%5C%22%0A%20%20RMDir%20%22%24INSTDIR%22%0A%0A%20%20DeleteRegKey%20%24%7BPRODUCT_UNINST_ROOT_KEY%7D%20%22%24%7BPRODUCT_UNINST_KEY%7D%22%0A%20%20DeleteRegKey%20HKLM%20%22%24%7BPRODUCT_DIR_REGKEY%7D%22%0A%20%20SetAutoClose%20true%0ASectionEnd" quality="high" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">&nbsp;<a href="javascript:void()" title="收藏这段代码" onclick="code_favorites_do_favorite(this);return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img class="star" src="assets/1571225814-bf632ec55a05f69a9359f73417402b26.png" alt="收藏代码"><img class="spinner" src="assets/1571225814-a42df3a5b569bdc98ca473a4a3adfeac.gif" style="display:none"></a></div></div><ol start="1" class="dp-j"><li><span><span>;&nbsp;HM&nbsp;NIS&nbsp;Edit&nbsp;Wizard&nbsp;helper&nbsp;defines&nbsp;&nbsp;</span></span></li><li><span>!define&nbsp;PRODUCT_NAME&nbsp;<span class="string">"ef&nbsp;-&nbsp;the&nbsp;first&nbsp;tale.&nbsp;繁體中文版"</span><span>&nbsp;&nbsp;</span></span></li><li><span>!define&nbsp;PRODUCT_VERSION&nbsp;<span class="string">"1.0"</span><span>&nbsp;&nbsp;</span></span></li><li><span>!define&nbsp;PRODUCT_PUBLISHER&nbsp;<span class="string">"Router&nbsp;Buster"</span><span>&nbsp;&nbsp;</span></span></li><li><span>!define&nbsp;PRODUCT_WEB_SITE&nbsp;<span class="string">"http://shibunoheya.blog86.fc2.com/"</span><span>&nbsp;&nbsp;</span></span></li><li><span>!define&nbsp;PRODUCT_DIR_REGKEY&nbsp;<span class="string">"Software\Microsoft\Windows\CurrentVersion\App&nbsp;Paths\ef_first_1001chs.exe"</span><span>&nbsp;&nbsp;</span></span></li><li><span>!define&nbsp;PRODUCT_UNINST_KEY&nbsp;<span class="string">"Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}"</span><span>&nbsp;&nbsp;</span></span></li><li><span>!define&nbsp;PRODUCT_UNINST_ROOT_KEY&nbsp;<span class="string">"HKLM"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;</span></li><li><span>;&nbsp;MUI&nbsp;<span class="number">1.67</span><span>&nbsp;compatible&nbsp;------&nbsp;&nbsp;</span></span></li><li><span>!include&nbsp;<span class="string">"MUI.nsh"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;</span></li><li><span>;&nbsp;MUI&nbsp;Settings&nbsp;&nbsp;</span></li><li><span>!define&nbsp;MUI_ABORTWARNING&nbsp;&nbsp;</span></li><li><span>!define&nbsp;MUI_ICON&nbsp;<span class="string">"E:\ef&nbsp;patch&nbsp;working&nbsp;folder\ef.ico"</span><span>&nbsp;&nbsp;</span></span></li><li><span>;!define&nbsp;MUI_UNICON&nbsp;<span class="string">"${NSISDIR}\Contrib\Graphics\Icons\modern-uninstall.ico"</span><span>&nbsp;&nbsp;</span></span></li><li><span>!define&nbsp;MUI_UNICON&nbsp;<span class="string">"E:\ef&nbsp;patch&nbsp;working&nbsp;folder\ef.ico"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;</span></li><li><span>;&nbsp;Language&nbsp;Selection&nbsp;Dialog&nbsp;Settings&nbsp;&nbsp;</span></li><li><span>!define&nbsp;MUI_LANGDLL_REGISTRY_ROOT&nbsp;<span class="string">"${PRODUCT_UNINST_ROOT_KEY}"</span><span>&nbsp;&nbsp;</span></span></li><li><span>!define&nbsp;MUI_LANGDLL_REGISTRY_KEY&nbsp;<span class="string">"${PRODUCT_UNINST_KEY}"</span><span>&nbsp;&nbsp;</span></span></li><li><span>!define&nbsp;MUI_LANGDLL_REGISTRY_VALUENAME&nbsp;<span class="string">"NSIS:Language"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;</span></li><li><span>;&nbsp;Welcome&nbsp;page&nbsp;&nbsp;</span></li><li><span>!insertmacro&nbsp;MUI_PAGE_WELCOME&nbsp;&nbsp;</span></li><li><span>;&nbsp;License&nbsp;page&nbsp;&nbsp;</span></li><li><span>!define&nbsp;MUI_LICENSEPAGE_CHECKBOX&nbsp;&nbsp;</span></li><li><span>!insertmacro&nbsp;MUI_PAGE_LICENSE&nbsp;<span class="string">"E:\ef&nbsp;patch&nbsp;working&nbsp;folder\license.txt"</span><span>&nbsp;&nbsp;</span></span></li><li><span>;&nbsp;Directory&nbsp;page&nbsp;&nbsp;</span></li><li><span>!insertmacro&nbsp;MUI_PAGE_DIRECTORY&nbsp;&nbsp;</span></li><li><span>;&nbsp;Instfiles&nbsp;page&nbsp;&nbsp;</span></li><li><span>!insertmacro&nbsp;MUI_PAGE_INSTFILES&nbsp;&nbsp;</span></li><li><span>;&nbsp;Finish&nbsp;page&nbsp;&nbsp;</span></li><li><span>!define&nbsp;MUI_FINISHPAGE_RUN&nbsp;<span class="string">"$INSTDIR\ef_first_1001chs.exe"</span><span>&nbsp;&nbsp;</span></span></li><li><span>;!define&nbsp;MUI_FINISHPAGE_RUN&nbsp;<span class="string">"$INSTDIR\ef_first_1001zhh.exe"</span><span>&nbsp;&nbsp;</span></span></li><li><span>!insertmacro&nbsp;MUI_PAGE_FINISH&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;</span></li><li><span>;&nbsp;Uninstaller&nbsp;pages&nbsp;&nbsp;</span></li><li><span>!insertmacro&nbsp;MUI_UNPAGE_INSTFILES&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;</span></li><li><span>;&nbsp;Language&nbsp;files&nbsp;&nbsp;</span></li><li><span>!insertmacro&nbsp;MUI_LANGUAGE&nbsp;<span class="string">"SimpChinese"</span><span>&nbsp;&nbsp;</span></span></li><li><span>VIProductVersion&nbsp;<span class="string">"1.0.0.0"</span><span>&nbsp;&nbsp;</span></span></li><li><span>VIAddVersionKey&nbsp;/LANG=<span class="number">2052</span><span>&nbsp;</span><span class="string">"FileDescription"</span><span>&nbsp;</span><span class="string">"${PRODUCT_NAME}"</span><span>&nbsp;&nbsp;</span></span></li><li><span>VIAddVersionKey&nbsp;/LANG=<span class="number">2052</span><span>&nbsp;</span><span class="string">"Comments"</span><span>&nbsp;</span><span class="string">"${PRODUCT_WEB_SITE}"</span><span>&nbsp;&nbsp;</span></span></li><li><span>VIAddVersionKey&nbsp;/LANG=<span class="number">2052</span><span>&nbsp;</span><span class="string">"ProductName"</span><span>&nbsp;</span><span class="string">"${PRODUCT_NAME}"</span><span>&nbsp;&nbsp;</span></span></li><li><span>VIAddVersionKey&nbsp;/LANG=<span class="number">2052</span><span>&nbsp;</span><span class="string">"LegalCopyright"</span><span>&nbsp;</span><span class="string">""</span><span>&nbsp;&nbsp;</span></span></li><li><span>VIAddVersionKey&nbsp;/LANG=<span class="number">2052</span><span>&nbsp;</span><span class="string">"CompanyName"</span><span>&nbsp;</span><span class="string">"${PRODUCT_PUBLISHER}"</span><span>&nbsp;&nbsp;</span></span></li><li><span>VIAddVersionKey&nbsp;/LANG=<span class="number">2052</span><span>&nbsp;</span><span class="string">"FileVersion"</span><span>&nbsp;</span><span class="string">"${PRODUCT_VERSION}"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;</span></li><li><span>;&nbsp;MUI&nbsp;end&nbsp;------&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;</span></li><li><span>Name&nbsp;<span class="string">"${PRODUCT_NAME}&nbsp;${PRODUCT_VERSION}"</span><span>&nbsp;&nbsp;</span></span></li><li><span>OutFile&nbsp;<span class="string">"Setup_chs.exe"</span><span>&nbsp;&nbsp;</span></span></li><li><span>InstallDir&nbsp;<span class="string">"$EXEDIR"</span><span>&nbsp;&nbsp;</span></span></li><li><span>InstallDirRegKey&nbsp;HKLM&nbsp;<span class="string">"${PRODUCT_DIR_REGKEY}"</span><span>&nbsp;</span><span class="string">""</span><span>&nbsp;&nbsp;</span></span></li><li><span>ShowInstDetails&nbsp;show&nbsp;&nbsp;</span></li><li><span>ShowUnInstDetails&nbsp;show&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;</span></li><li><span>Function&nbsp;.onInit&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;!insertmacro&nbsp;MUI_LANGDLL_DISPLAY&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;InitPluginsDir&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;ReadRegStr&nbsp;$INSTDIR&nbsp;HKLM&nbsp;<span class="string">"SOFTWARE\minori\ef_first"</span><span>&nbsp;</span><span class="string">"InstallDir"</span><span>&nbsp;&nbsp;</span></span></li><li><span>FunctionEnd&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;</span></li><li><span>;;&nbsp;CHECK&nbsp;THIS&nbsp;FOR&nbsp;FONT&nbsp;INSTALLATION:&nbsp;$FONTS&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;</span></li><li><span>Section&nbsp;<span class="string">"MainSection"</span><span>&nbsp;SEC01&nbsp;&nbsp;</span></span></li><li><span>;--------------------------copy-----------------------------&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;SetOutPath&nbsp;<span class="string">"$INSTDIR"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;DetailPrint&nbsp;<span class="string">"正在複製檔案..."</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;SetOverwrite&nbsp;ifnewer&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;File&nbsp;<span class="string">"E:\ef&nbsp;patch&nbsp;working&nbsp;folder\ef_first_1001chs.exe"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;CreateDirectory&nbsp;<span class="string">"$SMPROGRAMS\\"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;CreateShortCut&nbsp;<span class="string">"$SMPROGRAMS\\ef&nbsp;-&nbsp;the&nbsp;first&nbsp;tale.&nbsp;繁體中文版.lnk"</span><span>&nbsp;</span><span class="string">"$INSTDIR\ef_first_1001chs.exe"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;CreateShortCut&nbsp;<span class="string">"$DESKTOP\ef&nbsp;-&nbsp;the&nbsp;first&nbsp;tale.&nbsp;繁體中文版.lnk"</span><span>&nbsp;</span><span class="string">"$INSTDIR\ef_first_1001chs.exe"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;SetOverwrite&nbsp;on&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;File&nbsp;<span class="string">"E:\ef&nbsp;patch&nbsp;working&nbsp;folder\scr.paz"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;File&nbsp;<span class="string">"E:\ef&nbsp;patch&nbsp;working&nbsp;folder\mov.paz"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;File&nbsp;<span class="string">"E:\ef&nbsp;patch&nbsp;working&nbsp;folder\tool\paz.exe"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;File&nbsp;<span class="string">"E:\ef&nbsp;patch&nbsp;working&nbsp;folder\tool\paz.ini"</span><span>&nbsp;&nbsp;</span></span></li><li><span>;-------------------------extract----------------------------&nbsp;&nbsp;</span></li><li><span>;;&nbsp;TODO&nbsp;-&nbsp;下面这部分只是测试!!!&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;CreateDirectory&nbsp;<span class="string">"$INSTDIR\scr"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;nsExec::ExecToStack&nbsp;<span class="string">'"cd"&nbsp;$INSTDIR'</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;nsExec::ExecToStack&nbsp;<span class="string">'"dir"&nbsp;&gt;&nbsp;files.txt'</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;nsExec::ExecToStack&nbsp;<span class="string">'"$INSTDIR\paz.exe"&nbsp;e&nbsp;$INSTDIR\scr.paz'</span><span>&nbsp;&nbsp;</span></span></li><li><span>;&nbsp;&nbsp;RMDir&nbsp;<span class="string">"$INSTDIR\"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;DetailPrint&nbsp;<span class="string">"正在更新檔案..."</span><span>&nbsp;&nbsp;</span></span></li><li><span>SectionEnd&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;</span></li><li><span>Section&nbsp;-Post&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;WriteUninstaller&nbsp;<span class="string">"$INSTDIR\uninst.exe"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;WriteRegStr&nbsp;HKLM&nbsp;<span class="string">"${PRODUCT_DIR_REGKEY}"</span><span>&nbsp;</span><span class="string">""</span><span>&nbsp;</span><span class="string">"$INSTDIR\ef_first_1001chs.exe"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;WriteRegStr&nbsp;${PRODUCT_UNINST_ROOT_KEY}&nbsp;<span class="string">"${PRODUCT_UNINST_KEY}"</span><span>&nbsp;</span><span class="string">"DisplayName"</span><span>&nbsp;</span><span class="string">"$(^Name)"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;WriteRegStr&nbsp;${PRODUCT_UNINST_ROOT_KEY}&nbsp;<span class="string">"${PRODUCT_UNINST_KEY}"</span><span>&nbsp;</span><span class="string">"UninstallString"</span><span>&nbsp;</span><span class="string">"$INSTDIR\uninst.exe"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;WriteRegStr&nbsp;${PRODUCT_UNINST_ROOT_KEY}&nbsp;<span class="string">"${PRODUCT_UNINST_KEY}"</span><span>&nbsp;</span><span class="string">"DisplayIcon"</span><span>&nbsp;</span><span class="string">"$INSTDIR\ef_first_1001chs.exe"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;WriteRegStr&nbsp;${PRODUCT_UNINST_ROOT_KEY}&nbsp;<span class="string">"${PRODUCT_UNINST_KEY}"</span><span>&nbsp;</span><span class="string">"DisplayVersion"</span><span>&nbsp;</span><span class="string">"${PRODUCT_VERSION}"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;WriteRegStr&nbsp;${PRODUCT_UNINST_ROOT_KEY}&nbsp;<span class="string">"${PRODUCT_UNINST_KEY}"</span><span>&nbsp;</span><span class="string">"URLInfoAbout"</span><span>&nbsp;</span><span class="string">"${PRODUCT_WEB_SITE}"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;WriteRegStr&nbsp;${PRODUCT_UNINST_ROOT_KEY}&nbsp;<span class="string">"${PRODUCT_UNINST_KEY}"</span><span>&nbsp;</span><span class="string">"Publisher"</span><span>&nbsp;</span><span class="string">"${PRODUCT_PUBLISHER}"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;WriteRegStr&nbsp;HKLM&nbsp;<span class="string">"SOFTWARE\minori\ef_first"</span><span>&nbsp;</span><span class="string">"InstallKeyCode"</span><span>&nbsp;</span><span class="string">"07303ed1"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;WriteRegStr&nbsp;HKLM&nbsp;<span class="string">"SOFTWARE\minori\ef_first"</span><span>&nbsp;</span><span class="string">"SerialCode"</span><span>&nbsp;</span><span class="string">"11111-11111-11111-11111"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;WriteRegStr&nbsp;HKLM&nbsp;<span class="string">"SOFTWARE\minori\ef_first"</span><span>&nbsp;</span><span class="string">"InstallDir"</span><span>&nbsp;</span><span class="string">"$INSTDIR"</span><span>&nbsp;&nbsp;</span></span></li><li><span>SectionEnd&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;</span></li><li><span>Function&nbsp;un.onUninstSuccess&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;HideWindow&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;MessageBox&nbsp;MB_ICONINFORMATION|MB_OK&nbsp;<span class="string">"「ef&nbsp;-&nbsp;the&nbsp;first&nbsp;tale.&nbsp;繁體中文版」已成功地从你的計算機移除。"</span><span>&nbsp;&nbsp;</span></span></li><li><span>FunctionEnd&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;</span></li><li><span>Function&nbsp;un.onInit&nbsp;&nbsp;</span></li><li><span>!insertmacro&nbsp;MUI_UNGETLANGUAGE&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;MessageBox&nbsp;MB_ICONQUESTION|MB_YESNO|MB_DEFBUTTON2&nbsp;<span class="string">"你确实要完全移除「ef&nbsp;-&nbsp;the&nbsp;first&nbsp;tale.&nbsp;繁體中文版」，其及所有組件？"</span><span>&nbsp;IDYES&nbsp;+</span><span class="number">2</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;Abort&nbsp;&nbsp;</span></li><li><span>FunctionEnd&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;</span></li><li><span>Section&nbsp;Uninstall&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;Delete&nbsp;<span class="string">"$INSTDIR\uninst.exe"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;Delete&nbsp;<span class="string">"$INSTDIR\mov.paz"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;Delete&nbsp;<span class="string">"$INSTDIR\scr.paz"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;Delete&nbsp;<span class="string">"$INSTDIR\ef_first_1001chs.exe"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;;Delete&nbsp;<span class="string">"$DESKTOP\ef&nbsp;-&nbsp;the&nbsp;first&nbsp;tale.&nbsp;繁體中文版(for&nbsp;繁體作業系統).lnk"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;;Delete&nbsp;<span class="string">"$SMPROGRAMS\\ef&nbsp;-&nbsp;the&nbsp;first&nbsp;tale.&nbsp;繁體中文版(for&nbsp;繁體作業系統).lnk"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;Delete&nbsp;<span class="string">"$DESKTOP\ef&nbsp;-&nbsp;the&nbsp;first&nbsp;tale.&nbsp;繁體中文版(for&nbsp;简体操作系统).lnk"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;Delete&nbsp;<span class="string">"$SMPROGRAMS\\ef&nbsp;-&nbsp;the&nbsp;first&nbsp;tale.&nbsp;繁體中文版(for&nbsp;简体操作系统).lnk"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;RMDir&nbsp;<span class="string">"$SMPROGRAMS\\"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;RMDir&nbsp;<span class="string">"$INSTDIR"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;DeleteRegKey&nbsp;${PRODUCT_UNINST_ROOT_KEY}&nbsp;<span class="string">"${PRODUCT_UNINST_KEY}"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;DeleteRegKey&nbsp;HKLM&nbsp;<span class="string">"${PRODUCT_DIR_REGKEY}"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;SetAutoClose&nbsp;<span class="keyword">true</span><span>&nbsp;&nbsp;</span></span></li><li><span>SectionEnd&nbsp;&nbsp;</span></li></ol></div>
+<br>这个安装包的核心还是在于中间对我另外写的一个外部工具,"paz.exe"的调用.用paz.exe完成对原始归档的抽出和更新.上面的脚本里,extract的那段只是验证了几个关键点是否可行: 1.是否能实现目录转换 2.是否能实现目录中文件列表输出 3.是否能将原始paz归档的内容抽出.
+<br>本来这个paz.exe是会被用来抽出原本的bg.paz中的图片,然后把有更新的图片覆盖掉原本的那些,再将这些图片打包回到bg.paz中.不过我一直没收到那些改过的图,所以这命令也一直没写到安装包脚本里.再次叹气...
+
+  
+
+
+  <div id="bottoms" class="clearfix">
+    
+    <div id="share_weibo">分享到：
+      <a data-type="sina" href="javascript:;" title="分享到新浪微博" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1571225814-18e900b8666ce6f233d25ec02f95ee59.jpg"></a>
+      <a data-type="qq" href="javascript:;" title="分享到腾讯微博" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1571225814-72dd548719f0ace4d5f9bca64e1d7715.jpg"></a>
+    </div>
+  </div>
+
+  <div class="blog_nav">
+    <div class="pre_next">
+      <a href="https://www.iteye.com/blog/140689" class="next" title="RenPy今天更新到6.4.0" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">RenPy今天更新到6.4.0</a>
+      |
+      <a href="https://www.iteye.com/blog/140467" class="pre" title="KAGEX revision 3614更新" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">KAGEX revision 3614更新</a>
+    </div>
+  </div>
+  <div class="blog_bottom">
+    <ul>
+      <li>2007-11-14 13:09</li>
+      <li>浏览 4948</li>
+      <li><a href="#comments">评论(0)</a></li>
+      
+      
+            
+      <li class="last"><a href="https://www.iteye.com/wiki/blog/140472" target="_blank" class="more" referrerpolicy="no-referrer" rel="noopener noreferrer">查看更多</a></li>
+    </ul>    
+  </div>
+    
+  <div class="blog_comment">
+    <h5>评论</h5>
+    <a id="comments" name="comments" data-mx-warn="Empty URL"></a>
+    
+    
+    
+  </div>
+
+  <div class="blog_comment">
+    <h5>发表评论</h5>
+            <p style="text-align:center; margin-top:30px;margin-bottom:0px;"><a href="https://www.iteye.com/login" style="background-color: white; --darkreader-inline-bgcolor:#191a1b;" data-darkreader-inline-bgcolor="" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"> <img src="assets/1571225814-cf6d69dfbb92d2238c3e50c97eb9e7bf.png" style="vertical-align:middle; margin-right: 10px;"></a><a href="https://www.iteye.com/login" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">  您还没有登录,请您登录后再发表评论 </a></p>
+      </div>
+  </div>
+  <div>
+    <div style="" id="_wo8pirp9tb"></div>
+    <!-- 多条广告如下脚本只需引入一次 -->
+    
+  </div>
+</div>
+
+
+
+
+
+
+
+      </div></DIV></DIV>
+        
+      </div>
+    </body>
+  </html>

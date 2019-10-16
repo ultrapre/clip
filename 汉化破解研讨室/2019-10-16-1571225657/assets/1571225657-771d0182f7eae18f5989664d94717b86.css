@@ -1,0 +1,65 @@
+div.topic_page, a {
+    color: black;
+    text-decoration: underline;
+}
+
+a:hover {
+  color: white;
+}
+
+div.app_nav, div#page, .comment_title, tr.mouse_over {
+    background-color: #e1e1e1;
+}
+
+div#local, div#main, .blog_main,.blog-sidebar, .pagination a:hover, .pagination a:active {
+    background-color: white;
+    border-color: black;
+}
+
+div.nav, div#app_list div.decorate, a:hover, div#branding, input.button, input.submit, td.buttons a, .pagination span.current {
+    background-color: black;
+}
+
+.blog_bottom li {
+    border-right-color: black;
+    color: black;
+}
+
+table.admin thead, .pagination a, .pagination a:visited {
+    color: black;
+}
+
+div.app_nav, .pagination span.current {
+    border-color: black;
+}
+
+.blog_comment, div.picture_full {
+    border-top-color: black;
+}
+
+
+ 
+.white{ color:#FFF !important;}
+
+#blog_navbar{
+background-color: black;
+}
+
+.blog_navbar_for{
+	color: black;
+    background-color:#e1e1e1;
+	
+}
+#blog_navbar .blog_navbar_for a:visited{color: black ; background-color:#e1e1e1;}
+#blog_navbar .blog_navbar_for a:link{color: black ; background-color:#e1e1e1;}
+.blog_main_title{color: #000;}
+
+.about_bar{ background:#CCCCCC;color:black ;}
+
+.view a:hover{color:black;}
+.list_current{}
+.list_current a{ color:#FF6600; font-weight:bold;}
+.list_current a:hover{ color:#FFFFFF; background:#FF6600;}
+
+#my_resume .editing a.del:hover,
+#my_resume .editing a.add:hover{color: black;}

@@ -1,0 +1,354 @@
+
+  <!DOCTYPE html>
+  <html id="" class="">
+    <!-- OriginalSrc: https://www.iteye.com/blog/rednaxelafx-149964 -->
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <title>[脚本分析] 从Quartett!的脚本得到资源列表 - Script Ahead, Code Behind - ITeye博客</title>
+      
+<link rel="shortcut icon" href="assets/1571224690-1cd7c6fd0de855e9efac8dbe4a274b55.ico" type="image/x-icon" referrerpolicy="no-referrer">
+
+
+<link href="assets/1571224690-86dfe308f444f6e1aa00f6b28e8b2407.css" media="screen" rel="stylesheet" type="text/css" referrerpolicy="no-referrer">
+<link href="assets/1571224690-771d0182f7eae18f5989664d94717b86.css" media="screen" rel="stylesheet" type="text/css" referrerpolicy="no-referrer">
+<link href="assets/1571224690-396dd74c56d84598b8a22d8cb10eaf3a.css" media="screen" rel="stylesheet" type="text/css" referrerpolicy="no-referrer">
+<link rel="stylesheet" type="text/css" href="assets/1571224690-9aeb703993455cc093fff678a2ad3401.css" referrerpolicy="no-referrer">
+<link rel="stylesheet" type="text/css" href="assets/1571224690-05fb66a2c1140728ea8d74162a702c22.css" referrerpolicy="no-referrer">
+
+
+<style class="darkreader darkreader--fallback" media="screen"></style>
+<style class="darkreader darkreader--text" media="screen"></style>
+<style class="darkreader darkreader--invert" media="screen"></style>
+<style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}</style>
+<style class="darkreader darkreader--user-agent" media="screen">html {
+    background-color: #191a1b !important;
+}
+html, body, input, textarea, select, button {
+    background-color: #191a1b;
+}
+html, body, input, textarea, select, button {
+    border-color: #5a5956;
+    color: #f0ebe2;
+}
+a {
+    color: #4791e7;
+}
+table {
+    border-color: #4f4e4c;
+}
+::placeholder {
+    color: #bfb9ac;
+}
+::selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+::-moz-selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #565a0f !important;
+    color: #f0ebe2 !important;
+}
+::-webkit-scrollbar {
+    background-color: #1d1f1f;
+    color: #cbc5b9;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #2c2d2d;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #343636;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #404142;
+}
+::-webkit-scrollbar-corner {
+    background-color: #191a1b;
+}
+* {
+    scrollbar-color: #2c2d2d #1d1f1f;
+}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--override" media="screen">.jfk-bubble {
+    background-color: #000000 !important;
+}
+.vimvixen-hint {
+    background-color: #765500 !important;
+    border-color: #d5b22e !important;
+    color: #f9edcc !important;
+}</style>
+<style>
+ 
+.hide-main-content{
+    position: relative;
+}
+.hide-article-box {
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    bottom: -1px;
+    width: 100%;
+    padding-top: 160px;
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(255,255,255,0)),color-stop(70%, #fff));
+    background-image: linear-gradient(-180deg,rgba(255,255,255,0) 0%,#fff 70%);
+}
+.hide-article-box #btn-readmore{
+    color: #ca0c16;
+    border: 1px solid #ca0c16;
+    margin: 10px auto;
+    padding: 0 8px;
+    display: block;
+    font-size: 14px;
+    border-radius: 4px;
+    text-align: center;
+    background-color: transparent;
+    height: 34px;
+    width: 74px;
+    line-height: 32px;
+    min-width: 72px;
+    cursor: pointer;
+}
+.hide-article-box #btn-readmore:hover{
+    background: #ca0c16;
+    color:#fff;
+    text-decoration: none;
+}
+</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">.dp-c .vars { color: #d00; }</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">.dp-j .annotation { color: #646464; }.dp-j .number { color: #C00000; }</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">.dp-j .annotation { color: #646464; }.dp-j .number { color: #C00000; }</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">.dp-j .annotation { color: #646464; }.dp-j .number { color: #C00000; }</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">.dp-c .vars { color: #d00; }</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">.dp-j .annotation { color: #646464; }.dp-j .number { color: #C00000; }</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--cors" media="screen">body,dd,div,dl,dt,form,h1,h2,h3,h4,h5,h6,html,input,li,ol,p,select,td,textarea,th,ul{margin:0;padding:0}*{box-sizing:border-box}body,html{min-height:100%}h1,h2,h3,h4,h5,h6{font-weight:400}.recommend-right ul,ol{list-style:none}.recommend-right img{border:none;vertical-align:middle}.recommend-right a{text-decoration:none;color:#232323}.recommend-right table{border-collapse:collapse;table-layout:fixed}.recommend-right input,textarea{outline:0;border:none}.recommend-right textarea{resize:none;overflow:auto}.clearfix:after{content:" ";display:block;height:0;visibility:hidden;clear:both}.recommend{overflow:hidden}.newbox.recommend{overflow:hidden}svg.icon{width:1em;height:1em;vertical-align:-.15em;fill:currentColor;overflow:hidden;margin-right:4px}svg.icon.icon-level{width:3em;height:1em}.recommend-right{float:right;width:300px;margin-left:8px;background-color:#fff;-webkit-box-shadow:0 2px 4px 0 rgba(0,0,0,.05);box-shadow:0 2px 4px 0 rgba(0,0,0,.05)}.recommend-right .recommend-fixed-box{background-color:#fff}.recommend-right .right-item{padding:8px 0;overflow:hidden;word-break:break-all;margin-left:8px;margin-right:8px;border-bottom:1px solid #f5f5f5;box-sizing:border-box}.recommend-right .right-item:hover .content h5{color:#ca0c16}.recommend-right .right-item .content{margin-bottom:4px}.recommend-right .right-item .content img{width:58px;height:36px}.recommend-right .right-item .content h5{display:inline;font-size:14px;color:#5c5c5c;letter-spacing:0;line-height:20px;max-height:44px;overflow:hidden;font-weight:500;margin-right:4px;white-space:nowrap;text-overflow:ellipsis}.recommend-right .right-item .content .h5width{width:76%;margin-left:8px}.recommend-right .right-item .content span{margin-right:8px;font-size:12px;color:#999;letter-spacing:0;line-height:20px}.recommend-right .right-item .content .download_mark{border:1px solid #e3e3e3;padding:2px;margin-right:4px}.recommend-right .right-item .right-item-desc{font-size:12px;color:#999;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--cors" media="screen">.{font-family:""!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.fanyi:before{content:"\e661"}.shouji:before{content:"\e66f"}.yuedushu:before{content:"\e682"}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">@keyframes fadeInOpacity{0%{opacity:0}to{opacity:1}}:hover>*>.fbvd--wrapper{animation-name:fadeInOpacity;animation-duration:.3s;opacity:1}.fbvd--wrapper{position:absolute;top:10px;left:10px;opacity:0;text-align:center;margin:0;z-index:5}.fbvd--wrapper a{background: url("") no-repeat 3px 4.55px; background-color: #fff; display:inline-block;font:700 14px Helvetica,Arial,sans-serif;color:#4b4f56;text-decoration:none;vertical-align:middle;padding:0px 8px 0px;margin-right:8px;border-radius:2px; line-height: 22px; padding-left:19px; border: 1px solid #e7e7e7; background-size: 13px}.fbvd--wrapper a:last-child{margin-right:0}.fbvd--wrapper a:hover{text-decoration:none}.fbvd--wrapper a:focus{box-shadow:0 0 1px 2px rgba(88,144,255,.75),0 1px 1px rgba(0,0,0,.15);outline:none}.fbvd--wrapper b{font-size:13px;position:relative;top:1px;color:#3b5998;font-weight:400}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style>
+  .userinfo {display: none !important;}
+  .persion_article h3{
+    background: none !important;
+    border-bottom: none!important;
+    padding: 0!important;
+    margin-bottom: 0!important;
+    line-height: 1!important;
+  }
+  .persion_article .right_box{
+    margin-top: 0!important;
+  }
+  .persion_article .footer_box .feed_new_tit span{
+    padding-left: 0!important;
+  }
+</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+
+      <style class="mx-wc-style">
+        .mx-wc-main img {max-width: 100%;}
+        .mx-wc-main{
+          box-sizing: content-box;
+          background-color: rgb(35, 36, 36) !important;
+          margin: 0 auto;
+          margin-top: 20px;
+          max-width: 706px;
+        }
+        @media (min-width: 768px) {
+          .mx-wc-main { padding: 15px 15px 80px 15px }
+        }
+        @media (max-width: 767px) {
+          .mx-wc-main { padding: 15px 3px 80px 3px }
+        }
+  
+      </style>
+    </head>
+    <body style="background-color: #464646 !important; min-height: 100%; height: auto; position: static !important; overflow: auto !important; padding-bottom: 0px !important;" id="" class="">
+      <div class="mx-wc-main">
+        <DIV id="page" style="display: block !important;float: none !important;position: relative !important;top: 0 !important;left: 0 !important;border: 0px !important;width: 100% !important;min-width: 100% !important;max-width: 100% !important;height: auto !important;min-height: auto !important;max-height: 100% !important;margin: 0px !important;padding: 0px !important;"><DIV id="content" class="clearfix" style="display: block !important;float: none !important;position: relative !important;top: 0 !important;left: 0 !important;border: 0px !important;width: 100% !important;min-width: 100% !important;max-width: 100% !important;height: auto !important;min-height: auto !important;max-height: 100% !important;margin: 0px !important;padding: 0px !important;"><div id="main" class="mx-wc-selected-elem mx-wc-1571224690" style="display: block; float: none !important; position: relative !important; top: 0px !important; left: 0px !important; margin: 0px !important; flex: unset !important; width: 100% !important; max-width: 100% !important;">
+        
+
+
+
+        
+
+
+
+
+
+<div class="blog_main" style="display: block;">
+  
+  <div class="blog_title">
+    <h3>
+      [脚本分析] 从Quartett!的脚本得到资源列表
+      <em class="actions">      </em>
+    </h3>
+    <ul class="blog_categories"><strong>博客分类：</strong> <li><a href="https://www.iteye.com/category/24338" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Reverse Engineering</a></li> </ul>
+        <div class="news_tag"><a href="http://www.iteye.com/blogs/tag/%E8%84%9A%E6%9C%AC" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">脚本</a><a href="http://www.iteye.com/blogs/tag/%E6%B8%B8%E6%88%8F" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">游戏</a><a href="http://www.iteye.com/blogs/tag/%E9%9F%B3%E4%B9%90" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">音乐</a><a href="http://www.iteye.com/blogs/tag/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">设计模式</a><a href="http://www.iteye.com/blogs/tag/Blog" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Blog</a>&nbsp;</div>
+  </div>
+
+  <div id="blog_content" class="hide-main-content">
+    
+    听汉公的说明，看来LittleWitch所使用的FFD System在ver4之后解起来就有点麻烦。游戏里的资源归档文件里虽然还是有文件列表，但并没有保存原始的文件名而只是保存了文件名的MD5。这使得解出文件有困难，如果事先不知道想要解的文件的名字，即使把内容能解出来，其文件名也让人不知所云。
+<br>
+<br>但总有办法的。在System.dat里有些定义界面元素用的*.def文件。例如这样：
+<br>Music.def
+<br><div class="quote_title">引用</div><div class="quote_div"># サウンド定義ファイル
+<br># "条件式", "サウンドファイル名", "サムネイルファイル名", "見出し"
+<br>
+<br>"1"		,"m/BGM_01.ogg"	, "SAM/music_thumb.bmp", 	"Regret"
+<br>"1"		,"m/BGM_02.ogg"	, "SAM/music_thumb.bmp",	"夕影"
+<br>"1"		,"m/BGM_03.ogg"	, "SAM/music_thumb.bmp", 	"Reminiscene"
+<br>"1"		,"m/BGM_04.ogg"	, "SAM/music_thumb.bmp",	"Introduction"instrument
+<br>"1"		,"m/BGM_05.ogg"	, "SAM/music_thumb.bmp", 	"陽春"
+<br>"1"		,"m/BGM_06.ogg"	, "SAM/music_thumb.bmp", 	"沙友"
+<br>"1"		,"m/BGM_07.ogg"	, "SAM/music_thumb.bmp",	"透花 op02"
+<br>"1"		,"m/BGM_08.ogg"	, "SAM/music_thumb.bmp",	"透花"
+<br>"1"		,"m/BGM_09.ogg"	, "SAM/music_thumb.bmp",	"エマ op02"</div>
+<br>
+<br>这些列表能提供足够信息解出相当多的资源，例如说背景音乐、CG等。但有些重要的资源文件名却不在*.def里，像是我们关心的脚本文件。
+<br>
+<br><a href="http://rednaxelafx.iteye.com/blog/149811" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">前一篇</a>里介绍了如何将Quartett!的二进制脚本转变回到一般可读的形式，这里就稍微说明一下我是如何从解出来的脚本中得到一份脚本里引用过的文件列表。
+<br>
+<br>从前一篇的分析可以知道，token类型为0x83的是字符串token。在FFD脚本里，好几种内容都可能会是字符串类型：1、剧情文本；2、一般参数，如图像渐变的模式"Fade"，图像的形状"Rect"之类；3、资源文件路径；等等。不进行文法分析的话，没有办法准确判断这些字符串中到底哪些代表资源文件的路径。但有些偷懒的方式可以试试。
+<br>
+<br>我浏览了一下Quartett!的脚本，假定其引用的资源文件路径中必然有分隔符“.”。但是有一些剧情文本里也有“.”，为了尽量排除掉它们，我写了这样的判断方法：
+<br><div class="dp-highlighter" id=""><div class="bar"><div class="tools">C#代码 <embed wmode="transparent" src="/javascripts/syntaxhighlighter/clipboard_new.swf" width="14" height="15" flashvars="clipboard=static%20bool%20Match(%20string%20tokenString%20)%20%7B%0A%20%20%20%20return%20(%20tokenString.Contains(%20%22.%22%20)%20%26%26%20!tokenString.Contains(%20%22...%22%20)%0A%20%20%20%20%20%20%20%20%26%26%20!tokenString.Contains(%20%22%3E..%22%20)%20%26%26%20!tokenString.Contains(%20%22%2C..%22%20)%0A%20%20%20%20%20%20%20%20%26%26%20!tokenString.Contains(%20%22..%3C%22%20)%20%26%26%20!tokenString.Contains(%20%22%5Cu3000..%22%20)%0A%20%20%20%20%20%20%20%20)%20%7C%7C%20tokenString.Contains(%20%22%3CIMG%22%20)%3B%0A%7D" quality="high" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">&nbsp;<a href="javascript:void()" title="收藏这段代码" onclick="code_favorites_do_favorite(this);return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img class="star" src="assets/1571224690-bf632ec55a05f69a9359f73417402b26.png" alt="收藏代码"><img class="spinner" src="assets/1571224690-a42df3a5b569bdc98ca473a4a3adfeac.gif" style="display:none"></a></div></div><ol start="1" class="dp-c"><li><span><span class="keyword">static</span><span>&nbsp;</span><span class="keyword">bool</span><span>&nbsp;Match(&nbsp;</span><span class="keyword">string</span><span>&nbsp;tokenString&nbsp;)&nbsp;{&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span><span>&nbsp;(&nbsp;tokenString.Contains(&nbsp;</span><span class="string">"."</span><span>&nbsp;)&nbsp;&amp;&amp;&nbsp;!tokenString.Contains(&nbsp;</span><span class="string">"..."</span><span>&nbsp;)&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;&amp;&nbsp;!tokenString.Contains(&nbsp;<span class="string">"&gt;.."</span><span>&nbsp;)&nbsp;&amp;&amp;&nbsp;!tokenString.Contains(&nbsp;</span><span class="string">",.."</span><span>&nbsp;)&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;&amp;&nbsp;!tokenString.Contains(&nbsp;<span class="string">"..&lt;"</span><span>&nbsp;)&nbsp;&amp;&amp;&nbsp;!tokenString.Contains(&nbsp;</span><span class="string">"\u3000.."</span><span>&nbsp;)&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)&nbsp;||&nbsp;tokenString.Contains(&nbsp;<span class="string">"&lt;IMG"</span><span>&nbsp;);&nbsp;&nbsp;</span></span></li><li><span>}&nbsp;&nbsp;</span></li></ol></div>
+<br>将前一篇里提到的“反编译器”稍微修改了一下，让它收集所有脚本中满足上面的判断的token，并输出到一个单一的文本文件中。
+<br>
+<br>于是得到了类似这样的一个文件：
+<br>（片段）
+<br><div class="dp-highlighter" id=""><div class="bar"><div class="tools">Java代码 <embed wmode="transparent" src="/javascripts/syntaxhighlighter/clipboard_new.swf" width="14" height="15" flashvars="clipboard=..%2F%0AScript%2FBaseInstruction.txt%0ABack%2FLesson01.bmp%0A%3CFONT%20size%3D18%20face%3D'G'%3E%E3%83%95%E3%82%A3%E3%83%AB%E5%90%9B.%3CBR%3E%E3%81%BE%E3%81%A0%3CTYPE%20interval%3D500%20speed%3D500%20style%3D'Spring'%3E%EF%BD%9E%0AI%2F100221%2F0221-%2303b-02-2.bmp%0ABGM%2FB02_Juni.ogg%0AI%2F100221%2F0221-%2303b-02-3.bmp%0AI%2F100221%2F0221-%2303b-02-4.bmp%0AI%2F100221%2F0221-%2303b-03-1.bmp%0AFace%2FJuni11R.png%0A%3CTYPE%20interval%3D55%20style%3D'Fade'%3E%E3%81%AA%E3%81%A3%E3%80%80..%E3%81%AA%E3%82%93%E3%81%A6%3CBR%3E%E3%82%8F%E3%81%8B%E3%82%8A%E3%82%84%E3%81%99%E3%81%84%3CBR%3E%E3%82%B4%E3%83%9E%E3%82%AB%E3%82%B7%E3%82%92%EF%BD%A5%EF%BD%A5%EF%BD%A5%EF%BD%A5%EF%BD%A5%EF%BD%A5%20%3CTYPE%20style%3D'Fade'%3E%3CIMG%20src%3D'Em%2FAse18.png'%3E" quality="high" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">&nbsp;<a href="javascript:void()" title="收藏这段代码" onclick="code_favorites_do_favorite(this);return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img class="star" src="assets/1571224690-bf632ec55a05f69a9359f73417402b26.png" alt="收藏代码"><img class="spinner" src="assets/1571224690-a42df3a5b569bdc98ca473a4a3adfeac.gif" style="display:none"></a></div></div><ol start="1" class="dp-j"><li><span><span>../&nbsp;&nbsp;</span></span></li><li><span>Script/BaseInstruction.txt&nbsp;&nbsp;</span></li><li><span>Back/Lesson01.bmp&nbsp;&nbsp;</span></li><li><span>&lt;FONT&nbsp;size=<span class="number">18</span><span>&nbsp;face=</span><span class="string">'G'</span><span>&gt;フィル君.&lt;BR&gt;まだ&lt;TYPE&nbsp;interval=</span><span class="number">500</span><span>&nbsp;speed=</span><span class="number">500</span><span>&nbsp;style=</span><span class="string">'Spring'</span><span>&gt;～&nbsp;&nbsp;</span></span></li><li><span>I/<span class="number">100221</span><span>/</span><span class="number">0221</span><span>-#03b-</span><span class="number">02</span><span>-</span><span class="number">2</span><span>.bmp&nbsp;&nbsp;</span></span></li><li><span>BGM/B02_Juni.ogg&nbsp;&nbsp;</span></li><li><span>I/<span class="number">100221</span><span>/</span><span class="number">0221</span><span>-#03b-</span><span class="number">02</span><span>-</span><span class="number">3</span><span>.bmp&nbsp;&nbsp;</span></span></li><li><span>I/<span class="number">100221</span><span>/</span><span class="number">0221</span><span>-#03b-</span><span class="number">02</span><span>-</span><span class="number">4</span><span>.bmp&nbsp;&nbsp;</span></span></li><li><span>I/<span class="number">100221</span><span>/</span><span class="number">0221</span><span>-#03b-</span><span class="number">03</span><span>-</span><span class="number">1</span><span>.bmp&nbsp;&nbsp;</span></span></li><li><span>Face/Juni11R.png&nbsp;&nbsp;</span></li><li><span>&lt;TYPE&nbsp;interval=<span class="number">55</span><span>&nbsp;style=</span><span class="string">'Fade'</span><span>&gt;なっ　..なんて&lt;BR&gt;わかりやすい&lt;BR&gt;ゴマカシを･･････&nbsp;&lt;TYPE&nbsp;style=</span><span class="string">'Fade'</span><span>&gt;&lt;IMG&nbsp;src=</span><span class="string">'Em/Ase18.png'</span><span>&gt;&nbsp;&nbsp;</span></span></li></ol></div>
+<br>使用UltraEdit打开该文件，并使用文件-&gt;排序-&gt;高级排序/选项。选择“升序”和“删除重复”，并开始排序。对这里的例子排序的话，结果是：
+<br><div class="dp-highlighter" id=""><div class="bar"><div class="tools">Java代码 <embed wmode="transparent" src="/javascripts/syntaxhighlighter/clipboard_new.swf" width="14" height="15" flashvars="clipboard=%EF%BB%BF..%2F%0A%3CFONT%20size%3D18%20face%3D'G'%3E%E3%83%95%E3%82%A3%E3%83%AB%E5%90%9B.%3CBR%3E%E3%81%BE%E3%81%A0%3CTYPE%20interval%3D500%20speed%3D500%20style%3D'Spring'%3E%EF%BD%9E%0A%3CTYPE%20interval%3D55%20style%3D'Fade'%3E%E3%81%AA%E3%81%A3%E3%80%80..%E3%81%AA%E3%82%93%E3%81%A6%3CBR%3E%E3%82%8F%E3%81%8B%E3%82%8A%E3%82%84%E3%81%99%E3%81%84%3CBR%3E%E3%82%B4%E3%83%9E%E3%82%AB%E3%82%B7%E3%82%92%EF%BD%A5%EF%BD%A5%EF%BD%A5%EF%BD%A5%EF%BD%A5%EF%BD%A5%20%3CTYPE%20style%3D'Fade'%3E%3CIMG%20src%3D'Em%2FAse18.png'%3E%0ABGM%2FB02_Juni.ogg%0ABack%2FLesson01.bmp%0AFace%2FJuni11R.png%0AI%2F100221%2F0221-%2303b-02-2.bmp%0AI%2F100221%2F0221-%2303b-02-3.bmp%0AI%2F100221%2F0221-%2303b-02-4.bmp%0AI%2F100221%2F0221-%2303b-03-1.bmp%0AScript%2FBaseInstruction.txt" quality="high" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">&nbsp;<a href="javascript:void()" title="收藏这段代码" onclick="code_favorites_do_favorite(this);return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img class="star" src="assets/1571224690-bf632ec55a05f69a9359f73417402b26.png" alt="收藏代码"><img class="spinner" src="assets/1571224690-a42df3a5b569bdc98ca473a4a3adfeac.gif" style="display:none"></a></div></div><ol start="1" class="dp-j"><li><span><span>﻿../&nbsp;&nbsp;</span></span></li><li><span>&lt;FONT&nbsp;size=<span class="number">18</span><span>&nbsp;face=</span><span class="string">'G'</span><span>&gt;フィル君.&lt;BR&gt;まだ&lt;TYPE&nbsp;interval=</span><span class="number">500</span><span>&nbsp;speed=</span><span class="number">500</span><span>&nbsp;style=</span><span class="string">'Spring'</span><span>&gt;～&nbsp;&nbsp;</span></span></li><li><span>&lt;TYPE&nbsp;interval=<span class="number">55</span><span>&nbsp;style=</span><span class="string">'Fade'</span><span>&gt;なっ　..なんて&lt;BR&gt;わかりやすい&lt;BR&gt;ゴマカシを･･････&nbsp;&lt;TYPE&nbsp;style=</span><span class="string">'Fade'</span><span>&gt;&lt;IMG&nbsp;src=</span><span class="string">'Em/Ase18.png'</span><span>&gt;&nbsp;&nbsp;</span></span></li><li><span>BGM/B02_Juni.ogg&nbsp;&nbsp;</span></li><li><span>Back/Lesson01.bmp&nbsp;&nbsp;</span></li><li><span>Face/Juni11R.png&nbsp;&nbsp;</span></li><li><span>I/<span class="number">100221</span><span>/</span><span class="number">0221</span><span>-#03b-</span><span class="number">02</span><span>-</span><span class="number">2</span><span>.bmp&nbsp;&nbsp;</span></span></li><li><span>I/<span class="number">100221</span><span>/</span><span class="number">0221</span><span>-#03b-</span><span class="number">02</span><span>-</span><span class="number">3</span><span>.bmp&nbsp;&nbsp;</span></span></li><li><span>I/<span class="number">100221</span><span>/</span><span class="number">0221</span><span>-#03b-</span><span class="number">02</span><span>-</span><span class="number">4</span><span>.bmp&nbsp;&nbsp;</span></span></li><li><span>I/<span class="number">100221</span><span>/</span><span class="number">0221</span><span>-#03b-</span><span class="number">03</span><span>-</span><span class="number">1</span><span>.bmp&nbsp;&nbsp;</span></span></li><li><span>Script/BaseInstruction.txt&nbsp;&nbsp;</span></li></ol></div>
+<br>可以看到，如果有重复的资源文本，它们已经被UltraEdit清除掉了。而且有一些我们所不关心的内容也堆在了一起，可以方便的选取并删除。
+<br>这里我们对FONT和TYPE标签都没兴趣，但在实际删除它们之前，留意到有些行里有IMG标签，里面有我们感兴趣的src属性指向的是资源文件，得留下。这部分我是自己做了苦力，在UltraEdit里逐个搜索&lt;IMG src并将与其在同一行上的非文件路径内容都删除掉。再做一个排序，确认所有IMG标签都处理好了，然后把FONT、TYPE等标签，以及排在后面的纯剧情文本都删除掉。
+<br>
+<br>经过处理，提取出来的记录里就只剩下这样的内容了：
+<br><div class="dp-highlighter" id=""><div class="bar"><div class="tools">Java代码 <embed wmode="transparent" src="/javascripts/syntaxhighlighter/clipboard_new.swf" width="14" height="15" flashvars="clipboard=BGM%2FB01_Charlotte.ogg%0ABGM%2FB02_Juni.ogg%0ABGM%2FB03_Shuhua.ogg%0ABGM%2FB04_MyHome.ogg%0ABGM%2FB05_Serious.ogg%0ABGM%2FB07_AcademiaMusicae1.ogg%0ABGM%2FB08_AcademiaMusicae2.ogg%0ABGM%2FB09_AcademiaMusicae3.ogg%0ABGM%2FB10a_Bar1.ogg%0ABGM%2FB10b_Bar2.ogg%0ABGM%2FB11a_Title.ogg" quality="high" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">&nbsp;<a href="javascript:void()" title="收藏这段代码" onclick="code_favorites_do_favorite(this);return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img class="star" src="assets/1571224690-bf632ec55a05f69a9359f73417402b26.png" alt="收藏代码"><img class="spinner" src="assets/1571224690-a42df3a5b569bdc98ca473a4a3adfeac.gif" style="display:none"></a></div></div><ol start="1" class="dp-j"><li><span><span>BGM/B01_Charlotte.ogg&nbsp;&nbsp;</span></span></li><li><span>BGM/B02_Juni.ogg&nbsp;&nbsp;</span></li><li><span>BGM/B03_Shuhua.ogg&nbsp;&nbsp;</span></li><li><span>BGM/B04_MyHome.ogg&nbsp;&nbsp;</span></li><li><span>BGM/B05_Serious.ogg&nbsp;&nbsp;</span></li><li><span>BGM/B07_AcademiaMusicae1.ogg&nbsp;&nbsp;</span></li><li><span>BGM/B08_AcademiaMusicae2.ogg&nbsp;&nbsp;</span></li><li><span>BGM/B09_AcademiaMusicae3.ogg&nbsp;&nbsp;</span></li><li><span>BGM/B10a_Bar1.ogg&nbsp;&nbsp;</span></li><li><span>BGM/B10b_Bar2.ogg&nbsp;&nbsp;</span></li><li><span>BGM/B11a_Title.ogg&nbsp;&nbsp;</span></li></ol></div>
+<br>
+<br>我把这样的文件列表给了汉公，但之后又得到了新的要求：要把这个列表按归档文件拆分开来。
+<br>这是件简单的事。首先得知道路径上什么是归档的文件名，什么是归档里内容的文件名。通过分析，发现路径上最后一个/之后的是归档里内容的文件名，而在那之前的都是归档自身的路径。于是写了个简短的程序来对文件列表做二次处理：
+<br>split.cs
+<br><div class="dp-highlighter" id=""><div class="bar"><div class="tools">C#代码 <embed wmode="transparent" src="/javascripts/syntaxhighlighter/clipboard_new.swf" width="14" height="15" flashvars="clipboard=%2F%2F%20split.cs%2C%202007%2F12%2F21%0A%2F%2F%20by%20RednaxelaFX%0A%0A%2F*%0A%20*%20Copyright%20(c)%202007%20%E7%9D%80%E4%BD%9C%E6%9D%83%E7%94%B1RednaxelaFX%E6%89%80%E6%9C%89%E3%80%82%E7%9D%80%E4%BD%9C%E6%9D%83%E4%BA%BA%E4%BF%9D%E7%95%99%E4%B8%80%E5%88%87%E6%9D%83%E5%88%A9%E3%80%82%0A%20*%0A%20*%20%E8%BF%99%E4%BB%BD%E6%8E%88%E6%9D%83%E6%9D%A1%E6%AC%BE%EF%BC%8C%E5%9C%A8%E4%BD%BF%E7%94%A8%E8%80%85%E7%AC%A6%E5%90%88%E4%BB%A5%E4%B8%8B%E4%B8%89%E6%9D%A1%E4%BB%B6%E7%9A%84%E6%83%85%E5%BD%A2%E4%B8%8B%EF%BC%8C%E6%8E%88%E4%BA%88%E4%BD%BF%E7%94%A8%E8%80%85%E4%BD%BF%E7%94%A8%E5%8F%8A%E5%86%8D%E6%95%A3%E6%92%AD%E6%9C%AC%0A%20*%20%E8%BD%AF%E4%BB%B6%E5%8C%85%E8%A3%85%E5%8E%9F%E5%A7%8B%E7%A0%81%E5%8F%8A%E4%BA%8C%E8%BF%9B%E4%BD%8D%E5%8F%AF%E6%89%A7%E8%A1%8C%E5%BD%A2%E5%BC%8F%E7%9A%84%E6%9D%83%E5%88%A9%EF%BC%8C%E6%97%A0%E8%AE%BA%E6%AD%A4%E5%8C%85%E8%A3%85%E6%98%AF%E5%90%A6%E7%BB%8F%E6%94%B9%E4%BD%9C%E7%9A%86%E7%84%B6%EF%BC%9A%0A%20*%0A%20*%20*%20%E5%AF%B9%E4%BA%8E%E6%9C%AC%E8%BD%AF%E4%BB%B6%E6%BA%90%E4%BB%A3%E7%A0%81%E7%9A%84%E5%86%8D%E6%95%A3%E6%92%AD%EF%BC%8C%E5%BF%85%E9%A1%BB%E4%BF%9D%E7%95%99%E4%B8%8A%E8%BF%B0%E7%9A%84%E7%89%88%E6%9D%83%E5%AE%A3%E5%91%8A%E3%80%81%E6%AD%A4%E4%B8%89%E6%9D%A1%E4%BB%B6%E8%A1%A8%E5%88%97%EF%BC%8C%E4%BB%A5%0A%20*%20%20%20%E5%8F%8A%E4%B8%8B%E8%BF%B0%E7%9A%84%E5%85%8D%E8%B4%A3%E5%A3%B0%E6%98%8E%E3%80%82%0A%20*%20*%20%E5%AF%B9%E4%BA%8E%E6%9C%AC%E5%A5%97%E4%BB%B6%E4%BA%8C%E8%BF%9B%E4%BD%8D%E5%8F%AF%E6%89%A7%E8%A1%8C%E5%BD%A2%E5%BC%8F%E7%9A%84%E5%86%8D%E6%95%A3%E6%92%AD%EF%BC%8C%E5%BF%85%E9%A1%BB%E8%BF%9E%E5%B8%A6%E4%BB%A5%E6%96%87%E4%BB%B6%E4%BB%A5%E5%8F%8A%EF%BC%8F%E6%88%96%E8%80%85%E5%85%B6%E4%BB%96%E9%99%84%0A%20*%20%20%20%E4%BA%8E%E6%95%A3%E6%92%AD%E5%8C%85%E8%A3%85%E4%B8%AD%E7%9A%84%E5%AA%92%E4%BB%8B%E6%96%B9%E5%BC%8F%EF%BC%8C%E9%87%8D%E5%88%B6%E4%B8%8A%E8%BF%B0%E4%B9%8B%E7%89%88%E6%9D%83%E5%AE%A3%E5%91%8A%E3%80%81%E6%AD%A4%E4%B8%89%E6%9D%A1%E4%BB%B6%E8%A1%A8%E5%88%97%EF%BC%8C%E4%BB%A5%E5%8F%8A%E4%B8%8B%E8%BF%B0%0A%20*%20%20%20%E7%9A%84%E5%85%8D%E8%B4%A3%E5%A3%B0%E6%98%8E%E3%80%82%0A%20*%20*%20%E6%9C%AA%E8%8E%B7%E4%BA%8B%E5%89%8D%E5%8F%96%E5%BE%97%E4%B9%A6%E9%9D%A2%E8%AE%B8%E5%8F%AF%EF%BC%8C%E4%B8%8D%E5%BE%97%E4%BD%BF%E7%94%A8RednaxelaFX%E4%B9%8B%E5%90%8D%E7%A7%B0%EF%BC%8C%0A%20*%20%20%20%E6%9D%A5%E4%B8%BA%E6%9C%AC%E8%BD%AF%E4%BB%B6%E4%B9%8B%E8%A1%8D%E7%94%9F%E7%89%A9%E5%81%9A%E4%BB%BB%E4%BD%95%E8%A1%A8%E7%A4%BA%E6%94%AF%E6%8C%81%E3%80%81%E8%AE%A4%E5%8F%AF%E6%88%96%E6%8E%A8%E5%B9%BF%E3%80%81%E4%BF%83%E9%94%80%E4%B9%8B%E8%A1%8C%E4%B8%BA%E3%80%82%0A%20*%0A%20*%20%E5%85%8D%E8%B4%A3%E5%A3%B0%E6%98%8E%EF%BC%9A%E6%9C%AC%E8%BD%AF%E4%BB%B6%E6%98%AF%E7%94%B1RednaxelaFX%E4%BB%A5%E7%8E%B0%E7%8A%B6%EF%BC%88%22as%20is%22%EF%BC%89%E6%8F%90%E4%BE%9B%EF%BC%8C%0A%20*%20%E6%9C%AC%E8%BD%AF%E4%BB%B6%E5%8C%85%E8%A3%85%E4%B8%8D%E8%B4%9F%E4%BB%BB%E4%BD%95%E6%98%8E%E7%A4%BA%E6%88%96%E9%BB%98%E7%A4%BA%E4%B9%8B%E6%8B%85%E4%BF%9D%E8%B4%A3%E4%BB%BB%EF%BC%8C%E5%8C%85%E6%8B%AC%E4%BD%86%E4%B8%8D%E9%99%90%E4%BA%8E%E5%B0%B1%E9%80%82%E5%94%AE%E6%80%A7%E4%BB%A5%E5%8F%8A%E7%89%B9%E5%AE%9A%E7%9B%AE%0A%20*%20%E7%9A%84%E7%9A%84%E9%80%82%E7%94%A8%E6%80%A7%E4%B8%BA%E9%BB%98%E7%A4%BA%E6%80%A7%E6%8B%85%E4%BF%9D%E3%80%82RednaxelaFX%E6%97%A0%E8%AE%BA%E4%BB%BB%E4%BD%95%E6%9D%A1%E4%BB%B6%E3%80%81%0A%20*%20%E6%97%A0%E8%AE%BA%E6%88%90%E5%9B%A0%E6%88%96%E4%BB%BB%E4%BD%95%E8%B4%A3%E4%BB%BB%E4%B8%BB%E4%B9%89%E3%80%81%E6%97%A0%E8%AE%BA%E6%AD%A4%E8%B4%A3%E4%BB%BB%E4%B8%BA%E5%9B%A0%E5%90%88%E7%BA%A6%E5%85%B3%E7%B3%BB%E3%80%81%E6%97%A0%E8%BF%87%E5%A4%B1%E8%B4%A3%E4%BB%BB%E4%B8%BB%E4%B9%89%E6%88%96%E5%9B%A0%E9%9D%9E%E8%BF%9D%0A%20*%20%E7%BA%A6%E4%B9%8B%E4%BE%B5%E6%9D%83%EF%BC%88%E5%8C%85%E6%8B%AC%E8%BF%87%E5%A4%B1%E6%88%96%E5%85%B6%E4%BB%96%E5%8E%9F%E5%9B%A0%E7%AD%89%EF%BC%89%E8%80%8C%E8%B5%B7%EF%BC%8C%E5%AF%B9%E4%BA%8E%E4%BB%BB%E4%BD%95%E5%9B%A0%E4%BD%BF%E7%94%A8%E6%9C%AC%E8%BD%AF%E4%BB%B6%E5%8C%85%E8%A3%85%E6%89%80%E4%BA%A7%E7%94%9F%E7%9A%84%0A%20*%20%E4%BB%BB%E4%BD%95%E7%9B%B4%E6%8E%A5%E6%80%A7%E3%80%81%E9%97%B4%E6%8E%A5%E6%80%A7%E3%80%81%E5%81%B6%E5%8F%91%E6%80%A7%E3%80%81%E7%89%B9%E6%AE%8A%E6%80%A7%E3%80%81%E6%83%A9%E7%BD%9A%E6%80%A7%E6%88%96%E4%BB%BB%E4%BD%95%E7%BB%93%E6%9E%9C%E7%9A%84%E6%8D%9F%E5%AE%B3%EF%BC%88%E5%8C%85%E6%8B%AC%E4%BD%86%E4%B8%8D%E9%99%90%0A%20*%20%E4%BA%8E%E6%9B%BF%E4%BB%A3%E5%95%86%E5%93%81%E6%88%96%E5%8A%B3%E5%8A%A1%E4%B9%8B%E8%B4%AD%E7%94%A8%E3%80%81%E4%BD%BF%E7%94%A8%E6%8D%9F%E5%A4%B1%E3%80%81%E8%B5%84%E6%96%99%E6%8D%9F%E5%A4%B1%E3%80%81%E5%88%A9%E7%9B%8A%E6%8D%9F%E5%A4%B1%E3%80%81%E4%B8%9A%E5%8A%A1%E4%B8%AD%E6%96%AD%E7%AD%89%E7%AD%89%EF%BC%89%EF%BC%8C%0A%20*%20%E4%B8%8D%E8%B4%9F%E4%BB%BB%E4%BD%95%E8%B4%A3%E4%BB%BB%EF%BC%8C%E5%8D%B3%E5%9C%A8%E8%AF%A5%E7%A7%8D%E4%BD%BF%E7%94%A8%E5%B7%B2%E8%8E%B7%E4%BA%8B%E5%89%8D%E5%91%8A%E7%9F%A5%E5%8F%AF%E8%83%BD%E4%BC%9A%E9%80%A0%E6%88%90%E6%AD%A4%E7%B1%BB%E6%8D%9F%E5%AE%B3%E7%9A%84%E6%83%85%E5%BD%A2%E4%B8%8B%E4%BA%A6%E7%84%B6%E3%80%82%0A%20*%2F%0A%0Ausing%20System%3B%0Ausing%20System.Collections.Generic%3B%0Ausing%20System.IO%3B%0Ausing%20System.Text%3B%0A%0Asealed%20class%20Splitter%20%7B%0A%0A%09static%20void%20Main(%20string%5B%20%5D%20args%20)%20%7B%0A%20%20%20%20%20%20%20%20if%20(%20!File.Exists(%20args%5B%200%20%5D%20)%20)%20return%3B%0A%0A%20%20%20%20%20%20%20%20string%20infilelist%20%3D%20args%5B%200%20%5D%3B%0A%0A%09%09%2F%2F%20get%20the%20file%20names%20and%20sort%20them%20out%20by%20the%20archive%20they%20belong%20to%0A%09%09%2F%2F%20paths%20that%20doesn't%20seem%20to%20be%20in%20an%20archive%20are%20ignored%0A%09%09Dictionary%3Cstring%2C%20List%3Cstring%3E%3E%20dic%20%3D%20new%20Dictionary%3Cstring%2C%20List%3Cstring%3E%3E(%20)%3B%0A%09%09using%20(%20StreamReader%20reader%20%3D%20new%20StreamReader(%0A%09%09%09File.OpenRead(%20infilelist%20)%2C%20Encoding.GetEncoding(%20%22utf-16le%22%20)%2C%20true%20)%20)%20%7B%0A%09%09%09string%20line%20%3D%20null%3B%0A%09%09%09while%20(%20(%20line%20%3D%20reader.ReadLine(%20)%20)%20!%3D%20null%20)%20%7B%0A%09%09%09%09int%20seperateIndex%20%3D%20line.LastIndexOf(%20%22%2F%22%20)%3B%0A%09%09%09%09if%20(%20-1%20%3D%3D%20seperateIndex%20)%20continue%3B%0A%0A%09%09%09%09string%20path%20%3D%20line.Substring(%200%2C%20seperateIndex%20)%3B%0A%09%09%09%09string%20filename%20%3D%20line.Substring(%20seperateIndex%20%2B%201%20)%3B%0A%09%09%09%09if%20(%20dic.ContainsKey(%20path%20)%20)%20%7B%0A%09%09%09%09%09List%3Cstring%3E%20list%20%3D%20dic%5B%20path%20%5D%3B%0A%09%09%09%09%09list.Add(%20filename%20)%3B%0A%09%09%09%09%7D%20else%20%7B%0A%09%09%09%09%09List%3Cstring%3E%20list%20%3D%20new%20List%3Cstring%3E(%20)%3B%0A%09%09%09%09%09list.Add(%20filename%20)%3B%0A%09%09%09%09%09dic.Add(%20path%2C%20list%20)%3B%0A%09%09%09%09%7D%0A%09%09%09%7D%20%2F%2F%20while%0A%09%09%7D%20%2F%2F%20using%0A%0A%09%09%2F%2F%20write%20the%20file%20lists%20out%0A%09%09foreach%20(%20string%20path%20in%20dic.Keys%20)%20%7B%0A%09%09%09int%20seperateIndex%20%3D%20path.LastIndexOf(%20%22%2F%22%20)%3B%0A%09%09%09if%20(%20-1%20!%3D%20seperateIndex%20)%20%7B%0A%09%09%09%09Directory.CreateDirectory(%20path.Substring(%200%2C%20seperateIndex%20)%20)%3B%0A%09%09%09%7D%0A%09%09%09using%20(%20StreamWriter%20writer%20%3D%20new%20StreamWriter(%0A%09%09%09%09File.Create(%20path%20%2B%20%22.lst%22%20)%2C%20Encoding.GetEncoding(%20932%20)%20)%20)%20%7B%0A%09%09%09%09foreach(%20string%20filename%20in%20dic%5B%20path%20%5D%20)%20%7B%0A%09%09%09%09%09writer.WriteLine(%20filename%20)%3B%0A%09%09%09%09%7D%20%2F%2F%20foreach%0A%09%09%09%7D%20%2F%2F%20using%0A%09%09%7D%20%2F%2F%20foreach%0A%09%7D%0A%7D" quality="high" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">&nbsp;<a href="javascript:void()" title="收藏这段代码" onclick="code_favorites_do_favorite(this);return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img class="star" src="assets/1571224690-bf632ec55a05f69a9359f73417402b26.png" alt="收藏代码"><img class="spinner" src="assets/1571224690-a42df3a5b569bdc98ca473a4a3adfeac.gif" style="display:none"></a></div></div><ol start="1" class="dp-c"><li><span><span class="comment">//&nbsp;split.cs,&nbsp;2007/12/21</span><span>&nbsp;&nbsp;</span></span></li><li><span><span class="comment">//&nbsp;by&nbsp;RednaxelaFX</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;</span></li><li><span><span class="comment">/*</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;*&nbsp;Copyright&nbsp;(c)&nbsp;2007&nbsp;着作权由RednaxelaFX所有。着作权人保留一切权利。</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;*</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;*&nbsp;这份授权条款，在使用者符合以下三条件的情形下，授予使用者使用及再散播本</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;*&nbsp;软件包装原始码及二进位可执行形式的权利，无论此包装是否经改作皆然：</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;*</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;*&nbsp;*&nbsp;对于本软件源代码的再散播，必须保留上述的版权宣告、此三条件表列，以</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;*&nbsp;&nbsp;&nbsp;及下述的免责声明。</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;*&nbsp;*&nbsp;对于本套件二进位可执行形式的再散播，必须连带以文件以及／或者其他附</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;*&nbsp;&nbsp;&nbsp;于散播包装中的媒介方式，重制上述之版权宣告、此三条件表列，以及下述</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;*&nbsp;&nbsp;&nbsp;的免责声明。</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;*&nbsp;*&nbsp;未获事前取得书面许可，不得使用RednaxelaFX之名称，</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;*&nbsp;&nbsp;&nbsp;来为本软件之衍生物做任何表示支持、认可或推广、促销之行为。</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;*</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;*&nbsp;免责声明：本软件是由RednaxelaFX以现状（"as&nbsp;is"）提供，</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;*&nbsp;本软件包装不负任何明示或默示之担保责任，包括但不限于就适售性以及特定目</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;*&nbsp;的的适用性为默示性担保。RednaxelaFX无论任何条件、</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;*&nbsp;无论成因或任何责任主义、无论此责任为因合约关系、无过失责任主义或因非违</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;*&nbsp;约之侵权（包括过失或其他原因等）而起，对于任何因使用本软件包装所产生的</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;*&nbsp;任何直接性、间接性、偶发性、特殊性、惩罚性或任何结果的损害（包括但不限</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;*&nbsp;于替代商品或劳务之购用、使用损失、资料损失、利益损失、业务中断等等），</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;*&nbsp;不负任何责任，即在该种使用已获事前告知可能会造成此类损害的情形下亦然。</span>&nbsp;</span></li><li><span><span class="comment">&nbsp;*/</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;</span></li><li><span><span class="keyword">using</span><span>&nbsp;System;&nbsp;&nbsp;</span></span></li><li><span><span class="keyword">using</span><span>&nbsp;System.Collections.Generic;&nbsp;&nbsp;</span></span></li><li><span><span class="keyword">using</span><span>&nbsp;System.IO;&nbsp;&nbsp;</span></span></li><li><span><span class="keyword">using</span><span>&nbsp;System.Text;&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;</span></li><li><span><span class="keyword">sealed</span><span>&nbsp;</span><span class="keyword">class</span><span>&nbsp;Splitter&nbsp;{&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">static</span><span>&nbsp;</span><span class="keyword">void</span><span>&nbsp;Main(&nbsp;</span><span class="keyword">string</span><span>[&nbsp;]&nbsp;args&nbsp;)&nbsp;{&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span><span>&nbsp;(&nbsp;!File.Exists(&nbsp;args[&nbsp;0&nbsp;]&nbsp;)&nbsp;)&nbsp;</span><span class="keyword">return</span><span>;&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">string</span><span>&nbsp;infilelist&nbsp;=&nbsp;args[&nbsp;0&nbsp;];&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;get&nbsp;the&nbsp;file&nbsp;names&nbsp;and&nbsp;sort&nbsp;them&nbsp;out&nbsp;by&nbsp;the&nbsp;archive&nbsp;they&nbsp;belong&nbsp;to</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;paths&nbsp;that&nbsp;doesn't&nbsp;seem&nbsp;to&nbsp;be&nbsp;in&nbsp;an&nbsp;archive&nbsp;are&nbsp;ignored</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dictionary&lt;<span class="keyword">string</span><span>,&nbsp;List&lt;</span><span class="keyword">string</span><span>&gt;&gt;&nbsp;dic&nbsp;=&nbsp;</span><span class="keyword">new</span><span>&nbsp;Dictionary&lt;</span><span class="keyword">string</span><span>,&nbsp;List&lt;</span><span class="keyword">string</span><span>&gt;&gt;(&nbsp;);&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">using</span><span>&nbsp;(&nbsp;StreamReader&nbsp;reader&nbsp;=&nbsp;</span><span class="keyword">new</span><span>&nbsp;StreamReader(&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;File.OpenRead(&nbsp;infilelist&nbsp;),&nbsp;Encoding.GetEncoding(&nbsp;<span class="string">"utf-16le"</span><span>&nbsp;),&nbsp;</span><span class="keyword">true</span><span>&nbsp;)&nbsp;)&nbsp;{&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">string</span><span>&nbsp;line&nbsp;=&nbsp;</span><span class="keyword">null</span><span>;&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">while</span><span>&nbsp;(&nbsp;(&nbsp;line&nbsp;=&nbsp;reader.ReadLine(&nbsp;)&nbsp;)&nbsp;!=&nbsp;</span><span class="keyword">null</span><span>&nbsp;)&nbsp;{&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">int</span><span>&nbsp;seperateIndex&nbsp;=&nbsp;line.LastIndexOf(&nbsp;</span><span class="string">"/"</span><span>&nbsp;);&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span><span>&nbsp;(&nbsp;-1&nbsp;==&nbsp;seperateIndex&nbsp;)&nbsp;</span><span class="keyword">continue</span><span>;&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">string</span><span>&nbsp;path&nbsp;=&nbsp;line.Substring(&nbsp;0,&nbsp;seperateIndex&nbsp;);&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">string</span><span>&nbsp;filename&nbsp;=&nbsp;line.Substring(&nbsp;seperateIndex&nbsp;+&nbsp;1&nbsp;);&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span><span>&nbsp;(&nbsp;dic.ContainsKey(&nbsp;path&nbsp;)&nbsp;)&nbsp;{&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;List&lt;<span class="keyword">string</span><span>&gt;&nbsp;list&nbsp;=&nbsp;dic[&nbsp;path&nbsp;];&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list.Add(&nbsp;filename&nbsp;);&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<span class="keyword">else</span><span>&nbsp;{&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;List&lt;<span class="keyword">string</span><span>&gt;&nbsp;list&nbsp;=&nbsp;</span><span class="keyword">new</span><span>&nbsp;List&lt;</span><span class="keyword">string</span><span>&gt;(&nbsp;);&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;list.Add(&nbsp;filename&nbsp;);&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dic.Add(&nbsp;path,&nbsp;list&nbsp;);&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<span class="comment">//&nbsp;while</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<span class="comment">//&nbsp;using</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="comment">//&nbsp;write&nbsp;the&nbsp;file&nbsp;lists&nbsp;out</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">foreach</span><span>&nbsp;(&nbsp;</span><span class="keyword">string</span><span>&nbsp;path&nbsp;</span><span class="keyword">in</span><span>&nbsp;dic.Keys&nbsp;)&nbsp;{&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">int</span><span>&nbsp;seperateIndex&nbsp;=&nbsp;path.LastIndexOf(&nbsp;</span><span class="string">"/"</span><span>&nbsp;);&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">if</span><span>&nbsp;(&nbsp;-1&nbsp;!=&nbsp;seperateIndex&nbsp;)&nbsp;{&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Directory.CreateDirectory(&nbsp;path.Substring(&nbsp;0,&nbsp;seperateIndex&nbsp;)&nbsp;);&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">using</span><span>&nbsp;(&nbsp;StreamWriter&nbsp;writer&nbsp;=&nbsp;</span><span class="keyword">new</span><span>&nbsp;StreamWriter(&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;File.Create(&nbsp;path&nbsp;+&nbsp;<span class="string">".lst"</span><span>&nbsp;),&nbsp;Encoding.GetEncoding(&nbsp;932&nbsp;)&nbsp;)&nbsp;)&nbsp;{&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">foreach</span><span>(&nbsp;</span><span class="keyword">string</span><span>&nbsp;filename&nbsp;</span><span class="keyword">in</span><span>&nbsp;dic[&nbsp;path&nbsp;]&nbsp;)&nbsp;{&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;writer.WriteLine(&nbsp;filename&nbsp;);&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<span class="comment">//&nbsp;foreach</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<span class="comment">//&nbsp;using</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;<span class="comment">//&nbsp;foreach</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;}&nbsp;&nbsp;</span></li><li><span>}&nbsp;&nbsp;</span></li></ol></div>
+<br>
+<br>完事。来看看其中一个分离出来的lst文件长什么样：
+<br>Face.lst
+<br><div class="dp-highlighter" id=""><div class="bar"><div class="tools">Java代码 <embed wmode="transparent" src="/javascripts/syntaxhighlighter/clipboard_new.swf" width="14" height="15" flashvars="clipboard=Char01L.png%0AChar04L.png%0AChar04R.png%0AChar15L.png%0AGise12R.png%0AGise17R.png%0AHans03L.png%0AHans03R.png%0AJuni05R.png%0AJuni10L.png%0AJuni10R.png%0AJuni11R.png%0ALina02L.png%0ALina06L.png%0ALina06R.png%0AMay15L.png%0AMay16R.png%0APhil00L.png%0APhil00R.png%0APhil02L.png%0APhil02R.png%0APhil03L.png%0APhil03R.png%0APhil04L.png%0APhil04R.png%0APhil05R.png%0APhil07L.png%0APhil07R.png%0APhil12L.png%0AShuh00R.png%0AShuh11R.png%0ASign09R.png%0ASign10R.png" quality="high" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">&nbsp;<a href="javascript:void()" title="收藏这段代码" onclick="code_favorites_do_favorite(this);return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img class="star" src="assets/1571224690-bf632ec55a05f69a9359f73417402b26.png" alt="收藏代码"><img class="spinner" src="assets/1571224690-a42df3a5b569bdc98ca473a4a3adfeac.gif" style="display:none"></a></div></div><ol start="1" class="dp-j"><li><span><span>Char01L.png&nbsp;&nbsp;</span></span></li><li><span>Char04L.png&nbsp;&nbsp;</span></li><li><span>Char04R.png&nbsp;&nbsp;</span></li><li><span>Char15L.png&nbsp;&nbsp;</span></li><li><span>Gise12R.png&nbsp;&nbsp;</span></li><li><span>Gise17R.png&nbsp;&nbsp;</span></li><li><span>Hans03L.png&nbsp;&nbsp;</span></li><li><span>Hans03R.png&nbsp;&nbsp;</span></li><li><span>Juni05R.png&nbsp;&nbsp;</span></li><li><span>Juni10L.png&nbsp;&nbsp;</span></li><li><span>Juni10R.png&nbsp;&nbsp;</span></li><li><span>Juni11R.png&nbsp;&nbsp;</span></li><li><span>Lina02L.png&nbsp;&nbsp;</span></li><li><span>Lina06L.png&nbsp;&nbsp;</span></li><li><span>Lina06R.png&nbsp;&nbsp;</span></li><li><span>May15L.png&nbsp;&nbsp;</span></li><li><span>May16R.png&nbsp;&nbsp;</span></li><li><span>Phil00L.png&nbsp;&nbsp;</span></li><li><span>Phil00R.png&nbsp;&nbsp;</span></li><li><span>Phil02L.png&nbsp;&nbsp;</span></li><li><span>Phil02R.png&nbsp;&nbsp;</span></li><li><span>Phil03L.png&nbsp;&nbsp;</span></li><li><span>Phil03R.png&nbsp;&nbsp;</span></li><li><span>Phil04L.png&nbsp;&nbsp;</span></li><li><span>Phil04R.png&nbsp;&nbsp;</span></li><li><span>Phil05R.png&nbsp;&nbsp;</span></li><li><span>Phil07L.png&nbsp;&nbsp;</span></li><li><span>Phil07R.png&nbsp;&nbsp;</span></li><li><span>Phil12L.png&nbsp;&nbsp;</span></li><li><span>Shuh00R.png&nbsp;&nbsp;</span></li><li><span>Shuh11R.png&nbsp;&nbsp;</span></li><li><span>Sign09R.png&nbsp;&nbsp;</span></li><li><span>Sign10R.png&nbsp;&nbsp;</span></li></ol></div>
+<br>
+<br>嗯，基本上满足要求了。
+<br>
+<br>==========================================================
+<br>
+<br>进一步的精确分析确实需要写出parser来做。我现在肯定是没时间做，不过计划以后做的时候用ANTLR来完成。难点是要设计出一个精确的上下文无关文法。到时候再说吧～
+
+  
+
+
+  <div id="bottoms" class="clearfix">
+    
+    <div id="share_weibo">分享到：
+      <a data-type="sina" href="javascript:;" title="分享到新浪微博" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1571224690-18e900b8666ce6f233d25ec02f95ee59.jpg"></a>
+      <a data-type="qq" href="javascript:;" title="分享到腾讯微博" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1571224690-72dd548719f0ace4d5f9bca64e1d7715.jpg"></a>
+    </div>
+  </div>
+
+  <div class="blog_nav">
+    <div class="pre_next">
+      <a href="https://www.iteye.com/blog/150072" class="next" title="[无内容] XHTML里的script标记兼容性" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">[无内容] XHTML里的script标记兼容性</a>
+      |
+      <a href="https://www.iteye.com/blog/149811" class="pre" title="[脚本分析] Quartett!的二进制脚本分析" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">[脚本分析] Quartett!的二进制脚本分析</a>
+    </div>
+  </div>
+  <div class="blog_bottom">
+    <ul>
+      <li>2007-12-21 14:00</li>
+      <li>浏览 1354</li>
+      <li><a href="#comments">评论(0)</a></li>
+      
+      
+            
+      <li class="last"><a href="https://www.iteye.com/wiki/blog/149964" target="_blank" class="more" referrerpolicy="no-referrer" rel="noopener noreferrer">查看更多</a></li>
+    </ul>    
+  </div>
+    
+  <div class="blog_comment">
+    <h5>评论</h5>
+    <a id="comments" name="comments" data-mx-warn="Empty URL"></a>
+    
+    
+    
+  </div>
+
+  <div class="blog_comment">
+    <h5>发表评论</h5>
+            <p style="text-align:center; margin-top:30px;margin-bottom:0px;"><a href="https://www.iteye.com/login" style="background-color: white; --darkreader-inline-bgcolor:#191a1b;" data-darkreader-inline-bgcolor="" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"> <img src="assets/1571224690-cf6d69dfbb92d2238c3e50c97eb9e7bf.png" style="vertical-align:middle; margin-right: 10px;"></a><a href="https://www.iteye.com/login" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">  您还没有登录,请您登录后再发表评论 </a></p>
+      </div>
+  </div>
+  <div>
+    <div style="" id="_ocwhq9fvgcs"></div>
+    <!-- 多条广告如下脚本只需引入一次 -->
+    
+  </div>
+</div>
+
+
+
+
+
+
+
+      </div></DIV></DIV>
+        
+      </div>
+    </body>
+  </html>

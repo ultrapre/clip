@@ -1,0 +1,367 @@
+
+  <!DOCTYPE html>
+  <html id="" class="">
+    <!-- OriginalSrc: https://www.iteye.com/blog/rednaxelafx-183148 -->
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <title>《七色★星露》 汉化补丁1.0 NSIS脚本 - Script Ahead, Code Behind - ITeye博客</title>
+      
+<link rel="shortcut icon" href="assets/1571225856-1cd7c6fd0de855e9efac8dbe4a274b55.ico" type="image/x-icon" referrerpolicy="no-referrer">
+
+
+<link href="assets/1571225856-86dfe308f444f6e1aa00f6b28e8b2407.css" media="screen" rel="stylesheet" type="text/css" referrerpolicy="no-referrer">
+<link href="assets/1571225856-771d0182f7eae18f5989664d94717b86.css" media="screen" rel="stylesheet" type="text/css" referrerpolicy="no-referrer">
+<link href="assets/1571225856-396dd74c56d84598b8a22d8cb10eaf3a.css" media="screen" rel="stylesheet" type="text/css" referrerpolicy="no-referrer">
+<link rel="stylesheet" type="text/css" href="assets/1571225856-9aeb703993455cc093fff678a2ad3401.css" referrerpolicy="no-referrer">
+<link rel="stylesheet" type="text/css" href="assets/1571225856-05fb66a2c1140728ea8d74162a702c22.css" referrerpolicy="no-referrer">
+
+
+<style class="darkreader darkreader--fallback" media="screen"></style>
+<style class="darkreader darkreader--text" media="screen"></style>
+<style class="darkreader darkreader--invert" media="screen"></style>
+<style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}</style>
+<style class="darkreader darkreader--user-agent" media="screen">html {
+    background-color: #191a1b !important;
+}
+html, body, input, textarea, select, button {
+    background-color: #191a1b;
+}
+html, body, input, textarea, select, button {
+    border-color: #5a5956;
+    color: #f0ebe2;
+}
+a {
+    color: #4791e7;
+}
+table {
+    border-color: #4f4e4c;
+}
+::placeholder {
+    color: #bfb9ac;
+}
+::selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+::-moz-selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #565a0f !important;
+    color: #f0ebe2 !important;
+}
+::-webkit-scrollbar {
+    background-color: #1d1f1f;
+    color: #cbc5b9;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #2c2d2d;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #343636;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #404142;
+}
+::-webkit-scrollbar-corner {
+    background-color: #191a1b;
+}
+* {
+    scrollbar-color: #2c2d2d #1d1f1f;
+}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--override" media="screen">.jfk-bubble {
+    background-color: #000000 !important;
+}
+.vimvixen-hint {
+    background-color: #765500 !important;
+    border-color: #d5b22e !important;
+    color: #f9edcc !important;
+}</style>
+<style>
+ 
+.hide-main-content{
+    position: relative;
+}
+.hide-article-box {
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    bottom: -1px;
+    width: 100%;
+    padding-top: 160px;
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(255,255,255,0)),color-stop(70%, #fff));
+    background-image: linear-gradient(-180deg,rgba(255,255,255,0) 0%,#fff 70%);
+}
+.hide-article-box #btn-readmore{
+    color: #ca0c16;
+    border: 1px solid #ca0c16;
+    margin: 10px auto;
+    padding: 0 8px;
+    display: block;
+    font-size: 14px;
+    border-radius: 4px;
+    text-align: center;
+    background-color: transparent;
+    height: 34px;
+    width: 74px;
+    line-height: 32px;
+    min-width: 72px;
+    cursor: pointer;
+}
+.hide-article-box #btn-readmore:hover{
+    background: #ca0c16;
+    color:#fff;
+    text-decoration: none;
+}
+</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">.dp-j .annotation { color: #646464; }.dp-j .number { color: #C00000; }</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">.dp-j .annotation { color: #646464; }.dp-j .number { color: #C00000; }</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--cors" media="screen">body,dd,div,dl,dt,form,h1,h2,h3,h4,h5,h6,html,input,li,ol,p,select,td,textarea,th,ul{margin:0;padding:0}*{box-sizing:border-box}body,html{min-height:100%}h1,h2,h3,h4,h5,h6{font-weight:400}.recommend-right ul,ol{list-style:none}.recommend-right img{border:none;vertical-align:middle}.recommend-right a{text-decoration:none;color:#232323}.recommend-right table{border-collapse:collapse;table-layout:fixed}.recommend-right input,textarea{outline:0;border:none}.recommend-right textarea{resize:none;overflow:auto}.clearfix:after{content:" ";display:block;height:0;visibility:hidden;clear:both}.recommend{overflow:hidden}.newbox.recommend{overflow:hidden}svg.icon{width:1em;height:1em;vertical-align:-.15em;fill:currentColor;overflow:hidden;margin-right:4px}svg.icon.icon-level{width:3em;height:1em}.recommend-right{float:right;width:300px;margin-left:8px;background-color:#fff;-webkit-box-shadow:0 2px 4px 0 rgba(0,0,0,.05);box-shadow:0 2px 4px 0 rgba(0,0,0,.05)}.recommend-right .recommend-fixed-box{background-color:#fff}.recommend-right .right-item{padding:8px 0;overflow:hidden;word-break:break-all;margin-left:8px;margin-right:8px;border-bottom:1px solid #f5f5f5;box-sizing:border-box}.recommend-right .right-item:hover .content h5{color:#ca0c16}.recommend-right .right-item .content{margin-bottom:4px}.recommend-right .right-item .content img{width:58px;height:36px}.recommend-right .right-item .content h5{display:inline;font-size:14px;color:#5c5c5c;letter-spacing:0;line-height:20px;max-height:44px;overflow:hidden;font-weight:500;margin-right:4px;white-space:nowrap;text-overflow:ellipsis}.recommend-right .right-item .content .h5width{width:76%;margin-left:8px}.recommend-right .right-item .content span{margin-right:8px;font-size:12px;color:#999;letter-spacing:0;line-height:20px}.recommend-right .right-item .content .download_mark{border:1px solid #e3e3e3;padding:2px;margin-right:4px}.recommend-right .right-item .right-item-desc{font-size:12px;color:#999;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--cors" media="screen">.{font-family:""!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.fanyi:before{content:"\e661"}.shouji:before{content:"\e66f"}.yuedushu:before{content:"\e682"}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">@keyframes fadeInOpacity{0%{opacity:0}to{opacity:1}}:hover>*>.fbvd--wrapper{animation-name:fadeInOpacity;animation-duration:.3s;opacity:1}.fbvd--wrapper{position:absolute;top:10px;left:10px;opacity:0;text-align:center;margin:0;z-index:5}.fbvd--wrapper a{background: url("") no-repeat 3px 4.55px; background-color: #fff; display:inline-block;font:700 14px Helvetica,Arial,sans-serif;color:#4b4f56;text-decoration:none;vertical-align:middle;padding:0px 8px 0px;margin-right:8px;border-radius:2px; line-height: 22px; padding-left:19px; border: 1px solid #e7e7e7; background-size: 13px}.fbvd--wrapper a:last-child{margin-right:0}.fbvd--wrapper a:hover{text-decoration:none}.fbvd--wrapper a:focus{box-shadow:0 0 1px 2px rgba(88,144,255,.75),0 1px 1px rgba(0,0,0,.15);outline:none}.fbvd--wrapper b{font-size:13px;position:relative;top:1px;color:#3b5998;font-weight:400}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style>
+  .userinfo {display: none !important;}
+  .persion_article h3{
+    background: none !important;
+    border-bottom: none!important;
+    padding: 0!important;
+    margin-bottom: 0!important;
+    line-height: 1!important;
+  }
+  .persion_article .right_box{
+    margin-top: 0!important;
+  }
+  .persion_article .footer_box .feed_new_tit span{
+    padding-left: 0!important;
+  }
+</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+
+      <style class="mx-wc-style">
+        .mx-wc-main img {max-width: 100%;}
+        .mx-wc-main{
+          box-sizing: content-box;
+          background-color: rgb(35, 36, 36) !important;
+          margin: 0 auto;
+          margin-top: 20px;
+          max-width: 706px;
+        }
+        @media (min-width: 768px) {
+          .mx-wc-main { padding: 15px 15px 80px 15px }
+        }
+        @media (max-width: 767px) {
+          .mx-wc-main { padding: 15px 3px 80px 3px }
+        }
+  
+      </style>
+    </head>
+    <body style="background-color: #464646 !important; min-height: 100%; height: auto; position: static !important; overflow: auto !important; padding-bottom: 0px !important;" id="" class="">
+      <div class="mx-wc-main">
+        <DIV id="page" style="display: block !important;float: none !important;position: relative !important;top: 0 !important;left: 0 !important;border: 0px !important;width: 100% !important;min-width: 100% !important;max-width: 100% !important;height: auto !important;min-height: auto !important;max-height: 100% !important;margin: 0px !important;padding: 0px !important;"><DIV id="content" class="clearfix" style="display: block !important;float: none !important;position: relative !important;top: 0 !important;left: 0 !important;border: 0px !important;width: 100% !important;min-width: 100% !important;max-width: 100% !important;height: auto !important;min-height: auto !important;max-height: 100% !important;margin: 0px !important;padding: 0px !important;"><div id="main" class="mx-wc-selected-elem mx-wc-1571225856" style="display: block; float: none !important; position: relative !important; top: 0px !important; left: 0px !important; margin: 0px !important; flex: unset !important; width: 100% !important; max-width: 100% !important;">
+        
+
+
+
+        
+
+
+
+
+
+<div class="blog_main">
+  
+  <div class="blog_title">
+    <h3>
+      《七色★星露》 汉化补丁1.0 NSIS脚本
+      <em class="actions">      </em>
+    </h3>
+    <ul class="blog_categories"><strong>博客分类：</strong> <li><a href="https://www.iteye.com/category/22696" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">NSIS</a></li> </ul>
+        <div class="news_tag"><a href="http://www.iteye.com/blogs/tag/%E8%84%9A%E6%9C%AC" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">脚本</a><a href="http://www.iteye.com/blogs/tag/%E6%B8%B8%E6%88%8F" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">游戏</a><a href="http://www.iteye.com/blogs/tag/Microsoft" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Microsoft</a><a href="http://www.iteye.com/blogs/tag/Windows" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Windows</a><a href="http://www.iteye.com/blogs/tag/Blog" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Blog</a>&nbsp;</div>
+  </div>
+
+  <div id="blog_content" class="hide-main-content">
+    
+    这东西总算也结束了……我基本上可以安心离开汉化圈子了。
+<br>
+<br>嘛，这脚本跟前面的<a href="http://rednaxelafx.iteye.com/blog/140824" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">BMW</a>、<a href="http://rednaxelafx.iteye.com/blog/159566" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">夜明</a>的脚本基本上是一样的，所以也没什么太多可解释的。
+<br>而且继续偷懒……懒得做目录操作所以那graph目录我做成了一个自解压exe文件，复制到安装目录后自动展开。
+<br>
+<br>目录结构：
+<br><div class="dp-highlighter" id=""><div class="bar"><div class="tools">Java代码 <embed wmode="transparent" src="/javascripts/syntaxhighlighter/clipboard_new.swf" width="14" height="15" flashvars="clipboard=%E2%94%82%20%20nanadoro.nsi%0A%E2%94%82%20%20nana_patch_chs.ex%0A%E2%94%82%0A%E2%94%9C%E2%94%80files%0A%E2%94%82%20%20%20%20%20%20GAME.ini%0A%E2%94%82%20%20%20%20%20%20graph.exe%0A%E2%94%82%20%20%20%20%20%20nana_chs.exe%0A%E2%94%82%20%20%20%20%20%20scenario.dat%0A%E2%94%82%20%20%20%20%20%20textdata.dat%0A%E2%94%82%0A%E2%94%9C%E2%94%80icon%0A%E2%94%82%20%20%20%20%20%20nana.ico%0A%E2%94%82%0A%E2%94%9C%E2%94%80image%0A%E2%94%82%20%20%20%20%20%20side.bmp%0A%E2%94%82%20%20%20%20%20%20splash.bmp%0A%E2%94%82%0A%E2%94%9C%E2%94%80music%0A%E2%94%82%20%20%20%20%20%20BGM.mp3%0A%E2%94%82%0A%E2%94%94%E2%94%80txt%0A%20%20%20%20%20%20%20%20license.txt" quality="high" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">&nbsp;<a href="javascript:void()" title="收藏这段代码" onclick="code_favorites_do_favorite(this);return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img class="star" src="assets/1571225856-bf632ec55a05f69a9359f73417402b26.png" alt="收藏代码"><img class="spinner" src="assets/1571225856-a42df3a5b569bdc98ca473a4a3adfeac.gif" style="display:none"></a></div></div><ol start="1" class="dp-j"><li><span><span>│&nbsp;&nbsp;nanadoro.nsi&nbsp;&nbsp;</span></span></li><li><span>│&nbsp;&nbsp;nana_patch_chs.ex&nbsp;&nbsp;</span></li><li><span>│&nbsp;&nbsp;</span></li><li><span>├─files&nbsp;&nbsp;</span></li><li><span>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GAME.ini&nbsp;&nbsp;</span></li><li><span>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;graph.exe&nbsp;&nbsp;</span></li><li><span>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nana_chs.exe&nbsp;&nbsp;</span></li><li><span>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;scenario.dat&nbsp;&nbsp;</span></li><li><span>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textdata.dat&nbsp;&nbsp;</span></li><li><span>│&nbsp;&nbsp;</span></li><li><span>├─icon&nbsp;&nbsp;</span></li><li><span>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nana.ico&nbsp;&nbsp;</span></li><li><span>│&nbsp;&nbsp;</span></li><li><span>├─image&nbsp;&nbsp;</span></li><li><span>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;side.bmp&nbsp;&nbsp;</span></li><li><span>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;splash.bmp&nbsp;&nbsp;</span></li><li><span>│&nbsp;&nbsp;</span></li><li><span>├─music&nbsp;&nbsp;</span></li><li><span>│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BGM.mp3&nbsp;&nbsp;</span></li><li><span>│&nbsp;&nbsp;</span></li><li><span>└─txt&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;license.txt&nbsp;&nbsp;</span></li></ol></div>
+<br>
+<br>NSIS脚本代码：
+<br><div class="dp-highlighter" id=""><div class="bar"><div class="tools">Java代码 <embed wmode="transparent" src="/javascripts/syntaxhighlighter/clipboard_new.swf" width="14" height="15" flashvars="clipboard=SetCompressor%20lzma%0A%0A%3B%20HM%20NIS%20Edit%20Wizard%20helper%20defines%0A!define%20PRODUCT_NAME%20%22%E4%B8%83%E8%89%B2%E2%98%85%E6%98%9F%E9%9C%B2%20%E6%B1%89%E5%8C%96%E8%A1%A5%E4%B8%81%22%0A!define%20PRODUCT_VERSION%20%221.0%22%0A!define%20PRODUCT_PUBLISHER%20%22%E5%A5%A5%E5%85%8B%E6%B1%89%E5%8C%96%E7%BB%84%22%0A!define%20PRODUCT_DIR_REGKEY%20%22Software%5CMicrosoft%5CWindows%5CCurrentVersion%5CApp%20Paths%5Cyoake_chs%22%0A!define%20PRODUCT_UNINST_KEY%20%22Software%5CMicrosoft%5CWindows%5CCurrentVersion%5CUninstall%5C%24%7BPRODUCT_NAME%7D%22%0A!define%20PRODUCT_UNINST_ROOT_KEY%20%22HKLM%22%0A!define%20PRODUCT_STARTMENU_REGVAL%20%22NSIS%3AStartMenuDir%22%0A%0A%3B%20MUI%201.67%20compatible%20------%0A!include%20%22MUI.nsh%22%0A!define%20MUI_WELCOMEFINISHPAGE_BITMAP%20%22.%5Cimage%5Cside.bmp%22%0A!include%20%22FileFunc.nsh%22%0A!include%20%22nsisbass.nsh%22%0A!include%20%22nsisbassmacros.nsh%22%0A!insertmacro%20DirState%0A%0A%3B%20MUI%20Settings%0A!define%20MUI_ABORTWARNING%0A!define%20MUI_ICON%20%22.%5Cicon%5Cnana.ico%22%0A!define%20MUI_UNICON%20%22.%5Cicon%5Cnana.ico%22%0A%0A%3B%20Language%20Selection%20Dialog%20Settings%0A!define%20MUI_LANGDLL_REGISTRY_ROOT%20%22%24%7BPRODUCT_UNINST_ROOT_KEY%7D%22%0A!define%20MUI_LANGDLL_REGISTRY_KEY%20%22%24%7BPRODUCT_UNINST_KEY%7D%22%0A!define%20MUI_LANGDLL_REGISTRY_VALUENAME%20%22NSIS%3ALanguage%22%0A%0A%3B%20Welcome%20page%0A!insertmacro%20MUI_PAGE_WELCOME%0A%3B%20License%20page%0A!define%20MUI_LICENSEPAGE_CHECKBOX%0A!insertmacro%20MUI_PAGE_LICENSE%20%22.%5Ctxt%5Clicense.txt%22%0A%3B%20Directory%20page%0A!insertmacro%20MUI_PAGE_DIRECTORY%0A%3B%20Start%20menu%20page%0Avar%20%2FGLOBAL%20ICONS_GROUP%0A!define%20MUI_STARTMENUPAGE_DEFAULTFOLDER%20%22%E5%A5%A5%E5%85%8B%E6%B1%89%E5%8C%96%E7%BB%84%22%0A!define%20MUI_STARTMENUPAGE_REGISTRY_ROOT%20%22%24%7BPRODUCT_UNINST_ROOT_KEY%7D%22%0A!define%20MUI_STARTMENUPAGE_REGISTRY_KEY%20%22%24%7BPRODUCT_UNINST_KEY%7D%22%0A!define%20MUI_STARTMENUPAGE_REGISTRY_VALUENAME%20%22%24%7BPRODUCT_STARTMENU_REGVAL%7D%22%0A!insertmacro%20MUI_PAGE_STARTMENU%20Application%20%24ICONS_GROUP%0A%3B%20Instfiles%20page%0A!insertmacro%20MUI_PAGE_INSTFILES%0A%3B%20Finish%20page%0A!define%20MUI_FINISHPAGE_RUN%20%22%24INSTDIR%5Cnana_chs.exe%22%0A!insertmacro%20MUI_PAGE_FINISH%0A%0A%3B%20Uninstaller%20pages%0A!insertmacro%20MUI_UNPAGE_INSTFILES%0A%0A%3B%20Language%20files%0A!insertmacro%20MUI_LANGUAGE%20%22SimpChinese%22%0AVIProductVersion%20%221.0.0.0%22%0AVIAddVersionKey%20%2FLANG%3D2052%20%22FileDescription%22%20%22%24%7BPRODUCT_NAME%7D%22%0AVIAddVersionKey%20%2FLANG%3D2052%20%22ProductName%22%20%22%24%7BPRODUCT_NAME%7D%22%0AVIAddVersionKey%20%2FLANG%3D2052%20%22LegalCopyright%22%20%22%22%0AVIAddVersionKey%20%2FLANG%3D2052%20%22CompanyName%22%20%22%24%7BPRODUCT_PUBLISHER%7D%22%0AVIAddVersionKey%20%2FLANG%3D2052%20%22FileVersion%22%20%22%24%7BPRODUCT_VERSION%7D%22%0A%0AReserveFile%20%22.%5Cimage%5Csplash.bmp%22%0AReserveFile%20%22%24%7BNSISDIR%7D%5CPlugins%5Csystem.dll%22%0AReserveFile%20%22%24%7BNSISDIR%7D%5CContrib%5Cnsisbass%5Cbass.dll%22%0AReserveFile%20%22.%5Cmusic%5Cbgm.mp3%22%0A%0A%3B%20MUI%20end%20------%0A%0AName%20%22%24%7BPRODUCT_NAME%7D%20%24%7BPRODUCT_VERSION%7D%22%0AOutFile%20%22nana_patch_chs.exe%22%0AInstallDir%20%22%24EXEDIR%22%0AInstallDirRegKey%20HKLM%20%22%24%7BPRODUCT_DIR_REGKEY%7D%22%20%22%22%0AShowInstDetails%20show%0AShowUnInstDetails%20show%0A%0AFunction%20.onInit%0A%20%20InitPluginsDir%0A%20%20File%20%22%2Foname%3D%24PLUGINSDIR%5CSplash_Splash.bmp%22%20%22.%5Cimage%5Csplash.bmp%22%0A%20%20%3B%20%E4%BD%BF%E7%94%A8%E9%97%AA%E5%B1%8F%E6%8F%92%E4%BB%B6%E6%98%BE%E7%A4%BA%E9%97%AA%E5%B1%8F%0A%20%20advsplash%3A%3Ashow%201500%20600%20400%20-1%20%22%24PLUGINSDIR%5CSplash_Splash%22%0A%20%20Pop%20%240%20%3B%20%240%20%E8%BF%94%E5%9B%9E%20'1'%20%E8%A1%A8%E7%A4%BA%E7%94%A8%E6%88%B7%E6%8F%90%E5%89%8D%E5%85%B3%E9%97%AD%E9%97%AA%E5%B1%8F%2C%20%E8%BF%94%E5%9B%9E%20'0'%20%E8%A1%A8%E7%A4%BA%E9%97%AA%E5%B1%8F%E6%AD%A3%E5%B8%B8%E7%BB%93%E6%9D%9F%2C%20%E8%BF%94%E5%9B%9E%20'-1'%20%E8%A1%A8%E7%A4%BA%E9%97%AA%E5%B1%8F%E6%98%BE%E7%A4%BA%E5%87%BA%E9%94%99%0A%20%20%3B!insertmacro%20MUI_LANGDLL_DISPLAY%0A%20%20StrCpy%20%24INSTDIR%20%22C%3A%5C%E3%83%A6%E3%83%8B%E3%82%BE%E3%83%B3%E3%82%B7%E3%83%95%E3%83%88%5C%E3%81%AA%E3%81%AA%E3%81%A4%E3%81%84%E3%82%8D%E2%98%85%E3%83%89%E3%83%AD%E3%83%83%E3%83%97%E3%82%B9%22%0A%20%20%3B%20Insert%20the%20NSISBASS_INIT%20macro%0A%20%20!insertmacro%20NSISBASS_INIT%0A%20%20%3B%20We%20can%20extract%20a%20song%20file%20as%20well%20(so%20you%20got%20something%20to%20play).%0A%20%20File%20%22%2Foname%3D%24PLUGINSDIR%5Ctempsong.mp3%22%20%22.%5Cmusic%5CBGM.mp3%22%0A%20%20!insertmacro%20NSISBASS_PLAY%20%22%24PLUGINSDIR%5Ctempsong.mp3%22%0AFunctionEnd%0A%0AFunction%20.onVerifyInstDir%0A%20%20IfFileExists%20%22%24INSTDIR%5Cnana.exe%22%20PathGood%0A%20%20%20%20Abort%20%3B%20if%20%24INSTDIR%20is%20not%20a%20NanaDoro%20directory%2C%20don't%20let%20us%20install%20there%0A%20%20PathGood%3A%0AFunctionEnd%0A%0A%0ASection%20%22MainSection%22%20SEC01%0A%3B--------------------------copy----------------------------%0A%20%20SetOutPath%20%22%24INSTDIR%22%0A%20%20DetailPrint%20%22%E6%AD%A3%E5%9C%A8%E5%A4%8D%E5%88%B6%E6%96%87%E4%BB%B6...%22%0A%20%20SetOverwrite%20ifnewer%0A%20%20File%20%22.%5Cfiles%5Cnana_chs.exe%22%0A%20%20File%20%22.%5Cfiles%5Cscenario.dat%22%0A%20%20File%20%22.%5Cfiles%5Ctextdata.dat%22%0A%20%20File%20%22.%5Cfiles%5CGAME.ini%22%0A%20%20File%20%22.%5Cfiles%5Cgraph.exe%22%0A%20%20ExecWait%20'%22%24INSTDIR%5Cgraph.exe%22'%0A%20%20Delete%20%22%24INSTDIR%5Cgraph.exe%22%0ASectionEnd%0A%0ASection%20%22Add%20Start%20Menu%20Shortcuts%22%20SEC02%0A%20%20%3B%20shortcuts%0A%20%20!insertmacro%20MUI_STARTMENU_WRITE_BEGIN%20Application%0A%20%20SetOutPath%20%22%24INSTDIR%22%0A%20%20CreateDirectory%20%22%24SMPROGRAMS%5C%24ICONS_GROUP%22%0A%20%20CreateShortCut%20%22%24SMPROGRAMS%5C%24ICONS_GROUP%5C%E4%B8%83%E8%89%B2%E2%98%85%E6%98%9F%E9%9C%B2%20%E6%B1%89%E5%8C%96%E7%89%88.lnk%22%20%22%24INSTDIR%5Cnana_chs.exe%22%0A%20%20CreateShortCut%20%22%24DESKTOP%5C%E4%B8%83%E8%89%B2%E2%98%85%E6%98%9F%E9%9C%B2%20%E6%B1%89%E5%8C%96%E7%89%88.lnk%22%20%22%24INSTDIR%5Cnana_chs.exe%22%0A%20%20!insertmacro%20MUI_STARTMENU_WRITE_END%0ASectionEnd%0A%0ASection%20-AdditionalIcons%0A%20%20!insertmacro%20MUI_STARTMENU_WRITE_BEGIN%20Application%0A%20%20CreateShortCut%20%22%24SMPROGRAMS%5C%24ICONS_GROUP%5C%E5%8D%B8%E8%BD%BD%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%E8%A1%A5%E4%B8%81.lnk%22%20%22%24INSTDIR%5Cuninst.exe%22%0A%20%20!insertmacro%20MUI_STARTMENU_WRITE_END%0ASectionEnd%0A%0ASection%20-Post%0A%20%20WriteUninstaller%20%22%24INSTDIR%5Cuninst.exe%22%0A%20%20WriteRegStr%20HKLM%20%22%24%7BPRODUCT_DIR_REGKEY%7D%22%20%22%22%20%22%24INSTDIR%5Cnana_chs.exe%22%0A%20%20WriteRegStr%20%24%7BPRODUCT_UNINST_ROOT_KEY%7D%20%22%24%7BPRODUCT_UNINST_KEY%7D%22%20%22DisplayName%22%20%22%24(%5EName)%22%0A%20%20WriteRegStr%20%24%7BPRODUCT_UNINST_ROOT_KEY%7D%20%22%24%7BPRODUCT_UNINST_KEY%7D%22%20%22UninstallString%22%20%22%24INSTDIR%5Cuninst.exe%22%0A%20%20WriteRegStr%20%24%7BPRODUCT_UNINST_ROOT_KEY%7D%20%22%24%7BPRODUCT_UNINST_KEY%7D%22%20%22DisplayIcon%22%20%22%24INSTDIR%5Cnana_chs.exe%22%0A%20%20WriteRegStr%20%24%7BPRODUCT_UNINST_ROOT_KEY%7D%20%22%24%7BPRODUCT_UNINST_KEY%7D%22%20%22DisplayVersion%22%20%22%24%7BPRODUCT_VERSION%7D%22%0A%20%20WriteRegStr%20%24%7BPRODUCT_UNINST_ROOT_KEY%7D%20%22%24%7BPRODUCT_UNINST_KEY%7D%22%20%22Publisher%22%20%22%24%7BPRODUCT_PUBLISHER%7D%22%0ASectionEnd%0A%0A%0AFunction%20un.onUninstSuccess%0A%20%20HideWindow%0A%20%20MessageBox%20MB_ICONINFORMATION%7CMB_OK%20%22%E3%80%8C%E4%B8%83%E8%89%B2%E2%98%85%E6%98%9F%E9%9C%B2%20%E6%B1%89%E5%8C%96%E8%A1%A5%E4%B8%81%E3%80%8D%E5%B7%B2%E6%88%90%E5%8A%9F%E5%9C%B0%E4%BB%8E%E4%BD%A0%E7%9A%84%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%88%A0%E9%99%A4%E3%80%82%22%0AFunctionEnd%0A%0AFunction%20un.onInit%0A!insertmacro%20MUI_UNGETLANGUAGE%0A%20%20MessageBox%20MB_ICONQUESTION%7CMB_YESNO%7CMB_DEFBUTTON2%20%22%E4%BD%A0%E7%A1%AE%E5%AE%9E%E8%A6%81%E5%AE%8C%E5%85%A8%E5%88%A0%E9%99%A4%E3%80%8C%E4%B8%83%E8%89%B2%E2%98%85%E6%98%9F%E9%9C%B2%20%E6%B1%89%E5%8C%96%E8%A1%A5%E4%B8%81%E3%80%8D%EF%BC%8C%E5%85%B6%E5%8F%8A%E6%89%80%E6%9C%89%E7%B5%84%E4%BB%B6%EF%BC%9F%22%20IDYES%20%2B2%0A%20%20Abort%0AFunctionEnd%0A%0ASection%20Uninstall%0A%20%20!insertmacro%20MUI_STARTMENU_GETFOLDER%20%22Application%22%20%24ICONS_GROUP%0A%3B----------------------delete_files------------------------%0A%20%20Delete%20%22%24INSTDIR%5Cuninst.exe%22%0A%20%20Delete%20%22%24INSTDIR%5CGAME.ini%22%0A%20%20Delete%20%22%24INSTDIR%5Ctextdata.dat%22%0A%20%20Delete%20%22%24INSTDIR%5Cscenario.dat%22%0A%20%20Delete%20%22%24INSTDIR%5Cnana_chs.exe%22%0A%20%20RMDir%20%2Fr%20%22%24INSTDIR%5Cgraph%22%0A%3B--------------------delete_shortcuts----------------------%0A%20%20Delete%20%22%24SMPROGRAMS%5C%24ICONS_GROUP%5C%E4%B8%83%E8%89%B2%E2%98%85%E6%98%9F%E9%9C%B2%20%E6%B1%89%E5%8C%96%E7%89%88.lnk%22%0A%20%20Delete%20%22%24SMPROGRAMS%5C%24ICONS_GROUP%5C%E5%8D%B8%E8%BD%BD%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87%E8%A1%A5%E4%B8%81.lnk%22%0A%20%20Delete%20%22%24DESKTOP%5C%E4%B8%83%E8%89%B2%E2%98%85%E6%98%9F%E9%9C%B2%20%E6%B1%89%E5%8C%96%E7%89%88.lnk%22%0A%20%20RMDir%20%22%24SMPROGRAMS%5C%24ICONS_GROUP%22%0A%3B-----------------delete_uninst_reg_keys-------------------%0A%20%20DeleteRegKey%20%24%7BPRODUCT_UNINST_ROOT_KEY%7D%20%22%24%7BPRODUCT_UNINST_KEY%7D%22%0A%20%20DeleteRegKey%20HKLM%20%22%24%7BPRODUCT_DIR_REGKEY%7D%22%0A%3B--------------------close_after_unist---------------------%0A%20%20SetAutoClose%20true%0ASectionEnd" quality="high" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">&nbsp;<a href="javascript:void()" title="收藏这段代码" onclick="code_favorites_do_favorite(this);return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img class="star" src="assets/1571225856-bf632ec55a05f69a9359f73417402b26.png" alt="收藏代码"><img class="spinner" src="assets/1571225856-a42df3a5b569bdc98ca473a4a3adfeac.gif" style="display:none"></a></div></div><ol start="1" class="dp-j"><li><span><span>SetCompressor&nbsp;lzma&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;</span></li><li><span>;&nbsp;HM&nbsp;NIS&nbsp;Edit&nbsp;Wizard&nbsp;helper&nbsp;defines&nbsp;&nbsp;</span></li><li><span>!define&nbsp;PRODUCT_NAME&nbsp;<span class="string">"七色★星露&nbsp;汉化补丁"</span><span>&nbsp;&nbsp;</span></span></li><li><span>!define&nbsp;PRODUCT_VERSION&nbsp;<span class="string">"1.0"</span><span>&nbsp;&nbsp;</span></span></li><li><span>!define&nbsp;PRODUCT_PUBLISHER&nbsp;<span class="string">"奥克汉化组"</span><span>&nbsp;&nbsp;</span></span></li><li><span>!define&nbsp;PRODUCT_DIR_REGKEY&nbsp;<span class="string">"Software\Microsoft\Windows\CurrentVersion\App&nbsp;Paths\yoake_chs"</span><span>&nbsp;&nbsp;</span></span></li><li><span>!define&nbsp;PRODUCT_UNINST_KEY&nbsp;<span class="string">"Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}"</span><span>&nbsp;&nbsp;</span></span></li><li><span>!define&nbsp;PRODUCT_UNINST_ROOT_KEY&nbsp;<span class="string">"HKLM"</span><span>&nbsp;&nbsp;</span></span></li><li><span>!define&nbsp;PRODUCT_STARTMENU_REGVAL&nbsp;<span class="string">"NSIS:StartMenuDir"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;</span></li><li><span>;&nbsp;MUI&nbsp;<span class="number">1.67</span><span>&nbsp;compatible&nbsp;------&nbsp;&nbsp;</span></span></li><li><span>!include&nbsp;<span class="string">"MUI.nsh"</span><span>&nbsp;&nbsp;</span></span></li><li><span>!define&nbsp;MUI_WELCOMEFINISHPAGE_BITMAP&nbsp;<span class="string">".\image\side.bmp"</span><span>&nbsp;&nbsp;</span></span></li><li><span>!include&nbsp;<span class="string">"FileFunc.nsh"</span><span>&nbsp;&nbsp;</span></span></li><li><span>!include&nbsp;<span class="string">"nsisbass.nsh"</span><span>&nbsp;&nbsp;</span></span></li><li><span>!include&nbsp;<span class="string">"nsisbassmacros.nsh"</span><span>&nbsp;&nbsp;</span></span></li><li><span>!insertmacro&nbsp;DirState&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;</span></li><li><span>;&nbsp;MUI&nbsp;Settings&nbsp;&nbsp;</span></li><li><span>!define&nbsp;MUI_ABORTWARNING&nbsp;&nbsp;</span></li><li><span>!define&nbsp;MUI_ICON&nbsp;<span class="string">".\icon\nana.ico"</span><span>&nbsp;&nbsp;</span></span></li><li><span>!define&nbsp;MUI_UNICON&nbsp;<span class="string">".\icon\nana.ico"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;</span></li><li><span>;&nbsp;Language&nbsp;Selection&nbsp;Dialog&nbsp;Settings&nbsp;&nbsp;</span></li><li><span>!define&nbsp;MUI_LANGDLL_REGISTRY_ROOT&nbsp;<span class="string">"${PRODUCT_UNINST_ROOT_KEY}"</span><span>&nbsp;&nbsp;</span></span></li><li><span>!define&nbsp;MUI_LANGDLL_REGISTRY_KEY&nbsp;<span class="string">"${PRODUCT_UNINST_KEY}"</span><span>&nbsp;&nbsp;</span></span></li><li><span>!define&nbsp;MUI_LANGDLL_REGISTRY_VALUENAME&nbsp;<span class="string">"NSIS:Language"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;</span></li><li><span>;&nbsp;Welcome&nbsp;page&nbsp;&nbsp;</span></li><li><span>!insertmacro&nbsp;MUI_PAGE_WELCOME&nbsp;&nbsp;</span></li><li><span>;&nbsp;License&nbsp;page&nbsp;&nbsp;</span></li><li><span>!define&nbsp;MUI_LICENSEPAGE_CHECKBOX&nbsp;&nbsp;</span></li><li><span>!insertmacro&nbsp;MUI_PAGE_LICENSE&nbsp;<span class="string">".\txt\license.txt"</span><span>&nbsp;&nbsp;</span></span></li><li><span>;&nbsp;Directory&nbsp;page&nbsp;&nbsp;</span></li><li><span>!insertmacro&nbsp;MUI_PAGE_DIRECTORY&nbsp;&nbsp;</span></li><li><span>;&nbsp;Start&nbsp;menu&nbsp;page&nbsp;&nbsp;</span></li><li><span>var&nbsp;/GLOBAL&nbsp;ICONS_GROUP&nbsp;&nbsp;</span></li><li><span>!define&nbsp;MUI_STARTMENUPAGE_DEFAULTFOLDER&nbsp;<span class="string">"奥克汉化组"</span><span>&nbsp;&nbsp;</span></span></li><li><span>!define&nbsp;MUI_STARTMENUPAGE_REGISTRY_ROOT&nbsp;<span class="string">"${PRODUCT_UNINST_ROOT_KEY}"</span><span>&nbsp;&nbsp;</span></span></li><li><span>!define&nbsp;MUI_STARTMENUPAGE_REGISTRY_KEY&nbsp;<span class="string">"${PRODUCT_UNINST_KEY}"</span><span>&nbsp;&nbsp;</span></span></li><li><span>!define&nbsp;MUI_STARTMENUPAGE_REGISTRY_VALUENAME&nbsp;<span class="string">"${PRODUCT_STARTMENU_REGVAL}"</span><span>&nbsp;&nbsp;</span></span></li><li><span>!insertmacro&nbsp;MUI_PAGE_STARTMENU&nbsp;Application&nbsp;$ICONS_GROUP&nbsp;&nbsp;</span></li><li><span>;&nbsp;Instfiles&nbsp;page&nbsp;&nbsp;</span></li><li><span>!insertmacro&nbsp;MUI_PAGE_INSTFILES&nbsp;&nbsp;</span></li><li><span>;&nbsp;Finish&nbsp;page&nbsp;&nbsp;</span></li><li><span>!define&nbsp;MUI_FINISHPAGE_RUN&nbsp;<span class="string">"$INSTDIR\nana_chs.exe"</span><span>&nbsp;&nbsp;</span></span></li><li><span>!insertmacro&nbsp;MUI_PAGE_FINISH&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;</span></li><li><span>;&nbsp;Uninstaller&nbsp;pages&nbsp;&nbsp;</span></li><li><span>!insertmacro&nbsp;MUI_UNPAGE_INSTFILES&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;</span></li><li><span>;&nbsp;Language&nbsp;files&nbsp;&nbsp;</span></li><li><span>!insertmacro&nbsp;MUI_LANGUAGE&nbsp;<span class="string">"SimpChinese"</span><span>&nbsp;&nbsp;</span></span></li><li><span>VIProductVersion&nbsp;<span class="string">"1.0.0.0"</span><span>&nbsp;&nbsp;</span></span></li><li><span>VIAddVersionKey&nbsp;/LANG=<span class="number">2052</span><span>&nbsp;</span><span class="string">"FileDescription"</span><span>&nbsp;</span><span class="string">"${PRODUCT_NAME}"</span><span>&nbsp;&nbsp;</span></span></li><li><span>VIAddVersionKey&nbsp;/LANG=<span class="number">2052</span><span>&nbsp;</span><span class="string">"ProductName"</span><span>&nbsp;</span><span class="string">"${PRODUCT_NAME}"</span><span>&nbsp;&nbsp;</span></span></li><li><span>VIAddVersionKey&nbsp;/LANG=<span class="number">2052</span><span>&nbsp;</span><span class="string">"LegalCopyright"</span><span>&nbsp;</span><span class="string">""</span><span>&nbsp;&nbsp;</span></span></li><li><span>VIAddVersionKey&nbsp;/LANG=<span class="number">2052</span><span>&nbsp;</span><span class="string">"CompanyName"</span><span>&nbsp;</span><span class="string">"${PRODUCT_PUBLISHER}"</span><span>&nbsp;&nbsp;</span></span></li><li><span>VIAddVersionKey&nbsp;/LANG=<span class="number">2052</span><span>&nbsp;</span><span class="string">"FileVersion"</span><span>&nbsp;</span><span class="string">"${PRODUCT_VERSION}"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;</span></li><li><span>ReserveFile&nbsp;<span class="string">".\image\splash.bmp"</span><span>&nbsp;&nbsp;</span></span></li><li><span>ReserveFile&nbsp;<span class="string">"${NSISDIR}\Plugins\system.dll"</span><span>&nbsp;&nbsp;</span></span></li><li><span>ReserveFile&nbsp;<span class="string">"${NSISDIR}\Contrib\nsisbass\bass.dll"</span><span>&nbsp;&nbsp;</span></span></li><li><span>ReserveFile&nbsp;<span class="string">".\music\bgm.mp3"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;</span></li><li><span>;&nbsp;MUI&nbsp;end&nbsp;------&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;</span></li><li><span>Name&nbsp;<span class="string">"${PRODUCT_NAME}&nbsp;${PRODUCT_VERSION}"</span><span>&nbsp;&nbsp;</span></span></li><li><span>OutFile&nbsp;<span class="string">"nana_patch_chs.exe"</span><span>&nbsp;&nbsp;</span></span></li><li><span>InstallDir&nbsp;<span class="string">"$EXEDIR"</span><span>&nbsp;&nbsp;</span></span></li><li><span>InstallDirRegKey&nbsp;HKLM&nbsp;<span class="string">"${PRODUCT_DIR_REGKEY}"</span><span>&nbsp;</span><span class="string">""</span><span>&nbsp;&nbsp;</span></span></li><li><span>ShowInstDetails&nbsp;show&nbsp;&nbsp;</span></li><li><span>ShowUnInstDetails&nbsp;show&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;</span></li><li><span>Function&nbsp;.onInit&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;InitPluginsDir&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;File&nbsp;<span class="string">"/oname=$PLUGINSDIR\Splash_Splash.bmp"</span><span>&nbsp;</span><span class="string">".\image\splash.bmp"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;;&nbsp;使用闪屏插件显示闪屏&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;advsplash::show&nbsp;<span class="number">1500</span><span>&nbsp;</span><span class="number">600</span><span>&nbsp;</span><span class="number">400</span><span>&nbsp;-</span><span class="number">1</span><span>&nbsp;</span><span class="string">"$PLUGINSDIR\Splash_Splash"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;Pop&nbsp;$<span class="number">0</span><span>&nbsp;;&nbsp;$</span><span class="number">0</span><span>&nbsp;返回&nbsp;</span><span class="string">'1'</span><span>&nbsp;表示用户提前关闭闪屏,&nbsp;返回&nbsp;</span><span class="string">'0'</span><span>&nbsp;表示闪屏正常结束,&nbsp;返回&nbsp;</span><span class="string">'-1'</span><span>&nbsp;表示闪屏显示出错&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;;!insertmacro&nbsp;MUI_LANGDLL_DISPLAY&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;StrCpy&nbsp;$INSTDIR&nbsp;<span class="string">"C:\ユニゾンシフト\ななついろ★ドロップス"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;;&nbsp;Insert&nbsp;the&nbsp;NSISBASS_INIT&nbsp;macro&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;!insertmacro&nbsp;NSISBASS_INIT&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;;&nbsp;We&nbsp;can&nbsp;extract&nbsp;a&nbsp;song&nbsp;file&nbsp;as&nbsp;well&nbsp;(so&nbsp;you&nbsp;got&nbsp;something&nbsp;to&nbsp;play).&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;File&nbsp;<span class="string">"/oname=$PLUGINSDIR\tempsong.mp3"</span><span>&nbsp;</span><span class="string">".\music\BGM.mp3"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;!insertmacro&nbsp;NSISBASS_PLAY&nbsp;<span class="string">"$PLUGINSDIR\tempsong.mp3"</span><span>&nbsp;&nbsp;</span></span></li><li><span>FunctionEnd&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;</span></li><li><span>Function&nbsp;.onVerifyInstDir&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;IfFileExists&nbsp;<span class="string">"$INSTDIR\nana.exe"</span><span>&nbsp;PathGood&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;Abort&nbsp;;&nbsp;<span class="keyword">if</span><span>&nbsp;$INSTDIR&nbsp;is&nbsp;not&nbsp;a&nbsp;NanaDoro&nbsp;directory,&nbsp;don't&nbsp;let&nbsp;us&nbsp;install&nbsp;there&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;PathGood:&nbsp;&nbsp;</span></li><li><span>FunctionEnd&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;</span></li><li><span>Section&nbsp;<span class="string">"MainSection"</span><span>&nbsp;SEC01&nbsp;&nbsp;</span></span></li><li><span>;--------------------------copy----------------------------&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;SetOutPath&nbsp;<span class="string">"$INSTDIR"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;DetailPrint&nbsp;<span class="string">"正在复制文件..."</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;SetOverwrite&nbsp;ifnewer&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;File&nbsp;<span class="string">".\files\nana_chs.exe"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;File&nbsp;<span class="string">".\files\scenario.dat"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;File&nbsp;<span class="string">".\files\textdata.dat"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;File&nbsp;<span class="string">".\files\GAME.ini"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;File&nbsp;<span class="string">".\files\graph.exe"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;ExecWait&nbsp;<span class="string">'"$INSTDIR\graph.exe"'</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;Delete&nbsp;<span class="string">"$INSTDIR\graph.exe"</span><span>&nbsp;&nbsp;</span></span></li><li><span>SectionEnd&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;</span></li><li><span>Section&nbsp;<span class="string">"Add&nbsp;Start&nbsp;Menu&nbsp;Shortcuts"</span><span>&nbsp;SEC02&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;;&nbsp;shortcuts&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;!insertmacro&nbsp;MUI_STARTMENU_WRITE_BEGIN&nbsp;Application&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;SetOutPath&nbsp;<span class="string">"$INSTDIR"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;CreateDirectory&nbsp;<span class="string">"$SMPROGRAMS\$ICONS_GROUP"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;CreateShortCut&nbsp;<span class="string">"$SMPROGRAMS\$ICONS_GROUP\七色★星露&nbsp;汉化版.lnk"</span><span>&nbsp;</span><span class="string">"$INSTDIR\nana_chs.exe"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;CreateShortCut&nbsp;<span class="string">"$DESKTOP\七色★星露&nbsp;汉化版.lnk"</span><span>&nbsp;</span><span class="string">"$INSTDIR\nana_chs.exe"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;!insertmacro&nbsp;MUI_STARTMENU_WRITE_END&nbsp;&nbsp;</span></li><li><span>SectionEnd&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;</span></li><li><span>Section&nbsp;-AdditionalIcons&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;!insertmacro&nbsp;MUI_STARTMENU_WRITE_BEGIN&nbsp;Application&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;CreateShortCut&nbsp;<span class="string">"$SMPROGRAMS\$ICONS_GROUP\卸载简体中文补丁.lnk"</span><span>&nbsp;</span><span class="string">"$INSTDIR\uninst.exe"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;!insertmacro&nbsp;MUI_STARTMENU_WRITE_END&nbsp;&nbsp;</span></li><li><span>SectionEnd&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;</span></li><li><span>Section&nbsp;-Post&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;WriteUninstaller&nbsp;<span class="string">"$INSTDIR\uninst.exe"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;WriteRegStr&nbsp;HKLM&nbsp;<span class="string">"${PRODUCT_DIR_REGKEY}"</span><span>&nbsp;</span><span class="string">""</span><span>&nbsp;</span><span class="string">"$INSTDIR\nana_chs.exe"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;WriteRegStr&nbsp;${PRODUCT_UNINST_ROOT_KEY}&nbsp;<span class="string">"${PRODUCT_UNINST_KEY}"</span><span>&nbsp;</span><span class="string">"DisplayName"</span><span>&nbsp;</span><span class="string">"$(^Name)"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;WriteRegStr&nbsp;${PRODUCT_UNINST_ROOT_KEY}&nbsp;<span class="string">"${PRODUCT_UNINST_KEY}"</span><span>&nbsp;</span><span class="string">"UninstallString"</span><span>&nbsp;</span><span class="string">"$INSTDIR\uninst.exe"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;WriteRegStr&nbsp;${PRODUCT_UNINST_ROOT_KEY}&nbsp;<span class="string">"${PRODUCT_UNINST_KEY}"</span><span>&nbsp;</span><span class="string">"DisplayIcon"</span><span>&nbsp;</span><span class="string">"$INSTDIR\nana_chs.exe"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;WriteRegStr&nbsp;${PRODUCT_UNINST_ROOT_KEY}&nbsp;<span class="string">"${PRODUCT_UNINST_KEY}"</span><span>&nbsp;</span><span class="string">"DisplayVersion"</span><span>&nbsp;</span><span class="string">"${PRODUCT_VERSION}"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;WriteRegStr&nbsp;${PRODUCT_UNINST_ROOT_KEY}&nbsp;<span class="string">"${PRODUCT_UNINST_KEY}"</span><span>&nbsp;</span><span class="string">"Publisher"</span><span>&nbsp;</span><span class="string">"${PRODUCT_PUBLISHER}"</span><span>&nbsp;&nbsp;</span></span></li><li><span>SectionEnd&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;</span></li><li><span>Function&nbsp;un.onUninstSuccess&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;HideWindow&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;MessageBox&nbsp;MB_ICONINFORMATION|MB_OK&nbsp;<span class="string">"「七色★星露&nbsp;汉化补丁」已成功地从你的计算机删除。"</span><span>&nbsp;&nbsp;</span></span></li><li><span>FunctionEnd&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;</span></li><li><span>Function&nbsp;un.onInit&nbsp;&nbsp;</span></li><li><span>!insertmacro&nbsp;MUI_UNGETLANGUAGE&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;MessageBox&nbsp;MB_ICONQUESTION|MB_YESNO|MB_DEFBUTTON2&nbsp;<span class="string">"你确实要完全删除「七色★星露&nbsp;汉化补丁」，其及所有組件？"</span><span>&nbsp;IDYES&nbsp;+</span><span class="number">2</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;Abort&nbsp;&nbsp;</span></li><li><span>FunctionEnd&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;</span></li><li><span>Section&nbsp;Uninstall&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;!insertmacro&nbsp;MUI_STARTMENU_GETFOLDER&nbsp;<span class="string">"Application"</span><span>&nbsp;$ICONS_GROUP&nbsp;&nbsp;</span></span></li><li><span>;----------------------delete_files------------------------&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;Delete&nbsp;<span class="string">"$INSTDIR\uninst.exe"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;Delete&nbsp;<span class="string">"$INSTDIR\GAME.ini"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;Delete&nbsp;<span class="string">"$INSTDIR\textdata.dat"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;Delete&nbsp;<span class="string">"$INSTDIR\scenario.dat"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;Delete&nbsp;<span class="string">"$INSTDIR\nana_chs.exe"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;RMDir&nbsp;/r&nbsp;<span class="string">"$INSTDIR\graph"</span><span>&nbsp;&nbsp;</span></span></li><li><span>;--------------------delete_shortcuts----------------------&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;Delete&nbsp;<span class="string">"$SMPROGRAMS\$ICONS_GROUP\七色★星露&nbsp;汉化版.lnk"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;Delete&nbsp;<span class="string">"$SMPROGRAMS\$ICONS_GROUP\卸载简体中文补丁.lnk"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;Delete&nbsp;<span class="string">"$DESKTOP\七色★星露&nbsp;汉化版.lnk"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;RMDir&nbsp;<span class="string">"$SMPROGRAMS\$ICONS_GROUP"</span><span>&nbsp;&nbsp;</span></span></li><li><span>;-----------------delete_uninst_reg_keys-------------------&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;DeleteRegKey&nbsp;${PRODUCT_UNINST_ROOT_KEY}&nbsp;<span class="string">"${PRODUCT_UNINST_KEY}"</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;DeleteRegKey&nbsp;HKLM&nbsp;<span class="string">"${PRODUCT_DIR_REGKEY}"</span><span>&nbsp;&nbsp;</span></span></li><li><span>;--------------------close_after_unist---------------------&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;SetAutoClose&nbsp;<span class="keyword">true</span><span>&nbsp;&nbsp;</span></span></li><li><span>SectionEnd&nbsp;&nbsp;</span></li></ol></div>
+
+  
+
+
+  <div id="bottoms" class="clearfix">
+    
+    <div id="share_weibo">分享到：
+      <a data-type="sina" href="javascript:;" title="分享到新浪微博" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1571225856-18e900b8666ce6f233d25ec02f95ee59.jpg"></a>
+      <a data-type="qq" href="javascript:;" title="分享到腾讯微博" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1571225856-72dd548719f0ace4d5f9bca64e1d7715.jpg"></a>
+    </div>
+  </div>
+
+  <div class="blog_nav">
+    <div class="pre_next">
+      <a href="https://www.iteye.com/blog/183506" class="next" title="火星了，今天才知道C++0x也通过了lambda表达式/闭包的提案" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">火星了，今天才知道C++0x也通过了lambda表 ...</a>
+      |
+      <a href="https://www.iteye.com/blog/182762" class="pre" title="使用lambda expression来动态获取delegate，然后用Cecil注入代码（1）" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">使用lambda expression来动态获取delegate ...</a>
+    </div>
+  </div>
+  <div class="blog_bottom">
+    <ul>
+      <li>2008-04-16 09:48</li>
+      <li>浏览 2835</li>
+      <li><a href="#comments">评论(5)</a></li>
+      
+      
+            
+      <li class="last"><a href="https://www.iteye.com/wiki/blog/183148" target="_blank" class="more" referrerpolicy="no-referrer" rel="noopener noreferrer">查看更多</a></li>
+    </ul>    
+  </div>
+    
+  <div class="blog_comment">
+    <h5>评论</h5>
+    <a id="comments" name="comments" data-mx-warn="Empty URL"></a>
+    <div id="bc519344">
+  <div class="comment_title">
+    5 楼
+    <a href="https://www.iteye.com/blog/user/rednaxelafx" target="_blank" title="RednaxelaFX" referrerpolicy="no-referrer" rel="noopener noreferrer">RednaxelaFX</a>
+    2008-04-16&nbsp;&nbsp;
+    
+    
+  </div>
+  <div class="comment_content">对啊我知道有工具……只是我手上没有 T T
+<br>最近又很少能上Q，没办法找明大……而且跟月下也是昨天才联系过一次，之前一直都没时间管这事。
+<br>想想看没工具他们也没办法把BMP转换回到EPA。不过算了，使用补丁的人并不会在乎的……从archive的外面读文件或许还会快些呢（死
+<br>
+<br>P.S. 其实更大的问题是我机上没装游戏，手边也没安装文件。单纯是凭感觉在写东西了。明大你肯定很理解这状况的……</div>
+</div>
+
+<div id="bc519282">
+  <div class="comment_title">
+    4 楼
+    <a href="https://www.iteye.com/blog/user/lighting" target="_blank" title="Lighting" referrerpolicy="no-referrer" rel="noopener noreferrer">Lighting</a>
+    2008-04-16&nbsp;&nbsp;
+    
+    
+  </div>
+  <div class="comment_content"><img src="assets/1571225856-46824d74e28d56e0d70bd4ffe8816f2d.gif"> 月下也真是的……之前我给他的Bmp2Epa和dat打包工具估计他弄丢了……其实很久前就已经完成了……<img src="assets/1571225856-0956f0a970daab536ce4be0ee96b00ac.gif">&nbsp;<img src="assets/1571225856-0956f0a970daab536ce4be0ee96b00ac.gif">&nbsp;<img src="assets/1571225856-0956f0a970daab536ce4be0ee96b00ac.gif">&nbsp;<img src="assets/1571225856-0956f0a970daab536ce4be0ee96b00ac.gif"> </div>
+</div>
+
+<div id="bc519151">
+  <div class="comment_title">
+    3 楼
+    <a href="https://www.iteye.com/blog/user/rednaxelafx" target="_blank" title="RednaxelaFX" referrerpolicy="no-referrer" rel="noopener noreferrer">RednaxelaFX</a>
+    2008-04-16&nbsp;&nbsp;
+    
+    
+  </div>
+  <div class="comment_content">说来，当时做*.dat archive的破解也不是我做的，*.epa的解析也不是我做的……
+<br>所以我手上根本没处理它们用的工具。虽然我知道那×。dat的结构但是没现成的程序我就懒得写了……月下也同意就这么散着放在外面，所以我也没多在意了。明大有兴趣的话弄个打包到*.dat的程序来我就把安装包里图片文件的部分改改 ^ ^</div>
+</div>
+
+<div id="bc519146">
+  <div class="comment_title">
+    2 楼
+    <a href="https://www.iteye.com/blog/user/rednaxelafx" target="_blank" title="RednaxelaFX" referrerpolicy="no-referrer" rel="noopener noreferrer">RednaxelaFX</a>
+    2008-04-16&nbsp;&nbsp;
+    
+    
+  </div>
+  <div class="comment_content">ha ha ha （继续干笑
+<br>这里根本就是没把epa图片打包回到dat包里去。就这么散在外面了。
+<br>月下说他们测试的时候也就是把epa文件都放在graph目录里。给我的时候也是这样的一个目录。我懒得多写两行脚本来复制目录所以做了个自解压rar-&gt;exe...明白？
+<br>&lt;- 这人是在是懒得没底了……没救了没救了（摇头</div>
+</div>
+
+<div id="bc519024">
+  <div class="comment_title">
+    1 楼
+    <a href="https://www.iteye.com/blog/user/lighting" target="_blank" title="Lighting" referrerpolicy="no-referrer" rel="noopener noreferrer">Lighting</a>
+    2008-04-16&nbsp;&nbsp;
+    
+    
+  </div>
+  <div class="comment_content">啊……这个是运行外部程序来把改过的图片添加到graph.dat中么……其实干啥不改一下Archive.ini，感觉在这里添加多一行file=mypack.dat更简单……</div>
+</div>
+
+
+    
+    
+  </div>
+
+  <div class="blog_comment">
+    <h5>发表评论</h5>
+            <p style="text-align:center; margin-top:30px;margin-bottom:0px;"><a href="https://www.iteye.com/login" style="background-color: white; --darkreader-inline-bgcolor:#191a1b;" data-darkreader-inline-bgcolor="" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"> <img src="assets/1571225856-cf6d69dfbb92d2238c3e50c97eb9e7bf.png" style="vertical-align:middle; margin-right: 10px;"></a><a href="https://www.iteye.com/login" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">  您还没有登录,请您登录后再发表评论 </a></p>
+      </div>
+  </div>
+  <div>
+    <div style="" id="_bsi7k59ia2j"></div>
+    <!-- 多条广告如下脚本只需引入一次 -->
+    
+  </div>
+</div>
+
+
+
+
+
+
+
+      </div></DIV></DIV>
+        
+      </div>
+    </body>
+  </html>
