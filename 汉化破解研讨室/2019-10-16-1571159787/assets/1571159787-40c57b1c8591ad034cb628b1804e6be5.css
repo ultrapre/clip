@@ -1,0 +1,20 @@
+.cf-tt-element .cf-tt-content {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.2em 0.7em 0.2em 1em;
+}
+
+.cf-tt-content:hover {
+  cursor: pointer;
+}
+
+.cf-tt-content > svg {
+  display: inline-block;
+  height: 2.5em;
+  width: 2.5em;
+}

@@ -1,0 +1,652 @@
+
+  <!DOCTYPE html>
+  <html id="" class="fontawesome-i2svg-active fontawesome-i2svg-complete">
+    <!-- OriginalSrc: https://lilis.coding.me/post/visual-novel-tools/ -->
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <title>Galgame引擎、破解与资料大全</title>
+      
+<link rel="apple-touch-icon" sizes="180x180" href="assets/1571153274-be15e70c2fd3e6129de8558aa5385b63.png" referrerpolicy="no-referrer">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/1571153274-a69e1b675167f814c2f8dc2fc37c9240.png" referrerpolicy="no-referrer">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/1571153274-6972177d009e70d09e7d4aa653d8850f.png" referrerpolicy="no-referrer">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/1571153274-17c936e1e094d142dcb5741c9ac4f092.png" referrerpolicy="no-referrer">
+<link rel="mask-icon" href="assets/1571153274-c691347f16f78d6dd2c6a2721dae0f70.svg" color="#33363b" referrerpolicy="no-referrer">
+<link rel="shortcut icon" type="image/x-icon" href="assets/1571153274-e80da68f983063cf2a858c5d28319ffb.ico" referrerpolicy="no-referrer">
+
+
+<link rel="stylesheet" type="text/css" href="assets/1571153274-f13c11ce196eeff3a71fec2971e51102.css" referrerpolicy="no-referrer">
+<link rel="stylesheet" type="text/css" href="assets/1571153274-a2b21487f83a24f93bc701fe81cc656c.css" referrerpolicy="no-referrer">
+<link rel="stylesheet" type="text/css" href="assets/1571153274-844f137bcc950644e13eb03b576fb570.css" referrerpolicy="no-referrer">
+<link rel="stylesheet" type="text/css" href="assets/1571153274-41324c582414a71411762739055970ea.css" referrerpolicy="no-referrer">
+<link rel="stylesheet" type="text/css" href="assets/1571153274-1844ca23c59696661033c91dd969046e.css" referrerpolicy="no-referrer">
+<link rel="stylesheet" type="text/css" href="assets/1571153274-9b297debce2bba3af1adb2c5095e9a29.css" referrerpolicy="no-referrer">
+<link rel="stylesheet" type="text/css" href="assets/1571153274-811d6f1832d1427c21cd04d4ad62d804.css" referrerpolicy="no-referrer">
+<link rel="stylesheet" type="text/css" href="assets/1571153274-e7031bb8b2e6bb6ea324c333bc36b0a4.css" referrerpolicy="no-referrer">
+
+
+<style type="text/css">svg:not(:root).svg-inline--fa{overflow:visible}.svg-inline--fa{display:inline-block;font-size:inherit;height:1em;overflow:visible;vertical-align:-.125em}.svg-inline--fa.fa-lg{vertical-align:-.225em}.svg-inline--fa.fa-w-1{width:.0625em}.svg-inline--fa.fa-w-2{width:.125em}.svg-inline--fa.fa-w-3{width:.1875em}.svg-inline--fa.fa-w-4{width:.25em}.svg-inline--fa.fa-w-5{width:.3125em}.svg-inline--fa.fa-w-6{width:.375em}.svg-inline--fa.fa-w-7{width:.4375em}.svg-inline--fa.fa-w-8{width:.5em}.svg-inline--fa.fa-w-9{width:.5625em}.svg-inline--fa.fa-w-10{width:.625em}.svg-inline--fa.fa-w-11{width:.6875em}.svg-inline--fa.fa-w-12{width:.75em}.svg-inline--fa.fa-w-13{width:.8125em}.svg-inline--fa.fa-w-14{width:.875em}.svg-inline--fa.fa-w-15{width:.9375em}.svg-inline--fa.fa-w-16{width:1em}.svg-inline--fa.fa-w-17{width:1.0625em}.svg-inline--fa.fa-w-18{width:1.125em}.svg-inline--fa.fa-w-19{width:1.1875em}.svg-inline--fa.fa-w-20{width:1.25em}.svg-inline--fa.fa-pull-left{margin-right:.3em;width:auto}.svg-inline--fa.fa-pull-right{margin-left:.3em;width:auto}.svg-inline--fa.fa-border{height:1.5em}.svg-inline--fa.fa-li{width:2em}.svg-inline--fa.fa-fw{width:1.25em}.fa-layers svg.svg-inline--fa{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0}.fa-layers{display:inline-block;height:1em;position:relative;text-align:center;vertical-align:-.125em;width:1em}.fa-layers svg.svg-inline--fa{-webkit-transform-origin:center center;transform-origin:center center}.fa-layers-counter,.fa-layers-text{display:inline-block;position:absolute;text-align:center}.fa-layers-text{left:50%;top:50%;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%);-webkit-transform-origin:center center;transform-origin:center center}.fa-layers-counter{background-color:#ff253a;border-radius:1em;color:#fff;height:1.5em;line-height:1;max-width:5em;min-width:1.5em;overflow:hidden;padding:.25em;right:0;text-overflow:ellipsis;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top right;transform-origin:top right}.fa-layers-bottom-right{bottom:0;right:0;top:auto;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:bottom right;transform-origin:bottom right}.fa-layers-bottom-left{bottom:0;left:0;right:auto;top:auto;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:bottom left;transform-origin:bottom left}.fa-layers-top-right{right:0;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top right;transform-origin:top right}.fa-layers-top-left{left:0;right:auto;top:0;-webkit-transform:scale(.25);transform:scale(.25);-webkit-transform-origin:top left;transform-origin:top left}.fa-lg{font-size:1.33333em;line-height:.75em;vertical-align:-.0667em}.fa-xs{font-size:.75em}.fa-sm{font-size:.875em}.fa-1x{font-size:1em}.fa-2x{font-size:2em}.fa-3x{font-size:3em}.fa-4x{font-size:4em}.fa-5x{font-size:5em}.fa-6x{font-size:6em}.fa-7x{font-size:7em}.fa-8x{font-size:8em}.fa-9x{font-size:9em}.fa-10x{font-size:10em}.fa-fw{text-align:center;width:1.25em}.fa-ul{list-style-type:none;margin-left:2.5em;padding-left:0}.fa-ul>li{position:relative}.fa-li{left:-2em;position:absolute;text-align:center;width:2em;line-height:inherit}.fa-border{border:solid .08em #eee;border-radius:.1em;padding:.2em .25em .15em}.fa-pull-left{float:left}.fa-pull-right{float:right}.fa.fa-pull-left,.fab.fa-pull-left,.fal.fa-pull-left,.far.fa-pull-left,.fas.fa-pull-left{margin-right:.3em}.fa.fa-pull-right,.fab.fa-pull-right,.fal.fa-pull-right,.far.fa-pull-right,.fas.fa-pull-right{margin-left:.3em}.fa-spin{-webkit-animation:fa-spin 2s infinite linear;animation:fa-spin 2s infinite linear}.fa-pulse{-webkit-animation:fa-spin 1s infinite steps(8);animation:fa-spin 1s infinite steps(8)}@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}.fa-rotate-90{-webkit-transform:rotate(90deg);transform:rotate(90deg)}.fa-rotate-180{-webkit-transform:rotate(180deg);transform:rotate(180deg)}.fa-rotate-270{-webkit-transform:rotate(270deg);transform:rotate(270deg)}.fa-flip-horizontal{-webkit-transform:scale(-1,1);transform:scale(-1,1)}.fa-flip-vertical{-webkit-transform:scale(1,-1);transform:scale(1,-1)}.fa-flip-horizontal.fa-flip-vertical{-webkit-transform:scale(-1,-1);transform:scale(-1,-1)}:root .fa-flip-horizontal,:root .fa-flip-vertical,:root .fa-rotate-180,:root .fa-rotate-270,:root .fa-rotate-90{-webkit-filter:none;filter:none}.fa-stack{display:inline-block;height:2em;position:relative;width:2em}.fa-stack-1x,.fa-stack-2x{bottom:0;left:0;margin:auto;position:absolute;right:0;top:0}.svg-inline--fa.fa-stack-1x{height:1em;width:1em}.svg-inline--fa.fa-stack-2x{height:2em;width:2em}.fa-inverse{color:#fff}.sr-only{border:0;clip:rect(0,0,0,0);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.sr-only-focusable:active,.sr-only-focusable:focus{clip:auto;height:auto;margin:0;overflow:visible;position:static;width:auto}</style>
+<style type="text/css">@keyframes fadeInOpacity{0%{opacity:0}to{opacity:1}}:hover>*>.fbvd--wrapper{animation-name:fadeInOpacity;animation-duration:.3s;opacity:1}.fbvd--wrapper{position:absolute;top:10px;left:10px;opacity:0;text-align:center;margin:0;z-index:5}.fbvd--wrapper a{background: url("") no-repeat 3px 4.55px; background-color: #fff; display:inline-block;font:700 14px Helvetica,Arial,sans-serif;color:#4b4f56;text-decoration:none;vertical-align:middle;padding:0px 8px 0px;margin-right:8px;border-radius:2px; line-height: 22px; padding-left:19px; border: 1px solid #e7e7e7; background-size: 13px}.fbvd--wrapper a:last-child{margin-right:0}.fbvd--wrapper a:hover{text-decoration:none}.fbvd--wrapper a:focus{box-shadow:0 0 1px 2px rgba(88,144,255,.75),0 1px 1px rgba(0,0,0,.15);outline:none}.fbvd--wrapper b{font-size:13px;position:relative;top:1px;color:#3b5998;font-weight:400}</style>
+
+      <style class="mx-wc-style">
+        .mx-wc-main img {max-width: 100%;}
+        .mx-wc-main{
+          box-sizing: content-box;
+          background-color: rgb(204, 204, 204) !important;
+          margin: 0 auto;
+          margin-top: 20px;
+          max-width: 1287px;
+        }
+        @media (min-width: 768px) {
+          .mx-wc-main { padding: 15px 15px 80px 15px }
+        }
+        @media (max-width: 767px) {
+          .mx-wc-main { padding: 15px 3px 80px 3px }
+        }
+  
+      </style>
+    </head>
+    <body style="background-color: #464646 !important; min-height: 100%; height: auto; position: static !important; overflow: auto !important; padding-bottom: 0px !important;" id="" class="">
+      <div class="mx-wc-main">
+        <main id="main" class="main mx-wc-selected-elem mx-wc-1571153274" style="display: block; float: none !important; position: relative !important; top: 0px !important; left: 0px !important; margin: 0px !important; flex: unset !important; width: 100% !important; max-width: 100% !important; box-sizing: border-box !important;">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<div id="post" class="page">
+  
+  <article class="article post card animate" itemscope="" itemtype="http://schema.org/Article" lg-uid="lg0">
+    <div class="post-block">
+      
+      
+      
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">电子小说相关工具</h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <svg class="svg-inline--fa fa-calendar-plus fa-w-14" aria-hidden="true" data-prefix="far" data-icon="calendar-plus" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M336 292v24c0 6.6-5.4 12-12 12h-76v76c0 6.6-5.4 12-12 12h-24c-6.6 0-12-5.4-12-12v-76h-76c-6.6 0-12-5.4-12-12v-24c0-6.6 5.4-12 12-12h76v-76c0-6.6 5.4-12 12-12h24c6.6 0 12 5.4 12 12v76h76c6.6 0 12 5.4 12 12zm112-180v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"></path></svg><!-- <i class="far fa-calendar-plus"></i> --><span><time title="post-date" itemprop="dateCreated datePublished" datetime="2019-09-01T11:25:09+08:00">2019-09-01 11:25:09</time></span>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider divider">|</span>
+        
+        <span class="post-categories">
+          
+          <svg class="svg-inline--fa fa-folder-open fa-w-18" aria-hidden="true" data-prefix="far" data-icon="folder-open" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg=""><path fill="currentColor" d="M527.943 224H480v-48c0-26.51-21.49-48-48-48H272l-64-64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h400a48.001 48.001 0 0 0 40.704-22.56l79.942-128c19.948-31.917-3.038-73.44-40.703-73.44zM54 112h134.118l64 64H426a6 6 0 0 1 6 6v42H152a48 48 0 0 0-41.098 23.202L48 351.449V117.993A5.993 5.993 0 0 1 54 112zm394 288H72l77.234-128H528l-80 128z"></path></svg><!-- <i class="far fa-folder-open"></i> --><span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="https://lilis.coding.me/categories/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><span itemprop="name">笔记</span></a></span>
+        </span>
+        
+        
+        
+        
+      </div>
+    </header>
+    <main class="post-main" itemprop="articleBody">
+      <p>电子小说（ADV /  Visual Novel）领域的数据库、同好站点、开发引擎、相关转区、解包打包工具的列表。<br>注意，该列表并不完善，可能有错漏，仍在施工更新中。</p>
+<a id="more" data-mx-warn="Empty URL"></a>
+<h3 id="主要程序"><a href="#%E4%B8%BB%E8%A6%81%E7%A8%8B%E5%BA%8F" class="headerlink" title="主要程序"></a>主要程序</h3><h4 id="游戏引擎"><a href="#%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E" class="headerlink" title="游戏引擎"></a>游戏引擎</h4><p>包括业界使用较多，或知名厂牌使用的引擎。包括部分渐露头角的国内引擎，但完成度较低的自研程序不包括在内。</p>
+<ul>
+<li><p>krkr<br>包括<a href="http://kikyou.info/tvp/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">krkr2</a>、<a href="http://krkrz.github.io/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">krkrz</a>等，也称为TVP引擎。比较老牌的引擎了（2004-），有很多插件。使用tjs/kag脚本语言。扩展名xp3。Yuzusoft都是用这个引擎。</p>
+</li>
+<li><p><a href="http://www.nscripter.com/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">NScripter</a><br>高橋直樹开发，2000年左右常见的系统，语法简单。特征是文件名像arc.nsa nscript.dat .env等。图像、声音没有经过特殊压缩。因为程序结构单一，被广泛移植到各种平台上。有兼容分支ONScripter。</p>
+</li>
+<li><p>ONScripter</p>
+</li>
+<li><p>SystemNNN<br>cyc系列</p>
+</li>
+<li><p><a href="http://yu-ris.net/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">YU-RIS / ERIS</a><br>作者:たくみ。YU-RIS是AVG游戏引擎，ERIS是链接库。<br>代表作：Whirlpool社所有作品， CLOCKUP社所有作品。<br>数据文件扩展名.ypf。所有的档案都可以用ExtractData拆开</p>
+</li>
+<li><p>Buriko General Interpreter<br>即BGI引擎，作者<a href="http://www.darios.buriko.no-ip.info/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">Darios Sawm(Buriko)</a>，又名为Ethornell。代表作:H2O(枕)， Lump of Sugar社所有作品、夜明け前より瑠璃色な(オーガスト)、キラ☆キラ(OVERDRIVE)、いつか届くあの空に(Lump of Suger)、蒼の彼方のフォーリズム(Sprite)。特征数据文件扩展名是.arc。</p>
+</li>
+<li><p><a href="http://www.retouch.info/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">retouch/sketch/ExHIBIT</a><br>作者:薫。loader主程序ExHIBIT.exe。<br>sketch是这个引擎的核心系统，以retouch这个链接库环境来开发游戏，最后开发出来的游戏还要利用ExHIBIT来执行。系统本身不使用DirectX，画面的处理完全靠自己的核心系统。档案完全不打包，所以会有数量惊人的小文件。扩展名是.gyu(图像)+.v(声音)。图像格式.gyu用”ZZ’z Factor”的“ifgyu”对应，音声格式.v转换方法暂且不明。剧本档.rld用“notaエロゲ研究室”里面的“はるかぜどりに、とまりぎを”的拆解程序“harutoma_con.exe”可以解决。<br>代表作:空色の风琴(LOTUS)，エーテルの砂时计(Dreamsoft)，白银のソレイユ(SkyFish)，Clear(MOONSTONE)。</p>
+</li>
+<li><p><a href="http://cs2.suki.jp/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">CatSystem2</a><br><a href="http://windmill.suki.gr.jp/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">Windmilll</a>开发。另外有后续兼容版本CatSystem3</p>
+</li>
+<li><p>[Project NYANLIB]（<a href="http://www2s.biglobe.ne.jp/~tinyan/nyanlib/index.htm" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">http://www2s.biglobe.ne.jp/~tinyan/nyanlib/index.htm</a>)<br>cyc 系ブランドで採用されている。</p>
+</li>
+<li><p>ISM<br>Production StarHole开发， 代表作ひとゆめ(STARLINK)</p>
+</li>
+<li><p><a href="http://www.entis.jp/gls/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">EntisGLS</a><br>作者Leshade Entis。实际上是一堆处理各种形式档案的链接库，开发难度较高。数据文件为.noa格式。拆开后是.eri格式的图片，.mio格式的声音。开发方自己提供了该引擎SDK及解包工具。代表作:颜のない月(Orbit)，Garden（CUFFS）、re-laive(KLEIN)，さくらむすび(CUFFS)，こんねこ(Marmalade)。</p>
+</li>
+<li><p><a href="http://www.qlie.net/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">QLIE</a><br>FrontWing、<a href="http://www.project-navel.com/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">Navel</a>、<a href="http://www.omega-star.jp/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">ωstar</a>、Windmill、Clochette使用。代表作：そして明日の世界より（etude）</p>
+</li>
+<li><p>FVP<br>Favorite View Point System。favorite社的引擎。<a href="https://bgm.tv/blog/51391" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer"> Xmoe曾宣布过其跨平台移植版xMemoria System</a>，<a href="https://bgm.tv/blog/53730" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">在后续消息中，该移植引擎可支持iOS/Android，但2014年后无动静</a></p>
+</li>
+<li><p>椎名里緒<br><a href="http://www.will-japan.co.jp/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">Will社</a>前身Forest开发。propeller、ruf、WILL社作品再用。代表作：あやかしびと（propeller)、残暑お見舞い申し上げます（めろめろキュート）</p>
+</li>
+<li><p>ADV32</p>
+</li>
+<li><p>EntisGLS<br>ま～まれぇど</p>
+</li>
+<li><p>DAI System<br>DAI 氏开发，詳細不明。 月面基地前のしすたぁえんじぇる、など、レイヤ演出系にこったシステムのはしりの印象。つくしてあげるのに(peassoft)</p>
+</li>
+<li><p>SiglusEngine<br>VA系列</p>
+</li>
+<li><p>RealLive<br>AVG32的演进版。有几个兼容分支，如わっふる(AVG32互換)、xkanon(AVG32互換)、xclannad（RealLive互換)。</p>
+</li>
+<li><p>AVG32<br>key社早期的引擎。注意，和ADV32不是一回事。由Visual Arts旗下的versammlen开发。</p>
+</li>
+<li><p>RPM ADV SYSTEM<br>すぺじゃに系列のブランドで使われるエンジン。</p>
+</li>
+<li><p>SFA<br>彩文館出版の系列ブランド（LiLiM/SugarPot）で使われるエンジン<br>主なファイルの拡張子がaos</p>
+</li>
+<li><p>Musica<br>minori开发和使用的引擎。给别的会社提供时，也可能更名。ましろ色シンフォニー（Palette）也是用Musica。</p>
+</li>
+<li><p>PENCIL Adventure Engine<br>ぱじゃまソフト系列のブランドで使われるエンジンで、名称の「PENCIL」部分が変わる事も。</p>
+</li>
+<li><p>AI6WIN<br>elfとその系列ブランドで使われるエンジン<br>主なファイルの拡張子がarc</p>
+</li>
+<li><p>WGL<br>Palette社</p>
+</li>
+<li><p>AdvHD</p>
+</li>
+<li><p>CMVS<br>Purple Software用的引擎，主程序为CMVS.exe。</p>
+</li>
+<li><p>GIGA</p>
+</li>
+<li><p>STUDIO SELDOM Adventure System</p>
+</li>
+<li><p>rUGP<br>AGE の独自システムですが、Overflow などに提供されてます。 高性能。代表作：君が望む永遠Latest Edition（アージュ）</p>
+</li>
+<li><p>System4.X<br>Alicesoft开发，使用类似C语言的高级语言。旧システム: System3.X</p>
+</li>
+<li><p>FFD<br>即Floating Frame Director，Little Witch社使用</p>
+</li>
+<li><p>RPM ADV SYSTEM<br>AXL（今はワムソフト製吉里吉里っぽい）</p>
+</li>
+<li><p>アトリエかぐやアプリケーション<br>アトリエかぐや系列</p>
+</li>
+<li><p>Zero-System<br>F&amp;C系列</p>
+</li>
+<li><p>NeXAS<br>戯画および feat.戯画 なブランドの一部で利用されているシステム。 この青空に約束を（戯画）、ラッキー×クロス（コトノハ）</p>
+</li>
+<li><p>（不明）<br>  WILL 系ブランド、およびそのパートナーブランドで使われているエンジン。 PULLTOP、HERMIT、しらたまなどが採用。実例    遙かに仰ぎ、麗しの(PULLTOP)、ままらぶ(HERMIT)</p>
+<ul>
+<li><a href="http://www.bladeengine.com/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">BLADE VISUAL NOVEL ENGINE</a><br><a href="http://buredo.jp/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">無礼堂</a>开发。</li>
+</ul>
+</li>
+<li><p>Irrlicht Engine<br>AlterEgo</p>
+</li>
+<li><p>SystemC<br>インターハート（きゃんでぃそふととか）系列</p>
+</li>
+<li><p>C,system<br>TinkerBell系列</p>
+</li>
+<li><p>Nitroplus System 2.0<br>ニトロプラス系列</p>
+</li>
+<li><p>SystemC<br>インターハートの系列ブランドで使われるエンジン<br>主なファイルの拡張子がfpk</p>
+</li>
+<li><p>ADV+++<br>y or x project开发。</p>
+</li>
+<li><p>Livemaker<br>有限会社ヒューマンバランス开发。</p>
+</li>
+<li><p>TACS for Flash<br>鷹彰氏、 <a href="http://atelier-c.fiw-web.net/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">Ｃのアトリエ</a>开发。Flash ベースの ADV 用フレームワーク</p>
+</li>
+<li><p><a href="http://www.le-mo.jp/lemo/products/LemoNovel/index.htm" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">LemonNovel</a><br><a href="http://www.le-mo.jp/lemo/index01.html" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">LEMO</a>开发。Flash ベースの ADV 用フレームワーク</p>
+</li>
+<li><p>Lucifen Library<br>Navel社早期作品（Shuffle等）用。现在Navel社已经开始用Ethornell和QLIE了。</p>
+</li>
+<li><p>Malie<br>light社用</p>
+</li>
+<li><p>NSystem<br>ブルームハンドル</p>
+</li>
+<li><p>Stuff<br>propeller（※Will系列）と関連ブランドで使われているエンジン<br>主なファイルの拡張子がmpk</p>
+</li>
+<li><p>Yuka System<br>パートナーブランド系列の一部（HOOKなど）、あるいは元パートナーブランドの一部で使われているエンジン。<br>主なファイルの拡張子がykc（※違うこともある）</p>
+</li>
+<li><p>SOFTPAL ADV System<br>ユニゾンシフト系列</p>
+</li>
+<li><p>STUDIO SELDOM Adventure System<br>すたじお緑茶</p>
+</li>
+<li><p>Lillian Adventure Engine<br>ティンクル☆くるせいだーす</p>
+</li>
+<li><p>Maid2<br>ApRicot系列</p>
+</li>
+<li><p>Willplus Engine<br>PULLTOP、ensemble等<br>拡張子：arc<br>実行ファイル：AdvHD.exe</p>
+</li>
+<li><p>Artemisエンジン<br>D:drive<br>真・恋姫†無双Android版<br>マルチプラットフォーム<br>lua使用可能</p>
+</li>
+<li><p><a href="http://tyrano.jp/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">Tyrano Script</a><br>マルチプラットフォーム、ブラウザとかでも動く</p>
+</li>
+<li><p>Majiro<br>作者:越畑声太。 猫猫软件在NScripter之后用这个引擎，代表作：暁の護衛（しゃんぐりら）<br>ナギサの（コットンソフト）。<br>目前可以看到V1.000和V2.000两种版本。コットンソフト、しゃんぐりら使用。<br>扩展名为.arc，档案组成: system/sysgrp/sysprg.arc这三个是系统相关文件，其它的数据文件名称不定，但是通常是有序号的档名，例如data*.arc。V1版本要利用“Majiro Development kit”来拆解，V2版本要用ExtractData解包。</p>
+</li>
+<li><p><a href="http://japan.unity3d.com/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">Unity 3D</a><br>U3D应该是通用的游戏制作工具吧。多用于3D游戏，但近年来有一些ADV也使用了U3D。<br>Xuseの新作がこれらしいので</p>
+</li>
+<li><p>Macromedia(Adobe) director<br>director系统的特点是容易开发跨平台(Mac系统)游戏。<br>扩展名.cxt(包装的数据文件)+.dxr(专案档)。<br>恋と選挙とチョコレート（Sprite）使用。</p>
+</li>
+<li><p>Macromedia(Adobe)  Flash<br> てんしのかけら（I/O）等</p>
+</li>
+<li><p><a href="http://novelsphere.jp/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">O₂ Engine</a><br>HTML5 ベースのノベルゲームエンジン<br>ブラウザでも動く、マルチプラットフォーム<br>エロゲメーカーの体験版とか割と配布してる</p>
+</li>
+<li><p>AZSystem<br>casper 氏开发，CLOCKUP社用过。</p>
+</li>
+<li><p><a href="http://almight.jp/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">Almight</a><br>HTML5で作られてる、マルチプラットフォーム、ブラウザ動作。DLsite.comと提携してる</p>
+</li>
+<li><p>LemoNovel</p>
+</li>
+<li><p>AIRNovel<br>《西暦２２３６》らしい</p>
+</li>
+<li><p>Ren’py<br>Python+pygame写的开源引擎，可以打包到各种平台。</p>
+</li>
+<li><p><a href="https://bke.bakery.moe/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">BKEngine</a><br>C++写的非商用永久免费，可视化开发，可以部署到多平台。</p>
+</li>
+<li><p><a href="https://nwjs.io/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">nw.js</a><br>由node-webkit项目发展而来，是把node.js程序打包成桌面应用的第三方框架。 目前只见过两次，SORAHANE用过，bug百出。</p>
+</li>
+<li><p><a href="http://magic-lib.com/Librian/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">Librian</a><br>国产引擎，基于CEFPython和wxpython。<a href="https://github.com/RimoChan/Librian" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">github</a> <a href="https://rimochan.github.io/Librian_doc/site/%E4%B8%BB%E9%A0%81" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">文档</a></p>
+</li>
+</ul>
+<h4 id="增强技术"><a href="#%E5%A2%9E%E5%BC%BA%E6%8A%80%E6%9C%AF" class="headerlink" title="增强技术"></a>增强技术</h4><ul>
+<li><p>Live 2D</p>
+</li>
+<li><p>E-mote</p>
+</li>
+</ul>
+<h3 id="第三方软件"><a href="#%E7%AC%AC%E4%B8%89%E6%96%B9%E8%BD%AF%E4%BB%B6" class="headerlink" title="第三方软件"></a>第三方软件</h3><p>请自行对工具的使用负责。此处仅介绍与电子小说运用高度相关的特有软件，通用软件（如虚拟光驱工具、汇编调试工具）不在此列。</p>
+<h4 id="转区、免CD等启动工具"><a href="#%E8%BD%AC%E5%8C%BA%E3%80%81%E5%85%8DCD%E7%AD%89%E5%90%AF%E5%8A%A8%E5%B7%A5%E5%85%B7" class="headerlink" title="转区、免CD等启动工具"></a>转区、免CD等启动工具</h4><ul>
+<li><p><a href="https://github.com/xupefei/Locale-Emulator" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">Locale Emulator</a></p>
+</li>
+<li><p><a href="https://ntlea.codeplex.com/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">ntleas</a><br>转区用的，是原来NTLEA的维护分支。</p>
+</li>
+<li><p>NTLEA全域通<br>已经停止开发。后被ntleas取代。</p>
+</li>
+<li><p>Microsoft Applocale<br>已经停止开发，后被NTLEA取代。有一个维护分支叫做piaip AppLocale。</p>
+</li>
+<li><p>piaip Applocale<br>即pAppLocale，原版Applocale的维护分支。</p>
+</li>
+<li><p><a href="https://github.com/xmoeproject/FVPLoader" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">xmoeproject/FVPLoader</a><br>A simple GUI Loader which allow you to run FAVORITE’s game under none-Japanese OS<br>其实用别的转区工具也行，但非日语环境下 f社游戏会有显示立绘崩溃的老毛病。这个启动器进行了防崩处理。</p>
+</li>
+<li><p><a href="https://github.com/xmoeproject/KrkrLoader" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">xmoeproject/KrKrLoader</a><br>Allow you run some krkr2-based game on Windows8 OS and above.</p>
+</li>
+<li><p>AlphaRomDie<br>解决必须插着CD才能运行软件的机制。</p>
+</li>
+<li><p>SiglusCrack<br>Siglus / RealLive引擎通用一键解锁程序。一定程度上也支持其他引擎的锁区破解。</p>
+</li>
+<li><p><a href="https://azure.kdays.cn/2014/02/03/HarmoFavo/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">HarmoFavo</a><br>f社游戏通用和谐插件（？？？）</p>
+</li>
+</ul>
+<h4 id="机器翻译工具"><a href="#%E6%9C%BA%E5%99%A8%E7%BF%BB%E8%AF%91%E5%B7%A5%E5%85%B7" class="headerlink" title="机器翻译工具"></a>机器翻译工具</h4><ul>
+<li><p><a href="http://sakuradite.com/game" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">VNR</a><br>著名的多语种在线机翻/离线机翻/朗读/光学识别工具，用Python写的，功能全面强大，但已经停止维护了。有很多第三方修改版。<a href="https://github.com/Dangetsu/vnr" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">代码维护在这里</a></p>
+</li>
+<li><p>喵翻AgthStart<br>2014年停止更新。</p>
+</li>
+</ul>
+<h4 id="资源提取工具"><a href="#%E8%B5%84%E6%BA%90%E6%8F%90%E5%8F%96%E5%B7%A5%E5%85%B7" class="headerlink" title="资源提取工具"></a>资源提取工具</h4><ul>
+<li><p>gamepackid<br>引擎种类识别工具，通过相关文件特征码的检测来实现。不清楚支援度如何。</p>
+</li>
+<li><p><a href="https://github.com/xmoeproject/KrkrExtract" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">xmoeproject/KrKrExtract</a><br>Xmoe的作品，一个可以解包krkr2/krkrz的xp3资源包并重新打包的工具。 <a href="https://xmoeproject.github.io/KrkrExtract/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">项目主页</a></p>
+</li>
+<li><p><a href="https://github.com/xmoeproject/AlphaMovieDecoder" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">xmoeproject/AlphaMovieDecoder</a></p>
+</li>
+<li><p><a href="https://github.com/xmoeproject/SiglusExtract" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">xmoeproject/SiglusExtract</a><br>A tool that can extract almost all resources used by SiglusEngine and repack some of them for translation.</p>
+</li>
+<li><p><a href="http://www.westside.co.jp/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">westside</a></p>
+</li>
+<li><p><a href="http://www.digitalpad.co.jp/~takechin/download.html" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">Susie</a><br><a href="http://dawg.s56.xrea.com/search_plugin.php" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">旧游戏Susie插件对应搜索</a><br><a href="http://www.cgdreamland.com/projectsusie/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">旧游戏对应的Susie插件搜索与下载</a></p>
+</li>
+<li><p><a href="http://www.angelfire.com/nm/fbkcfy/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">HCG Converter</a></p>
+</li>
+<li><p>ExtractData<br>提取krkr系引擎的通用工具，能很好地处理offset。</p>
+</li>
+<li><p><a href="http://www.cppblog.com/crhackos/archive/2011/06/18/148905.html" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">GameViewer</a></p>
+</li>
+<li><p><a href="https://github.com/prefetchnta/questlab" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">QuestLAB</a><br>GameViewer 的后续版本</p>
+</li>
+<li><p><a href="http://galcrass.blog124.fc2.com/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">CRASS</a><br>即CrageGUI</p>
+</li>
+</ul>
+<hr>
+<p>此分割线以下的工具我从来没有听说过，只是网上流传，请谨慎使用。</p>
+<hr>
+<ul>
+<li><p><a href="http://blog.sina.com.cn/zeas" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">ZeaS</a><br>特别的CRASS插件</p>
+</li>
+<li><p><a href="http://www.entis.jp/eri/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">恵理ちゃんｃｌｕｂ（萌衣☆Player、noa32）</a><br>EntisGLS引擎的处理工具</p>
+</li>
+<li><p><a href="http://asmodean.reverse.net/pages/tools_index.html" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">asmodean</a></p>
+</li>
+<li><p><a href="http://honyaku-subs.ru/forums/viewtopic.php?f=17&amp;t=470" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">arc_conv</a></p>
+</li>
+<li><p><a href="http://bbs.xxxc.at/thread-1747-1-5.html" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">XP3 Viewer</a></p>
+</li>
+<li><p><a href="http://bbs.xxxc.at/thread-6561-1-5.html" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">Nitro+解包/封包工具</a></p>
+</li>
+<li><p><a href="https://www.yukict.com/bbs/thread-62299-1-1.html" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">xp3dumper</a></p>
+</li>
+<li><p><a href="http://m-akita.sakura.ne.jp/program.php" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">m-akita</a></p>
+</li>
+<li><p><a href="http://www.dsl.gr.jp/~sage/sagepage/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">真美ツールズ</a></p>
+</li>
+<li><p><a href="http://riox.thisillusion.org/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">riox</a></p>
+</li>
+<li><p><a href="http://vn.i-forge.net/tools/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">Visual Novel tools</a></p>
+</li>
+<li><p><a href="http://www.vector.co.jp/soft/win95/art/se039492.html" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">Grapholic</a></p>
+</li>
+<li><p><a href="http://ffvsoftparadise2.allalla.com/soft/soft.htm" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">ffv 製圖樂園（KaguyaCut）</a></p>
+</li>
+<li><p><a href="http://wks.arai-kibou.ru/ae.php?p=dl" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">AnimED - VN Tools</a></p>
+</li>
+<li><p><a href="http://sourceforge.net/projects/halte2/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">HalTe2</a></p>
+</li>
+<li><p><a href="https://code.google.com/p/halte3/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">halte3</a></p>
+</li>
+<li><p><a href="http://hi.baidu.com/xcjfgt1/item/8b5c701ed20add8989a95677" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">BGIunpack</a><br>针对BGI新的格式解包工具，未成熟</p>
+</li>
+<li><p>fxckBGI<br>针对BGI新的游戏结构的解包工具。</p>
+</li>
+<li><p>BGI引擎资源解包封包工具</p>
+</li>
+<li><p><a href="http://rapatch.bbs.fc2.com/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">tachie</a></p>
+</li>
+<li><p>wolfextract</p>
+</li>
+<li><p>RPGDecrypter</p>
+</li>
+<li><p>NSDEC<br>Nscripter引擎的抽取工具</p>
+</li>
+</ul>
+<h3 id="网站"><a href="#%E7%BD%91%E7%AB%99" class="headerlink" title="网站"></a>网站</h3><p>仅收录有一定知名度的站点。过于小众、不知名的讨论站暂不列入。</p>
+<h4 id="数据库、维基站、标记站"><a href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E3%80%81%E7%BB%B4%E5%9F%BA%E7%AB%99%E3%80%81%E6%A0%87%E8%AE%B0%E7%AB%99" class="headerlink" title="数据库、维基站、标记站"></a>数据库、维基站、标记站</h4><p>-Tokuten(<a href="http://www.erogame-tokuten.com/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">http://www.erogame-tokuten.com/</a>)<br>查特典用的。</p>
+<ul>
+<li><p><a href="https://bangumi.tv/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">bangumi.tv</a><br>大陆广为人知的bangumi。另有备用域名<a href="https://lilis.coding.me/post/visual-novel-tools/bgm.tv" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">bgm.tv</a></p>
+</li>
+<li><p><a href="https://vgmdb.net/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">VGMDB</a><br>video game database</p>
+</li>
+<li><p><a href="https://vndb.org/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">VNDB</a><br>visual novel database</p>
+</li>
+<li><p><a href="https://lilis.coding.me/post/visual-novel-tools/erogamescape.org" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">批评空间 Erogame Scape</a><br>前丸户空间（现兰斯空间），圈子内最可靠的评分网站。</p>
+</li>
+<li><p><a href="http://www.2dfan.com/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">2dfan</a><br>里面关于新作的情报一应俱全。有许许多多的大佬来翻译附带人设图和CG预览的介绍，还会提供完美存档、攻略、修正补丁、汉化补丁、回避补丁等等。缺点是搜索引擎不好用，不用“标准名字”往往会搜不到，小众作品和2000年以前的作品也没有多少。 </p>
+</li>
+<li><p><a href="http://seiya-saiga.com/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">誠也の部屋</a><br>非常全面的攻略情报站，一般作品出来当天就会出路线攻略。</p>
+</li>
+</ul>
+<h4 id="资源-贩售站"><a href="#%E8%B5%84%E6%BA%90-%E8%B4%A9%E5%94%AE%E7%AB%99" class="headerlink" title="资源/贩售站"></a>资源/贩售站</h4><p>请注意相关法律。</p>
+<ul>
+<li><p><a href="http://mygalgame.com/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">忧郁的弟弟</a><br>现忧郁的loli</p>
+</li>
+<li><p>终点论坛</p>
+</li>
+<li><p>花火学园<br>即say花火</p>
+</li>
+<li><p><a href="https://lilis.coding.me/post/visual-novel-tools/bbs.9moe.com" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">绯月</a><br>别名KF（该站前身为Kikyou Fans Club ：桔梗爱好俱乐部） ，前域名bbs.2dgal.com。目前常用的收生肉和CG的网站。生肉资源较全，CG资源也不少。还有画集，动画，漫画，小说音乐等资源。</p>
+</li>
+<li><p><a href="http://nyaa.si/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">nyaa</a><br>国外的资源站，原来后缀是.se，关站后域名后缀变成.si。只有生肉。<a href="https://lilis.coding.me/post/visual-novel-tools/sukebei.nyaa.si" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">R18分站</a></p>
+</li>
+</ul>
+<!--猎奇吧资源库 专精猎奇漫画游戏CG动画等资源，资源以百度网盘为主。-->
+<!--喵窝 生肉资源与汉化资源，不怎么全偶尔可以碰碰运气。资源以百度网盘和磁力为主。-->
+<ul>
+<li><p>2DJGAME<br>门槛很高的资源站，邀请码注册。有时会有一手资源，在Nyaa上能找到其中发布的部分资源。有姐妹站mikocon。</p>
+</li>
+<li><p>Holyseal(<a href="http://holyseal.net/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">http://holyseal.net</a>)<br>圣封。</p>
+</li>
+<li><p><a href="https://lilis.coding.me/post/visual-novel-tools/www.comshop.ne.jp" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Comshop</a></p>
+</li>
+<li><p><a href="https://lilis.coding.me/post/visual-novel-tools/dlsoft.dmm.co.jp" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">DMM</a><br>俗称的大咪咪。</p>
+</li>
+<li><p><a href="https://lilis.coding.me/post/visual-novel-tools/www.toranoana.jp" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Toranoana</a><br>虎之穴。</p>
+</li>
+<li><p><a href="https://lilis.coding.me/post/visual-novel-tools/www.melonbooks.co.jp" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Melonbooks</a><br>甜瓜。</p>
+</li>
+<li><p><a href="https://lilis.coding.me/post/visual-novel-tools/www.getchu.com" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Getchu</a><br>Getchu</p>
+</li>
+<li><p><a href="https://lilis.coding.me/post/visual-novel-tools/www.anime-sharing.com" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Anime-Sharing</a><br>国际性的（英语语言）ACG分享论坛。国外辣鸡网盘居多，也有torrent。偶尔会比nyaa早放流。</p>
+</li>
+</ul>
+<h3 id="参考资料"><a href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99" class="headerlink" title="参考资料"></a>参考资料</h3><p><a href="http://desertrain.sakura.ne.jp/kouryaku/s_engine.html" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">http://desertrain.sakura.ne.jp/kouryaku/s_engine.html</a><br><a href="http://green.ribbon.to/~erog/Wide.html" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">http://green.ribbon.to/~erog/Wide.html</a><br><a href="http://ruriko.denpa.org/200612c.html#2801" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">http://ruriko.denpa.org/200612c.html#2801</a><br><a href="http://t-yu.info/?page_id=276" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">http://t-yu.info/?page_id=276</a><br><a href="http://desertrain.sakura.ne.jp/kouryaku/s_engine.html" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">http://desertrain.sakura.ne.jp/kouryaku/s_engine.html</a></p>
+
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        <a class="post-tag button" href="https://lilis.coding.me/tags/%E7%94%B5%E5%AD%90%E5%B0%8F%E8%AF%B4/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><svg class="svg-inline--fa fa-tags fa-w-20" aria-hidden="true" data-prefix="fas" data-icon="tags" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg=""><path fill="currentColor" d="M497.941 225.941L286.059 14.059A48 48 0 0 0 252.118 0H48C21.49 0 0 21.49 0 48v204.118a48 48 0 0 0 14.059 33.941l211.882 211.882c18.744 18.745 49.136 18.746 67.882 0l204.118-204.118c18.745-18.745 18.745-49.137 0-67.882zM112 160c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm513.941 133.823L421.823 497.941c-18.745 18.745-49.137 18.745-67.882 0l-.36-.36L527.64 323.522c16.999-16.999 26.36-39.6 26.36-63.64s-9.362-46.641-26.36-63.64L331.397 0h48.721a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882z"></path></svg><!-- <i class="fas fa-tags"></i> -->电子小说</a>
+        
+        <a class="post-tag button" href="https://lilis.coding.me/tags/%E8%BD%AF%E4%BB%B6/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><svg class="svg-inline--fa fa-tags fa-w-20" aria-hidden="true" data-prefix="fas" data-icon="tags" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg=""><path fill="currentColor" d="M497.941 225.941L286.059 14.059A48 48 0 0 0 252.118 0H48C21.49 0 0 21.49 0 48v204.118a48 48 0 0 0 14.059 33.941l211.882 211.882c18.744 18.745 49.136 18.746 67.882 0l204.118-204.118c18.745-18.745 18.745-49.137 0-67.882zM112 160c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm513.941 133.823L421.823 497.941c-18.745 18.745-49.137 18.745-67.882 0l-.36-.36L527.64 323.522c16.999-16.999 26.36-39.6 26.36-63.64s-9.362-46.641-26.36-63.64L331.397 0h48.721a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882z"></path></svg><!-- <i class="fas fa-tags"></i> -->软件</a>
+        
+        <a class="post-tag button" href="https://lilis.coding.me/tags/ACG/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><svg class="svg-inline--fa fa-tags fa-w-20" aria-hidden="true" data-prefix="fas" data-icon="tags" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg=""><path fill="currentColor" d="M497.941 225.941L286.059 14.059A48 48 0 0 0 252.118 0H48C21.49 0 0 21.49 0 48v204.118a48 48 0 0 0 14.059 33.941l211.882 211.882c18.744 18.745 49.136 18.746 67.882 0l204.118-204.118c18.745-18.745 18.745-49.137 0-67.882zM112 160c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm513.941 133.823L421.823 497.941c-18.745 18.745-49.137 18.745-67.882 0l-.36-.36L527.64 323.522c16.999-16.999 26.36-39.6 26.36-63.64s-9.362-46.641-26.36-63.64L331.397 0h48.721a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882z"></path></svg><!-- <i class="fas fa-tags"></i> -->ACG</a>
+        
+        <a class="post-tag button" href="https://lilis.coding.me/tags/%E7%BB%B4%E5%9F%BA/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><svg class="svg-inline--fa fa-tags fa-w-20" aria-hidden="true" data-prefix="fas" data-icon="tags" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg=""><path fill="currentColor" d="M497.941 225.941L286.059 14.059A48 48 0 0 0 252.118 0H48C21.49 0 0 21.49 0 48v204.118a48 48 0 0 0 14.059 33.941l211.882 211.882c18.744 18.745 49.136 18.746 67.882 0l204.118-204.118c18.745-18.745 18.745-49.137 0-67.882zM112 160c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm513.941 133.823L421.823 497.941c-18.745 18.745-49.137 18.745-67.882 0l-.36-.36L527.64 323.522c16.999-16.999 26.36-39.6 26.36-63.64s-9.362-46.641-26.36-63.64L331.397 0h48.721a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882z"></path></svg><!-- <i class="fas fa-tags"></i> -->维基</a>
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <nav class="page-nav">
+    <div class="page-nav-next page-nav-item">
+      
+      <a href="https://lilis.coding.me/post/family-history/" rel="noopener noreferrer" title="晒书日，及我的家" target="_blank" referrerpolicy="no-referrer"><svg class="svg-inline--fa fa-angle-left fa-w-8" aria-hidden="true" data-prefix="fas" data-icon="angle-left" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" data-fa-i2svg=""><path fill="currentColor" d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"></path></svg><!-- <i class="fas fa-angle-left"></i> --><span class="nav-title">晒书日，及我的家</span></a>
+      
+    </div>
+    <div class="page-nav-prev page-nav-item">
+      
+      <a href="https://lilis.coding.me/post/old-japanese-note3/" rel="noopener noreferrer" title="日本語古典文法入門笔记（下）" target="_blank" referrerpolicy="no-referrer"><span class="nav-title">日本語古典文法入門笔记（下）</span><svg class="svg-inline--fa fa-angle-right fa-w-8" aria-hidden="true" data-prefix="fas" data-icon="angle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512" data-fa-i2svg=""><path fill="currentColor" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg><!-- <i class="fas fa-angle-right"></i> --></a>
+      
+    </div>
+  </nav>
+  
+  
+  
+
+<div class="comments" id="comments">
+
+
+<div id="gitalk-container"><div class="gt-container"><div class="gt-meta"><span class="gt-counts"><a class="gt-link gt-link-counts" href="https://github.com/stgapr/lilis/issues/62" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">0</a> 条评论</span><div class="gt-user"><div class="gt-user-inner"><span class="gt-user-name">未登录用户</span><span class="gt-ico gt-ico-arrdown"><span class="gt-svg"><svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" p-id="1619"><path d="M511.872 676.8c-0.003 0-0.006 0-0.008 0-9.137 0-17.379-3.829-23.21-9.97l-251.277-265.614c-5.415-5.72-8.743-13.464-8.744-21.984 0-17.678 14.33-32.008 32.008-32.008 9.157 0 17.416 3.845 23.25 10.009l228.045 241.103 228.224-241.088c5.855-6.165 14.113-10.001 23.266-10.001 8.516 0 16.256 3.32 21.998 8.736 12.784 12.145 13.36 32.434 1.264 45.233l-251.52 265.6c-5.844 6.155-14.086 9.984-23.223 9.984-0.025 0-0.051 0-0.076 0z" p-id="1620"></path></svg></span></span></div></div></div><div class="gt-header"><a class="gt-avatar-github" data-mx-warn="Empty URL"><span class="gt-ico gt-ico-github"><span class="gt-svg"><svg viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M64 524C64 719.602 189.356 885.926 364.113 947.017 387.65799 953 384 936.115 384 924.767L384 847.107C248.118 863.007 242.674 773.052 233.5 758.001 215 726.501 171.5 718.501 184.5 703.501 215.5 687.501 247 707.501 283.5 761.501 309.956 800.642 361.366 794.075 387.658 787.497 393.403 763.997 405.637 743.042 422.353 726.638 281.774 701.609 223 615.67 223 513.5 223 464.053 239.322 418.406 271.465 381.627 251.142 320.928 273.421 269.19 276.337 261.415 334.458 256.131 394.888 302.993 399.549 306.685 432.663 297.835 470.341 293 512.5 293 554.924 293 592.81 297.896 626.075 306.853 637.426 298.219 693.46 258.054 747.5 262.966 750.382 270.652 772.185 321.292 753.058 381.083 785.516 417.956 802 463.809 802 513.5 802 615.874 742.99 701.953 601.803 726.786 625.381 750.003 640 782.295 640 818.008L640 930.653C640.752 939.626 640 948.664978 655.086 948.665 832.344 888.962 960 721.389 960 524 960 276.576 759.424 76 512 76 264.577 76 64 276.576 64 524Z"></path>
+</svg>
+</span></span></a><div class="gt-header-comment"><textarea class="gt-header-textarea " placeholder="说点什么" style="overflow: hidden; overflow-wrap: break-word; resize: none; height: 72px;"></textarea><div class="gt-header-controls"><a class="gt-header-controls-tip" href="https://guides.github.com/features/mastering-markdown/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><span class="gt-ico gt-ico-tip"><span class="gt-svg"><svg viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <path d="M512 366.949535c-16.065554 0-29.982212 13.405016-29.982212 29.879884l0 359.070251c0 16.167882 13.405016 29.879884 29.982212 29.879884 15.963226 0 29.879884-13.405016 29.879884-29.879884L541.879884 396.829419C541.879884 380.763865 528.474868 366.949535 512 366.949535L512 366.949535z" p-id="3083"></path>
+  <path d="M482.017788 287.645048c0-7.776956 3.274508-15.553912 8.80024-21.181973 5.525732-5.525732 13.302688-8.80024 21.181973-8.80024 7.776956 0 15.553912 3.274508 21.079644 8.80024 5.525732 5.62806 8.80024 13.405016 8.80024 21.181973 0 7.776956-3.274508 15.656241-8.80024 21.181973-5.525732 5.525732-13.405016 8.697911-21.079644 8.697911-7.879285 0-15.656241-3.274508-21.181973-8.697911C485.292295 303.301289 482.017788 295.524333 482.017788 287.645048L482.017788 287.645048z" p-id="3084"></path>
+  <path d="M512 946.844409c-239.8577 0-434.895573-195.037873-434.895573-434.895573 0-239.8577 195.037873-434.895573 434.895573-434.895573 239.755371 0 434.895573 195.037873 434.895573 434.895573C946.895573 751.806535 751.755371 946.844409 512 946.844409zM512 126.17088c-212.740682 0-385.880284 173.037274-385.880284 385.777955 0 212.740682 173.037274 385.777955 385.880284 385.777955 212.740682 0 385.777955-173.037274 385.777955-385.777955C897.777955 299.208154 724.740682 126.17088 512 126.17088z" p-id="3085"></path>
+</svg>
+</span><span class="gt-ico-text">支持 Markdown 语法</span></span></a><button class="gt-btn gt-btn-preview"><span class="gt-btn-text">预览</span></button><button class="gt-btn gt-btn-login"><span class="gt-btn-text">使用 GitHub 登录</span></button></div></div></div><div class="gt-comments"><div style="position: relative;"></div><p class="gt-comments-null">来做第一个留言的人吧！</p></div></div></div>
+
+
+
+
+
+</div>
+
+
+
+  
+</div>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar" style="background: url(/images/background.png);">
+  
+  <div class="search">
+    <div class="form-group">
+      <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg><!-- <i class="fas fa-search"></i> --><input type="search" id="search-input" name="q" results="0" placeholder="Search" class="form-control">
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="assets/1571153274-4bbbcfe207e0400d0f3f9d493199863e.png" alt="Prism">
+  
+  <h1 class="author-name">Prism</h1>
+  <h2 class="author-description"></h2>
+  <div class="site-count">
+    
+    <div class="archives-count">
+      <div class="site-count-title">Archives</div>
+      <div><a href="https://lilis.coding.me/archives/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">78</a></div>
+    </div>
+    
+    
+    
+    <span class="site-count-divider divider">|</span>
+    
+    <div class="categories-count">
+      <div class="site-count-title">Categories</div>
+      <div><a href="https://lilis.coding.me/categories/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">4</a></div>
+    </div>
+    
+    
+    
+    <span class="site-count-divider divider">|</span>
+    
+    <div class="tags-count">
+      <div class="site-count-title">Tags</div>
+      <div><a href="https://lilis.coding.me/tags/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">85</a></div>
+    </div>
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="https://lilis.coding.me/atom.xml" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><svg class="svg-inline--fa fa-rss fa-w-14" aria-hidden="true" data-prefix="fas" data-icon="rss" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><path fill="currentColor" d="M128.081 415.959c0 35.369-28.672 64.041-64.041 64.041S0 451.328 0 415.959s28.672-64.041 64.041-64.041 64.04 28.673 64.04 64.041zm175.66 47.25c-8.354-154.6-132.185-278.587-286.95-286.95C7.656 175.765 0 183.105 0 192.253v48.069c0 8.415 6.49 15.472 14.887 16.018 111.832 7.284 201.473 96.702 208.772 208.772.547 8.397 7.604 14.887 16.018 14.887h48.069c9.149.001 16.489-7.655 15.995-16.79zm144.249.288C439.596 229.677 251.465 40.445 16.503 32.01 7.473 31.686 0 38.981 0 48.016v48.068c0 8.625 6.835 15.645 15.453 15.999 191.179 7.839 344.627 161.316 352.465 352.465.353 8.618 7.373 15.453 15.999 15.453h48.068c9.034-.001 16.329-7.474 16.005-16.504z"></path></svg><!-- <i class="fas fa-rss"></i> -->RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+    
+    
+    
+    <hr>
+    <div class="post-toc sidebar-item" id="toc-div">
+      <div><svg class="svg-inline--fa fa-list-ol fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="list-ol" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M3.263 139.527c0-7.477 3.917-11.572 11.573-11.572h15.131V88.078c0-5.163.534-10.503.534-10.503h-.356s-1.779 2.67-2.848 3.738c-4.451 4.273-10.504 4.451-15.666-1.068l-5.518-6.231c-5.342-5.341-4.984-11.216.534-16.379l21.72-19.938C32.815 33.602 36.732 32 42.785 32H54.89c7.656 0 11.749 3.916 11.749 11.572v84.384h15.488c7.655 0 11.572 4.094 11.572 11.572v8.901c0 7.477-3.917 11.572-11.572 11.572H14.836c-7.656 0-11.573-4.095-11.573-11.572v-8.902zM2.211 304.591c0-47.278 50.955-56.383 50.955-69.165 0-7.18-5.954-8.755-9.28-8.755-3.153 0-6.479 1.051-9.455 3.852-5.079 4.903-10.507 7.004-16.111 2.451l-8.579-6.829c-5.779-4.553-7.18-9.805-2.803-15.409C13.592 201.981 26.025 192 47.387 192c19.437 0 44.476 10.506 44.476 39.573 0 38.347-46.753 46.402-48.679 56.909h39.049c7.529 0 11.557 4.027 11.557 11.382v8.755c0 7.354-4.028 11.382-11.557 11.382h-67.94c-7.005 0-12.083-4.028-12.083-11.382v-4.028zM5.654 454.61l5.603-9.28c3.853-6.654 9.105-7.004 15.584-3.152 4.903 2.101 9.63 3.152 14.359 3.152 10.155 0 14.358-3.502 14.358-8.23 0-6.654-5.604-9.106-15.934-9.106h-4.728c-5.954 0-9.28-2.101-12.258-7.88l-1.05-1.926c-2.451-4.728-1.226-9.806 2.801-14.884l5.604-7.004c6.829-8.405 12.257-13.483 12.257-13.483v-.35s-4.203 1.051-12.608 1.051H16.685c-7.53 0-11.383-4.028-11.383-11.382v-8.755c0-7.53 3.853-11.382 11.383-11.382h58.484c7.529 0 11.382 4.027 11.382 11.382v3.327c0 5.778-1.401 9.806-5.079 14.183l-17.509 20.137c19.611 5.078 28.716 20.487 28.716 34.845 0 21.363-14.358 44.126-48.503 44.126-16.636 0-28.192-4.728-35.896-9.455-5.779-4.202-6.304-9.805-2.626-15.934zM144 132h352c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H144c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h352c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H144c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h352c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H144c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg><!-- <i class="fas fa-list-ol"></i> -->Table of Contents</div>
+      <div class="post-toc-content"><ol class="list-group toc"><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E4%B8%BB%E8%A6%81%E7%A8%8B%E5%BA%8F"><span class="toc-text">主要程序</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#%E6%B8%B8%E6%88%8F%E5%BC%95%E6%93%8E"><span class="toc-text">游戏引擎</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#%E5%A2%9E%E5%BC%BA%E6%8A%80%E6%9C%AF"><span class="toc-text">增强技术</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E7%AC%AC%E4%B8%89%E6%96%B9%E8%BD%AF%E4%BB%B6"><span class="toc-text">第三方软件</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#%E8%BD%AC%E5%8C%BA%E3%80%81%E5%85%8DCD%E7%AD%89%E5%90%AF%E5%8A%A8%E5%B7%A5%E5%85%B7"><span class="toc-text">转区、免CD等启动工具</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#%E6%9C%BA%E5%99%A8%E7%BF%BB%E8%AF%91%E5%B7%A5%E5%85%B7"><span class="toc-text">机器翻译工具</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#%E8%B5%84%E6%BA%90%E6%8F%90%E5%8F%96%E5%B7%A5%E5%85%B7"><span class="toc-text">资源提取工具</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link active" href="#%E7%BD%91%E7%AB%99"><span class="toc-text">网站</span></a><ol class="list-group toc-child"><li class="toc-item toc-level-4"><a class="list-group-item toc-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E3%80%81%E7%BB%B4%E5%9F%BA%E7%AB%99%E3%80%81%E6%A0%87%E8%AE%B0%E7%AB%99"><span class="toc-text">数据库、维基站、标记站</span></a></li><li class="toc-item toc-level-4"><a class="list-group-item toc-link active" href="#%E8%B5%84%E6%BA%90-%E8%B4%A9%E5%94%AE%E7%AB%99"><span class="toc-text">资源/贩售站</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="list-group-item toc-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="toc-text">参考资料</span></a></li></ol></div>
+    </div>
+    
+    
+    
+    <hr>
+    <div class="social-link sidebar-item">
+      <div><svg class="svg-inline--fa fa-address-card fa-w-16" aria-hidden="true" data-prefix="far" data-icon="address-card" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M464 64H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zm-6 336H54a6 6 0 0 1-6-6V118a6 6 0 0 1 6-6h404a6 6 0 0 1 6 6v276a6 6 0 0 1-6 6zm-54-176H300c-6.627 0-12-5.373-12-12v-16c0-6.627 5.373-12 12-12h104c6.627 0 12 5.373 12 12v16c0 6.627-5.373 12-12 12zm0 72H300c-6.627 0-12-5.373-12-12v-16c0-6.627 5.373-12 12-12h104c6.627 0 12 5.373 12 12v16c0 6.627-5.373 12-12 12zM176 160c33.137 0 60 26.863 60 60s-26.863 60-60 60-60-26.863-60-60 26.863-60 60-60zm68.731 125.183l-26.742-6.686c-28.096 20.209-62.152 15.699-83.978 0l-26.742 6.686C91.243 289.189 80 303.589 80 320.108V334c0 9.941 8.059 18 18 18h156c9.941 0 18-8.059 18-18v-13.892c0-16.519-11.243-30.919-27.269-34.925z"></path></svg><!-- <i class="far fa-address-card"></i> -->Social Links<p></p></div>
+      <ul>
+        
+        <li><svg class="svg-inline--fa fa-envelope fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="envelope" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"></path></svg><!-- <i class="fas fa-envelope"></i> --><a href="mailto:stgapr29@gmail.com" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Email</a></li>
+        
+        <li><svg class="svg-inline--fa fa-github fa-w-16" aria-hidden="true" data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg=""><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg><!-- <i class="fab fa-github"></i> --><a href="https://github.com/stgapr" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Github</a></li>
+        
+      </ul>
+    </div>
+    
+    
+    <hr>
+    <div class="blogroll sidebar-item">
+      <div><svg class="svg-inline--fa fa-link fa-w-16" aria-hidden="true" data-prefix="fas" data-icon="link" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M326.612 185.391c59.747 59.809 58.927 155.698.36 214.59-.11.12-.24.25-.36.37l-67.2 67.2c-59.27 59.27-155.699 59.262-214.96 0-59.27-59.26-59.27-155.7 0-214.96l37.106-37.106c9.84-9.84 26.786-3.3 27.294 10.606.648 17.722 3.826 35.527 9.69 52.721 1.986 5.822.567 12.262-3.783 16.612l-13.087 13.087c-28.026 28.026-28.905 73.66-1.155 101.96 28.024 28.579 74.086 28.749 102.325.51l67.2-67.19c28.191-28.191 28.073-73.757 0-101.83-3.701-3.694-7.429-6.564-10.341-8.569a16.037 16.037 0 0 1-6.947-12.606c-.396-10.567 3.348-21.456 11.698-29.806l21.054-21.055c5.521-5.521 14.182-6.199 20.584-1.731a152.482 152.482 0 0 1 20.522 17.197zM467.547 44.449c-59.261-59.262-155.69-59.27-214.96 0l-67.2 67.2c-.12.12-.25.25-.36.37-58.566 58.892-59.387 154.781.36 214.59a152.454 152.454 0 0 0 20.521 17.196c6.402 4.468 15.064 3.789 20.584-1.731l21.054-21.055c8.35-8.35 12.094-19.239 11.698-29.806a16.037 16.037 0 0 0-6.947-12.606c-2.912-2.005-6.64-4.875-10.341-8.569-28.073-28.073-28.191-73.639 0-101.83l67.2-67.19c28.239-28.239 74.3-28.069 102.325.51 27.75 28.3 26.872 73.934-1.155 101.96l-13.087 13.087c-4.35 4.35-5.769 10.79-3.783 16.612 5.864 17.194 9.042 34.999 9.69 52.721.509 13.906 17.454 20.446 27.294 10.606l37.106-37.106c59.271-59.259 59.271-155.699.001-214.959z"></path></svg><!-- <i class="fas fa-link"></i> -->Blogroll</div>
+      <ul>
+        
+        <li><a href="https://yuukoamamiya.github.io/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">雨宫优子</a></li>
+        
+        <li><a href="https://plumz.me/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">plum</a></li>
+        
+        <li><a href="https://incises.github.io/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Incises</a></li>
+        
+        <li><a href="https://sh.alynx.moe/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">喵's StackHarbor</a></li>
+        
+        <li><a href="https://pockies.github.io/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Pockies</a></li>
+        
+        <li><a href="http://noodlefighter.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">虾包</a></li>
+        
+        <li><a href="https://www.natech.top/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">无聊人士的低语</a></li>
+        
+        <li><a href="https://linhai1990.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">四海为家的兔子</a></li>
+        
+        <li><a href="https://suzumiyashirone.github.io/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">涼宮シロネ</a></li>
+        
+        <li><a href="https://www.gazyip.cn/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">八个比特</a></li>
+        
+        <li><a href="https://luojia.me/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">佳佳酱</a></li>
+        
+        <li><a href="https://lnet.me/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">澜灯</a></li>
+        
+        <li><a href="https://touko.moe/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Touko</a></li>
+        
+        <li><a href="https://taoxinhao.cn/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">陶新昊</a></li>
+        
+        <li><a href="https://www.wikimoe.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">WIKIMOE</a></li>
+        
+        <li><a href="http://www.misakas.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">misakas</a></li>
+        
+        <li><a href="https://blog.ixk.me/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">ixk.me</a></li>
+        
+        <li><a href="http://blog.dangodango.cn/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">团子的小小世界</a></li>
+        
+        <li><a href="http://blog.9bie.org:8081/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">⑨bie</a></li>
+        
+        <li><a href="https://utsuho.cn/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">喵の空</a></li>
+        
+        <li><a href="https://www.rabbittu.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">某兔子の御用花园</a></li>
+        
+        <li><a href="http://pea3nut.info/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">花生PeA</a></li>
+        
+        <li><a href="http://www.iinorii.com/blog/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">いつの間に</a></li>
+        
+        <li><a href="https://www.senayuki.top/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">纷飞的小屋</a></li>
+        
+        <li><a href="http://whitebox.im/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">白色箱子</a></li>
+        
+        <li><a href="http://code5light.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">多事之秋</a></li>
+        
+        <li><a href="https://diygod.me/friends/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">DIYGOD</a></li>
+        
+        <li><a href="https://ephen.me/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Ephen</a></li>
+        
+        <li><a href="https://ikk.me/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">ikk.me</a></li>
+        
+        <li><a href="https://ikmoe.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">月宅酱</a></li>
+        
+        <li><a href="https://www.rexskz.info/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">ReX/Zeng</a></li>
+        
+        <li><a href="https://2heng.xin/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">さくら荘の白猫</a></li>
+        
+        <li><a href="https://www.fczbl.vip/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">犬's blog</a></li>
+        
+        <li><a href="https://aoaoao.me/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Aaron</a></li>
+        
+        <li><a href="https://blog.0xbbc.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">3004</a></li>
+        
+        <li><a href="http://mouto.org/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">卜卜口</a></li>
+        
+        <li><a href="https://wind.moe/links/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Windless</a></li>
+        
+        <li><a href="https://oao.moe/links/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">oao</a></li>
+        
+        <li><a href="https://zankyo.cc/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">青花鱼</a></li>
+        
+        <li><a href="https://blog.uuz.moe/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">雨宮千夏の博麗神社</a></li>
+        
+        <li><a href="http://im.dimpurr.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">钉子の次元</a></li>
+        
+        <li><a href="http://acgtyrant.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">acgtyrant</a></li>
+        
+        <li><a href="https://asaba.sakuragawa.moe/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">樱川浅羽</a></li>
+        
+        <li><a href="https://buta.moe/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Take Space</a></li>
+        
+        <li><a href="http://takumiyuki.hatenablog.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">TakumiYuki</a></li>
+        
+        <li><a href="https://flandre-scarlet.moe/blog/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Re:memory</a></li>
+        
+      </ul>
+    </div>
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+        
+      </div>
+    </body>
+  </html>

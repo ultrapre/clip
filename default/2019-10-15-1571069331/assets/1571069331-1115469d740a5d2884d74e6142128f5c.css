@@ -1,0 +1,50 @@
+ 
+
+ 
+
+html {
+    font-family: Times, serif;
+    font-size: 12pt;
+}
+
+body {
+     
+    margin: 1.5cm;
+}
+
+a, a:visited, a.nonexistent, a.badinterwiki {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.info a {
+    color: gray;
+}
+
+pre {
+    font-size: 10pt;
+}
+
+a.interwiki:before, a.badinterwiki:before {
+    content: attr(title) ":";
+}
+
+a.interwiki img, a.badinterwiki img {
+    display: none;
+}
+
+.footnotes div {
+    width: 5em;
+    border-top: 1pt solid gray;
+}
+
+ 
+
+#header, #sidebar, #footer, #timings, #credits, #interwiki, #pagelocation {
+    display: none;
+}
+

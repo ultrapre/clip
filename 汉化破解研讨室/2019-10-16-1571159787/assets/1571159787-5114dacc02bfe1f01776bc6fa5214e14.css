@@ -1,0 +1,74 @@
+
+      .darkmode-layer {
+        position: fixed;
+        pointer-events: none;
+        background: #fff;
+        transition: all 0.3s ease;
+        mix-blend-mode: difference;
+      }
+
+      .darkmode-layer--button {
+        width: 2.9rem;
+        height: 2.9rem;
+        border-radius: 50%;
+        right: 32px;
+        bottom: 32px;
+        left: unset;
+      }
+
+      .darkmode-layer--simple {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        transform: scale(1) !important;
+      }
+
+      .darkmode-layer--expanded {
+        transform: scale(100);
+        border-radius: 0;
+      }
+
+      .darkmode-layer--no-transition {
+        transition: none;
+      }
+
+      .darkmode-toggle {
+        background: #100f2c;
+        width: 3rem;
+        height: 3rem;
+        position: fixed;
+        border-radius: 50%;
+        right: 32px;
+        bottom: 32px;
+        left: unset;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .darkmode-toggle--white {
+        background: #fff;
+      }
+
+      .darkmode-background {
+        background: #fff;
+        position: fixed;
+        pointer-events: none;
+        z-index: -10;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
+
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        .darkmode-toggle {display: none !important}
+      }
+
+      @supports (-ms-ime-align:auto), (-ms-accelerator:true) {
+        .darkmode-toggle {display: none !important}
+      }
+    

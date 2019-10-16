@@ -1,0 +1,1052 @@
+
+  <!DOCTYPE html>
+  <html id="" class="">
+    <!-- OriginalSrc: https://www.iteye.com/blog/rednaxelafx-139666 -->
+    <head>
+      <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <title>今天看到的几个authoring tool/game engine - Script Ahead, Code Behind - ITeye博客</title>
+      
+<link rel="shortcut icon" href="assets/1571210810-1cd7c6fd0de855e9efac8dbe4a274b55.ico" type="image/x-icon" referrerpolicy="no-referrer">
+
+
+<link href="assets/1571210810-24c828ef0717ef81511085cae5ef164a.css" media="screen" rel="stylesheet" type="text/css" referrerpolicy="no-referrer">
+<link href="assets/1571210810-368b60bb216b4f4bf566fad6964a61f9.css" media="screen" rel="stylesheet" type="text/css" referrerpolicy="no-referrer">
+<link href="assets/1571210810-396dd74c56d84598b8a22d8cb10eaf3a.css" media="screen" rel="stylesheet" type="text/css" referrerpolicy="no-referrer">
+<link rel="stylesheet" type="text/css" href="assets/1571210810-9aeb703993455cc093fff678a2ad3401.css" referrerpolicy="no-referrer">
+<link rel="stylesheet" type="text/css" href="assets/1571210810-05fb66a2c1140728ea8d74162a702c22.css" referrerpolicy="no-referrer">
+
+
+<style class="darkreader darkreader--fallback" media="screen"></style>
+<style class="darkreader darkreader--text" media="screen"></style>
+<style class="darkreader darkreader--invert" media="screen"></style>
+<style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}</style>
+<style class="darkreader darkreader--user-agent" media="screen">html {
+    background-color: #191a1b !important;
+}
+html, body, input, textarea, select, button {
+    background-color: #191a1b;
+}
+html, body, input, textarea, select, button {
+    border-color: #5a5956;
+    color: #f0ebe2;
+}
+a {
+    color: #4791e7;
+}
+table {
+    border-color: #4f4e4c;
+}
+::placeholder {
+    color: #bfb9ac;
+}
+::selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+::-moz-selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #565a0f !important;
+    color: #f0ebe2 !important;
+}
+::-webkit-scrollbar {
+    background-color: #1d1f1f;
+    color: #cbc5b9;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #2c2d2d;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #343636;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #404142;
+}
+::-webkit-scrollbar-corner {
+    background-color: #191a1b;
+}
+* {
+    scrollbar-color: #2c2d2d #1d1f1f;
+}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--override" media="screen">.jfk-bubble {
+    background-color: #000000 !important;
+}
+.vimvixen-hint {
+    background-color: #765500 !important;
+    border-color: #d5b22e !important;
+    color: #f9edcc !important;
+}</style>
+<style>
+ 
+.hide-main-content{
+    position: relative;
+}
+.hide-article-box {
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    bottom: -1px;
+    width: 100%;
+    padding-top: 160px;
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(255,255,255,0)),color-stop(70%, #fff));
+    background-image: linear-gradient(-180deg,rgba(255,255,255,0) 0%,#fff 70%);
+}
+.hide-article-box #btn-readmore{
+    color: #ca0c16;
+    border: 1px solid #ca0c16;
+    margin: 10px auto;
+    padding: 0 8px;
+    display: block;
+    font-size: 14px;
+    border-radius: 4px;
+    text-align: center;
+    background-color: transparent;
+    height: 34px;
+    width: 74px;
+    line-height: 32px;
+    min-width: 72px;
+    cursor: pointer;
+}
+.hide-article-box #btn-readmore:hover{
+    background: #ca0c16;
+    color:#fff;
+    text-decoration: none;
+}
+</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--cors" media="screen">body,dd,div,dl,dt,form,h1,h2,h3,h4,h5,h6,html,input,li,ol,p,select,td,textarea,th,ul{margin:0;padding:0}*{box-sizing:border-box}body,html{min-height:100%}h1,h2,h3,h4,h5,h6{font-weight:400}.recommend-right ul,ol{list-style:none}.recommend-right img{border:none;vertical-align:middle}.recommend-right a{text-decoration:none;color:#232323}.recommend-right table{border-collapse:collapse;table-layout:fixed}.recommend-right input,textarea{outline:0;border:none}.recommend-right textarea{resize:none;overflow:auto}.clearfix:after{content:" ";display:block;height:0;visibility:hidden;clear:both}.recommend{overflow:hidden}.newbox.recommend{overflow:hidden}svg.icon{width:1em;height:1em;vertical-align:-.15em;fill:currentColor;overflow:hidden;margin-right:4px}svg.icon.icon-level{width:3em;height:1em}.recommend-right{float:right;width:300px;margin-left:8px;background-color:#fff;-webkit-box-shadow:0 2px 4px 0 rgba(0,0,0,.05);box-shadow:0 2px 4px 0 rgba(0,0,0,.05)}.recommend-right .recommend-fixed-box{background-color:#fff}.recommend-right .right-item{padding:8px 0;overflow:hidden;word-break:break-all;margin-left:8px;margin-right:8px;border-bottom:1px solid #f5f5f5;box-sizing:border-box}.recommend-right .right-item:hover .content h5{color:#ca0c16}.recommend-right .right-item .content{margin-bottom:4px}.recommend-right .right-item .content img{width:58px;height:36px}.recommend-right .right-item .content h5{display:inline;font-size:14px;color:#5c5c5c;letter-spacing:0;line-height:20px;max-height:44px;overflow:hidden;font-weight:500;margin-right:4px;white-space:nowrap;text-overflow:ellipsis}.recommend-right .right-item .content .h5width{width:76%;margin-left:8px}.recommend-right .right-item .content span{margin-right:8px;font-size:12px;color:#999;letter-spacing:0;line-height:20px}.recommend-right .right-item .content .download_mark{border:1px solid #e3e3e3;padding:2px;margin-right:4px}.recommend-right .right-item .right-item-desc{font-size:12px;color:#999;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--cors" media="screen">.{font-family:""!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.fanyi:before{content:"\e661"}.shouji:before{content:"\e66f"}.yuedushu:before{content:"\e682"}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">@keyframes fadeInOpacity{0%{opacity:0}to{opacity:1}}:hover>*>.fbvd--wrapper{animation-name:fadeInOpacity;animation-duration:.3s;opacity:1}.fbvd--wrapper{position:absolute;top:10px;left:10px;opacity:0;text-align:center;margin:0;z-index:5}.fbvd--wrapper a{background: url("") no-repeat 3px 4.55px; background-color: #fff; display:inline-block;font:700 14px Helvetica,Arial,sans-serif;color:#4b4f56;text-decoration:none;vertical-align:middle;padding:0px 8px 0px;margin-right:8px;border-radius:2px; line-height: 22px; padding-left:19px; border: 1px solid #e7e7e7; background-size: 13px}.fbvd--wrapper a:last-child{margin-right:0}.fbvd--wrapper a:hover{text-decoration:none}.fbvd--wrapper a:focus{box-shadow:0 0 1px 2px rgba(88,144,255,.75),0 1px 1px rgba(0,0,0,.15);outline:none}.fbvd--wrapper b{font-size:13px;position:relative;top:1px;color:#3b5998;font-weight:400}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+
+      
+    </head>
+    <body class="mx-wc-selected-elem mx-wc-1571210810"><svg aria-hidden="true" style="position: absolute; width: 0px; height: 0px; overflow: hidden;"><symbol id="fanyi" viewBox="0 0 1084 1024"><path d="M602.416429 647.439059v75.390494h120.470588v-120.470588h-75.029082l195.493647-193.939577V481.882353h180.597459c33.322165 0 60.289506 26.967341 60.289506 60.235294 0 0.722824-0.012047 1.439624-0.036141 2.1504v236.640377c0.024094 0.710776 0.036141 1.427576 0.036141 2.1504 0 33.261929-26.967341 60.235294-60.235294 60.235294H843.357606v120.470588c0 33.261929-26.967341 60.229271-60.235294 60.22927s-60.235294-26.967341-60.235295-60.235294v-120.470588H542.090782c-33.267953 0-60.235294-26.967341-60.235294-60.235294l0.006024-16.022588 120.554917-119.597177z m240.935153-45.080094v120.470588h120.380235v-120.470588h-120.380235z m-403.534306-46.585977l-27.732329-67.861082H186.479676l-70.716235 167.936c-12.9024 30.659765-48.224376 45.056-78.884141 32.141553-30.659765-12.908424-45.049976-48.2304-32.141553-78.890165l240.941176-572.223247A60.253365 60.253365 0 0 1 301.782076 0.006024a60.253365 60.253365 0 0 1 56.380236 37.466352l174.242635 426.429742 352.798117-350.033318c23.612235-23.431529 61.7472-23.280941 85.17873 0.331294 23.431529 23.612235 23.280941 61.753224-0.331294 85.184753L200.394029 963.029835c-23.612235 23.431529-61.753224 23.280941-85.184753-0.331294-23.431529-23.612235-23.280941-61.753224 0.337318-85.184753l324.270682-321.7408z m-138.842353-339.787294L237.209841 367.441318H362.860664L300.974923 215.979671z"></path></symbol><symbol id="shouji" viewBox="0 0 1024 1024"><path d="M768 670.72V102.4H256v568.32h512z m0 51.2H256v199.68h512v-199.68z m102.4-619.52v819.2c0 56.55552-45.84448 102.4-102.4 102.4H256c-56.55552 0-102.4-45.84448-102.4-102.4V102.4C153.6 45.84448 199.44448 0 256 0h512c56.55552 0 102.4 45.84448 102.4 102.4zM512 870.4c-28.27776 0-51.2-22.92224-51.2-51.2s22.92224-51.2 51.2-51.2 51.2 22.92224 51.2 51.2-22.92224 51.2-51.2 51.2z"></path></symbol><symbol id="yuedushu" viewBox="0 0 1462 1024"><path d="M731.428571 1024c-259.320686 0-495.879314-146.753829-709.668571-440.246857-29.015771-39.840914-29.015771-103.665371 0-143.506286C235.556571 146.761143 472.107886 0 731.428571 0c259.320686 0 495.879314 146.753829 709.668572 440.246857 29.015771 39.840914 29.015771 103.665371 0 143.506286C1227.300571 877.238857 990.749257 1024 731.428571 1024z m0-841.142857c-195.2256 0-375.632457 107.132343-545.865142 329.142857 170.232686 222.010514 350.639543 329.142857 545.865142 329.142857 195.2256 0 375.632457-107.132343 545.865143-329.142857C1107.053714 289.989486 926.646857 182.857143 731.428571 182.857143z m0 621.714286c-161.579886 0-292.571429-130.991543-292.571428-292.571429s130.991543-292.571429 292.571428-292.571429 292.571429 130.991543 292.571429 292.571429-130.991543 292.571429-292.571429 292.571429z m0-182.857143c60.591543 0 109.714286-49.122743 109.714286-109.714286 0-60.591543-49.122743-109.714286-109.714286-109.714286-60.591543 0-109.714286 49.122743-109.714285 109.714286 0 60.591543 49.122743 109.714286 109.714285 109.714286z"></path></symbol></svg>
+  
+
+
+
+  <div id="header">
+    <div id="blog_site_nav">
+  <a href="https://www.iteye.com/" class="homepage" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">首页</a>
+  <a href="https://www.iteye.com/news" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">资讯</a>
+  <a href="https://www.iteye.com/magazines" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">精华</a>
+  <a href="https://www.iteye.com/forums" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">论坛</a>
+  <a href="https://www.iteye.com/ask" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">问答</a>
+  <a href="https://www.iteye.com/blogs" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">博客</a>
+  <a href="https://www.iteye.com/blogs/subjects" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">专栏</a>
+  <a href="https://www.iteye.com/groups" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">群组</a>
+  <a href="https://www.iteye.com/resources" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">下载</a>
+</div>
+
+    <div id="user_nav">
+
+      <a href="https://www.iteye.com/login" class="welcome" title="登录" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">您还未登录!</a>
+    <a href="https://www.iteye.com/login" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">登录</a>
+    <a href="https://www.iteye.com/signup" class="nobg" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">注册</a>
+    <!--<a href="https://passport.csdn.net/account/mobileregister?from=https://www.iteye.com">注册</a>-->
+  </div>
+
+
+  </div>
+
+  <div id="page">
+<!--    <div id="branding" class="clearfix">-->
+<!--      <div id="blog_name">-->
+<!--        <h1><a href="/">-->
+<!--            </a></h1>-->
+<!--      </div>-->
+<!--      <div id='fd'></div>-->
+<!--      <div id="blog_navbar">-->
+<!--        <ul>-->
+          
+          
+          
+          
+          
+          
+<!--        </ul>-->
+
+<!--        <div class="search">-->
+<!--          <form action="/blog/search" method="get">-->
+<!--            <input class="search_text" id="query" name="query" style="margin-left: 10px;width: 110px;" type="text"-->
+<!--              value="" />-->
+<!--            <input class="submit_search" type="submit" value="" />-->
+<!--          </form>-->
+<!--        </div>-->
+<!--        <div id="fd"></div>-->
+<!--      </div>-->
+<!--    </div>-->
+    `
+    <div id="content" class="clearfix">
+      <div id="local">
+        <div class="local_top"></div>
+        <div id="blog_owner">
+  <div id="blog_owner_logo"><a href="https://www.iteye.com/blog/user/rednaxelafx" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img alt="RednaxelaFX的博客" class="logo" src="assets/1571210810-c03517735de6a0bce33363bc3470bd21.jpg" title="RednaxelaFX的博客: Script Ahead, Code Behind" width=""></a></div>
+  <div id="blog_owner_name">RednaxelaFX</div>
+</div>
+
+        <div id="blog_actions">
+          <ul>
+            <li>浏览:
+              2606380 次</li>
+            
+            <li>性别:
+              <img alt="Icon_minigender_1" src="assets/1571210810-66d5ad21d1ac94ca1cc550272a683dbb.gif" title="男">
+            </li>
+            
+            
+            <li>来自:
+              海外
+            </li>
+            
+            <li>
+              <img src="assets/1571210810-6af3ac4fb409543eedec44a2494703ce.gif">
+            </li>
+            
+          </ul>
+        </div>
+
+        <div id="user_visits" class="clearfix">
+          <h5>最近访客 <span style="font-weight:normal;font-size:12px;padding-left:30px;">
+              <a href="https://www.iteye.com/blog/user_visits" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">更多访客&gt;&gt;</a></span></h5>
+          
+          <div class="user_visit">
+            <div class="logo"><a href="https://www.iteye.com/blog/user/zoulei" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img alt="zoulei的博客" class="logo" src="assets/1571210810-c4b32610104e4aa0a99ec1cf83cb32ab.gif" title="zoulei的博客: " width="48px"></a></div>
+            <div class="left">
+              <a href="https://www.iteye.com/blog/user/zoulei" target="_blank" title="zoulei" referrerpolicy="no-referrer" rel="noopener noreferrer">zoulei</a>
+            </div>
+          </div>
+          
+          <div class="user_visit">
+            <div class="logo"><a href="https://www.iteye.com/blog/user/970655147" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img alt="970655147的博客" class="logo" src="assets/1571210810-c4b32610104e4aa0a99ec1cf83cb32ab.gif" title="970655147的博客: " width="48px"></a></div>
+            <div class="left">
+              <a href="https://www.iteye.com/blog/user/970655147" target="_blank" title="970655147" referrerpolicy="no-referrer" rel="noopener noreferrer">970655147</a>
+            </div>
+          </div>
+          
+          <div class="user_visit">
+            <div class="logo"><a href="https://www.iteye.com/blog/user/aresen" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img alt="aresen的博客" class="logo" src="assets/1571210810-c4b32610104e4aa0a99ec1cf83cb32ab.gif" title="aresen的博客: " width="48px"></a></div>
+            <div class="left">
+              <a href="https://www.iteye.com/blog/user/aresen" target="_blank" title="aresen" referrerpolicy="no-referrer" rel="noopener noreferrer">aresen</a>
+            </div>
+          </div>
+          
+          <div class="user_visit">
+            <div class="logo"><a href="https://www.iteye.com/blog/user/xx-1994" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img alt="xx_1994的博客" class="logo" src="assets/1571210810-c4b32610104e4aa0a99ec1cf83cb32ab.gif" title="xx_1994的博客: " width="48px"></a></div>
+            <div class="left">
+              <a href="https://www.iteye.com/blog/user/xx-1994" target="_blank" title="xx_1994" referrerpolicy="no-referrer" rel="noopener noreferrer">xx_1994</a>
+            </div>
+          </div>
+          
+        </div>
+
+        <div id="user_title_list" class="clearfix">
+          <h5>博主相关</h5>
+          <li>
+            <a href="https://www.iteye.com/blog/user/rednaxelafx" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">博客</a>
+          </li>
+
+          <li>
+            <a href="https://www.iteye.com/weibo" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">微博</a>
+          </li>
+
+          <li>
+            <a href="https://www.iteye.com/album" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">相册</a>
+          </li>
+
+          <li>
+            <a href="https://www.iteye.com/link" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">收藏</a>
+          </li>
+
+          <li>
+            <a href="https://www.iteye.com/blog/guest_book" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">留言</a>
+          </li>
+
+          <li>
+            <a href="https://www.iteye.com/blog/profile" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">关于我</a>
+          </li>
+        </div>
+
+        
+
+                <div id="blog_menu">
+          <h5>文章分类</h5>
+          <ul>
+            <li>
+              <a href="https://www.iteye.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">全部博客 (430)</a>
+            </li>
+            
+            <li>
+              <a href="https://www.iteye.com/category/21342" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Programming Languages (23)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/29010" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Compiler (20)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/61298" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Virtual Machine (57)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/162321" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Garbage Collection (4)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/162318" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">HotSpot VM (26)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/78968" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Mono (2)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/33627" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">SSCLI Rotor (1)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/60345" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Harmony (0)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/31968" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">DLR (19)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/29044" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Ruby (28)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/21339" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">C# (38)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/51666" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">F# (3)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/58920" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Haskell (0)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/27795" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Scheme (1)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/28215" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Regular Expression (5)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/43041" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Python (4)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/26952" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">ECMAScript (2)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/22618" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">JavaScript (18)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/22068" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">ActionScript (7)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/27153" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Squirrel (2)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/36305" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">C (6)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/22307" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">C++ (10)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/21340" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">D (2)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/66462" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">.NET (13)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/22617" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Java (86)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/146196" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Scala (1)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/99374" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Groovy (3)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/21352" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Optimization (6)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/27144" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Data Structure and Algorithm (3)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/34556" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Books (4)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/52245" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">WPF (1)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/24366" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Game Engines (7)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/22003" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">吉里吉里 (12)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/23065" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">UML (1)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/24338" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Reverse Engineering (11)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/22696" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">NSIS (4)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/24088" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Utilities (3)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/29744" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Design Patterns (1)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/25057" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Visual Studio (9)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/54389" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Windows 7 (3)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/73928" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">x86 Assembler (1)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/22830" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Android (2)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/25305" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">School Assignment / Test (6)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/24349" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Anti-virus (1)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/27193" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">REST (1)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/28651" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Profiling (1)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/23669" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">misc (39)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/23661" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">NetOA (12)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/27815" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">rant (6)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/65667" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">anime (5)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/28622" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Links (12)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/165300" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">CLR (7)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/165301" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">GC (1)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/226933" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">OpenJDK (2)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/251929" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">JVM (4)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/275192" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">KVM (0)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/279009" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Rhino (1)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/279045" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">LINQ (2)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/279221" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">JScript (0)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/280142" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Nashorn (0)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/287977" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Dalvik (1)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/293492" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">DTrace (0)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/302419" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">LLVM (0)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/329856" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">MSIL (0)</a>
+              </li>
+              
+          </ul>
+        </div>
+        <div id="month_blogs">
+          <h5>社区版块</h5>
+          <ul>
+            <li>
+              <a href="https://www.iteye.com/blog/news" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">我的资讯</a> (
+              1)</li>
+            <li>
+              <a href="https://www.iteye.com/blog/post" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">我的论坛</a> (
+              576)
+            </li>
+            <li>
+              <a href="https://www.iteye.com/blog/answered_problems" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">我的问答</a> (
+              364)</li>
+          </ul>
+        </div>
+        <div id="month_blogs">
+          <h5>存档分类</h5>
+          <ul>
+            
+            <li>
+              <a href="https://www.iteye.com/blog/monthblog/2014-12" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">2014-12</a>
+              (
+              1)</li>
+            
+            <li>
+              <a href="https://www.iteye.com/blog/monthblog/2014-03" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">2014-03</a>
+              (
+              2)</li>
+            
+            <li>
+              <a href="https://www.iteye.com/blog/monthblog/2013-11" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">2013-11</a>
+              (
+              2)</li>
+            
+            <li>
+              <a href="https://www.iteye.com/blog/monthblog_more" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">更多存档...</a>
+            </li>
+          </ul>
+        </div>
+        
+        
+
+        <div id="guest_books">
+          <h5>最新评论</h5>
+          <ul>
+            
+            <li>
+              <a href="https://www.iteye.com/blog/user/mldxs" target="_blank" title="mldxs" referrerpolicy="no-referrer" rel="noopener noreferrer">mldxs</a>：
+              虽然很多还是看不懂，写的很好！<br>
+              <a href="https://www.iteye.com/blog/492667#bc2404059" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">虚拟机随谈（一）：解释器，树遍历解释器，基于栈与基于寄存器，大杂烩</a>
+            </li>
+            
+            <li>
+              <a href="https://www.iteye.com/blog/user/hanyuking" target="_blank" title="HanyuKing" referrerpolicy="no-referrer" rel="noopener noreferrer">HanyuKing</a>：
+              &nbsp;&nbsp;&nbsp;<br>
+              <a href="https://www.iteye.com/blog/1050144#bc2404048" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Java的多维数组</a>
+            </li>
+            
+            <li>
+              <a href="https://www.iteye.com/blog/user/funnyone" target="_blank" title="funnyone" referrerpolicy="no-referrer" rel="noopener noreferrer">funnyone</a>：
+              &nbsp;&nbsp;&nbsp;&nbsp;<br>
+              <a href="https://www.iteye.com/blog/2033089#bc2403810" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Java 8的default method与method resolution</a>
+            </li>
+            
+            <li>
+              <a href="https://www.iteye.com/blog/user/ljs-nogard" target="_blank" title="ljs_nogard" referrerpolicy="no-referrer" rel="noopener noreferrer">ljs_nogard</a>：
+              Xamarin workbook - .Net Core 中不 ...<br>
+              <a href="https://www.iteye.com/blog/350493#bc2403422" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">LINQ的恶搞……</a>
+            </li>
+            
+            <li>
+              <a href="https://www.iteye.com/blog/user/txm119161336" target="_blank" title="txm119161336" referrerpolicy="no-referrer" rel="noopener noreferrer">txm119161336</a>：
+              allocatestlye1 顺序为&nbsp; // Fields o ...<br>
+              <a href="https://www.iteye.com/blog/766282#bc2403002" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">最近做的两次Java/JVM分享的概要</a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <div class="local_bottom"></div>
+        
+        <div id="nav_show_top_stop" style="position: fixed; top: 2809px;">
+            <div>
+              <!-- 广告位：PC端-iteye博客详情页左侧Button1-200*200 -->
+              
+              <!-- Ads ID 423 -->
+              
+                <div style="text-align: center">
+                  <div id="kp_box_423" data-pid="423"><img class="pre-img-lasy" data-src="https://kunyu.csdn.net/1.png?d=2&amp;k=&amp;m=EcnibDULJpSiHiLcJEJpiALAUimHiciJJSDpAAnbybpAnptSiLibiApmSnEHfbibDntAEJiUtHXEEftiQiHnLtQEttLWcpEHcQEQ" data-mx-warn="Empty URL" data-mx-original-src="" src="invalid-url.png"></div>
+                </div>
+              
+            </div>
+            <div>
+              <!-- 广告位：PC端-iteye博客详情页左侧Button2-200*200 -->
+              
+              <!-- Ads ID 424 -->
+              
+                <div style="text-align: center">
+                  <div id="kp_box_424" data-pid="424"><img class="pre-img-lasy" data-src="https://kunyu.csdn.net/1.png?d=2&amp;k=&amp;m=bLnAcvEpbESUbtLnitJASLtibnAHcSoDHLLiSEctDAUbALLmHpLifDEftLHtEAnpvEEioLiptSEXJnbHpnpQWcJSHcLpEQiEnLnQ" data-mx-warn="Empty URL" data-mx-original-src="" src="invalid-url.png"></div>
+                </div>
+              
+            </div>
+          </div>
+      </div>
+      
+      <div id="main" class="">
+        
+
+
+
+        
+
+
+
+
+
+<div class="blog_main">
+  
+  <div class="blog_title">
+    <h3>
+      今天看到的几个authoring tool/game engine
+      <em class="actions">      </em>
+    </h3>
+    <ul class="blog_categories"><strong>博客分类：</strong> <li><a href="https://www.iteye.com/category/24366" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Game Engines</a></li> </ul>
+        <div class="news_tag"><a href="http://www.iteye.com/blogs/tag/%E6%B8%B8%E6%88%8F" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">游戏</a><a href="http://www.iteye.com/blogs/tag/%E8%84%9A%E6%9C%AC" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">脚本</a><a href="http://www.iteye.com/blogs/tag/Adobe" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Adobe</a><a href="http://www.iteye.com/blogs/tag/Flash" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Flash</a><a href="http://www.iteye.com/blogs/tag/HTML" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">HTML</a></div>
+  </div>
+
+  <div id="blog_content" class="hide-main-content">
+    
+    1. <a target="_blank" href="http://dead-code.org/" referrerpolicy="no-referrer" rel="noopener noreferrer">Wintermute Engine</a>
+<br><div class="quote_title">引用</div><div class="quote_div">About WME
+<br>Wintermute Engine Development Kit is a set of tools for creating and running graphical "point&amp;click" adventure games, both traditional 2D ones and modern 2.5D games (3D characters on 2D backgrounds). The kit includes the runtime interpreter (Wintermute Engine, or WME) and GUI editors for managing and creating the game content (WME tools) as well as the documentation, demonstrational data and prefabricated templates.</div>
+<br>这个算是比较新的,衍生自原本"文字冒险游戏-&gt;图形冒险游戏"的发展路线的概念的冒险游戏引擎吧.游戏特征是"point &amp; click".跟我熟悉的日系冒险游戏当然是很不相同,不过这东西有几个相当有趣的地方值得参考下.回头有时间再把SDK抓下来看看.
+<br>脚本方面也是采用C-like语法,这种做法真的是相当流行.更让我无法放下我的某个想法了...但要实现那个想法果然还需要更多更多的研究才行.
+<br>有人为这个引擎写了个配套的脚本编辑器,<a target="_blank" href="http://mac-bs.de/bullsoft/" referrerpolicy="no-referrer" rel="noopener noreferrer">WME Visual Script Editor</a>
+<br><div class="quote_title">引用</div><div class="quote_div">Features:
+<br>- Simplicity&nbsp; 
+<br>- Syntax highlighting
+<br>- Code block system (insert whole text blocks with a simple mouse click)
+<br>- Features all build-in WME methods, commands and keywords with parameters and short description - just double click a method and it pastes to your script (directly ripped out of the WME docs)
+<br>- Printing
+<br>- Quickhelp system
+<br>
+<br>Not finished yet:
+<br>- Changeable printing color
+<br>- Block comment/Block uncomment
+<br>- Search in files
+<br>
+<br>The current version is V0.7 (10/05/07)</div>
+<br>脚本编辑器的截图参考附件.图里有一段WME的脚本代码,所以就不另外贴sample code snippet了.这种语法真的是...太亲切了(吼)
+<br>
+<br>================================================
+<br>
+<br>2. <a target="_blank" href="http://www.adobe.com/products/captivate/" referrerpolicy="no-referrer" rel="noopener noreferrer">Adobe Captivate</a>
+<br>诶诶,这都出到3了怎么还拿出来说?
+<br>(原谅我消息的闭塞,我以前一直不知道有这么个东西)
+<br>好吧我本来是去查Authorware的特点的介绍,结果看到Adobe不再继续开发Authorware 7的后续版本的消息.于是看了下它的替代品有些什么,找到了这个Captivate.
+<br>这玩意做屏幕录象/演示稿/导入PPT等的功能都很吸引.对非程序员来说,或许要的就是这样的工具吧.有空要推荐下老师试试这个,更新下他们的屏幕录象工具...
+<br>
+<br>话说回来,Authorware最大的特点应该算是那流程图了吧? Flash里是一条整体的时间轴,突出"时间"的控制;而Authorware则突出"流程"的控制.到Captivate里,"流程"仍然得到了很好的体现,依然可以将一些slides给group到一起,然后一起在flow-chart里做流程控制.真好...
+<br>
+<br>这种WYSIWYG的flow-chart跟某些日系小说类游戏的引擎也颇有相似之处.我想到了<a target="_blank" href="http://page.freett.com/yuukiex/yuukinovel.html" referrerpolicy="no-referrer" rel="noopener noreferrer">Yuuki! Novel</a>和<a target="_blank" href="http://www.retouch.info/retouch/index.html" referrerpolicy="no-referrer" rel="noopener noreferrer">sketch/retouch</a>之类...
+<br>
+<br>=================================================
+<br>
+<br>3. <a target="_blank" href="http://www.nscripter.com/" referrerpolicy="no-referrer" rel="noopener noreferrer">NScripter</a>
+<br>诶诶这比Captivate更老了吧...
+<br>不,其实我是想说,这东西在2007/11/04更新了.我手上最新的版本应该还是今年4月份的吧.这些东西总是更新得无声无息的...
+<br>当然更新了也跟我没什么直接关系.我甚少用NScripter.过了那么多代它的一些RP问题还是没解决,让人感到很绝望.ONScripter的架构并不怎么吸引我,如果NScripter的解释器对脚本也是那样处理的话,hmm,只能作为"对比例子"用了.
+<br>
+<br>=================================================
+<br>
+<br>[--notes] 这个跟主题没关系.刚才在JavaEye上转,吸取营养的时候,看到了一个有趣的blog:
+<br><a target="_blank" href="http://libudi.iteye.com/" referrerpolicy="no-referrer" rel="noopener noreferrer">http://libudi.iteye.com/</a>
+<br>作者对其Lysee的开发让我感到相当有兴趣.关注.[--end of notes]
+
+  
+  <div class="attachments">
+    
+      
+        
+      
+    
+    
+      <ul>
+        <li><a href="#" onclick="$$('div.attachments ul').invoke('show');$(this).up(1).hide();return false;">查看图片附件</a></li>
+      </ul>
+    
+  </div>
+
+
+
+  <div id="bottoms" class="clearfix">
+    
+    <div id="share_weibo">分享到：
+      <a data-type="sina" href="javascript:;" title="分享到新浪微博" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1571210810-18e900b8666ce6f233d25ec02f95ee59.jpg"></a>
+      <a data-type="qq" href="javascript:;" title="分享到腾讯微博" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1571210810-72dd548719f0ace4d5f9bca64e1d7715.jpg"></a>
+    </div>
+  </div>
+
+  <div class="blog_nav">
+    <div class="pre_next">
+      <a href="https://www.iteye.com/blog/140031" class="next" title="JavaNativeCompiler" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">JavaNativeCompiler</a>
+      |
+      <a href="https://www.iteye.com/blog/139588" class="pre" title="杜增强关于Flash与Flex的整合的idea" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">杜增强关于Flash与Flex的整合的idea</a>
+    </div>
+  </div>
+  <div class="blog_bottom">
+    <ul>
+      <li>2007-11-10 16:53</li>
+      <li>浏览 2293</li>
+      <li><a href="#comments">评论(0)</a></li>
+      
+      
+            
+      <li class="last"><a href="https://www.iteye.com/wiki/blog/139666" target="_blank" class="more" referrerpolicy="no-referrer" rel="noopener noreferrer">查看更多</a></li>
+    </ul>    
+  </div>
+    
+  <div class="blog_comment">
+    <h5>评论</h5>
+    <a id="comments" name="comments" data-mx-warn="Empty URL"></a>
+    
+    
+    
+  </div>
+
+  <div class="blog_comment">
+    <h5>发表评论</h5>
+            <p style="text-align:center; margin-top:30px;margin-bottom:0px;"><a href="https://www.iteye.com/login" style="background-color: white; --darkreader-inline-bgcolor:#191a1b;" data-darkreader-inline-bgcolor="" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"> <img src="assets/1571210810-cf6d69dfbb92d2238c3e50c97eb9e7bf.png" style="vertical-align:middle; margin-right: 10px;"></a><a href="https://www.iteye.com/login" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">  您还没有登录,请您登录后再发表评论 </a></p>
+      </div>
+  </div>
+  <div>
+    <div style="" id="_nzleytop63"></div>
+    <!-- 多条广告如下脚本只需引入一次 -->
+    
+  </div>
+</div>
+
+
+
+
+
+
+
+      </div>
+      
+        <div class="blog-sidebar">
+          <div class="blog-sidebar-fixed">
+            <div class="news-right-side">
+              <div class="newbox recommend">
+                <div class="recommend-right">
+                <ul class="recommend-fixed-box">
+                  
+                    <li class="right-item cebian_item">
+                      <a href="https://www.iteye.com/blog/rednaxelafx-806232" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                        <div class="content clearfix">
+                          <h5 class="" title="更新一下关注的文字AVG用的游戏引擎列表">更新一下关注的文字AVG用的游戏引擎列表</h5>
+                          <span class="time">
+                            2010-11-09 09:27
+                          </span>
+                          <span class="read so_read">
+                          <svg class="icon no-active hover-hide" aria-hidden="true">
+                            <use xlink:href="#yuedushu"></use>
+                          </svg>
+                            0
+                        </span>
+                        </div>
+                        <div class="right-item-desc">
+                          http://www.twin-tail.jp/selene/ ...
+                        </div>
+                      </a>
+                    </li>
+                  
+                    <li class="right-item cebian_item">
+                      <a href="https://www.iteye.com/blog/rednaxelafx-396268" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                        <div class="content clearfix">
+                          <h5 class="" title="一个新的电子小说制作引擎，「らのべえ」">一个新的电子小说制作引擎，「らのべえ」</h5>
+                          <span class="time">
+                            2009-05-26 13:51
+                          </span>
+                          <span class="read so_read">
+                          <svg class="icon no-active hover-hide" aria-hidden="true">
+                            <use xlink:href="#yuedushu"></use>
+                          </svg>
+                            3713
+                        </span>
+                        </div>
+                        <div class="right-item-desc">
+                          官方网站：「デジタル・ラノベ」作成ツール『らのべえ』公式サイト ...
+                        </div>
+                      </a>
+                    </li>
+                  
+                    <li class="right-item cebian_item">
+                      <a href="https://www.iteye.com/blog/rednaxelafx-352534" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                        <div class="content clearfix">
+                          <h5 class="" title="Unity 2.5发布，包括Windows版本">Unity 2.5发布，包括Windows版本</h5>
+                          <span class="time">
+                            2009-03-21 01:10
+                          </span>
+                          <span class="read so_read">
+                          <svg class="icon no-active hover-hide" aria-hidden="true">
+                            <use xlink:href="#yuedushu"></use>
+                          </svg>
+                            2684
+                        </span>
+                        </div>
+                        <div class="right-item-desc">
+                          Unity Technology最近刚刚发布他们的游戏开发工具 ...
+                        </div>
+                      </a>
+                    </li>
+                  
+                    <li class="right-item cebian_item">
+                      <a href="https://www.iteye.com/blog/rednaxelafx-249044" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                        <div class="content clearfix">
+                          <h5 class="" title="最近AVG引擎的一些消息">最近AVG引擎的一些消息</h5>
+                          <span class="time">
+                            2008-10-05 12:40
+                          </span>
+                          <span class="read so_read">
+                          <svg class="icon no-active hover-hide" aria-hidden="true">
+                            <use xlink:href="#yuedushu"></use>
+                          </svg>
+                            0
+                        </span>
+                        </div>
+                        <div class="right-item-desc">
+                          { 2008 10 04 }
+rlvm 0.3 release ...
+                        </div>
+                      </a>
+                    </li>
+                  
+                    <li class="right-item cebian_item">
+                      <a href="https://www.iteye.com/blog/rednaxelafx-187063" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                        <div class="content clearfix">
+                          <h5 class="" title="ういんどみる公开了它用的游戏引擎，CatSystem2">ういんどみる公开了它用的游戏引擎，CatSystem2</h5>
+                          <span class="time">
+                            2008-04-26 14:55
+                          </span>
+                          <span class="read so_read">
+                          <svg class="icon no-active hover-hide" aria-hidden="true">
+                            <use xlink:href="#yuedushu"></use>
+                          </svg>
+                            3519
+                        </span>
+                        </div>
+                        <div class="right-item-desc">
+                          官网：CatSystem2
+最近公开的AVG引擎真多。Fron ...
+                        </div>
+                      </a>
+                    </li>
+                  
+                    <li class="right-item cebian_item">
+                      <a href="https://www.iteye.com/blog/rednaxelafx-150093" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                        <div class="content clearfix">
+                          <h5 class="" title="BURIKO股份有限公司成立">BURIKO股份有限公司成立</h5>
+                          <span class="time">
+                            2007-12-22 03:11
+                          </span>
+                          <span class="read so_read">
+                          <svg class="icon no-active hover-hide" aria-hidden="true">
+                            <use xlink:href="#yuedushu"></use>
+                          </svg>
+                            3742
+                        </span>
+                        </div>
+                        <div class="right-item-desc">
+                          BURIKO股份有限公司（株式会社ブリコ ）于2007年4月5 ...
+                        </div>
+                      </a>
+                    </li>
+                  
+                    <li class="right-item cebian_item">
+                      <a href="https://www.iteye.com/blog/rednaxelafx-140689" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                        <div class="content clearfix">
+                          <h5 class="" title="RenPy今天更新到6.4.0">RenPy今天更新到6.4.0</h5>
+                          <span class="time">
+                            2007-11-14 18:55
+                          </span>
+                          <span class="read so_read">
+                          <svg class="icon no-active hover-hide" aria-hidden="true">
+                            <use xlink:href="#yuedushu"></use>
+                          </svg>
+                            1800
+                        </span>
+                        </div>
+                        <div class="right-item-desc">
+                          http://www.renpy.org/wiki/renpy ...
+                        </div>
+                      </a>
+                    </li>
+                  
+                    <li class="right-item cebian_item">
+                      <a href="https://www.iteye.com/blog/rednaxelafx-139541" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                        <div class="content clearfix">
+                          <h5 class="" title="两个Flash-based novel game framework">两个Flash-based novel game framework</h5>
+                          <span class="time">
+                            2007-11-09 18:49
+                          </span>
+                          <span class="read so_read">
+                          <svg class="icon no-active hover-hide" aria-hidden="true">
+                            <use xlink:href="#yuedushu"></use>
+                          </svg>
+                            2185
+                        </span>
+                        </div>
+                        <div class="right-item-desc">
+                          いや、なんつーか…
+好久没去接收一下电波，昨天居然一下入手了3 ...
+                        </div>
+                      </a>
+                    </li>
+                  
+                </ul>
+              </div></div>
+            </div>
+            <div class="persion_article">
+
+            </div>
+          </div>
+        </div>
+            
+    </div>
+    
+    <div id="footer" class="clearfix">
+      <!-- <div id="copyright">
+        <hr />
+        声明：ITeye文章版权属于作者，受法律保护。没有作者书面许可不得转载。若作者同意转载，必须以超链接形式标明文章原始出处和作者。<br />
+        &copy; 2003-
+        2019 ITeye.com. All rights reserved. [ 京ICP证110151号 京公网安备110105010620 ]
+      </div> -->
+      
+    </div>
+  </div>
+  <img src="assets/1571210810-7f37d4732551b933727f3969b8de4f54.gif" width="0" height="0">
+
+
+
+   Global site tag (gtag.js) - Google Analytics
+  
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+<div class="newbox"><div class="recommend-right">
+  <ul class="recommend-fixed-box">
+    
+</ul>
+</div></div><a href="" download="" data-mx-warn="Empty URL"></a><div data-mx-warn="extension url was not captured by MaoXian" data-mx-original-src="chrome-extension://kjahokgdcbohofgdidndeiaigkehdjdc/pages/ui-selection.html?t=aHR0cHM6Ly93d3cuaXRleWUuY29t"></div><div data-mx-warn="extension url was not captured by MaoXian" data-mx-original-src="chrome-extension://kjahokgdcbohofgdidndeiaigkehdjdc/pages/ui-control.html?t=aHR0cHM6Ly93d3cuaXRleWUuY29t"></div>
+</body>
+  </html>

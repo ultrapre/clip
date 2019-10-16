@@ -1,0 +1,352 @@
+
+  <!DOCTYPE html>
+  <html id="" class="">
+    <!-- OriginalSrc: https://flandre-scarlet.moe/blog/644/ -->
+    <head>
+      <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <title>通用 krkr 解包工具 – Re: Memory</title>
+      
+<link rel="icon" href="assets/1571161052-17d889a0990111283b7e9ab6b744a6dd.png" sizes="32x32" referrerpolicy="no-referrer">
+<link rel="icon" href="assets/1571161052-8b159906d1fdb06a82c22e5e7ce8f46d.png" sizes="192x192" referrerpolicy="no-referrer">
+<link rel="apple-touch-icon-precomposed" href="assets/1571161052-20ae3987d5e7357fb563ee9491f9113b.png" referrerpolicy="no-referrer">
+
+
+<link rel="stylesheet" id="wp-block-library-css" href="assets/1571161052-e69bc92e88b43bbf8e9ad8eeb064397d.css" type="text/css" media="all" referrerpolicy="no-referrer">
+<link rel="stylesheet" id="blackoot-css" href="assets/1571161052-0d04b7fb02f2c9484b3af6d74b0b57c0.css" type="text/css" media="all" referrerpolicy="no-referrer">
+<link rel="stylesheet" id="blackoot-style-css" href="assets/1571161052-1cd53d4cd49ce0fed0e3af3fbee7e57c.css" type="text/css" media="all" referrerpolicy="no-referrer">
+<link rel="stylesheet" id="font-awesome-css" href="assets/1571161052-90a427bcba3d520dfd533a09951e1a66.css" type="text/css" media="all" referrerpolicy="no-referrer">
+<link rel="stylesheet" id="blackoot-webfonts-css" href="assets/1571161052-6f3e02fc0009b79641be89e4bb36af95.css" type="text/css" media="all" referrerpolicy="no-referrer">
+
+
+<style class="darkreader darkreader--fallback" media="screen"></style>
+<style class="darkreader darkreader--text" media="screen"></style>
+<style class="darkreader darkreader--invert" media="screen"></style>
+<style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}</style>
+<style class="darkreader darkreader--user-agent" media="screen">html {
+    background-color: #191a1b !important;
+}
+html, body, input, textarea, select, button {
+    background-color: #191a1b;
+}
+html, body, input, textarea, select, button {
+    border-color: #5a5956;
+    color: #f0ebe2;
+}
+a {
+    color: #4791e7;
+}
+table {
+    border-color: #4f4e4c;
+}
+::placeholder {
+    color: #bfb9ac;
+}
+::selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+::-moz-selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #565a0f !important;
+    color: #f0ebe2 !important;
+}
+::-webkit-scrollbar {
+    background-color: #1d1f1f;
+    color: #cbc5b9;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #2c2d2d;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #343636;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #404142;
+}
+::-webkit-scrollbar-corner {
+    background-color: #191a1b;
+}
+* {
+    scrollbar-color: #2c2d2d #1d1f1f;
+}</style>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--override" media="screen">.jfk-bubble {
+    background-color: #000000 !important;
+}
+.vimvixen-hint {
+    background-color: #765500 !important;
+    border-color: #d5b22e !important;
+    color: #f9edcc !important;
+}</style>
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #212121; background-image: url(""); background-position: center center; background-size: contain; background-repeat: repeat; background-attachment: fixed; }
+</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">@keyframes fadeInOpacity{0%{opacity:0}to{opacity:1}}:hover>*>.fbvd--wrapper{animation-name:fadeInOpacity;animation-duration:.3s;opacity:1}.fbvd--wrapper{position:absolute;top:10px;left:10px;opacity:0;text-align:center;margin:0;z-index:5}.fbvd--wrapper a{background: url("") no-repeat 3px 4.55px; background-color: #fff; display:inline-block;font:700 14px Helvetica,Arial,sans-serif;color:#4b4f56;text-decoration:none;vertical-align:middle;padding:0px 8px 0px;margin-right:8px;border-radius:2px; line-height: 22px; padding-left:19px; border: 1px solid #e7e7e7; background-size: 13px}.fbvd--wrapper a:last-child{margin-right:0}.fbvd--wrapper a:hover{text-decoration:none}.fbvd--wrapper a:focus{box-shadow:0 0 1px 2px rgba(88,144,255,.75),0 1px 1px rgba(0,0,0,.15);outline:none}.fbvd--wrapper b{font-size:13px;position:relative;top:1px;color:#3b5998;font-weight:400}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+
+      
+    </head>
+    <body class="post-template-default single single-post postid-644 single-format-standard custom-background mx-wc-selected-elem mx-wc-1571161052">
+
+<div id="main-wrap">
+	<div id="header-wrap">
+		<div id="tophead-wrap">
+			<div class="container">
+				<div class="tophead">
+					<form role="search" method="get" class="search-form" action="https://flandre-scarlet.moe/blog/">
+				<label>
+					<span class="screen-reader-text">搜索：</span>
+					<input type="search" class="search-field" placeholder="搜索…" value="" name="s">
+				</label>
+				
+			</form>				</div>
+			</div>
+		</div>
+
+		<div id="header">
+			<div class="container">
+				<div id="logo">
+					<a href="https://flandre-scarlet.moe/blog" title="Re: Memory" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+													<h1 class="site-title">Re: Memory</h1>
+												</a>
+				</div>
+							</div>
+		</div>
+
+		<div id="nav-wrap">
+			<div id="navbar" class="container">
+				<div class="menu-main-container"><ul id="menu-main" class="menu sf-menu sf-js-enabled sf-arrows"><li id="menu-item-573" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-573"><a href="https://flandre-scarlet.moe/blog" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">首页</a></li>
+</ul></div>			</div>
+		</div>
+	</div>
+				<div id="header-image" class="container">
+				<img src="assets/1571161052-d127d0a4e39e2000628b998f0a57e463.png" height="595" width="1000" alt="">
+			</div>
+				<div id="page-title">
+		<div class="container">
+							<div id="breadcrumbs">
+					<a href="https://flandre-scarlet.moe/blog" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">首页</a><span class="separator"> / </span><a href="https://flandre-scarlet.moe/blog/category/%e8%a7%a3%e5%8c%85/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">解包</a><span class="separator"> / </span><a href="https://flandre-scarlet.moe/blog/category/%e9%80%86%e5%90%91/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">逆向</a><span class="separator"> / </span>通用 krkr 解包工具				</div>
+							<h1>通用 krkr 解包工具</h1>
+		</div>
+	</div>
+	<div class="container" id="main-content">
+	<div id="page-container" class="with-sidebar">
+						<div id="post-644" class="single-post post-644 post type-post status-publish format-standard hentry category-5 category-31 tag-krkr tag-krkrz tag-tjs tag-xp3 tag-76 tag-30">
+										<div class="postmetadata">
+												
+												<span class="meta-date post-date updated"><i class="fa fa-calendar"></i><a href="https://flandre-scarlet.moe/blog/644/" title="通用 krkr 解包工具" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+							2018年12月14日						</a></span>
+												<span class="meta-author author vcard"><i class="fa fa-user"></i><a class="fn" href="https://flandre-scarlet.moe/blog/author/flandrelovely/" title="查看所有由flandre发布的文章" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">flandre</a></span>
+												<div class="meta-category">
+							<span class="category-icon" title="分类"><i class="fa fa-tag"></i></span>
+							<a href="https://flandre-scarlet.moe/blog/category/%e8%a7%a3%e5%8c%85/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">解包</a><a href="https://flandre-scarlet.moe/blog/category/%e9%80%86%e5%90%91/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">逆向</a>						</div>
+													<span class="meta-comments"><i class="fa fa-comment"></i>
+								<a href="#respond">0 条评论</a>							</span>
+							<div class="meta-tags"><span class="tags-icon"><i class="fa fa-tags"></i></span><a href="https://flandre-scarlet.moe/blog/tag/krkr/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">krkr</a><a href="https://flandre-scarlet.moe/blog/tag/krkrz/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">krkrz</a><a href="https://flandre-scarlet.moe/blog/tag/tjs/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">tjs</a><a href="https://flandre-scarlet.moe/blog/tag/xp3/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">xp3</a><a href="https://flandre-scarlet.moe/blog/tag/%e5%90%89%e9%87%8c%e5%90%89%e9%87%8c/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">吉里吉里</a><a href="https://flandre-scarlet.moe/blog/tag/%e8%a7%a3%e5%8c%85/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">解包</a></div>					</div>
+										<div class="post-contents entry-content">
+						
+<p>以前都是看到想拆的游戏就自己动手搞搞，但是后面就觉得麻烦了，因为 krkr 的框架都是一样的，各厂只是在封包上做了点小修改，为每个游戏都适配一遍实在是太费时间了。所以决定弄个通用点的工具出来。</p>
+<span id="more-644"></span>
+
+
+
+<p>首先还是查资料，翻翻 krkr2 的<a href="https://github.com/krkrz" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">源码</a>。其他的废话就不说了，用 krkr tjs 脚本接口的 TVPCreateIStream 可以创建封包中的文件流，调用 IStream::Read 接口就能直接读到解密后的原始数据了。IStream 是 windows 的 COM 接口之一。</p>
+
+
+
+<p>可以在游戏中通过 “IStream * ::TVPCreateIStream(const ttstr &amp;,tjs_uint32)” 定位到 TVPCreateIStream 函数的地址，然后手动调用来创建文件流。也可以自己写个插件插入游戏，然后在插件里就可以直接调用普通函数一般直接使用了，比手动 hook 显得更方便些。但反过来要 hook 插件的加载流程让游戏加载自己的插件。写插件的话需要用到 tp_stub.h/.cpp 这两个文件。</p>
+
+
+
+<p>传递给 TVPCreateIStream 函数的文件名还有些不同，大部分的游戏只要传入形如 “d:\game\data.xp3&gt;startup.tjs” 的文件名即可，但有些游戏要传入 “archive://data.xp3/startup.tjs” 才能正确解码，否则创建出的 IStream* 本体是个“不完整”的基类类型，只能将文件原原本本读取出来，无法完成附加的解密动作。目前来看是 krkrz 这种有特殊节的都用这个方式解。</p>
+
+
+
+<p>另外就是文件索引表的提取。像feng、柚子社还有艹猫的结构与常规的封包多了额外用来储存文件名的字段，palette 的 9-nine 还把所有的文件名全塞到最前面，后面再跟上常规的索引表，防不胜防啊。</p>
+
+
+
+<p>放个链接：<a href="https://github.com/Kerisa/ExtractGames/tree/master/kirikiri/bin" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">BlackSheep</a></p>
+
+
+
+<p>使用时将 Loader.exe / BlackSheep.dll / zlib.dll 放到游戏目录下，命令行里输入</p><blockquote>Loader.exe &lt;游戏 exe 路径&gt; &lt;要提取的 xp3 路径&gt;</blockquote>即可进行提取。提取前后都有消息提示，提取过程中保持游戏主程序运行（有时环境不正确游戏可能会弹窗报错，点了确认就会直接退出游戏，这时不要去点击按钮，等待提取完成即可）。完成后可在游戏目录下的 blacksheepreport.txt 中查看文件提取的详细情况。<br>一些压缩文本的解压、psb 之类以后再说吧。_(┐「ε：)_<p></p>
+
+
+
+<p><br>最后膜拜一下大佬作品 (&gt;ω&lt;) <a rel="noopener noreferrer" href="https://github.com/xmoeproject/KrkrExtract" target="_blank" referrerpolicy="no-referrer">KrkrExtract</a></p>
+						
+											</div>
+					
+				</div>
+				<div class="article_nav"><div class="next navbutton"><a href="https://flandre-scarlet.moe/blog/657/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">下一篇文章<i class="fa fa-angle-double-right"></i></a></div><div class="previous navbutton"><a href="https://flandre-scarlet.moe/blog/637/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><i class="fa fa-angle-double-left"></i>上一篇文章</a></div></div>					<hr>
+					<div class="comments">
+							<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">发表评论 <small></small></h3>			<form action="https://flandre-scarlet.moe/blog/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+				<p class="comment-notes"><span id="email-notes">电子邮件地址不会被公开。</span> 必填项已用<span class="required">*</span>标注</p><p class="comment-form-comment"><label for="comment">评论</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">姓名 <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required="required"></p>
+<p class="comment-form-email"><label for="email">电子邮件 <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" maxlength="100" aria-describedby="email-notes" required="required"></p>
+<p class="comment-form-url"><label for="url">站点</label> <input id="url" name="url" type="text" value="" size="30" maxlength="200"></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="发表评论"> 
+
+</p>			</form>
+			</div><!-- #respond -->
+	<p class="akismet_comment_form_privacy_notice">此站点使用Akismet来减少垃圾评论。<a href="https://akismet.com/privacy/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">了解我们如何处理您的评论数据</a>。</p>					</div>
+					<div class="article_nav"><div class="next navbutton"><a href="https://flandre-scarlet.moe/blog/657/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">下一篇文章<i class="fa fa-angle-double-right"></i></a></div><div class="previous navbutton"><a href="https://flandre-scarlet.moe/blog/637/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><i class="fa fa-angle-double-left"></i>上一篇文章</a></div></div>	</div>
+
+	<div id="sidebar-container">
+		<ul id="sidebar">
+	<li id="custom_html-3" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><a target="_blank" href="mailto:i@flandre-scarlet.moe" rel="noopener noreferrer" referrerpolicy="no-referrer"><img src="assets/1571161052-ecd958657097b567a4b01e64238bf463.png" title="联系我"></a></div></li>
+		<li id="recent-posts-4" class="widget widget_recent_entries">		<h3 class="widget-title">近期文章</h3>		<ul>
+											<li>
+					<a href="https://flandre-scarlet.moe/blog/959/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">時計仕掛けのレイライン 感想</a>
+									</li>
+											<li>
+					<a href="https://flandre-scarlet.moe/blog/946/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">CrackMe 反汇编练习之 092</a>
+									</li>
+											<li>
+					<a href="https://flandre-scarlet.moe/blog/931/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">CrackMe 反汇编练习之 081</a>
+									</li>
+											<li>
+					<a href="https://flandre-scarlet.moe/blog/912/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">制作龙儿同款橙子挞</a>
+									</li>
+											<li>
+					<a href="https://flandre-scarlet.moe/blog/890/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">自建 KMS 激活服务</a>
+									</li>
+					</ul>
+		</li>
+<li id="categories-3" class="widget widget_categories"><h3 class="widget-title">分类目录</h3>		<ul>
+				<li class="cat-item cat-item-2"><a href="https://flandre-scarlet.moe/blog/category/debug/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Debug</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="https://flandre-scarlet.moe/blog/category/directx/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">DirectX</a>
+</li>
+	<li class="cat-item cat-item-126"><a href="https://flandre-scarlet.moe/blog/category/galgame/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">galgame</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="https://flandre-scarlet.moe/blog/category/%e5%9b%be%e5%83%8f%e5%a4%84%e7%90%86/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">图像处理</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://flandre-scarlet.moe/blog/category/uncategorized/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">未分类</a>
+</li>
+	<li class="cat-item cat-item-42"><a href="https://flandre-scarlet.moe/blog/category/%e6%9d%82/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">杂</a>
+</li>
+	<li class="cat-item cat-item-25"><a href="https://flandre-scarlet.moe/blog/category/%e6%b8%b8%e6%88%8f/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">游戏</a>
+</li>
+	<li class="cat-item cat-item-83"><a href="https://flandre-scarlet.moe/blog/category/%e7%94%9f%e6%b4%bb/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">生活</a>
+</li>
+	<li class="cat-item cat-item-85"><a href="https://flandre-scarlet.moe/blog/category/%e7%a8%8b%e5%ba%8f/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">程序</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="https://flandre-scarlet.moe/blog/category/%e8%a7%a3%e5%8c%85/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">解包</a>
+</li>
+	<li class="cat-item cat-item-31"><a href="https://flandre-scarlet.moe/blog/category/%e9%80%86%e5%90%91/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">逆向</a>
+</li>
+		</ul>
+			</li>
+<li id="meta-3" class="widget widget_meta"><h3 class="widget-title">功能</h3>			<ul>
+						<li><a href="https://flandre-scarlet.moe/blog/wp-login.php" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">登录</a></li>
+			<li><a href="https://flandre-scarlet.moe/blog/feed/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">文章<abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="https://flandre-scarlet.moe/blog/comments/feed/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">评论<abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="https://cn.wordpress.org/" title="基于WordPress，一个优美、先进的个人信息发布平台。" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">WordPress.org</a></li>			</ul>
+			</li>
+<li id="nav_menu-2" class="widget widget_nav_menu"><h3 class="widget-title">链接</h3><div class="menu-%e5%8f%8b%e6%83%85%e9%93%be%e6%8e%a5-container"><ul id="menu-%e5%8f%8b%e6%83%85%e9%93%be%e6%8e%a5" class="menu"><li id="menu-item-575" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-575"><a target="_blank" rel="noopener noreferrer" href="https://laike9m.com/" referrerpolicy="no-referrer">laike9m’s blog</a></li>
+<li id="menu-item-742" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-742"><a target="_blank" rel="noopener noreferrer" href="https://plumz.me/" referrerpolicy="no-referrer">Plum’s Blog</a></li>
+<li id="menu-item-842" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-842"><a target="_blank" rel="noopener noreferrer" href="https://moeblog.top/" referrerpolicy="no-referrer">MoeBlog</a></li>
+<li id="menu-item-722" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-722"><a target="_blank" rel="noopener noreferrer" href="https://www.vultr.com/?ref=7987757-4F" referrerpolicy="no-referrer">[ 注册 vultr 赠送 $50 ]</a></li>
+</ul></div></li>
+</ul>
+	</div>
+
+</div>
+<div id="sub-footer">
+	<div class="container">
+		<div class="sub-footer-left">
+			<p>
+
+			
+			Copyright © 2019 Re: Memory. &nbsp;&nbsp;Powered by love. 
+
+			</p>
+		</div>
+
+		<div class="sub-footer-right">
+					</div>
+	</div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+<!-- Dynamic page generated in 0.357 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2019-10-16 01:31:38 -->
+
+<!-- super cache --><a href="" download="" data-mx-warn="Empty URL"></a><div data-mx-warn="extension url was not captured by MaoXian" data-mx-original-src="chrome-extension://kjahokgdcbohofgdidndeiaigkehdjdc/pages/ui-selection.html?t=aHR0cHM6Ly9mbGFuZHJlLXNjYXJsZXQubW9l"></div><div data-mx-warn="extension url was not captured by MaoXian" data-mx-original-src="chrome-extension://kjahokgdcbohofgdidndeiaigkehdjdc/pages/ui-control.html?t=aHR0cHM6Ly9mbGFuZHJlLXNjYXJsZXQubW9l"></div>
+</body>
+  </html>

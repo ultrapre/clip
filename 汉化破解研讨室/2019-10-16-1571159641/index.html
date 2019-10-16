@@ -1,0 +1,1310 @@
+
+  <!DOCTYPE html>
+  <html id="" class="">
+    <!-- OriginalSrc: https://www.cnblogs.com/sunjicccc/archive/2013/01/02/2841956.html -->
+    <head>
+      <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <title>[原创]破解日志 galgame引擎YU-RIS - 损疾 - 博客园</title>
+      
+
+<link rel="stylesheet" href="assets/1571159641-d4b73980e5ecba85aa25d546f104e1c7.css" referrerpolicy="no-referrer">
+<link id="MainCss" rel="stylesheet" href="assets/1571159641-7ed58f2c84ed6d8786d428f2773343f5.css" referrerpolicy="no-referrer">
+<link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="assets/1571159641-c774e265e607d706ef624176469f717e.css" referrerpolicy="no-referrer">
+
+
+<style class="darkreader darkreader--fallback" media="screen"></style>
+<style class="darkreader darkreader--text" media="screen"></style>
+<style class="darkreader darkreader--invert" media="screen"></style>
+<style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}</style>
+<style class="darkreader darkreader--user-agent" media="screen">html {
+    background-color: #191a1b !important;
+}
+html, body, input, textarea, select, button {
+    background-color: #191a1b;
+}
+html, body, input, textarea, select, button {
+    border-color: #5a5956;
+    color: #f0ebe2;
+}
+a {
+    color: #4791e7;
+}
+table {
+    border-color: #4f4e4c;
+}
+::placeholder {
+    color: #bfb9ac;
+}
+::selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+::-moz-selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #565a0f !important;
+    color: #f0ebe2 !important;
+}
+::-webkit-scrollbar {
+    background-color: #1d1f1f;
+    color: #cbc5b9;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #2c2d2d;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #343636;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #404142;
+}
+::-webkit-scrollbar-corner {
+    background-color: #191a1b;
+}
+* {
+    scrollbar-color: #2c2d2d #1d1f1f;
+}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">@keyframes fadeInOpacity{0%{opacity:0}to{opacity:1}}:hover>*>.fbvd--wrapper{animation-name:fadeInOpacity;animation-duration:.3s;opacity:1}.fbvd--wrapper{position:absolute;top:10px;left:10px;opacity:0;text-align:center;margin:0;z-index:5}.fbvd--wrapper a{background: url("") no-repeat 3px 4.55px; background-color: #fff; display:inline-block;font:700 14px Helvetica,Arial,sans-serif;color:#4b4f56;text-decoration:none;vertical-align:middle;padding:0px 8px 0px;margin-right:8px;border-radius:2px; line-height: 22px; padding-left:19px; border: 1px solid #e7e7e7; background-size: 13px}.fbvd--wrapper a:last-child{margin-right:0}.fbvd--wrapper a:hover{text-decoration:none}.fbvd--wrapper a:focus{box-shadow:0 0 1px 2px rgba(88,144,255,.75),0 1px 1px rgba(0,0,0,.15);outline:none}.fbvd--wrapper b{font-size:13px;position:relative;top:1px;color:#3b5998;font-weight:400}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--override" media="screen">.jfk-bubble {
+    background-color: #000000 !important;
+}
+.vimvixen-hint {
+    background-color: #765500 !important;
+    border-color: #d5b22e !important;
+    color: #f9edcc !important;
+}</style>
+
+      
+    </head>
+    <body class="mx-wc-selected-elem mx-wc-1571159641">
+    <a name="top" data-mx-warn="Empty URL"></a>
+    
+    <!--done-->
+<div id="banner"><div id="bnr_pic">
+<!--done-->
+<div class="header">
+	<div class="headerText">
+		<a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/sunjicccc/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">损疾</a>
+<br>
+	</div>
+	<div class="headerDis">
+
+</div>
+</div>
+
+</div></div>
+<div id="main">
+	<!-- left starts -->
+	<div id="left">
+	<div id="left_border">
+		<div id="mystats">
+			<br>
+				<!--done-->
+<div class="blogStats">
+随笔- 
+2&nbsp;
+文章- 
+0&nbsp;
+评论- 
+0&nbsp;
+</div>
+
+
+			
+		</div>
+		<div id="mylinks">
+
+<a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+博客园</a>
+&nbsp;&nbsp;
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/sunjicccc/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+首页</a>
+&nbsp;&nbsp;
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+新随笔</a>
+&nbsp;&nbsp;
+
+
+&nbsp;&nbsp;
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E6%8D%9F%E7%96%BE" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+联系</a>&nbsp;&nbsp;
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+管理</a>
+&nbsp;&nbsp;
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/sunjicccc/rss/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+订阅</a>&nbsp;
+<a id="blog_nav_rss_image" href="https://www.cnblogs.com/sunjicccc/rss/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+    <img src="assets/1571159641-0b565c9b8334e29f2421dc718dba64f7.gif" alt="订阅">
+</a>
+
+</div>
+		<div id="topics">
+			<div id="post_detail">
+<!--done-->
+<div class="post">
+	<div class="postTitle">
+		
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/sunjicccc/archive/2013/01/02/2841956.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">[原创]破解日志 galgame引擎YU-RIS</a>
+
+	</div>
+	
+<div id="cnblogs_post_body" class="blogpost-body ">
+    <p><span style="background-color: rgb(0, 255, 0); --darkreader-inline-bgcolor:#1dc118;" data-darkreader-inline-bgcolor="">底部有编译好的cui插件，用于crass-0.4.14.1</span></p>
+<p>源头：(同人ゲーム) [121214][DMM053990][はいぺりよん] 3M～Marionettes manipulate the marionette ＃define DL版 (files).rar</p>
+<p>解开ysbin文件之后，里面有很多的ybn小文件</p>
+<p>用OD加载游戏程序，查看文本，发现一个很可疑的字符串（应该很接近读取.ybn文件的地方）</p>
+<p>// 读取某个子文件的入口在这里</p>
+<p>004433D3&nbsp; |.&nbsp; 68 8C397E00&nbsp;&nbsp; push&nbsp;&nbsp;&nbsp; 007E398C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp; ASCII "ysbin\yst%05d.ybn"</p>
+<p>ysbin.ypf下面压缩了的内</p>
+<p>ED868C9D9691A3868C8BCFCFCFC9CFD1869D910001480000003E000000724D08</p>
+<p>程序会先尝试去读取真实目录下的文件ysbin\yst00060.ybn，发现没有，会去找压缩文件的子文件索引表；</p>
+<p>当找到后，会打开(CreateFile)这个压缩文件（ysbin.ypf），并通过文件索引表得到指定文件的偏移与大小；</p>
+<p>然后定位要读取的数据在压缩文件的偏移位置（SetFilePointer），再读取(ReadFile)该文件数据。</p>
+<p>＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝</p>
+<p>Breakpoints</p>
+<p>地址&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 模块&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 激活&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 反汇编&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 注释</p>
+<p>004433D3&nbsp;&nbsp; 3M_d_通?&nbsp;&nbsp;&nbsp; 始终&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; push&nbsp;&nbsp;&nbsp; 007E398C</p>
+<p>00443687&nbsp;&nbsp; 3M_d_通?&nbsp;&nbsp;&nbsp; 始终&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; retn</p>
+<p>004524CE&nbsp;&nbsp; 3M_d_通?&nbsp;&nbsp;&nbsp; 已禁止&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; call&nbsp;&nbsp;&nbsp; 0044F2AC</p>
+<p>004524D3&nbsp;&nbsp; 3M_d_通?&nbsp;&nbsp;&nbsp; 已禁止&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; movsx&nbsp;&nbsp; ecx, al</p>
+<p>75769AF0&nbsp;&nbsp; KernelBa&nbsp;&nbsp; 始终&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; edi, edi&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CreateFileW</p>
+<p>7576AB4E&nbsp;&nbsp; KernelBa&nbsp;&nbsp; 始终&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; push&nbsp;&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ReadFile</p>
+<p>7576B1B1&nbsp;&nbsp; KernelBa&nbsp;&nbsp; 始终&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; edi, edi&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SetFilePointerEx</p>
+<p>7576BDD7&nbsp;&nbsp; KernelBa&nbsp;&nbsp; 始终&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; edi, edi&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SetFilePointer</p>
+<p>75781631&nbsp;&nbsp; KernelBa&nbsp;&nbsp; 始终&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; edi, edi&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SetEndOfFile</p>
+<p>下上面的的这些断点；</p>
+<p>先将Kernel的断点全部都禁用，一直到004433D3位置的断点到了</p>
+<p>开启Kernel的断点</p>
+<p>接下来Shift+F9可以很清晰的看到CreateFileW-&gt;SetFilePointer-&gt;ReadFile这么一个过程</p>
+<p>中间会读取文件各种部位，先不管</p>
+<p>...</p>
+<p>直到读取一个压缩子文件到内存之后(通过ReadFile的字节数或者SetFilePointer的偏移位置来确定读取的是不是压缩子文件)</p>
+<p>在数据窗口Ctrl+G，定位到压缩子文件的内存内的第一个字节（调用ReadFile时，会传入目标内存地址，在数据窗口定位这个地址就OK了）</p>
+<p>在第一个字节上，下硬件访问断点（4个字节，目的是想看看程序在哪里会去使用文件里面读出来的数据）</p>
+<p>...</p>
+<p>断了下来，发现有zlib字符串的函数！！！</p>
+<p>try zip解码</p>
+<hr>
+<p>在 ysbin.ypf:84D72 位置，是子文件 60.ybn 的开始位置</p>
+<p>文件开始数据：</p>
+<p>78018B0C0E71BAC9C8C0C0C4C0C0C001...</p>
+<p>自己用了一个zlib库，解出来的结果</p>
+<p>0x00500040&nbsp; 59 53 54 42 d9 01 00 00 02 00 00 00 08 00 00 00&nbsp;</p>
+<p>0x00500050&nbsp; 0c 00 00 00 0c 00 00 00 08 00 00 00 00 00 00 00&nbsp;</p>
+<p>0x00500060&nbsp; cf 6e ac 96 df 6f ac 96 d3 6f af 96 df 6f ac 96&nbsp;</p>
+<p>0x00500070&nbsp; d3 6f ac 96 9e 66 ac b4 b6 1c 82 d3 81 26 ff b4&nbsp;</p>
+<p>0x00500080&nbsp; dd 6f ac 96 c2 6f ac 96</p>
+<p>在OD里面看到解出来的结果</p>
+<p>01CDFF30&nbsp; 59 53 54 42 D9 01 00 00 02 00 00 00 08 00 00 00&nbsp; YSTB?........</p>
+<p>01CDFF40&nbsp; 0C 00 00 00 0C 00 00 00 08 00 00 00 00 00 00 00&nbsp; ...............</p>
+<p>01CDFF50&nbsp; CF 6E AC 96 DF 6F AC 96 D3 6F AF 96 DF 6F AC 96&nbsp; 蟦瑬遫瑬觨瘱遫瑬</p>
+<p>01CDFF60&nbsp; D3 6F AC 96 9E 66 AC B4 B6 1C 82 D3 81 26 FF B4&nbsp; 觨瑬瀎?傆??</p>
+<p>01CDFF70&nbsp; DD 6F AC 96 C2 6F AC 96&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 輔瑬耾瑬....</p>
+<p>调用完下面一行后，当前堆栈指向的地址就是解压出来的数据的开始地址</p>
+<p>004525B0&nbsp; |.&nbsp; E8 3FA80200&nbsp;&nbsp; |call&nbsp;&nbsp;&nbsp; &lt;3M.uncompress&gt;</p>
+<p>自己与OD解出来的结果是一样的，那就是zlib库，并且是1.2.3版本的</p>
+<p>但是！！！发现在OD后面对解出来的数据还做了一些处理，下面是处理时某一过程复制下来的。。。不是最终的数据</p>
+<p>00000000&nbsp;&nbsp; 59 53 54 42 D9 01 00 00&nbsp; 02 00 00 00 DB 6F AC 96&nbsp;&nbsp; YSTB?......踥瑬</p>
+<p>00000010&nbsp;&nbsp; DF 6F AC 96 0C 00 00 00&nbsp; 08 00 00 00 00 00 00 00&nbsp;&nbsp; 遫瑬............</p>
+<p>00000020&nbsp;&nbsp; 1C 01 AC 96 DF 6F AC 96&nbsp; D3 6F AF 96 DF 6F AC 96&nbsp;&nbsp; ..瑬遫瑬觨瘱遫瑬</p>
+<p>00000030&nbsp;&nbsp; D3 6F AC 96 9E 66 AC B4&nbsp; B6 1C 82 D3 81 26 FF B4&nbsp;&nbsp; 觨瑬瀎?傆.&amp;?</p>
+<p>00000040&nbsp;&nbsp; DD 6F AC 96 C2 6F AC 96&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 輔瑬耾瑬</p>
+<p>既然解包出来的数据还是做过处理的，那么我们就知道在unzip后，需要对数据再做些处理。</p>
+<p>============================================================</p>
+<p>在写解包工具前，希望先在程序里面能看到汉字，这样能证明，只要文件处理OK，那么汉化就没有问题</p>
+<p>下CreateFontIndirect、CreateFont两个函数的断点</p>
+<p>断在了CreateFontIndirect函数里面，查看一下调用堆栈，找到游戏程序空间调用的位置</p>
+<p>00437D3C&nbsp;&nbsp;&nbsp; FF15 38805600&nbsp;&nbsp; call&nbsp;&nbsp;&nbsp; dword ptr [&lt;&amp;GDI32.CreateFontInd&gt;; gdi32.CreateFontIndirectA</p>
+<p>在这里整了一会儿，发现游戏程序好像是有多个LOGFONT结构，每次调用CreateFontIndirect时还会修改某个LOGFONT结构，再将这个结构传入CreateFontIndirect</p>
+<p>为了整中文，我们得搞个汉字字体呀，那就弄个"宋体"吧，还得将charset改为86h(GB2312)</p>
+<p>LOGFONT结构数据</p>
+<p>.游戏程序里面当前LOGFONT的数据</p>
+<p>0087AF58&nbsp; 48 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&nbsp; H...............</p>
+<p>0087AF68&nbsp; BC 02 00 00 00 00 00 80 00 00 00 00 53 79 73 74&nbsp; ?.....€....Syst</p>
+<p>0087AF78&nbsp; 65 6D 00 00 00 00 00 00 00 00 00 00 00 00 00 00&nbsp; em..............</p>
+<p>0087AF88&nbsp; 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&nbsp; ................</p>
+<p>0087AF98&nbsp; AE 08 79 05 00 00 00 8C 00 00 00 00 00 00 00 00&nbsp; ?y...?.......</p>
+<p>0087AFA8&nbsp; 00 00 00 00 00 00 00 00 90 01 00 00 00 00 00 80&nbsp; ........?.....€</p>
+<p>.用VC整了个LOGFONT，填上"宋体"，并将codepage改为86</p>
+<p>48 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&nbsp;</p>
+<p>bc 02 00 00 00 00 00 86 00 00 00 00 8b 5b 53 4f&nbsp;</p>
+<p>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&nbsp;</p>
+<p>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&nbsp;</p>
+<p>ae 08 79 05 00 00 00 8c 00 00 00 00 00 00 00 00&nbsp;</p>
+<p>00 00 00 00 00 00 00 00 90 01 00 00</p>
+<p>就用这串字来做测试：</p>
+<p>调用完后</p>
+<p>16进制码：</p>
+<p>B5F7D3C3CDEABAF3</p>
+<p>我们会发现，本来的日文显示成乱码了（证明LOGFONT改成功了）；</p>
+<p>可是我们的汉字也是乱码，这就不对了！！！</p>
+<p>看样子，还有很多任务</p>
+<p>重新回头来看看，其实都可以不用去整那个“宋体”的，因为原来的LOGFONT用的是“System”，在中文系统上面，也就是“宋体”了。不过codepage还是要整。</p>
+<hr>
+<p><strong>继续，将&lt;3M_d_通常版.exe&gt;里面的代码替换下面的这段代码，目的为了：</strong></p>
+<p><strong>1.修正CharSet 0x86(汉字GB2312)</strong></p>
+<p><strong>2.去掉字体复制代码（默认就是"System"，正是我们需要的，就不用再去每次复制了），为了给第1步的代码弄点空间来运行</strong></p>
+<p>00437D14&nbsp;&nbsp;&nbsp; 8B15 3CC55A00&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; edx, dword ptr [5AC53C]</p>
+<p>00437D1A&nbsp;&nbsp;&nbsp; 8B3495 3CD87D00 mov&nbsp;&nbsp;&nbsp;&nbsp; esi, dword ptr [edx*4+7DD83C]</p>
+<p>00437D21&nbsp;&nbsp;&nbsp; 83C6 17&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; add&nbsp;&nbsp;&nbsp;&nbsp; esi, 17</p>
+<p>00437D24&nbsp;&nbsp;&nbsp; C606 86&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; byte ptr [esi], 86</p>
+<p>00437D27&nbsp;&nbsp;&nbsp; 90&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nop</p>
+<p>00437D28&nbsp;&nbsp;&nbsp; 90&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nop</p>
+<p>00437D29&nbsp;&nbsp;&nbsp; 90&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nop</p>
+<p>00437D2A&nbsp;&nbsp;&nbsp; 90&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nop</p>
+<p>00437D2B&nbsp;&nbsp;&nbsp; 90&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nop</p>
+<p>00437D2C&nbsp;&nbsp;&nbsp; 90&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nop</p>
+<p>00437D2D&nbsp;&nbsp;&nbsp; 90&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nop</p>
+<p>00437D2E&nbsp;&nbsp;&nbsp; 90&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nop</p>
+<p>00437D2F&nbsp;&nbsp;&nbsp; 90&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; nop</p>
+<p>00437D30&nbsp;&nbsp;&nbsp; A1 3CC55A00&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; eax, dword ptr [5AC53C]</p>
+<p>00437D35&nbsp;&nbsp;&nbsp; FF3485 3CD87D00 push&nbsp;&nbsp;&nbsp; dword ptr [eax*4+7DD83C]</p>
+<p>00437D3C&nbsp;&nbsp;&nbsp; FF15 38805600&nbsp;&nbsp; call&nbsp;&nbsp;&nbsp; dword ptr [&lt;&amp;GDI32.CreateFontInd&gt;; gdi32.CreateFontIndirectA</p>
+<p>这样程序运行起来就直接是86h的了，也就是日文直接是乱码了，我们还需要去调试为什么中文会显示不出来</p>
+<hr>
+<p>一般显示文字会使用DrawText、TextOut函数，就下它们的断点吧</p>
+<p>119.ybn，这个文件将会是第一个能写出文字的脚本，我们就用它来调试吧</p>
+<p>119.ybn:7e30h 第一个字符串的位置</p>
+<p>在TextOutA的函数有中断，每次都只有一个字符（CHAR/WCHAR）</p>
+<p>一个奇怪的问题是，我们写了中文之后，会被拆分了，为什么呢？</p>
+<p>============================</p>
+<p>调用完后</p>
+<p>B5F7D3C3CDEABAF3</p>
+<p>============================</p>
+<p>/////////////////</p>
+<p>又需要去下硬件访问断点了</p>
+<p>定位119.ybn第一个字符串在内存的开始地址，下硬件访问断点</p>
+<p>...</p>
+<p>分析</p>
+<p>...</p>
+<p>结论： <br>访问文件内的字符串，生成两个数据：</p>
+<p>1.字符串复制</p>
+<p>2.字符串每个字符占的字节数（1BYTE/2BYTE）</p>
+<p>// 这个函数会使用加载了的 字符串，并读取内存</p>
+<p>00401780&nbsp;&nbsp; .&nbsp; 57&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; push&nbsp;&nbsp;&nbsp; edi</p>
+<p>...</p>
+<p>0040179A&nbsp;&nbsp; .&nbsp; 8B7C24 20&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; edi, dword ptr ss:[esp+20]</p>
+<p>0040179E&nbsp;&nbsp; .&nbsp; 8B7424 24&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; esi, dword ptr ss:[esp+24]</p>
+<p>004017A2&nbsp;&nbsp; .&nbsp; 33C9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; xor&nbsp;&nbsp;&nbsp;&nbsp; ecx, ecx</p>
+<p>004017A4&nbsp;&nbsp; .&nbsp; 8B5424 08&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; edx, dword ptr ss:[esp+8]</p>
+<p>004017A8&nbsp;&nbsp; &gt;&nbsp; 0F6F04CE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; movq&nbsp;&nbsp;&nbsp; mm0, qword ptr ds:[esi+ecx*8]&nbsp;&nbsp; // 这句就是在读字符串</p>
+<p>004017AC&nbsp;&nbsp; .&nbsp; 0F7F04CF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; movq&nbsp;&nbsp;&nbsp; qword ptr ds:[edi+ecx*8], mm0</p>
+<p>004017B0&nbsp;&nbsp; .&nbsp; 41&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; inc&nbsp;&nbsp;&nbsp;&nbsp; ecx</p>
+<p>004017B1&nbsp;&nbsp; .&nbsp; 3BCA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cmp&nbsp;&nbsp;&nbsp;&nbsp; ecx, edx</p>
+<p>004017B3&nbsp;&nbsp; .^ 75 F3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; jnz&nbsp;&nbsp;&nbsp;&nbsp; short 3M-chn.004017A8</p>
+<p><strong>.字符串复制</strong></p>
+<p>01CE6420&nbsp; B5 F7 D3 C3 CD EA BA F3 82 C8 82 D1 82 AD 90 B6&nbsp; 调用完后側 傃偔惗</p>
+<p>01CE6430&nbsp; 94 92 82 A2 8F 5F 94 A7 81 42 82 BB 82 F1 82 C8&nbsp; 敀偄廮敡丅偦傫側</p>
+<p>01CE6440&nbsp; 83 8A 83 8A 83 56 83 59 83 80 82 C9 88 EC 82 EA&nbsp; 儕儕僔僘儉偵堨傟</p>
+<p>01CE6450&nbsp; 82 BD 8C F5 8C 69 82 F0 81 41 96 6C 82 CD 82 BD&nbsp; 偨岝宨傪丄杔偼偨</p>
+<p>01CE6460&nbsp; 82 BE 81 41 95 F0 91 52 82 C6 8C A9 89 BA 82 EB&nbsp; 偩丄曫慠偲尒壓傠</p>
+<p>01CE6470&nbsp; 82 B5 82 C4 82 A2 82 BD 81 42 00 00 00 00 00 00&nbsp; 偟偰偄偨丅......</p>
+<p>0044A62E&nbsp;&nbsp; &gt; /8B48 3C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; ecx, dword ptr ds:[eax+3C]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp; ecx得到字符串的字符字节数</p>
+<p><strong>.字符串每个字符占的字节数（1BYTE/2BYTE）</strong></p>
+<p>01CE8428&nbsp; 31 32 31 31 32 32 31 32 32 32 32 32 32 32 32 32&nbsp; 1211221222222222&nbsp; // 看前面的7个字节</p>
+<p>01CE8438&nbsp; 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32&nbsp; 2222222222222222</p>
+<p>01CE8448&nbsp; 32 32 32 32 32 32 32 32 32 32 32 32 32 32 32&nbsp;&nbsp;&nbsp;&nbsp; 222222222222222</p>
+<p>拿字符串里每个字节去查表（字节的值直接做为表的索引）</p>
+<p>两个字节：81h 40h </p>
+<p>05846ADB&nbsp; 81 40 81 40 4D 16 00 22 65 73 2E 53 50 2E 46 4F&nbsp; 丂丂M."es.SP.FO</p>
+<p><strong>这个表是关键！！！</strong></p>
+<p>被用来查是否为双字节的表(只要我们将81h之后的字节全都写成01，就能显示汉字了)</p>
+<p>这个表是针对日文的单双字节字符，我们简单的给处理成这样就好了。</p>
+<p>0058F0A0&nbsp; 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&nbsp; ................</p>
+<p>0058F0B0&nbsp; 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&nbsp; ................</p>
+<p>0058F0C0&nbsp; 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&nbsp; ................</p>
+<p>0058F0D0&nbsp; 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&nbsp; ................</p>
+<p>0058F0E0&nbsp; 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&nbsp; ................</p>
+<p>0058F0F0&nbsp; 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&nbsp; ................</p>
+<p>0058F100&nbsp; 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&nbsp; ................</p>
+<p>0058F110&nbsp; 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&nbsp; ................</p>
+<p>0058F120&nbsp; 00 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01&nbsp; .</p>
+<p>0058F130&nbsp; 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01&nbsp; </p>
+<p>0058F140&nbsp; 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&nbsp; ................</p>
+<p>0058F150&nbsp; 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&nbsp; ................</p>
+<p>0058F160&nbsp; 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&nbsp; ................</p>
+<p>0058F170&nbsp; 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&nbsp; ................</p>
+<p>0058F180&nbsp; 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01 01&nbsp; </p>
+<p>0058F190&nbsp; 01 01 01 01 01 01 01 01 01 01 01 01 01 00 00 00&nbsp; ...</p>
+<p>0058F1A0&nbsp; 00 00 00 00 96 30 07 77 2C 61 0E EE BA 51 09 99&nbsp; ....?w,a詈Q.?</p>
+<p><strong>修改、保存新的exe，再运行，在内存中替换第一句日文为汉字，成功显示！！！</strong></p>
+<p>004433F3&nbsp; |.&nbsp; E8 19ED0000&nbsp;&nbsp; call&nbsp;&nbsp;&nbsp; 3M.00452111&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp; 读取文件，并解压</p>
+<p>004433F8&nbsp; |.&nbsp; 85C0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; test&nbsp;&nbsp;&nbsp; eax, eax&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp; 读取文件，并解压 完成 [esp+94h] 读取数据</p>
+<p>cmd:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; db [esp + 94]&nbsp; 在数据窗口直接定位到解压完的数据开始位置</p>
+<hr>
+<p>字符串复制与检测1或2字节功能函数</p>
+<p>0044A4EC&nbsp;&nbsp; .&nbsp; 56&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; push&nbsp;&nbsp;&nbsp; esi</p>
+<p>0044A4ED&nbsp;&nbsp; .&nbsp; 53&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; push&nbsp;&nbsp;&nbsp; ebx</p>
+<p>0044A4EE&nbsp;&nbsp; .&nbsp; 83EC 10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; sub&nbsp;&nbsp;&nbsp;&nbsp; esp, 10</p>
+<p>0044A4F1&nbsp;&nbsp; .&nbsp; B8 5A000000&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; eax, 5A</p>
+<p>0044A4F6&nbsp;&nbsp; .&nbsp; E8 AE2EFDFF&nbsp;&nbsp; call&nbsp;&nbsp;&nbsp; 3M-chn.0041D3A9</p>
+<p>0044A4FB&nbsp;&nbsp; .&nbsp; 0FBEC0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; movsx&nbsp;&nbsp; eax, al</p>
+<p>0044A4FE&nbsp;&nbsp; .&nbsp; 85C0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; test&nbsp;&nbsp;&nbsp; eax, eax</p>
+<p>0044A500&nbsp;&nbsp; .&nbsp; 0F85 50010000 jnz&nbsp;&nbsp;&nbsp;&nbsp; 3M-chn.0044A656</p>
+<p>0044A506&nbsp;&nbsp; .&nbsp; 8B35 64876500 mov&nbsp;&nbsp;&nbsp;&nbsp; esi, dword ptr ds:[658764]</p>
+<p>0044A50C&nbsp;&nbsp; .&nbsp; 8B15 40D67D00 mov&nbsp;&nbsp;&nbsp;&nbsp; edx, dword ptr ds:[7DD640]</p>
+<p>0044A512&nbsp;&nbsp; .&nbsp; 8B42 58&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; eax, dword ptr ds:[edx+58]</p>
+<p>0044A515&nbsp;&nbsp; .&nbsp; 8D4C30 FF&nbsp;&nbsp;&nbsp;&nbsp; lea&nbsp;&nbsp;&nbsp;&nbsp; ecx, dword ptr ds:[eax+esi-1]</p>
+<p>0044A519&nbsp;&nbsp; .&nbsp; 81F9 FE1F0000 cmp&nbsp;&nbsp;&nbsp;&nbsp; ecx, 1FFE</p>
+<p>0044A51F&nbsp;&nbsp; .&nbsp; 0F8D 22010000 jge&nbsp;&nbsp;&nbsp;&nbsp; 3M-chn.0044A647</p>
+<p>0044A525&nbsp;&nbsp; .&nbsp; 8B1D 80D57D00 mov&nbsp;&nbsp;&nbsp;&nbsp; ebx, dword ptr ds:[7DD580]</p>
+<p>0044A52B&nbsp;&nbsp; .&nbsp; 8B9B 20800000 mov&nbsp;&nbsp;&nbsp;&nbsp; ebx, dword ptr ds:[ebx+8020]</p>
+<p>0044A531&nbsp;&nbsp; .&nbsp; 031D 04896500 add&nbsp;&nbsp;&nbsp;&nbsp; ebx, dword ptr ds:[658904]</p>
+<p>0044A537&nbsp;&nbsp; .&nbsp; 8B52 38&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; edx, dword ptr ds:[edx+38]</p>
+<p>0044A53A&nbsp;&nbsp; .&nbsp; 03D0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; add&nbsp;&nbsp;&nbsp;&nbsp; edx, eax</p>
+<p>0044A53C&nbsp;&nbsp; .&nbsp; 56&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; push&nbsp;&nbsp;&nbsp; esi</p>
+<p>0044A53D&nbsp;&nbsp; .&nbsp; 53&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; push&nbsp;&nbsp;&nbsp; ebx</p>
+<p>0044A53E&nbsp;&nbsp; .&nbsp; 52&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; push&nbsp;&nbsp;&nbsp; edx</p>
+<p>0044A53F&nbsp;&nbsp; .&nbsp; FF15 8CC45A00 call&nbsp;&nbsp;&nbsp; near dword ptr ds:[5AC48C]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp; 读取字符串</p>
+<p>0044A545&nbsp;&nbsp; .&nbsp; 83C4 0C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; add&nbsp;&nbsp;&nbsp;&nbsp; esp, 0C</p>
+<p>0044A548&nbsp;&nbsp; .&nbsp; A1 40D67D00&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; eax, dword ptr ds:[7DD640]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp; *(DWORD*)(*(DWORD*)7DD640)</p>
+<p>0044A54D&nbsp;&nbsp; .&nbsp; 8B50 58&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; edx, dword ptr ds:[eax+58]</p>
+<p>0044A550&nbsp;&nbsp; .&nbsp; 03D6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; add&nbsp;&nbsp;&nbsp;&nbsp; edx, esi</p>
+<p>0044A552&nbsp;&nbsp; .&nbsp; 8950 58&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; dword ptr ds:[eax+58], edx</p>
+<p>0044A555&nbsp;&nbsp; .&nbsp; 8B48 38&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; ecx, dword ptr ds:[eax+38]</p>
+<p>0044A558&nbsp;&nbsp; .&nbsp; C6040A 00&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; byte ptr ds:[edx+ecx], 0</p>
+<p>0044A55C&nbsp;&nbsp; .&nbsp; 85F6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; test&nbsp;&nbsp;&nbsp; esi, esi</p>
+<p>0044A55E&nbsp;&nbsp; .&nbsp; 0F8E D9000000 jle&nbsp;&nbsp;&nbsp;&nbsp; 3M-chn.0044A63D</p>
+<p>0044A564&nbsp;&nbsp; .&nbsp; 33C9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; xor&nbsp;&nbsp;&nbsp;&nbsp; ecx, ecx</p>
+<p>0044A566&nbsp;&nbsp; .&nbsp; A1 40D67D00&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; eax, dword ptr ds:[7DD640]</p>
+<p>0044A56B&nbsp;&nbsp; .&nbsp; 8B50 5C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; edx, dword ptr ds:[eax+5C]</p>
+<p>0044A56E&nbsp;&nbsp; .&nbsp; 897424 0C&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; dword ptr ss:[esp+C], esi</p>
+<p>0044A572&nbsp;&nbsp; .&nbsp; 897C24 08&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; dword ptr ss:[esp+8], edi</p>
+<p>0044A576&nbsp;&nbsp; .&nbsp; 896C24 04&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; dword ptr ss:[esp+4], ebp</p>
+<p>0044A57A&nbsp;&nbsp; .&nbsp; 8BE9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; ebp, ecx&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp; 查表，检测是否为单双字节，好像只支持日文</p>
+<p>0044A57C&nbsp;&nbsp; &gt;&nbsp; 0FB6741D 00&nbsp;&nbsp; movzx&nbsp;&nbsp; esi, byte ptr ss:[ebp+ebx]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp; 取要判断的字的一个字节</p>
+<p>0044A581&nbsp;&nbsp; .&nbsp; 0FB68E A0F058&gt;movzx&nbsp;&nbsp; ecx, byte ptr ds:[esi+58F0A0]</p>
+<p>0044A588&nbsp;&nbsp; .&nbsp; 0FBEF1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; movsx&nbsp;&nbsp; esi, cl&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp; esi, 将会记录是否32h,31h</p>
+<p>0044A58B&nbsp;&nbsp; .&nbsp; 8B78 4C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; edi, dword ptr ds:[eax+4C]</p>
+<p>0044A58E&nbsp;&nbsp; .&nbsp; 8B40 28&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; eax, dword ptr ds:[eax+28]</p>
+<p>0044A591&nbsp;&nbsp; .&nbsp; 890497&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; dword ptr ds:[edi+edx*4], eax</p>
+<p>0044A594&nbsp;&nbsp; .&nbsp; A1 40D67D00&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; eax, dword ptr ds:[7DD640]</p>
+<p>0044A599&nbsp;&nbsp; .&nbsp; 8B78 5C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; edi, dword ptr ds:[eax+5C]</p>
+<p>0044A59C&nbsp;&nbsp; .&nbsp; 8B50 50&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; edx, dword ptr ds:[eax+50]</p>
+<p>0044A59F&nbsp;&nbsp; .&nbsp; 8B40 2C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; eax, dword ptr ds:[eax+2C]</p>
+<p>0044A5A2&nbsp;&nbsp; .&nbsp; 8904BA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; dword ptr ds:[edx+edi*4], eax</p>
+<p>0044A5A5&nbsp;&nbsp; .&nbsp; A1 40D67D00&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; eax, dword ptr ds:[7DD640]</p>
+<p>0044A5AA&nbsp;&nbsp; .&nbsp; 8B50 20&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; edx, dword ptr ds:[eax+20]</p>
+<p>0044A5AD&nbsp;&nbsp; .&nbsp; 8B78 5C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; edi, dword ptr ds:[eax+5C]</p>
+<p>0044A5B0&nbsp;&nbsp; .&nbsp; 8B40 40&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; eax, dword ptr ds:[eax+40]</p>
+<p>0044A5B3&nbsp;&nbsp; .&nbsp; 66:891478&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; word ptr ds:[eax+edi*2], dx</p>
+<p>0044A5B7&nbsp;&nbsp; .&nbsp; A1 40D67D00&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; eax, dword ptr ds:[7DD640]</p>
+<p>0044A5BC&nbsp;&nbsp; .&nbsp; 8B50 24&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; edx, dword ptr ds:[eax+24]</p>
+<p>0044A5BF&nbsp;&nbsp; .&nbsp; 8B78 5C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; edi, dword ptr ds:[eax+5C]</p>
+<p>0044A5C2&nbsp;&nbsp; .&nbsp; 8B40 44&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; eax, dword ptr ds:[eax+44]</p>
+<p>0044A5C5&nbsp;&nbsp; .&nbsp; 66:891478&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; word ptr ds:[eax+edi*2], dx</p>
+<p>0044A5C9&nbsp;&nbsp; .&nbsp; A1 40D67D00&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; eax, dword ptr ds:[7DD640]</p>
+<p>0044A5CE&nbsp;&nbsp; .&nbsp; 8B78 54&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; edi, dword ptr ds:[eax+54]</p>
+<p>0044A5D1&nbsp;&nbsp; .&nbsp; 8B50 5C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; edx, dword ptr ds:[eax+5C]</p>
+<p>0044A5D4&nbsp;&nbsp; .&nbsp; 0FB640 30&nbsp;&nbsp;&nbsp;&nbsp; movzx&nbsp;&nbsp; eax, byte ptr ds:[eax+30]</p>
+<p>0044A5D8&nbsp;&nbsp; .&nbsp; 88043A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; byte ptr ds:[edx+edi], al</p>
+<p>0044A5DB&nbsp;&nbsp; .&nbsp; 8B15 40D67D00 mov&nbsp;&nbsp;&nbsp;&nbsp; edx, dword ptr ds:[7DD640]</p>
+<p>0044A5E1&nbsp;&nbsp; .&nbsp; 8D46 31&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; lea&nbsp;&nbsp;&nbsp;&nbsp; eax, dword ptr ds:[esi+31]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp; 看ESI有没有1，如果有就是'2'，否则就是'1'</p>
+<p>0044A5E4&nbsp;&nbsp; .&nbsp; 8B7A 3C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; edi, dword ptr ds:[edx+3C]</p>
+<p>0044A5E7&nbsp;&nbsp; .&nbsp; 8B52 5C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; edx, dword ptr ds:[edx+5C]</p>
+<p>0044A5EA&nbsp;&nbsp; .&nbsp; 88043A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; byte ptr ds:[edx+edi], al&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp; 写入'2'(32h)</p>
+<p>0044A5ED&nbsp;&nbsp; .&nbsp; 8B3D 40D67D00 mov&nbsp;&nbsp;&nbsp;&nbsp; edi, dword ptr ds:[7DD640]</p>
+<p>0044A5F3&nbsp;&nbsp; .&nbsp; 8BCE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; ecx, esi</p>
+<p>0044A5F5&nbsp;&nbsp; .&nbsp; F7D9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; neg&nbsp;&nbsp;&nbsp;&nbsp; ecx</p>
+<p>0044A5F7&nbsp;&nbsp; .&nbsp; 83C1 02&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; add&nbsp;&nbsp;&nbsp;&nbsp; ecx, 2</p>
+<p>0044A5FA&nbsp;&nbsp; .&nbsp; 8B47 04&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; eax, dword ptr ds:[edi+4]</p>
+<p>0044A5FD&nbsp;&nbsp; .&nbsp; 99&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cdq</p>
+<p>0044A5FE&nbsp;&nbsp; .&nbsp; F7F9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; idiv&nbsp;&nbsp;&nbsp; ecx</p>
+<p>0044A600&nbsp;&nbsp; .&nbsp; 8B4F 5C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; ecx, dword ptr ds:[edi+5C]</p>
+<p>0044A603&nbsp;&nbsp; .&nbsp; 8B57 48&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; edx, dword ptr ds:[edi+48]</p>
+<p>0044A606&nbsp;&nbsp; .&nbsp; 66:89044A&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; word ptr ds:[edx+ecx*2], ax</p>
+<p>0044A60A&nbsp;&nbsp; .&nbsp; A1 40D67D00&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; eax, dword ptr ds:[7DD640]</p>
+<p>0044A60F&nbsp;&nbsp; .&nbsp; 8B50 5C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; edx, dword ptr ds:[eax+5C]</p>
+<p>0044A612&nbsp;&nbsp; .&nbsp; 42&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; inc&nbsp;&nbsp;&nbsp;&nbsp; edx</p>
+<p>0044A613&nbsp;&nbsp; .&nbsp; 8950 5C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; dword ptr ds:[eax+5C], edx</p>
+<p>0044A616&nbsp;&nbsp; .&nbsp; 8D6C35 01&nbsp;&nbsp;&nbsp;&nbsp; lea&nbsp;&nbsp;&nbsp;&nbsp; ebp, dword ptr ss:[ebp+esi+1]&nbsp;&nbsp;&nbsp; ;&nbsp; ebp+1+&nbsp; 1(若双字节)</p>
+<p>0044A61A&nbsp;&nbsp; .&nbsp; 8B7424 0C&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; esi, dword ptr ss:[esp+C]</p>
+<p>0044A61E&nbsp;&nbsp; .&nbsp; 3BEE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cmp&nbsp;&nbsp;&nbsp;&nbsp; ebp, esi</p>
+<p>0044A620&nbsp;&nbsp; .^ 0F8C 56FFFFFF jl&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3M-chn.0044A57C</p>
+<p>0044A626&nbsp;&nbsp; .&nbsp; 8B7C24 08&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; edi, dword ptr ss:[esp+8]</p>
+<p>0044A62A&nbsp;&nbsp; .&nbsp; 8B6C24 04&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; ebp, dword ptr ss:[esp+4]</p>
+<p>0044A62E&nbsp;&nbsp; &gt;&nbsp; 8B48 3C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; ecx, dword ptr ds:[eax+3C]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ;&nbsp; ecx得到字符串的字符字节数</p>
+<p>0044A631&nbsp;&nbsp; .&nbsp; C6040A 00&nbsp;&nbsp;&nbsp;&nbsp; mov&nbsp;&nbsp;&nbsp;&nbsp; byte ptr ds:[edx+ecx], 0</p>
+<p>0044A635&nbsp;&nbsp; .&nbsp; 33C0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; xor&nbsp;&nbsp;&nbsp;&nbsp; eax, eax</p>
+<p>0044A637&nbsp;&nbsp; .&nbsp; 83C4 10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; add&nbsp;&nbsp;&nbsp;&nbsp; esp, 10</p>
+<p>0044A63A&nbsp;&nbsp; .&nbsp; 5B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pop&nbsp;&nbsp;&nbsp;&nbsp; ebx</p>
+<p>0044A63B&nbsp;&nbsp; .&nbsp; 5E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pop&nbsp;&nbsp;&nbsp;&nbsp; esi</p>
+<p>0044A63C&nbsp;&nbsp; .&nbsp; C3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; retn</p>
+<hr>
+<p><span style="background-color: rgb(0, 255, 0); color: rgb(0, 0, 0); --darkreader-inline-bgcolor:#1dc118; --darkreader-inline-color:#f0ebe2;" data-darkreader-inline-bgcolor="" data-darkreader-inline-color="">修改Crass-source\cui\YU-RIS\YU-RIS.cpp，生成新的cui就能解包了</span></p>
+<pre>  1: <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">typedef</span> <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">struct</span> {
+</pre>
+<pre>  2:     s8 magic[4];            <span style="color: rgb(0, 128, 0); --darkreader-inline-color:#96fb8d;" data-darkreader-inline-color="">// "YSTB"</span>
+</pre>
+<pre>  3:     u32 version;            <span style="color: rgb(0, 128, 0); --darkreader-inline-color:#96fb8d;" data-darkreader-inline-color="">// 0.473</span>
+</pre>
+<pre>  4:     u32 data1_length_div_4;    <span style="color: rgb(0, 128, 0); --darkreader-inline-color:#96fb8d;" data-darkreader-inline-color="">// 现在我知道它是脚本文件里面的命令(函数)数量（分析了ybn文件后）</span>
+</pre>
+<pre>  5:     u32 data1_length;
+</pre>
+<pre>  6:     u32 data2_length;
+</pre>
+<pre>  7:     u32 data3_length;
+</pre>
+<pre>  8:     u32 data4_length;
+</pre>
+<pre>  9:     u32 reserved;
+</pre>
+<pre> 10: } ystb473_header_t;
+</pre>
+<pre> 11: 
+</pre>
+<pre> 12: <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">static</span> <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">void</span> __ystb_decode_473(ystb473_header_t *ystb, DWORD ystb_length, BYTE *dec_tbl)
+</pre>
+<pre> 13: {
+</pre>
+<pre> 14:     BYTE *enc;
+</pre>
+<pre> 15:     <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">unsigned</span> <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">int</span> enc_len, i;
+</pre>
+<pre> 16:     
+</pre>
+<pre> 17:     enc = (BYTE *)(ystb + 1);
+</pre>
+<pre> 18:     enc_len = ystb-&gt;data1_length;
+</pre>
+<pre> 19:     <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">for</span> (i = 0; i &lt; enc_len; i++)
+</pre>
+<pre> 20:         enc[i] ^= dec_tbl[i &amp; 3];
+</pre>
+<pre> 21:     
+</pre>
+<pre> 22:     enc = ((BYTE *)(ystb + 1)) + ystb-&gt;data1_length;
+</pre>
+<pre> 23:     enc_len = ystb-&gt;data2_length;
+</pre>
+<pre> 24:     <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">for</span> (i = 0; i &lt; enc_len; i++)
+</pre>
+<pre> 25:         enc[i] ^= dec_tbl[i &amp; 3];
+</pre>
+<pre> 26:     
+</pre>
+<pre> 27:     enc = ((BYTE *)(ystb + 1)) + ystb-&gt;data1_length + ystb-&gt;data2_length;
+</pre>
+<pre> 28:     enc_len = ystb-&gt;data3_length;
+</pre>
+<pre> 29:     <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">for</span> (i = 0; i &lt; enc_len; i++)
+</pre>
+<pre> 30:         enc[i] ^= dec_tbl[i &amp; 3];
+</pre>
+<pre> 31:     
+</pre>
+<pre> 32:     enc = ((BYTE *)(ystb + 1)) + ystb-&gt;data1_length + ystb-&gt;data2_length + ystb-&gt;data3_length;
+</pre>
+<pre> 33:     enc_len = ystb-&gt;data4_length;
+</pre>
+<pre> 34:     <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">for</span> (i = 0; i &lt; enc_len; i++)
+</pre>
+<pre> 35:         enc[i] ^= dec_tbl[i &amp; 3];
+</pre>
+<pre> 36: }
+</pre>
+<pre> 37: 
+</pre>
+<pre> 38: <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">static</span> <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">void</span> ystb_decode(ystb_header_t *ystb, DWORD ystb_length, 
+</pre>
+<pre> 39:                         BYTE **ret_data, DWORD *ret_len)
+</pre>
+<pre> 40: {
+</pre>
+<pre> 41:     BYTE dec_tbl1[4] = { 0x07, 0xb4, 0x02, 0x4a };
+</pre>
+<pre> 42:     BYTE dec_tbl2[4] = { 0xd3, 0x6f, 0xac, 0x96 };
+</pre>
+<pre> 43:     BYTE dec_tbl0[4] = { 0x80, 0x80, 0x80, 0x80 };
+</pre>
+<pre> 44:     
+</pre>
+<pre> 45:     <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">if</span> (ystb-&gt;version &gt;= 473)
+</pre>
+<pre> 46:         __ystb_decode_473((ystb473_header_t*)ystb, ystb_length, dec_tbl2);
+</pre>
+<pre> 47:     <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">else</span> <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">if</span> (ystb-&gt;version &gt; 263)
+</pre>
+<pre> 48:         __ystb_decode(ystb, ystb_length, dec_tbl2);
+</pre>
+<pre> 49:     <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">else</span> <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">if</span> (ystb-&gt;version &gt; 224)    <span style="color: rgb(0, 128, 0); --darkreader-inline-color:#96fb8d;" data-darkreader-inline-color="">// 确切的上限边界并不清楚，只不过碰到了这个版本而</span>
+</pre>
+<pre> 50:         __ystb_decode(ystb, ystb_length, dec_tbl1);    
+</pre>
+<pre> 51:     <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">else</span> <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">if</span> (ystb-&gt;version &gt; 2)
+</pre>
+<pre> 52:         __ystb_decode(ystb, ystb_length, dec_tbl0);
+</pre>
+<pre> 53: }</pre>
+<hr>
+<p><span style="background-color: rgb(0, 255, 0); --darkreader-inline-bgcolor:#1dc118;" data-darkreader-inline-bgcolor="">ybn文件的字符串切割方法</span></p>
+<p>文件分成几个区段</p>
+<p>0.文件头</p>
+<p>1.函数区</p>
+<p>2.参数区</p>
+<p>3.字符串区</p>
+<p>4.未知区</p>
+<p>文件头</p>
+<p>固定大小(20h bytes)</p>
+<p>-文件类型(4bytes)</p>
+<p>-文件版本(4bytes)</p>
+<p>-函数数量(4bytes)</p>
+<p>-函数区大小(4bytes)</p>
+<p>-参数区大小(4bytes)</p>
+<p>-字符串区大小(4bytes)</p>
+<p>-未知区大小(4bytes)</p>
+<p>-未知(4bytes)</p>
+<p>函数区</p>
+<p>一个函数占byte[4]</p>
+<p>0=函数码</p>
+<p>1=参数数量(一个参数用0xC个字节来表示，也就是说，当写的是7时，字节数=7*0xC)</p>
+<p>2,3=未知</p>
+<p>参数区</p>
+<p>大小由函数区内每个函数总的参数数量决定。</p>
+<p>分割字符串的数据就记录在这里，一般是[long,long,long](未知,字符串字节数量,在字符串区的偏移)</p>
+<p>字符串区</p>
+<p>脚本里面所有的字符串参数，没有分割符，全部被并在一起。要想将字符串给分割开来，需要通过，函数区与参数区的一些数值进行计算。</p>
+<p>有时引擎会很奇怪，把好好的一段字给切成几个段。（可能是全角半角的原因）。</p>
+<p>未知区</p>
+<p>不知道有什么用，在程序里面，访问它的地方也没有任何意义。</p>
+<p>测试了一下直接将下面那段数据用0给填了，脚本正常运行。。。</p>
+<p>可以暂时先不管它</p>
+<p>============================================</p>
+<pre>  1: <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">typedef</span> <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">struct</span> {
+</pre>
+<pre>  2:     BYTE code;
+</pre>
+<pre>  3:     BYTE args;
+</pre>
+<pre>  4:     BYTE un[2];
+</pre>
+<pre>  5: } ystb473_method_t;
+</pre>
+<pre>  6: 
+</pre>
+<pre>  7: <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">typedef</span> <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">struct</span> {
+</pre>
+<pre>  8:     <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">long</span> un;
+</pre>
+<pre>  9:     <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">long</span> charCount;
+</pre>
+<pre> 10:     <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">long</span> charOffset;
+</pre>
+<pre> 11: } ystb473_parameter_t;
+</pre>
+<pre> 12: 
+</pre>
+<pre> 13: <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">bool</span> GBK2UNI(<span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">const</span> <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">char</span>* pGBK, <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">long</span> nBytesCount, std::wstring&amp; strUNI)
+</pre>
+<pre> 14: {
+</pre>
+<pre> 15:     DWORD dwMinSize = MultiByteToWideChar(936, 0, pGBK, nBytesCount, NULL, 0);
+</pre>
+<pre> 16:     strUNI.resize(dwMinSize);
+</pre>
+<pre> 17: 
+</pre>
+<pre> 18:     <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">if</span> (MultiByteToWideChar(936, 0, (LPCSTR)pGBK, nBytesCount, (WCHAR*)strUNI.c_str(), dwMinSize) &gt; 0)
+</pre>
+<pre> 19:     {
+</pre>
+<pre> 20:         <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">return</span> <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">true</span>;
+</pre>
+<pre> 21:     }
+</pre>
+<pre> 22:     <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">return</span> <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">false</span>;
+</pre>
+<pre> 23: }
+</pre>
+<pre> 24: 
+</pre>
+<pre> 25: 
+</pre>
+<pre> 26: <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">bool</span> SJIS2UNI(<span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">const</span> <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">char</span>* pSJIS, <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">long</span> nBytesCount, std::wstring&amp; strUNI)
+</pre>
+<pre> 27: {
+</pre>
+<pre> 28:     DWORD dwMinSize = MultiByteToWideChar(932, 0, pSJIS, nBytesCount, NULL, 0);
+</pre>
+<pre> 29:     strUNI.resize(dwMinSize);
+</pre>
+<pre> 30: 
+</pre>
+<pre> 31:     <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">if</span> (MultiByteToWideChar(932, 0, (LPCSTR)pSJIS, nBytesCount, (WCHAR*)strUNI.c_str(), dwMinSize) &gt; 0)
+</pre>
+<pre> 32:     {
+</pre>
+<pre> 33:         <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">return</span> <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">true</span>;
+</pre>
+<pre> 34:     }
+</pre>
+<pre> 35:     <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">return</span> <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">false</span>;
+</pre>
+<pre> 36: }
+</pre>
+<pre> 37: 
+</pre>
+<pre> 38: <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">void</span> ys_script_export_string()
+</pre>
+<pre> 39: {
+</pre>
+<pre> 40:     <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">char</span>* filename = "<span style="color: rgb(139, 0, 0); --darkreader-inline-color:#f1837e;" data-darkreader-inline-color="">D:/game/3M/ysbin/yst00119.ybn</span>";
+</pre>
+<pre> 41: 
+</pre>
+<pre> 42:     FILE *fp;
+</pre>
+<pre> 43:     fp = fopen(filename,"<span style="color: rgb(139, 0, 0); --darkreader-inline-color:#f1837e;" data-darkreader-inline-color="">rb</span>");
+</pre>
+<pre> 44:     <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">if</span> (fp == NULL)
+</pre>
+<pre> 45:     {
+</pre>
+<pre> 46:         printf("<span style="color: rgb(139, 0, 0); --darkreader-inline-color:#f1837e;" data-darkreader-inline-color="">cannot open infile\n</span>");
+</pre>
+<pre> 47:         <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">return</span> ;
+</pre>
+<pre> 48:     }
+</pre>
+<pre> 49: 
+</pre>
+<pre> 50:     fseek(fp, 0, SEEK_END);
+</pre>
+<pre> 51:     <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">int</span> len = ftell(fp);
+</pre>
+<pre> 52:     fseek(fp, 0, SEEK_SET);
+</pre>
+<pre> 53:     <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">char</span>* filebuf = <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">new</span> <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">char</span>[len+1];
+</pre>
+<pre> 54:     fread(filebuf, <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">sizeof</span>(<span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">char</span>), len, fp);
+</pre>
+<pre> 55:     fclose(fp);
+</pre>
+<pre> 56: 
+</pre>
+<pre> 57:     std::wstring newfn;
+</pre>
+<pre> 58:     <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">if</span> (GBK2UNI(filename, strlen(filename), newfn) == <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">false</span>)
+</pre>
+<pre> 59:     {
+</pre>
+<pre> 60:         <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">delete</span> filebuf;
+</pre>
+<pre> 61:         <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">return</span>;
+</pre>
+<pre> 62:     }
+</pre>
+<pre> 63:     newfn += L"<span style="color: rgb(139, 0, 0); --darkreader-inline-color:#f1837e;" data-darkreader-inline-color="">.txt</span>";
+</pre>
+<pre> 64:     FILE* pOutFile = _wfopen( newfn.c_str(), L"<span style="color: rgb(139, 0, 0); --darkreader-inline-color:#f1837e;" data-darkreader-inline-color="">wt,ccs=UNICODE</span>");
+</pre>
+<pre> 65:     <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">if</span> (pOutFile == NULL) 
+</pre>
+<pre> 66:     {
+</pre>
+<pre> 67:         <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">delete</span> filebuf;
+</pre>
+<pre> 68:         <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">return</span>;
+</pre>
+<pre> 69:     }
+</pre>
+<pre> 70: 
+</pre>
+<pre> 71:     ystb473_header_t headerX;
+</pre>
+<pre> 72:     <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">char</span>* curP = filebuf;
+</pre>
+<pre> 73:     memcpy(&amp;headerX, curP, <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">sizeof</span>(ystb473_header_t));
+</pre>
+<pre> 74:     curP += <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">sizeof</span>(ystb473_header_t);
+</pre>
+<pre> 75: 
+</pre>
+<pre> 76:     ystb473_method_t* pMethods = (ystb473_method_t*)curP;
+</pre>
+<pre> 77:     ystb473_parameter_t* pParameters = (ystb473_parameter_t*)(curP + headerX.data1_length);
+</pre>
+<pre> 78:     <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">char</span>* pStrings = curP + headerX.data1_length + headerX.data2_length;
+</pre>
+<pre> 79: 
+</pre>
+<pre> 80:     <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">static</span> BYTE methodCode_Text = 0x5B;
+</pre>
+<pre> 81:     <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">int</span> nCurArgIndex = 0;
+</pre>
+<pre> 82:     <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">for</span> (<span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">int</span> i = 0; i &lt; headerX.data1_length_div_4; ++i)
+</pre>
+<pre> 83:     {
+</pre>
+<pre> 84:         <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">if</span> (pMethods[i].args &gt; 0)
+</pre>
+<pre> 85:         {
+</pre>
+<pre> 86:             <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">if</span> (pParameters[nCurArgIndex].charCount &gt; 0 )
+</pre>
+<pre> 87:             {
+</pre>
+<pre> 88:                 <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">if</span> (pParameters[nCurArgIndex].charOffset == 0 &amp;&amp; pParameters[nCurArgIndex].charCount == 1)
+</pre>
+<pre> 89:                 {
+</pre>
+<pre> 90:                     <span style="color: rgb(0, 128, 0); --darkreader-inline-color:#96fb8d;" data-darkreader-inline-color="">// 是否为参数型字符串</span>
+</pre>
+<pre> 91:                 }
+</pre>
+<pre> 92:                 <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">else</span> <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">if</span> (pParameters[nCurArgIndex].charCount &gt;= 3 &amp;&amp; pStrings[pParameters[nCurArgIndex].charOffset + 2] == 0)
+</pre>
+<pre> 93:                 {
+</pre>
+<pre> 94:                     <span style="color: rgb(0, 128, 0); --darkreader-inline-color:#96fb8d;" data-darkreader-inline-color="">// 是否为参数型字符串</span>
+</pre>
+<pre> 95:                 }
+</pre>
+<pre> 96:                 <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">else</span>
+</pre>
+<pre> 97:                 {
+</pre>
+<pre> 98:                     <span style="color: rgb(0, 128, 0); --darkreader-inline-color:#96fb8d;" data-darkreader-inline-color="">// 导出文本</span>
+</pre>
+<pre> 99:                     std::wstring strUNI;
+</pre>
+<pre>100:                     pParameters[nCurArgIndex].charOffset;
+</pre>
+<pre>101:                     <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">if</span> (SJIS2UNI(pStrings + pParameters[nCurArgIndex].charOffset, pParameters[nCurArgIndex].charCount, strUNI))
+</pre>
+<pre>102:                     {
+</pre>
+<pre>103:                         <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">static</span> WCHAR buf[2048]=L"";
+</pre>
+<pre>104:                         swprintf(buf, L"<span style="color: rgb(139, 0, 0); --darkreader-inline-color:#f1837e;" data-darkreader-inline-color="">0x%08X, %3d, %s\r\n</span>", pParameters[nCurArgIndex].charOffset,
+</pre>
+<pre>105:                             pParameters[nCurArgIndex].charCount, strUNI.c_str());
+</pre>
+<pre>106:                         <span style="color: rgb(0, 128, 0); --darkreader-inline-color:#96fb8d;" data-darkreader-inline-color="">//OutputDebugStringW(buf);</span>
+</pre>
+<pre>107:                         fwrite(buf, <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">sizeof</span>(WCHAR), wcslen(buf), pOutFile);
+</pre>
+<pre>108:                     }
+</pre>
+<pre>109:                 }
+</pre>
+<pre>110:             }
+</pre>
+<pre>111: 
+</pre>
+<pre>112:             nCurArgIndex += pMethods[i].args;
+</pre>
+<pre>113:         }
+</pre>
+<pre>114:     }
+</pre>
+<pre>115: 
+</pre>
+<pre>116:     <span style="color: rgb(0, 0, 255); --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">delete</span> filebuf;
+</pre>
+<pre>117:     fclose(pOutFile);
+</pre>
+<pre>118: }
+</pre>
+<pre>119: <br><br><br><a title="YU_RIS的cui插件" href="http://files.cnblogs.com/sunjicccc/YU_RIS.rar" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">YU_RIS的cui插件，http://files.cnblogs.com/sunjicccc/YU_RIS.rar</a><br>YBN的字符串导出程序<a href="http://files.cnblogs.com/sunjicccc/ybn_export_strings.rar" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">http://files.cnblogs.com/sunjicccc/ybn_export_strings.rar</a></pre>
+</div>
+
+<div class="clear"></div>
+<div id="blog_post_info_block">
+
+
+    <div id="blog_post_info">
+<div id="green_channel">
+        <a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(2841956,cb_blogId,1);green_channel_success(this,'谢谢推荐！');" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">好文要顶</a>
+        <a id="green_channel_follow" onclick="follow('393a7f2d-2d53-e211-aa8f-842b2b196315');" href="javascript:void(0);" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">关注我</a>
+    <a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">收藏该文</a>
+    <a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1571159641-3212f7b914cc9773fb30bbf4656405fc.png" alt=""></a>
+    <a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信" onclick="shareOnWechat()" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1571159641-cb7153d1c13a5d9aef10ebab342f6f71.png" alt=""></a>
+</div>
+<div id="author_profile">
+    <div id="author_profile_info" class="author_profile_info">
+        <div id="author_profile_detail" class="author_profile_info">
+            <a href="https://home.cnblogs.com/u/sunjicccc/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">损疾</a><br>
+            <a href="https://home.cnblogs.com/u/sunjicccc/followees/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">关注 - 0</a><br>
+            <a href="https://home.cnblogs.com/u/sunjicccc/followers/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">粉丝 - 2</a>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="author_profile_honor"></div>
+    <div id="author_profile_follow">
+                <a href="javascript:void(0);" onclick="follow('393a7f2d-2d53-e211-aa8f-842b2b196315');return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">+加关注</a>
+    </div>
+</div>
+<div id="div_digg">
+    <div class="diggit" onclick="votePost(2841956,'Digg')">
+        <span class="diggnum" id="digg_count">0</span>
+    </div>
+    <div class="buryit" onclick="votePost(2841956,'Bury')">
+        <span class="burynum" id="bury_count">0</span>
+    </div>
+    <div class="clear"></div>
+    <div class="diggword" id="digg_tips">
+    </div>
+</div>
+
+</div>
+    <div class="clear"></div>
+    <div id="post_next_prev">
+
+    <a href="https://www.cnblogs.com/sunjicccc/archive/2012/12/31/2840887.html" class="p_n_p_prefix" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">« </a> 上一篇：    <a href="https://www.cnblogs.com/sunjicccc/archive/2012/12/31/2840887.html" title="发布于 2012-12-31 18:27" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">[原创]Crass-Source build</a>
+
+</div>
+</div>
+	<div class="postDesc"><img src="assets/1571159641-691165bb913f5f9e0c2ed7aefdf356b4.gif" align="absmiddle">&nbsp;posted on 
+<span id="post-date">2013-01-02 11:08</span>&nbsp;<a href="https://www.cnblogs.com/sunjicccc/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">损疾</a> 阅读(<span id="post_view_count">6954</span>) 评论(<span id="post_comment_count">0</span>) <a href="https://i.cnblogs.com/EditPosts.aspx?postid=2841956" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"> 编辑</a> <a href="javascript:void(0)" onclick="AddToWz(2841956); return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">收藏</a>
+</div>
+</div>
+
+
+
+
+<a name="!comments" data-mx-warn="Empty URL"></a>
+<div id="blog-comments-placeholder"></div>
+
+
+<div id="comment_form" class="commentform">
+    <a name="commentform" data-mx-warn="Empty URL"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"><div class="login_tips">
+    注册用户登录后才能发表评论，请 
+    <a rel="noopener noreferrer" href="javascript:void(0);" class="underline" onclick="return login('commentform');" target="_blank" referrerpolicy="no-referrer">登录</a>
+     或 
+    <a rel="noopener noreferrer" href="javascript:void(0);" class="underline" onclick="return register();" target="_blank" referrerpolicy="no-referrer">注册</a>，
+    <a href="https://www.cnblogs.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">访问</a> 网站首页。
+</div></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"><a href="http://www.ucancode.com/index.htm" target="_blank" onclick="ga('send', 'event', 'Link', 'click', 'T2-工控')" referrerpolicy="no-referrer" rel="noopener noreferrer">【推荐】超50万行VC++源码: 大型组态工控、电力仿真CAD与GIS源码库</a><br><a href="https://www.jdcloud.com/cn/activity/year-end?utm_source=DMT_cnblogs&amp;utm_medium=CH&amp;utm_campaign=q4vm&amp;utm_term=Virtual-Machines" target="_blank" onclick="ga('send', 'event', 'Link', 'click', 'T2-京东云')" referrerpolicy="no-referrer" rel="noopener noreferrer">【活动】京东云服务器_云主机低于1折，低价高性能产品备战双11</a><br><a href="https://www.ctyun.cn/activity/#/enterprise2?hmsr=%E7%9C%8B%E7%9C%8B-%E5%8D%9A%E5%AE%A2%E5%9B%AD-1008-0%E5%85%83%E4%B8%8A%E4%BA%91&amp;hmpl=&amp;hmcu=&amp;hmkw=&amp;hmci=?track=|cp:cz_blog|tgdy:46860|ttjh:shouyedingbuyoucefenlan|key:czkk1|pf:pc" target="_blank" onclick="ga('send', 'event', 'Link', 'click', 'T2-添加云')" referrerpolicy="no-referrer" rel="noopener noreferrer">【推荐】天翼云新用户专享，0元体验数十款云产品，立即开通</a><br><a href="https://www.huodongxing.com/event/1514061072200" target="_blank" onclick="ga('send', 'event', 'Link', 'click', 'T2-魔程')" referrerpolicy="no-referrer" rel="noopener noreferrer">【活动】魔程社区技术沙龙—移动测试应用专场等你报名</a><br><a href="https://www.cnblogs.com/cmt/p/11612966.html" target="_blank" onclick="ga('send', 'event', 'Link', 'click', 'T2-华为云-AI有奖训练营')" referrerpolicy="no-referrer" rel="noopener noreferrer">【福利】学AI有奖：博客园&amp;华为云&nbsp;Modelarts 有奖训练营</a><br></div>
+    <div id="opt_under_post"></div>
+    
+    
+    
+    
+    <div id="under_post_news"><div class="recomm-block"><b>相关博文：</b><br>·  <a title="Yu-Chee Tseng" href="https://www.cnblogs.com/lqcdkj/archive/2009/10/04/1578037.html" target="_blank" onclick="clickRecomItmem(1578037)" referrerpolicy="no-referrer" rel="noopener noreferrer">Yu-Chee Tseng</a><br>·  <a title="phpstorm破解" href="https://www.cnblogs.com/theWayToAce/p/8023059.html" target="_blank" onclick="clickRecomItmem(8023059)" referrerpolicy="no-referrer" rel="noopener noreferrer">phpstorm破解</a><br>·  <a title="兼容yu比较" href="https://www.cnblogs.com/lgyong/p/8881870.html" target="_blank" onclick="clickRecomItmem(8881870)" referrerpolicy="no-referrer" rel="noopener noreferrer">兼容yu比较</a><br>·  <a title="堆yu栈" href="https://www.cnblogs.com/liuguangyiduan/p/4771810.html" target="_blank" onclick="clickRecomItmem(4771810)" referrerpolicy="no-referrer" rel="noopener noreferrer">堆yu栈</a><br>·  <a title="Linux也需要GALGAME：wine跑GALGAME测试" href="https://www.cnblogs.com/javabluesky/archive/2011/02/19/2211524.html" target="_blank" onclick="clickRecomItmem(2211524)" referrerpolicy="no-referrer" rel="noopener noreferrer">Linux也需要GALGAME：wine跑GALGAME测试</a><br></div></div>
+    
+    <div id="under_post_kb">
+</div>
+    
+    
+</div></div>
+
+
+		</div>
+	</div>
+	</div>
+	<!-- left ends -->
+	<!-- right starts -->
+	<div id="right">
+		<!-- 右侧工具部分 -->
+		<div id="right_content">
+	
+			
+<div id="sidebar_news" class="newsItem"><!--done-->
+<h1 class="listtitle" style="padding-top:14px;padding-left:42px;">公告</h1>
+<div class="newsItem">
+	
+<div id="blog-news">
+    
+    <div id="profile_block">
+        昵称：
+        <a href="https://home.cnblogs.com/u/sunjicccc/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+            损疾
+        </a>
+        <br>
+        园龄：
+        <a href="https://home.cnblogs.com/u/sunjicccc/" title="入园时间：2012-12-31" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+            6年9个月
+        </a>
+        <br>
+        粉丝：
+        <a href="https://home.cnblogs.com/u/sunjicccc/followers/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+            2
+        </a>
+        <br>
+        关注：
+        <a href="https://home.cnblogs.com/u/sunjicccc/followees/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+            0
+        </a>
+        <div id="p_b_follow">
+<a href="javascript:void(0)" onclick="follow('393a7f2d-2d53-e211-aa8f-842b2b196315')" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">+加关注</a></div>
+        
+    </div>
+</div>
+</div>
+
+</div>
+
+	
+			<div id="calendar"><div id="blog-calendar" style="">
+
+<table id="blogCalendar" class="Cal" cellspacing="0" cellpadding="0" title="Calendar" border="0">
+    <tbody>
+        <tr>
+            <td colspan="7">
+                <table class="CalTitle" cellspacing="0" border="0">
+                    <tbody>
+                        <tr>
+                            <td class="CalNextPrev">
+                                <a href="javascript:void(0);" onclick="loadBlogCalendar('2012/12/02'); return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">&lt;</a>
+                            </td>
+                            <td align="center">2013年1月</td>
+                            <td align="right" class="CalNextPrev">
+                                <a href="javascript:void(0);" onclick="loadBlogCalendar('2013/02/02'); return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">&gt;</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+                    <th class="CalDayHeader" align="center" abbr="日" scope="col">日</th>
+                    <th class="CalDayHeader" align="center" abbr="一" scope="col">一</th>
+                    <th class="CalDayHeader" align="center" abbr="二" scope="col">二</th>
+                    <th class="CalDayHeader" align="center" abbr="三" scope="col">三</th>
+                    <th class="CalDayHeader" align="center" abbr="四" scope="col">四</th>
+                    <th class="CalDayHeader" align="center" abbr="五" scope="col">五</th>
+                    <th class="CalDayHeader" align="center" abbr="六" scope="col">六</th>
+        </tr>
+            <tr>
+                            <td class="CalOtherMonthDay" align="center">30</td>
+                            <td class="CalOtherMonthDay" align="center">31</td>
+                        <td class="" align="center">
+                            1
+                        </td>
+                        <td class="" align="center">
+                            <a href="https://www.cnblogs.com/sunjicccc/archive/2013/01/02.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><u>2</u></a>
+                        </td>
+                        <td class="" align="center">
+                            3
+                        </td>
+                        <td class="" align="center">
+                            4
+                        </td>
+                    <td class="CalWeekendDay" align="center">
+                        5
+                    </td>
+            </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            6
+                        </td>
+                            <td class="" align="center">
+                                7
+                            </td>
+                            <td class="" align="center">
+                                8
+                            </td>
+                            <td class="" align="center">
+                                9
+                            </td>
+                            <td class="" align="center">
+                                10
+                            </td>
+                            <td class="" align="center">
+                                11
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            12
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            13
+                        </td>
+                            <td class="" align="center">
+                                14
+                            </td>
+                            <td class="" align="center">
+                                15
+                            </td>
+                            <td class="" align="center">
+                                16
+                            </td>
+                            <td class="" align="center">
+                                17
+                            </td>
+                            <td class="" align="center">
+                                18
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            19
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            20
+                        </td>
+                            <td class="" align="center">
+                                21
+                            </td>
+                            <td class="" align="center">
+                                22
+                            </td>
+                            <td class="" align="center">
+                                23
+                            </td>
+                            <td class="" align="center">
+                                24
+                            </td>
+                            <td class="" align="center">
+                                25
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            26
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            27
+                        </td>
+                            <td class="" align="center">
+                                28
+                            </td>
+                            <td class="" align="center">
+                                29
+                            </td>
+                            <td class="" align="center">
+                                30
+                            </td>
+                            <td class="" align="center">
+                                31
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                1
+                            </td>
+                        <td class="CalOtherMonthDay" align="center">
+                            2
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalOtherMonthDay" align="center">
+                            3
+                        </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                4
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                5
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                6
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                7
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                8
+                            </td>
+                        <td class="CalOtherMonthDay" align="center">
+                            9
+                        </td>
+                </tr>
+    </tbody>
+</table></div></div>
+			
+				<div id="leftcontentcontainer">
+					<div id="blog-sidecolumn">
+
+<!-- 搜索 -->
+<div id="sidebar_search" class="sidebar-block">
+    <div id="sidebar_search" class="mySearch">
+        <h3 class="catListTitle">搜索</h3>
+        <div id="sidebar_search_box">
+            <div id="widget_my_zzk" class="div_my_zzk">
+                <input type="text" id="q" onkeydown="return zzk_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="zzk_go()" type="button" value="找找看" id="btnZzk" class="btn_my_zzk">
+            </div>
+            <div id="widget_my_google" class="div_my_zzk">
+                <input type="text" name="google_q" id="google_q" onkeydown="return google_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="google_go()" type="button" value="谷歌搜索" class="btn_my_zzk">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 常用链接 -->
+<div id="sidebar_shortcut" class="sidebar-block">
+    
+<h3 class="catListTitle">
+常用链接
+</h3>
+<ul>
+        <li>
+
+<a href="https://www.cnblogs.com/sunjicccc/p/" title="我的博客的随笔列表" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">我的随笔</a>
+</li>
+        <li>
+
+<a href="https://www.cnblogs.com/sunjicccc/MyComments.html" title="我的发表过的评论列表" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">我的评论</a>
+</li>
+        <li>
+
+<a href="https://www.cnblogs.com/sunjicccc/OtherPosts.html" title="我评论过的随笔列表" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">我的参与</a>
+</li>
+        <li>
+
+<a href="https://www.cnblogs.com/sunjicccc/RecentComments.html" title="我的博客的评论列表" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">最新评论</a>
+</li>
+        <li>
+
+<a href="https://www.cnblogs.com/sunjicccc/tag/" title="我的博客的标签列表" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">我的标签</a>
+</li>
+</ul>
+
+<!-- TODO: 检查是否有使用这一部分的控件，如果没有则应该删除。 -->
+
+
+</div>
+
+<!-- 最新随笔 -->
+
+
+
+<!-- 我的标签 -->
+<div id="sidebar_toptags" class="sidebar-block">
+    
+</div>
+
+<!-- 积分与排名 -->
+
+
+<!-- 随笔分类、随笔档案、文章分类、新闻分类、相册、链接 -->
+<div id="sidebar_categories">
+    
+<!--done-->
+		<h1 class="catListTitle">
+
+随笔档案
+
+
+</h1>
+				<div>
+			
+				<div class="catList">
+				 
+<a href="https://www.cnblogs.com/sunjicccc/archive/2013/01.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2013年1月(1)
+</a>
+
+
+				</div>
+				<div class="catList">
+				 
+<a href="https://www.cnblogs.com/sunjicccc/archive/2012/12.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2012年12月(1)
+</a>
+
+
+				</div>
+			
+				</div>
+
+
+</div>
+
+<!-- 最新评论 -->
+<div id="sidebar_recentcomments" class="sidebar-block">
+    
+</div>
+
+
+
+<!-- 阅读排行榜 -->
+<div id="sidebar_topviewedposts" class="sidebar-block">
+    
+<div id="topview_posts_wrap">
+    <h3 class="catListTitle">阅读排行榜</h3>
+    <div id="TopViewPostsBlock">
+        <ul style="word-break:break-all">
+                    <li>
+                        <a href="https://www.cnblogs.com/sunjicccc/archive/2013/01/02/2841956.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            1. [原创]破解日志 galgame引擎YU-RIS(6954)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/sunjicccc/archive/2012/12/31/2840887.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            2. [原创]Crass-Source build(1095)
+                        </a>
+                    </li>
+        </ul>
+    </div>
+</div>
+</div>
+
+<!-- 评论排行榜 -->
+<div id="sidebar_topcommentedposts" class="sidebar-block">
+    
+</div>
+
+<!-- 推荐排行榜 -->
+<div id="sidebar_topdiggedposts" class="sidebar-block">
+    
+</div></div>
+                    
+				</div>
+			
+		</div>
+		<!-- //右侧工具部分 -->
+	</div>
+	<!-- right ends -->
+	<div class="clear"></div>
+</div>
+
+
+
+    
+
+
+<a href="" download="" data-mx-warn="Empty URL"></a><div data-mx-warn="extension url was not captured by MaoXian" data-mx-original-src="chrome-extension://kjahokgdcbohofgdidndeiaigkehdjdc/pages/ui-selection.html?t=aHR0cHM6Ly93d3cuY25ibG9ncy5jb20="></div><div data-mx-warn="extension url was not captured by MaoXian" data-mx-original-src="chrome-extension://kjahokgdcbohofgdidndeiaigkehdjdc/pages/ui-control.html?t=aHR0cHM6Ly93d3cuY25ibG9ncy5jb20="></div>
+</body>
+  </html>

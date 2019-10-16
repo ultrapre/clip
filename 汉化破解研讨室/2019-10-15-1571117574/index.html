@@ -1,0 +1,842 @@
+
+  <!DOCTYPE html>
+  <html id="" class="">
+    <!-- OriginalSrc: http://blog.atelier39.org/rev_eng/638.html -->
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <title>《同级生1》DMM版破解手记之脚本文件封包</title>
+      
+
+<link rel="stylesheet" href="assets/1571117574-a4aa27012dc6c1972660084141318e11.css" type="text/css" media="screen" referrerpolicy="no-referrer">
+<link rel="stylesheet" id="wp-block-library-css" href="assets/1571117574-fbc59d9cfa7ed0bda62c33c533173381.css" type="text/css" media="all" referrerpolicy="no-referrer">
+<link rel="stylesheet" id="codecolorer-css" href="assets/1571117574-0735b3bb87c83012d78299d6de00b84a.css" type="text/css" media="screen" referrerpolicy="no-referrer">
+
+
+<style class="darkreader darkreader--fallback" media="screen"></style>
+<style class="darkreader darkreader--text" media="screen"></style>
+<style class="darkreader darkreader--invert" media="screen"></style>
+<style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}</style>
+<style class="darkreader darkreader--user-agent" media="screen">html {
+    background-color: #191a1b !important;
+}
+html, body, input, textarea, select, button {
+    background-color: #191a1b;
+}
+html, body, input, textarea, select, button {
+    border-color: #5a5956;
+    color: #f0ebe2;
+}
+a {
+    color: #4791e7;
+}
+table {
+    border-color: #4f4e4c;
+}
+::placeholder {
+    color: #bfb9ac;
+}
+::selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+::-moz-selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #565a0f !important;
+    color: #f0ebe2 !important;
+}
+::-webkit-scrollbar {
+    background-color: #1d1f1f;
+    color: #cbc5b9;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #2c2d2d;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #343636;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #404142;
+}
+::-webkit-scrollbar-corner {
+    background-color: #191a1b;
+}
+* {
+    scrollbar-color: #2c2d2d #1d1f1f;
+}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">@keyframes fadeInOpacity{0%{opacity:0}to{opacity:1}}:hover>*>.fbvd--wrapper{animation-name:fadeInOpacity;animation-duration:.3s;opacity:1}.fbvd--wrapper{position:absolute;top:10px;left:10px;opacity:0;text-align:center;margin:0;z-index:5}.fbvd--wrapper a{background: url("") no-repeat 3px 4.55px; background-color: #fff; display:inline-block;font:700 14px Helvetica,Arial,sans-serif;color:#4b4f56;text-decoration:none;vertical-align:middle;padding:0px 8px 0px;margin-right:8px;border-radius:2px; line-height: 22px; padding-left:19px; border: 1px solid #e7e7e7; background-size: 13px}.fbvd--wrapper a:last-child{margin-right:0}.fbvd--wrapper a:hover{text-decoration:none}.fbvd--wrapper a:focus{box-shadow:0 0 1px 2px rgba(88,144,255,.75),0 1px 1px rgba(0,0,0,.15);outline:none}.fbvd--wrapper b{font-size:13px;position:relative;top:1px;color:#3b5998;font-weight:400}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--override" media="screen">.jfk-bubble {
+    background-color: #000000 !important;
+}
+.vimvixen-hint {
+    background-color: #765500 !important;
+    border-color: #d5b22e !important;
+    color: #f9edcc !important;
+}</style>
+
+      <style class="mx-wc-style">
+        .mx-wc-main img {max-width: 100%;}
+        .mx-wc-main{
+          box-sizing: content-box;
+          background-color: rgb(50, 52, 53) !important;
+          margin: 0 auto;
+          margin-top: 20px;
+          max-width: 1349px;
+        }
+        @media (min-width: 768px) {
+          .mx-wc-main { padding: 15px 15px 80px 15px }
+        }
+        @media (max-width: 767px) {
+          .mx-wc-main { padding: 15px 3px 80px 3px }
+        }
+  
+      </style>
+    </head>
+    <body style="background-color: #ffffff !important; min-height: 100%; height: auto; position: static !important; overflow: auto !important; padding-bottom: 0px !important;" id="" class="">
+      <div class="mx-wc-main">
+        <div class="Main mx-wc-selected-elem mx-wc-1571117574" style="display: block; float: none !important; position: relative !important; top: 0px !important; left: 0px !important; margin: 0px !important; flex: unset !important; width: 100% !important; max-width: 100% !important; box-sizing: border-box !important;">
+<div class="Sheet">
+    <div class="Sheet-tl"></div>
+    <div class="Sheet-tr"><div></div></div>
+    <div class="Sheet-bl"><div></div></div>
+    <div class="Sheet-br"><div></div></div>
+    <div class="Sheet-tc"><div></div></div>
+    <div class="Sheet-bc"><div></div></div>
+    <div class="Sheet-cl"><div></div></div>
+    <div class="Sheet-cr"><div></div></div>
+    <div class="Sheet-cc"></div>
+    <div class="Sheet-body">
+<div class="nav">
+    <ul class="artmenu">
+        <li><a href="http://blog.atelier39.org/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><span><span>Home</span></span></a></li><li><span class="separator"></span></li><li class="page_item page-item-2"><a href="http://blog.atelier39.org/labmem" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><span><span>LabMem</span></span></a></li><li><span class="separator"></span></li>
+<li class="page_item page-item-69"><a href="http://blog.atelier39.org/about" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><span><span>About</span></span></a></li>
+    </ul>
+    <div class="l">
+    </div>
+    <div class="r">
+        <div>
+        </div>
+    </div>
+</div>
+<div class="Header">
+    <div class="Header-jpeg"></div>
+<div class="logo">
+    <h1 id="name-text" class="logo-name">
+        <a href="http://blog.atelier39.org/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">未来代码研究所</a></h1>
+    <div id="slogan-text" class="logo-text">
+        将所有的代码献给未来的你</div>
+</div>
+
+</div>
+<div class="contentLayout">
+<div class="content">
+
+<div class="Post">
+    <div class="Post-tl"></div>
+    <div class="Post-tr"><div></div></div>
+    <div class="Post-bl"><div></div></div>
+    <div class="Post-br"><div></div></div>
+    <div class="Post-tc"><div></div></div>
+    <div class="Post-bc"><div></div></div>
+    <div class="Post-cl"><div></div></div>
+    <div class="Post-cr"><div></div></div>
+    <div class="Post-cc"></div>
+    <div class="Post-body">
+<div class="Post-inner article">
+<div class="PostMetadataHeader">
+<h2 class="PostHeaderIcon-wrapper">
+<span class="PostHeader"><a href="http://blog.atelier39.org/rev_eng/638.html" rel="noopener noreferrer" title="Permanent Link to 《同级生1》DMM版破解手记之脚本文件封包" target="_blank" referrerpolicy="no-referrer">
+《同级生1》DMM版破解手记之脚本文件封包</a></span>
+</h2>
+
+</div>
+<div class="PostHeaderIcons metadata-icons">
+<img src="assets/1571117574-1b2c47ff2c46543642d231c50af43ad2.png" width="17" height="18" alt="PostDateIcon">
+January 19th, 2012 | <img src="assets/1571117574-c2683a0d9cc37d1b361a20699cc34b29.png" width="14" height="14" alt="PostAuthorIcon">
+<span class="author">Author: &nbsp;<img alt="" src="assets/1571117574-33620c36c8f3e88e88a7235caa485082.png" srcset="assets/1571117574-65d9bfc23fa8d7db3051256cec46b4ca 2x" class="avatar avatar-16 photo" height="16" width="16"> <a href="http://blog.atelier39.org/author/cotaku39" title="Posts by 暗影吉他手" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">暗影吉他手</a></span>
+
+</div>
+<div class="PostContent">
+<p>上次把脚本文件解了出来，不过文件都被加密了，需要推算出加密算法才能编写封包程序。实际上也不难，本质上就是个简单的压缩算法，这次我们来分析一下这一段解压缩的汇编程序。</p>
+<p><span id="more-638"></span></p>
+<div class="codecolorer-container asm geshi" style="overflow:auto;white-space:nowrap;"><div class="asm codecolorer" style="white-space:nowrap"><span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C327</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;<span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">398424</span> 2C1000&gt;<span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">CMP</span> <span style="color: rgb(0, 0, 255); font-weight: bold; --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">DWORD</span> PTR <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">SS</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">:</span><span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">[</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">ESP</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">+</span>102C<span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">]</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">EAX</span><br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C32E</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;BF EE0F0000 &nbsp; <span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">MOV</span> <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">EDI</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span>0FEE<br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C333</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;0F84 CB000000 <span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">JE</span> AI5WIN<span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span>0042C404<br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C339</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;EB <span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">09</span> &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">JMP</span> SHORT AI5WIN<span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span>0042C344</div></div>
+<p>[ESP+102C]存放解密前的数据长度，eax初值是0。edi是临时缓冲区的指针，初值ffe。下句跳转基本不会执行，所以直接去42C344。</p>
+<div class="codecolorer-container asm geshi" style="overflow:auto;white-space:nowrap;"><div class="asm codecolorer" style="white-space:nowrap"><span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C344</span> &nbsp; &gt; &nbsp;D1E8 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">SHR</span> <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">EAX</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span><span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">1</span><br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C346</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;A9 <span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">00010000</span> &nbsp; <span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">TEST</span> <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">EAX</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span><span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">100</span><br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C34B</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;<span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">894424</span> <span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">10</span> &nbsp; &nbsp; <span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">MOV</span> <span style="color: rgb(0, 0, 255); font-weight: bold; --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">DWORD</span> PTR <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">SS</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">:</span><span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">[</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">ESP</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">+</span><span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">10</span><span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">]</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">EAX</span><br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C34F</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;<span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">75</span> <span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">12</span> &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">JNZ</span> SHORT AI5WIN<span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span>0042C363</div></div>
+<p>检查eax的第8位是否为1，是的话跳转到42C363。eax的初值为0，所以第一次运行到这里的时候会不发生跳转，我们继续往下看。</p>
+<div class="codecolorer-container asm geshi" style="overflow:auto;white-space:nowrap;"><div class="asm codecolorer" style="white-space:nowrap"><span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C351</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;8A041E &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">MOV</span> <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">AL</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span><span style="color: rgb(0, 0, 255); font-weight: bold; --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">BYTE</span> PTR <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">DS</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">:</span><span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">[</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">ESI</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">+</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">EBX</span><span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">]</span><br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C354</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;0FB6C0 &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">MOVZX</span> <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">EAX</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">AL</span><br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C357</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;83C6 <span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">01</span> &nbsp; &nbsp; &nbsp; <span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">ADD</span> <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">ESI</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span><span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">1</span><br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C35A</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;0D 00FF0000 &nbsp; <span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">OR</span> <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">EAX</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span>0FF00<br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C35F</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;<span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">894424</span> <span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">10</span> &nbsp; &nbsp; <span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">MOV</span> <span style="color: rgb(0, 0, 255); font-weight: bold; --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">DWORD</span> PTR <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">SS</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">:</span><span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">[</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">ESP</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">+</span><span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">10</span><span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">]</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">EAX</span><br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C363</span> &nbsp; &gt; &nbsp;F64424 <span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">10</span> <span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">01</span> &nbsp;<span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">TEST</span> <span style="color: rgb(0, 0, 255); font-weight: bold; --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">BYTE</span> PTR <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">SS</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">:</span><span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">[</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">ESP</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">+</span><span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">10</span><span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">]</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span><span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">1</span><br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C368</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;<span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">74</span> <span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">22</span> &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">JE</span> SHORT AI5WIN<span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span>0042C38C</div></div>
+<p>从[ebx+esi]中取一个字节给eax后递增esi，于是我们猜想ebx是密文基址，esi是密文偏移。然后将eax的8-15位都变成1后赋给[esp+10]暂时保存了起来。接着检查eax的第0位是否为1，这一行也是上一段代码跳转到的地址，看来是个比较重要的判断点。如果是0的话往下跳转，第一次运行的时候不是0，所以继续往下看。</p>
+<div class="codecolorer-container asm geshi" style="overflow:auto;white-space:nowrap;"><div class="asm codecolorer" style="white-space:nowrap"><span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C36A</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;8A041E &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">MOV</span> <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">AL</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span><span style="color: rgb(0, 0, 255); font-weight: bold; --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">BYTE</span> PTR <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">DS</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">:</span><span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">[</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">ESI</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">+</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">EBX</span><span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">]</span><br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C36D</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;8B5424 <span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">14</span> &nbsp; &nbsp; <span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">MOV</span> <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">EDX</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span><span style="color: rgb(0, 0, 255); font-weight: bold; --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">DWORD</span> PTR <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">SS</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">:</span><span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">[</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">ESP</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">+</span><span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">14</span><span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">]</span><br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C371</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;0FB6C0 &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">MOVZX</span> <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">EAX</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">AL</span><br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C374</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;88443C 1C &nbsp; &nbsp; <span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">MOV</span> <span style="color: rgb(0, 0, 255); font-weight: bold; --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">BYTE</span> PTR <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">SS</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">:</span><span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">[</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">ESP</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">+</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">EDI</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">+</span>1C<span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">]</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">AL</span><br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C378</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;88042A &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">MOV</span> <span style="color: rgb(0, 0, 255); font-weight: bold; --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">BYTE</span> PTR <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">DS</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">:</span><span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">[</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">EDX</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">+</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">EBP</span><span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">]</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">AL</span><br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C37B</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;83C7 <span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">01</span> &nbsp; &nbsp; &nbsp; <span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">ADD</span> <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">EDI</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span><span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">1</span><br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C37E</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;83C6 <span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">01</span> &nbsp; &nbsp; &nbsp; <span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">ADD</span> <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">ESI</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span><span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">1</span><br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C381</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;83C5 <span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">01</span> &nbsp; &nbsp; &nbsp; <span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">ADD</span> <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">EBP</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span><span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">1</span><br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C384</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;<span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">81E7</span> FF0F0000 <span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">AND</span> <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">EDI</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span>0FFF<br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C38A</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;EB <span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">69</span> &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">JMP</span> SHORT AI5WIN<span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span>0042C3F5</div></div>
+<p>又从[ebx+esi]中取了一个字节给eax，证明了上一段的判断（ebx是密文基址，esi是密文偏移），然后给edx赋了值，看起来像是另一个缓冲区的地址。然后分别把eax赋给了[esp+edi+1c]和[edx+ebp]，第一个在栈上，第二个在堆上，在栈上那个利用了上文说到的那个缓冲区，奇怪的是还加了个1c的偏移，先不管它；在堆上的那个应该就是明文地址了，再次猜测edx是密文基址，ebp是密文偏移。最后递增了一堆变量，于是可以确定ebp是偏移。还有个add edi,1比较怪，看来是限制了栈缓冲区的大小不超过0x1000。最后是一个强制跳转：</p>
+<div class="codecolorer-container asm geshi" style="overflow:auto;white-space:nowrap;"><div class="asm codecolorer" style="white-space:nowrap"><span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C3F5</span> &nbsp; &gt; &nbsp;3BB424 2C1000&gt;<span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">CMP</span> <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">ESI</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span><span style="color: rgb(0, 0, 255); font-weight: bold; --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">DWORD</span> PTR <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">SS</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">:</span><span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">[</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">ESP</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">+</span>102C<span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">]</span><br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C3FC</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span>^ 0F85 3EFFFFFF <span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">JNZ</span> AI5WIN<span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span>0042C340</div></div>
+<p>这里很简单，是循环的控制语句，看来esi是密文偏移，和密文长度进行比较，于是我们跳回去：</p>
+<div class="codecolorer-container asm geshi" style="overflow:auto;white-space:nowrap;"><div class="asm codecolorer" style="white-space:nowrap"><span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C340</span> &nbsp; &gt; &nbsp;8B4424 <span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">10</span> &nbsp; &nbsp; <span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">MOV</span> <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">EAX</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span><span style="color: rgb(0, 0, 255); font-weight: bold; --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">DWORD</span> PTR <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">SS</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">:</span><span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">[</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">ESP</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">+</span><span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">10</span><span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">]</span><br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C344</span> &nbsp; &gt; &nbsp;D1E8 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">SHR</span> <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">EAX</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span><span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">1</span><br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C346</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;A9 <span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">00010000</span> &nbsp; <span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">TEST</span> <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">EAX</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span><span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">100</span><br>
+……<br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C34F</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;<span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">75</span> <span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">12</span> &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">JNZ</span> SHORT AI5WIN<span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span>0042C363</div></div>
+<p>把之前暂存在[esp+10]的变量又赋给了eax，然后继续进行了上文分析过的判断。看来[esp+10]的变量应该起到一个控制符的作用。继续往下分析，这时eax的8-15位已经是ff了，所以跳转发生，跟进：</p>
+<div class="codecolorer-container asm geshi" style="overflow:auto;white-space:nowrap;"><div class="asm codecolorer" style="white-space:nowrap"><span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C363</span> &nbsp; &gt; &nbsp;F64424 <span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">10</span> <span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">01</span> &nbsp;<span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">TEST</span> <span style="color: rgb(0, 0, 255); font-weight: bold; --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">BYTE</span> PTR <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">SS</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">:</span><span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">[</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">ESP</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">+</span><span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">10</span><span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">]</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span><span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">1</span><br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C368</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;<span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">74</span> <span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">22</span> &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">JE</span> SHORT AI5WIN<span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span>0042C38C</div></div>
+<p>又是这行判断。结合or eax,0ff00和test eax,100两行语句，到这里已经可以基本判断出这个小循环会进行8次，正好是一个字节的大小，加上上文对[esp+10]的变量作用的猜测，于是我们可以进一步猜测[esp+10]作为一个控制字节，每一位是1还是0会改变下面的代码流程。之前这里没有跳，我们单步运行几次，看看跳转之后的情况：</p>
+<div class="codecolorer-container asm geshi" style="overflow:auto;white-space:nowrap;"><div class="asm codecolorer" style="white-space:nowrap"><span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C38C</span> &nbsp; &gt; &nbsp;8A141E &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">MOV</span> <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">DL</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span><span style="color: rgb(0, 0, 255); font-weight: bold; --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">BYTE</span> PTR <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">DS</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">:</span><span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">[</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">ESI</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">+</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">EBX</span><span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">]</span><br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C38F</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;8A441E <span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">01</span> &nbsp; &nbsp; <span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">MOV</span> <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">AL</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span><span style="color: rgb(0, 0, 255); font-weight: bold; --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">BYTE</span> PTR <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">DS</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">:</span><span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">[</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">ESI</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">+</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">EBX</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">+</span><span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">1</span><span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">]</span><br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C393</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;83C6 <span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">01</span> &nbsp; &nbsp; &nbsp; <span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">ADD</span> <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">ESI</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span><span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">1</span><br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C396</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;0FB6C8 &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">MOVZX</span> <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">ECX</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">AL</span><br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C399</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;8BC1 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">MOV</span> <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">EAX</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">ECX</span><br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C39B</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;<span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">25</span> F0000000 &nbsp; <span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">AND</span> <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">EAX</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span>0F0<br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C3A0</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;0FB6D2 &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">MOVZX</span> <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">EDX</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">DL</span><br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C3A3</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;C1E0 <span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">04</span> &nbsp; &nbsp; &nbsp; <span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">SHL</span> <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">EAX</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span><span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">4</span><br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C3A6</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;0BC2 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">OR</span> <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">EAX</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">EDX</span><br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C3A8</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;<span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">83E1</span> <span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">0F</span> &nbsp; &nbsp; &nbsp; <span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">AND</span> <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">ECX</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span><span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">0F</span><br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C3AB</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;83C6 <span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">01</span> &nbsp; &nbsp; &nbsp; <span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">ADD</span> <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">ESI</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span><span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">1</span><br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C3AE</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;83C1 <span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">02</span> &nbsp; &nbsp; &nbsp; <span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">ADD</span> <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">ECX</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span><span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">2</span><br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C3B1</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;894C24 <span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">18</span> &nbsp; &nbsp; <span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">MOV</span> <span style="color: rgb(0, 0, 255); font-weight: bold; --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">DWORD</span> PTR <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">SS</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">:</span><span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">[</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">ESP</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">+</span><span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">18</span><span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">]</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">ECX</span><br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C3B5</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;BA <span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">00000000</span> &nbsp; <span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">MOV</span> <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">EDX</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span><span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">0</span></div></div>
+<p>遇见了新的代码，看起来比较复杂，所以分段分析。这一段首先连续取出了两个字节，进行一番运算后放到了eax，运算规则是第二个字节的高4位左移4位后加上第一个字节，组成一个新的word。接着将第二个字节的低4位加上2之后存放到[esp+18]作为下面小循环的最大循环次数。往下看小循环的代码：</p>
+<div class="codecolorer-container asm geshi" style="overflow:auto;white-space:nowrap;"><div class="asm codecolorer" style="white-space:nowrap"><span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C3BA</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;<span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">78</span> <span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">39</span> &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">JS</span> SHORT AI5WIN<span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span>0042C3F5<br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C3BC</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;8D6424 <span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">00</span> &nbsp; &nbsp; <span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">LEA</span> <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">ESP</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span><span style="color: rgb(0, 0, 255); font-weight: bold; --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">DWORD</span> PTR <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">SS</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">:</span><span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">[</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">ESP</span><span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">]</span><br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C3C0</span> &nbsp; &gt; &nbsp;8B5C24 <span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">14</span> &nbsp; &nbsp; <span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">MOV</span> <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">EBX</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span><span style="color: rgb(0, 0, 255); font-weight: bold; --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">DWORD</span> PTR <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">SS</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">:</span><span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">[</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">ESP</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">+</span><span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">14</span><span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">]</span><br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C3C4</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;8D0C02 &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">LEA</span> <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">ECX</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span><span style="color: rgb(0, 0, 255); font-weight: bold; --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">DWORD</span> PTR <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">DS</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">:</span><span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">[</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">EDX</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">+</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">EAX</span><span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">]</span><br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C3C7</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;<span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">81E1</span> FF0F0000 <span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">AND</span> <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">ECX</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span>0FFF<br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C3CD</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;0FB64C0C 1C &nbsp; <span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">MOVZX</span> <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">ECX</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span><span style="color: rgb(0, 0, 255); font-weight: bold; --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">BYTE</span> PTR <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">SS</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">:</span><span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">[</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">ESP</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">+</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">ECX</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">+</span>1C<span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">]</span><br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C3D2</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;884C3C 1C &nbsp; &nbsp; <span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">MOV</span> <span style="color: rgb(0, 0, 255); font-weight: bold; --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">BYTE</span> PTR <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">SS</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">:</span><span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">[</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">ESP</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">+</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">EDI</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">+</span>1C<span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">]</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">CL</span><br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C3D6</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;83C7 <span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">01</span> &nbsp; &nbsp; &nbsp; <span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">ADD</span> <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">EDI</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span><span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">1</span><br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C3D9</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;880C2B &nbsp; &nbsp; &nbsp; &nbsp;<span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">MOV</span> <span style="color: rgb(0, 0, 255); font-weight: bold; --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">BYTE</span> PTR <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">DS</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">:</span><span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">[</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">EBX</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">+</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">EBP</span><span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">]</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">CL</span><br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C3DC</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;83C2 <span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">01</span> &nbsp; &nbsp; &nbsp; <span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">ADD</span> <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">EDX</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span><span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">1</span><br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C3DF</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;83C5 <span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">01</span> &nbsp; &nbsp; &nbsp; <span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">ADD</span> <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">EBP</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span><span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">1</span><br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C3E2</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;<span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">81E7</span> FF0F0000 <span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">AND</span> <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">EDI</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span>0FFF<br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C3E8</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;3B5424 <span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">18</span> &nbsp; &nbsp; <span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">CMP</span> <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">EDX</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span><span style="color: rgb(0, 0, 255); font-weight: bold; --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">DWORD</span> PTR <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">SS</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">:</span><span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">[</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">ESP</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">+</span><span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">18</span><span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">]</span><br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C3EC</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span>^ 7E D2 &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">JLE</span> SHORT AI5WIN<span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span>0042C3C0<br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C3EE</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span> &nbsp;8B9C24 <span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">241000</span>&gt;<span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">MOV</span> <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">EBX</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span><span style="color: rgb(0, 0, 255); font-weight: bold; --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">DWORD</span> PTR <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">SS</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">:</span><span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">[</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">ESP</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">+</span><span style="color: rgb(255, 0, 0); --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color="">1024</span><span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">]</span><br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C3F5</span> &nbsp; &gt; &nbsp;3BB424 2C1000&gt;<span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">CMP</span> <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">ESI</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span><span style="color: rgb(0, 0, 255); font-weight: bold; --darkreader-inline-color:#447fe5;" data-darkreader-inline-color="">DWORD</span> PTR <span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">SS</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">:</span><span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">[</span><span style="color: rgb(70, 170, 3); font-weight: bold; --darkreader-inline-color:#b5f97c;" data-darkreader-inline-color="">ESP</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">+</span>102C<span style="color: rgb(0, 153, 0); font-weight: bold; --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">]</span><br>
+<span style="color: rgb(173, 173, 173); font-style: italic; --darkreader-inline-color:#bfb9ac;" data-darkreader-inline-color="">0042C3FC</span> &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span>^ 0F85 3EFFFFFF <span style="color: rgb(0, 0, 127); font-weight: bold; --darkreader-inline-color:#8eb1ee;" data-darkreader-inline-color="">JNZ</span> AI5WIN<span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">.</span>0042C340</div></div>
+<p>第一行的js基本没用，第二行的lea也意义不明，往下看。首先改变了ebx的值，变成了明文基址，因为edx被挪用作为循环计数器和栈缓冲区偏移值了。计算出eax（栈缓冲区偏移1）+edx（栈缓冲区偏移2）赋给ecx，然后从[esp+ecx+1c]中取出一个字节赋给ecx，然后继续赋给[esp+edi+1c]，看来栈缓冲区是循环利用的，里面保存着已经解出来的最大0x1000字节的明文数据。接着累加一堆变量，并把明文字节cl赋给明文缓冲区[ebx+ebp]。最后还原ebx，并检查大循环的计数器。</p>
+<p>到此所有的解密代码分析完毕，总结一下就是：</p>
+<p>1、读取下一个字节作为控制字节，控制接下来的8次操作。</p>
+<p>2、从二进制低位向高位检查控制字节的值，如果为1则直接取出下个字节，进行步骤4；如果为0则取出下2个字节，进行步骤3。</p>
+<p>3、第二个字节的高4位左移4位后加上第一个字节，作为从栈缓冲区中读数据的偏移值；接着将第二个字节的低4位加上2之后存放到[esp+18]作为读取字节的个数。</p>
+<p>4、如果操作次数未到8次则进行步骤2，否则进行步骤5。</p>
+<p>5、如果读取的总字节数小于密文长度则进行步骤1，否则解密结束。</p>
+<p>有了解密算法之后很容易就能逆推出加密算法了，为了加快封包速度，可以不进行压缩，直接将所有的控制字符变成ff，然后8个字节一组写进去就行。原始的mes.arc大小是2066KB，不压缩封包后的大小是6694KB，还可以接受，关键是这样可以避免很多潜在的由于压缩算法导致的问题。代码如下：</p>
+<div class="codecolorer-container c geshi" style="overflow:auto;white-space:nowrap;"><div class="c codecolorer" style="white-space:nowrap">DWORD Encode<span style="color: rgb(0, 153, 0); --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">(</span><span style="color: rgb(153, 51, 51); --darkreader-inline-color:#d4938f;" data-darkreader-inline-color="">void</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">*</span> srt<span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span> DWORD len<span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">,</span> <span style="color: rgb(153, 51, 51); --darkreader-inline-color:#d4938f;" data-darkreader-inline-color="">void</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">*</span> dst<span style="color: rgb(0, 153, 0); --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">)</span><br>
+<span style="color: rgb(0, 153, 0); --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">{</span><br>
+&nbsp; &nbsp; DWORD offset_by_srt <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">=</span> <span style="color: rgb(0, 0, 221); --darkreader-inline-color:#588ce7;" data-darkreader-inline-color="">0</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">;</span><br>
+&nbsp; &nbsp; BYTE<span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">*</span> pCon <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">=</span> <span style="color: rgb(0, 153, 0); --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">(</span>BYTE<span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">*</span><span style="color: rgb(0, 153, 0); --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">)</span>dst<span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">;</span><br>
+&nbsp; &nbsp; BYTE<span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">*</span> pOutput <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">=</span> pCon <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">+</span> <span style="color: rgb(0, 0, 221); --darkreader-inline-color:#588ce7;" data-darkreader-inline-color="">1</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">;</span><br>
+&nbsp; &nbsp; BYTE bitmask <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">=</span> <span style="color: rgb(32, 128, 128); --darkreader-inline-color:#a7e4df;" data-darkreader-inline-color="">0x00000001</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">;</span><br>
+<br>
+&nbsp; &nbsp; <span style="color: rgb(177, 177, 0); --darkreader-inline-color:#ffff7b;" data-darkreader-inline-color="">while</span> <span style="color: rgb(0, 153, 0); --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">(</span>offset_by_srt <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">&lt;</span> len<span style="color: rgb(0, 153, 0); --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">)</span><br>
+&nbsp; &nbsp; <span style="color: rgb(0, 153, 0); --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">{</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; BYTE bCon <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">=</span> <span style="color: rgb(32, 128, 128); --darkreader-inline-color:#a7e4df;" data-darkreader-inline-color="">0x00000000</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: rgb(177, 177, 0); --darkreader-inline-color:#ffff7b;" data-darkreader-inline-color="">for</span> <span style="color: rgb(0, 153, 0); --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">(</span><span style="color: rgb(153, 51, 51); --darkreader-inline-color:#d4938f;" data-darkreader-inline-color="">unsigned</span> <span style="color: rgb(153, 51, 51); --darkreader-inline-color:#d4938f;" data-darkreader-inline-color="">char</span> i <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">=</span> <span style="color: rgb(0, 0, 221); --darkreader-inline-color:#588ce7;" data-darkreader-inline-color="">0</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">;</span> i <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">&lt;</span> <span style="color: rgb(0, 0, 221); --darkreader-inline-color:#588ce7;" data-darkreader-inline-color="">8</span> <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">&amp;&amp;</span> offset_by_srt <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">&lt;</span> len<span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">;</span> i<span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">++</span><span style="color: rgb(0, 153, 0); --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">)</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: rgb(0, 153, 0); --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">{</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">*</span>pOutput<span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">++</span> <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">=</span> <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">*</span><span style="color: rgb(0, 153, 0); --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">(</span><span style="color: rgb(0, 153, 0); --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">(</span><span style="color: rgb(153, 51, 51); --darkreader-inline-color:#d4938f;" data-darkreader-inline-color="">char</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">*</span><span style="color: rgb(0, 153, 0); --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">)</span>srt <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">+</span> offset_by_srt<span style="color: rgb(0, 153, 0); --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">)</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; bCon <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">=</span> bCon <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">|</span> <span style="color: rgb(0, 153, 0); --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">(</span>bitmask <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">&lt;&lt;</span> i<span style="color: rgb(0, 153, 0); --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">)</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; offset_by_srt<span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">++;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: rgb(0, 153, 0); --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">}</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">*</span>pCon <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">=</span> bCon<span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; pCon <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">=</span> pOutput<span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">;</span><br>
+&nbsp; &nbsp; &nbsp; &nbsp; pOutput <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">=</span> pCon <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">+</span> <span style="color: rgb(0, 0, 221); --darkreader-inline-color:#588ce7;" data-darkreader-inline-color="">1</span><span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">;</span><br>
+&nbsp; &nbsp; <span style="color: rgb(0, 153, 0); --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">}</span><br>
+<br>
+&nbsp; &nbsp; <span style="color: rgb(177, 177, 0); --darkreader-inline-color:#ffff7b;" data-darkreader-inline-color="">return</span> pCon <span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">-</span> dst<span style="color: rgb(51, 153, 51); --darkreader-inline-color:#9cd894;" data-darkreader-inline-color="">;</span><br>
+<span style="color: rgb(0, 153, 0); --darkreader-inline-color:#88f980;" data-darkreader-inline-color="">}</span></div></div>
+<p>到这里，游戏脚本文件的解包和封包工作均进行完毕。有时间的话，我会再讨论一下CG文件的解包和封包，因为CG文件又多进行了一次加密，elf的程序员真是蛋疼……</p>
+<pre><div>» 转载请注明来源及链接：<a title="未来代码研究所" href="http://blog.atelier39.org/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">未来代码研究所</a></div><div>» 本文链接地址：<a rel="noopener noreferrer" title="《同级生1》DMM版破解手记之脚本文件封包" href="http://blog.atelier39.org/rev_eng/638.html" target="_blank" referrerpolicy="no-referrer">http://blog.atelier39.org/rev_eng/638.html</a></div></pre><h3 class="related_post_title">Related Posts:</h3><ul class="related_post"><li><a href="http://blog.atelier39.org/rev_eng/615.html" title="《同级生1》DMM版破解手记之脚本文件解包" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">《同级生1》DMM版破解手记之脚本文件解包</a></li><li><a href="http://blog.atelier39.org/gamehack/404.html" title="《同级生》汉化开坑贴" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">《同级生》汉化开坑贴</a></li><li><a href="http://blog.atelier39.org/compiler_disasm/207.html" title="有关结构体作为函数参数和返回值的研究（VC++2008编译器）" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">有关结构体作为函数参数和返回值的研究（VC++2008编译器）</a></li><li><a href="http://blog.atelier39.org/compiler_disasm/94.html" title="关于naked函数的一些分析" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">关于naked函数的一些分析</a></li></ul>
+</div>
+<div class="cleared"></div>
+<div class="PostFooterIcons metadata-icons">
+<img src="assets/1571117574-715aa2cc77ffeef53d7c307c5a2dec69.png" width="18" height="18" alt="PostCategoryIcon">
+Posted in <a href="http://blog.atelier39.org/category/gamehack" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">游戏汉化</a>, <a href="http://blog.atelier39.org/category/rev_eng" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">逆向工程</a> | <img src="assets/1571117574-f67bd46d285c0c79dbbce2d17888051d.png" width="18" height="18" alt="PostTagIcon">
+Tags: <a href="http://blog.atelier39.org/tag/disasm" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">反汇编</a>, <a href="http://blog.atelier39.org/tag/doukyusei" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">同级生</a>, <a href="http://blog.atelier39.org/tag/re" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">逆向工程</a> 
+</div>
+
+</div>
+
+    </div>
+</div>
+
+
+<!-- You can start editing here. -->
+
+
+			<!-- If comments are open, but there are no comments. -->
+
+	 
+
+<div class="Post">
+    <div class="Post-tl"></div>
+    <div class="Post-tr"><div></div></div>
+    <div class="Post-bl"><div></div></div>
+    <div class="Post-br"><div></div></div>
+    <div class="Post-tc"><div></div></div>
+    <div class="Post-bc"><div></div></div>
+    <div class="Post-cl"><div></div></div>
+    <div class="Post-cr"><div></div></div>
+    <div class="Post-cc"></div>
+    <div class="Post-body">
+<div class="Post-inner article">
+
+<div class="PostContent">
+
+<div id="respond">
+  
+  <h3>Leave a Reply</h3>
+
+<div class="cancel-comment-reply">
+	<small></small>
+</div>
+
+
+<form action="http://blog.atelier39.org/wp-comments-post.php" method="post" id="commentform">
+
+
+<p><input type="text" name="author" id="author" value="" size="22" tabindex="1" aria-required="true">
+<label for="author"><small>Name (required)</small></label></p>
+
+<p><input type="text" name="email" id="email" value="" size="22" tabindex="2" aria-required="true">
+<label for="email"><small>Mail (will not be published) (required)</small></label></p>
+
+<p><input type="text" name="url" id="url" value="" size="22" tabindex="3">
+<label for="url"><small>Website</small></label></p>
+
+
+<!--<p><small><strong>XHTML:</strong> You can use these tags: <code>&lt;a href=&quot;&quot; title=&quot;&quot;&gt; &lt;abbr title=&quot;&quot;&gt; &lt;acronym title=&quot;&quot;&gt; &lt;b&gt; &lt;blockquote cite=&quot;&quot;&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=&quot;&quot;&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=&quot;&quot;&gt; &lt;s&gt; &lt;strike&gt; &lt;strong&gt; </code></small></p>-->
+
+<p><textarea name="comment" id="comment" cols="100%" rows="10" tabindex="4"></textarea></p>
+
+<p>
+
+    <button class="Button" type="submit" name="submit" tabindex="5">
+      <span class="btn">
+        <span class="t">
+          Submit Comment        </span>
+        <span class="r">
+          <span></span>
+        </span>
+        <span class="l"></span>
+      </span>
+    </button>
+
+
+
+</p>
+<p style="clear: both;" class="subscribe-to-comments">
+			<input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;">
+			<label for="subscribe">Notify me of followup comments via e-mail</label>
+			</p>
+</form>
+
+</div>
+
+</div>
+<div class="cleared"></div>
+
+
+</div>
+
+    </div>
+</div>
+
+
+</div>
+<div class="sidebar1">
+<div class="sidebar1">      
+<!-- Enhanced Categories 2.2.0 --><div class="Block">
+    <div class="Block-tl"></div>
+    <div class="Block-tr"><div></div></div>
+    <div class="Block-bl"><div></div></div>
+    <div class="Block-br"><div></div></div>
+    <div class="Block-tc"><div></div></div>
+    <div class="Block-bc"><div></div></div>
+    <div class="Block-cl"><div></div></div>
+    <div class="Block-cr"><div></div></div>
+    <div class="Block-cc"></div>
+    <div class="Block-body">
+<div class="BlockHeader">
+    <div class="header-tag-icon">
+        <div class="BlockHeader-text">
+World Line
+        </div>
+    </div>
+    <div class="l"></div>
+    <div class="r"><div></div></div>
+</div>
+<div class="BlockContent">
+    <div class="BlockContent-body">
+
+<ul class="enhanced-categories-1">	<li class="cat-item cat-item-9" style="list-style-type: none;"><a href="http://blog.atelier39.org/category/ccpp" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">C/C++</a> <a href="http://blog.atelier39.org/category/ccpp/feed" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1571117574-90f28852ad32774690541d75dd881d2c.png" alt="RSS" style="margin: 0px 5px; padding: 0px;"></a> (1)
+<span class="button" style="width: 10px; margin: 0px 5px 0px 0px; color: rgb(170, 0, 0); --darkreader-inline-color:#ee706c;" data-darkreader-inline-color=""><img src="assets/1571117574-ceefacb754e14d89967e5100d91f691e.gif" alt="-" title="-"></span></li>
+	<li class="cat-item cat-item-10" style="list-style-type: none;"><a href="http://blog.atelier39.org/category/linux_driver" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Linux内核与驱动</a> <a href="http://blog.atelier39.org/category/linux_driver/feed" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1571117574-90f28852ad32774690541d75dd881d2c.png" alt="RSS" style="margin: 0px 5px; padding: 0px;"></a> (2)
+<span class="button" style="width: 10px; margin: 0px 5px 0px 0px; color: rgb(170, 0, 0); --darkreader-inline-color:#ee706c;" data-darkreader-inline-color=""><img src="assets/1571117574-ceefacb754e14d89967e5100d91f691e.gif" alt="-" title="-"></span></li>
+	<li class="cat-item cat-item-98" style="list-style-type: none;"><a href="http://blog.atelier39.org/category/linux_app" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Linux应用</a> <a href="http://blog.atelier39.org/category/linux_app/feed" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1571117574-90f28852ad32774690541d75dd881d2c.png" alt="RSS" style="margin: 0px 5px; padding: 0px;"></a> (1)
+<span class="button" style="width: 10px; margin: 0px 5px 0px 0px; color: rgb(170, 0, 0); --darkreader-inline-color:#ee706c;" data-darkreader-inline-color=""><img src="assets/1571117574-ceefacb754e14d89967e5100d91f691e.gif" alt="-" title="-"></span></li>
+	<li class="cat-item cat-item-73" style="list-style-type: none;"><a href="http://blog.atelier39.org/category/pspdev" title="PSP Programming &amp; Development" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">PSP编程</a> <a href="http://blog.atelier39.org/category/pspdev/feed" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1571117574-90f28852ad32774690541d75dd881d2c.png" alt="RSS" style="margin: 0px 5px; padding: 0px;"></a> (8)
+<span class="button" style="width: 10px; margin: 0px 5px 0px 0px; color: rgb(170, 0, 0); --darkreader-inline-color:#ee706c;" data-darkreader-inline-color=""><img src="assets/1571117574-ceefacb754e14d89967e5100d91f691e.gif" alt="-" title="-"></span></li>
+	<li class="cat-item cat-item-109" style="list-style-type: none;"><a href="http://blog.atelier39.org/category/uwp_dev" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">UWP开发</a> <a href="http://blog.atelier39.org/category/uwp_dev/feed" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1571117574-90f28852ad32774690541d75dd881d2c.png" alt="RSS" style="margin: 0px 5px; padding: 0px;"></a> (3)
+<span class="button" style="width: 10px; margin: 0px 5px 0px 0px; color: rgb(170, 0, 0); --darkreader-inline-color:#ee706c;" data-darkreader-inline-color=""><img src="assets/1571117574-ceefacb754e14d89967e5100d91f691e.gif" alt="-" title="-"></span></li>
+	<li class="cat-item cat-item-12" style="list-style-type: none;"><a href="http://blog.atelier39.org/category/winuser" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Win32用户层开发</a> <a href="http://blog.atelier39.org/category/winuser/feed" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1571117574-90f28852ad32774690541d75dd881d2c.png" alt="RSS" style="margin: 0px 5px; padding: 0px;"></a> (3)
+<span class="button" style="width: 10px; margin: 0px 5px 0px 0px; color: rgb(170, 0, 0); --darkreader-inline-color:#ee706c;" data-darkreader-inline-color=""><img src="assets/1571117574-ceefacb754e14d89967e5100d91f691e.gif" alt="-" title="-"></span></li>
+	<li class="cat-item cat-item-13" style="list-style-type: none;"><a href="http://blog.atelier39.org/category/wp_dev" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Windows Phone开发</a> <a href="http://blog.atelier39.org/category/wp_dev/feed" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1571117574-90f28852ad32774690541d75dd881d2c.png" alt="RSS" style="margin: 0px 5px; padding: 0px;"></a> (17)
+<span class="button" style="width: 10px; margin: 0px 5px 0px 0px; color: rgb(170, 0, 0); --darkreader-inline-color:#ee706c;" data-darkreader-inline-color=""><img src="assets/1571117574-ceefacb754e14d89967e5100d91f691e.gif" alt="-" title="-"></span></li>
+	<li class="cat-item cat-item-11" style="list-style-type: none;"><a href="http://blog.atelier39.org/category/winkernel" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Windows内核与驱动</a> <a href="http://blog.atelier39.org/category/winkernel/feed" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1571117574-90f28852ad32774690541d75dd881d2c.png" alt="RSS" style="margin: 0px 5px; padding: 0px;"></a> (2)
+<span class="button" style="width: 10px; margin: 0px 5px 0px 0px; color: rgb(170, 0, 0); --darkreader-inline-color:#ee706c;" data-darkreader-inline-color=""><img src="assets/1571117574-ceefacb754e14d89967e5100d91f691e.gif" alt="-" title="-"></span></li>
+	<li class="cat-item cat-item-14" style="list-style-type: none;"><a href="http://blog.atelier39.org/category/wpfsl" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">WPF/Silverlight</a> <a href="http://blog.atelier39.org/category/wpfsl/feed" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1571117574-90f28852ad32774690541d75dd881d2c.png" alt="RSS" style="margin: 0px 5px; padding: 0px;"></a> (7)
+<span class="button" style="width: 10px; margin: 0px 5px 0px 0px; color: rgb(170, 0, 0); --darkreader-inline-color:#ee706c;" data-darkreader-inline-color=""><img src="assets/1571117574-ceefacb754e14d89967e5100d91f691e.gif" alt="-" title="-"></span></li>
+	<li class="cat-item cat-item-103" style="list-style-type: none;"><a href="http://blog.atelier39.org/category/parallel" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">并行计算与GPU编程</a> <a href="http://blog.atelier39.org/category/parallel/feed" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1571117574-90f28852ad32774690541d75dd881d2c.png" alt="RSS" style="margin: 0px 5px; padding: 0px;"></a> (1)
+<span class="button" style="width: 10px; margin: 0px 5px 0px 0px; color: rgb(170, 0, 0); --darkreader-inline-color:#ee706c;" data-darkreader-inline-color=""><img src="assets/1571117574-ceefacb754e14d89967e5100d91f691e.gif" alt="-" title="-"></span></li>
+	<li class="cat-item cat-item-15" style="list-style-type: none;"><a href="http://blog.atelier39.org/category/os_dev" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">操作系统设计与开发</a> <a href="http://blog.atelier39.org/category/os_dev/feed" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1571117574-90f28852ad32774690541d75dd881d2c.png" alt="RSS" style="margin: 0px 5px; padding: 0px;"></a> (1)
+<span class="button" style="width: 10px; margin: 0px 5px 0px 0px; color: rgb(170, 0, 0); --darkreader-inline-color:#ee706c;" data-darkreader-inline-color=""><img src="assets/1571117574-ceefacb754e14d89967e5100d91f691e.gif" alt="-" title="-"></span></li>
+	<li class="cat-item cat-item-30" style="list-style-type: none;"><a href="http://blog.atelier39.org/category/dsa" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">数据结构与算法</a> <a href="http://blog.atelier39.org/category/dsa/feed" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1571117574-90f28852ad32774690541d75dd881d2c.png" alt="RSS" style="margin: 0px 5px; padding: 0px;"></a> (4)
+<span class="button" style="width: 10px; margin: 0px 5px 0px 0px; color: rgb(170, 0, 0); --darkreader-inline-color:#ee706c;" data-darkreader-inline-color=""><img src="assets/1571117574-ceefacb754e14d89967e5100d91f691e.gif" alt="-" title="-"></span></li>
+	<li class="cat-item cat-item-108" style="list-style-type: none;"><a href="http://blog.atelier39.org/category/game_dev" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">游戏开发</a> <a href="http://blog.atelier39.org/category/game_dev/feed" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1571117574-90f28852ad32774690541d75dd881d2c.png" alt="RSS" style="margin: 0px 5px; padding: 0px;"></a> (1)
+<span class="button" style="width: 10px; margin: 0px 5px 0px 0px; color: rgb(170, 0, 0); --darkreader-inline-color:#ee706c;" data-darkreader-inline-color=""><img src="assets/1571117574-ceefacb754e14d89967e5100d91f691e.gif" alt="-" title="-"></span></li>
+	<li class="cat-item cat-item-90" style="list-style-type: none;"><a href="http://blog.atelier39.org/category/gamehack" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">游戏汉化</a> <a href="http://blog.atelier39.org/category/gamehack/feed" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1571117574-90f28852ad32774690541d75dd881d2c.png" alt="RSS" style="margin: 0px 5px; padding: 0px;"></a> (3)
+<span class="button" style="width: 10px; margin: 0px 5px 0px 0px; color: rgb(170, 0, 0); --darkreader-inline-color:#ee706c;" data-darkreader-inline-color=""><img src="assets/1571117574-ceefacb754e14d89967e5100d91f691e.gif" alt="-" title="-"></span></li>
+	<li class="cat-item cat-item-18" style="list-style-type: none;"><a href="http://blog.atelier39.org/category/codersay" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">程序员的碎碎念</a> <a href="http://blog.atelier39.org/category/codersay/feed" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1571117574-90f28852ad32774690541d75dd881d2c.png" alt="RSS" style="margin: 0px 5px; padding: 0px;"></a> (5)
+<span class="button" style="width: 10px; margin: 0px 5px 0px 0px; color: rgb(170, 0, 0); --darkreader-inline-color:#ee706c;" data-darkreader-inline-color=""><img src="assets/1571117574-ceefacb754e14d89967e5100d91f691e.gif" alt="-" title="-"></span></li>
+	<li class="cat-item cat-item-17" style="list-style-type: none;"><a href="http://blog.atelier39.org/category/compiler_disasm" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">编译器汇编代码分析</a> <a href="http://blog.atelier39.org/category/compiler_disasm/feed" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1571117574-90f28852ad32774690541d75dd881d2c.png" alt="RSS" style="margin: 0px 5px; padding: 0px;"></a> (2)
+<span class="button" style="width: 10px; margin: 0px 5px 0px 0px; color: rgb(170, 0, 0); --darkreader-inline-color:#ee706c;" data-darkreader-inline-color=""><img src="assets/1571117574-ceefacb754e14d89967e5100d91f691e.gif" alt="-" title="-"></span></li>
+	<li class="cat-item cat-item-89" style="list-style-type: none;"><a href="http://blog.atelier39.org/category/cg" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">计算机图形学</a> <a href="http://blog.atelier39.org/category/cg/feed" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1571117574-90f28852ad32774690541d75dd881d2c.png" alt="RSS" style="margin: 0px 5px; padding: 0px;"></a> (5)
+<span class="button" style="width: 10px; margin: 0px 5px 0px 0px; color: rgb(170, 0, 0); --darkreader-inline-color:#ee706c;" data-darkreader-inline-color=""><img src="assets/1571117574-ceefacb754e14d89967e5100d91f691e.gif" alt="-" title="-"></span></li>
+	<li class="cat-item cat-item-76" style="list-style-type: none;"><a href="http://blog.atelier39.org/category/rev_eng" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">逆向工程</a> <a href="http://blog.atelier39.org/category/rev_eng/feed" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1571117574-90f28852ad32774690541d75dd881d2c.png" alt="RSS" style="margin: 0px 5px; padding: 0px;"></a> (2)
+<span class="button" style="width: 10px; margin: 0px 5px 0px 0px; color: rgb(170, 0, 0); --darkreader-inline-color:#ee706c;" data-darkreader-inline-color=""><img src="assets/1571117574-ceefacb754e14d89967e5100d91f691e.gif" alt="-" title="-"></span></li>
+</ul>
+    </div>
+</div>
+
+    </div>
+</div>
+<!-- Enhanced Categories 2.2.0 --><div class="Block">
+    <div class="Block-tl"></div>
+    <div class="Block-tr"><div></div></div>
+    <div class="Block-bl"><div></div></div>
+    <div class="Block-br"><div></div></div>
+    <div class="Block-tc"><div></div></div>
+    <div class="Block-bc"><div></div></div>
+    <div class="Block-cl"><div></div></div>
+    <div class="Block-cr"><div></div></div>
+    <div class="Block-cc"></div>
+    <div class="Block-body">
+<div class="BlockHeader">
+    <div class="header-tag-icon">
+        <div class="BlockHeader-text">
+Tag Cloud
+        </div>
+    </div>
+    <div class="l"></div>
+    <div class="r"><div></div></div>
+</div>
+<div class="BlockContent">
+    <div class="BlockContent-body">
+
+<!-- Generated by Simple Tags 2.5.5 - http://wordpress.org/extend/plugins/simple-tags -->
+	<div class="st-tag-cloud">
+	<a href="http://blog.atelier39.org/tag/game_dev" id="tag-link-71" class="st-tags t0" title="1 topics" rel="noopener noreferrer" style="font-size: 8pt; color: rgb(49, 53, 56); --darkreader-inline-color:#dcd5cb;" data-darkreader-inline-color="" target="_blank" referrerpolicy="no-referrer">游戏开发</a>
+<a href="http://blog.atelier39.org/tag/re" id="tag-link-94" class="st-tags t0" title="2 topics" rel="noopener noreferrer" style="font-size: 8pt; color: rgb(49, 53, 56); --darkreader-inline-color:#dcd5cb;" data-darkreader-inline-color="" target="_blank" referrerpolicy="no-referrer">逆向工程</a>
+<a href="http://blog.atelier39.org/tag/vc" id="tag-link-51" class="st-tags t0" title="1 topics" rel="noopener noreferrer" style="font-size: 8pt; color: rgb(49, 53, 56); --darkreader-inline-color:#dcd5cb;" data-darkreader-inline-color="" target="_blank" referrerpolicy="no-referrer">VC++</a>
+<a href="http://blog.atelier39.org/tag/compile_calc" id="tag-link-41" class="st-tags t0" title="1 topics" rel="noopener noreferrer" style="font-size: 8pt; color: rgb(49, 53, 56); --darkreader-inline-color:#dcd5cb;" data-darkreader-inline-color="" target="_blank" referrerpolicy="no-referrer">编译期计算</a>
+<a href="http://blog.atelier39.org/tag/dirextx" id="tag-link-113" class="st-tags t0" title="2 topics" rel="noopener noreferrer" style="font-size: 8pt; color: rgb(49, 53, 56); --darkreader-inline-color:#dcd5cb;" data-darkreader-inline-color="" target="_blank" referrerpolicy="no-referrer">DirextX</a>
+<a href="http://blog.atelier39.org/tag/x86" id="tag-link-21" class="st-tags t0" title="1 topics" rel="noopener noreferrer" style="font-size: 8pt; color: rgb(49, 53, 56); --darkreader-inline-color:#dcd5cb;" data-darkreader-inline-color="" target="_blank" referrerpolicy="no-referrer">x86</a>
+<a href="http://blog.atelier39.org/tag/thread" id="tag-link-80" class="st-tags t0" title="1 topics" rel="noopener noreferrer" style="font-size: 8pt; color: rgb(49, 53, 56); --darkreader-inline-color:#dcd5cb;" data-darkreader-inline-color="" target="_blank" referrerpolicy="no-referrer">线程</a>
+<a href="http://blog.atelier39.org/tag/vps" id="tag-link-96" class="st-tags t0" title="1 topics" rel="noopener noreferrer" style="font-size: 8pt; color: rgb(49, 53, 56); --darkreader-inline-color:#dcd5cb;" data-darkreader-inline-color="" target="_blank" referrerpolicy="no-referrer">VPS</a>
+<a href="http://blog.atelier39.org/tag/amazon" id="tag-link-97" class="st-tags t0" title="1 topics" rel="noopener noreferrer" style="font-size: 8pt; color: rgb(49, 53, 56); --darkreader-inline-color:#dcd5cb;" data-darkreader-inline-color="" target="_blank" referrerpolicy="no-referrer">Amazon</a>
+<a href="http://blog.atelier39.org/tag/data_structure" id="tag-link-82" class="st-tags t1" title="3 topics" rel="noopener noreferrer" style="font-size: 9.4pt; color: rgb(59, 68, 71); --darkreader-inline-color:#d6d0c5;" data-darkreader-inline-color="" target="_blank" referrerpolicy="no-referrer">数据结构</a>
+<a href="http://blog.atelier39.org/tag/winrt" id="tag-link-107" class="st-tags t1" title="4 topics" rel="noopener noreferrer" style="font-size: 9.4pt; color: rgb(59, 68, 71); --darkreader-inline-color:#d6d0c5;" data-darkreader-inline-color="" target="_blank" referrerpolicy="no-referrer">WinRT</a>
+<a href="http://blog.atelier39.org/tag/steve-jobs" id="tag-link-84" class="st-tags t0" title="1 topics" rel="noopener noreferrer" style="font-size: 8pt; color: rgb(49, 53, 56); --darkreader-inline-color:#dcd5cb;" data-darkreader-inline-color="" target="_blank" referrerpolicy="no-referrer">Steve Jobs</a>
+<a href="http://blog.atelier39.org/tag/windows_phone" id="tag-link-46" class="st-tags t10" title="17 topics" rel="noopener noreferrer" style="font-size: 22pt; color: rgb(149, 210, 211); --darkreader-inline-color:#a4d3cf;" data-darkreader-inline-color="" target="_blank" referrerpolicy="no-referrer">Windows Phone</a>
+<a href="http://blog.atelier39.org/tag/process" id="tag-link-39" class="st-tags t0" title="2 topics" rel="noopener noreferrer" style="font-size: 8pt; color: rgb(49, 53, 56); --darkreader-inline-color:#dcd5cb;" data-darkreader-inline-color="" target="_blank" referrerpolicy="no-referrer">进程</a>
+<a href="http://blog.atelier39.org/tag/gui" id="tag-link-69" class="st-tags t0" title="1 topics" rel="noopener noreferrer" style="font-size: 8pt; color: rgb(49, 53, 56); --darkreader-inline-color:#dcd5cb;" data-darkreader-inline-color="" target="_blank" referrerpolicy="no-referrer">GUI</a>
+<a href="http://blog.atelier39.org/tag/os" id="tag-link-32" class="st-tags t1" title="3 topics" rel="noopener noreferrer" style="font-size: 9.4pt; color: rgb(59, 68, 71); --darkreader-inline-color:#d6d0c5;" data-darkreader-inline-color="" target="_blank" referrerpolicy="no-referrer">OS</a>
+<a href="http://blog.atelier39.org/tag/teched" id="tag-link-44" class="st-tags t0" title="1 topics" rel="noopener noreferrer" style="font-size: 8pt; color: rgb(49, 53, 56); --darkreader-inline-color:#dcd5cb;" data-darkreader-inline-color="" target="_blank" referrerpolicy="no-referrer">TechEd</a>
+<a href="http://blog.atelier39.org/tag/hanhua" id="tag-link-78" class="st-tags t0" title="1 topics" rel="noopener noreferrer" style="font-size: 8pt; color: rgb(49, 53, 56); --darkreader-inline-color:#dcd5cb;" data-darkreader-inline-color="" target="_blank" referrerpolicy="no-referrer">汉化</a>
+<a href="http://blog.atelier39.org/tag/uwp" id="tag-link-111" class="st-tags t1" title="3 topics" rel="noopener noreferrer" style="font-size: 9.4pt; color: rgb(59, 68, 71); --darkreader-inline-color:#d6d0c5;" data-darkreader-inline-color="" target="_blank" referrerpolicy="no-referrer">UWP</a>
+<a href="http://blog.atelier39.org/tag/cpp" id="tag-link-91" class="st-tags t0" title="2 topics" rel="noopener noreferrer" style="font-size: 8pt; color: rgb(49, 53, 56); --darkreader-inline-color:#dcd5cb;" data-darkreader-inline-color="" target="_blank" referrerpolicy="no-referrer">C＋＋</a>
+<a href="http://blog.atelier39.org/tag/c" id="tag-link-28" class="st-tags t2" title="5 topics" rel="noopener noreferrer" style="font-size: 10.8pt; color: rgb(69, 84, 87); --darkreader-inline-color:#d0cabf;" data-darkreader-inline-color="" target="_blank" referrerpolicy="no-referrer">C</a>
+<a href="http://blog.atelier39.org/tag/doukyusei" id="tag-link-77" class="st-tags t1" title="3 topics" rel="noopener noreferrer" style="font-size: 9.4pt; color: rgb(59, 68, 71); --darkreader-inline-color:#d6d0c5;" data-darkreader-inline-color="" target="_blank" referrerpolicy="no-referrer">同级生</a>
+<a href="http://blog.atelier39.org/tag/algorithm" id="tag-link-83" class="st-tags t3" title="7 topics" rel="noopener noreferrer" style="font-size: 12.2pt; color: rgb(79, 100, 102); --darkreader-inline-color:#cbc5b9;" data-darkreader-inline-color="" target="_blank" referrerpolicy="no-referrer">算法</a>
+<a href="http://blog.atelier39.org/tag/template_class" id="tag-link-40" class="st-tags t0" title="1 topics" rel="noopener noreferrer" style="font-size: 8pt; color: rgb(49, 53, 56); --darkreader-inline-color:#dcd5cb;" data-darkreader-inline-color="" target="_blank" referrerpolicy="no-referrer">模板类</a>
+<a href="http://blog.atelier39.org/tag/cui" id="tag-link-66" class="st-tags t0" title="1 topics" rel="noopener noreferrer" style="font-size: 8pt; color: rgb(49, 53, 56); --darkreader-inline-color:#dcd5cb;" data-darkreader-inline-color="" target="_blank" referrerpolicy="no-referrer">CUI</a>
+<a href="http://blog.atelier39.org/tag/linux_kernel" id="tag-link-35" class="st-tags t0" title="2 topics" rel="noopener noreferrer" style="font-size: 8pt; color: rgb(49, 53, 56); --darkreader-inline-color:#dcd5cb;" data-darkreader-inline-color="" target="_blank" referrerpolicy="no-referrer">Linux内核</a>
+<a href="http://blog.atelier39.org/tag/win32-api" id="tag-link-50" class="st-tags t1" title="3 topics" rel="noopener noreferrer" style="font-size: 9.4pt; color: rgb(59, 68, 71); --darkreader-inline-color:#d6d0c5;" data-darkreader-inline-color="" target="_blank" referrerpolicy="no-referrer">Win32 API</a>
+<a href="http://blog.atelier39.org/tag/programmer" id="tag-link-68" class="st-tags t0" title="2 topics" rel="noopener noreferrer" style="font-size: 8pt; color: rgb(49, 53, 56); --darkreader-inline-color:#dcd5cb;" data-darkreader-inline-color="" target="_blank" referrerpolicy="no-referrer">程序员</a>
+<a href="http://blog.atelier39.org/tag/cuda" id="tag-link-104" class="st-tags t0" title="1 topics" rel="noopener noreferrer" style="font-size: 8pt; color: rgb(49, 53, 56); --darkreader-inline-color:#dcd5cb;" data-darkreader-inline-color="" target="_blank" referrerpolicy="no-referrer">CUDA</a>
+<a href="http://blog.atelier39.org/tag/control_dev" id="tag-link-49" class="st-tags t2" title="5 topics" rel="noopener noreferrer" style="font-size: 10.8pt; color: rgb(69, 84, 87); --darkreader-inline-color:#d0cabf;" data-darkreader-inline-color="" target="_blank" referrerpolicy="no-referrer">控件开发</a>
+<a href="http://blog.atelier39.org/tag/3d" id="tag-link-88" class="st-tags t3" title="6 topics" rel="noopener noreferrer" style="font-size: 12.2pt; color: rgb(79, 100, 102); --darkreader-inline-color:#cbc5b9;" data-darkreader-inline-color="" target="_blank" referrerpolicy="no-referrer">3D图形学</a>
+<a href="http://blog.atelier39.org/tag/win32_driver" id="tag-link-37" class="st-tags t0" title="2 topics" rel="noopener noreferrer" style="font-size: 8pt; color: rgb(49, 53, 56); --darkreader-inline-color:#dcd5cb;" data-darkreader-inline-color="" target="_blank" referrerpolicy="no-referrer">Win32驱动</a>
+<a href="http://blog.atelier39.org/tag/math" id="tag-link-92" class="st-tags t1" title="3 topics" rel="noopener noreferrer" style="font-size: 9.4pt; color: rgb(59, 68, 71); --darkreader-inline-color:#d6d0c5;" data-darkreader-inline-color="" target="_blank" referrerpolicy="no-referrer">万恶的数学</a>
+<a href="http://blog.atelier39.org/tag/interview" id="tag-link-63" class="st-tags t0" title="1 topics" rel="noopener noreferrer" style="font-size: 8pt; color: rgb(49, 53, 56); --darkreader-inline-color:#dcd5cb;" data-darkreader-inline-color="" target="_blank" referrerpolicy="no-referrer">面试题</a>
+<a href="http://blog.atelier39.org/tag/bill-gates" id="tag-link-86" class="st-tags t0" title="1 topics" rel="noopener noreferrer" style="font-size: 8pt; color: rgb(49, 53, 56); --darkreader-inline-color:#dcd5cb;" data-darkreader-inline-color="" target="_blank" referrerpolicy="no-referrer">Bill Gates</a>
+<a href="http://blog.atelier39.org/tag/macro" id="tag-link-36" class="st-tags t0" title="1 topics" rel="noopener noreferrer" style="font-size: 8pt; color: rgb(49, 53, 56); --darkreader-inline-color:#dcd5cb;" data-darkreader-inline-color="" target="_blank" referrerpolicy="no-referrer">Macro</a>
+<a href="http://blog.atelier39.org/tag/psp" id="tag-link-79" class="st-tags t4" title="8 topics" rel="noopener noreferrer" style="font-size: 13.6pt; color: rgb(89, 115, 118); --darkreader-inline-color:#c6c0b3;" data-darkreader-inline-color="" target="_blank" referrerpolicy="no-referrer">PSP</a>
+<a href="http://blog.atelier39.org/tag/2d" id="tag-link-93" class="st-tags t0" title="2 topics" rel="noopener noreferrer" style="font-size: 8pt; color: rgb(49, 53, 56); --darkreader-inline-color:#dcd5cb;" data-darkreader-inline-color="" target="_blank" referrerpolicy="no-referrer">2D图形学</a>
+<a href="http://blog.atelier39.org/tag/lamp" id="tag-link-95" class="st-tags t0" title="1 topics" rel="noopener noreferrer" style="font-size: 8pt; color: rgb(49, 53, 56); --darkreader-inline-color:#dcd5cb;" data-darkreader-inline-color="" target="_blank" referrerpolicy="no-referrer">LAMP</a>
+<a href="http://blog.atelier39.org/tag/disasm" id="tag-link-34" class="st-tags t1" title="4 topics" rel="noopener noreferrer" style="font-size: 9.4pt; color: rgb(59, 68, 71); --darkreader-inline-color:#d6d0c5;" data-darkreader-inline-color="" target="_blank" referrerpolicy="no-referrer">反汇编</a>
+<a href="http://blog.atelier39.org/tag/silverlight" id="tag-link-48" class="st-tags t5" title="10 topics" rel="noopener noreferrer" style="font-size: 15pt; color: rgb(99, 131, 133); --darkreader-inline-color:#c0baad;" data-darkreader-inline-color="" target="_blank" referrerpolicy="no-referrer">Silverlight</a>
+<a href="http://blog.atelier39.org/tag/sync" id="tag-link-38" class="st-tags t0" title="1 topics" rel="noopener noreferrer" style="font-size: 8pt; color: rgb(49, 53, 56); --darkreader-inline-color:#dcd5cb;" data-darkreader-inline-color="" target="_blank" referrerpolicy="no-referrer">同步</a>
+<a href="http://blog.atelier39.org/tag/apple" id="tag-link-85" class="st-tags t0" title="1 topics" rel="noopener noreferrer" style="font-size: 8pt; color: rgb(49, 53, 56); --darkreader-inline-color:#dcd5cb;" data-darkreader-inline-color="" target="_blank" referrerpolicy="no-referrer">Apple</a>
+<a href="http://blog.atelier39.org/tag/microsoft" id="tag-link-45" class="st-tags t0" title="2 topics" rel="noopener noreferrer" style="font-size: 8pt; color: rgb(49, 53, 56); --darkreader-inline-color:#dcd5cb;" data-darkreader-inline-color="" target="_blank" referrerpolicy="no-referrer">Microsoft</a>
+<a href="http://blog.atelier39.org/tag/tucao" id="tag-link-43" class="st-tags t0" title="1 topics" rel="noopener noreferrer" style="font-size: 8pt; color: rgb(49, 53, 56); --darkreader-inline-color:#dcd5cb;" data-darkreader-inline-color="" target="_blank" referrerpolicy="no-referrer">吐槽</a></div>
+
+
+    </div>
+</div>
+
+    </div>
+</div>
+<div class="Block">
+    <div class="Block-tl"></div>
+    <div class="Block-tr"><div></div></div>
+    <div class="Block-bl"><div></div></div>
+    <div class="Block-br"><div></div></div>
+    <div class="Block-tc"><div></div></div>
+    <div class="Block-bc"><div></div></div>
+    <div class="Block-cl"><div></div></div>
+    <div class="Block-cr"><div></div></div>
+    <div class="Block-cc"></div>
+    <div class="Block-body">
+<div class="BlockHeader">
+    <div class="header-tag-icon">
+        <div class="BlockHeader-text">
+Time Machine
+        </div>
+    </div>
+    <div class="l"></div>
+    <div class="r"><div></div></div>
+</div>
+<div class="BlockContent">
+    <div class="BlockContent-body">
+		<label class="screen-reader-text" for="archives-dropdown-5">Time Machine</label>
+		<select id="archives-dropdown-5" name="archive-dropdown">
+			
+			<option value="">Select Month</option>
+				<option value="http://blog.atelier39.org/date/2019/09"> September 2019 &nbsp;(1)</option>
+	<option value="http://blog.atelier39.org/date/2018/05"> May 2018 &nbsp;(2)</option>
+	<option value="http://blog.atelier39.org/date/2017/11"> November 2017 &nbsp;(1)</option>
+	<option value="http://blog.atelier39.org/date/2015/06"> June 2015 &nbsp;(1)</option>
+	<option value="http://blog.atelier39.org/date/2015/02"> February 2015 &nbsp;(1)</option>
+	<option value="http://blog.atelier39.org/date/2015/01"> January 2015 &nbsp;(1)</option>
+	<option value="http://blog.atelier39.org/date/2014/11"> November 2014 &nbsp;(1)</option>
+	<option value="http://blog.atelier39.org/date/2014/09"> September 2014 &nbsp;(2)</option>
+	<option value="http://blog.atelier39.org/date/2014/08"> August 2014 &nbsp;(1)</option>
+	<option value="http://blog.atelier39.org/date/2013/12"> December 2013 &nbsp;(1)</option>
+	<option value="http://blog.atelier39.org/date/2013/10"> October 2013 &nbsp;(1)</option>
+	<option value="http://blog.atelier39.org/date/2013/09"> September 2013 &nbsp;(1)</option>
+	<option value="http://blog.atelier39.org/date/2013/01"> January 2013 &nbsp;(1)</option>
+	<option value="http://blog.atelier39.org/date/2012/10"> October 2012 &nbsp;(2)</option>
+	<option value="http://blog.atelier39.org/date/2012/09"> September 2012 &nbsp;(1)</option>
+	<option value="http://blog.atelier39.org/date/2012/08"> August 2012 &nbsp;(1)</option>
+	<option value="http://blog.atelier39.org/date/2012/06"> June 2012 &nbsp;(1)</option>
+	<option value="http://blog.atelier39.org/date/2012/05"> May 2012 &nbsp;(1)</option>
+	<option value="http://blog.atelier39.org/date/2012/04"> April 2012 &nbsp;(2)</option>
+	<option value="http://blog.atelier39.org/date/2012/03"> March 2012 &nbsp;(1)</option>
+	<option value="http://blog.atelier39.org/date/2012/01"> January 2012 &nbsp;(2)</option>
+	<option value="http://blog.atelier39.org/date/2011/12"> December 2011 &nbsp;(2)</option>
+	<option value="http://blog.atelier39.org/date/2011/11"> November 2011 &nbsp;(4)</option>
+	<option value="http://blog.atelier39.org/date/2011/10"> October 2011 &nbsp;(3)</option>
+	<option value="http://blog.atelier39.org/date/2011/09"> September 2011 &nbsp;(2)</option>
+	<option value="http://blog.atelier39.org/date/2011/08"> August 2011 &nbsp;(1)</option>
+	<option value="http://blog.atelier39.org/date/2011/07"> July 2011 &nbsp;(2)</option>
+	<option value="http://blog.atelier39.org/date/2011/06"> June 2011 &nbsp;(1)</option>
+	<option value="http://blog.atelier39.org/date/2011/03"> March 2011 &nbsp;(4)</option>
+	<option value="http://blog.atelier39.org/date/2011/02"> February 2011 &nbsp;(2)</option>
+	<option value="http://blog.atelier39.org/date/2011/01"> January 2011 &nbsp;(3)</option>
+	<option value="http://blog.atelier39.org/date/2010/12"> December 2010 &nbsp;(2)</option>
+	<option value="http://blog.atelier39.org/date/2010/08"> August 2010 &nbsp;(3)</option>
+	<option value="http://blog.atelier39.org/date/2010/07"> July 2010 &nbsp;(2)</option>
+
+		</select>
+
+
+
+		
+    </div>
+</div>
+
+    </div>
+</div>
+<div class="Block">
+    <div class="Block-tl"></div>
+    <div class="Block-tr"><div></div></div>
+    <div class="Block-bl"><div></div></div>
+    <div class="Block-br"><div></div></div>
+    <div class="Block-tc"><div></div></div>
+    <div class="Block-bc"><div></div></div>
+    <div class="Block-cl"><div></div></div>
+    <div class="Block-cr"><div></div></div>
+    <div class="Block-cc"></div>
+    <div class="Block-body">
+<div class="BlockHeader">
+    <div class="header-tag-icon">
+        <div class="BlockHeader-text">
+Viewing Sensor
+        </div>
+    </div>
+    <div class="l"></div>
+    <div class="r"><div></div></div>
+</div>
+<div class="BlockContent">
+    <div class="BlockContent-body">
+<ul>
+<li><a href="http://blog.atelier39.org/wp_dev/172.html" title="好玩的Windows Phone控件开发系列之一：Item背景颜色交替变化的ListBox" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">好玩的Windows Phone控件开发系列之一：Item背景颜色交替变化的ListBox</a> - 20,837 views</li><li><a href="http://blog.atelier39.org/linux_app/655.html" title="亚马逊EC2云主机(CentOS)迁移手记" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">亚马逊EC2云主机(CentOS)迁移手记</a> - 16,778 views</li><li><a href="http://blog.atelier39.org/cg/463.html" title="绕任意轴的旋转矩阵最终表达式" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">绕任意轴的旋转矩阵最终表达式</a> - 14,649 views</li><li><a href="http://blog.atelier39.org/game_dev/1134.html" title="使用Unity开发AssetBundle批量解包工具" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">使用Unity开发AssetBundle批量解包工具</a> - 10,522 views</li><li><a href="http://blog.atelier39.org/wp_dev/995.html" title="实现在Windows Phone Silverlight应用中播放FLV视频（上）" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">实现在Windows Phone Silverlight应用中播放FLV视频（上）</a> - 10,390 views</li><li><a href="http://blog.atelier39.org/winuser/188.html" title="使用Win32 API创建不规则形状&amp;带透明色的窗口" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">使用Win32 API创建不规则形状&amp;带透明色的窗口</a> - 9,404 views</li><li><a href="http://blog.atelier39.org/rev_eng/615.html" title="《同级生1》DMM版破解手记之脚本文件解包" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">《同级生1》DMM版破解手记之脚本文件解包</a> - 8,943 views</li></ul>
+
+    </div>
+</div>
+
+    </div>
+</div>
+<div class="Block">
+    <div class="Block-tl"></div>
+    <div class="Block-tr"><div></div></div>
+    <div class="Block-bl"><div></div></div>
+    <div class="Block-br"><div></div></div>
+    <div class="Block-tc"><div></div></div>
+    <div class="Block-bc"><div></div></div>
+    <div class="Block-cl"><div></div></div>
+    <div class="Block-cr"><div></div></div>
+    <div class="Block-cc"></div>
+    <div class="Block-body">
+<div class="BlockHeader">
+    <div class="header-tag-icon">
+        <div class="BlockHeader-text">
+Visitor Footprints
+        </div>
+    </div>
+    <div class="l"></div>
+    <div class="r"><div></div></div>
+</div>
+<div class="BlockContent">
+    <div class="BlockContent-body">
+<ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">云芜心</span> on <a href="http://blog.atelier39.org/uwp_dev/1202.html#comment-4660" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">UWP开发从入门到入坟(2): 将NV12格式的IDirect3DSurface转换为CanvasVirtualBitmap</a></li><li class="recentcomments"><span class="comment-author-link">暗影吉他手</span> on <a href="http://blog.atelier39.org/uwp_dev/1153.html#comment-4586" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">UWP开发从入门到入坟(1): 使用Popup仿造Android样式的Toast消息提示</a></li><li class="recentcomments"><span class="comment-author-link"><a href="https://walterlv.github.io/" rel="noopener noreferrer" class="url" target="_blank" referrerpolicy="no-referrer">walterlv</a></span> on <a href="http://blog.atelier39.org/uwp_dev/1153.html#comment-4585" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">UWP开发从入门到入坟(1): 使用Popup仿造Android样式的Toast消息提示</a></li></ul>
+    </div>
+</div>
+
+    </div>
+</div>
+<div class="Block">
+    <div class="Block-tl"></div>
+    <div class="Block-tr"><div></div></div>
+    <div class="Block-bl"><div></div></div>
+    <div class="Block-br"><div></div></div>
+    <div class="Block-tc"><div></div></div>
+    <div class="Block-bc"><div></div></div>
+    <div class="Block-cl"><div></div></div>
+    <div class="Block-cr"><div></div></div>
+    <div class="Block-cc"></div>
+    <div class="Block-body">
+<div class="BlockHeader">
+    <div class="header-tag-icon">
+        <div class="BlockHeader-text">
+Friendly Links
+        </div>
+    </div>
+    <div class="l"></div>
+    <div class="r"><div></div></div>
+</div>
+<div class="BlockContent">
+    <div class="BlockContent-body">
+
+	<ul class="xoxo blogroll">
+<li><a href="http://libzx.so/cn/" rel="noopener noreferrer" title="学姐（伪）的blog" target="_blank" referrerpolicy="no-referrer">It's calling me again</a></li>
+<li><a href="https://walterlv.github.io/" title="Focus on Windows" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">吕毅's blog</a></li>
+
+	</ul>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+<div class="Block">
+    <div class="Block-tl"></div>
+    <div class="Block-tr"><div></div></div>
+    <div class="Block-bl"><div></div></div>
+    <div class="Block-br"><div></div></div>
+    <div class="Block-tc"><div></div></div>
+    <div class="Block-bc"><div></div></div>
+    <div class="Block-cl"><div></div></div>
+    <div class="Block-cr"><div></div></div>
+    <div class="Block-cc"></div>
+    <div class="Block-body">
+<div class="BlockHeader">
+    <div class="header-tag-icon">
+        <div class="BlockHeader-text">
+Online Tools
+        </div>
+    </div>
+    <div class="l"></div>
+    <div class="r"><div></div></div>
+</div>
+<div class="BlockContent">
+    <div class="BlockContent-body">
+
+	<ul class="xoxo blogroll">
+<li><a href="http://10minutemail.com/10MinuteMail/" title="提供临时的Email" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">10 Minute Mail</a>
+提供临时的Email</li>
+<li><a href="http://academic.research.microsoft.com/" title="微软学术搜索" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Academic Search</a>
+微软学术搜索</li>
+<li><a href="http://codepad.org/" title="在线编译器" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">codepad</a>
+在线编译器</li>
+<li><a href="http://www.cometdocs.com/" title="在线文件格式转换" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">cometdocs</a>
+在线文件格式转换</li>
+<li><a href="http://mergely.com/editor" title="在线文本比较工具" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">mergely</a>
+在线文本比较工具</li>
+<li><a href="http://regexpal.com/" title="在线正则表达式测试" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">regexpal</a>
+在线正则表达式测试</li>
+
+	</ul>
+
+    </div>
+</div>
+
+    </div>
+</div>
+
+<div class="Block">
+    <div class="Block-tl"></div>
+    <div class="Block-tr"><div></div></div>
+    <div class="Block-bl"><div></div></div>
+    <div class="Block-br"><div></div></div>
+    <div class="Block-tc"><div></div></div>
+    <div class="Block-bc"><div></div></div>
+    <div class="Block-cl"><div></div></div>
+    <div class="Block-cr"><div></div></div>
+    <div class="Block-cc"></div>
+    <div class="Block-body">
+<div class="BlockHeader">
+    <div class="header-tag-icon">
+        <div class="BlockHeader-text">
+Control Panel
+        </div>
+    </div>
+    <div class="l"></div>
+    <div class="r"><div></div></div>
+</div>
+<div class="BlockContent">
+    <div class="BlockContent-body">
+			<ul>
+						<li><a href="http://blog.atelier39.org/wp-login.php" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Log in</a></li>
+			<li><a href="http://blog.atelier39.org/feed" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="http://blog.atelier39.org/comments/feed" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="https://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform." target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">WordPress.org</a></li>			</ul>
+			
+    </div>
+</div>
+
+    </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="cleared"></div>
+
+<div class="Footer">
+    <div class="Footer-inner">
+                <a href="http://blog.atelier39.org/feed" class="rss-tag-icon" title="RSS" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"></a>
+<div class="Footer-text">
+	
+	<div id="copyright">
+		Copyright © 2010-2019 未来代码研究所	</div>
+	<div id="themeinfo">
+		<p>Powered by <a id="powered" href="http://wordpress.org/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">WordPress</a> Theme by <a href="http://themelabs.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">ThemeLabs.com</a></p>
+	</div>
+</div>
+    </div>
+    <div class="Footer-background">
+    </div>
+</div>
+
+    </div>
+</div>
+
+</div>
+        
+      </div>
+    </body>
+  </html>

@@ -1,0 +1,389 @@
+
+  <!DOCTYPE html>
+  <html id="" class="jetpack-lazy-images-js-enabled">
+    <!-- OriginalSrc: https://chenx221.ml/index.php/2019/08/18/%E6%A4%8E%E5%90%8D%E9%87%8C%E7%B7%92%E5%BC%95%E6%93%8Egalgame-%E7%89%B9%E6%AE%8A%E7%A0%81%E8%AE%A1%E7%AE%97/ -->
+    <head>
+      <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <title>椎名里緒引擎galgame 特殊码计算 - Chenx221的博客</title>
+      
+<link rel="icon" href="assets/1571159787-9bf458a3357813e48f6a53a9ca96e539.ico" sizes="32x32" referrerpolicy="no-referrer">
+<link rel="icon" href="assets/1571159787-6d3368689e8963de605651b63bd06a50.ico" sizes="192x192" referrerpolicy="no-referrer">
+<link rel="apple-touch-icon-precomposed" href="assets/1571159787-6d3368689e8963de605651b63bd06a50.ico" referrerpolicy="no-referrer">
+
+
+<link rel="stylesheet" href="assets/1571159787-2108754844f0d0cca6ee31531581d7a6.css" referrerpolicy="no-referrer">
+<link rel="stylesheet" id="wp-block-library-css" href="assets/1571159787-13f1648b9696e09673ebaec8558a70c8.css" type="text/css" media="all" referrerpolicy="no-referrer">
+<link rel="stylesheet" id="bootstrap-css" href="assets/1571159787-b961debd3ece2af3c20481f9cb9b5981.css" type="text/css" media="all" referrerpolicy="no-referrer">
+<link rel="stylesheet" id="master-blog-stylesheet-css" href="assets/1571159787-bfc48715d1fa7cb0125625757c07b3fe.css" type="text/css" media="all" referrerpolicy="no-referrer">
+<link rel="stylesheet" id="font-awesome-css" href="assets/1571159787-34736e55a6b232d9e5aad735f924f99e.css" type="text/css" media="all" referrerpolicy="no-referrer">
+<link rel="stylesheet" id="blackout_style-css" href="assets/1571159787-abee72afde0e11a5f5883732c3e2507f.css" type="text/css" media="all" referrerpolicy="no-referrer">
+<link rel="stylesheet" id="jetpack_css-css" href="assets/1571159787-ac8debfc511e4ea0388a3488fd900993.css" type="text/css" media="all" referrerpolicy="no-referrer">
+<link rel="stylesheet" type="text/css" href="assets/1571159787-5114dacc02bfe1f01776bc6fa5214e14.css" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="assets/1571159787-40c57b1c8591ad034cb628b1804e6be5.css" referrerpolicy="no-referrer">
+
+
+<style class="darkreader darkreader--fallback" media="screen"></style>
+<style class="darkreader darkreader--text" media="screen"></style>
+<style class="darkreader darkreader--invert" media="screen"></style>
+<style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}</style>
+<style class="darkreader darkreader--user-agent" media="screen">html {
+    background-color: #191a1b !important;
+}
+html, body, input, textarea, select, button {
+    background-color: #191a1b;
+}
+html, body, input, textarea, select, button {
+    border-color: #5a5956;
+    color: #f0ebe2;
+}
+a {
+    color: #4791e7;
+}
+table {
+    border-color: #4f4e4c;
+}
+::placeholder {
+    color: #bfb9ac;
+}
+::selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+::-moz-selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #565a0f !important;
+    color: #f0ebe2 !important;
+}
+::-webkit-scrollbar {
+    background-color: #1d1f1f;
+    color: #cbc5b9;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #2c2d2d;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #343636;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #404142;
+}
+::-webkit-scrollbar-corner {
+    background-color: #191a1b;
+}
+* {
+    scrollbar-color: #2c2d2d #1d1f1f;
+}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style id="blackout_style-inline-css" type="text/css">
+.darkmode-toggle>img{
+            width: rem !important;
+            height:rem !important;
+        }
+        .darkmode-toggle {
+            width:rem !important;
+            height:rem !important;
+        }
+        
+</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">img#wpstats{display:none}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style id="twentyseventeen-custom-header-styles" type="text/css">
+			h1.site-title a, 
+		.site-title a, 
+		h1.site-title, 
+		.site-title,
+		.site-description
+		{
+			color: #262626;
+		}
+		</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #e2e2e2; }
+</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">
+				 
+				html:not( .jetpack-lazy-images-js-enabled ):not( .js ) .jetpack-lazy-image {
+					display: none;
+				}
+			</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">@keyframes fadeInOpacity{0%{opacity:0}to{opacity:1}}:hover>*>.fbvd--wrapper{animation-name:fadeInOpacity;animation-duration:.3s;opacity:1}.fbvd--wrapper{position:absolute;top:10px;left:10px;opacity:0;text-align:center;margin:0;z-index:5}.fbvd--wrapper a{background: url("") no-repeat 3px 4.55px; background-color: #fff; display:inline-block;font:700 14px Helvetica,Arial,sans-serif;color:#4b4f56;text-decoration:none;vertical-align:middle;padding:0px 8px 0px;margin-right:8px;border-radius:2px; line-height: 22px; padding-left:19px; border: 1px solid #e7e7e7; background-size: 13px}.fbvd--wrapper a:last-child{margin-right:0}.fbvd--wrapper a:hover{text-decoration:none}.fbvd--wrapper a:focus{box-shadow:0 0 1px 2px rgba(88,144,255,.75),0 1px 1px rgba(0,0,0,.15);outline:none}.fbvd--wrapper b{font-size:13px;position:relative;top:1px;color:#3b5998;font-weight:400}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--override" media="screen">.jfk-bubble {
+    background-color: #000000 !important;
+}
+.vimvixen-hint {
+    background-color: #765500 !important;
+    border-color: #d5b22e !important;
+    color: #f9edcc !important;
+}</style>
+
+      
+    </head>
+    <body id="blog" class="post-template-default single single-post postid-66 single-format-standard custom-background wp-custom-logo pace-done mx-wc-selected-elem mx-wc-1571159787"><div class="darkmode-background"></div><div class="darkmode-layer darkmode-layer--button"></div><div class="darkmode-toggle"><img draggable="false" class="emoji" alt="🌓" src="assets/1571159787-41dc449f373a98dc3729161bcfd7a41c.svg"></div>
+		<div class="site-header container-fluid" style="background-image: url(https://chenx221.ml/wp-content/themes/master-blog/img/bg.jpg)">
+	<div class="custom-header container">
+			<div class="site-heading text-center">
+        				<div class="site-branding-logo">
+					<a href="https://chenx221.ml/" class="custom-logo-link" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><img width="16" height="16" src="assets/1571159787-093cfa9bfcc023be524b136faf8d08d9.ico" class="custom-logo jetpack-lazy-image jetpack-lazy-image--handled" alt="Chenx221的博客" data-lazy-loaded="1"></a>				</div>
+				<div class="site-branding-text">
+											<p class="site-title"><a href="https://chenx221.ml/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Chenx221的博客</a></p>
+					
+											<p class="site-description">
+							——WordPress博客						</p>
+									</div><!-- .site-branding-text -->
+        			</div>
+	</div>
+</div>
+ 
+<div class="main-menu">
+	<nav id="site-navigation" class="navbar navbar-default navbar-center">     
+		<div class="container">   
+			<div class="navbar-header">
+									<div id="main-menu-panel" class="open-panel" data-panel="main-menu-panel">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+							</div>
+			<div class="menu-container"><ul id="menu-menu" class="nav navbar-nav"><li id="menu-item-43" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43"><a title="Index(Non CDN)" href="https://chenx221.xyz/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Index(Non CDN)</a></li>
+<li id="menu-item-41" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-41"><a title="Index(CDN)" href="https://chenx221.ml/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Index(CDN)</a></li>
+<li id="menu-item-44" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44"><a title="NextCloud" href="https://chenx2210.xyz/index.php/login" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">NextCloud</a></li>
+<li id="menu-item-45" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-45"><a title="Github" href="https://github.com/Chenx221" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Github</a></li>
+<li id="menu-item-46" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-46"><a title="Aria-Ng" href="http://nl.chenx221.work/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Aria-Ng</a></li>
+<li id="menu-item-42" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42"><a title="Status" href="http://chenx221.work:27926/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Status</a></li>
+<li id="menu-item-47" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-47"><a title="Login" href="https://chenx221.ml/blog/wp-login.php" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Login</a></li>
+</ul></div>		</div>
+			</nav> 
+</div>
+
+<div class="container main-container" role="main">
+	<div class="page-area">
+		
+<!-- start content container -->
+<!-- start content container -->
+<div class="row">      
+			<article class="col-md-9">
+			                         
+					<div class="post-66 post type-post status-publish format-standard hentry category-uncategorized tag-h-code tag-rioshiina tag-vnr tag-8 tag-16 tag-13">
+						<div class="single-wrap">
+														<h1 class="single-title cf-tweet-this cf-tt-target cf-tt-element-attached-bottom cf-tt-element-attached-center cf-tt-target-attached-top cf-tt-target-attached-center">椎名里緒引擎galgame 特殊码计算</h1>							<div class="single-meta text-center">
+									<span class="posted-date">
+		2019年8月18日	</span>
+	<span class="comments-meta">
+						<a href="https://chenx221.ml/index.php/2019/08/18/%e6%a4%8e%e5%90%8d%e9%87%8c%e7%b7%92%e5%bc%95%e6%93%8egalgame-%e7%89%b9%e6%ae%8a%e7%a0%81%e8%ae%a1%e7%ae%97/#respond" rel="noopener noreferrer" title="留下评论椎名里緒引擎galgame 特殊码计算" target="_blank" referrerpolicy="no-referrer">
+					0				</a>
+					<i class="fa fa-comments-o"></i>
+	</span>
+									<span class="author-meta">
+									<span class="author-meta-by">作者</span>
+									<a href="https://chenx221.ml/index.php/author/chenx221/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+										chenx221									</a>
+								</span>
+							</div>	
+							<div class="single-content"> 
+								<div class="single-entry-summary">
+									    							
+<p><strong class="cf-tweet-this cf-tt-target cf-tt-enabled cf-tt-abutted cf-tt-abutted-top cf-tt-element-attached-bottom cf-tt-element-attached-center cf-tt-target-attached-top cf-tt-target-attached-center">本篇讲的是计算适用于RioShiina引擎游戏的特殊码</strong></p>
+
+
+
+<p></p>
+
+
+
+<p><strong>该方法仅在以下几款游戏得到测试：</strong></p>
+
+
+
+<ul><li>抜きゲーみたいな島に住んでる貧乳はどうすりゃいいですか？</li><li>抜きゲーみたいな島に住んでる貧乳はどうすりゃいいですか？2</li><li>スク～ル催眠ぱらだいす！</li></ul>
+
+
+
+<p><strong>在开始之前你需要准备的有：</strong></p>
+
+
+
+<ul><li>一台电脑</li><li>需要获得特殊码的Galgame本体</li><li>VNR</li><li>x64dbg   <a href="https://x64dbg.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><strong>访问官网</strong></a>  </li></ul>
+
+
+
+<p><strong>在开始之前你不需要准备的有：</strong></p>
+
+
+
+<figure class="wp-block-image"><img src="assets/1571159787-223d7f7cacac13f85b5dcf71918794c1.jpg" alt="" class="wp-image-67 jetpack-lazy-image jetpack-lazy-image--handled" data-lazy-loaded="1"></figure>
+
+
+
+<p><strong class="cf-tweet-this cf-tt-target cf-tt-abutted cf-tt-abutted-top cf-tt-element-attached-bottom cf-tt-element-attached-center cf-tt-target-attached-top cf-tt-target-attached-center">开始：</strong></p>
+
+
+
+<ul><li>运行对应的游戏，然后将它扔一边去</li><li class="cf-tweet-this cf-tt-target cf-tt-element-attached-bottom cf-tt-element-attached-center cf-tt-target-attached-top cf-tt-target-attached-center">下载并解压x64dbg，运行release文件夹下的x96dbg.exe【如果游戏是以管理员权限运行的，那么这个程序也需要以管理员权限运行】<img class="wp-image-68 jetpack-lazy-image jetpack-lazy-image--handled" style="width: 154px;" src="assets/1571159787-5ccb4998fbd33a456461af62748a428d.png" alt="" srcset="assets/1571159787-5ccb4998fbd33a456461af62748a428d.png 845w,assets/1571159787-6ca581d092f11691eafc7a6140033104.png 300w,assets/1571159787-fa7d3f56e1476239e653cf6f1e61b0a6.png 768w" data-lazy-loaded="1" sizes="(max-width: 845px) 100vw, 845px"></li><li>在启动器下选择x32dbg</li><li>文件&gt;附加，找到游戏对应的那一项并附加<img class="wp-image-69 jetpack-lazy-image jetpack-lazy-image--handled" style="width: 150px;" src="assets/1571159787-831581f6cf5fb9832a52e089e6da02ed.png" alt="" data-lazy-loaded="1"></li><li>接着我们选择“符号”，在左侧列表中找到模块为“gdi32.dll”这一项，记住它的基址（下面我们称它为A）并点击它</li><li>随后在右侧列表中寻找符号为“GetTextExtentPoint32A”这一项，记住它的地址（下面我们称它为B） </li><li>请动用你的高中知识（16进制计算）：B-A=结果C</li><li>然后请将得出的C的结果填入/HS4C@***:GDI32.dll中的*部分 【/HS4C@***:GDI32.dll适用于拔作岛1,2】【/HS8@***:GDI32.dll适用于 スク～ル催眠ぱらだいす！ 】</li><li>现在将你得出的特殊码应用在VNR中，你应该会看到你的成果</li></ul>
+    															</div><!-- .single-entry-summary -->
+																<div class="entry-footer"><div class="cat-links"><span class="space-right">分类目录</span><a href="https://chenx221.ml/index.php/category/uncategorized/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">未分类</a></div><div class="tags-links"><span class="space-right">标签</span><a href="https://chenx221.ml/index.php/tag/h-code/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">H-code</a> <a href="https://chenx221.ml/index.php/tag/rioshiina/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">RioShiina</a> <a href="https://chenx221.ml/index.php/tag/vnr/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">VNR</a> <a href="https://chenx221.ml/index.php/tag/%e5%88%86%e4%ba%ab/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">分享</a> <a href="https://chenx221.ml/index.php/tag/%e6%95%99%e7%a8%8b/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">教程</a> <a href="https://chenx221.ml/index.php/tag/%e7%89%b9%e6%ae%8a%e7%a0%81/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">特殊码</a></div></div>							</div>
+						</div>
+													<div class="single-footer">
+									<div id="comments" class="comments-template">
+			<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">发表评论 <small></small></h3>			<form action="https://chenx221.ml/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+				<p class="comment-notes"><span id="email-notes">电子邮件地址不会被公开。</span> 必填项已用<span class="required">*</span>标注</p><p class="comment-form-comment"><label for="comment">评论</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">姓名 <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required="required"></p>
+<p class="comment-form-email"><label for="email">电子邮件 <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" maxlength="100" aria-describedby="email-notes" required="required"></p>
+<p class="comment-form-url"><label for="url">站点</label> <input id="url" name="url" type="text" value="" size="30" maxlength="200"></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"><label for="wp-comment-cookies-consent">在此浏览器中保存我的名字、电邮和网站。</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="发表评论"> 
+
+</p>			</form>
+			</div><!-- #respond -->
+		</div>
+ 
+							</div>
+											</div>        
+				        
+			    
+		</article> 
+			<aside id="sidebar" class="col-md-3">
+    <div class="sidebar__inner">
+		  <div id="search-2" class="widget widget_search"><form role="search" method="get" id="searchform" class="searchform" action="https://chenx221.ml/">
+				<div>
+					<label class="screen-reader-text" for="s">搜索：</label>
+					<input type="text" value="" name="s" id="s">
+					<input type="submit" id="searchsubmit" value="搜索">
+				</div>
+			</form></div>		<div id="recent-posts-2" class="widget widget_recent_entries">		<div class="widget-title"><h3>近期文章</h3></div>		<ul>
+											<li>
+					<a href="https://chenx221.ml/index.php/2019/08/29/%e5%97%af%ef%bc%8c%e8%ba%ab%e4%b8%ba%e9%ab%98%e4%b8%89%e7%9a%84%e6%88%91%e5%af%b9%e4%ba%8e%e5%8d%b3%e5%b0%86%e5%bc%80%e5%ad%a6%e7%9a%84%e5%90%90%e6%a7%bd/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">嗯，身为高三的我对于即将开学的吐槽</a>
+									</li>
+											<li>
+					<a href="https://chenx221.ml/index.php/2019/08/18/%e6%a4%8e%e5%90%8d%e9%87%8c%e7%b7%92%e5%bc%95%e6%93%8egalgame-%e7%89%b9%e6%ae%8a%e7%a0%81%e8%ae%a1%e7%ae%97/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">椎名里緒引擎galgame 特殊码计算</a>
+									</li>
+											<li>
+					<a href="https://chenx221.ml/index.php/2019/08/18/win10-pe-1-0/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Win10 PE 1.0</a>
+									</li>
+											<li>
+					<a href="https://chenx221.ml/index.php/2019/08/18/__trashed-2/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Win10 1903 x64 zh-CN ISO镜像分享</a>
+									</li>
+											<li>
+					<a href="https://chenx221.ml/index.php/2019/07/27/hello-world/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Hello world ?</a>
+									</li>
+					</ul>
+		</div><div id="recent-comments-2" class="widget widget_recent_comments"><div class="widget-title"><h3>近期评论</h3></div><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">chenx221</span>发表在《<a href="https://chenx221.ml/index.php/2019/06/07/everym-photos-%e6%9b%b4%e6%96%b0%e8%af%a6%e6%83%85/#comment-1151" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">EveryM-Photos 更新详情</a>》</li><li class="recentcomments"><span class="comment-author-link">chenx221</span>发表在《<a href="https://chenx221.ml/index.php/2019/06/07/everym-photos-%e6%9b%b4%e6%96%b0%e8%af%a6%e6%83%85/#comment-930" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">EveryM-Photos 更新详情</a>》</li><li class="recentcomments"><span class="comment-author-link">chenx221</span>发表在《<a href="https://chenx221.ml/index.php/2019/06/07/everym-photos-%e6%9b%b4%e6%96%b0%e8%af%a6%e6%83%85/#comment-929" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">EveryM-Photos 更新详情</a>》</li><li class="recentcomments"><span class="comment-author-link">chenx221</span>发表在《<a href="https://chenx221.ml/index.php/2019/06/07/everym-photos-%e6%9b%b4%e6%96%b0%e8%af%a6%e6%83%85/#comment-4" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">EveryM-Photos 更新详情</a>》</li></ul></div><div id="archives-2" class="widget widget_archive"><div class="widget-title"><h3>文章归档</h3></div>		<label class="screen-reader-text" for="archives-dropdown-2">文章归档</label>
+		<a href="javascript:;" class="select-target select-theme-chosen select-enabled select-element-attached-left select-target-attached-left select-abutted select-abutted-left select-element-attached-bottom select-target-attached-top select-out-of-bounds select-out-of-bounds-bottom" tabindex="0" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">选择月份<b></b></a>
+
+
+
+		</div><div id="categories-2" class="widget widget_categories"><div class="widget-title"><h3>分类目录</h3></div><form action="https://chenx221.ml" method="get"><label class="screen-reader-text" for="cat">分类目录</label><a href="javascript:;" class="select-target select-theme-chosen select-enabled select-element-attached-left select-target-attached-left select-element-attached-bottom select-target-attached-top select-out-of-bounds select-out-of-bounds-bottom" tabindex="0" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">选择分类目录<b></b></a>
+</form>
+
+
+			</div><div id="meta-2" class="widget widget_meta"><div class="widget-title"><h3>功能</h3></div>			<ul>
+						<li><a rel="noopener noreferrer" href="https://chenx221.ml/wp-login.php" target="_blank" referrerpolicy="no-referrer">登录</a></li>
+			<li><a href="https://chenx221.ml/index.php/feed/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">文章<abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="https://chenx221.ml/index.php/comments/feed/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">评论<abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="https://cn.wordpress.org/" title="基于WordPress，一个优美、先进的个人信息发布平台。" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">WordPress.org</a></li>			</ul>
+			</div>    </div>
+	</aside>
+</div>
+<!-- end content container -->
+<!-- end content container -->
+
+</div><!-- end main-container -->
+</div><!-- end page-area -->
+ 
+<footer id="colophon" class="footer-credits container-fluid">
+	<div class="container">
+				<p class="footer-credits-text text-center">
+			自豪地采用 <a href="https://cn.wordpress.org/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">WordPress</a>			<span class="sep"> | </span>
+			Theme_Mod: <a href="https://chenx221.ml/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Chenx221 Blog</a>			<span class="sep"> | </span>
+			Disk: <a href="https://chenx221.xyz/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Chenx221 Disk</a>		</p> 
+		 
+	</div>	
+</footer>
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div data-tether-id="1" style="top: 0px; left: 0px; position: absolute;"></div><img src="assets/1571159787-67c28095ae7565dacba2ead0bc9a656d.gif" alt=":)" width="6" height="5" id="wpstats"><div data-tether-id="1" style="top: 0px; left: 0px; position: absolute;"></div><a href="" download="" data-mx-warn="Empty URL"></a><div data-mx-warn="extension url was not captured by MaoXian" data-mx-original-src="chrome-extension://kjahokgdcbohofgdidndeiaigkehdjdc/pages/ui-selection.html?t=aHR0cHM6Ly9jaGVueDIyMS5tbA=="></div><div data-mx-warn="extension url was not captured by MaoXian" data-mx-original-src="chrome-extension://kjahokgdcbohofgdidndeiaigkehdjdc/pages/ui-control.html?t=aHR0cHM6Ly9jaGVueDIyMS5tbA=="></div>
+</body>
+  </html>

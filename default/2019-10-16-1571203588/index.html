@@ -1,0 +1,585 @@
+
+  <!DOCTYPE html>
+  <html id="" class="theme-next mist">
+    <!-- OriginalSrc: https://homulilly.com/post/run-japanese-galgame-on-Ubuntu-with-wine.html -->
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <title>Ubuntu 下通过 Wine 运行日文 Galgame | Homulilly</title>
+      
+
+<link href="assets/1571203588-6298d1621538510763cf20ff97ab8151.css" rel="stylesheet" type="text/css" referrerpolicy="no-referrer">
+<link href="assets/1571203588-fce50b7e8f0a3977853268ce332a8500.css" rel="stylesheet" type="text/css" referrerpolicy="no-referrer">
+<link href="assets/1571203588-26f85f7d3e74d750e720f5ca4710511b.css" rel="stylesheet" type="text/css" referrerpolicy="no-referrer">
+<link href="assets/1571203588-88ffa56351efec5fc0a570b99ff20e05.css" rel="stylesheet" type="text/css" referrerpolicy="no-referrer">
+
+
+<style class="darkreader darkreader--fallback" media="screen"></style>
+<style class="darkreader darkreader--text" media="screen"></style>
+<style class="darkreader darkreader--invert" media="screen"></style>
+<style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}</style>
+<style class="darkreader darkreader--user-agent" media="screen">html {
+    background-color: #191a1b !important;
+}
+html, body, input, textarea, select, button {
+    background-color: #191a1b;
+}
+html, body, input, textarea, select, button {
+    border-color: #5a5956;
+    color: #f0ebe2;
+}
+a {
+    color: #4791e7;
+}
+table {
+    border-color: #4f4e4c;
+}
+::placeholder {
+    color: #bfb9ac;
+}
+::selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+::-moz-selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #565a0f !important;
+    color: #f0ebe2 !important;
+}
+::-webkit-scrollbar {
+    background-color: #1d1f1f;
+    color: #cbc5b9;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #2c2d2d;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #343636;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #404142;
+}
+::-webkit-scrollbar-corner {
+    background-color: #191a1b;
+}
+* {
+    scrollbar-color: #2c2d2d #1d1f1f;
+}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--override" media="screen">.jfk-bubble {
+    background-color: #000000 !important;
+}
+.vimvixen-hint {
+    background-color: #765500 !important;
+    border-color: #d5b22e !important;
+    color: #f9edcc !important;
+}</style>
+<style type="text/css">.fancybox-margin{margin-right:17px;}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">@keyframes fadeInOpacity{0%{opacity:0}to{opacity:1}}:hover>*>.fbvd--wrapper{animation-name:fadeInOpacity;animation-duration:.3s;opacity:1}.fbvd--wrapper{position:absolute;top:10px;left:10px;opacity:0;text-align:center;margin:0;z-index:5}.fbvd--wrapper a{background: url("") no-repeat 3px 4.55px; background-color: #fff; display:inline-block;font:700 14px Helvetica,Arial,sans-serif;color:#4b4f56;text-decoration:none;vertical-align:middle;padding:0px 8px 0px;margin-right:8px;border-radius:2px; line-height: 22px; padding-left:19px; border: 1px solid #e7e7e7; background-size: 13px}.fbvd--wrapper a:last-child{margin-right:0}.fbvd--wrapper a:hover{text-decoration:none}.fbvd--wrapper a:focus{box-shadow:0 0 1px 2px rgba(88,144,255,.75),0 1px 1px rgba(0,0,0,.15);outline:none}.fbvd--wrapper b{font-size:13px;position:relative;top:1px;color:#3b5998;font-weight:400}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+
+      <style class="mx-wc-style">
+        .mx-wc-main img {max-width: 100%;}
+        .mx-wc-main{
+          box-sizing: content-box;
+          background-color: rgb(25, 26, 27) !important;
+          margin: 0 auto;
+          margin-top: 20px;
+          max-width: 1349px;
+        }
+        @media (min-width: 768px) {
+          .mx-wc-main { padding: 15px 15px 80px 15px }
+        }
+        @media (max-width: 767px) {
+          .mx-wc-main { padding: 15px 3px 80px 3px }
+        }
+  
+      </style>
+    </head>
+    <body style="background-color: #ffffff !important; min-height: 100%; height: auto; position: static !important; overflow: auto !important; padding-bottom: 0px !important;" id="" class="">
+      <div class="mx-wc-main">
+        <div class="container sidebar-position-left page-post-detail mx-wc-selected-elem mx-wc-1571203588" style="display: block; float: none !important; position: relative !important; top: 0px !important; left: 0px !important; margin: 0px !important; flex: unset !important; width: 100% !important; max-width: 100% !important; box-sizing: border-box !important;">
+    
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="https://homulilly.com/" class="brand" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Homulilly</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        
+      
+  </div>
+
+  
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="https://homulilly.com/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> 
+            
+            首页
+          </a>
+        </li>
+      
+        
+        
+      
+        
+        
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="https://homulilly.com/archives/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> 
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="https://homulilly.com/about/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> 
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> 
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    
+
+    
+
+    
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Ubuntu 下通过 Wine 运行日文 Galgame</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-07-15T23:50:00+00:00">
+                2016-07-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="https://homulilly.com/categories/Linux/" itemprop="url" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="环境"><a href="#%E7%8E%AF%E5%A2%83" class="headerlink" title="环境"></a>环境</h2><p>系统版本 ： Ubuntu 16.04 LTS (x64)<br>Wine 版本 ： Wine 1.9.14<br>Game A ： Cafe Sourire (Install on Windows，Copy to Ubuntu)<br>Game B ： Your Diary +H (Install on Ubuntu)<br><a id="more" data-mx-warn="Empty URL"></a></p>
+<h2 id="步骤"><a href="#%E6%AD%A5%E9%AA%A4" class="headerlink" title="步骤"></a>步骤</h2><h3 id="1-安装-Wine-amp-Winetricks"><a href="#1-%E5%AE%89%E8%A3%85-Wine-amp-Winetricks" class="headerlink" title="1. 安装 Wine &amp; Winetricks:"></a>1. 安装 Wine &amp; Winetricks:</h3><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># https://wiki.winehq.org/Ubuntu</span><br><span class="line">sudo dpkg --add-architecture i386</span><br><span class="line"></span><br><span class="line">sudo add-apt-repository ppa:wine/wine-builds</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install --install-recommends winehq-devel</span><br></pre></td></tr></tbody></table></figure>
+<p>仓库的 wintricks 不好使了，很多文件下载都出了问题，github 上的要好一些<br></p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/Winetricks/winetricks.git</span><br><span class="line">./src/winetricks</span><br></pre></td></tr></tbody></table></figure><p></p>
+<h3 id="2-添加日文语言支持"><a href="#2-%E6%B7%BB%E5%8A%A0%E6%97%A5%E6%96%87%E8%AF%AD%E8%A8%80%E6%94%AF%E6%8C%81" class="headerlink" title="2. 添加日文语言支持"></a>2. 添加日文语言支持</h3><p>在系统设置 - 语言支持中添加日文<br>通过日文环境运行程序的命令为：<br></p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">env LC_ALL=ja_JP.utf-8 wine xxx.exe</span><br></pre></td></tr></tbody></table></figure><p></p>
+<h3 id="3-设置-Wine"><a href="#3-%E8%AE%BE%E7%BD%AE-Wine" class="headerlink" title="3. 设置 Wine"></a>3. 设置 Wine</h3><p>参考链接： <a href="http://forum.ubuntu.org.cn/viewtopic.php?t=451257" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">http://forum.ubuntu.org.cn/viewtopic.php?t=451257</a></p>
+<p>这时可以通过执行 <code>env LC_ALL=ja_JP.utf-8 wine xxx.exe</code> 来运行程序，包括安装游戏和运行程序本体，但是游戏无法处理视频内容的播放，在需要播放视频的地方游戏会报错跳出。终端中可以看到 <code>fixme:quartz:MPEGSplitter_query_accept MPEG-1 system streams not yet supported.</code> 的内容。</p>
+<p>首先创建一个 32 位的 WINEPREFIX （因为执行 <code>winetricks wmp10</code> 提示需要在纯 32 位的 wineprefix 下才可以执行），路径中的 <code>$HOME</code> 替换为实际的 HOME 路径。</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export WINEARCH=win32</span><br><span class="line">export WINEPREFIX="$HOME/.wine32";</span><br><span class="line">wineboot -u</span><br></pre></td></tr></tbody></table></figure>
+<p>然后通过 winetricks 安装相关组件<br></p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">winetricks d3dx9</span><br><span class="line">winetricks quartz</span><br><span class="line">winetricks devenum</span><br><span class="line">winetricks wmp10</span><br><span class="line">winetricks gdiplus</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>安装 Your Diary +H : 挂载镜像后执行 <code>env LC_ALL=ja_JP.utf-8 wine setup.exe</code></p>
+<h3 id="4-快捷方式"><a href="#4-%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F" class="headerlink" title="4.快捷方式"></a>4.快捷方式</h3><p>安装 Your Diary +H 后，会在桌面创建快捷方式，编辑该文件，在 Exec 字段 WINEPREFIX 前加入 <code>LC_ALL=ja_JP.utf-8</code> 否则程序无法正常运行。</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[Desktop Entry]</span><br><span class="line">Name=your diary +H</span><br><span class="line">Exec=env LC_ALL=ja_JP.utf-8 WINEPREFIX="$HOME/.wine32"; wine C:\\\\Program\\ Files\\\\CUBE\\\\your\\ diary\\ +H\\\\yourdiary+H.exe</span><br><span class="line">Type=Application</span><br><span class="line">StartupNotify=true</span><br><span class="line">Icon=E63C_NewShortcut1_C13072A6768643A6966573D014956572.0</span><br></pre></td></tr></tbody></table></figure>
+<p>然后可以通过命令行的方式 <code>env LC_ALL=ja_JP.utf-8 wine xxx.exe</code> 或者快捷方式运行游戏 。</p>
+<h3 id="5-问题"><a href="#5-%E9%97%AE%E9%A2%98" class="headerlink" title="5.问题"></a>5.问题</h3><ul>
+<li>Your Diary +H 1920 x 1080 分辨率花屏， 1600 x 900 倒是正常。两个游戏的全屏模式也都是黑屏，无法正常工作。</li>
+<li>双显示器时，将已运行的游戏拖动倒另一个显示器之后画面会变得静止不动，拖回来后正常。</li>
+<li>还有，我并不懂日语。(； ･`д･´)</li>
+</ul>
+<hr>
+<p>中间碰到的问题:</p>
+<p>搜索的时候，所搜的文章中说到的命令都是 <code>env LANG=ja_JP.utf-8 wine xxx.exe</code> ，然而自己执行这个命令时，仅仅 Wine 的 UI 组件更新为了日文，打开后游戏的内容依然是乱码。</p>
+<p>自己折腾许久后依然毫无变化，包括添加字体、使用 <code>ja_JP.ujis</code> 等等，并无卵用。</p>
+<p>然后试了一下 <code>LC_ALL=ja_JP.ujis</code> 时，可以正常显示。</p>
+<p>尝试一番，仅指定 LANG 是不够的，还要加上 LC_CTYPE 。</p>
+<p>然后发现使用 ja_JP.utf-8 也是可以正常显示的 (´・Å・`)</p>
+<p>参考链接： <a href="https://help.ubuntu.com/community/Locale" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">https://help.ubuntu.com/community/Locale</a></p>
+<blockquote>
+<p>LANG<br>Provides default value for LC_<em> variables that have not been explicitly set.<br>LC_CTYPE<br>How characters are classified as letters, numbers etc. This determines things like how characters are converted between upper and lower case.<br>LC<em>ALL<br>Overrides individual LC</em></em> settings: if LC_ALL is set, none of the below have any effect.</p>
+</blockquote>
+<p>除 LANG 与 LC<em>ALL 之外的 LC</em><em> 分别对应各自的分类属性。<br>指定 LANG 时 ： 当 LC<em>ALL 未指定时，为其他 LC</em></em> 提供默认值，当 LC_<em> 自身未指定内容时生效。<br>指定 LC<em>ALL 时 ： 忽视 LANG 与 LC</em></em> 自身指定的值，全部取 LC_ALL 所指定的内容 。  </p>
+<h3 id="日文编码"><a href="#%E6%97%A5%E6%96%87%E7%BC%96%E7%A0%81" class="headerlink" title="日文编码"></a>日文编码</h3><p>Shift-JIS : ja_JP.ujis<br>utf-8 : ja_JP.utf-8</p>
+<h3 id="locale-gen"><a href="#locale-gen" class="headerlink" title="locale.gen"></a>locale.gen</h3><p>列出当前所支持的语言环境 : <code>locale -a</code><br>编辑 locale.gen 文件 :  <code>sudo vim /etc/locale.gen</code><br>更新 :  <code>sudo locale-gen</code></p>
+<hr>
+<p>きっと、澄みわたる朝色よりも ：</p>
+<p><code>env LC_ALL=ja_JP.utf-8 wine asairo.exe</code>  播放视频内容时报错：</p>
+<blockquote>
+<p>fixme:gstreamer:unknown_type Could not find a filter for caps: video/mpeg, systemstream=(boolean)true, mpegversion=(int)1</p>
+<p>fixme:gstreamer:watch_bus decodebin0: 您的 GStreamer 安装缺少插件。</p>
+</blockquote>
+<p>之前俩使用的都是 quartz ，可以通过运行 <code>winecfg</code> 在函数库中停用 <code>winegstreamer.dll</code> 解决。</p>
+<p>这样之后，能运行起来的多了不少，只是 FAVORITE 家的（比如星空的记忆）总是会在出现对话框时报错跳出，还有个别的播放视频会有点问题，比如闪屏，但不会出错跳出。</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="https://homulilly.com/tags/Ubuntu/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"># Ubuntu</a>
+          
+            <a href="https://homulilly.com/tags/Wine/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"># Wine</a>
+          
+            <a href="https://homulilly.com/tags/Galgame/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"># Galgame</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="https://homulilly.com/post/change-cursor-theme-and-size-on-ubuntu-1604-lts.html" rel="noopener noreferrer" title="Ubuntu 16.04 更换鼠标样式并修改大小" target="_blank" referrerpolicy="no-referrer">
+                <i class="fa fa-chevron-left"></i> Ubuntu 16.04 更换鼠标样式并修改大小
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="https://homulilly.com/post/install-dropbox-and-nemo-file-manager.html" rel="noopener noreferrer" title="安装 Dropbox 与 Nemo 文件管理器" target="_blank" referrerpolicy="no-referrer">
+                安装 Dropbox 与 Nemo 文件管理器 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    
+    <div class="comments" id="comments">
+    <div style="text-align:center;">
+        <button class="disbtn" id="load-disqus" onclick="disqus.load();">加载 Disqus 评论</button>
+    </div>
+      <div id="disqus_thread">
+        
+      </div>
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc" style="width: calc(100% + 17px); max-height: 462px;">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%AF%E5%A2%83"><span class="nav-number">1.</span> <span class="nav-text">环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4"><span class="nav-number">2.</span> <span class="nav-text">步骤</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">© <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Aroes</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io/" referrerpolicy="no-referrer" rel="noopener noreferrer">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 — <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next" referrerpolicy="no-referrer" rel="noopener noreferrer">NexT.Mist</a></div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+        
+      </div>
+    </body>
+  </html>

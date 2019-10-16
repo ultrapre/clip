@@ -1,0 +1,523 @@
+
+  <!DOCTYPE html>
+  <html id="" class="">
+    <!-- OriginalSrc: https://blog.rhilip.info/archives/995/ -->
+    <head>
+      <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <title>爬取备份 “忧郁的弟弟” 站点 Galgame - R 酱小窝</title>
+      
+<link rel="icon" id="web-icon" href="assets/1571155700-30dcbcaabe5ebdf760d36bb5237374a0.ico" referrerpolicy="no-referrer">
+<link rel="apple-touch-icon" href="assets/1571155700-0d7b2cb1d243bf9c87672da160804a6d.png" referrerpolicy="no-referrer">
+
+
+<link rel="stylesheet" href="assets/1571155700-97811c388180be382864117dde999137.css" type="text/css" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="assets/1571155700-d88590b1973489798b8a946ee4b8514e.css" type="text/css" referrerpolicy="no-referrer">
+<link rel="stylesheet" type="text/css" href="assets/1571155700-49cff32ad1d62c842fabaecdb37b42ae.css" referrerpolicy="no-referrer">
+<link type="text/css" rel="stylesheet" href="assets/1571155700-cacbd9aa7047b2af30ab7ae890e21dfa.css" referrerpolicy="no-referrer">
+
+
+<style class="darkreader darkreader--fallback" media="screen"></style>
+<style class="darkreader darkreader--text" media="screen"></style>
+<style class="darkreader darkreader--invert" media="screen"></style>
+<style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}</style>
+<style class="darkreader darkreader--user-agent" media="screen">html {
+    background-color: #191a1b !important;
+}
+html, body, input, textarea, select, button {
+    background-color: #191a1b;
+}
+html, body, input, textarea, select, button {
+    border-color: #5a5956;
+    color: #f0ebe2;
+}
+a {
+    color: #4791e7;
+}
+table {
+    border-color: #4f4e4c;
+}
+::placeholder {
+    color: #bfb9ac;
+}
+::selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+::-moz-selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #565a0f !important;
+    color: #f0ebe2 !important;
+}
+::-webkit-scrollbar {
+    background-color: #1d1f1f;
+    color: #cbc5b9;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #2c2d2d;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #343636;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #404142;
+}
+::-webkit-scrollbar-corner {
+    background-color: #191a1b;
+}
+* {
+    scrollbar-color: #2c2d2d #1d1f1f;
+}</style>
+<style class="darkreader darkreader--override" media="screen">.jfk-bubble {
+    background-color: #000000 !important;
+}
+.vimvixen-hint {
+    background-color: #765500 !important;
+    border-color: #d5b22e !important;
+    color: #f9edcc !important;
+}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style>.postShorten-header {text-align: center;}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">.fancybox-margin{margin-right:8px;}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--cors" media="screen">.katex-display{display:block;margin:1em 0;text-align:center}.katex-display>.katex{display:inline-block}.katex{font:400 1.21em KaTeX_Main;line-height:1.2;white-space:nowrap}.katex .katex-html{display:inline-block}.katex .katex-mathml{position:absolute;clip:rect(1px,1px,1px,1px);padding:0;border:0;height:1px;width:1px;overflow:hidden}.katex .base,.katex .strut{display:inline-block}.katex .mathit{font-family:KaTeX_Math;font-style:italic}.katex .amsrm{font-family:KaTeX_AMS}.katex .textstyle>.mord+.mop{margin-left:.16667em}.katex .textstyle>.mord+.mbin{margin-left:.22222em}.katex .textstyle>.mord+.mrel{margin-left:.27778em}.katex .textstyle>.mop+.mop,.katex .textstyle>.mop+.mord,.katex .textstyle>.mord+.minner{margin-left:.16667em}.katex .textstyle>.mop+.mrel{margin-left:.27778em}.katex .textstyle>.mop+.minner{margin-left:.16667em}.katex .textstyle>.mbin+.minner,.katex .textstyle>.mbin+.mop,.katex .textstyle>.mbin+.mopen,.katex .textstyle>.mbin+.mord{margin-left:.22222em}.katex .textstyle>.mrel+.minner,.katex .textstyle>.mrel+.mop,.katex .textstyle>.mrel+.mopen,.katex .textstyle>.mrel+.mord{margin-left:.27778em}.katex .textstyle>.mclose+.mop{margin-left:.16667em}.katex .textstyle>.mclose+.mbin{margin-left:.22222em}.katex .textstyle>.mclose+.mrel{margin-left:.27778em}.katex .textstyle>.mclose+.minner,.katex .textstyle>.minner+.mop,.katex .textstyle>.minner+.mord,.katex .textstyle>.mpunct+.mclose,.katex .textstyle>.mpunct+.minner,.katex .textstyle>.mpunct+.mop,.katex .textstyle>.mpunct+.mopen,.katex .textstyle>.mpunct+.mord,.katex .textstyle>.mpunct+.mpunct,.katex .textstyle>.mpunct+.mrel{margin-left:.16667em}.katex .textstyle>.minner+.mbin{margin-left:.22222em}.katex .textstyle>.minner+.mrel{margin-left:.27778em}.katex .mclose+.mop,.katex .minner+.mop,.katex .mop+.mop,.katex .mop+.mord,.katex .mord+.mop,.katex .textstyle>.minner+.minner,.katex .textstyle>.minner+.mopen,.katex .textstyle>.minner+.mpunct{margin-left:.16667em}.katex .reset-textstyle.textstyle{font-size:1em}.katex .reset-textstyle.scriptstyle{font-size:.7em}.katex .reset-textstyle.scriptscriptstyle{font-size:.5em}.katex .reset-scriptstyle.textstyle{font-size:1.42857em}.katex .reset-scriptstyle.scriptstyle{font-size:1em}.katex .reset-scriptstyle.scriptscriptstyle{font-size:.71429em}.katex .reset-scriptscriptstyle.textstyle{font-size:2em}.katex .reset-scriptscriptstyle.scriptstyle{font-size:1.4em}.katex .reset-scriptscriptstyle.scriptscriptstyle{font-size:1em}.katex .style-wrap{position:relative}.katex .vlist{display:inline-block}.katex .vlist>span{display:block;height:0;position:relative}.katex .vlist>span>span{display:inline-block}.katex .vlist .baseline-fix{display:inline-table;table-layout:fixed}.katex .msupsub{text-align:left}.katex .mfrac>span>span{text-align:center}.katex .mfrac .frac-line{width:100%}.katex .mfrac .frac-line:before{border-bottom-style:solid;border-bottom-width:1px;content:"";display:block}.katex .mfrac .frac-line:after{border-bottom-style:solid;border-bottom-width:.04em;content:"";display:block;margin-top:-1px}.katex .mspace{display:inline-block}.katex .mspace.negativethinspace{margin-left:-.16667em}.katex .mspace.thinspace{width:.16667em}.katex .mspace.mediumspace{width:.22222em}.katex .mspace.thickspace{width:.27778em}.katex .mspace.enspace{width:.5em}.katex .mspace.quad{width:1em}.katex .mspace.qquad{width:2em}.katex .llap,.katex .rlap{width:0;position:relative}.katex .llap>.inner,.katex .rlap>.inner{position:absolute}.katex .llap>.fix,.katex .rlap>.fix{display:inline-block}.katex .llap>.inner{right:0}.katex .rlap>.inner{left:0}.katex .katex-logo .a{font-size:.75em;margin-left:-.32em;position:relative;top:-.2em}.katex .katex-logo .t{margin-left:-.23em}.katex .katex-logo .e{margin-left:-.1667em;position:relative;top:.2155em}.katex .katex-logo .x{margin-left:-.125em}.katex .rule{display:inline-block;border-style:solid;position:relative}.katex .overline .overline-line{width:100%}.katex .overline .overline-line:before{border-bottom-style:solid;border-bottom-width:1px;content:"";display:block}.katex .overline .overline-line:after{border-bottom-style:solid;border-bottom-width:.04em;content:"";display:block;margin-top:-1px}.katex .sqrt>.sqrt-sign{position:relative}.katex .sqrt .sqrt-line{width:100%}.katex .sqrt .sqrt-line:before{border-bottom-style:solid;border-bottom-width:1px;content:"";display:block}.katex .sqrt .sqrt-line:after{border-bottom-style:solid;border-bottom-width:.04em;content:"";display:block;margin-top:-1px}.katex .fontsize-ensurer,.katex .sizing{display:inline-block}.katex .fontsize-ensurer.reset-size1.size1,.katex .sizing.reset-size1.size1{font-size:1em}.katex .fontsize-ensurer.reset-size1.size2,.katex .sizing.reset-size1.size2{font-size:1.4em}.katex .fontsize-ensurer.reset-size1.size3,.katex .sizing.reset-size1.size3{font-size:1.6em}.katex .fontsize-ensurer.reset-size1.size4,.katex .sizing.reset-size1.size4{font-size:1.8em}.katex .fontsize-ensurer.reset-size1.size5,.katex .sizing.reset-size1.size5{font-size:2em}.katex .fontsize-ensurer.reset-size1.size6,.katex .sizing.reset-size1.size6{font-size:2.4em}.katex .fontsize-ensurer.reset-size1.size7,.katex .sizing.reset-size1.size7{font-size:2.88em}.katex .fontsize-ensurer.reset-size1.size8,.katex .sizing.reset-size1.size8{font-size:3.46em}.katex .fontsize-ensurer.reset-size1.size9,.katex .sizing.reset-size1.size9{font-size:4.14em}.katex .fontsize-ensurer.reset-size1.size10,.katex .sizing.reset-size1.size10{font-size:4.98em}.katex .fontsize-ensurer.reset-size2.size1,.katex .sizing.reset-size2.size1{font-size:.71428571em}.katex .fontsize-ensurer.reset-size2.size2,.katex .sizing.reset-size2.size2{font-size:1em}.katex .fontsize-ensurer.reset-size2.size3,.katex .sizing.reset-size2.size3{font-size:1.14285714em}.katex .fontsize-ensurer.reset-size2.size4,.katex .sizing.reset-size2.size4{font-size:1.28571429em}.katex .fontsize-ensurer.reset-size2.size5,.katex .sizing.reset-size2.size5{font-size:1.42857143em}.katex .fontsize-ensurer.reset-size2.size6,.katex .sizing.reset-size2.size6{font-size:1.71428571em}.katex .fontsize-ensurer.reset-size2.size7,.katex .sizing.reset-size2.size7{font-size:2.05714286em}.katex .fontsize-ensurer.reset-size2.size8,.katex .sizing.reset-size2.size8{font-size:2.47142857em}.katex .fontsize-ensurer.reset-size2.size9,.katex .sizing.reset-size2.size9{font-size:2.95714286em}.katex .fontsize-ensurer.reset-size2.size10,.katex .sizing.reset-size2.size10{font-size:3.55714286em}.katex .fontsize-ensurer.reset-size3.size1,.katex .sizing.reset-size3.size1{font-size:.625em}.katex .fontsize-ensurer.reset-size3.size2,.katex .sizing.reset-size3.size2{font-size:.875em}.katex .fontsize-ensurer.reset-size3.size3,.katex .sizing.reset-size3.size3{font-size:1em}.katex .fontsize-ensurer.reset-size3.size4,.katex .sizing.reset-size3.size4{font-size:1.125em}.katex .fontsize-ensurer.reset-size3.size5,.katex .sizing.reset-size3.size5{font-size:1.25em}.katex .fontsize-ensurer.reset-size3.size6,.katex .sizing.reset-size3.size6{font-size:1.5em}.katex .fontsize-ensurer.reset-size3.size7,.katex .sizing.reset-size3.size7{font-size:1.8em}.katex .fontsize-ensurer.reset-size3.size8,.katex .sizing.reset-size3.size8{font-size:2.1625em}.katex .fontsize-ensurer.reset-size3.size9,.katex .sizing.reset-size3.size9{font-size:2.5875em}.katex .fontsize-ensurer.reset-size3.size10,.katex .sizing.reset-size3.size10{font-size:3.1125em}.katex .fontsize-ensurer.reset-size4.size1,.katex .sizing.reset-size4.size1{font-size:.55555556em}.katex .fontsize-ensurer.reset-size4.size2,.katex .sizing.reset-size4.size2{font-size:.77777778em}.katex .fontsize-ensurer.reset-size4.size3,.katex .sizing.reset-size4.size3{font-size:.88888889em}.katex .fontsize-ensurer.reset-size4.size4,.katex .sizing.reset-size4.size4{font-size:1em}.katex .fontsize-ensurer.reset-size4.size5,.katex .sizing.reset-size4.size5{font-size:1.11111111em}.katex .fontsize-ensurer.reset-size4.size6,.katex .sizing.reset-size4.size6{font-size:1.33333333em}.katex .fontsize-ensurer.reset-size4.size7,.katex .sizing.reset-size4.size7{font-size:1.6em}.katex .fontsize-ensurer.reset-size4.size8,.katex .sizing.reset-size4.size8{font-size:1.92222222em}.katex .fontsize-ensurer.reset-size4.size9,.katex .sizing.reset-size4.size9{font-size:2.3em}.katex .fontsize-ensurer.reset-size4.size10,.katex .sizing.reset-size4.size10{font-size:2.76666667em}.katex .fontsize-ensurer.reset-size5.size1,.katex .sizing.reset-size5.size1{font-size:.5em}.katex .fontsize-ensurer.reset-size5.size2,.katex .sizing.reset-size5.size2{font-size:.7em}.katex .fontsize-ensurer.reset-size5.size3,.katex .sizing.reset-size5.size3{font-size:.8em}.katex .fontsize-ensurer.reset-size5.size4,.katex .sizing.reset-size5.size4{font-size:.9em}.katex .fontsize-ensurer.reset-size5.size5,.katex .sizing.reset-size5.size5{font-size:1em}.katex .fontsize-ensurer.reset-size5.size6,.katex .sizing.reset-size5.size6{font-size:1.2em}.katex .fontsize-ensurer.reset-size5.size7,.katex .sizing.reset-size5.size7{font-size:1.44em}.katex .fontsize-ensurer.reset-size5.size8,.katex .sizing.reset-size5.size8{font-size:1.73em}.katex .fontsize-ensurer.reset-size5.size9,.katex .sizing.reset-size5.size9{font-size:2.07em}.katex .fontsize-ensurer.reset-size5.size10,.katex .sizing.reset-size5.size10{font-size:2.49em}.katex .fontsize-ensurer.reset-size6.size1,.katex .sizing.reset-size6.size1{font-size:.41666667em}.katex .fontsize-ensurer.reset-size6.size2,.katex .sizing.reset-size6.size2{font-size:.58333333em}.katex .fontsize-ensurer.reset-size6.size3,.katex .sizing.reset-size6.size3{font-size:.66666667em}.katex .fontsize-ensurer.reset-size6.size4,.katex .sizing.reset-size6.size4{font-size:.75em}.katex .fontsize-ensurer.reset-size6.size5,.katex .sizing.reset-size6.size5{font-size:.83333333em}.katex .fontsize-ensurer.reset-size6.size6,.katex .sizing.reset-size6.size6{font-size:1em}.katex .fontsize-ensurer.reset-size6.size7,.katex .sizing.reset-size6.size7{font-size:1.2em}.katex .fontsize-ensurer.reset-size6.size8,.katex .sizing.reset-size6.size8{font-size:1.44166667em}.katex .fontsize-ensurer.reset-size6.size9,.katex .sizing.reset-size6.size9{font-size:1.725em}.katex .fontsize-ensurer.reset-size6.size10,.katex .sizing.reset-size6.size10{font-size:2.075em}.katex .fontsize-ensurer.reset-size7.size1,.katex .sizing.reset-size7.size1{font-size:.34722222em}.katex .fontsize-ensurer.reset-size7.size2,.katex .sizing.reset-size7.size2{font-size:.48611111em}.katex .fontsize-ensurer.reset-size7.size3,.katex .sizing.reset-size7.size3{font-size:.55555556em}.katex .fontsize-ensurer.reset-size7.size4,.katex .sizing.reset-size7.size4{font-size:.625em}.katex .fontsize-ensurer.reset-size7.size5,.katex .sizing.reset-size7.size5{font-size:.69444444em}.katex .fontsize-ensurer.reset-size7.size6,.katex .sizing.reset-size7.size6{font-size:.83333333em}.katex .fontsize-ensurer.reset-size7.size7,.katex .sizing.reset-size7.size7{font-size:1em}.katex .fontsize-ensurer.reset-size7.size8,.katex .sizing.reset-size7.size8{font-size:1.20138889em}.katex .fontsize-ensurer.reset-size7.size9,.katex .sizing.reset-size7.size9{font-size:1.4375em}.katex .fontsize-ensurer.reset-size7.size10,.katex .sizing.reset-size7.size10{font-size:1.72916667em}.katex .fontsize-ensurer.reset-size8.size1,.katex .sizing.reset-size8.size1{font-size:.28901734em}.katex .fontsize-ensurer.reset-size8.size2,.katex .sizing.reset-size8.size2{font-size:.40462428em}.katex .fontsize-ensurer.reset-size8.size3,.katex .sizing.reset-size8.size3{font-size:.46242775em}.katex .fontsize-ensurer.reset-size8.size4,.katex .sizing.reset-size8.size4{font-size:.52023121em}.katex .fontsize-ensurer.reset-size8.size5,.katex .sizing.reset-size8.size5{font-size:.57803468em}.katex .fontsize-ensurer.reset-size8.size6,.katex .sizing.reset-size8.size6{font-size:.69364162em}.katex .fontsize-ensurer.reset-size8.size7,.katex .sizing.reset-size8.size7{font-size:.83236994em}.katex .fontsize-ensurer.reset-size8.size8,.katex .sizing.reset-size8.size8{font-size:1em}.katex .fontsize-ensurer.reset-size8.size9,.katex .sizing.reset-size8.size9{font-size:1.19653179em}.katex .fontsize-ensurer.reset-size8.size10,.katex .sizing.reset-size8.size10{font-size:1.43930636em}.katex .fontsize-ensurer.reset-size9.size1,.katex .sizing.reset-size9.size1{font-size:.24154589em}.katex .fontsize-ensurer.reset-size9.size2,.katex .sizing.reset-size9.size2{font-size:.33816425em}.katex .fontsize-ensurer.reset-size9.size3,.katex .sizing.reset-size9.size3{font-size:.38647343em}.katex .fontsize-ensurer.reset-size9.size4,.katex .sizing.reset-size9.size4{font-size:.43478261em}.katex .fontsize-ensurer.reset-size9.size5,.katex .sizing.reset-size9.size5{font-size:.48309179em}.katex .fontsize-ensurer.reset-size9.size6,.katex .sizing.reset-size9.size6{font-size:.57971014em}.katex .fontsize-ensurer.reset-size9.size7,.katex .sizing.reset-size9.size7{font-size:.69565217em}.katex .fontsize-ensurer.reset-size9.size8,.katex .sizing.reset-size9.size8{font-size:.83574879em}.katex .fontsize-ensurer.reset-size9.size9,.katex .sizing.reset-size9.size9{font-size:1em}.katex .fontsize-ensurer.reset-size9.size10,.katex .sizing.reset-size9.size10{font-size:1.20289855em}.katex .fontsize-ensurer.reset-size10.size1,.katex .sizing.reset-size10.size1{font-size:.20080321em}.katex .fontsize-ensurer.reset-size10.size2,.katex .sizing.reset-size10.size2{font-size:.2811245em}.katex .fontsize-ensurer.reset-size10.size3,.katex .sizing.reset-size10.size3{font-size:.32128514em}.katex .fontsize-ensurer.reset-size10.size4,.katex .sizing.reset-size10.size4{font-size:.36144578em}.katex .fontsize-ensurer.reset-size10.size5,.katex .sizing.reset-size10.size5{font-size:.40160643em}.katex .fontsize-ensurer.reset-size10.size6,.katex .sizing.reset-size10.size6{font-size:.48192771em}.katex .fontsize-ensurer.reset-size10.size7,.katex .sizing.reset-size10.size7{font-size:.57831325em}.katex .fontsize-ensurer.reset-size10.size8,.katex .sizing.reset-size10.size8{font-size:.69477912em}.katex .fontsize-ensurer.reset-size10.size9,.katex .sizing.reset-size10.size9{font-size:.8313253em}.katex .fontsize-ensurer.reset-size10.size10,.katex .sizing.reset-size10.size10{font-size:1em}.katex .delimsizing.size1{font-family:KaTeX_Size1}.katex .delimsizing.size2{font-family:KaTeX_Size2}.katex .delimsizing.size3{font-family:KaTeX_Size3}.katex .delimsizing.size4{font-family:KaTeX_Size4}.katex .delimsizing.mult .delim-size1>span{font-family:KaTeX_Size1}.katex .delimsizing.mult .delim-size4>span{font-family:KaTeX_Size4}.katex .nulldelimiter{display:inline-block;width:.12em}.katex .op-symbol{position:relative}.katex .op-symbol.small-op{font-family:KaTeX_Size1}.katex .op-symbol.large-op{font-family:KaTeX_Size2}.katex .accent>.vlist>span,.katex .op-limits>.vlist>span{text-align:center}.katex .accent .accent-body>span{width:0}.katex .accent .accent-body.accent-vec>span{position:relative;left:.326em}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">@keyframes fadeInOpacity{0%{opacity:0}to{opacity:1}}:hover>*>.fbvd--wrapper{animation-name:fadeInOpacity;animation-duration:.3s;opacity:1}.fbvd--wrapper{position:absolute;top:10px;left:10px;opacity:0;text-align:center;margin:0;z-index:5}.fbvd--wrapper a{background: url("") no-repeat 3px 4.55px; background-color: #fff; display:inline-block;font:700 14px Helvetica,Arial,sans-serif;color:#4b4f56;text-decoration:none;vertical-align:middle;padding:0px 8px 0px;margin-right:8px;border-radius:2px; line-height: 22px; padding-left:19px; border: 1px solid #e7e7e7; background-size: 13px}.fbvd--wrapper a:last-child{margin-right:0}.fbvd--wrapper a:hover{text-decoration:none}.fbvd--wrapper a:focus{box-shadow:0 0 1px 2px rgba(88,144,255,.75),0 1px 1px rgba(0,0,0,.15);outline:none}.fbvd--wrapper b{font-size:13px;position:relative;top:1px;color:#3b5998;font-weight:400}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+
+      
+    </head>
+    <body class="mx-wc-selected-elem mx-wc-1571155700"><div id="sos">
+<div id="blog">
+<!--[if lt IE 9]>
+		 <div class="browsehappy" role="dialog">当前网页 <strong>不支持</strong> 你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/">升级你的浏览器</a>.</div>
+	    <![endif]-->
+
+<nav id="sidebar" data-behavior="1">
+<div class="sidebar-profile">
+<a href="https://blog.rhilip.info/#about" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+<img class="sidebar-profile-picture" src="assets/1571155700-a9eb998c9ab2126b53ae24e46a7ad9e7.jpg"> </a>
+<span class="sidebar-profile-name"> R 酱小窝</span>
+</div>
+<ul class="sidebar-buttons">
+<li class="sidebar-button">
+<a class="sidebar-button-link " href="https://blog.rhilip.info/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+<i class="sidebar-button-icon fa fa-lg fa-home"></i>
+<span class="sidebar-button-desc"> Home</span>
+</a>
+</li>
+<li class="sidebar-button">
+<a class="sidebar-button-link " href="https://blog.rhilip.info/categories.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+<i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+<span class="sidebar-button-desc">Categories</span>
+</a>
+</li>
+<li class="sidebar-button">
+<a class="sidebar-button-link " href="https://blog.rhilip.info/archives.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+<i class="sidebar-button-icon fa fa-lg fa-calendar"></i>
+<span class="sidebar-button-desc">Archive</span>
+</a>
+</li>
+<li class="sidebar-button" id="sou">
+<a class="sidebar-button-link st-search-show-outputs" data-mx-warn="Empty URL">
+<i class="sidebar-button-icon fa fa-lg fa-search"></i>
+<span class="sidebar-button-desc">Search</span>
+</a>
+</li>
+<li class="sidebar-button">
+<a class="sidebar-button-link " href="https://blog.rhilip.info/about.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+<i class="sidebar-button-icon fa fa-lg fa-info-circle"></i>
+<span class="sidebar-button-desc">About</span>
+</a>
+</li>
+</ul>
+<ul class="sidebar-buttons">
+<li class="sidebar-button">
+<a class="sidebar-button-link " href="https://github.com/Rhilip/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+<i class="sidebar-button-icon fa fa-lg fa-github"></i>
+<span class="sidebar-button-desc">Github</span>
+</a>
+</li>
+<li class="sidebar-button">
+<a class="sidebar-button-link " href="https://blog.rhilip.info/links.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+<i class="sidebar-button-icon fa fa-lg fa-chain"></i>
+<span class="sidebar-button-desc">Links</span>
+</a>
+</li>
+</ul>
+</nav>
+<div id="main" data-behavior="1" class="hasCoverMetaIn">
+<article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+<div class="post-header main-content-wrap text-center">
+<h1 class="post-title" itemprop="headline"> 爬取备份 “忧郁的弟弟” 站点 Galgame </h1>
+<div class="post-meta">
+<time itemprop="datePublished" content="2018-08-7  17:20:00">
+Aug 07,2018
+</time>
+<span>in </span>
+<a class="category-link" data-mx-warn="Empty URL"></a><a href="https://blog.rhilip.info/category/python/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Python</a>,<a href="https://blog.rhilip.info/category/game/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Game</a> <span>lang </span>
+<a class="category-link" id="translateLink" href="javascript:translatePage();" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">繁</a>
+<span> read (4923)</span>
+</div>
+</div>
+<div class="post-content markdown" itemprop="articleBody">
+<div class="main-content-wrap" id="yl"><tree id="mulu"></tree> <div id="md_content_2" class="md_content markdown-body editormd-html-preview" style="min-height: 50px;"><p><a href="https://www.mygalgame.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">我的Galgame资源发布站 - 忧郁的弟弟</a> 是由忧郁的弟弟提供的汉化Galgame下载站点，关于该站点介绍请访问：<a href="https://www.mygalgame.com/guanyuruoganzhuyishixiangxinrenbidu.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">关于若干注意事项（新人必读） | 我的Galgame资源发布站</a></p>
+<blockquote>
+<p>资源备份档分享请见：<a href="https://archive.rhilip.info/ACGN/Galgame/Mygalgame%E5%85%A8%E7%AB%99%E8%B5%84%E6%BA%90%E5%A4%87%E4%BB%BD.md" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Mygalgame全站资源备份</a><br>他人抓取项目请见： <a href="https://beats0.github.io/www.mygalgame.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Mygalgame backup</a></p>
+</blockquote>
+<p>弟弟站点html结构十分规范，而且爬取特别容易。问题在于该站的资源都是用百度云进行存储，而百度云的转存与下载较为麻烦。这里我们采取抓取和转存分别进行的方法，构造备份站点。步骤如下：</p>
+<ol>
+<li>对弟弟站所有页面进行抓取下载并存储。</li><li>进行百度云批量转存，使用BaiduPCS-GO进行下载操作。</li><li>使用rclone转存到GDrive以及OneDrive。</li><li>使用OneIndex进行展示~</li></ol>
+<blockquote>
+<p>关于“忧郁的弟弟”站点备份，Github已有类似项目，具体可参见：<a href="https://github.com/Beats0/www.mygalgame.com" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Beats0/www.mygalgame.com</a></p>
+</blockquote>
+<h2 id="h2-u7AD9u70B9u722Cu53D6"><a name="站点爬取" class="reference-link" data-mx-warn="Empty URL"></a><span class="header-link octicon octicon-link"></span>站点爬取</h2><p>目前弟弟站的百度云链接需要使用post的方式二次获取，故在获取到文章链接后，构造post表单进行获取。方法如下：</p>
+<pre class="prettyprint linenums prettyprinted prettyprint linenums" style=""><ol class="linenums"><li class="L0"><code class="lang-python"><span class="kwd">import</span><span class="pln"> re</span></code></li><li class="L1"><code class="lang-python"><span class="kwd">import</span><span class="pln"> time</span></code></li><li class="L2"><code class="lang-python"><span class="kwd">import</span><span class="pln"> sqlite3</span></code></li><li class="L3"><code class="lang-python"><span class="kwd">import</span><span class="pln"> requests</span></code></li><li class="L4"><code class="lang-python"><span class="kwd">from</span><span class="pln"> bs4 </span><span class="kwd">import</span><span class="pln"> </span><span class="typ">BeautifulSoup</span></code></li><li class="L5"><code class="lang-python"></code></li><li class="L6"><code class="lang-python"><span class="pln">s </span><span class="pun">=</span><span class="pln"> requests</span><span class="pun">.</span><span class="typ">Session</span><span class="pun">()</span></code></li><li class="L7"><code class="lang-python"><span class="pln">s</span><span class="pun">.</span><span class="pln">cookies</span><span class="pun">.</span><span class="pln">update</span><span class="pun">({</span><span class="str">"switchtheme"</span><span class="pun">:</span><span class="str">"mygalgame2"</span><span class="pun">})</span></code></li><li class="L8"><code class="lang-python"><span class="pln">s</span><span class="pun">.</span><span class="pln">headers</span><span class="pun">.</span><span class="pln">update</span><span class="pun">({</span><span class="str">"User-Agent"</span><span class="pun">:</span><span class="str">"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36"</span><span class="pun">})</span></code></li><li class="L9"><code class="lang-python"></code></li><li class="L0"><code class="lang-python"><span class="pln">db </span><span class="pun">=</span><span class="pln"> sqlite3</span><span class="pun">.</span><span class="pln">connect</span><span class="pun">(</span><span class="pln">r</span><span class="str">"f:/mygalgame.db"</span><span class="pun">)</span></code></li><li class="L1"><code class="lang-python"><span class="pln">cur </span><span class="pun">=</span><span class="pln"> db</span><span class="pun">.</span><span class="pln">cursor</span><span class="pun">()</span></code></li><li class="L2"><code class="lang-python"></code></li><li class="L3"><code class="lang-python"><span class="pln">cur</span><span class="pun">.</span><span class="pln">execute</span><span class="pun">(</span><span class="str">"CREATE TABLE mygalgame ("</span><span class="pun">+</span></code></li><li class="L4"><code class="lang-python"><span class="pln">    </span><span class="str">"raw_link   VARCHAR (255),"</span><span class="pun">+</span></code></li><li class="L5"><code class="lang-python"><span class="pln">    </span><span class="str">"name       VARCHAR (100),"</span><span class="pun">+</span></code></li><li class="L6"><code class="lang-python"><span class="pln">    </span><span class="str">"baidu_link VARCHAR (255),"</span><span class="pun">+</span></code></li><li class="L7"><code class="lang-python"><span class="pln">    </span><span class="str">"secret_key VARCHAR (4)   UNIQUE PRIMARY KEY,"</span><span class="pun">+</span></code></li><li class="L8"><code class="lang-python"><span class="pln">    </span><span class="str">"descr      TEXT"</span><span class="pun">+</span></code></li><li class="L9"><code class="lang-python"><span class="str">");"</span></code></li><li class="L0"><code class="lang-python"><span class="pun">)</span></code></li><li class="L1"><code class="lang-python"></code></li><li class="L2"><code class="lang-python"><span class="kwd">for</span><span class="pln"> p </span><span class="kwd">in</span><span class="pln"> range</span><span class="pun">(</span><span class="lit">1</span><span class="pun">,</span><span class="lit">84</span><span class="pun">):</span></code></li><li class="L3"><code class="lang-python"><span class="pln">    page </span><span class="pun">=</span><span class="pln"> s</span><span class="pun">.</span><span class="pln">get</span><span class="pun">(</span><span class="str">"https://www.mygalgame.com/page/{}/"</span><span class="pun">.</span><span class="pln">format</span><span class="pun">(</span><span class="pln">p</span><span class="pun">))</span></code></li><li class="L4"><code class="lang-python"><span class="pln">    page </span><span class="pun">=</span><span class="pln"> </span><span class="typ">BeautifulSoup</span><span class="pun">(</span><span class="pln">page</span><span class="pun">.</span><span class="pln">text</span><span class="pun">,</span><span class="str">"lxml"</span><span class="pun">)</span></code></li><li class="L5"><code class="lang-python"><span class="pln">    a_list </span><span class="pun">=</span><span class="pln"> page</span><span class="pun">.</span><span class="pln">select</span><span class="pun">(</span><span class="str">"div#article-list &gt; div &gt; section &gt; div.title-article &gt; h1 &gt; a"</span><span class="pun">)</span></code></li><li class="L6"><code class="lang-python"><span class="pln">    article_list </span><span class="pun">=</span><span class="pln"> list</span><span class="pun">(</span><span class="pln">map</span><span class="pun">(</span><span class="kwd">lambda</span><span class="pln"> x</span><span class="pun">:</span><span class="pln">x</span><span class="pun">[</span><span class="str">"href"</span><span class="pun">],</span><span class="pln"> a_list</span><span class="pun">))</span></code></li><li class="L7"><code class="lang-python"><span class="pln">    </span><span class="kwd">print</span><span class="pun">(</span><span class="str">"Craw Page {}, and find {} links"</span><span class="pun">.</span><span class="pln">format</span><span class="pun">(</span><span class="pln">p</span><span class="pun">,</span><span class="pln">len</span><span class="pun">(</span><span class="pln">article_list</span><span class="pun">)))</span></code></li><li class="L8"><code class="lang-python"><span class="pln">    </span><span class="kwd">for</span><span class="pln"> a </span><span class="kwd">in</span><span class="pln"> article_list</span><span class="pun">:</span></code></li><li class="L9"><code class="lang-python"><span class="pln">        page_1 </span><span class="pun">=</span><span class="pln"> s</span><span class="pun">.</span><span class="pln">get</span><span class="pun">(</span><span class="pln">a</span><span class="pun">)</span></code></li><li class="L0"><code class="lang-python"><span class="pln">        </span><span class="kwd">if</span><span class="pln"> re</span><span class="pun">.</span><span class="pln">search</span><span class="pun">(</span><span class="str">"A\d{3}"</span><span class="pun">,</span><span class="pln">page_1</span><span class="pun">.</span><span class="pln">text</span><span class="pun">):</span></code></li><li class="L1"><code class="lang-python"><span class="pln">            secret_key </span><span class="pun">=</span><span class="pln"> re</span><span class="pun">.</span><span class="pln">search</span><span class="pun">(</span><span class="str">"A\d{3}"</span><span class="pun">,</span><span class="pln">page_1</span><span class="pun">.</span><span class="pln">text</span><span class="pun">).</span><span class="pln">group</span><span class="pun">(</span><span class="lit">0</span><span class="pun">)</span></code></li><li class="L2"><code class="lang-python"><span class="pln">            page_2 </span><span class="pun">=</span><span class="pln"> s</span><span class="pun">.</span><span class="pln">post</span><span class="pun">(</span><span class="pln">a</span><span class="pun">,</span><span class="pln">data</span><span class="pun">={</span><span class="str">"e_secret_key"</span><span class="pun">:</span><span class="pln">secret_key</span><span class="pun">})</span></code></li><li class="L3"><code class="lang-python"><span class="pln">            page_bs </span><span class="pun">=</span><span class="pln"> </span><span class="typ">BeautifulSoup</span><span class="pun">(</span><span class="pln">page_2</span><span class="pun">.</span><span class="pln">text</span><span class="pun">,</span><span class="str">"lxml"</span><span class="pun">)</span></code></li><li class="L4"><code class="lang-python"><span class="pln">            name_ </span><span class="pun">=</span><span class="pln"> page_bs</span><span class="pun">.</span><span class="pln">select_one</span><span class="pun">(</span><span class="str">"div.title-article a"</span><span class="pun">).</span><span class="pln">get_text</span><span class="pun">()</span></code></li><li class="L5"><code class="lang-python"><span class="pln">            baidu_link </span><span class="pun">=</span><span class="pln"> re</span><span class="pun">.</span><span class="pln">search</span><span class="pun">(</span><span class="str">"go\.php\?url=(https?://pan.baidu.com/s/[^']+)'"</span><span class="pun">,</span><span class="pln">page_2</span><span class="pun">.</span><span class="pln">text</span><span class="pun">).</span><span class="pln">group</span><span class="pun">(</span><span class="lit">1</span><span class="pun">)</span></code></li><li class="L6"><code class="lang-python"><span class="pln">            descr </span><span class="pun">=</span><span class="pln"> str</span><span class="pun">(</span><span class="pln">page_bs</span><span class="pun">.</span><span class="pln">select_one</span><span class="pun">(</span><span class="str">"div.centent-article"</span><span class="pun">))</span></code></li><li class="L7"><code class="lang-python"><span class="pln">            descr </span><span class="pun">=</span><span class="pln"> descr</span><span class="pun">[:</span><span class="pln">descr</span><span class="pun">.</span><span class="pln">find</span><span class="pun">(</span><span class="str">"&lt;!-- 内容主体结束 --&gt;"</span><span class="pun">)]</span></code></li><li class="L8"><code class="lang-python"><span class="pln">            cur</span><span class="pun">.</span><span class="pln">execute</span><span class="pun">(</span><span class="str">"INSERT INTO `mygalgame` (`raw_link`, `name`, `baidu_link`, `secret_key`, `descr`) VALUES (?,?,?,?,?)"</span><span class="pun">,(</span><span class="pln">a</span><span class="pun">,</span><span class="pln">name_</span><span class="pun">,</span><span class="pln">baidu_link</span><span class="pun">,</span><span class="pln">secret_key</span><span class="pun">,</span><span class="pln">descr</span><span class="pun">))</span></code></li><li class="L9"><code class="lang-python"><span class="pln">            </span><span class="kwd">print</span><span class="pun">(</span><span class="str">"{}: {} OK~"</span><span class="pun">.</span><span class="pln">format</span><span class="pun">(</span><span class="pln">secret_key</span><span class="pun">,</span><span class="pln">a</span><span class="pun">))</span></code></li><li class="L0"><code class="lang-python"><span class="pln">            db</span><span class="pun">.</span><span class="pln">commit</span><span class="pun">()</span></code></li><li class="L1"><code class="lang-python"><span class="pln">        time</span><span class="pun">.</span><span class="pln">sleep</span><span class="pun">(</span><span class="lit">5</span><span class="pun">)</span></code></li><li class="L2"><code class="lang-python"><span class="pln">    </span><span class="kwd">print</span><span class="pun">(</span><span class="str">"Page {} Over~"</span><span class="pun">.</span><span class="pln">format</span><span class="pun">(</span><span class="pln">p</span><span class="pun">))</span></code></li><li class="L3"><code class="lang-python"><span class="pln">    time</span><span class="pun">.</span><span class="pln">sleep</span><span class="pun">(</span><span class="lit">5</span><span class="pun">)</span></code></li></ol></pre>
+<p>经过上述爬取，仍发现几项缺失，具体列在下表：</p>
+<table>
+<thead>
+<tr>
+<th>缺失项</th>
+<th>可能的名称</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A345</td>
+<td><em>*</em>资源吃饭</td>
+<td>没找到~</td>
+</tr>
+<tr>
+<td>A457</td>
+<td>下级生2</td>
+<td>与下级生1（A456）同一页面</td>
+</tr>
+<tr>
+<td>A458</td>
+<td>恋×シンアイ彼女 体験版</td>
+<td>正式版见<a href="https://www.mygalgame.com/xiangyaochuandageinideailian.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">A584</a></td>
+</tr>
+<tr>
+<td>A516</td>
+<td>オトメ＊ドメイン 体験版</td>
+<td>参见他人备份补齐</td>
+</tr>
+<tr>
+<td>A574</td>
+<td><a href="https://www.mygalgame.com/qianlianwanhua.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">千恋＊万花</a></td>
+<td>手动补齐</td>
+</tr>
+</tbody>
+</table>
+<h2 id="h2-u767Eu5EA6u4E91u8F6Cu5B58u4E0Bu8F7D"><a name="百度云转存下载" class="reference-link" data-mx-warn="Empty URL"></a><span class="header-link octicon octicon-link"></span>百度云转存下载</h2><p>使用Selenium半自动登陆并转存。代码如下，前半部分登陆手动完成，后面分享转存交由程序进行。</p>
+<pre class="prettyprint linenums prettyprinted prettyprint linenums" style=""><ol class="linenums"><li class="L0"><code class="lang-python"><span class="kwd">from</span><span class="pln"> selenium </span><span class="kwd">import</span><span class="pln"> webdriver</span></code></li><li class="L1"><code class="lang-python"><span class="kwd">from</span><span class="pln"> selenium</span><span class="pun">.</span><span class="pln">webdriver</span><span class="pun">.</span><span class="pln">common</span><span class="pun">.</span><span class="pln">keys </span><span class="kwd">import</span><span class="pln"> </span><span class="typ">Keys</span></code></li><li class="L2"><code class="lang-python"></code></li><li class="L3"><code class="lang-python"><span class="pln">browser </span><span class="pun">=</span><span class="pln"> webdriver</span><span class="pun">.</span><span class="typ">Chrome</span><span class="pun">(</span><span class="pln">r</span><span class="str">"d:\chromedriver.exe"</span><span class="pun">)</span></code></li><li class="L4"><code class="lang-python"><span class="pln">browser</span><span class="pun">.</span><span class="pln">get</span><span class="pun">(</span><span class="str">"https://pan.baidu.com"</span><span class="pun">)</span><span class="pln">  </span><span class="com"># 用户登陆（手动）</span></code></li><li class="L5"><code class="lang-python"></code></li><li class="L6"><code class="lang-python"><span class="pln">uk_list </span><span class="pun">=</span><span class="pln"> cur</span><span class="pun">.</span><span class="pln">execute</span><span class="pun">(</span><span class="str">"SELECT baidu_link,secret_key from mygalgame order by secret_key asc"</span><span class="pun">).</span><span class="pln">fetchall</span><span class="pun">()</span></code></li><li class="L7"><code class="lang-python"><span class="kwd">for</span><span class="pln"> url</span><span class="pun">,</span><span class="pln">key </span><span class="kwd">in</span><span class="pln"> uk_list</span><span class="pun">:</span></code></li><li class="L8"><code class="lang-python"><span class="pln">    </span><span class="kwd">try</span><span class="pun">:</span></code></li><li class="L9"><code class="lang-python"><span class="pln">        browser</span><span class="pun">.</span><span class="pln">get</span><span class="pun">(</span><span class="pln">url</span><span class="pun">)</span><span class="pln">   </span><span class="com"># 打开分享链接</span></code></li><li class="L0"><code class="lang-python"><span class="pln">        browser</span><span class="pun">.</span><span class="pln">implicitly_wait</span><span class="pun">(</span><span class="lit">3</span><span class="pun">)</span><span class="pln">   </span><span class="com"># 等待3秒</span></code></li><li class="L1"><code class="lang-python"><span class="pln">        browser</span><span class="pun">.</span><span class="pln">find_element_by_tag_name</span><span class="pun">(</span><span class="str">"input"</span><span class="pun">).</span><span class="pln">send_keys</span><span class="pun">(</span><span class="pln">key</span><span class="pun">,</span><span class="typ">Keys</span><span class="pun">.</span><span class="pln">ENTER</span><span class="pun">)</span><span class="pln">  </span><span class="com"># 输入分享密码并回车</span></code></li><li class="L2"><code class="lang-python"><span class="pln">        browser</span><span class="pun">.</span><span class="pln">implicitly_wait</span><span class="pun">(</span><span class="lit">5</span><span class="pun">)</span></code></li><li class="L3"><code class="lang-python"><span class="pln">        browser</span><span class="pun">.</span><span class="pln">find_element_by_xpath</span><span class="pun">(</span><span class="str">'//*[@id="shareqr"]/div[2]/div[2]/div/ul[1]/li[1]/div/span[1]'</span><span class="pun">).</span><span class="pln">click</span><span class="pun">()</span><span class="pln">  </span><span class="com"># 全选分享文件</span></code></li><li class="L4"><code class="lang-python"><span class="pln">        browser</span><span class="pun">.</span><span class="pln">find_element_by_xpath</span><span class="pun">(</span><span class="str">'//*[@id="bd-main"]/div/div[1]/div/div[2]/div/div/div[2]/a[1]/span/span'</span><span class="pun">).</span><span class="pln">click</span><span class="pun">()</span><span class="pln">  </span><span class="com"># 点击转存按钮</span></code></li><li class="L5"><code class="lang-python"><span class="pln">        browser</span><span class="pun">.</span><span class="pln">implicitly_wait</span><span class="pun">(</span><span class="lit">2</span><span class="pun">)</span></code></li><li class="L6"><code class="lang-python"><span class="pln">        browser</span><span class="pun">.</span><span class="pln">find_element_by_xpath</span><span class="pun">(</span><span class="str">'//*[@id="fileTreeDialog"]/div[3]'</span><span class="pun">).</span><span class="pln">click</span><span class="pun">()</span><span class="pln">  </span><span class="com"># 勾选上次保存位置</span></code></li><li class="L7"><code class="lang-python"><span class="pln">        browser</span><span class="pun">.</span><span class="pln">implicitly_wait</span><span class="pun">(</span><span class="lit">2</span><span class="pun">)</span></code></li><li class="L8"><code class="lang-python"><span class="pln">        browser</span><span class="pun">.</span><span class="pln">find_element_by_xpath</span><span class="pun">(</span><span class="str">'//*[@id="fileTreeDialog"]/div[4]/a[2]/span'</span><span class="pun">).</span><span class="pln">click</span><span class="pun">()</span><span class="pln">  </span><span class="com"># 点击确认按钮</span></code></li><li class="L9"><code class="lang-python"><span class="pln">        browser</span><span class="pun">.</span><span class="pln">implicitly_wait</span><span class="pun">(</span><span class="lit">2</span><span class="pun">)</span></code></li><li class="L0"><code class="lang-python"><span class="pln">        </span><span class="kwd">print</span><span class="pun">(</span><span class="str">"Transfer {}#{} Success~"</span><span class="pun">.</span><span class="pln">format</span><span class="pun">(</span><span class="pln">url</span><span class="pun">,</span><span class="pln">key</span><span class="pun">))</span></code></li><li class="L1"><code class="lang-python"><span class="pln">    </span><span class="kwd">except</span><span class="pln"> </span><span class="typ">Exception</span><span class="pun">:</span></code></li><li class="L2"><code class="lang-python"><span class="pln">        </span><span class="kwd">print</span><span class="pun">(</span><span class="str">"Transfer {}#{} Fail!!!!"</span><span class="pun">.</span><span class="pln">format</span><span class="pun">(</span><span class="pln">url</span><span class="pun">,</span><span class="pln">key</span><span class="pun">))</span></code></li></ol></pre>
+<p><img src="assets/1571155700-0a1f59862901f5fbd3eea1443d924d89.jpg" alt="TIM截图20180806131047.jpg"></p>
+<p>注意：</p>
+<ul>
+<li>估算每个Gal的体积为2G，故1T百度云盘约能转存500左右游戏。</li><li>请使用开发者工具block掉一些请求，以防止页面长时间等待加快速度。例如：</li></ul>
+<p><img src="assets/1571155700-c127fe8202c42d70beb5420646577a2d.jpg" alt="TIM截图20180806113155.jpg"></p>
+<p>而下载使用 <a href="https://github.com/iikira/BaiduPCS-Go" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">BaiduPCS-GO</a>。使用前面获取的BUDSS进行登陆，并使用screen挂在后台进行下载即可。（然而使用国外服务器下载还是很慢23333）</p>
+<h2 id="h2-u7B80u4ECBu6E05u6D17"><a name="简介清洗" class="reference-link" data-mx-warn="Empty URL"></a><span class="header-link octicon octicon-link"></span>简介清洗</h2><p>因为OneIndex能展示<code>READMD.md</code>，所以将原有html格式简介清洗为markdown格式的文件，示例格式如下：</p>
+<pre class="prettyprint linenums prettyprinted prettyprint linenums" style=""><ol class="linenums"><li class="L0"><code class="lang-python"><span class="kwd">import</span><span class="pln"> subprocess</span></code></li><li class="L1"><code class="lang-python"><span class="kwd">import</span><span class="pln"> sqlite3</span></code></li><li class="L2"><code class="lang-python"><span class="kwd">import</span><span class="pln"> re</span></code></li><li class="L3"><code class="lang-python"></code></li><li class="L4"><code class="lang-python"><span class="kwd">from</span><span class="pln"> markdownify </span><span class="kwd">import</span><span class="pln"> markdownify </span><span class="kwd">as</span><span class="pln"> md</span></code></li><li class="L5"><code class="lang-python"><span class="kwd">from</span><span class="pln"> bs4 </span><span class="kwd">import</span><span class="pln"> </span><span class="typ">BeautifulSoup</span></code></li><li class="L6"><code class="lang-python"></code></li><li class="L7"><code class="lang-python"><span class="pln">process </span><span class="pun">=</span><span class="pln"> subprocess</span><span class="pun">.</span><span class="typ">Popen</span><span class="pun">([</span><span class="str">'rclone'</span><span class="pun">,</span><span class="str">'lsd'</span><span class="pun">,</span><span class="str">'GDrive:/galgame'</span><span class="pun">],</span><span class="pln"> stdout</span><span class="pun">=</span><span class="pln">subprocess</span><span class="pun">.</span><span class="pln">PIPE</span><span class="pun">)</span></code></li><li class="L8"><code class="lang-python"><span class="pln">output</span><span class="pun">,</span><span class="pln"> _  </span><span class="pun">=</span><span class="pln">process</span><span class="pun">.</span><span class="pln">communicate</span><span class="pun">()</span></code></li><li class="L9"><code class="lang-python"></code></li><li class="L0"><code class="lang-python"><span class="pln">output </span><span class="pun">=</span><span class="pln"> str</span><span class="pun">(</span><span class="pln">output</span><span class="pun">,</span><span class="str">"utf-8"</span><span class="pun">)</span></code></li><li class="L1"><code class="lang-python"></code></li><li class="L2"><code class="lang-python"><span class="pln">outlist </span><span class="pun">=</span><span class="pln"> output</span><span class="pun">.</span><span class="pln">splitlines</span><span class="pun">()</span></code></li><li class="L3"><code class="lang-python"></code></li><li class="L4"><code class="lang-python"><span class="pln">db </span><span class="pun">=</span><span class="pln"> sqlite3</span><span class="pun">.</span><span class="pln">connect</span><span class="pun">(</span><span class="pln">r</span><span class="str">"f:/mygalgame.db"</span><span class="pun">)</span></code></li><li class="L5"><code class="lang-python"><span class="pln">cur </span><span class="pun">=</span><span class="pln"> db</span><span class="pun">.</span><span class="pln">cursor</span><span class="pun">()</span></code></li><li class="L6"><code class="lang-python"></code></li><li class="L7"><code class="lang-python"><span class="pln">temple </span><span class="pun">=</span><span class="pln"> </span><span class="str">"""</span></code></li><li class="L8"><code class="lang-python"><span class="str"># {name}</span></code></li><li class="L9"><code class="lang-python"></code></li><li class="L0"><code class="lang-python"><span class="str">&gt; 来源于： [{source_link}]({source_link})</span></code></li><li class="L1"><code class="lang-python"></code></li><li class="L2"><code class="lang-python"><span class="str">## 游戏截图</span></code></li><li class="L3"><code class="lang-python"></code></li><li class="L4"><code class="lang-python"><span class="str">{img_list}</span></code></li><li class="L5"><code class="lang-python"></code></li><li class="L6"><code class="lang-python"><span class="str">## 游戏简介</span></code></li><li class="L7"><code class="lang-python"></code></li><li class="L8"><code class="lang-python"><span class="str">{introduce}</span></code></li><li class="L9"><code class="lang-python"></code></li><li class="L0"><code class="lang-python"><span class="str">## 汉化STAFF</span></code></li><li class="L1"><code class="lang-python"></code></li><li class="L2"><code class="lang-python"><span class="str">{staff}</span></code></li><li class="L3"><code class="lang-python"></code></li><li class="L4"><code class="lang-python"></code></li><li class="L5"><code class="lang-python"><span class="str">## 文件信息</span></code></li><li class="L6"><code class="lang-python"></code></li><li class="L7"><code class="lang-python"><span class="str">备注： {beizhu}</span></code></li><li class="L8"><code class="lang-python"></code></li><li class="L9"><code class="lang-python"><span class="str">{note}</span></code></li><li class="L0"><code class="lang-python"></code></li><li class="L1"><code class="lang-python"><span class="str">标签： {tag}</span></code></li><li class="L2"><code class="lang-python"><span class="str">"""</span></code></li><li class="L3"><code class="lang-python"></code></li><li class="L4"><code class="lang-python"></code></li><li class="L5"><code class="lang-python"><span class="kwd">for</span><span class="pln"> i </span><span class="kwd">in</span><span class="pln"> outlist</span><span class="pun">:</span></code></li><li class="L6"><code class="lang-python"><span class="pln">    oid </span><span class="pun">=</span><span class="pln"> re</span><span class="pun">.</span><span class="pln">search</span><span class="pun">(</span><span class="str">"A\d{3}"</span><span class="pun">,</span><span class="pln">i</span><span class="pun">).</span><span class="pln">group</span><span class="pun">(</span><span class="lit">0</span><span class="pun">)</span></code></li><li class="L7"><code class="lang-python"></code></li><li class="L8"><code class="lang-python"><span class="pln">    </span><span class="kwd">print</span><span class="pun">(</span><span class="str">"开始处理{}"</span><span class="pun">.</span><span class="pln">format</span><span class="pun">(</span><span class="pln">i</span><span class="pun">))</span></code></li><li class="L9"><code class="lang-python"></code></li><li class="L0"><code class="lang-python"><span class="pln">    sourcename </span><span class="pun">=</span><span class="pln"> re</span><span class="pun">.</span><span class="pln">search</span><span class="pun">(</span><span class="str">"A\d{3}.*?$"</span><span class="pun">,</span><span class="pln">i</span><span class="pun">).</span><span class="pln">group</span><span class="pun">(</span><span class="lit">0</span><span class="pun">)</span></code></li><li class="L1"><code class="lang-python"></code></li><li class="L2"><code class="lang-python"><span class="pln">    fetch_ </span><span class="pun">=</span><span class="pln"> cur</span><span class="pun">.</span><span class="pln">execute</span><span class="pun">(</span><span class="str">"SELECT * FROM mygalgame where secret_key = ? "</span><span class="pun">,[</span><span class="pln">oid</span><span class="pun">])</span></code></li><li class="L3"><code class="lang-python"><span class="pln">    link</span><span class="pun">,</span><span class="pln">name</span><span class="pun">,</span><span class="pln">bdlink</span><span class="pun">,</span><span class="pln">key</span><span class="pun">,</span><span class="pln">descr</span><span class="pun">,</span><span class="pln">_ </span><span class="pun">=</span><span class="pln"> fetch_</span><span class="pun">.</span><span class="pln">fetchone</span><span class="pun">()</span></code></li><li class="L4"><code class="lang-python"></code></li><li class="L5"><code class="lang-python"><span class="pln">    de_bs </span><span class="pun">=</span><span class="pln"> </span><span class="typ">BeautifulSoup</span><span class="pun">(</span><span class="pln">descr</span><span class="pun">,</span><span class="str">"lxml"</span><span class="pun">)</span></code></li><li class="L6"><code class="lang-python"><span class="pln">    img_list </span><span class="pun">=</span><span class="pln"> de_bs</span><span class="pun">.</span><span class="pln">find_all</span><span class="pun">(</span><span class="str">"img"</span><span class="pun">)</span></code></li><li class="L7"><code class="lang-python"><span class="pln">    img_md </span><span class="pun">=</span><span class="pln"> </span><span class="str">"\n"</span><span class="pun">.</span><span class="pln">join</span><span class="pun">(</span><span class="pln">map</span><span class="pun">(</span><span class="kwd">lambda</span><span class="pln"> x</span><span class="pun">:</span><span class="str">"![]({})"</span><span class="pun">.</span><span class="pln">format</span><span class="pun">(</span><span class="pln">x</span><span class="pun">[</span><span class="str">"src"</span><span class="pun">]),</span><span class="pln">img_list</span><span class="pun">))</span></code></li><li class="L8"><code class="lang-python"></code></li><li class="L9"><code class="lang-python"><span class="pln">    introduce </span><span class="pun">=</span><span class="pln"> staff </span><span class="pun">=</span><span class="pln"> beizhu  </span><span class="pun">=</span><span class="pln"> tag </span><span class="pun">=</span><span class="pln">  </span><span class="str">""</span></code></li><li class="L0"><code class="lang-python"></code></li><li class="L1"><code class="lang-python"><span class="pln">    main_part </span><span class="pun">=</span><span class="pln"> de_bs</span><span class="pun">.</span><span class="pln">find_all</span><span class="pun">(</span><span class="str">"div"</span><span class="pun">,</span><span class="pln">class_</span><span class="pun">=</span><span class="str">"alert-success"</span><span class="pun">)</span></code></li><li class="L2"><code class="lang-python"></code></li><li class="L3"><code class="lang-python"><span class="pln">    </span><span class="kwd">if</span><span class="pln"> len</span><span class="pun">(</span><span class="pln">main_part</span><span class="pun">)</span><span class="pln"> </span><span class="pun">==</span><span class="pln"> </span><span class="lit">1</span><span class="pun">:</span></code></li><li class="L4"><code class="lang-python"><span class="pln">        i_tag </span><span class="pun">=</span><span class="pln"> main_part</span><span class="pun">[</span><span class="lit">0</span><span class="pun">]</span></code></li><li class="L5"><code class="lang-python"><span class="pln">        introduce </span><span class="pun">=</span><span class="pln"> md</span><span class="pun">(</span><span class="pln">str</span><span class="pun">(</span><span class="pln">i_tag</span><span class="pun">))</span></code></li><li class="L6"><code class="lang-python"><span class="pln">    </span><span class="kwd">elif</span><span class="pln"> len</span><span class="pun">(</span><span class="pln">main_part</span><span class="pun">)</span><span class="pln"> </span><span class="pun">&gt;</span><span class="pln"> </span><span class="lit">1</span><span class="pun">:</span></code></li><li class="L7"><code class="lang-python"><span class="pln">        i_tag</span><span class="pun">,</span><span class="pln">s_tag </span><span class="pun">=</span><span class="pln"> main_part</span><span class="pun">[:</span><span class="lit">2</span><span class="pun">]</span></code></li><li class="L8"><code class="lang-python"><span class="pln">        staff </span><span class="pun">=</span><span class="pln"> md</span><span class="pun">(</span><span class="pln">str</span><span class="pun">(</span><span class="pln">s_tag</span><span class="pun">))</span></code></li><li class="L9"><code class="lang-python"><span class="pln">        introduce </span><span class="pun">=</span><span class="pln"> md</span><span class="pun">(</span><span class="pln">str</span><span class="pun">(</span><span class="pln">i_tag</span><span class="pun">))</span></code></li><li class="L0"><code class="lang-python"></code></li><li class="L1"><code class="lang-python"><span class="pln">    beizhu_search </span><span class="pun">=</span><span class="pln"> re</span><span class="pun">.</span><span class="pln">search</span><span class="pun">(</span><span class="str">'备注：&lt;span style="color: #ff0000;"&gt;(.+?)&lt;/span&gt;'</span><span class="pun">,</span><span class="pln">descr</span><span class="pun">)</span></code></li><li class="L2"><code class="lang-python"><span class="pln">    </span><span class="kwd">if</span><span class="pln"> beizhu_search</span><span class="pun">:</span></code></li><li class="L3"><code class="lang-python"><span class="pln">        beizhu </span><span class="pun">=</span><span class="pln"> beizhu_search</span><span class="pun">.</span><span class="pln">group</span><span class="pun">(</span><span class="lit">1</span><span class="pun">)</span></code></li><li class="L4"><code class="lang-python"></code></li><li class="L5"><code class="lang-python"><span class="pln">    tag_list_raw </span><span class="pun">=</span><span class="pln"> de_bs</span><span class="pun">.</span><span class="pln">find_all</span><span class="pun">(</span><span class="str">"a"</span><span class="pun">,</span><span class="pln">rel</span><span class="pun">=</span><span class="str">"tag"</span><span class="pun">)</span></code></li><li class="L6"><code class="lang-python"><span class="pln">    </span><span class="kwd">if</span><span class="pln"> len</span><span class="pun">(</span><span class="pln">tag_list_raw</span><span class="pun">)</span><span class="pln"> </span><span class="pun">&gt;</span><span class="pln"> </span><span class="lit">0</span><span class="pun">:</span></code></li><li class="L7"><code class="lang-python"><span class="pln">        tag_list </span><span class="pun">=</span><span class="pln"> map</span><span class="pun">(</span><span class="kwd">lambda</span><span class="pln"> x</span><span class="pun">:</span><span class="pln">x</span><span class="pun">.</span><span class="pln">get_text</span><span class="pun">(</span><span class="pln">strip</span><span class="pun">=</span><span class="kwd">True</span><span class="pun">),</span><span class="pln">tag_list_raw</span><span class="pun">)</span></code></li><li class="L8"><code class="lang-python"><span class="pln">        tag </span><span class="pun">=</span><span class="pln"> </span><span class="str">", "</span><span class="pun">.</span><span class="pln">join</span><span class="pun">(</span><span class="pln">tag_list</span><span class="pun">)</span></code></li><li class="L9"><code class="lang-python"></code></li><li class="L0"><code class="lang-python"></code></li><li class="L1"><code class="lang-python"><span class="pln">    note </span><span class="pun">=</span><span class="pln"> md</span><span class="pun">(</span><span class="pln">str</span><span class="pun">(</span><span class="pln">de_bs</span><span class="pun">.</span><span class="pln">find</span><span class="pun">(</span><span class="str">"div"</span><span class="pun">,</span><span class="pln">class_</span><span class="pun">=</span><span class="str">"alert-info"</span><span class="pun">))).</span><span class="pln">replace</span><span class="pun">(</span><span class="str">"任何解压相关问题请看网站顶部解压必读，不看而发问直接小黑屋"</span><span class="pun">,</span><span class="str">""</span><span class="pun">).</span><span class="pln">strip</span><span class="pun">()</span></code></li><li class="L2"><code class="lang-python"></code></li><li class="L3"><code class="lang-python"><span class="pln">    md_data </span><span class="pun">=</span><span class="pln"> temple</span><span class="pun">.</span><span class="pln">format</span><span class="pun">(</span><span class="pln">name</span><span class="pun">=</span><span class="pln">name</span><span class="pun">,</span><span class="pln">source_link</span><span class="pun">=</span><span class="pln">link</span><span class="pun">,</span><span class="pln">img_list</span><span class="pun">=</span><span class="pln">img_md</span><span class="pun">,</span><span class="pln">introduce</span><span class="pun">=</span><span class="pln">introduce</span><span class="pun">.</span><span class="pln">replace</span><span class="pun">(</span><span class="str">"\n"</span><span class="pun">,</span><span class="str">"\n\n"</span><span class="pun">),</span></code></li><li class="L4"><code class="lang-python"><span class="pln">    staff</span><span class="pun">=</span><span class="pln">staff</span><span class="pun">.</span><span class="pln">replace</span><span class="pun">(</span><span class="str">"\n"</span><span class="pun">,</span><span class="str">"\n\n"</span><span class="pun">),</span><span class="pln">note</span><span class="pun">=</span><span class="pln">note</span><span class="pun">.</span><span class="pln">replace</span><span class="pun">(</span><span class="str">"\n"</span><span class="pun">,</span><span class="str">"\n\n"</span><span class="pun">),</span><span class="pln">beizhu</span><span class="pun">=</span><span class="pln">beizhu</span><span class="pun">,</span><span class="pln">tag</span><span class="pun">=</span><span class="pln">tag</span><span class="pun">)</span></code></li><li class="L5"><code class="lang-python"><span class="pln">    </span><span class="kwd">print</span><span class="pun">(</span><span class="str">"生成的Markdown格式如下"</span><span class="pun">,</span><span class="pln">md_data</span><span class="pun">)</span></code></li><li class="L6"><code class="lang-python"></code></li><li class="L7"><code class="lang-python"><span class="pln">    </span><span class="kwd">with</span><span class="pln"> open</span><span class="pun">(</span><span class="pln">r</span><span class="str">"F:\Temp\README.md"</span><span class="pun">,</span><span class="str">"w"</span><span class="pun">,</span><span class="pln">encoding</span><span class="pun">=</span><span class="str">"utf-8"</span><span class="pun">)</span><span class="pln"> </span><span class="kwd">as</span><span class="pln"> f</span><span class="pun">:</span></code></li><li class="L8"><code class="lang-python"><span class="pln">        f</span><span class="pun">.</span><span class="pln">write</span><span class="pun">(</span><span class="pln">md_data</span><span class="pun">)</span></code></li><li class="L9"><code class="lang-python"><span class="pln">        </span><span class="kwd">print</span><span class="pun">(</span><span class="str">"写入临时文件完成"</span><span class="pun">)</span></code></li><li class="L0"><code class="lang-python"></code></li><li class="L1"><code class="lang-python"><span class="pln">    process </span><span class="pun">=</span><span class="pln"> subprocess</span><span class="pun">.</span><span class="typ">Popen</span><span class="pun">([</span><span class="str">'rclone'</span><span class="pun">,</span><span class="str">'copy'</span><span class="pun">,</span><span class="pln">r</span><span class="str">"F:\Temp\README.md"</span><span class="pun">,</span><span class="str">'GDrive:/galgame/{}'</span><span class="pun">.</span><span class="pln">format</span><span class="pun">(</span><span class="pln">sourcename</span><span class="pun">)],</span><span class="pln"> stdout</span><span class="pun">=</span><span class="pln">subprocess</span><span class="pun">.</span><span class="pln">PIPE</span><span class="pun">)</span></code></li><li class="L2"><code class="lang-python"><span class="pln">    process</span><span class="pun">.</span><span class="pln">communicate</span><span class="pun">()</span></code></li><li class="L3"><code class="lang-python"><span class="pln">    </span><span class="kwd">print</span><span class="pun">(</span><span class="str">"上传 README.md 完成"</span><span class="pun">)</span></code></li><li class="L4"><code class="lang-python"></code></li><li class="L5"><code class="lang-python"><span class="pln">    dstname </span><span class="pun">=</span><span class="pln"> </span><span class="str">"{}@{}"</span><span class="pun">.</span><span class="pln">format</span><span class="pun">(</span><span class="pln">key</span><span class="pun">,</span><span class="pln">name</span><span class="pun">)</span></code></li><li class="L6"><code class="lang-python"><span class="pln">    process </span><span class="pun">=</span><span class="pln"> subprocess</span><span class="pun">.</span><span class="typ">Popen</span><span class="pun">([</span><span class="str">'rclone'</span><span class="pun">,</span><span class="str">'moveto'</span><span class="pun">,</span><span class="str">'GDrive:/galgame/{}'</span><span class="pun">.</span><span class="pln">format</span><span class="pun">(</span><span class="pln">sourcename</span><span class="pun">),</span><span class="str">'GDrive:/mygalgame/{}'</span><span class="pun">.</span><span class="pln">format</span><span class="pun">(</span><span class="pln">dstname</span><span class="pun">)],</span><span class="pln"> stdout</span><span class="pun">=</span><span class="pln">subprocess</span><span class="pun">.</span><span class="pln">PIPE</span><span class="pun">)</span></code></li><li class="L7"><code class="lang-python"><span class="pln">    process</span><span class="pun">.</span><span class="pln">communicate</span><span class="pun">()</span></code></li><li class="L8"><code class="lang-python"><span class="pln">    </span><span class="kwd">print</span><span class="pun">(</span><span class="str">"文件夹 重命名+移动 完成"</span><span class="pun">)</span></code></li></ol></pre>
+<h2 id="h2-oneindex-"><a name="OneIndex建站" class="reference-link" data-mx-warn="Empty URL"></a><span class="header-link octicon octicon-link"></span>OneIndex建站</h2><p>随意找一个微软5T的盘，绑定OneIndex进行展示，使用rclone将Google Drive上面的文件夹完全转发。</p>
+</div> </div>
+</div>
+<div class="post-footer main-content-wrap">
+<div style=" text-align: center;">
+<div id="QR">
+<div id="wechat" style="display: inline-block;    padding-right: 7px;">
+<img id="wechat_qr" src="assets/1571155700-b303e33dd3e9e7e423e7c69d837c26d9.jpg" alt="jrotty WeChat Pay">
+<p style=" text-indent: 0em; margin-left:-0em;">微信打赏</p>
+</div>
+<div id="alipay" style="display: inline-block;    padding-left: 7px;"><img id="alipay_qr" src="assets/1571155700-6b66a2c56f30484ea6b5528f3732f776.jpg" alt="jrotty Alipay">
+<p style=" text-indent: 0em; margin-left:-0em;">支付宝打赏</p>
+</div>
+</div>
+
+<a id="rewardButton" disable="enable" onclick="var qr = document.getElementById('ew');var ds = document.getElementById('QR');if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}{ds.style.display='none'}" class="tag tag--primary tag--small t-link" data-mx-warn="Empty URL">
+文章二维码
+</a>
+<a id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); var ds = document.getElementById('ew');if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'} {ds.style.display='none'}" class="tag tag--primary tag--small t-link" data-mx-warn="Empty URL">
+赏
+</a>
+</div>
+<div class="post-footer-tags"><div style="float:right">最后由 <a href="https://blog.rhilip.info/author/1/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Rhilip</a> 编辑于 2019:09:30 <xa title="点我点我" id="ymzz"></xa>
+</div>
+<span class="text-color-light text-small">TAGGED IN</span><br>
+<nav class="tag tag--primary tag--small t-link" style=" display: inline-block;">
+<a href="https://blog.rhilip.info/tag/Python/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Python</a></nav><nav class="tag tag--primary tag--small t-link" style=" display: inline-block;"><a href="https://blog.rhilip.info/tag/sqlite3/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">sqlite3</a></nav><nav class="tag tag--primary tag--small t-link" style=" display: inline-block;"><a href="https://blog.rhilip.info/tag/mygalgame/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">mygalgame</a>
+</nav> </div>
+<div class="post-actions-wrap">
+<nav>
+<ul class="post-actions post-action-nav">
+<li class="post-action">
+<a class="post-action-btn btn btn--default tooltip--top" href="https://blog.rhilip.info/archives/988/" data-tooltip="漫谈PT架构（5）： 构造一个Simple-Private-Tracker（Scrape部分）" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"> <i class="fa fa-angle-left"></i><span class="hide-xs hide-sm text-small icon-ml">PREVIOUS </span></a>
+</li>
+<li class="post-action">
+<a class="post-action-btn btn btn--default tooltip--top" href="https://blog.rhilip.info/archives/997/" data-tooltip="同机多NexusPHP站点改造" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+<i class="fa fa-angle-right"></i></a>
+</li>
+</ul>
+</nav>
+<ul class="post-actions post-action-share">
+ <li class="post-action hide-xs">
+<a class="post-action-btn btn btn--default" target="_blank" data-tooltip="分享至Google" href="https://plus.google.com/share?url=https://blog.rhilip.info/archives/995/" referrerpolicy="no-referrer" rel="noopener noreferrer">
+<i class="fa fa-google-plus"></i>
+</a>
+</li>
+<li class="post-action hide-xs">
+<a class="post-action-btn btn btn--default tooltip--top" target="_blank" data-tooltip="分享至QQ空间" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://blog.rhilip.info/archives/995/&amp;title=%E7%88%AC%E5%8F%96%E5%A4%87%E4%BB%BD%E2%80%9C%E5%BF%A7%E9%83%81%E7%9A%84%E5%BC%9F%E5%BC%9F%E2%80%9D%E7%AB%99%E7%82%B9Galgame&amp;site=R%E9%85%B1%E5%B0%8F%E7%AA%9D/&amp;pics=https://blog.rhilip.info/usr/uploads/2018/08/1001885792.jpg" referrerpolicy="no-referrer" rel="noopener noreferrer">
+<i class="fa fa-qq"></i>
+</a>
+</li>
+<li class="post-action hide-xs">
+<a class="post-action-btn btn btn--default" target="_blank" data-tooltip="分享至新浪微博" href="http://service.weibo.com/share/share.php?url=https://blog.rhilip.info/archives/995//&amp;appkey=R%E9%85%B1%E5%B0%8F%E7%AA%9D/&amp;title=%E7%88%AC%E5%8F%96%E5%A4%87%E4%BB%BD%E2%80%9C%E5%BF%A7%E9%83%81%E7%9A%84%E5%BC%9F%E5%BC%9F%E2%80%9D%E7%AB%99%E7%82%B9Galgame&amp;pic=https://blog.rhilip.info/usr/uploads/2018/08/1001885792.jpg" referrerpolicy="no-referrer" rel="noopener noreferrer">
+<i class="fa fa-weibo"></i>
+</a>
+</li>
+<li class="post-action">
+<a class="post-action-btn btn btn--default" href="#disqus_thread">
+<i class="fa fa-comment-o"></i>
+</a>
+</li>
+<li class="post-action"> <a class="post-action-btn btn btn--default" href="#mulu">
+<i class="fa fa-list"></i>
+</a> </li>
+</ul>
+</div>
+<div id="disqus_thread">
+<div class="comments" id="comments">
+<span class="widget-title"> 已有 6 条评论</span>
+<ol class="comment-list"><li itemscope="" itemtype="http://schema.org/UserComments" id="comment-51" class="comment-body comment-parent comment-odd">
+<div class="comment-author" itemprop="creator" itemscope="" itemtype="http://schema.org/Person">
+<span itemprop="image"><img class="avatar" src="assets/1571155700-2b6f8e39a769ff9e427b2667da711cfa.jpg" alt="全班最弱的女生" width="32" height="32"></span>
+<cite class="fn" itemprop="name">全班最弱的女生 </cite>
+</div>
+<div class="comment-meta">
+<a href="#comment-51"><time itemprop="commentTime" datetime="2018-09-20T07:53:31+08:00">September 20th, 2018 at 07:53 am</time></a>
+</div>
+<div class="comment-content" itemprop="commentText">
+<p>个人感觉 Selenium 这种神器 只在对网站实在没办法爬到数据了，最后才祭出 Selenium ，一般用 scrapy 就够了</p>
+</div>
+<div class="comment-reply">
+<a href="https://blog.rhilip.info/archives/995/?replyTo=51#respond-post-995" rel="noopener noreferrer" onclick="return TypechoComment.reply('comment-51', 51);" target="_blank" referrerpolicy="no-referrer">回复</a> </div>
+<div class="comment-children" itemprop="discusses">
+<ol class="comment-list"><li itemscope="" itemtype="http://schema.org/UserComments" id="comment-52" class="comment-body comment-child comment-level-odd comment-odd comment-by-author">
+<div class="comment-author" itemprop="creator" itemscope="" itemtype="http://schema.org/Person">
+<span itemprop="image"><img class="avatar" src="assets/1571155700-3438298c6f046e115b0bc5c13c637dd1.jpg" alt="Rhilip" width="32" height="32"></span>
+<cite class="fn" itemprop="name"><a href="https://blog.rhilip.info/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Rhilip</a></cite>
+</div>
+<div class="comment-meta">
+<a href="#comment-52"><time itemprop="commentTime" datetime="2018-09-20T14:40:18+08:00">September 20th, 2018 at 02:40 pm</time></a>
+</div>
+<div class="comment-content" itemprop="commentText">
+<p>爬取过程本来就没有用 selenium 呀，直接 requests 模拟发包的。当然你说的是 git 上面那个备份项目另说。Selenium 在此文中主要处理百度云转存，这个使用 requests 模拟过于麻烦，scrapy 这种纯抓取的肯定不能用。。</p>
+</div>
+<div class="comment-reply">
+<a href="https://blog.rhilip.info/archives/995/?replyTo=52#respond-post-995" rel="noopener noreferrer" onclick="return TypechoComment.reply('comment-52', 52);" target="_blank" referrerpolicy="no-referrer">回复</a> </div>
+</li>
+</ol> </div>
+</li>
+<li itemscope="" itemtype="http://schema.org/UserComments" id="comment-62" class="comment-body comment-parent comment-even">
+<div class="comment-author" itemprop="creator" itemscope="" itemtype="http://schema.org/Person">
+<span itemprop="image"><img class="avatar" src="assets/1571155700-de10c682a39f67c0891bbda2712d1cdc.jpg" alt="小火柴" width="32" height="32"></span>
+<cite class="fn" itemprop="name"><a href="https://google.com/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">小火柴</a></cite>
+</div>
+<div class="comment-meta">
+<a href="#comment-62"><time itemprop="commentTime" datetime="2018-11-23T10:13:15+08:00">November 23rd, 2018 at 10:13 am</time></a>
+</div>
+<div class="comment-content" itemprop="commentText">
+<p>现在忧郁的弟弟里需要输入图片验证码才能显示网盘链接，想请教一下这种情况下只能通过识别图片验证码得到答案加到 post 请求里才行吗？请问还有没有其他的处理方法获得网盘链接呢？</p>
+</div>
+<div class="comment-reply">
+<a href="https://blog.rhilip.info/archives/995/?replyTo=62#respond-post-995" rel="noopener noreferrer" onclick="return TypechoComment.reply('comment-62', 62);" target="_blank" referrerpolicy="no-referrer">回复</a> </div>
+<div class="comment-children" itemprop="discusses">
+<ol class="comment-list"><li itemscope="" itemtype="http://schema.org/UserComments" id="comment-63" class="comment-body comment-child comment-level-odd comment-odd comment-by-author">
+<div class="comment-author" itemprop="creator" itemscope="" itemtype="http://schema.org/Person">
+<span itemprop="image"><img class="avatar" src="assets/1571155700-3438298c6f046e115b0bc5c13c637dd1.jpg" alt="Rhilip" width="32" height="32"></span>
+<cite class="fn" itemprop="name"><a href="https://blog.rhilip.info/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Rhilip</a></cite>
+</div>
+<div class="comment-meta">
+<a href="#comment-63"><time itemprop="commentTime" datetime="2018-11-23T15:09:41+08:00">November 23rd, 2018 at 03:09 pm</time></a>
+</div>
+<div class="comment-content" itemprop="commentText">
+<p>是，直接上验证码识别吧。3 位纯数字还是很简单就能破解的。旧档可以找 Github 上某人的备份，直接 clone 整个项目。</p>
+</div>
+<div class="comment-reply">
+<a href="https://blog.rhilip.info/archives/995/?replyTo=63#respond-post-995" rel="noopener noreferrer" onclick="return TypechoComment.reply('comment-63', 63);" target="_blank" referrerpolicy="no-referrer">回复</a> </div>
+</li>
+</ol> </div>
+</li>
+<li itemscope="" itemtype="http://schema.org/UserComments" id="comment-119" class="comment-body comment-parent comment-odd">
+<div class="comment-author" itemprop="creator" itemscope="" itemtype="http://schema.org/Person">
+<span itemprop="image"><img class="avatar" src="assets/1571155700-2c687772087340256d323a843734eb6a.jpg" alt="DB" width="32" height="32"></span>
+<cite class="fn" itemprop="name"> DB</cite>
+</div>
+<div class="comment-meta">
+<a href="#comment-119"><time itemprop="commentTime" datetime="2019-10-12T17:06:45+08:00">October 12th, 2019 at 05:06 pm</time></a>
+</div>
+<div class="comment-content" itemprop="commentText">
+<p>请问如何能够一次性大量下载新版 OneDrive 中的文件（夹），有支持断点续传以及多线程的方式吗？谢谢。</p>
+</div>
+<div class="comment-reply">
+<a href="https://blog.rhilip.info/archives/995/?replyTo=119#respond-post-995" rel="noopener noreferrer" onclick="return TypechoComment.reply('comment-119', 119);" target="_blank" referrerpolicy="no-referrer">回复</a> </div>
+<div class="comment-children" itemprop="discusses">
+<ol class="comment-list"><li itemscope="" itemtype="http://schema.org/UserComments" id="comment-120" class="comment-body comment-child comment-level-odd comment-odd comment-by-author">
+<div class="comment-author" itemprop="creator" itemscope="" itemtype="http://schema.org/Person">
+<span itemprop="image"><img class="avatar" src="assets/1571155700-3438298c6f046e115b0bc5c13c637dd1.jpg" alt="Rhilip" width="32" height="32"></span>
+<cite class="fn" itemprop="name"><a href="https://blog.rhilip.info/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Rhilip</a></cite>
+</div>
+<div class="comment-meta">
+<a href="#comment-120"><time itemprop="commentTime" datetime="2019-10-12T20:34:36+08:00">October 12th, 2019 at 08:34 pm</time></a>
+</div>
+<div class="comment-content" itemprop="commentText">
+<p>目前没有找到</p>
+</div>
+<div class="comment-reply">
+<a href="https://blog.rhilip.info/archives/995/?replyTo=120#respond-post-995" rel="noopener noreferrer" onclick="return TypechoComment.reply('comment-120', 120);" target="_blank" referrerpolicy="no-referrer">回复</a> </div>
+</li>
+</ol> </div>
+</li>
+</ol> <div id="respond-post-995" class="respond">
+<div class="cancel-comment-reply">
+ </div>
+<span id="response" class="widget-title">添加新评论</span>
+<form method="post" action="https://blog.rhilip.info/archives/995/comment" id="comment-form">
+<div>
+<p class="comment-about">
+<label for="author" class="required">称呼</label>
+<input type="text" name="author" id="author" class="text" value="">
+</p>
+<p class="comment-about">
+<label for="mail" class="required">邮箱</label>
+<input type="email" name="mail" id="mail" class="text" value="">
+</p>
+<p class="comment-about">
+<label for="url">网站</label>
+<input type="url" name="url" id="url" class="text" placeholder="http://example.com" value="">
+</p>
+<p>
+<textarea rows="8" cols="50" name="text" class="text-area"></textarea>
+</p>
+</div>
+<div class="col2">
+<p>
+<button type="submit" class="submit">提交评论</button>
+</p>
+</div>
+<div class="clear"></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</article>
+ <footer id="footer" class="main-content-wrap">
+<span class="copyrights"> 博客已萌萌哒运行<span id="span_dt_dt">1135天0小时8分19秒</span><br>
+除非另有说明，本网站全部内容均为本人原创，并采用 “<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">署名（BY）- 非商业性（NC）- 相同方式共享（SA）</a>” 许可协议授权。<br>
+© 2016 R 酱小窝 /
+Power By <a target="_blank" href="http://typecho.org/" referrerpolicy="no-referrer" rel="noopener noreferrer">Typecho</a>
+/ Designed By <a target="_blank" href="http://qqdie.com/" referrerpolicy="no-referrer" rel="noopener noreferrer">Jrotty</a>
+/ Loading time 0.036s
+/ </span>
+</footer>
+</div>
+
+<div id="share-options-bar" class="share-options-bar" data-behavior="1">
+<ul class="share-options">
+<li class="share-option">
+<a class="share-option-btn" target="_blank" href="http://service.weibo.com/share/share.php?url=https://blog.rhilip.info/archives/995//&amp;appkey=R%E9%85%B1%E5%B0%8F%E7%AA%9D/&amp;title=%E7%88%AC%E5%8F%96%E5%A4%87%E4%BB%BD%E2%80%9C%E5%BF%A7%E9%83%81%E7%9A%84%E5%BC%9F%E5%BC%9F%E2%80%9D%E7%AB%99%E7%82%B9Galgame&amp;pic=https://blog.rhilip.info/usr/uploads/2018/08/1001885792.jpg" referrerpolicy="no-referrer" rel="noopener noreferrer">
+<i class="fa fa-weibo"></i><span class="">Share on 新浪微博</span>
+</a>
+</li>
+<li class="share-option">
+<a class="share-option-btn" target="_blank" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://blog.rhilip.info/archives/995/&amp;title=%E7%88%AC%E5%8F%96%E5%A4%87%E4%BB%BD%E2%80%9C%E5%BF%A7%E9%83%81%E7%9A%84%E5%BC%9F%E5%BC%9F%E2%80%9D%E7%AB%99%E7%82%B9Galgame&amp;site=R%E9%85%B1%E5%B0%8F%E7%AA%9D/&amp;pics=https://blog.rhilip.info/usr/uploads/2018/08/1001885792.jpg" referrerpolicy="no-referrer" rel="noopener noreferrer">
+<i class="fa fa-qq"></i><span> Share on QQ 空间</span>
+</a>
+</li><li class="share-option">
+<a class="share-option-btn" target="_blank" href="https://plus.google.com/share?url=https://blog.rhilip.info/archives/995/" referrerpolicy="no-referrer" rel="noopener noreferrer">
+<i class="fa fa-google-plus"></i><span> Share on Google</span>
+</a>
+</li>
+</ul>
+</div>
+
+</div></div>
+
+<div id="cover" style="background-image:url('https://blog.rhilip.info/usr/themes/Themia/image/bg.jpg');"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="" download="" data-mx-warn="Empty URL"></a><div data-mx-warn="extension url was not captured by MaoXian" data-mx-original-src="chrome-extension://kjahokgdcbohofgdidndeiaigkehdjdc/pages/ui-selection.html?t=aHR0cHM6Ly9ibG9nLnJoaWxpcC5pbmZv"></div><div data-mx-warn="extension url was not captured by MaoXian" data-mx-original-src="chrome-extension://kjahokgdcbohofgdidndeiaigkehdjdc/pages/ui-control.html?t=aHR0cHM6Ly9ibG9nLnJoaWxpcC5pbmZv"></div>
+</body>
+  </html>

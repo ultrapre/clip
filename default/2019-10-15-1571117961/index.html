@@ -1,0 +1,376 @@
+
+  <!DOCTYPE html>
+  <html id="" class="">
+    <!-- OriginalSrc: https://falconia.org/blog/archives/295 -->
+    <head>
+      <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <title>» AFS Tool 0.2.0.6 alpha (CRI AFS Extractor) FalconIA's BLOG</title>
+      
+
+<link rel="stylesheet" type="text/css" media="all" href="assets/1571117961-fcf8b6cc97a296e296e7ef9bf51d65d3.css" referrerpolicy="no-referrer">
+<link rel="stylesheet" id="st-widget-css" href="assets/1571117961-77a98a1693b039665be4ae276ebde050.css" type="text/css" media="all" referrerpolicy="no-referrer">
+<link rel="stylesheet" type="text/css" href="assets/1571117961-2b2034b956cf9ef6037652c8a5df0715.css" referrerpolicy="no-referrer">
+<link type="text/css" rel="stylesheet" charset="UTF-8" href="assets/1571117961-bf6e8ede6c9939560d4ea3bd7e88d251.css" referrerpolicy="no-referrer">
+
+
+<style class="darkreader darkreader--fallback" media="screen"></style>
+<style class="darkreader darkreader--text" media="screen"></style>
+<style class="darkreader darkreader--invert" media="screen"></style>
+<style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}</style>
+<style class="darkreader darkreader--user-agent" media="screen">html {
+    background-color: #191a1b !important;
+}
+html, body, input, textarea, select, button {
+    background-color: #191a1b;
+}
+html, body, input, textarea, select, button {
+    border-color: #5a5956;
+    color: #f0ebe2;
+}
+a {
+    color: #4791e7;
+}
+table {
+    border-color: #4f4e4c;
+}
+::placeholder {
+    color: #bfb9ac;
+}
+::selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+::-moz-selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #565a0f !important;
+    color: #f0ebe2 !important;
+}
+::-webkit-scrollbar {
+    background-color: #1d1f1f;
+    color: #cbc5b9;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #2c2d2d;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #343636;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #404142;
+}
+::-webkit-scrollbar-corner {
+    background-color: #191a1b;
+}
+* {
+    scrollbar-color: #2c2d2d #1d1f1f;
+}</style>
+<style class="darkreader darkreader--override" media="screen">.jfk-bubble {
+    background-color: #000000 !important;
+}
+.vimvixen-hint {
+    background-color: #765500 !important;
+    border-color: #d5b22e !important;
+    color: #f9edcc !important;
+}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--cors" media="screen">#stOverlay{height:100%;width:100%;background-color:#000;-ms-filter:"alpha(opacity=50)";filter:alpha(opacity=60);opacity:.6;position:fixed;display:none;left:0;top:0;z-index:89999990}.stwrapper{z-index:89999999;position:fixed;top:20%;left:50%}#stLframe{position:absolute;z-index:1000020;left:0;top:0;background-color:#ededed;border:1px solid #d5dcdc;border-radius:5px;box-shadow:0 2px 2px #666;height:100%;width:100%}.stwrapper.stwrapper5x{margin:0 0 0 -256px;height:419px;width:514px}.stwrapper.stwrapper4x{margin:0 0 0 -167px;height:337px;width:334px}.stclose{cursor:pointer;z-index:2000000;position:absolute;right:3px;top:-2px;margin:0;padding:0;font-family:Helvetica,Arial,Sans-Serif;text-align:left;line-height:1.0em;text-decoration:none;cursor:pointer;height:28px;width:26px}.stCloseNew2{cursor:pointer;z-index:2000000;position:absolute;right:25px;margin:0;padding:0;text-align:left;text-decoration:none;cursor:pointer;height:25px;width:30px}.stCloseNew{background:url("") no-repeat scroll -3px -131px transparent;cursor:pointer;display:inline-block;height:30px;position:absolute;right:26px;top:-10px;width:30px;z-index:2000000}.stNativeButton{margin-left:3px;margin-right:3px;position:relative;top:7px}.stNativeButton a{text-decoration:none}.stFourSquare{display:inline-block;top:6px}.stGoogleNative{top:20px}.stTwitterFollowFrame{width:62px;height:20px;*width:67px;*height:23px}.stTwitterFollow{top:0;text-decoration:none;color:#000;display:inline-block;cursor:pointer;position:relative;margin:3px 3px 0;padding:0;font-size:11px;line-height:16px;vertical-align:bottom;overflow:visible;*top:4px;*display:inline}.stYoutube{top:9px}.stButton .stButton_left{background-image:url("");background-repeat:no-repeat;height:20px;display:inline-block;width:5px;line-height:20px}.stButton .stButton_right{background-image:url("");background-repeat:no-repeat;height:20px;display:inline-block;width:5px;line-height:20px}.stButton .stButton_gradient{background-repeat:repeat-x;border:1px solid #ddd;padding:2px;font-family:serif;-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;display:inline-block;height:16px;background:#efefef}.stButton .stBubble+.stButton_gradient{min-width:54px}span.stButton span.email,span.sharethis{color:#000}.stButton .stButton_gradient:hover{background:#d5d5d5}.stButton .stButton_gradient2{background-image:url("");background-repeat:no-repeat;display:inline-block;height:20px;width:60px;padding-left:4px;white-space:nowrap}.stButton{position:relative;z-index:1;text-decoration:none;color:#000;display:inline-block;cursor:pointer;margin-right:3px;margin-left:3px;font-size:11px;line-height:16px}.stButton .stBubble{height:44px;margin:0;margin-top:5px;margin-bottom:2px;background-repeat:no-repeat;color:#4d4d4d;width:60px;overflow:hidden;display:none;background:url("") no-repeat 10px 40px;line-height:16px}.stButton .stBubbleSm{background-image:url("");width:30px;height:25px;background-repeat:no-repeat;color:#fff;line-height:16px}.stButton .stBubbleSmHoriz{background-image:url("");width:36px;height:25px;background-repeat:no-repeat;color:#fff;line-height:16px;position:absolute;right:30px}.stButton .stHBubble{background:#fff;margin-left:3px;margin-right:3px;position:relative;z-index:-1;*margin-left:0;display:none}.stButton .stArrow{padding-left:3px;margin-left:-1px;background:url("") no-repeat 3px 8px;line-height:16px;height:14px;display:inline-block;*display:inline;*padding-left:6px}.stButton .stBubble_count_sm{font-size:10px;text-align:center;padding-top:1px;width:30px;font-family:Verdana,Helvetica,sans-serif}.stButton .stBubble_count{font-size:14px;line-height:18px;font-weight:bold;text-align:center;padding-top:10px;width:58px;height:29px;font-family:Helvetica,sans-serif;color:#555;position:relative;z-index:-1;border:1px solid #ccc;-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;background:#fff}.stButton .stBubble_count:hover{background:#ddd}.stButton .stBubble_hcount{padding-left:2px;padding-right:2px;white-space:nowrap;font-family:Helvetica,sans-serif;font-size:11px;height:16px;line-height:16px;font-weight:bold;color:#555}.stButton .chicklets{background-repeat:no-repeat;background-size:contain;-ms-behavior:url("https://ws.sharethis.com/images/2017/backgroundsize.min.htc");padding-left:20px;padding-right:0;white-space:nowrap;font-family:Helvetica,sans-serif;font-size:10px;display:inline-block;height:16px;width:auto;line-height:16px}.stButton .chicklets:hover{opacity:.75;-ms-filter:"alpha(opacity=75)";filter:alpha(opacity=75)}.stButton .chicklets2{background:url("") no-repeat scroll right top transparent;padding:0 0 2px 20px;white-space:nowrap;font-family:Verdana,Helvetica,sans-serif;font-size:11px}.stButton .st_fsIcon{position:relative;top:1px}.stButton .seven_live_seven{background-image:url("https://ws.sharethis.com/images/2017/seven_live_seven_16.png")}.stButton .a1_webmarks{background-image:url("https://ws.sharethis.com/images/2017/a1_webmarks_16.png")}.stButton .adfty{background-image:url("https://ws.sharethis.com/images/2017/adfty_16.png")}.stButton .aim{background-image:url("https://ws.sharethis.com/images/2017/aim_16.png")}.stButton .allvoices{background-image:url("https://ws.sharethis.com/images/2017/allvoices_16.png")}.stButton .amazon_wishlist{background-image:url("https://ws.sharethis.com/images/2017/amazon_wishlist_16.png")}.stButton .arto{background-image:url("https://ws.sharethis.com/images/2017/arto_16.png")}.stButton .att{background-image:url("https://ws.sharethis.com/images/2017/att_16.png")}.stButton .baidu{background-image:url("https://ws.sharethis.com/images/2017/baidu_16.png")}.stButton .blinklist{background-image:url("https://ws.sharethis.com/images/2017/blinklist_16.png")}.stButton .blip{background-image:url("https://ws.sharethis.com/images/2017/blip_16.png")}.stButton .blogged{background-image:url("https://ws.sharethis.com/images/2017/blogged_16.png")}.stButton .blogger{background-image:url("https://ws.sharethis.com/images/2017/blogger_16.png")}.stButton .blogmarks{background-image:url("https://ws.sharethis.com/images/2017/blogmarks_16.png")}.stButton .brainify{background-image:url("https://ws.sharethis.com/images/2017/brainify_16.png")}.stButton .buddymarks{background-image:url("https://ws.sharethis.com/images/2017/buddymarks_16.png")}.stButton .care2{background-image:url("https://ws.sharethis.com/images/2017/care2_16.png")}.stButton .citeulike{background-image:url("https://ws.sharethis.com/images/2017/citeulike_16.png")}.stButton .chiq{background-image:url("https://ws.sharethis.com/images/2017/chiq_16.png")}.stButton .connotea{background-image:url("https://ws.sharethis.com/images/2017/connotea_16.png")}.stButton .corank{background-image:url("https://ws.sharethis.com/images/2017/corank_16.png")}.stButton .corkboard{background-image:url("https://ws.sharethis.com/images/2017/corkboard_16.png")}.stButton .current{background-image:url("https://ws.sharethis.com/images/2017/current_16.png")}.stButton .dealsplus{background-image:url("https://ws.sharethis.com/images/2017/dealsplus_16.png")}.stButton .delicious{background-image:url("https://ws.sharethis.com/images/2017/delicious_16.png")}.stButton .digg{background-image:url("https://ws.sharethis.com/images/2017/digg_16.png")}.stButton .diigo{background-image:url("https://ws.sharethis.com/images/2017/diigo_16.png")}.stButton .dotnetshoutout{background-image:url("https://ws.sharethis.com/images/2017/dotnetshoutout_16.png")}.stButton .dzone{background-image:url("https://ws.sharethis.com/images/2017/dzone_16.png")}.stButton .evernote{background-image:url("https://ws.sharethis.com/images/2017/evernote_16.png")}.stButton .embed_ly{background-image:url("https://ws.sharethis.com/images/2017/embed_ly_16.png")}.stButton .email{background-image:url("https://ws.sharethis.com/images/2017/email_16.png")}.stButton .facebook{background-image:url("https://ws.sharethis.com/images/2017/facebook_16.png")}.stButton .fashiolista{background-image:url("https://ws.sharethis.com/images/2017/fashiolista_16.png")}.stButton .flipboard{background-image:url("https://ws.sharethis.com/images/2017/flipboard_16.png")}.stButton .fb_like{background-image:url("");background-position:0 0}.stButton .folkd{background-image:url("https://ws.sharethis.com/images/2017/folkd_16.png")}.stButton .foodlve{background-image:url("https://ws.sharethis.com/images/2017/foodlve_16.png")}.stButton .fresqui{background-image:url("https://ws.sharethis.com/images/2017/fresqui_16.png")}.stButton .friendfeed{background-image:url("https://ws.sharethis.com/images/2017/friendfeed_16.png")}.stButton .funp{background-image:url("https://ws.sharethis.com/images/2017/funp_16.png")}.stButton .fwisp{background-image:url("https://ws.sharethis.com/images/2017/fwisp_16.png")}.stButton .google{background-image:url("https://ws.sharethis.com/images/2017/google_16.png")}.stButton .google_bmarks{background-image:url("https://ws.sharethis.com/images/2017/google_bmarks_16.png")}.stButton .google_reader{background-image:url("https://ws.sharethis.com/images/2017/google_reader_16.png")}.stButton .google_translate{background-image:url("https://ws.sharethis.com/images/2017/google_translate_16.png")}.stButton .hadash_hot{background-image:url("https://ws.sharethis.com/images/2017/hadash_hot_16.png")}.stButton .hatena{background-image:url("https://ws.sharethis.com/images/2017/hatena_16.png")}.stButton .hyves{background-image:url("https://ws.sharethis.com/images/2017/hyves_16.png")}.stButton .identi{background-image:url("https://ws.sharethis.com/images/2017/identi_16.png")}.stButton .jumptags{background-image:url("https://ws.sharethis.com/images/2017/jumptags_16.png")}.stButton .kaboodle{background-image:url("https://ws.sharethis.com/images/2017/kaboodle_16.png")}.stButton .kik{background-image:url("https://ws.sharethis.com/images/2017/kik_16.png")}.stButton .linkagogo{background-image:url("https://ws.sharethis.com/images/2017/linkagogo_16.png")}.stButton .linkedin{background-image:url("https://ws.sharethis.com/images/2017/linkedin_16.png")}.stButton .livejournal{background-image:url("https://ws.sharethis.com/images/2017/livejournal_16.png")}.stButton .meneame{background-image:url("https://ws.sharethis.com/images/2017/meneame_16.png")}.stButton .mister_wong{background-image:url("https://ws.sharethis.com/images/2017/mister_wong_16.png")}.stButton .mixx{background-image:url("https://ws.sharethis.com/images/2017/mixx_16.png")}.stButton .myspace{background-image:url("https://ws.sharethis.com/images/2017/myspace_16.png")}.stButton .n4g{background-image:url("https://ws.sharethis.com/images/2017/n4g_16.png")}.stButton .netlog{background-image:url("https://ws.sharethis.com/images/2017/netlog_16.png")}.stButton .netvibes{background-image:url("https://ws.sharethis.com/images/2017/netvibes_16.png")}.stButton .netvouz{background-image:url("https://ws.sharethis.com/images/2017/netvouz_16.png")}.stButton .newsvine{background-image:url("https://ws.sharethis.com/images/2017/newsvine_16.png")}.stButton .nujij{background-image:url("https://ws.sharethis.com/images/2017/nujij_16.png")}.stButton .oknotizie{background-image:url("https://ws.sharethis.com/images/2017/oknotizie_16.png")}.stButton .orkut{background-image:url("https://ws.sharethis.com/images/2017/orkut_16.png")}.stButton .plaxo{background-image:url("https://ws.sharethis.com/images/2017/plaxo_16.png")}.stButton .reddit{background-image:url("https://ws.sharethis.com/images/2017/reddit_16.png")}.stButton .segnalo{background-image:url("https://ws.sharethis.com/images/2017/segnalo_16.png")}.stButton .sina{background-image:url("https://ws.sharethis.com/images/2017/sina_16.png")}.stButton .slashdot{background-image:url("https://ws.sharethis.com/images/2017/slashdot_16.png")}.stButton .speedtile{background-image:url("https://ws.sharethis.com/images/2017/speedtile_16.png")}.stButton .squidoo{background-image:url("https://ws.sharethis.com/images/2017/squidoo_16.png")}.stButton .startaid{background-image:url("https://ws.sharethis.com/images/2017/startaid_16.png")}.stButton .startlap{background-image:url("https://ws.sharethis.com/images/2017/startlap_16.png")}.stButton .strands{background-image:url("https://ws.sharethis.com/images/2017/strands_16.png")}.stButton .stumbleupon{background-image:url("https://ws.sharethis.com/images/2017/stumbleupon_16.png")}.stButton .stumpedia{background-image:url("https://ws.sharethis.com/images/2017/stumpedia_16.png")}.stButton .technorati{background-image:url("https://ws.sharethis.com/images/2017/technorati_16.png")}.stButton .twitter{background-image:url("https://ws.sharethis.com/images/2017/twitter_16.png")}.stButton .typepad{background-image:url("https://ws.sharethis.com/images/2017/typepad_16.png")}.stButton .viadeo{background-image:url("https://ws.sharethis.com/images/2017/viadeo_16.png")}.stButton .virb{background-image:url("https://ws.sharethis.com/images/2017/virb_16.png")}.stButton .voxopolis{background-image:url("https://ws.sharethis.com/images/2017/voxopolis_16.png")}.stButton .weheartit{background-image:url("https://ws.sharethis.com/images/2017/weheartit_16.png")}.stButton .wordpress{background-image:url("https://ws.sharethis.com/images/2017/wordpress_16.png")}.stButton .xanga{background-image:url("https://ws.sharethis.com/images/2017/xanga_16.png")}.stButton .xerpi{background-image:url("https://ws.sharethis.com/images/2017/xerpi_16.png")}.stButton .xing{background-image:url("https://ws.sharethis.com/images/2017/xing_16.png")}.stButton .yahoo{background-image:url("https://ws.sharethis.com/images/2017/yahoo_16.png")}.stButton .yigg{background-image:url("https://ws.sharethis.com/images/2017/yigg_16.png")}.stButton .fark{background-image:url("https://ws.sharethis.com/images/2017/fark_16.png")}.stButton .bus_exchange{background-image:url("https://ws.sharethis.com/images/2017/bus_exchange_16.png")}.stButton .bebo{background-image:url("https://ws.sharethis.com/images/2017/bebo_16.png")}.stButton .buffer{background-image:url("https://ws.sharethis.com/images/2017/buffer_16.png")}.stButton .mail_ru{background-image:url("https://ws.sharethis.com/images/2017/mail_ru_16.png")}.stButton .instagram{background-image:url("https://ws.sharethis.com/images/2017/instagram_16.png")}.stButton .edmodo{background-image:url("https://ws.sharethis.com/images/2017/edmodo_16.png")}.stButton .odnoklassniki{background-image:url("https://ws.sharethis.com/images/2017/odnoklassniki_16.png")}.stButton .moshare{background-image:url("https://ws.sharethis.com/images/2017/moshare_16.png")}.stButton .raise_your_voice{background-image:url("https://ws.sharethis.com/images/2017/raise_your_voice_16.png")}.stButton .vkontakte{background-image:url("https://ws.sharethis.com/images/2017/vkontakte_16.png")}.stButton .pinterest{background-image:url("https://ws.sharethis.com/images/2017/pinterest_16.png")}.stButton .pocket{background-image:url("https://ws.sharethis.com/images/2017/pocket_16.png")}.stButton .googleplus{background-image:url("https://ws.sharethis.com/images/2017/googleplus_16.png")}.stButton .gbuzz{background-image:url("https://ws.sharethis.com/images/2017/gbuzz_16.png")}.stButton .tumblr{background-image:url("https://ws.sharethis.com/images/2017/tumblr_16.png")}.stButton .twackle{background-image:url("https://ws.sharethis.com/images/2017/twackle_16.png")}.stButton .sharethis{background-image:url("https://ws.sharethis.com/images/2017/sharethis_16.png")}.stButton .messenger{background-image:url("https://ws.sharethis.com/images/2017/messenger_16.png")}.stButton .sonico{background-image:url("https://ws.sharethis.com/images/2017/sonico_16.png")}.stButton .instapaper{background-image:url("https://ws.sharethis.com/images/2017/instapaper_16.png")}.stButton .whatsapp{background-image:url("https://ws.sharethis.com/images/2017/whatsapp_16.png")}.stButton .yammer{background-image:url("https://ws.sharethis.com/images/2017/yammer_16.png")}.stButton .formspring{background-image:url("https://ws.sharethis.com/images/2017/formspring_16.png")}.stButton .print{background-image:url("https://ws.sharethis.com/images/2017/print_16.png")}.stButton .stLarge{background-size:cover;-ms-behavior:url("https://ws.sharethis.com/images/2017/backgroundsize.min.htc");display:inline-block;height:32px;width:32px;position:relative}.stButton .stHuge{display:inline-block;height:64px;width:64px;position:relative}.stButton .stSmall,.stButton .stSmall2{display:inline-block;height:16px;width:16px;position:relative}.stButton .stSmall2{bottom:2px}.stButton .stLarge:hover{opacity:.75;background-position:-32px}.stButton .stSmall:hover,.stButton .stSmall:hover{opacity:.75;background-position:-16px}.stButton .stHuge:hover{opacity:.75;background-position:-64px}.stButton .stSmBar{display:inline-block;height:16px;width:16px}.stButton .stFb,.stButton .stTwbutton,.stButton .stMainServices{background-image:url("");background-repeat:no-repeat;background-size:cover;-ms-behavior:url("https://ws.sharethis.com/images/2017/backgroundsize.min.htc");-moz-box-sizing:content-box!important;box-sizing:content-box!important;display:inline-block;white-space:nowrap;font-family:Verdana,Helvetica,sans-serif;font-size:11px;height:16px!important;min-height:16px!important;padding-top:3px;padding-bottom:3px;line-height:16px;width:auto;position:relative}.st_email_hcount .stButton .st-email-counter,.st_facebook_hcount .stButton .st-facebook-counter,.st_pinterest_hcount .stButton .st-pinterest-counter,.st_sharethis_hcount .stButton .st-sharethis-counter,.st_twitter_hcount .stButton .st-twitter-counter{height:16px!important}.stButton .st-twitter-counter,.stButton .st-facebook-counter{width:60px}.stButton .st-yahoo-counter,.stButton .st-linkedin-counter{width:60px}.stButton .st-gbuzz-counter,.stButton .st-google-counter{width:60px}.stButton .st-pinterest-counter,.stButton .st-email-counter{width:60px}.stButton .st-sharethis-counter{width:60px}.stButton .stMainServices img,.stButton img{border:none!important;margin:0!important;z-index:100000!important;background:none!important;padding:0!important;float:none!important}.stButton .stFb:hover{opacity:.75;-ms-filter:"alpha(opacity=75)";filter:alpha(opacity=75)}.stButton .stTwbutton{background:url("");background-repeat:no-repeat}.stButton .stTwbutton:hover{background-position:0 -23px}.stCSSButton{border:1px solid #212121;color:white;display:inline-block;vertical-align:bottom;-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;box-shadow:2px 2px 5px #aaa;-moz-box-shadow:2px 2px 5px #aaa;-webkit-box-shadow:2px 2px 5px #aaa;*float:left;*line-height:16px;background:#363636;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#363636',endColorstr='#868686',GradientType=0);background:-moz-linear-gradient(top,#d6d6d6 0,#363636 42%,#868686 88%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#d6d6d6),color-stop(42%,#363636),color-stop(88%,#868686))}.stCSSButton:hover{box-shadow:1px 1px 5px #888;-moz-box-shadow:1px 1px 5px #888;-webkit-box-shadow:1px 1px 5px #888;border:1px solid #333;background:#545454;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#545454',endColorstr='#989898',GradientType=0);background:-moz-linear-gradient(top,#dcdcdc 0,#545454 42%,#989898 88%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#dcdcdc),color-stop(42%,#545454),color-stop(88%,#989898))}.stCSSSprite{display:inline-block;vertical-align:top;background:url("") no-repeat;height:16px;width:16px;margin:3px;float:left;line-height:16px}.stCSSText{display:inline-block;margin:3px;margin-left:4px;padding-right:5px;vertical-align:top;font-size:11px;font-family:sans-serif;font-weight:bold}.stCSSHBubble{vertical-align:top;display:inline-block;background:#eee;border:1px solid #bfbfbf;-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;background:-moz-linear-gradient(top,#d5d5d5 0,#efefef 48%,#fff 94%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#d5d5d5),color-stop(48%,#efefef),color-stop(94%,#fff));filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d5d5d5',endColorstr='#ffffff',GradientType=0)}.stCSSHArrow{display:block;margin:0;padding:0;border-top:5px solid transparent;border-right:5px solid #eee;border-bottom:5px solid transparent;position:relative;top:-5px;left:1px}.stCSSHArrowBorder{vertical-align:top;display:inline-block;width:0;height:0;border-top:5px solid transparent;border-right:5px solid #bfbfbf;border-bottom:5px solid transparent;margin-top:7px;*float:left}.stCSSHBubble_count{display:inline-block;height:16px;margin:3px;text-align:center;vertical-align:top;font-size:11px;font-family:helvetica;font-weight:bold;color:#555}.stCSSVBubble{width:100%;*width:75px}.stCSSVArrow{width:0;height:0;border-top:6px solid #fff;border-left:6px solid transparent;border-right:6px solid transparent;position:relative;top:-7px;left:-6px;z-index:5}.stCSSVArrowBorder{width:0;height:0;border-top:6px solid #bfbfbf;border-left:6px solid transparent;border-right:6px solid transparent;margin-left:10px}.stCSSVBubble_count{font-size:11px;font-family:helvetica;font-weight:bold;text-align:center;padding-top:14px;color:#555;background:#eee;height:30px;border:1px solid #bfbfbf;-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;background:-moz-linear-gradient(top,#d5d5d5 0,#efefef 48%,#fff 94%);background:-webkit-gradient(linear,left top,left bottom,color-stop(0%,#d5d5d5),color-stop(48%,#efefef),color-stop(94%,#fff));filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#d5d5d5',endColorstr='#ffffff',GradientType=0)}.st_fblike_fbLong{vertical-align:text-top;position:relative;top:-1px;*top:-4px}.st_plusone_vcount div{margin-right:5px;margin-top:5px}.st_plusone_button div{margin-right:5px}.st_linkedinfollow .stLinkedinfollow,.st_linkedinfollow_button .stLinkedinfollow,.st_linkedinfollow_buttons .stLinkedinfollow,.st_linkedinfollow_hcount .stLinkedinfollow{top:6px}.st_linkedinfollow_large .stLinkedinfollow{top:-2px}#stToolPop{color:#fff;z-index:99999999!important;height:43px;width:43px;background:#01bf01;margin:0;box-sizing:content-box}#stToolPop a{display:block;width:100%;height:100%}#stToolPop a:link,#stToolPop a:visited,#stToolPop a:hover{background:0;color:none}#stToolPop span{text-indent:-9999px}.stToolPop-circular{border-radius:50%;border:solid 6px #fff}.semiTrans{opacity:.8}#stToolPop.gray{background-color:#47545d}.stToolPop-absolute{position:absolute}.stToolPop-fixed{position:fixed}#stToolPop_logo{vertical-align:top!important}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">@keyframes fadeInOpacity{0%{opacity:0}to{opacity:1}}:hover>*>.fbvd--wrapper{animation-name:fadeInOpacity;animation-duration:.3s;opacity:1}.fbvd--wrapper{position:absolute;top:10px;left:10px;opacity:0;text-align:center;margin:0;z-index:5}.fbvd--wrapper a{background: url("") no-repeat 3px 4.55px; background-color: #fff; display:inline-block;font:700 14px Helvetica,Arial,sans-serif;color:#4b4f56;text-decoration:none;vertical-align:middle;padding:0px 8px 0px;margin-right:8px;border-radius:2px; line-height: 22px; padding-left:19px; border: 1px solid #e7e7e7; background-size: 13px}.fbvd--wrapper a:last-child{margin-right:0}.fbvd--wrapper a:hover{text-decoration:none}.fbvd--wrapper a:focus{box-shadow:0 0 1px 2px rgba(88,144,255,.75),0 1px 1px rgba(0,0,0,.15);outline:none}.fbvd--wrapper b{font-size:13px;position:relative;top:1px;color:#3b5998;font-weight:400}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--cors" media="screen">.goog-te-banner-frame{left:0px;top:0px;height:39px;width:100%;z-index:10000001;position:fixed;border:none;border-bottom:1px solid #6b90da;margin:0;-moz-box-shadow:0 0 8px 1px #999999;-webkit-box-shadow:0 0 8px 1px #999999;box-shadow:0 0 8px 1px #999999;_position:absolute}.goog-te-menu-frame{z-index:10000002;position:fixed;border:none;-moz-box-shadow:0 3px 8px 2px #999999;-webkit-box-shadow:0 3px 8px 2px #999999;box-shadow:0 3px 8px 2px #999999;_position:absolute}.goog-te-ftab-frame{z-index:10000000;border:none;margin:0}.goog-te-gadget{font-family:arial;font-size:11px;color:#666;white-space:nowrap}.goog-te-gadget img{vertical-align:middle;border:none}.goog-te-gadget-simple{background-color:#fff;border-left:1px solid #d5d5d5;border-top:1px solid #9b9b9b;border-bottom:1px solid #e8e8e8;border-right:1px solid #d5d5d5;font-size:10pt;display:inline-block;padding-top:1px;padding-bottom:2px;cursor:pointer;zoom:1;*display:inline}.goog-te-gadget-icon{margin-left:2px;margin-right:2px;width:19px;height:19px;border:none;vertical-align:middle}.goog-te-combo{margin-left:4px;margin-right:4px;vertical-align:baseline;*vertical-align:middle}.goog-te-gadget .goog-te-combo{margin:4px 0}.goog-logo-link,.goog-logo-link:link,.goog-logo-link:visited,.goog-logo-link:hover,.goog-logo-link:active{font-size:12px;font-weight:bold;color:#444;text-decoration:none}.goog-te-banner .goog-logo-link,.goog-close-link{display:block;margin:0px 10px}.goog-te-banner .goog-logo-link{padding-top:2px;padding-left:4px}.goog-te-combo,.goog-te-banner *,.goog-te-ftab *,.goog-te-menu *,.goog-te-menu2 *,.goog-te-balloon *{font-family:arial;font-size:10pt}.goog-te-banner{margin:0;background-color:#e4effb;overflow:hidden}.goog-te-banner img{border:none}.goog-te-banner-content{color:#000}.goog-te-banner-content img{vertical-align:middle}.goog-te-banner-info{color:#666;vertical-align:top;margin-top:0px;font-size:7pt}.goog-te-banner-margin{width:8px}.goog-te-button{border-color:#e7e7e7;border-style:none solid solid none;border-width:0 1px 1px 0}.goog-te-button div{border-color:#cccccc #999999 #999999 #cccccc;border-right:1px solid #999999;border-style:solid;border-width:1px;height:20px}.goog-te-button button{background:transparent;border:none;cursor:pointer;height:20px;overflow:hidden;margin:0;vertical-align:top;white-space:nowrap}.goog-te-button button:active{background:none repeat scroll 0 0 #cccccc}.goog-te-ftab{margin:0px;background-color:#fff;white-space:nowrap}.goog-te-ftab-link{text-decoration:none;font-weight:bold;font-size:10pt;border:1px outset #888;padding:6px 10px;white-space:nowrap;position:absolute;left:0px;top:0px}.goog-te-ftab-link img{margin-left:2px;margin-right:2px;width:19px;height:19px;border:none;vertical-align:middle}.goog-te-ftab-link span{text-decoration:underline;margin-left:2px;margin-right:2px;vertical-align:middle}.goog-float-top .goog-te-ftab-link{padding:2px 2px;border-top-width:0px}.goog-float-bottom .goog-te-ftab-link{padding:2px 2px;border-bottom-width:0px}.goog-te-menu-value{text-decoration:none;color:#0000cc;white-space:nowrap;margin-left:4px;margin-right:4px}.goog-te-menu-value span{text-decoration:underline}.goog-te-menu-value img{margin-left:2px;margin-right:2px}.goog-te-gadget-simple .goog-te-menu-value{color:#000}.goog-te-gadget-simple .goog-te-menu-value span{text-decoration:none}.goog-te-menu{background-color:#ffffff;text-decoration:none;border:2px solid #c3d9ff;overflow-y:scroll;overflow-x:hidden;position:absolute;left:0;top:0}.goog-te-menu-item{padding:3px;text-decoration:none}.goog-te-menu-item,.goog-te-menu-item:link{color:#0000cc;background:#ffffff}.goog-te-menu-item:visited{color:#551a8b}.goog-te-menu-item:hover{background:#c3d9ff}.goog-te-menu-item:active{color:#0000cc}.goog-te-menu2{background-color:#ffffff;text-decoration:none;border:1px solid #6b90da;overflow:hidden;padding:4px}.goog-te-menu2-colpad{width:16px}.goog-te-menu2-separator{margin:6px 0;height:1px;background-color:#aaa;overflow:hidden}.goog-te-menu2-item div,.goog-te-menu2-item-selected div{padding:4px}.goog-te-menu2-item .indicator{display:none}.goog-te-menu2-item-selected .indicator{display:auto}.goog-te-menu2-item-selected .text{padding-left:4px;padding-right:4px}.goog-te-menu2-item,.goog-te-menu2-item-selected{text-decoration:none}.goog-te-menu2-item div,.goog-te-menu2-item:link div,.goog-te-menu2-item:visited div,.goog-te-menu2-item:active div{color:#0000cc;background:#ffffff}.goog-te-menu2-item:hover div{color:#ffffff;background:#3366cc}.goog-te-menu2-item-selected div,.goog-te-menu2-item-selected:link div,.goog-te-menu2-item-selected:visited div,.goog-te-menu2-item-selected:hover div,.goog-te-menu2-item-selected:active div{color:#000;font-weight:bold}.goog-te-balloon{background-color:#ffffff;overflow:hidden;padding:8px;border:none;-moz-border-radius:10px;border-radius:10px}.goog-te-balloon-frame{background-color:#ffffff;border:1px solid #6b90da;-moz-box-shadow:0 3px 8px 2px #999999;-webkit-box-shadow:0 3px 8px 2px #999999;box-shadow:0 3px 8px 2px #999999;-moz-border-radius:8px;border-radius:8px}.goog-te-balloon img{border:none}.goog-te-balloon-text{margin-top:6px}.goog-te-balloon-zippy{margin-top:6px;white-space:nowrap}.goog-te-balloon-zippy *{vertical-align:middle}.goog-te-balloon-zippy .minus{background-image:url("https://www.google.com/images/zippy_minus_sm.gif")}.goog-te-balloon-zippy .plus{background-image:url("https://www.google.com/images/zippy_plus_sm.gif")}.goog-te-balloon-zippy span{color:#00c;text-decoration:underline;cursor:pointer;margin:0 4px}.goog-te-balloon-form{margin:6px 0 0 0}.goog-te-balloon-form form{margin:0}.goog-te-balloon-form form textarea{margin-bottom:4px;width:100%}.goog-te-balloon-footer{margin:6px 0 4px 0}.goog-te-spinner-pos{z-index:1000;position:fixed;transition-delay:0.6s;left:-1000px;top:-1000px}.goog-te-spinner-animation{background:#ccc;display:flex;align-items:center;justify-content:center;width:104px;height:104px;border-radius:50px;background:#fff url("") 50% 50% no-repeat;transition:all 0.6s ease-in-out;transform:scale(0.4);opacity:0}.goog-te-spinner-animation-show{transform:scale(0.5);opacity:1}.goog-te-spinner{margin:2px 0 0 2px;animation:goog-te-spinner-rotator 1.4s linear infinite}@keyframes goog-te-spinner-rotator{0%{transform:rotate(0deg)}100%{transform:rotate(270deg)}}.goog-te-spinner-path{stroke-dasharray:187;stroke-dashoffset:0;stroke:#4285f4;transform-origin:center;animation:goog-te-spinner-dash 1.4s ease-in-out infinite}@keyframes goog-te-spinner-dash{0%{stroke-dashoffset:187}50%{stroke-dashoffset:46.75;transform:rotate(135deg)}100%{stroke-dashoffset:187;transform:rotate(450deg)}}#goog-gt-tt html,#goog-gt-tt body,#goog-gt-tt div,#goog-gt-tt span,#goog-gt-tt iframe,#goog-gt-tt h1,#goog-gt-tt h2,#goog-gt-tt h3,#goog-gt-tt h4,#goog-gt-tt h5,#goog-gt-tt h6,#goog-gt-tt p,#goog-gt-tt a,#goog-gt-tt img,#goog-gt-tt ol,#goog-gt-tt ul,#goog-gt-tt li,#goog-gt-tt table,#goog-gt-tt form,#goog-gt-tt tbody,#goog-gt-tt tr,#goog-gt-tt td{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;text-align:left;line-height:normal}#goog-gt-tt ol,#goog-gt-tt ul{list-style:none}#goog-gt-tt table{border-collapse:collapse;border-spacing:0}#goog-gt-tt caption,#goog-gt-tt th,#goog-gt-tt td{text-align:left;font-weight:normal}#goog-gt-tt input::-moz-focus-inner{border:0}div#goog-gt-tt{padding:10px 14px}#goog-gt-tt{color:#222;background-color:#ffffff;border:1px solid #eee;box-shadow:0 4px 16px rgba(0,0,0,.2);-moz-box-shadow:0 4px 16px rgba(0,0,0,.2);-webkit-box-shadow:0 4px 16px rgba(0,0,0,.2);display:none;font-family:arial;font-size:10pt;width:420px;padding:12px;position:absolute;z-index:10000}#goog-gt-tt .original-text,.gt-hl-layer{clear:both;font-size:10pt;position:relative;text-align:justify;width:100%}#goog-gt-tt .title{color:#999;font-family:arial,sans-serif;margin:4px 0;text-align:left}#goog-gt-tt .close-button{display:none}#goog-gt-tt .logo{float:left;margin:0px}#goog-gt-tt .activity-links{display:inline-block}#goog-gt-tt .started-activity-container{display:none;width:100%}#goog-gt-tt .activity-root{margin-top:20px}#goog-gt-tt .left{float:left}#goog-gt-tt .right{float:right}#goog-gt-tt .bottom{min-height:15px;position:relative;height:1%}#goog-gt-tt .status-message{background:-moz-linear-gradient(top,#29910d 0%,#20af0e 100%);background:-webkit-linear-gradient(top,#29910d 0%,#20af0e 100%);background:-o-linear-gradient(top,#29910d 0%,#20af0e 100%);background:-ms-linear-gradient(top,#29910d 0%,#20af0e 100%);background:linear-gradient(top,#29910d 0%,#20af0e 100%);background:#29910d;border-radius:4px;-moz-border-radius:4px;-webkit-border-radius:4px;box-shadow:inset 0px 2px 2px #1e6609;-moz-box-shadow:inset 0px 2px 2px #1e6609;-webkit-box-shadow:inset 0px 2px 2px #1e6609;color:white;font-size:9pt;font-weight:bolder;margin-top:12px;padding:6px;text-shadow:1px 1px 1px #1e6609}#goog-gt-tt .activity-link{color:#1155cc;cursor:pointer;font-family:arial;font-size:11px;margin-right:15px;text-decoration:none}#goog-gt-tt textarea{font-family:arial;resize:vertical;width:100%;margin-bottom:10px;-webkit-border-radius:1px;-moz-border-radius:1px;border-radius:1px;border:1px solid #d9d9d9;border-top:1px solid silver;font-size:13px;height:auto;overflow-y:auto;padding:1px}#goog-gt-tt textarea:focus{-webkit-box-shadow:inset 0 1px 2px rgba(0,0,0,0.3);-moz-box-shadow:inset 0 1px 2px rgba(0,0,0,0.3);box-shadow:inset 0 1px 2px rgba(0,0,0,0.3);border:1px solid #4d90fe;outline:none}#goog-gt-tt .activity-cancel{margin-right:10px}#goog-gt-tt .translate-form{min-height:25px;vertical-align:middle;padding-top:8px}#goog-gt-tt .translate-form .activity-form{margin-bottom:5px;margin-bottom:0px}#goog-gt-tt .translate-form .activity-form input{display:inline-block;min-width:54px;*min-width:70px;border:1px solid #dcdcdc;border:1px solid rgba(0,0,0,0.1);text-align:center;color:#444;font-size:11px;font-weight:bold;height:27px;outline:0;padding:0 8px;vertical-align:middle;line-height:27px;margin:0 16px 0 0;box-shadow:0 1px 2px rgba(0,0,0,.1);-moz-box-shadow:0 1px 2px rgba(0,0,0,.1);-webkit-box-shadow:0 1px 2px rgba(0,0,0,.1);-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;-webkit-transition:all 0.218s;-moz-transition:all 0.218s;-o-transition:all 0.218s;transition:all 0.218s;background-color:#f5f5f5;background-image:-webkit-gradient(linear,left top,left bottom,from(#f5f5f5),to(#f1f1f1));background-image:-webkit-linear-gradient(top,#f5f5f5,#f1f1f1);background-image:-moz-linear-gradient(top,#f5f5f5,#f1f1f1);background-image:-ms-linear-gradient(top,#f5f5f5,#f1f1f1);background-image:-o-linear-gradient(top,#f5f5f5,#f1f1f1);background-image:linear-gradient(top,#f5f5f5,#f1f1f1);-webkit-user-select:none;-moz-user-select:none;cursor:default}#goog-gt-tt .translate-form .activity-form input:hover{border:1px solid #c6c6c6;color:#222;-webkit-transition:all 0.0s;-moz-transition:all 0.0s;-o-transition:all 0.0s;transition:all 0.0s;background-color:#f8f8f8;background-image:-webkit-gradient(linear,left top,left bottom,from(#f8f8f8),to(#f1f1f1));background-image:-webkit-linear-gradient(top,#f8f8f8,#f1f1f1);background-image:-moz-linear-gradient(top,#f8f8f8,#f1f1f1);background-image:-ms-linear-gradient(top,#f8f8f8,#f1f1f1);background-image:-o-linear-gradient(top,#f8f8f8,#f1f1f1);background-image:linear-gradient(top,#f8f8f8,#f1f1f1)}#goog-gt-tt .translate-form .activity-form input:active{border:1px solid #c6c6c6;color:#333;background-color:#f6f6f6;background-image:-webkit-gradient(linear,left top,left bottom,from(#f6f6f6),to(#f1f1f1));background-image:-webkit-linear-gradient(top,#f6f6f6,#f1f1f1);background-image:-moz-linear-gradient(top,#f6f6f6,#f1f1f1);background-image:-ms-linear-gradient(top,#f6f6f6,#f1f1f1);background-image:-o-linear-gradient(top,#f6f6f6,#f1f1f1);background-image:linear-gradient(top,#f6f6f6,#f1f1f1)}#goog-gt-tt .translate-form .activity-form input:focus #goog-gt-tt .translate-form .activity-form input.focus #goog-gt-tt .translate-form .activity-form input:active,#goog-gt-tt .translate-form .activity-form input:focus:active,#goog-gt-tt .translate-form .activity-form input:.focus:active{box-shadow:inset 0 0 0 1px rgba(255,255,255,0.5);-webkit-box-shadow:inset 0 0 0 1px rgba(255,255,255,0.5);-moz-box-shadow:inset 0 0 0 1px rgba(255,255,255,0.5)}#goog-gt-tt .translate-form .activity-form input:focus,#goog-gt-tt .translate-form .activity-form input.focus{outline:none;border:1px solid #4d90fe;z-index:4!important}#goog-gt-tt .translate-form .activity-form input.selected{background-color:#eeeeee;background-image:-webkit-gradient(linear,left top,left bottom,from(#eeeeee),to(#e0e0e0));background-image:-webkit-linear-gradient(top,#eeeeee,#e0e0e0);background-image:-moz-linear-gradient(top,#eeeeee,#e0e0e0);background-image:-ms-linear-gradient(top,#eeeeee,#e0e0e0);background-image:-o-linear-gradient(top,#eeeeee,#e0e0e0);background-image:linear-gradient(top,#eeeeee,#e0e0e0);-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);border:1px solid #ccc;color:#333}#goog-gt-tt .translate-form .activity-form input.activity-submit{color:white;border-color:#3079ed;background-color:#4d90fe;background-image:-webkit-gradient(linear,left top,left bottom,from(#4d90fe),to(#4787ed));background-image:-webkit-linear-gradient(top,#4d90fe,#4787ed);background-image:-moz-linear-gradient(top,#4d90fe,#4787ed);background-image:-ms-linear-gradient(top,#4d90fe,#4787ed);background-image:-o-linear-gradient(top,#4d90fe,#4787ed);background-image:linear-gradient(top,#4d90fe,#4787ed)}#goog-gt-tt .translate-form .activity-form input.activity-submit:hover #goog-gt-tt .translate-form .activity-form input.activity-submit:focus,#goog-gt-tt .translate-form .activity-form input.activity-submit.focus #goog-gt-tt .translate-form .activity-form input.activity-submit:active{border-color:#3079ed;background-color:#357ae8;background-image:-webkit-gradient(linear,left top,left bottom,from(#4d90fe),to(#357ae8));background-image:-webkit-linear-gradient(top,#4d90fe,#357ae8);background-image:-moz-linear-gradient(top,#4d90fe,#357ae8);background-image:-ms-linear-gradient(top,#4d90fe,#357ae8);background-image:-o-linear-gradient(top,#4d90fe,#357ae8);background-image:linear-gradient(top,#4d90fe,#357ae8)}#goog-gt-tt .translate-form .activity-form input.activity-submit:hover{box-shadow:inset 0 0 0 1px #fff,0px 1px 1px rgba(0,0,0,0.1);-webkit-box-shadow:inset 0 0 0 1px #fff,0px 1px 1px rgba(0,0,0,0.1);-moz-box-shadow:inset 0 0 0 1px #fff,0px 1px 1px rgba(0,0,0,0.1)}#goog-gt-tt .translate-form .activity-form input:focus,#goog-gt-tt .translate-form .activity-form input.focus,#goog-gt-tt .translate-form .activity-form input:active,#goog-gt-tt .translate-form .activity-form input:hover,#goog-gt-tt .translate-form .activity-form input.activity-submit:focus,#goog-gt-tt .translate-form .activity-form input.activity-submit.focus,#goog-gt-tt .translate-form .activity-form input.activity-submit:active,#goog-gt-tt .translate-form .activity-form input.activity-submit:hover{border-color:#3079ed}#goog-gt-tt .gray{color:#999;font-family:arial,sans-serif}#goog-gt-tt .alt-helper-text{color:#999;font-size:11px;font-family:arial,sans-serif;margin:15px 0px 5px 0px}#goog-gt-tt .alt-error-text{color:#800;display:none;font-size:9pt}.goog-text-highlight{background-color:#c9d7f1;-webkit-box-shadow:2px 2px 4px #9999aa;-moz-box-shadow:2px 2px 4px #9999aa;box-shadow:2px 2px 4px #9999aa;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;position:relative}#goog-gt-tt .alt-menu.goog-menu{background:#ffffff;border:1px solid #dddddd;-webkit-box-shadow:0px 3px 3px #888;-moz-box-shadow:0px 2px 20px #888;box-shadow:0px 2px 4px #99a;min-width:0;outline:none;padding:0;position:absolute;z-index:2000}#goog-gt-tt .alt-menu .goog-menuitem{cursor:pointer;padding:2px 5px 5px;margin-right:0px;border-style:none}#goog-gt-tt .alt-menu div.goog-menuitem:hover{background:#ddd}#goog-gt-tt .alt-menu .goog-menuitem h1{font-size:100%;font-weight:bold;margin:4px 0px}#goog-gt-tt .alt-menu .goog-menuitem strong{color:#345aad}#goog-gt-tt .goog-submenu-arrow{text-align:right;position:absolute;right:0;left:auto}#goog-gt-tt .goog-menuitem-rtl .goog-submenu-arrow{text-align:left;position:absolute;left:0;right:auto}#goog-gt-tt .gt-hl-text,#goog-gt-tt .trans-target-highlight{background-color:#f1ea00;border-radius:4px;-webkit-border-radius:4px;-moz-border-radius:4px;-moz-box-shadow:rgba(0,0,0,.5) 3px 3px 4px;-webkit-box-shadow:rgba(0,0,0,.5) 3px 3px 4px;box-shadow:rgba(0,0,0,.5) 3px 3px 4px;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;color:#f1ea00;cursor:pointer;margin:-2px -2px -2px -3px;padding:2px 2px 2px 3px;position:relative}#goog-gt-tt .trans-target-highlight{color:#222}#goog-gt-tt .gt-hl-layer{color:white;position:absolute!important}#goog-gt-tt .trans-target,#goog-gt-tt .trans-target .trans-target-highlight{background-color:#c9d7f1;border-radius:4px 4px 0px 0px;-webkit-border-radius:4px 4px 0px 0px;-moz-border-radius:4px 4px 0px 0px;-moz-box-shadow:rgba(0,0,0,.5) 3px 3px 4px;-webkit-box-shadow:rgba(0,0,0,.5) 3px 3px 4px;box-shadow:rgba(0,0,0,.5) 3px 3px 4px;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;cursor:pointer;margin:-2px -2px -2px -3px;padding:2px 2px 3px 3px;position:relative}#goog-gt-tt span:focus{outline:none}#goog-gt-tt .trans-edit{background-color:transparent;border:1px solid #4d90fe;border-radius:0em;-webkit-border-radius:0em;-moz-border-radius:0em;margin:-2px;padding:1px}#goog-gt-tt .gt-trans-highlight-l{border-left:2px solid red;margin-left:-2px}#goog-gt-tt .gt-trans-highlight-r{border-right:2px solid red;margin-right:-2px}#goog-gt-tt #alt-input{padding:2px}#goog-gt-tt #alt-input-text{font-size:11px;padding:2px 2px 3px;margin:0;background-color:#fff;color:#333;border:1px solid #d9d9d9;border-top:1px solid #c0c0c0;display:inline-block;vertical-align:top;height:21px;box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-webkit-border-radius:1px}#goog-gt-tt #alt-input-text:hover{border:1px solid #b9b9b9;border-top:1px solid #a0a0a0;-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1)}#goog-gt-tt #alt-input-text:focus{-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);outline:none;border:1px solid #4d90fe}#goog-gt-tt #alt-input-submit{font-size:11px;padding:2px 6px 3px;margin:0 0 0 2px;height:21px}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+
+      
+    </head>
+    <body class="single single-post postid-295 single-format-standard mx-wc-selected-elem mx-wc-1571117961">
+<div id="page-wrap" class="contain">
+<header id="branding" role="banner">
+<h1 id="site-title"><a href="https://falconia.org/blog" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">FalconIA's BLOG</a></h1>
+<h2 id="site-description">FalconIA's Lazy Blog</h2>
+</header>
+<nav id="menu" role="navigation"><div class="menu"><ul><li class="page_item page-item-67"><a href="https://falconia.org/blog/guestbook" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">留言本</a></li></ul></div>
+</nav>
+<div id="container" class="contain">
+<div id="main" role="main">
+<article id="post-295" class="contain has-byline post-295 post type-post status-publish format-standard hentry category-acg category-project tag-extractor tag-game tag-publish tag-programming tag-extract">
+<div class="title">
+<h2 class="entry-title">AFS Tool 0.2.0.6 alpha (CRI AFS Extractor)</h2> <div class="entry-byline">
+<span>Posted by <a href="https://falconia.org/blog/archives/author/FalconIA" title="View all posts by FalconIA" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">FalconIA</a> on <a href="https://falconia.org/blog/archives/295" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">2011-08-08</a></span>
+</div>
+<div class="entry-meta">
+Posted in: <a href="https://falconia.org/blog/archives/category/acg" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">动漫游戏</a>, <a href="https://falconia.org/blog/archives/category/project" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">原创作品</a>.
+Tagged: <a href="https://falconia.org/blog/archives/tag/extractor" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">extractor</a>, <a href="https://falconia.org/blog/archives/tag/game" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">game</a>, <a href="https://falconia.org/blog/archives/tag/publish" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">发布</a>, <a href="https://falconia.org/blog/archives/tag/programming" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">编程</a>, <a href="https://falconia.org/blog/archives/tag/extract" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">解包</a>.
+<span class="comments"><a href="#respond">Leave a Comment</a></span>
+</div>
+</div>
+<div class="entry-content">
+<p>AFS Tool 0.2.0.6 alpha</p>
+<p>Simple tool to extract AFS pack for CRI ADX.<br>
+And it's only a preview version to extract files only.<br>
+Thank you for using.</p>
+<p>Download: [download id="9"]<br>
+// 下载</p>
+<p><img src="assets/1571117961-78ca829d0b69ef117d1923ff9f02332d.jpg" alt="AFS Tool"></p>
+</div>
+<nav id="post-nav" class="contain">
+<h1 class="assistive-text">Posts navigation</h1>
+<div class="nav-older">← <a href="https://falconia.org/blog/archives/197" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">[转载]JAVA实现汉字转拼音缩写–类的静态方法</a></div> <div class="nav-newer"><a href="https://falconia.org/blog/archives/300" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Oreimo Portable Extractor 1.0 (俺妹 解包工具)</a> →</div> </nav>
+</article>
+<div id="comments">
+<div id="respond" class="comment-respond">
+<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small></small></h3>
+<form action="https://falconia.org/blog/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+<p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p> <p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" aria-required="true" required="required"></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" aria-describedby="email-notes" aria-required="true" required="required"></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="text" value="" size="30"></p>
+<p class="comment-form-comment"> <textarea id="comment" name="comment" cols="45" rows="8" aria-describedby="form-allowed-tags" aria-required="true" required="required"></textarea></p> <p class="form-allowed-tags" id="form-allowed-tags">You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes: <code>&lt;a href="" title=""&gt; &lt;abbr title=""&gt; &lt;acronym title=""&gt; &lt;b&gt; &lt;blockquote cite=""&gt; &lt;cite&gt; &lt;code&gt; &lt;del datetime=""&gt; &lt;em&gt; &lt;i&gt; &lt;q cite=""&gt; &lt;s&gt; &lt;strike&gt; &lt;strong&gt; </code></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> 
+
+</p> </form>
+</div>
+</div> </div>
+<ul id="sidebar" role="complementary">
+<li id="search-3" class="widget widget_search"><form role="search" method="get" id="searchform" class="searchform" action="https://falconia.org/blog/">
+<div>
+<label class="screen-reader-text" for="s">Search for:</label>
+<input type="text" value="" name="s" id="s">
+
+</div>
+</form></li><li id="calendar-4" class="widget widget_calendar"><div id="calendar_wrap"><table id="wp-calendar">
+<caption>October 2019</caption>
+<thead>
+<tr>
+<th scope="col" title="Monday">M</th>
+<th scope="col" title="Tuesday">T</th>
+<th scope="col" title="Wednesday">W</th>
+<th scope="col" title="Thursday">T</th>
+<th scope="col" title="Friday">F</th>
+<th scope="col" title="Saturday">S</th>
+<th scope="col" title="Sunday">S</th>
+</tr>
+</thead>
+<tfoot>
+<tr>
+<td colspan="3" id="prev"><a href="https://falconia.org/blog/archives/date/2014/12" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">« Dec</a></td>
+<td class="pad">&nbsp;</td>
+<td colspan="3" id="next" class="pad">&nbsp;</td>
+</tr>
+</tfoot>
+<tbody>
+<tr>
+<td colspan="1" class="pad">&nbsp;</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td>
+</tr>
+<tr>
+<td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td>
+</tr>
+<tr>
+<td>14</td><td id="today">15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td>
+</tr>
+<tr>
+<td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td>
+</tr>
+<tr>
+<td>28</td><td>29</td><td>30</td><td>31</td>
+<td class="pad" colspan="3">&nbsp;</td>
+</tr>
+</tbody>
+</table></div></li><li id="pages-3" class="widget widget_pages"><h2 class="widget-title">Pages</h2> <ul>
+<li class="page_item page-item-67"><a href="https://falconia.org/blog/guestbook" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">留言本</a></li>
+</ul>
+</li><li id="tag_cloud-3" class="widget widget_tag_cloud"><h2 class="widget-title">Tags</h2><div class="tagcloud"><a href="https://falconia.org/blog/archives/tag/adb" class="tag-link-52" title="1 topic" style="font-size: 8pt;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">adb</a>
+<a href="https://falconia.org/blog/archives/tag/android" class="tag-link-48" title="3 topics" style="font-size: 12.941176470588pt;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">android</a>
+<a href="https://falconia.org/blog/archives/tag/avs" class="tag-link-23" title="2 topics" style="font-size: 10.964705882353pt;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">avs</a>
+<a href="https://falconia.org/blog/archives/tag/dos" class="tag-link-24" title="3 topics" style="font-size: 12.941176470588pt;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">dos</a>
+<a href="https://falconia.org/blog/archives/tag/drama" class="tag-link-21" title="1 topic" style="font-size: 8pt;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">drama</a>
+<a href="https://falconia.org/blog/archives/tag/evafan" class="tag-link-19" title="2 topics" style="font-size: 10.964705882353pt;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">eva-fan</a>
+<a href="https://falconia.org/blog/archives/tag/exfat" class="tag-link-43" title="1 topic" style="font-size: 8pt;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">exfat</a>
+<a href="https://falconia.org/blog/archives/tag/extractor" class="tag-link-34" title="2 topics" style="font-size: 10.964705882353pt;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">extractor</a>
+<a href="https://falconia.org/blog/archives/tag/game" class="tag-link-33" title="4 topics" style="font-size: 14.588235294118pt;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">game</a>
+<a href="https://falconia.org/blog/archives/tag/iptables" class="tag-link-51" title="1 topic" style="font-size: 8pt;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">iptables</a>
+<a href="https://falconia.org/blog/archives/tag/ip-limit" class="tag-link-37" title="1 topic" style="font-size: 8pt;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">IP限制</a>
+<a href="https://falconia.org/blog/archives/tag/java" class="tag-link-30" title="1 topic" style="font-size: 8pt;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">java</a>
+<a href="https://falconia.org/blog/archives/tag/lightdm" class="tag-link-47" title="1 topic" style="font-size: 8pt;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">lightdm</a>
+<a href="https://falconia.org/blog/archives/tag/linux" class="tag-link-46" title="2 topics" style="font-size: 10.964705882353pt;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">linux</a>
+<a href="https://falconia.org/blog/archives/tag/oc" class="tag-link-27" title="1 topic" style="font-size: 8pt;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">oc</a>
+<a href="https://falconia.org/blog/archives/tag/ps2" class="tag-link-31" title="5 topics" style="font-size: 15.905882352941pt;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">ps2</a>
+<a href="https://falconia.org/blog/archives/tag/psp" class="tag-link-32" title="4 topics" style="font-size: 14.588235294118pt;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">psp</a>
+<a href="https://falconia.org/blog/archives/tag/sherlock" class="tag-link-49" title="1 topic" style="font-size: 8pt;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">sherlock</a>
+<a href="https://falconia.org/blog/archives/tag/ubuntu" class="tag-link-42" title="3 topics" style="font-size: 12.941176470588pt;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">ubuntu</a>
+<a href="https://falconia.org/blog/archives/tag/vbnet" class="tag-link-20" title="2 topics" style="font-size: 10.964705882353pt;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">vb.net</a>
+<a href="https://falconia.org/blog/archives/tag/vnc" class="tag-link-50" title="1 topic" style="font-size: 8pt;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">vnc</a>
+<a href="https://falconia.org/blog/archives/tag/windows" class="tag-link-25" title="2 topics" style="font-size: 10.964705882353pt;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">windows</a>
+<a href="https://falconia.org/blog/archives/tag/youku" class="tag-link-39" title="1 topic" style="font-size: 8pt;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">优酷</a>
+<a href="https://falconia.org/blog/archives/tag/pre-work" class="tag-link-18" title="6 topics" style="font-size: 17.058823529412pt;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">前期处理</a>
+<a href="https://falconia.org/blog/archives/tag/anime" class="tag-link-22" title="6 topics" style="font-size: 17.058823529412pt;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">动漫</a>
+<a href="https://falconia.org/blog/archives/tag/encoding" class="tag-link-17" title="8 topics" style="font-size: 18.705882352941pt;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">压制</a>
+<a href="https://falconia.org/blog/archives/tag/publish" class="tag-link-36" title="4 topics" style="font-size: 14.588235294118pt;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">发布</a>
+<a href="https://falconia.org/blog/archives/tag/tudou" class="tag-link-38" title="1 topic" style="font-size: 8pt;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">土豆</a>
+<a href="https://falconia.org/blog/archives/tag/kankan" class="tag-link-41" title="1 topic" style="font-size: 8pt;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">看看</a>
+<a href="https://falconia.org/blog/archives/tag/coding" class="tag-link-16" title="2 topics" style="font-size: 10.964705882353pt;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">编码</a>
+<a href="https://falconia.org/blog/archives/tag/programming" class="tag-link-15" title="13 topics" style="font-size: 22pt;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">编程</a>
+<a href="https://falconia.org/blog/archives/tag/extract" class="tag-link-35" title="2 topics" style="font-size: 10.964705882353pt;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">解包</a>
+<a href="https://falconia.org/blog/archives/tag/xunlei" class="tag-link-40" title="1 topic" style="font-size: 8pt;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">迅雷</a></div>
+</li><li id="categories-3" class="widget widget_categories"><h2 class="widget-title">Categories</h2> <ul>
+<li class="cat-item cat-item-9"><a href="https://falconia.org/blog/archives/category/download" title="便利下载" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">便利下载</a> (2)
+</li>
+<li class="cat-item cat-item-4"><a href="https://falconia.org/blog/archives/category/acg" title="动漫游戏" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">动漫游戏</a> (6)
+</li>
+<li class="cat-item cat-item-6"><a href="https://falconia.org/blog/archives/category/project" title="原创作品" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">原创作品</a> (7)
+</li>
+<li class="cat-item cat-item-2"><a href="https://falconia.org/blog/archives/category/fansub" title="字幕相关" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">字幕相关</a> (5)
+</li>
+<li class="cat-item cat-item-3"><a href="https://falconia.org/blog/archives/category/technology" title="技术杂烩" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">技术杂烩</a> (27)
+<ul class="children">
+<li class="cat-item cat-item-5"><a href="https://falconia.org/blog/archives/category/technology/encoding-tech" title="压制相关" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">压制相关</a> (8)
+</li>
+<li class="cat-item cat-item-7"><a href="https://falconia.org/blog/archives/category/technology/game-tech" title="游戏相关" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">游戏相关</a> (4)
+</li>
+<li class="cat-item cat-item-28"><a href="https://falconia.org/blog/archives/category/technology/programming-tech" title="程序相关" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">程序相关</a> (4)
+</li>
+<li class="cat-item cat-item-44"><a href="https://falconia.org/blog/archives/category/technology/os-tech" title="系统相关" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">系统相关</a> (3)
+</li>
+</ul>
+</li>
+<li class="cat-item cat-item-8"><a href="https://falconia.org/blog/archives/category/new-tech" title="日新月异" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">日新月异</a> (1)
+</li>
+<li class="cat-item cat-item-1"><a href="https://falconia.org/blog/archives/category/other" title="闲言闲语..." target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">闲言闲语</a> (15)
+</li>
+</ul>
+</li> <li id="recent-posts-3" class="widget widget_recent_entries"> <h2 class="widget-title">Recent Posts</h2> <ul>
+<li>
+<a href="https://falconia.org/blog/archives/468" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Turn airplane mode on/off via ADB</a>
+</li>
+<li>
+<a href="https://falconia.org/blog/archives/464" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Optimize iptables reject rules</a>
+</li>
+<li>
+<a href="https://falconia.org/blog/archives/449" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">How to modify SystemUI.apk to remove volume soft keys in system bar</a>
+</li>
+<li>
+<a href="https://falconia.org/blog/archives/435" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">[Quoted] VNC from boot on Ubuntu 12.04 without logging in, using LightDM and x11vnc</a>
+</li>
+<li>
+<a href="https://falconia.org/blog/archives/429" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">How to fix android exception of Sherlock: unable to pause activity</a>
+</li>
+</ul>
+</li><li id="recent-comments-3" class="widget widget_recent_comments"><h2 class="widget-title">Recent Comments</h2><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link"><a href="https://falconia.org/blog" rel="noopener noreferrer" class="url" target="_blank" referrerpolicy="no-referrer">FalconIA</a></span> on <a href="https://falconia.org/blog/archives/435/comment-page-1#comment-56997" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">[Quoted] VNC from boot on Ubuntu 12.04 without logging in, using LightDM and x11vnc</a></li><li class="recentcomments"><span class="comment-author-link">C64</span> on <a href="https://falconia.org/blog/archives/435/comment-page-1#comment-56994" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">[Quoted] VNC from boot on Ubuntu 12.04 without logging in, using LightDM and x11vnc</a></li><li class="recentcomments"><span class="comment-author-link"><a href="https://falconia.org/blog" rel="noopener noreferrer" class="url" target="_blank" referrerpolicy="no-referrer">FalconIA</a></span> on <a href="https://falconia.org/blog/archives/435/comment-page-1#comment-49159" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">[Quoted] VNC from boot on Ubuntu 12.04 without logging in, using LightDM and x11vnc</a></li><li class="recentcomments"><span class="comment-author-link">王福利</span> on <a href="https://falconia.org/blog/archives/197/comment-page-1#comment-48743" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">[转载]JAVA实现汉字转拼音缩写–类的静态方法</a></li><li class="recentcomments"><span class="comment-author-link"><a href="http://seb.so/" rel="noopener noreferrer" class="url" target="_blank" referrerpolicy="no-referrer">Seb Maynard</a></span> on <a href="https://falconia.org/blog/archives/435/comment-page-1#comment-48042" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">[Quoted] VNC from boot on Ubuntu 12.04 without logging in, using LightDM and x11vnc</a></li></ul></li><li id="archives-3" class="widget widget_archive"><h2 class="widget-title">Archives</h2> <label class="screen-reader-text" for="archives-dropdown-3">Archives</label>
+<select id="archives-dropdown-3" name="archive-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;">
+<option value="">Select Month</option>
+<option value="https://falconia.org/blog/archives/date/2014/12"> December 2014 &nbsp;(2)</option>
+<option value="https://falconia.org/blog/archives/date/2014/01"> January 2014 &nbsp;(1)</option>
+<option value="https://falconia.org/blog/archives/date/2013/03"> March 2013 &nbsp;(1)</option>
+<option value="https://falconia.org/blog/archives/date/2012/11"> November 2012 &nbsp;(1)</option>
+<option value="https://falconia.org/blog/archives/date/2012/02"> February 2012 &nbsp;(1)</option>
+<option value="https://falconia.org/blog/archives/date/2012/01"> January 2012 &nbsp;(2)</option>
+<option value="https://falconia.org/blog/archives/date/2011/11"> November 2011 &nbsp;(1)</option>
+<option value="https://falconia.org/blog/archives/date/2011/08"> August 2011 &nbsp;(3)</option>
+<option value="https://falconia.org/blog/archives/date/2011/04"> April 2011 &nbsp;(2)</option>
+<option value="https://falconia.org/blog/archives/date/2010/11"> November 2010 &nbsp;(1)</option>
+<option value="https://falconia.org/blog/archives/date/2009/01"> January 2009 &nbsp;(2)</option>
+<option value="https://falconia.org/blog/archives/date/2008/02"> February 2008 &nbsp;(1)</option>
+<option value="https://falconia.org/blog/archives/date/2007/07"> July 2007 &nbsp;(2)</option>
+<option value="https://falconia.org/blog/archives/date/2007/06"> June 2007 &nbsp;(1)</option>
+<option value="https://falconia.org/blog/archives/date/2007/05"> May 2007 &nbsp;(1)</option>
+<option value="https://falconia.org/blog/archives/date/2007/04"> April 2007 &nbsp;(3)</option>
+<option value="https://falconia.org/blog/archives/date/2007/02"> February 2007 &nbsp;(1)</option>
+<option value="https://falconia.org/blog/archives/date/2006/12"> December 2006 &nbsp;(1)</option>
+<option value="https://falconia.org/blog/archives/date/2006/11"> November 2006 &nbsp;(4)</option>
+<option value="https://falconia.org/blog/archives/date/2006/10"> October 2006 &nbsp;(5)</option>
+<option value="https://falconia.org/blog/archives/date/2006/09"> September 2006 &nbsp;(6)</option>
+<option value="https://falconia.org/blog/archives/date/2006/08"> August 2006 &nbsp;(3)</option>
+<option value="https://falconia.org/blog/archives/date/2006/06"> June 2006 &nbsp;(2)</option>
+<option value="https://falconia.org/blog/archives/date/2006/02"> February 2006 &nbsp;(1)</option>
+<option value="https://falconia.org/blog/archives/date/2006/01"> January 2006 &nbsp;(11)</option>
+</select>
+</li><li id="linkcat-14" class="widget widget_links"><h2 class="widget-title">Hot Links</h2>
+<ul class="xoxo blogroll">
+<li><a href="http://blog.squallatf.info/" title="SquallATF’s Blog" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Seventh Heaven</a></li>
+<li><a href="http://fkxg.falconia.org/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">临时de疯狂西瓜农场</a></li>
+<li><a href="http://dadsj.bokee.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">迪奥的世界</a></li>
+</ul>
+</li>
+<li id="linkcat-29" class="widget widget_links"><h2 class="widget-title">Projects</h2>
+<ul class="xoxo blogroll">
+<li><a href="https://code.google.com/p/manga-proxy/" title="A Manga Browser for Android." target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Manga Proxy</a></li>
+</ul>
+</li>
+<li id="meta-3" class="widget widget_meta"><h2 class="widget-title">Meta</h2> <ul>
+<li><a href="https://falconia.org/blog/wp-login.php" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Log in</a></li>
+<li><a href="https://falconia.org/blog/feed" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Entries <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+<li><a href="https://falconia.org/blog/comments/feed" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Comments <abbr title="Really Simple Syndication">RSS</abbr></a></li>
+<li><a href="https://wordpress.org/" title="Powered by WordPress, state-of-the-art semantic personal publishing platform." target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">WordPress.org</a></li> </ul>
+</li> </ul>
+</div>
+</div>
+<footer id="colophon" role="contentinfo">
+<div id="site-generator">
+<a href="https://wordpress.org/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Proudly powered by WordPress</a>
+Theme: Parament by <a href="https://automattic.com/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Automattic</a>.	</div>
+</footer>
+
+
+<iframe src="604a1f8e8c918a38c8b809dc6593db1f.frame.html" id="st_gdpr_iframe" title="GDPR Consent Management" style="width: 0px; height: 0px; position: absolute; left: -5000px;"></iframe><div id="stcpDiv" style="position: absolute; top: -1999px; left: -1988px;">ShareThis Copy and Paste</div><a href="" download="" data-mx-warn="Empty URL"></a><div class="goog-te-spinner-pos"><div class="goog-te-spinner-animation"><svg xmlns="http://www.w3.org/2000/svg" class="goog-te-spinner" width="96px" height="96px" viewBox="0 0 66 66"><circle class="goog-te-spinner-path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30" data-darkreader-inline-fill="" style="--darkreader-inline-fill:none;"></circle></svg></div></div><div data-mx-warn="extension url was not captured by MaoXian" data-mx-original-src="chrome-extension://kjahokgdcbohofgdidndeiaigkehdjdc/pages/ui-selection.html?t=aHR0cHM6Ly9mYWxjb25pYS5vcmc="></div><div data-mx-warn="extension url was not captured by MaoXian" data-mx-original-src="chrome-extension://kjahokgdcbohofgdidndeiaigkehdjdc/pages/ui-control.html?t=aHR0cHM6Ly9mYWxjb25pYS5vcmc="></div>
+</body>
+  </html>

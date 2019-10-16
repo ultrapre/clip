@@ -1,0 +1,340 @@
+
+  <!DOCTYPE html>
+  <html id="" class="">
+    <!-- OriginalSrc: https://flandre-scarlet.moe/blog/555/ -->
+    <head>
+      <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <title>ナツイロココロログ封包分析 – Re: Memory</title>
+      
+<link rel="icon" href="assets/1571161145-17d889a0990111283b7e9ab6b744a6dd.png" sizes="32x32" referrerpolicy="no-referrer">
+<link rel="icon" href="assets/1571161145-8b159906d1fdb06a82c22e5e7ce8f46d.png" sizes="192x192" referrerpolicy="no-referrer">
+<link rel="apple-touch-icon-precomposed" href="assets/1571161145-20ae3987d5e7357fb563ee9491f9113b.png" referrerpolicy="no-referrer">
+
+
+<link rel="stylesheet" id="wp-block-library-css" href="assets/1571161145-e69bc92e88b43bbf8e9ad8eeb064397d.css" type="text/css" media="all" referrerpolicy="no-referrer">
+<link rel="stylesheet" id="blackoot-css" href="assets/1571161145-0d04b7fb02f2c9484b3af6d74b0b57c0.css" type="text/css" media="all" referrerpolicy="no-referrer">
+<link rel="stylesheet" id="blackoot-style-css" href="assets/1571161145-1cd53d4cd49ce0fed0e3af3fbee7e57c.css" type="text/css" media="all" referrerpolicy="no-referrer">
+<link rel="stylesheet" id="font-awesome-css" href="assets/1571161145-90a427bcba3d520dfd533a09951e1a66.css" type="text/css" media="all" referrerpolicy="no-referrer">
+<link rel="stylesheet" id="blackoot-webfonts-css" href="assets/1571161145-6f3e02fc0009b79641be89e4bb36af95.css" type="text/css" media="all" referrerpolicy="no-referrer">
+<link rel="stylesheet" type="text/css" href="assets/1571161145-509befd76878fec54a4d71c9dd6bdd16.css" referrerpolicy="no-referrer">
+<link rel="stylesheet" type="text/css" href="assets/1571161145-d6f1eee630153f750a51250eeb33231c.css" referrerpolicy="no-referrer">
+
+
+<style class="darkreader darkreader--fallback" media="screen"></style>
+<style class="darkreader darkreader--text" media="screen"></style>
+<style class="darkreader darkreader--invert" media="screen"></style>
+<style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}</style>
+<style class="darkreader darkreader--user-agent" media="screen">html {
+    background-color: #191a1b !important;
+}
+html, body, input, textarea, select, button {
+    background-color: #191a1b;
+}
+html, body, input, textarea, select, button {
+    border-color: #5a5956;
+    color: #f0ebe2;
+}
+a {
+    color: #4791e7;
+}
+table {
+    border-color: #4f4e4c;
+}
+::placeholder {
+    color: #bfb9ac;
+}
+::selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+::-moz-selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #565a0f !important;
+    color: #f0ebe2 !important;
+}
+::-webkit-scrollbar {
+    background-color: #1d1f1f;
+    color: #cbc5b9;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #2c2d2d;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #343636;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #404142;
+}
+::-webkit-scrollbar-corner {
+    background-color: #191a1b;
+}
+* {
+    scrollbar-color: #2c2d2d #1d1f1f;
+}</style>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--override" media="screen">.jfk-bubble {
+    background-color: #000000 !important;
+}
+.vimvixen-hint {
+    background-color: #765500 !important;
+    border-color: #d5b22e !important;
+    color: #f9edcc !important;
+}</style>
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #212121; background-image: url(""); background-position: center center; background-size: contain; background-repeat: repeat; background-attachment: fixed; }
+</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">@keyframes fadeInOpacity{0%{opacity:0}to{opacity:1}}:hover>*>.fbvd--wrapper{animation-name:fadeInOpacity;animation-duration:.3s;opacity:1}.fbvd--wrapper{position:absolute;top:10px;left:10px;opacity:0;text-align:center;margin:0;z-index:5}.fbvd--wrapper a{background: url("") no-repeat 3px 4.55px; background-color: #fff; display:inline-block;font:700 14px Helvetica,Arial,sans-serif;color:#4b4f56;text-decoration:none;vertical-align:middle;padding:0px 8px 0px;margin-right:8px;border-radius:2px; line-height: 22px; padding-left:19px; border: 1px solid #e7e7e7; background-size: 13px}.fbvd--wrapper a:last-child{margin-right:0}.fbvd--wrapper a:hover{text-decoration:none}.fbvd--wrapper a:focus{box-shadow:0 0 1px 2px rgba(88,144,255,.75),0 1px 1px rgba(0,0,0,.15);outline:none}.fbvd--wrapper b{font-size:13px;position:relative;top:1px;color:#3b5998;font-weight:400}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+
+      
+    </head>
+    <body class="post-template-default single single-post postid-555 single-format-standard custom-background mx-wc-selected-elem mx-wc-1571161145">
+
+<div id="main-wrap">
+	<div id="header-wrap">
+		<div id="tophead-wrap">
+			<div class="container">
+				<div class="tophead">
+					<form role="search" method="get" class="search-form" action="https://flandre-scarlet.moe/blog/">
+				<label>
+					<span class="screen-reader-text">搜索：</span>
+					<input type="search" class="search-field" placeholder="搜索…" value="" name="s">
+				</label>
+				
+			</form>				</div>
+			</div>
+		</div>
+
+		<div id="header">
+			<div class="container">
+				<div id="logo">
+					<a href="https://flandre-scarlet.moe/blog" title="Re: Memory" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+													<h1 class="site-title">Re: Memory</h1>
+												</a>
+				</div>
+							</div>
+		</div>
+
+		<div id="nav-wrap">
+			<div id="navbar" class="container">
+				<div class="menu-main-container"><ul id="menu-main" class="menu sf-menu sf-js-enabled sf-arrows"><li id="menu-item-573" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-573"><a href="https://flandre-scarlet.moe/blog" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">首页</a></li>
+</ul></div>			</div>
+		</div>
+	</div>
+				<div id="header-image" class="container">
+				<img src="assets/1571161145-d127d0a4e39e2000628b998f0a57e463.png" height="595" width="1000" alt="">
+			</div>
+				<div id="page-title">
+		<div class="container">
+							<div id="breadcrumbs">
+					<a href="https://flandre-scarlet.moe/blog" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">首页</a><span class="separator"> / </span><a href="https://flandre-scarlet.moe/blog/category/%e8%a7%a3%e5%8c%85/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">解包</a><span class="separator"> / </span><a href="https://flandre-scarlet.moe/blog/category/%e9%80%86%e5%90%91/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">逆向</a><span class="separator"> / </span>ナツイロココロログ封包分析				</div>
+							<h1>ナツイロココロログ封包分析</h1>
+		</div>
+	</div>
+	<div class="container" id="main-content">
+	<div id="page-container" class="with-sidebar">
+						<div id="post-555" class="single-post post-555 post type-post status-publish format-standard hentry category-5 category-31 tag-galgame tag-hearts tag-pal tag-53">
+										<div class="postmetadata">
+												
+												<span class="meta-date post-date updated"><i class="fa fa-calendar"></i><a href="https://flandre-scarlet.moe/blog/555/" title="ナツイロココロログ封包分析" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+							2018年8月30日						</a></span>
+												<span class="meta-author author vcard"><i class="fa fa-user"></i><a class="fn" href="https://flandre-scarlet.moe/blog/author/flandrelovely/" title="查看所有由flandre发布的文章" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">flandre</a></span>
+												<div class="meta-category">
+							<span class="category-icon" title="分类"><i class="fa fa-tag"></i></span>
+							<a href="https://flandre-scarlet.moe/blog/category/%e8%a7%a3%e5%8c%85/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">解包</a><a href="https://flandre-scarlet.moe/blog/category/%e9%80%86%e5%90%91/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">逆向</a>						</div>
+													<span class="meta-comments"><i class="fa fa-comment"></i>
+								<a href="#respond">0 条评论</a>							</span>
+							<div class="meta-tags"><span class="tags-icon"><i class="fa fa-tags"></i></span><a href="https://flandre-scarlet.moe/blog/tag/galgame/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Galgame</a><a href="https://flandre-scarlet.moe/blog/tag/hearts/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Hearts</a><a href="https://flandre-scarlet.moe/blog/tag/pal/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">PAL</a><a href="https://flandre-scarlet.moe/blog/tag/%e3%83%8a%e3%83%84%e3%82%a4%e3%83%ad%e3%82%b3%e3%82%b3%e3%83%ad%e3%83%ad%e3%82%b0/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">ナツイロココロログ</a></div>					</div>
+										<div class="post-contents entry-content">
+						<p>封包的结构比较清晰，只是其中的图像是经过压缩编码的。<br>
+图像分为两种，一种是文件标识为 “GE” 的单图文件，另一种则是文件标识为 “PGD3” 的差分文件。差分文件中含有一个单图文件的文件名，当引擎读取差分文件时会同时读取单图文件，解码后将两者进行混合。代码里还备有 “PGD2” 的分支，是 “PGD3” 的一个子集。不过这个游戏里似乎并没有该类型的文件，所以先不管了。</p>
+<p>两种图像格式的结构</p>
+<p><span id="more-555"></span></p>
+<div id="highlighter_591370" class="syntaxhighlighter  "><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="keyword bold">struct</code> <code class="plain">GEHeader {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="color1 bold">char</code>&nbsp;&nbsp;&nbsp;&nbsp; <code class="plain">magic[2];&nbsp; </code><code class="comments">// "GE"</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">uint16_t size;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">uint32_t x;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>5</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">uint32_t y;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>6</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">uint32_t width;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>7</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">uint32_t height;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>8</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">uint32_t display_width;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>9</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">uint32_t display_height;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>10</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">uint8_t&nbsp; comparess;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>11</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">uint8_t&nbsp; zero[3];</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>12</code></td><td class="content"><code class="plain">};</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>13</code></td><td class="content"><code class="keyword bold">struct</code> <code class="plain">PGD3Header {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>14</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="color1 bold">char</code>&nbsp;&nbsp;&nbsp;&nbsp; <code class="plain">magic[4];&nbsp; </code><code class="comments">// "PGD3"</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>15</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">uint16_t offset_x;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>16</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">uint16_t offset_y;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>17</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">uint16_t width;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>18</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">uint16_t height;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>19</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">uint16_t component;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>20</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="color1 bold">char</code>&nbsp;&nbsp;&nbsp;&nbsp; <code class="plain">name[34];</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>21</code></td><td class="content"><code class="plain">}</code></td></tr></tbody></table></div></div></div>
+<p><img src="assets/1571161145-ee8bb186349f2453e1de42960f77fc0b.png" alt=""><br>
+<br><br>
+<img src="assets/1571161145-f31a8519acf68225bc6661389a2ea6df.png" alt=""></p>
+<p>根据 GE 文件头中的压缩指示字段的不同有 3 种不同的压缩方式，该游戏中的图像对应压缩的字段都是 3，而后根据解码出来图像的颜色深度不同，也对应着不同的处理方式。当然在内存中两者最终都会解码为 32 位 BGRA 的格式，而且会将图像的宽度向上对齐到 2^n。以上就是这个解码过程的概况了，步骤还是比较多的，而且代码也散落在好几个子函数里。虽然我觉得应该把算法全逆出来才算完整，不过我还是没法理解算法本身的内容。。。就算是逆估计也就是对着代码翻译或是直接 F5，这就是纯体力活了，所以还是算了(((((((・・;)</p>
+<p>于是愉快地决定直接去内存里 dump 现成数据。而引擎解码对应的图片是调用了导出的 PalSpriteLoad，传递的关键参数就是资源文件名了，这使得处理变的更加简单。根据前面的分析，在解封包的时候就可以同时判断图片的类型（是不是差分），以及 GE 文件的压缩方式等，这些数据可以记录下来，随后传递给调试器即可根据文件类型自动收取对应文件的数据了。</p>
+<p>另外脚本文件还有一小段的解密过程<img src="assets/1571161145-cdbbe2adf998f365f2e534416b3c04c0.png" alt=""></p>
+<p>以上就是 PAL 引擎(?)封包的大致情况了。</p>
+						
+											</div>
+					
+				</div>
+				<div class="article_nav"><div class="next navbutton"><a href="https://flandre-scarlet.moe/blog/579/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">下一篇文章<i class="fa fa-angle-double-right"></i></a></div><div class="previous navbutton"><a href="https://flandre-scarlet.moe/blog/539/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><i class="fa fa-angle-double-left"></i>上一篇文章</a></div></div>					<hr>
+					<div class="comments">
+							<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">发表评论 <small></small></h3>			<form action="https://flandre-scarlet.moe/blog/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+				<p class="comment-notes"><span id="email-notes">电子邮件地址不会被公开。</span> 必填项已用<span class="required">*</span>标注</p><p class="comment-form-comment"><label for="comment">评论</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">姓名 <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required="required"></p>
+<p class="comment-form-email"><label for="email">电子邮件 <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" maxlength="100" aria-describedby="email-notes" required="required"></p>
+<p class="comment-form-url"><label for="url">站点</label> <input id="url" name="url" type="text" value="" size="30" maxlength="200"></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="发表评论"> 
+
+</p>			</form>
+			</div><!-- #respond -->
+	<p class="akismet_comment_form_privacy_notice">此站点使用Akismet来减少垃圾评论。<a href="https://akismet.com/privacy/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">了解我们如何处理您的评论数据</a>。</p>					</div>
+					<div class="article_nav"><div class="next navbutton"><a href="https://flandre-scarlet.moe/blog/579/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">下一篇文章<i class="fa fa-angle-double-right"></i></a></div><div class="previous navbutton"><a href="https://flandre-scarlet.moe/blog/539/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><i class="fa fa-angle-double-left"></i>上一篇文章</a></div></div>	</div>
+
+	<div id="sidebar-container">
+		<ul id="sidebar">
+	<li id="custom_html-3" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><a target="_blank" href="mailto:i@flandre-scarlet.moe" rel="noopener noreferrer" referrerpolicy="no-referrer"><img src="assets/1571161145-ecd958657097b567a4b01e64238bf463.png" title="联系我"></a></div></li>
+		<li id="recent-posts-4" class="widget widget_recent_entries">		<h3 class="widget-title">近期文章</h3>		<ul>
+											<li>
+					<a href="https://flandre-scarlet.moe/blog/959/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">時計仕掛けのレイライン 感想</a>
+									</li>
+											<li>
+					<a href="https://flandre-scarlet.moe/blog/946/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">CrackMe 反汇编练习之 092</a>
+									</li>
+											<li>
+					<a href="https://flandre-scarlet.moe/blog/931/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">CrackMe 反汇编练习之 081</a>
+									</li>
+											<li>
+					<a href="https://flandre-scarlet.moe/blog/912/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">制作龙儿同款橙子挞</a>
+									</li>
+											<li>
+					<a href="https://flandre-scarlet.moe/blog/890/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">自建 KMS 激活服务</a>
+									</li>
+					</ul>
+		</li>
+<li id="categories-3" class="widget widget_categories"><h3 class="widget-title">分类目录</h3>		<ul>
+				<li class="cat-item cat-item-2"><a href="https://flandre-scarlet.moe/blog/category/debug/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Debug</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="https://flandre-scarlet.moe/blog/category/directx/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">DirectX</a>
+</li>
+	<li class="cat-item cat-item-126"><a href="https://flandre-scarlet.moe/blog/category/galgame/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">galgame</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="https://flandre-scarlet.moe/blog/category/%e5%9b%be%e5%83%8f%e5%a4%84%e7%90%86/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">图像处理</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://flandre-scarlet.moe/blog/category/uncategorized/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">未分类</a>
+</li>
+	<li class="cat-item cat-item-42"><a href="https://flandre-scarlet.moe/blog/category/%e6%9d%82/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">杂</a>
+</li>
+	<li class="cat-item cat-item-25"><a href="https://flandre-scarlet.moe/blog/category/%e6%b8%b8%e6%88%8f/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">游戏</a>
+</li>
+	<li class="cat-item cat-item-83"><a href="https://flandre-scarlet.moe/blog/category/%e7%94%9f%e6%b4%bb/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">生活</a>
+</li>
+	<li class="cat-item cat-item-85"><a href="https://flandre-scarlet.moe/blog/category/%e7%a8%8b%e5%ba%8f/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">程序</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="https://flandre-scarlet.moe/blog/category/%e8%a7%a3%e5%8c%85/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">解包</a>
+</li>
+	<li class="cat-item cat-item-31"><a href="https://flandre-scarlet.moe/blog/category/%e9%80%86%e5%90%91/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">逆向</a>
+</li>
+		</ul>
+			</li>
+<li id="meta-3" class="widget widget_meta"><h3 class="widget-title">功能</h3>			<ul>
+						<li><a href="https://flandre-scarlet.moe/blog/wp-login.php" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">登录</a></li>
+			<li><a href="https://flandre-scarlet.moe/blog/feed/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">文章<abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="https://flandre-scarlet.moe/blog/comments/feed/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">评论<abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="https://cn.wordpress.org/" title="基于WordPress，一个优美、先进的个人信息发布平台。" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">WordPress.org</a></li>			</ul>
+			</li>
+<li id="nav_menu-2" class="widget widget_nav_menu"><h3 class="widget-title">链接</h3><div class="menu-%e5%8f%8b%e6%83%85%e9%93%be%e6%8e%a5-container"><ul id="menu-%e5%8f%8b%e6%83%85%e9%93%be%e6%8e%a5" class="menu"><li id="menu-item-575" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-575"><a target="_blank" rel="noopener noreferrer" href="https://laike9m.com/" referrerpolicy="no-referrer">laike9m’s blog</a></li>
+<li id="menu-item-742" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-742"><a target="_blank" rel="noopener noreferrer" href="https://plumz.me/" referrerpolicy="no-referrer">Plum’s Blog</a></li>
+<li id="menu-item-842" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-842"><a target="_blank" rel="noopener noreferrer" href="https://moeblog.top/" referrerpolicy="no-referrer">MoeBlog</a></li>
+<li id="menu-item-722" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-722"><a target="_blank" rel="noopener noreferrer" href="https://www.vultr.com/?ref=7987757-4F" referrerpolicy="no-referrer">[ 注册 vultr 赠送 $50 ]</a></li>
+</ul></div></li>
+</ul>
+	</div>
+
+</div>
+<div id="sub-footer">
+	<div class="container">
+		<div class="sub-footer-left">
+			<p>
+
+			
+			Copyright © 2019 Re: Memory. &nbsp;&nbsp;Powered by love. 
+
+			</p>
+		</div>
+
+		<div class="sub-footer-right">
+					</div>
+	</div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Dynamic page generated in 0.325 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2019-10-16 01:31:44 -->
+
+<!-- super cache --><a href="" download="" data-mx-warn="Empty URL"></a><div data-mx-warn="extension url was not captured by MaoXian" data-mx-original-src="chrome-extension://kjahokgdcbohofgdidndeiaigkehdjdc/pages/ui-selection.html?t=aHR0cHM6Ly9mbGFuZHJlLXNjYXJsZXQubW9l"></div><div data-mx-warn="extension url was not captured by MaoXian" data-mx-original-src="chrome-extension://kjahokgdcbohofgdidndeiaigkehdjdc/pages/ui-control.html?t=aHR0cHM6Ly9mbGFuZHJlLXNjYXJsZXQubW9l"></div>
+</body>
+  </html>

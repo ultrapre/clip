@@ -1,0 +1,109 @@
+.reward {
+  margin: 1em auto;
+  width: 90%;
+  text-align: center;
+  color: #444;
+}
+.reward .qr {
+  text-align: center;
+}
+.reward .qr div {
+  padding: 0.5em;
+  display: inline-block;
+}
+.reward .qr div img {
+  width: 10em;
+  display: inline-block;
+}
+.reward .qr div span {
+  display: block;
+}
+.reward .button {
+  cursor: pointer;
+  border: none;
+  outline: 0;
+  padding: 0em 0.5em;
+  margin: 0.5em 0;
+  background: #ff2a2a;
+  border: 0.1em solid #f5c6cb;
+  line-height: 2em;
+}
+.post .post-header {
+  text-align: center;
+}
+.post .post-header .post-title-simple {
+  margin: 0;
+}
+.post .post-header .post-title .post-title-link {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  border-bottom: none;
+  color: #26272b;
+}
+.post .post-header .post-title .post-title-link::after {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 0.1em;
+  bottom: 0;
+  left: 0;
+  background: #26272b;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.post .post-header .post-title .post-title-link:hover::after {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  -moz-transform: scaleX(1);
+  -o-transform: scaleX(1);
+  -ms-transform: scaleX(1);
+  transform: scaleX(1);
+}
+.post .post-header .post-title .post-title-link:active {
+  top: 0.1em;
+}
+.post .post-header .post-meta span {
+  margin: 0 0.1em;
+}
+.post .post-main a.headerlink {
+  border: none;
+}
+.post .post-main a.headerlink:hover {
+  border: none;
+}
+.post .post-main a.headerlink:active {
+  top: 0;
+}
+.post .post-main a.headerlink::before {
+  content: "#";
+  margin-right: 0.3em;
+}
+.post .post-footer {
+  text-align: center;
+}
+.post .post-footer .post-tags .post-tag {
+  margin: 0.5em;
+  display: inline-block;
+  background: #ff2a2a;
+  border: 0.1em solid #f5c6cb;
+  padding: 0.15em;
+  line-height: 1.2em;
+}
+.post .post-footer .post-tags .post-tag:nth-child(2n) {
+  background: #37cf38;
+  border: 0.1em solid #c3e6cb;
+}
+.post .post-footer .post-tags .post-tag:nth-child(3n) {
+  background: #33aaef;
+  border: 0.1em solid #b8daff;
+}

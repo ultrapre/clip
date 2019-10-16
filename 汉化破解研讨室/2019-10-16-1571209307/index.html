@@ -1,0 +1,1209 @@
+
+  <!DOCTYPE html>
+  <html id="" class="">
+    <!-- OriginalSrc: https://www.iteye.com/blog/rednaxelafx-153433 -->
+    <head>
+      <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <title>Borland的库的一个小特征？ - Script Ahead, Code Behind - ITeye博客</title>
+      
+<link rel="shortcut icon" href="assets/1571209307-1cd7c6fd0de855e9efac8dbe4a274b55.ico" type="image/x-icon" referrerpolicy="no-referrer">
+
+
+<link href="assets/1571209307-24c828ef0717ef81511085cae5ef164a.css" media="screen" rel="stylesheet" type="text/css" referrerpolicy="no-referrer">
+<link href="assets/1571209307-368b60bb216b4f4bf566fad6964a61f9.css" media="screen" rel="stylesheet" type="text/css" referrerpolicy="no-referrer">
+<link href="assets/1571209307-396dd74c56d84598b8a22d8cb10eaf3a.css" media="screen" rel="stylesheet" type="text/css" referrerpolicy="no-referrer">
+<link rel="stylesheet" type="text/css" href="assets/1571209307-9aeb703993455cc093fff678a2ad3401.css" referrerpolicy="no-referrer">
+<link rel="stylesheet" type="text/css" href="assets/1571209307-05fb66a2c1140728ea8d74162a702c22.css" referrerpolicy="no-referrer">
+
+
+<style class="darkreader darkreader--fallback" media="screen"></style>
+<style class="darkreader darkreader--text" media="screen"></style>
+<style class="darkreader darkreader--invert" media="screen"></style>
+<style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}</style>
+<style class="darkreader darkreader--user-agent" media="screen">html {
+    background-color: #191a1b !important;
+}
+html, body, input, textarea, select, button {
+    background-color: #191a1b;
+}
+html, body, input, textarea, select, button {
+    border-color: #5a5956;
+    color: #f0ebe2;
+}
+a {
+    color: #4791e7;
+}
+table {
+    border-color: #4f4e4c;
+}
+::placeholder {
+    color: #bfb9ac;
+}
+::selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+::-moz-selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #565a0f !important;
+    color: #f0ebe2 !important;
+}
+::-webkit-scrollbar {
+    background-color: #1d1f1f;
+    color: #cbc5b9;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #2c2d2d;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #343636;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #404142;
+}
+::-webkit-scrollbar-corner {
+    background-color: #191a1b;
+}
+* {
+    scrollbar-color: #2c2d2d #1d1f1f;
+}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--override" media="screen">.jfk-bubble {
+    background-color: #000000 !important;
+}
+.vimvixen-hint {
+    background-color: #765500 !important;
+    border-color: #d5b22e !important;
+    color: #f9edcc !important;
+}</style>
+<style>
+ 
+.hide-main-content{
+    position: relative;
+}
+.hide-article-box {
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    bottom: -1px;
+    width: 100%;
+    padding-top: 160px;
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(255,255,255,0)),color-stop(70%, #fff));
+    background-image: linear-gradient(-180deg,rgba(255,255,255,0) 0%,#fff 70%);
+}
+.hide-article-box #btn-readmore{
+    color: #ca0c16;
+    border: 1px solid #ca0c16;
+    margin: 10px auto;
+    padding: 0 8px;
+    display: block;
+    font-size: 14px;
+    border-radius: 4px;
+    text-align: center;
+    background-color: transparent;
+    height: 34px;
+    width: 74px;
+    line-height: 32px;
+    min-width: 72px;
+    cursor: pointer;
+}
+.hide-article-box #btn-readmore:hover{
+    background: #ca0c16;
+    color:#fff;
+    text-decoration: none;
+}
+</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">.dp-j .annotation { color: #646464; }.dp-j .number { color: #C00000; }</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">.dp-j .annotation { color: #646464; }.dp-j .number { color: #C00000; }</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">.dp-j .annotation { color: #646464; }.dp-j .number { color: #C00000; }</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">.dp-cpp .datatypes { color: #2E8B57; font-weight: bold; }</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">.dp-j .annotation { color: #646464; }.dp-j .number { color: #C00000; }</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">.dp-j .annotation { color: #646464; }.dp-j .number { color: #C00000; }</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">.dp-j .annotation { color: #646464; }.dp-j .number { color: #C00000; }</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">.dp-j .annotation { color: #646464; }.dp-j .number { color: #C00000; }</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">.dp-j .annotation { color: #646464; }.dp-j .number { color: #C00000; }</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">.dp-j .annotation { color: #646464; }.dp-j .number { color: #C00000; }</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">.dp-j .annotation { color: #646464; }.dp-j .number { color: #C00000; }</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">.dp-j .annotation { color: #646464; }.dp-j .number { color: #C00000; }</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--cors" media="screen">body,dd,div,dl,dt,form,h1,h2,h3,h4,h5,h6,html,input,li,ol,p,select,td,textarea,th,ul{margin:0;padding:0}*{box-sizing:border-box}body,html{min-height:100%}h1,h2,h3,h4,h5,h6{font-weight:400}.recommend-right ul,ol{list-style:none}.recommend-right img{border:none;vertical-align:middle}.recommend-right a{text-decoration:none;color:#232323}.recommend-right table{border-collapse:collapse;table-layout:fixed}.recommend-right input,textarea{outline:0;border:none}.recommend-right textarea{resize:none;overflow:auto}.clearfix:after{content:" ";display:block;height:0;visibility:hidden;clear:both}.recommend{overflow:hidden}.newbox.recommend{overflow:hidden}svg.icon{width:1em;height:1em;vertical-align:-.15em;fill:currentColor;overflow:hidden;margin-right:4px}svg.icon.icon-level{width:3em;height:1em}.recommend-right{float:right;width:300px;margin-left:8px;background-color:#fff;-webkit-box-shadow:0 2px 4px 0 rgba(0,0,0,.05);box-shadow:0 2px 4px 0 rgba(0,0,0,.05)}.recommend-right .recommend-fixed-box{background-color:#fff}.recommend-right .right-item{padding:8px 0;overflow:hidden;word-break:break-all;margin-left:8px;margin-right:8px;border-bottom:1px solid #f5f5f5;box-sizing:border-box}.recommend-right .right-item:hover .content h5{color:#ca0c16}.recommend-right .right-item .content{margin-bottom:4px}.recommend-right .right-item .content img{width:58px;height:36px}.recommend-right .right-item .content h5{display:inline;font-size:14px;color:#5c5c5c;letter-spacing:0;line-height:20px;max-height:44px;overflow:hidden;font-weight:500;margin-right:4px;white-space:nowrap;text-overflow:ellipsis}.recommend-right .right-item .content .h5width{width:76%;margin-left:8px}.recommend-right .right-item .content span{margin-right:8px;font-size:12px;color:#999;letter-spacing:0;line-height:20px}.recommend-right .right-item .content .download_mark{border:1px solid #e3e3e3;padding:2px;margin-right:4px}.recommend-right .right-item .right-item-desc{font-size:12px;color:#999;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--cors" media="screen">.{font-family:""!important;font-size:16px;font-style:normal;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.fanyi:before{content:"\e661"}.shouji:before{content:"\e66f"}.yuedushu:before{content:"\e682"}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">@keyframes fadeInOpacity{0%{opacity:0}to{opacity:1}}:hover>*>.fbvd--wrapper{animation-name:fadeInOpacity;animation-duration:.3s;opacity:1}.fbvd--wrapper{position:absolute;top:10px;left:10px;opacity:0;text-align:center;margin:0;z-index:5}.fbvd--wrapper a{background: url("") no-repeat 3px 4.55px; background-color: #fff; display:inline-block;font:700 14px Helvetica,Arial,sans-serif;color:#4b4f56;text-decoration:none;vertical-align:middle;padding:0px 8px 0px;margin-right:8px;border-radius:2px; line-height: 22px; padding-left:19px; border: 1px solid #e7e7e7; background-size: 13px}.fbvd--wrapper a:last-child{margin-right:0}.fbvd--wrapper a:hover{text-decoration:none}.fbvd--wrapper a:focus{box-shadow:0 0 1px 2px rgba(88,144,255,.75),0 1px 1px rgba(0,0,0,.15);outline:none}.fbvd--wrapper b{font-size:13px;position:relative;top:1px;color:#3b5998;font-weight:400}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+
+      
+    </head>
+    <body class="mx-wc-selected-elem mx-wc-1571209307"><svg aria-hidden="true" style="position: absolute; width: 0px; height: 0px; overflow: hidden;"><symbol id="fanyi" viewBox="0 0 1084 1024"><path d="M602.416429 647.439059v75.390494h120.470588v-120.470588h-75.029082l195.493647-193.939577V481.882353h180.597459c33.322165 0 60.289506 26.967341 60.289506 60.235294 0 0.722824-0.012047 1.439624-0.036141 2.1504v236.640377c0.024094 0.710776 0.036141 1.427576 0.036141 2.1504 0 33.261929-26.967341 60.235294-60.235294 60.235294H843.357606v120.470588c0 33.261929-26.967341 60.229271-60.235294 60.22927s-60.235294-26.967341-60.235295-60.235294v-120.470588H542.090782c-33.267953 0-60.235294-26.967341-60.235294-60.235294l0.006024-16.022588 120.554917-119.597177z m240.935153-45.080094v120.470588h120.380235v-120.470588h-120.380235z m-403.534306-46.585977l-27.732329-67.861082H186.479676l-70.716235 167.936c-12.9024 30.659765-48.224376 45.056-78.884141 32.141553-30.659765-12.908424-45.049976-48.2304-32.141553-78.890165l240.941176-572.223247A60.253365 60.253365 0 0 1 301.782076 0.006024a60.253365 60.253365 0 0 1 56.380236 37.466352l174.242635 426.429742 352.798117-350.033318c23.612235-23.431529 61.7472-23.280941 85.17873 0.331294 23.431529 23.612235 23.280941 61.753224-0.331294 85.184753L200.394029 963.029835c-23.612235 23.431529-61.753224 23.280941-85.184753-0.331294-23.431529-23.612235-23.280941-61.753224 0.337318-85.184753l324.270682-321.7408z m-138.842353-339.787294L237.209841 367.441318H362.860664L300.974923 215.979671z"></path></symbol><symbol id="shouji" viewBox="0 0 1024 1024"><path d="M768 670.72V102.4H256v568.32h512z m0 51.2H256v199.68h512v-199.68z m102.4-619.52v819.2c0 56.55552-45.84448 102.4-102.4 102.4H256c-56.55552 0-102.4-45.84448-102.4-102.4V102.4C153.6 45.84448 199.44448 0 256 0h512c56.55552 0 102.4 45.84448 102.4 102.4zM512 870.4c-28.27776 0-51.2-22.92224-51.2-51.2s22.92224-51.2 51.2-51.2 51.2 22.92224 51.2 51.2-22.92224 51.2-51.2 51.2z"></path></symbol><symbol id="yuedushu" viewBox="0 0 1462 1024"><path d="M731.428571 1024c-259.320686 0-495.879314-146.753829-709.668571-440.246857-29.015771-39.840914-29.015771-103.665371 0-143.506286C235.556571 146.761143 472.107886 0 731.428571 0c259.320686 0 495.879314 146.753829 709.668572 440.246857 29.015771 39.840914 29.015771 103.665371 0 143.506286C1227.300571 877.238857 990.749257 1024 731.428571 1024z m0-841.142857c-195.2256 0-375.632457 107.132343-545.865142 329.142857 170.232686 222.010514 350.639543 329.142857 545.865142 329.142857 195.2256 0 375.632457-107.132343 545.865143-329.142857C1107.053714 289.989486 926.646857 182.857143 731.428571 182.857143z m0 621.714286c-161.579886 0-292.571429-130.991543-292.571428-292.571429s130.991543-292.571429 292.571428-292.571429 292.571429 130.991543 292.571429 292.571429-130.991543 292.571429-292.571429 292.571429z m0-182.857143c60.591543 0 109.714286-49.122743 109.714286-109.714286 0-60.591543-49.122743-109.714286-109.714286-109.714286-60.591543 0-109.714286 49.122743-109.714285 109.714286 0 60.591543 49.122743 109.714286 109.714285 109.714286z"></path></symbol></svg>
+  
+
+
+
+  <div id="header">
+    <div id="blog_site_nav">
+  <a href="https://www.iteye.com/" class="homepage" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">首页</a>
+  <a href="https://www.iteye.com/news" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">资讯</a>
+  <a href="https://www.iteye.com/magazines" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">精华</a>
+  <a href="https://www.iteye.com/forums" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">论坛</a>
+  <a href="https://www.iteye.com/ask" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">问答</a>
+  <a href="https://www.iteye.com/blogs" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">博客</a>
+  <a href="https://www.iteye.com/blogs/subjects" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">专栏</a>
+  <a href="https://www.iteye.com/groups" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">群组</a>
+  <a href="https://www.iteye.com/resources" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">下载</a>
+</div>
+
+    <div id="user_nav">
+
+      <a href="https://www.iteye.com/login" class="welcome" title="登录" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">您还未登录!</a>
+    <a href="https://www.iteye.com/login" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">登录</a>
+    <a href="https://www.iteye.com/signup" class="nobg" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">注册</a>
+    <!--<a href="https://passport.csdn.net/account/mobileregister?from=https://www.iteye.com">注册</a>-->
+  </div>
+
+
+  </div>
+
+  <div id="page">
+<!--    <div id="branding" class="clearfix">-->
+<!--      <div id="blog_name">-->
+<!--        <h1><a href="/">-->
+<!--            </a></h1>-->
+<!--      </div>-->
+<!--      <div id='fd'></div>-->
+<!--      <div id="blog_navbar">-->
+<!--        <ul>-->
+          
+          
+          
+          
+          
+          
+<!--        </ul>-->
+
+<!--        <div class="search">-->
+<!--          <form action="/blog/search" method="get">-->
+<!--            <input class="search_text" id="query" name="query" style="margin-left: 10px;width: 110px;" type="text"-->
+<!--              value="" />-->
+<!--            <input class="submit_search" type="submit" value="" />-->
+<!--          </form>-->
+<!--        </div>-->
+<!--        <div id="fd"></div>-->
+<!--      </div>-->
+<!--    </div>-->
+    `
+    <div id="content" class="clearfix">
+      <div id="local">
+        <div class="local_top"></div>
+        <div id="blog_owner">
+  <div id="blog_owner_logo"><a href="https://www.iteye.com/blog/user/rednaxelafx" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img alt="RednaxelaFX的博客" class="logo" src="assets/1571209307-c03517735de6a0bce33363bc3470bd21.jpg" title="RednaxelaFX的博客: Script Ahead, Code Behind" width=""></a></div>
+  <div id="blog_owner_name">RednaxelaFX</div>
+</div>
+
+        <div id="blog_actions">
+          <ul>
+            <li>浏览:
+              2606347 次</li>
+            
+            <li>性别:
+              <img alt="Icon_minigender_1" src="assets/1571209307-66d5ad21d1ac94ca1cc550272a683dbb.gif" title="男">
+            </li>
+            
+            
+            <li>来自:
+              海外
+            </li>
+            
+            <li>
+              <img src="assets/1571209307-6af3ac4fb409543eedec44a2494703ce.gif">
+            </li>
+            
+          </ul>
+        </div>
+
+        <div id="user_visits" class="clearfix">
+          <h5>最近访客 <span style="font-weight:normal;font-size:12px;padding-left:30px;">
+              <a href="https://www.iteye.com/blog/user_visits" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">更多访客&gt;&gt;</a></span></h5>
+          
+          <div class="user_visit">
+            <div class="logo"><a href="https://www.iteye.com/blog/user/zoulei" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img alt="zoulei的博客" class="logo" src="assets/1571209307-c4b32610104e4aa0a99ec1cf83cb32ab.gif" title="zoulei的博客: " width="48px"></a></div>
+            <div class="left">
+              <a href="https://www.iteye.com/blog/user/zoulei" target="_blank" title="zoulei" referrerpolicy="no-referrer" rel="noopener noreferrer">zoulei</a>
+            </div>
+          </div>
+          
+          <div class="user_visit">
+            <div class="logo"><a href="https://www.iteye.com/blog/user/970655147" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img alt="970655147的博客" class="logo" src="assets/1571209307-c4b32610104e4aa0a99ec1cf83cb32ab.gif" title="970655147的博客: " width="48px"></a></div>
+            <div class="left">
+              <a href="https://www.iteye.com/blog/user/970655147" target="_blank" title="970655147" referrerpolicy="no-referrer" rel="noopener noreferrer">970655147</a>
+            </div>
+          </div>
+          
+          <div class="user_visit">
+            <div class="logo"><a href="https://www.iteye.com/blog/user/aresen" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img alt="aresen的博客" class="logo" src="assets/1571209307-c4b32610104e4aa0a99ec1cf83cb32ab.gif" title="aresen的博客: " width="48px"></a></div>
+            <div class="left">
+              <a href="https://www.iteye.com/blog/user/aresen" target="_blank" title="aresen" referrerpolicy="no-referrer" rel="noopener noreferrer">aresen</a>
+            </div>
+          </div>
+          
+          <div class="user_visit">
+            <div class="logo"><a href="https://www.iteye.com/blog/user/xx-1994" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img alt="xx_1994的博客" class="logo" src="assets/1571209307-c4b32610104e4aa0a99ec1cf83cb32ab.gif" title="xx_1994的博客: " width="48px"></a></div>
+            <div class="left">
+              <a href="https://www.iteye.com/blog/user/xx-1994" target="_blank" title="xx_1994" referrerpolicy="no-referrer" rel="noopener noreferrer">xx_1994</a>
+            </div>
+          </div>
+          
+        </div>
+
+        <div id="user_title_list" class="clearfix">
+          <h5>博主相关</h5>
+          <li>
+            <a href="https://www.iteye.com/blog/user/rednaxelafx" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">博客</a>
+          </li>
+
+          <li>
+            <a href="https://www.iteye.com/weibo" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">微博</a>
+          </li>
+
+          <li>
+            <a href="https://www.iteye.com/album" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">相册</a>
+          </li>
+
+          <li>
+            <a href="https://www.iteye.com/link" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">收藏</a>
+          </li>
+
+          <li>
+            <a href="https://www.iteye.com/blog/guest_book" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">留言</a>
+          </li>
+
+          <li>
+            <a href="https://www.iteye.com/blog/profile" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">关于我</a>
+          </li>
+        </div>
+
+        
+
+                <div id="blog_menu">
+          <h5>文章分类</h5>
+          <ul>
+            <li>
+              <a href="https://www.iteye.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">全部博客 (430)</a>
+            </li>
+            
+            <li>
+              <a href="https://www.iteye.com/category/21342" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Programming Languages (23)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/29010" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Compiler (20)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/61298" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Virtual Machine (57)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/162321" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Garbage Collection (4)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/162318" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">HotSpot VM (26)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/78968" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Mono (2)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/33627" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">SSCLI Rotor (1)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/60345" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Harmony (0)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/31968" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">DLR (19)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/29044" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Ruby (28)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/21339" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">C# (38)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/51666" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">F# (3)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/58920" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Haskell (0)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/27795" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Scheme (1)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/28215" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Regular Expression (5)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/43041" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Python (4)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/26952" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">ECMAScript (2)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/22618" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">JavaScript (18)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/22068" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">ActionScript (7)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/27153" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Squirrel (2)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/36305" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">C (6)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/22307" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">C++ (10)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/21340" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">D (2)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/66462" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">.NET (13)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/22617" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Java (86)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/146196" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Scala (1)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/99374" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Groovy (3)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/21352" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Optimization (6)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/27144" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Data Structure and Algorithm (3)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/34556" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Books (4)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/52245" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">WPF (1)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/24366" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Game Engines (7)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/22003" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">吉里吉里 (12)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/23065" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">UML (1)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/24338" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Reverse Engineering (11)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/22696" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">NSIS (4)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/24088" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Utilities (3)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/29744" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Design Patterns (1)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/25057" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Visual Studio (9)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/54389" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Windows 7 (3)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/73928" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">x86 Assembler (1)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/22830" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Android (2)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/25305" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">School Assignment / Test (6)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/24349" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Anti-virus (1)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/27193" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">REST (1)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/28651" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Profiling (1)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/23669" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">misc (39)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/23661" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">NetOA (12)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/27815" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">rant (6)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/65667" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">anime (5)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/28622" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Links (12)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/165300" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">CLR (7)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/165301" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">GC (1)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/226933" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">OpenJDK (2)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/251929" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">JVM (4)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/275192" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">KVM (0)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/279009" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Rhino (1)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/279045" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">LINQ (2)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/279221" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">JScript (0)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/280142" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Nashorn (0)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/287977" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Dalvik (1)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/293492" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">DTrace (0)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/302419" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">LLVM (0)</a>
+              </li>
+              
+            <li>
+              <a href="https://www.iteye.com/category/329856" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">MSIL (0)</a>
+              </li>
+              
+          </ul>
+        </div>
+        <div id="month_blogs">
+          <h5>社区版块</h5>
+          <ul>
+            <li>
+              <a href="https://www.iteye.com/blog/news" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">我的资讯</a> (
+              1)</li>
+            <li>
+              <a href="https://www.iteye.com/blog/post" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">我的论坛</a> (
+              576)
+            </li>
+            <li>
+              <a href="https://www.iteye.com/blog/answered_problems" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">我的问答</a> (
+              364)</li>
+          </ul>
+        </div>
+        <div id="month_blogs">
+          <h5>存档分类</h5>
+          <ul>
+            
+            <li>
+              <a href="https://www.iteye.com/blog/monthblog/2014-12" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">2014-12</a>
+              (
+              1)</li>
+            
+            <li>
+              <a href="https://www.iteye.com/blog/monthblog/2014-03" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">2014-03</a>
+              (
+              2)</li>
+            
+            <li>
+              <a href="https://www.iteye.com/blog/monthblog/2013-11" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">2013-11</a>
+              (
+              2)</li>
+            
+            <li>
+              <a href="https://www.iteye.com/blog/monthblog_more" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">更多存档...</a>
+            </li>
+          </ul>
+        </div>
+        
+        
+
+        <div id="guest_books">
+          <h5>最新评论</h5>
+          <ul>
+            
+            <li>
+              <a href="https://www.iteye.com/blog/user/mldxs" target="_blank" title="mldxs" referrerpolicy="no-referrer" rel="noopener noreferrer">mldxs</a>：
+              虽然很多还是看不懂，写的很好！<br>
+              <a href="https://www.iteye.com/blog/492667#bc2404059" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">虚拟机随谈（一）：解释器，树遍历解释器，基于栈与基于寄存器，大杂烩</a>
+            </li>
+            
+            <li>
+              <a href="https://www.iteye.com/blog/user/hanyuking" target="_blank" title="HanyuKing" referrerpolicy="no-referrer" rel="noopener noreferrer">HanyuKing</a>：
+              &nbsp;&nbsp;&nbsp;<br>
+              <a href="https://www.iteye.com/blog/1050144#bc2404048" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Java的多维数组</a>
+            </li>
+            
+            <li>
+              <a href="https://www.iteye.com/blog/user/funnyone" target="_blank" title="funnyone" referrerpolicy="no-referrer" rel="noopener noreferrer">funnyone</a>：
+              &nbsp;&nbsp;&nbsp;&nbsp;<br>
+              <a href="https://www.iteye.com/blog/2033089#bc2403810" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Java 8的default method与method resolution</a>
+            </li>
+            
+            <li>
+              <a href="https://www.iteye.com/blog/user/ljs-nogard" target="_blank" title="ljs_nogard" referrerpolicy="no-referrer" rel="noopener noreferrer">ljs_nogard</a>：
+              Xamarin workbook - .Net Core 中不 ...<br>
+              <a href="https://www.iteye.com/blog/350493#bc2403422" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">LINQ的恶搞……</a>
+            </li>
+            
+            <li>
+              <a href="https://www.iteye.com/blog/user/txm119161336" target="_blank" title="txm119161336" referrerpolicy="no-referrer" rel="noopener noreferrer">txm119161336</a>：
+              allocatestlye1 顺序为&nbsp; // Fields o ...<br>
+              <a href="https://www.iteye.com/blog/766282#bc2403002" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">最近做的两次Java/JVM分享的概要</a>
+            </li>
+            
+          </ul>
+        </div>
+
+        <div class="local_bottom"></div>
+        
+        <div id="nav_show_top_stop" style="position: fixed; top: 0px;">
+            <div>
+              <!-- 广告位：PC端-iteye博客详情页左侧Button1-200*200 -->
+              
+              <!-- Ads ID 423 -->
+              
+                <div style="text-align: center">
+                  <div id="kp_box_423" data-pid="423"><img class="pre-img-lasy" data-src="https://kunyu.csdn.net/1.png?d=2&amp;k=&amp;m=AStStcLDAUtiEHAcJLtitUSnmLiHSintctbSinLiASDyEimJHptiAftSDLtttUEHnbXfQAHtnAintSpLtSpELQWnpAcHciAtQbiQ" data-mx-warn="Empty URL" data-mx-original-src="" src="invalid-url.png"></div>
+                </div>
+              
+            </div>
+            <div>
+              <!-- 广告位：PC端-iteye博客详情页左侧Button2-200*200 -->
+              
+              <!-- Ads ID 424 -->
+              
+                <div style="text-align: center">
+                  <div id="kp_box_424" data-pid="424"><img class="pre-img-lasy" data-src="https://kunyu.csdn.net/1.png?d=2&amp;k=&amp;m=cJSnSvttUSJJnSLLbAbHpctbSLLoDHAcADUEEEtmHAfnSDtLLEfEHAnnvAbpLtoXJpLpSHiJALSQEnWncHJcbttJpbppinAtQEiQ" data-mx-warn="Empty URL" data-mx-original-src="" src="invalid-url.png"></div>
+                </div>
+              
+            </div>
+          </div>
+      </div>
+      
+      <div id="main" class="">
+        
+
+
+
+        
+
+
+
+
+
+<div class="blog_main">
+  
+  <div class="blog_title">
+    <h3>
+      Borland的库的一个小特征？
+      <em class="actions">      </em>
+    </h3>
+    <ul class="blog_categories"><strong>博客分类：</strong> <li><a href="https://www.iteye.com/category/24338" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Reverse Engineering</a></li> </ul>
+        <div class="news_tag"><a href="http://www.iteye.com/blogs/tag/Borland" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Borland</a><a href="http://www.iteye.com/blogs/tag/Delphi" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Delphi</a><a href="http://www.iteye.com/blogs/tag/Google" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Google</a><a href="http://www.iteye.com/blogs/tag/C++Builder" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">C++Builder</a><a href="http://www.iteye.com/blogs/tag/%E7%BC%96%E7%A8%8B" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">编程</a></div>
+  </div>
+
+  <div id="blog_content" class="hide-main-content">
+    
+    最近弄了下KAMIPANI相关，那引擎被Front Wing/Etude/Clochette使用。PEiD判断它是Borland Delphi 6.0 - 7.0编译的。跟了一下它的字体创建部分，看到了些特别的地方。
+<br>创建字体是用CreateFontIndirect。有EnumFontFamiliesEx的调用记录。
+<br>
+<br>看看这里。
+<br>kamipani_trial.exe：
+<br><div class="dp-highlighter" id=""><div class="bar"><div class="tools">Java代码 <embed wmode="transparent" src="/javascripts/syntaxhighlighter/clipboard_new.swf" width="14" height="15" flashvars="clipboard=0042CBEC%20%20mov%20edx%2Ckamipani.0042CCC0%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3B%20%20ASCII%20%22Default%22%0A0042CBF1%20%20call%20kamipani.0040AE84%0A0042CBF6%20%20test%20eax%2Ceax%0A0042CBF8%20%20jnz%20short%20kamipani.0042CC14%0A0042CBFA%20%20lea%20eax%2Cdword%20ptr%20ss%3A%5Bebp-48%5D%0A0042CBFD%20%20mov%20edx%2Ckamipani.00527EA3%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3B%20%20ASCII%200D%2C%22MS%20Sans%20Serif%22%0A0042CC02%20%20call%20kamipani.00404D88%0A0042CC07%20%20mov%20edx%2Cdword%20ptr%20ss%3A%5Bebp-48%5D%0A0042CC0A%20%20lea%20eax%2Cdword%20ptr%20ss%3A%5Bebp-24%5D%0A0042CC0D%20%20call%20kamipani.0040B8AC%0A0042CC12%20%20jmp%20short%20kamipani.0042CC2D%0A0042CC14%20%20lea%20eax%2Cdword%20ptr%20ss%3A%5Bebp-4C%5D%0A0042CC17%20%20mov%20edx%2Cdword%20ptr%20ss%3A%5Bebp-4%5D%0A0042CC1A%20%20add%20edx%2C1B%0A0042CC1D%20%20call%20kamipani.00404D88%0A0042CC22%20%20mov%20edx%2Cdword%20ptr%20ss%3A%5Bebp-4C%5D%0A0042CC25%20%20lea%20eax%2Cdword%20ptr%20ss%3A%5Bebp-24%5D%0A0042CC28%20%20call%20kamipani.0040B8AC%0A0042CC2D%20%20mov%20byte%20ptr%20ss%3A%5Bebp-26%5D%2C0%0A0042CC31%20%20mov%20byte%20ptr%20ss%3A%5Bebp-28%5D%2C0%0A0042CC35%20%20mov%20byte%20ptr%20ss%3A%5Bebp-27%5D%2C0%0A0042CC39%20%20mov%20eax%2Cebx%0A0042CC3B%20%20call%20kamipani.0042CE04%0A0042CC40%20%20dec%20al%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3B%20%20Switch%20(cases%201..2)%0A0042CC42%20%20je%20short%20kamipani.0042CC4A%0A0042CC44%20%20dec%20al%0A0042CC46%20%20je%20short%20kamipani.0042CC50%0A0042CC48%20%20jmp%20short%20kamipani.0042CC56%0A0042CC4A%20%20mov%20byte%20ptr%20ss%3A%5Bebp-25%5D%2C2%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3B%20%20Case%201%20of%20switch%200042CC40%0A0042CC4E%20%20jmp%20short%20kamipani.0042CC5A%0A0042CC50%20%20mov%20byte%20ptr%20ss%3A%5Bebp-25%5D%2C1%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3B%20%20Case%202%20of%20switch%200042CC40%0A0042CC54%20%20jmp%20short%20kamipani.0042CC5A%0A0042CC56%20%20mov%20byte%20ptr%20ss%3A%5Bebp-25%5D%2C0%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3B%20%20Default%20case%20of%20switch%200042CC40%0A0042CC5A%20%20lea%20eax%2Cdword%20ptr%20ss%3A%5Bebp-40%5D%0A0042CC5D%20%20push%20eax%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3B%20%2FpLogfont%0A0042CC5E%20%20call%20%3Cjmp.%26gdi32.CreateFontIndirectA%3E%20%20%20%3B%20%5CCreateFontIndirectA" quality="high" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">&nbsp;<a href="javascript:void()" title="收藏这段代码" onclick="code_favorites_do_favorite(this);return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img class="star" src="assets/1571209307-bf632ec55a05f69a9359f73417402b26.png" alt="收藏代码"><img class="spinner" src="assets/1571209307-a42df3a5b569bdc98ca473a4a3adfeac.gif" style="display:none"></a></div></div><ol start="1" class="dp-j"><li><span><span>0042CBEC&nbsp;&nbsp;mov&nbsp;edx,kamipani.0042CCC0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;ASCII&nbsp;</span><span class="string">"Default"</span><span>&nbsp;&nbsp;</span></span></li><li><span>0042CBF1&nbsp;&nbsp;call&nbsp;kamipani.0040AE84&nbsp;&nbsp;</span></li><li><span>0042CBF6&nbsp;&nbsp;test&nbsp;eax,eax&nbsp;&nbsp;</span></li><li><span>0042CBF8&nbsp;&nbsp;jnz&nbsp;<span class="keyword">short</span><span>&nbsp;kamipani.0042CC14&nbsp;&nbsp;</span></span></li><li><span>0042CBFA&nbsp;&nbsp;lea&nbsp;eax,dword&nbsp;ptr&nbsp;ss:[ebp-<span class="number">48</span><span>]&nbsp;&nbsp;</span></span></li><li><span>0042CBFD&nbsp;&nbsp;mov&nbsp;edx,kamipani.00527EA3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;ASCII&nbsp;0D,<span class="string">"MS&nbsp;Sans&nbsp;Serif"</span><span>&nbsp;&nbsp;</span></span></li><li><span>0042CC02&nbsp;&nbsp;call&nbsp;kamipani.00404D88&nbsp;&nbsp;</span></li><li><span>0042CC07&nbsp;&nbsp;mov&nbsp;edx,dword&nbsp;ptr&nbsp;ss:[ebp-<span class="number">48</span><span>]&nbsp;&nbsp;</span></span></li><li><span>0042CC0A&nbsp;&nbsp;lea&nbsp;eax,dword&nbsp;ptr&nbsp;ss:[ebp-<span class="number">24</span><span>]&nbsp;&nbsp;</span></span></li><li><span>0042CC0D&nbsp;&nbsp;call&nbsp;kamipani.0040B8AC&nbsp;&nbsp;</span></li><li><span>0042CC12&nbsp;&nbsp;jmp&nbsp;<span class="keyword">short</span><span>&nbsp;kamipani.0042CC2D&nbsp;&nbsp;</span></span></li><li><span>0042CC14&nbsp;&nbsp;lea&nbsp;eax,dword&nbsp;ptr&nbsp;ss:[ebp-4C]&nbsp;&nbsp;</span></li><li><span>0042CC17&nbsp;&nbsp;mov&nbsp;edx,dword&nbsp;ptr&nbsp;ss:[ebp-<span class="number">4</span><span>]&nbsp;&nbsp;</span></span></li><li><span>0042CC1A&nbsp;&nbsp;add&nbsp;edx,1B&nbsp;&nbsp;</span></li><li><span>0042CC1D&nbsp;&nbsp;call&nbsp;kamipani.00404D88&nbsp;&nbsp;</span></li><li><span>0042CC22&nbsp;&nbsp;mov&nbsp;edx,dword&nbsp;ptr&nbsp;ss:[ebp-4C]&nbsp;&nbsp;</span></li><li><span>0042CC25&nbsp;&nbsp;lea&nbsp;eax,dword&nbsp;ptr&nbsp;ss:[ebp-<span class="number">24</span><span>]&nbsp;&nbsp;</span></span></li><li><span>0042CC28&nbsp;&nbsp;call&nbsp;kamipani.0040B8AC&nbsp;&nbsp;</span></li><li><span>0042CC2D&nbsp;&nbsp;mov&nbsp;<span class="keyword">byte</span><span>&nbsp;ptr&nbsp;ss:[ebp-</span><span class="number">26</span><span>],</span><span class="number">0</span><span>&nbsp;&nbsp;</span></span></li><li><span>0042CC31&nbsp;&nbsp;mov&nbsp;<span class="keyword">byte</span><span>&nbsp;ptr&nbsp;ss:[ebp-</span><span class="number">28</span><span>],</span><span class="number">0</span><span>&nbsp;&nbsp;</span></span></li><li><span>0042CC35&nbsp;&nbsp;mov&nbsp;<span class="keyword">byte</span><span>&nbsp;ptr&nbsp;ss:[ebp-</span><span class="number">27</span><span>],</span><span class="number">0</span><span>&nbsp;&nbsp;</span></span></li><li><span>0042CC39&nbsp;&nbsp;mov&nbsp;eax,ebx&nbsp;&nbsp;</span></li><li><span>0042CC3B&nbsp;&nbsp;call&nbsp;kamipani.0042CE04&nbsp;&nbsp;</span></li><li><span>0042CC40&nbsp;&nbsp;dec&nbsp;al&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;Switch&nbsp;(cases&nbsp;<span class="number">1</span><span>..</span><span class="number">2</span><span>)&nbsp;&nbsp;</span></span></li><li><span>0042CC42&nbsp;&nbsp;je&nbsp;<span class="keyword">short</span><span>&nbsp;kamipani.0042CC4A&nbsp;&nbsp;</span></span></li><li><span>0042CC44&nbsp;&nbsp;dec&nbsp;al&nbsp;&nbsp;</span></li><li><span>0042CC46&nbsp;&nbsp;je&nbsp;<span class="keyword">short</span><span>&nbsp;kamipani.0042CC50&nbsp;&nbsp;</span></span></li><li><span>0042CC48&nbsp;&nbsp;jmp&nbsp;<span class="keyword">short</span><span>&nbsp;kamipani.0042CC56&nbsp;&nbsp;</span></span></li><li><span>0042CC4A&nbsp;&nbsp;mov&nbsp;<span class="keyword">byte</span><span>&nbsp;ptr&nbsp;ss:[ebp-</span><span class="number">25</span><span>],</span><span class="number">2</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;Case&nbsp;</span><span class="number">1</span><span>&nbsp;of&nbsp;</span><span class="keyword">switch</span><span>&nbsp;0042CC40&nbsp;&nbsp;</span></span></li><li><span>0042CC4E&nbsp;&nbsp;jmp&nbsp;<span class="keyword">short</span><span>&nbsp;kamipani.0042CC5A&nbsp;&nbsp;</span></span></li><li><span>0042CC50&nbsp;&nbsp;mov&nbsp;<span class="keyword">byte</span><span>&nbsp;ptr&nbsp;ss:[ebp-</span><span class="number">25</span><span>],</span><span class="number">1</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;Case&nbsp;</span><span class="number">2</span><span>&nbsp;of&nbsp;</span><span class="keyword">switch</span><span>&nbsp;0042CC40&nbsp;&nbsp;</span></span></li><li><span>0042CC54&nbsp;&nbsp;jmp&nbsp;<span class="keyword">short</span><span>&nbsp;kamipani.0042CC5A&nbsp;&nbsp;</span></span></li><li><span>0042CC56&nbsp;&nbsp;mov&nbsp;<span class="keyword">byte</span><span>&nbsp;ptr&nbsp;ss:[ebp-</span><span class="number">25</span><span>],</span><span class="number">0</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;Default&nbsp;</span><span class="keyword">case</span><span>&nbsp;of&nbsp;</span><span class="keyword">switch</span><span>&nbsp;0042CC40&nbsp;&nbsp;</span></span></li><li><span>0042CC5A&nbsp;&nbsp;lea&nbsp;eax,dword&nbsp;ptr&nbsp;ss:[ebp-<span class="number">40</span><span>]&nbsp;&nbsp;</span></span></li><li><span>0042CC5D&nbsp;&nbsp;push&nbsp;eax&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;/pLogfont&nbsp;&nbsp;</span></li><li><span>0042CC5E&nbsp;&nbsp;call&nbsp;&lt;jmp.&amp;gdi32.CreateFontIndirectA&gt;&nbsp;&nbsp;&nbsp;;&nbsp;\CreateFontIndirectA&nbsp;&nbsp;</span></li></ol></div>
+<br>
+<br>
+<br>这样的调用本来也说不上奇怪不奇怪，反正就那样。不过刚才因为一些原因而打开原始的吉里吉里2是发觉这玩意也有一样的代码。相似度如此的高……
+<br>krkr.eXe：
+<br><div class="dp-highlighter" id=""><div class="bar"><div class="tools">Java代码 <embed wmode="transparent" src="/javascripts/syntaxhighlighter/clipboard_new.swf" width="14" height="15" flashvars="clipboard=004A3614%20%20mov%20edx%2Ckrkr.004A36E8%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3B%20%20ASCII%20%22Default%22%0A004A3619%20%20call%20krkr.004F52E0%0A004A361E%20%20test%20eax%2Ceax%0A004A3620%20%20jnz%20short%20krkr.004A363C%0A004A3622%20%20lea%20eax%2Cdword%20ptr%20ss%3A%5Bebp-48%5D%0A004A3625%20%20mov%20edx%2Ckrkr.006A4CAF%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3B%20%20ASCII%200D%2C%22MS%20Sans%20Serif%22%0A004A362A%20%20call%20krkr.004FD750%0A004A362F%20%20mov%20edx%2Cdword%20ptr%20ss%3A%5Bebp-48%5D%0A004A3632%20%20lea%20eax%2Cdword%20ptr%20ss%3A%5Bebp-24%5D%0A004A3635%20%20call%20krkr.004F5BA8%0A004A363A%20%20jmp%20short%20krkr.004A3655%0A004A363C%20%20lea%20eax%2Cdword%20ptr%20ss%3A%5Bebp-4C%5D%0A004A363F%20%20mov%20edx%2Cdword%20ptr%20ss%3A%5Bebp-4%5D%0A004A3642%20%20add%20edx%2C1B%0A004A3645%20%20call%20krkr.004FD750%0A004A364A%20%20mov%20edx%2Cdword%20ptr%20ss%3A%5Bebp-4C%5D%0A004A364D%20%20lea%20eax%2Cdword%20ptr%20ss%3A%5Bebp-24%5D%0A004A3650%20%20call%20krkr.004F5BA8%0A004A3655%20%20mov%20byte%20ptr%20ss%3A%5Bebp-26%5D%2C0%0A004A3659%20%20mov%20byte%20ptr%20ss%3A%5Bebp-28%5D%2C0%0A004A365D%20%20mov%20byte%20ptr%20ss%3A%5Bebp-27%5D%2C0%0A004A3661%20%20mov%20eax%2Cebx%0A004A3663%20%20call%20krkr.004A382C%0A004A3668%20%20dec%20al%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3B%20%20Switch%20(cases%201..2)%0A004A366A%20%20je%20short%20krkr.004A3672%0A004A366C%20%20dec%20al%0A004A366E%20%20je%20short%20krkr.004A3678%0A004A3670%20%20jmp%20short%20krkr.004A367E%0A004A3672%20%20mov%20byte%20ptr%20ss%3A%5Bebp-25%5D%2C2%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3B%20%20Case%201%20of%20switch%20004A3668%0A004A3676%20%20jmp%20short%20krkr.004A3682%0A004A3678%20%20mov%20byte%20ptr%20ss%3A%5Bebp-25%5D%2C1%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3B%20%20Case%202%20of%20switch%20004A3668%0A004A367C%20%20jmp%20short%20krkr.004A3682%0A004A367E%20%20mov%20byte%20ptr%20ss%3A%5Bebp-25%5D%2C0%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3B%20%20Default%20case%20of%20switch%20004A3668%0A004A3682%20%20lea%20eax%2Cdword%20ptr%20ss%3A%5Bebp-40%5D%0A004A3685%20%20push%20eax%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3B%20%2FpLogfont%0A004A3686%20%20call%20%3Cjmp.%26GDI32.CreateFontIndirectA%3E%20%20%20%3B%20%5CCreateFontIndirectA" quality="high" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">&nbsp;<a href="javascript:void()" title="收藏这段代码" onclick="code_favorites_do_favorite(this);return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img class="star" src="assets/1571209307-bf632ec55a05f69a9359f73417402b26.png" alt="收藏代码"><img class="spinner" src="assets/1571209307-a42df3a5b569bdc98ca473a4a3adfeac.gif" style="display:none"></a></div></div><ol start="1" class="dp-j"><li><span><span>004A3614&nbsp;&nbsp;mov&nbsp;edx,krkr.004A36E8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;ASCII&nbsp;</span><span class="string">"Default"</span><span>&nbsp;&nbsp;</span></span></li><li><span>004A3619&nbsp;&nbsp;call&nbsp;krkr.004F52E0&nbsp;&nbsp;</span></li><li><span>004A361E&nbsp;&nbsp;test&nbsp;eax,eax&nbsp;&nbsp;</span></li><li><span>004A3620&nbsp;&nbsp;jnz&nbsp;<span class="keyword">short</span><span>&nbsp;krkr.004A363C&nbsp;&nbsp;</span></span></li><li><span>004A3622&nbsp;&nbsp;lea&nbsp;eax,dword&nbsp;ptr&nbsp;ss:[ebp-<span class="number">48</span><span>]&nbsp;&nbsp;</span></span></li><li><span>004A3625&nbsp;&nbsp;mov&nbsp;edx,krkr.006A4CAF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;ASCII&nbsp;0D,<span class="string">"MS&nbsp;Sans&nbsp;Serif"</span><span>&nbsp;&nbsp;</span></span></li><li><span>004A362A&nbsp;&nbsp;call&nbsp;krkr.004FD750&nbsp;&nbsp;</span></li><li><span>004A362F&nbsp;&nbsp;mov&nbsp;edx,dword&nbsp;ptr&nbsp;ss:[ebp-<span class="number">48</span><span>]&nbsp;&nbsp;</span></span></li><li><span>004A3632&nbsp;&nbsp;lea&nbsp;eax,dword&nbsp;ptr&nbsp;ss:[ebp-<span class="number">24</span><span>]&nbsp;&nbsp;</span></span></li><li><span>004A3635&nbsp;&nbsp;call&nbsp;krkr.004F5BA8&nbsp;&nbsp;</span></li><li><span>004A363A&nbsp;&nbsp;jmp&nbsp;<span class="keyword">short</span><span>&nbsp;krkr.004A3655&nbsp;&nbsp;</span></span></li><li><span>004A363C&nbsp;&nbsp;lea&nbsp;eax,dword&nbsp;ptr&nbsp;ss:[ebp-4C]&nbsp;&nbsp;</span></li><li><span>004A363F&nbsp;&nbsp;mov&nbsp;edx,dword&nbsp;ptr&nbsp;ss:[ebp-<span class="number">4</span><span>]&nbsp;&nbsp;</span></span></li><li><span>004A3642&nbsp;&nbsp;add&nbsp;edx,1B&nbsp;&nbsp;</span></li><li><span>004A3645&nbsp;&nbsp;call&nbsp;krkr.004FD750&nbsp;&nbsp;</span></li><li><span>004A364A&nbsp;&nbsp;mov&nbsp;edx,dword&nbsp;ptr&nbsp;ss:[ebp-4C]&nbsp;&nbsp;</span></li><li><span>004A364D&nbsp;&nbsp;lea&nbsp;eax,dword&nbsp;ptr&nbsp;ss:[ebp-<span class="number">24</span><span>]&nbsp;&nbsp;</span></span></li><li><span>004A3650&nbsp;&nbsp;call&nbsp;krkr.004F5BA8&nbsp;&nbsp;</span></li><li><span>004A3655&nbsp;&nbsp;mov&nbsp;<span class="keyword">byte</span><span>&nbsp;ptr&nbsp;ss:[ebp-</span><span class="number">26</span><span>],</span><span class="number">0</span><span>&nbsp;&nbsp;</span></span></li><li><span>004A3659&nbsp;&nbsp;mov&nbsp;<span class="keyword">byte</span><span>&nbsp;ptr&nbsp;ss:[ebp-</span><span class="number">28</span><span>],</span><span class="number">0</span><span>&nbsp;&nbsp;</span></span></li><li><span>004A365D&nbsp;&nbsp;mov&nbsp;<span class="keyword">byte</span><span>&nbsp;ptr&nbsp;ss:[ebp-</span><span class="number">27</span><span>],</span><span class="number">0</span><span>&nbsp;&nbsp;</span></span></li><li><span>004A3661&nbsp;&nbsp;mov&nbsp;eax,ebx&nbsp;&nbsp;</span></li><li><span>004A3663&nbsp;&nbsp;call&nbsp;krkr.004A382C&nbsp;&nbsp;</span></li><li><span>004A3668&nbsp;&nbsp;dec&nbsp;al&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;Switch&nbsp;(cases&nbsp;<span class="number">1</span><span>..</span><span class="number">2</span><span>)&nbsp;&nbsp;</span></span></li><li><span>004A366A&nbsp;&nbsp;je&nbsp;<span class="keyword">short</span><span>&nbsp;krkr.004A3672&nbsp;&nbsp;</span></span></li><li><span>004A366C&nbsp;&nbsp;dec&nbsp;al&nbsp;&nbsp;</span></li><li><span>004A366E&nbsp;&nbsp;je&nbsp;<span class="keyword">short</span><span>&nbsp;krkr.004A3678&nbsp;&nbsp;</span></span></li><li><span>004A3670&nbsp;&nbsp;jmp&nbsp;<span class="keyword">short</span><span>&nbsp;krkr.004A367E&nbsp;&nbsp;</span></span></li><li><span>004A3672&nbsp;&nbsp;mov&nbsp;<span class="keyword">byte</span><span>&nbsp;ptr&nbsp;ss:[ebp-</span><span class="number">25</span><span>],</span><span class="number">2</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;Case&nbsp;</span><span class="number">1</span><span>&nbsp;of&nbsp;</span><span class="keyword">switch</span><span>&nbsp;004A3668&nbsp;&nbsp;</span></span></li><li><span>004A3676&nbsp;&nbsp;jmp&nbsp;<span class="keyword">short</span><span>&nbsp;krkr.004A3682&nbsp;&nbsp;</span></span></li><li><span>004A3678&nbsp;&nbsp;mov&nbsp;<span class="keyword">byte</span><span>&nbsp;ptr&nbsp;ss:[ebp-</span><span class="number">25</span><span>],</span><span class="number">1</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;Case&nbsp;</span><span class="number">2</span><span>&nbsp;of&nbsp;</span><span class="keyword">switch</span><span>&nbsp;004A3668&nbsp;&nbsp;</span></span></li><li><span>004A367C&nbsp;&nbsp;jmp&nbsp;<span class="keyword">short</span><span>&nbsp;krkr.004A3682&nbsp;&nbsp;</span></span></li><li><span>004A367E&nbsp;&nbsp;mov&nbsp;<span class="keyword">byte</span><span>&nbsp;ptr&nbsp;ss:[ebp-</span><span class="number">25</span><span>],</span><span class="number">0</span><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;&nbsp;Default&nbsp;</span><span class="keyword">case</span><span>&nbsp;of&nbsp;</span><span class="keyword">switch</span><span>&nbsp;004A3668&nbsp;&nbsp;</span></span></li><li><span>004A3682&nbsp;&nbsp;lea&nbsp;eax,dword&nbsp;ptr&nbsp;ss:[ebp-<span class="number">40</span><span>]&nbsp;&nbsp;</span></span></li><li><span>004A3685&nbsp;&nbsp;push&nbsp;eax&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;&nbsp;/pLogfont&nbsp;&nbsp;</span></li><li><span>004A3686&nbsp;&nbsp;call&nbsp;&lt;jmp.&amp;GDI32.CreateFontIndirectA&gt;&nbsp;&nbsp;&nbsp;;&nbsp;\CreateFontIndirectA&nbsp;&nbsp;</span></li></ol></div>
+<br>
+<br>而krkr.eXe是Borland C++ Builder 5.5编译出来的。上面这段代码看来应该是Borland里的什么库里的一段。
+<br>
+<br><span style="color: blue; --darkreader-inline-color:#447fe5;" data-darkreader-inline-color=""><strong>是VCL么？哪位大侠要是知道的话请教教我……我真的没那信心就这么自己去碰Borland的东西。</strong></span>
+<br>
+<br>=============================================================
+<br>
+<br>krkr.eXe里有一个地方比较有用：
+<br><div class="dp-highlighter" id=""><div class="bar"><div class="tools">Java代码 <embed wmode="transparent" src="/javascripts/syntaxhighlighter/clipboard_new.swf" width="14" height="15" flashvars="clipboard=mov%20byte%20ptr%20ds%3A%5Bebx%2B17%5D%2C80" quality="high" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">&nbsp;<a href="javascript:void()" title="收藏这段代码" onclick="code_favorites_do_favorite(this);return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img class="star" src="assets/1571209307-bf632ec55a05f69a9359f73417402b26.png" alt="收藏代码"><img class="spinner" src="assets/1571209307-a42df3a5b569bdc98ca473a4a3adfeac.gif" style="display:none"></a></div></div><ol start="1" class="dp-j"><li><span><span>mov&nbsp;</span><span class="keyword">byte</span><span>&nbsp;ptr&nbsp;ds:[ebx+</span><span class="number">17</span><span>],</span><span class="number">80</span><span>&nbsp;&nbsp;</span></span></li></ol></div>
+<br>这句初始化了一个LOGFONT的lfCharSet到0x80=SHIFTJIS_CHARSET。
+<br>顺便再记一次LOGFONT的结构：
+<br><div class="dp-highlighter" id=""><div class="bar"><div class="tools">Cpp代码 <embed wmode="transparent" src="/javascripts/syntaxhighlighter/clipboard_new.swf" width="14" height="15" flashvars="clipboard=typedef%20struct%20tagLOGFONT%20%7B%20%0A%20%20LONG%20lfHeight%3B%20%0A%20%20LONG%20lfWidth%3B%20%0A%20%20LONG%20lfEscapement%3B%20%0A%20%20LONG%20lfOrientation%3B%20%0A%20%20LONG%20lfWeight%3B%20%0A%20%20BYTE%20lfItalic%3B%20%0A%20%20BYTE%20lfUnderline%3B%20%0A%20%20BYTE%20lfStrikeOut%3B%20%0A%20%20BYTE%20lfCharSet%3B%20%0A%20%20BYTE%20lfOutPrecision%3B%20%0A%20%20BYTE%20lfClipPrecision%3B%20%0A%20%20BYTE%20lfQuality%3B%20%0A%20%20BYTE%20lfPitchAndFamily%3B%20%0A%20%20TCHAR%20lfFaceName%5BLF_FACESIZE%5D%3B%20%0A%7D%20LOGFONT%2C%20*PLOGFONT%3B" quality="high" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">&nbsp;<a href="javascript:void()" title="收藏这段代码" onclick="code_favorites_do_favorite(this);return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img class="star" src="assets/1571209307-bf632ec55a05f69a9359f73417402b26.png" alt="收藏代码"><img class="spinner" src="assets/1571209307-a42df3a5b569bdc98ca473a4a3adfeac.gif" style="display:none"></a></div></div><ol start="1" class="dp-cpp"><li><span><span class="keyword">typedef</span><span>&nbsp;</span><span class="keyword">struct</span><span>&nbsp;tagLOGFONT&nbsp;{&nbsp;&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;<span class="datatypes">LONG</span><span>&nbsp;lfHeight;&nbsp;&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;<span class="datatypes">LONG</span><span>&nbsp;lfWidth;&nbsp;&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;<span class="datatypes">LONG</span><span>&nbsp;lfEscapement;&nbsp;&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;<span class="datatypes">LONG</span><span>&nbsp;lfOrientation;&nbsp;&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;<span class="datatypes">LONG</span><span>&nbsp;lfWeight;&nbsp;&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;<span class="datatypes">BYTE</span><span>&nbsp;lfItalic;&nbsp;&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;<span class="datatypes">BYTE</span><span>&nbsp;lfUnderline;&nbsp;&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;<span class="datatypes">BYTE</span><span>&nbsp;lfStrikeOut;&nbsp;&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;<span class="datatypes">BYTE</span><span>&nbsp;lfCharSet;&nbsp;&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;<span class="datatypes">BYTE</span><span>&nbsp;lfOutPrecision;&nbsp;&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;<span class="datatypes">BYTE</span><span>&nbsp;lfClipPrecision;&nbsp;&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;<span class="datatypes">BYTE</span><span>&nbsp;lfQuality;&nbsp;&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;<span class="datatypes">BYTE</span><span>&nbsp;lfPitchAndFamily;&nbsp;&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;<span class="datatypes">TCHAR</span><span>&nbsp;lfFaceName[LF_FACESIZE];&nbsp;&nbsp;&nbsp;</span></span></li><li><span>}&nbsp;LOGFONT,&nbsp;*PLOGFONT;&nbsp;&nbsp;</span></li></ol></div>
+<br>+17也就是lfCharSet。把这个改成0x86=GB2312_CHARSET就合适显示中文了。
+<br>
+<br>不过kamipani_trial.exe里却没有这种赋值。LOGFONT里多数地方都用了0x01=DEFAULT_CHARSET，这些地方不改也没关系。惟独有一处是出现了一个0x80的，是第一次运行到这里的时候：
+<br><div class="dp-highlighter" id=""><div class="bar"><div class="tools">Java代码 <embed wmode="transparent" src="/javascripts/syntaxhighlighter/clipboard_new.swf" width="14" height="15" flashvars="clipboard=0042CC5E%20%20call%20%3Cgdi32.CreateFontIndirectA%3E%20%20%3B%20%5CCreateFontIndirectA" quality="high" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">&nbsp;<a href="javascript:void()" title="收藏这段代码" onclick="code_favorites_do_favorite(this);return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img class="star" src="assets/1571209307-bf632ec55a05f69a9359f73417402b26.png" alt="收藏代码"><img class="spinner" src="assets/1571209307-a42df3a5b569bdc98ca473a4a3adfeac.gif" style="display:none"></a></div></div><ol start="1" class="dp-j"><li><span><span>0042CC5E&nbsp;&nbsp;call&nbsp;&lt;gdi32.CreateFontIndirectA&gt;&nbsp;&nbsp;;&nbsp;\CreateFontIndirectA&nbsp;&nbsp;</span></span></li></ol></div>
+<br>直接赋值的位置是：
+<br><div class="dp-highlighter" id=""><div class="bar"><div class="tools">Java代码 <embed wmode="transparent" src="/javascripts/syntaxhighlighter/clipboard_new.swf" width="14" height="15" flashvars="clipboard=0042CBD2%20%20mov%20eax%2Cdword%20ptr%20ss%3A%5Bebp-4%5D%0A0042CBD5%20%20mov%20al%2Cbyte%20ptr%20ds%3A%5Beax%2B1A%5D%0A0042CBD8%20%20mov%20byte%20ptr%20ss%3A%5Bebp-29%5D%2Cal" quality="high" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">&nbsp;<a href="javascript:void()" title="收藏这段代码" onclick="code_favorites_do_favorite(this);return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img class="star" src="assets/1571209307-bf632ec55a05f69a9359f73417402b26.png" alt="收藏代码"><img class="spinner" src="assets/1571209307-a42df3a5b569bdc98ca473a4a3adfeac.gif" style="display:none"></a></div></div><ol start="1" class="dp-j"><li><span><span>0042CBD2&nbsp;&nbsp;mov&nbsp;eax,dword&nbsp;ptr&nbsp;ss:[ebp-</span><span class="number">4</span><span>]&nbsp;&nbsp;</span></span></li><li><span>0042CBD5&nbsp;&nbsp;mov&nbsp;al,<span class="keyword">byte</span><span>&nbsp;ptr&nbsp;ds:[eax+1A]&nbsp;&nbsp;</span></span></li><li><span>0042CBD8&nbsp;&nbsp;mov&nbsp;<span class="keyword">byte</span><span>&nbsp;ptr&nbsp;ss:[ebp-</span><span class="number">29</span><span>],al&nbsp;&nbsp;</span></span></li></ol></div>
+<br>
+<br>=============================================================
+<br>
+<br>不过说到Borland，这Delphi编译器真Good Job，能编译出如此神奇的代码：
+<br><div class="dp-highlighter" id=""><div class="bar"><div class="tools">Java代码 <embed wmode="transparent" src="/javascripts/syntaxhighlighter/clipboard_new.swf" width="14" height="15" flashvars="clipboard=0044D2AC%20%20push%20ebx%0A0044D2AD%20%20mov%20ebx%2Ceax%0A0044D2AF%20%20mov%20eax%2Cebx%0A0044D2B1%20%20call%20kamipani.0045F2FC" quality="high" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">&nbsp;<a href="javascript:void()" title="收藏这段代码" onclick="code_favorites_do_favorite(this);return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img class="star" src="assets/1571209307-bf632ec55a05f69a9359f73417402b26.png" alt="收藏代码"><img class="spinner" src="assets/1571209307-a42df3a5b569bdc98ca473a4a3adfeac.gif" style="display:none"></a></div></div><ol start="1" class="dp-j"><li><span><span>0044D2AC&nbsp;&nbsp;push&nbsp;ebx&nbsp;&nbsp;</span></span></li><li><span>0044D2AD&nbsp;&nbsp;mov&nbsp;ebx,eax&nbsp;&nbsp;</span></li><li><span>0044D2AF&nbsp;&nbsp;mov&nbsp;eax,ebx&nbsp;&nbsp;</span></li><li><span>0044D2B1&nbsp;&nbsp;call&nbsp;kamipani.0045F2FC&nbsp;&nbsp;</span></li></ol></div>
+<br>
+<br>Google了一下这串关键字：borland 编译 缺乏优化
+<br>看到这条：
+<br><div class="quote_title">引用</div><div class="quote_div">Delphi 代码优化.: 程序员编程知识库Borland拥有世界上最出色的编译器（当然也许更好的在你的脑子里），不仅速度快，而且编译期优化能力也是一流。因此在大多数情况下，自然的代码就能达到较高的效率，你 ...
+<br>www.freshinfo.cn/article.php?id=224 - 60k - 网页快照 - 类似网页</div>
+<br>太好了，原来“最出色”的编译器能编译出如此GJ的代码。有机会，俺们还是有机会走这条路的啊 =_=
+<br>
+<br>=============================================================
+<br>
+<br>顺便，看到kamipani_trial.exe这主窗体的ID是TForm1了。好偷懒。
+<br>然后看到有个地方会出现这个：
+<br><div class="dp-highlighter" id=""><div class="bar"><div class="tools">Java代码 <embed wmode="transparent" src="/javascripts/syntaxhighlighter/clipboard_new.swf" width="14" height="15" flashvars="clipboard=EAX%2000F8FB00%20ASCII%200C%2C%22Font.Charset%22" quality="high" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">&nbsp;<a href="javascript:void()" title="收藏这段代码" onclick="code_favorites_do_favorite(this);return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img class="star" src="assets/1571209307-bf632ec55a05f69a9359f73417402b26.png" alt="收藏代码"><img class="spinner" src="assets/1571209307-a42df3a5b569bdc98ca473a4a3adfeac.gif" style="display:none"></a></div></div><ol start="1" class="dp-j"><li><span><span>EAX&nbsp;00F8FB00&nbsp;ASCII&nbsp;0C,</span><span class="string">"Font.Charset"</span><span>&nbsp;&nbsp;</span></span></li></ol></div>
+<br>在这里：
+<br><div class="dp-highlighter" id=""><div class="bar"><div class="tools">Java代码 <embed wmode="transparent" src="/javascripts/syntaxhighlighter/clipboard_new.swf" width="14" height="15" flashvars="clipboard=00425390%20%20mov%20edx%2Cebx%0A00425392%20%20mov%20eax%2Cdword%20ptr%20ss%3A%5Bebp-4%5D%0A00425395%20%20call%20kamipani.00425878%0A0042539A%20%20mov%20eax%2Cdword%20ptr%20ss%3A%5Bebp-4%5D%0A0042539D%20%20call%20kamipani.0042495C%0A004253A2%20%20test%20al%2Cal%0A004253A4%20%20je%20short%20kamipani.00425390" quality="high" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">&nbsp;<a href="javascript:void()" title="收藏这段代码" onclick="code_favorites_do_favorite(this);return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img class="star" src="assets/1571209307-bf632ec55a05f69a9359f73417402b26.png" alt="收藏代码"><img class="spinner" src="assets/1571209307-a42df3a5b569bdc98ca473a4a3adfeac.gif" style="display:none"></a></div></div><ol start="1" class="dp-j"><li><span><span class="number">00425390</span><span>&nbsp;&nbsp;mov&nbsp;edx,ebx&nbsp;&nbsp;</span></span></li><li><span><span class="number">00425392</span><span>&nbsp;&nbsp;mov&nbsp;eax,dword&nbsp;ptr&nbsp;ss:[ebp-</span><span class="number">4</span><span>]&nbsp;&nbsp;</span></span></li><li><span><span class="number">00425395</span><span>&nbsp;&nbsp;call&nbsp;kamipani.</span><span class="number">00425878</span><span>&nbsp;&nbsp;</span></span></li><li><span>0042539A&nbsp;&nbsp;mov&nbsp;eax,dword&nbsp;ptr&nbsp;ss:[ebp-<span class="number">4</span><span>]&nbsp;&nbsp;</span></span></li><li><span>0042539D&nbsp;&nbsp;call&nbsp;kamipani.0042495C&nbsp;&nbsp;</span></li><li><span>004253A2&nbsp;&nbsp;test&nbsp;al,al&nbsp;&nbsp;</span></li><li><span>004253A4&nbsp;&nbsp;je&nbsp;<span class="keyword">short</span><span>&nbsp;kamipani.</span><span class="number">00425390</span><span>&nbsp;&nbsp;</span></span></li></ol></div>
+<br>
+<br>来源是：
+<br><div class="dp-highlighter" id=""><div class="bar"><div class="tools">Java代码 <embed wmode="transparent" src="/javascripts/syntaxhighlighter/clipboard_new.swf" width="14" height="15" flashvars="clipboard=00F8FA60%20%2054%2050%2046%2030%2006%2054%2046%206F%2072%206D%2031%2005%2046%206F%2072%206D%20%20TPF0%06TForm1%05Form%0A00F8FA70%20%2031%2004%204C%2065%2066%2074%2003%207D%2001%2003%2054%206F%2070%2003%20EB%2000%20%201%04Left%03%7D%01%03Top%03%3F%0A00F8FA80%20%200B%2042%206F%2072%2064%2065%2072%2049%2063%206F%206E%2073%200B%200C%2062%2069%20%20%0BBorderIcons%0B.bi%0A00F8FA90%20%2053%2079%2073%2074%2065%206D%204D%2065%206E%2075%200A%2062%2069%204D%2069%206E%20%20SystemMenu.biMin%0A00F8FAA0%20%2069%206D%2069%207A%2065%2000%200B%2042%206F%2072%2064%2065%2072%2053%2074%2079%20%20imize.%0BBorderSty%0A00F8FAB0%20%206C%2065%2007%2008%2062%2073%2053%2069%206E%2067%206C%2065%2007%2043%2061%2070%20%20le%07%08bsSingle%07Cap%0A00F8FAC0%20%2074%2069%206F%206E%2006%200A%204D%2061%2069%206E%2057%2069%206E%2064%206F%2077%20%20tion%06.MainWindow%0A00F8FAD0%20%200C%2043%206C%2069%2065%206E%2074%2048%2065%2069%2067%2068%2074%2003%20F0%2000%20%20.ClientHeight%03%3F%0A00F8FAE0%20%200B%2043%206C%2069%2065%206E%2074%2057%2069%2064%2074%2068%2003%2040%2001%2005%20%20%0BClientWidth%03%40%01%05%0A00F8FAF0%20%2043%206F%206C%206F%2072%2007%2009%2063%206C%2042%2074%206E%2046%2061%2063%2065%20%20Color%07.clBtnFace%0A00F8FB00%20%200C%2046%206F%206E%2074%202E%2043%2068%2061%2072%2073%2065%2074%2007%2010%2053%20%20.Font.Charset%07%10S%0A00F8FB10%20%2048%2049%2046%2054%204A%2049%2053%205F%2043%2048%2041%2052%2053%2045%2054%200A%20%20HIFTJIS_CHARSET.%0A00F8FB20%20%2046%206F%206E%2074%202E%2043%206F%206C%206F%2072%2007%200C%2063%206C%2057%2069%20%20Font.Color%07.clWi%0A00F8FB30%20%206E%2064%206F%2077%2054%2065%2078%2074%200B%2046%206F%206E%2074%202E%2048%2065%20%20ndowText%0BFont.He%0A00F8FB40%20%2069%2067%2068%2074%2002%20F4%2009%2046%206F%206E%2074%202E%204E%2061%206D%2065%20%20ight%02%3FFont.Name%0A00F8FB50%20%2006%2007%204D%2053%2020%203F%203F%203F%203F%200A%2046%206F%206E%2074%202E%2053%20%20%06%07MS%20%3F%3F%3F%3F.Font.S%0A00F8FB60%20%2074%2079%206C%2065%200B%2000%200E%204F%206C%2064%2043%2072%2065%2061%2074%2065%20%20tyle%0B.%0EOldCreate%0A00F8FB70%20%204F%2072%2064%2065%2072%2008%2008%2050%206F%2073%2069%2074%2069%206F%206E%2007%20%20Order%08%08Position%07%0A00F8FB80%20%200E%2070%206F%2053%2063%2072%2065%2065%206E%2043%2065%206E%2074%2065%2072%2007%20%20%0EpoScreenCenter%07%0A00F8FB90%20%204F%206E%2043%206C%206F%2073%2065%2007%2009%2046%206F%2072%206D%2043%206C%206F%20%20OnClose%07.FormClo%0A00F8FBA0%20%2073%2065%2008%204F%206E%2043%2072%2065%2061%2074%2065%2007%200A%2046%206F%2072%20%20se%08OnCreate%07.For%0A00F8FBB0%20%206D%2043%2072%2065%2061%2074%2065%2009%204F%206E%2044%2065%2073%2074%2072%206F%20%20mCreate.OnDestro%0A00F8FBC0%20%2079%2007%200B%2046%206F%2072%206D%2044%2065%2073%2074%2072%206F%2079%2009%204F%20%20y%07%0BFormDestroy.O%0A00F8FBD0%20%206E%204B%2065%2079%2044%206F%2077%206E%2007%200B%2046%206F%2072%206D%204B%2065%20%20nKeyDown%07%0BFormKe%0A00F8FBE0%20%2079%2044%206F%2077%206E%2007%204F%206E%204B%2065%2079%2055%2070%2007%2009%2046%20%20yDown%07OnKeyUp%07.F%0A00F8FBF0%20%206F%2072%206D%204B%2065%2079%2055%2070%2007%204F%206E%2050%2061%2069%206E%2074%20%20ormKeyUp%07OnPaint%0A00F8FC00%20%2007%2009%2046%206F%2072%206D%2050%2061%2069%206E%2074%200D%2050%2069%2078%2065%20%20%07.FormPaint.Pixe%0A00F8FC10%20%206C%2073%2050%2065%2072%2049%206E%2063%2068%2002%2060%200A%2054%2065%2078%2074%20%20lsPerInch%02%60.Text%0A00F8FC20%20%2048%2065%2069%2067%2068%2074%2002%200C%2000%2006%2054%2044%2044%2044%2044%2037%20%20Height%02..%06TDDDD7%0A00F8FC30%20%2006%2044%2044%2044%2044%2037%2031%200B%2044%2065%2062%2075%2067%204F%2070%2074%20%20%06DDDD71%0BDebugOpt%0A00F8FC40%20%2069%206F%206E%200B%200E%2064%2064%206F%2048%2061%206C%2074%204F%206E%2045%2072%20%20ion%0B%0EddoHaltOnEr%0A00F8FC50%20%2072%206F%2072%2000%2009%2042%2061%2063%206B%2043%206F%206C%206F%2072%2002%2000%20%20ror..BackColor%02.%0A00F8FC60%20%2019%2041%2075%2074%206F%2044%2069%2073%2070%206C%2061%2079%204D%206F%2064%2065%20%20%19AutoDisplayMode%0A00F8FC70%20%2049%206E%2069%2074%2069%2061%206C%2069%207A%2065%2008%2012%2044%2069%2073%2061%20%20Initialize%08%12Disa%0A00F8FC80%20%2062%206C%2065%2053%2063%2072%2065%2065%206E%2053%2061%2076%2065%2072%2009%2005%20%20bleScreenSaver.%05%0A00F8FC90%20%2055%2073%2065%2033%2044%2008%200F%2056%2073%2079%206E%2063%2041%2074%2057%2069%20%20Use3D%08%0FVsyncAtWi%0A00F8FCA0%20%206E%2064%206F%2077%2065%2064%2008%200A%2044%2033%2044%204F%2070%2074%2069%206F%20%20ndowed%08.D3DOptio%0A00F8FCB0%20%206E%2073%200B%2000%2004%204C%2065%2066%2074%2002%2020%2000%2000%2006%2054%2044%20%20ns%0B.%04Left%02%20..%06TD%0A00F8FCC0%20%2044%2053%2044%2037%2006%2044%2044%2053%2044%2037%2031%200B%2044%2065%2062%2075%20%20DSD7%06DDSD71%0BDebu%0A00F8FCD0%20%2067%204F%2070%2074%2069%206F%206E%200B%200E%2064%2073%206F%2048%2061%206C%2074%20%20gOption%0B%0EdsoHalt%0A00F8FCE0%20%204F%206E%2045%2072%2072%206F%2072%2000%200C%2043%2068%2061%206E%206E%2065%206C%20%20OnError..Channel%0A00F8FCF0%20%2043%206F%2075%206E%2074%2002%2010%2000%2000%200A%2054%2050%206F%2070%2075%2070%20%20Count%02%10...TPopup%0A00F8FD00%20%204D%2065%206E%2075%200A%2050%206F%2070%2075%2070%204D%2065%206E%2075%2031%2003%20%20Menu.PopupMenu1%03%0A00F8FD10%20%2054%206F%2070%2002%2020%2000%2009%2054%204D%2065%206E%2075%2049%2074%2065%206D%20%20Top%02%20..TMenuItem%0A00F8FD20%20%2005%2053%2068%206F%2077%2031%2007%2043%2061%2070%2074%2069%206F%206E%2006%2002%20%20%05Show1%07Caption%06%02%0A00F8FD30%20%203F%203F%2007%204F%206E%2043%206C%2069%2063%206B%2007%200A%2053%2068%206F%2077%20%20%3F%3F%07OnClick%07.Show%0A00F8FD40%20%2031%2043%206C%2069%2063%206B%2000%2000%2000%2000%2000%2000%2000%2000%2000%2000%20%201Click.........." quality="high" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">&nbsp;<a href="javascript:void()" title="收藏这段代码" onclick="code_favorites_do_favorite(this);return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img class="star" src="assets/1571209307-bf632ec55a05f69a9359f73417402b26.png" alt="收藏代码"><img class="spinner" src="assets/1571209307-a42df3a5b569bdc98ca473a4a3adfeac.gif" style="display:none"></a></div></div><ol start="1" class="dp-j"><li><span><span>00F8FA60&nbsp;&nbsp;</span><span class="number">54</span><span>&nbsp;</span><span class="number">50</span><span>&nbsp;</span><span class="number">46</span><span>&nbsp;</span><span class="number">30</span><span>&nbsp;</span><span class="number">06</span><span>&nbsp;</span><span class="number">54</span><span>&nbsp;</span><span class="number">46</span><span>&nbsp;6F&nbsp;</span><span class="number">72</span><span>&nbsp;6D&nbsp;</span><span class="number">31</span><span>&nbsp;</span><span class="number">05</span><span>&nbsp;</span><span class="number">46</span><span>&nbsp;6F&nbsp;</span><span class="number">72</span><span>&nbsp;6D&nbsp;&nbsp;TPF0TForm1Form&nbsp;&nbsp;</span></span></li><li><span>00F8FA70&nbsp;&nbsp;<span class="number">31</span><span>&nbsp;</span><span class="number">04</span><span>&nbsp;4C&nbsp;</span><span class="number">65</span><span>&nbsp;</span><span class="number">66</span><span>&nbsp;</span><span class="number">74</span><span>&nbsp;</span><span class="number">03</span><span>&nbsp;7D&nbsp;</span><span class="number">01</span><span>&nbsp;</span><span class="number">03</span><span>&nbsp;</span><span class="number">54</span><span>&nbsp;6F&nbsp;</span><span class="number">70</span><span>&nbsp;</span><span class="number">03</span><span>&nbsp;EB&nbsp;</span><span class="number">00</span><span>&nbsp;&nbsp;</span><span class="number">1</span><span>Left}Top?&nbsp;&nbsp;</span></span></li><li><span>00F8FA80&nbsp;&nbsp;0B&nbsp;<span class="number">42</span><span>&nbsp;6F&nbsp;</span><span class="number">72</span><span>&nbsp;</span><span class="number">64</span><span>&nbsp;</span><span class="number">65</span><span>&nbsp;</span><span class="number">72</span><span>&nbsp;</span><span class="number">49</span><span>&nbsp;</span><span class="number">63</span><span>&nbsp;6F&nbsp;6E&nbsp;</span><span class="number">73</span><span>&nbsp;0B&nbsp;0C&nbsp;</span><span class="number">62</span><span>&nbsp;</span><span class="number">69</span><span>&nbsp;&nbsp;BorderIcons.bi&nbsp;&nbsp;</span></span></li><li><span>00F8FA90&nbsp;&nbsp;<span class="number">53</span><span>&nbsp;</span><span class="number">79</span><span>&nbsp;</span><span class="number">73</span><span>&nbsp;</span><span class="number">74</span><span>&nbsp;</span><span class="number">65</span><span>&nbsp;6D&nbsp;4D&nbsp;</span><span class="number">65</span><span>&nbsp;6E&nbsp;</span><span class="number">75</span><span>&nbsp;0A&nbsp;</span><span class="number">62</span><span>&nbsp;</span><span class="number">69</span><span>&nbsp;4D&nbsp;</span><span class="number">69</span><span>&nbsp;6E&nbsp;&nbsp;SystemMenu.biMin&nbsp;&nbsp;</span></span></li><li><span>00F8FAA0&nbsp;&nbsp;<span class="number">69</span><span>&nbsp;6D&nbsp;</span><span class="number">69</span><span>&nbsp;7A&nbsp;</span><span class="number">65</span><span>&nbsp;</span><span class="number">00</span><span>&nbsp;0B&nbsp;</span><span class="number">42</span><span>&nbsp;6F&nbsp;</span><span class="number">72</span><span>&nbsp;</span><span class="number">64</span><span>&nbsp;</span><span class="number">65</span><span>&nbsp;</span><span class="number">72</span><span>&nbsp;</span><span class="number">53</span><span>&nbsp;</span><span class="number">74</span><span>&nbsp;</span><span class="number">79</span><span>&nbsp;&nbsp;imize.BorderSty&nbsp;&nbsp;</span></span></li><li><span>00F8FAB0&nbsp;&nbsp;6C&nbsp;<span class="number">65</span><span>&nbsp;</span><span class="number">07</span><span>&nbsp;</span><span class="number">08</span><span>&nbsp;</span><span class="number">62</span><span>&nbsp;</span><span class="number">73</span><span>&nbsp;</span><span class="number">53</span><span>&nbsp;</span><span class="number">69</span><span>&nbsp;6E&nbsp;</span><span class="number">67</span><span>&nbsp;6C&nbsp;</span><span class="number">65</span><span>&nbsp;</span><span class="number">07</span><span>&nbsp;</span><span class="number">43</span><span>&nbsp;</span><span class="number">61</span><span>&nbsp;</span><span class="number">70</span><span>&nbsp;&nbsp;lebsSingleCap&nbsp;&nbsp;</span></span></li><li><span>00F8FAC0&nbsp;&nbsp;<span class="number">74</span><span>&nbsp;</span><span class="number">69</span><span>&nbsp;6F&nbsp;6E&nbsp;</span><span class="number">06</span><span>&nbsp;0A&nbsp;4D&nbsp;</span><span class="number">61</span><span>&nbsp;</span><span class="number">69</span><span>&nbsp;6E&nbsp;</span><span class="number">57</span><span>&nbsp;</span><span class="number">69</span><span>&nbsp;6E&nbsp;</span><span class="number">64</span><span>&nbsp;6F&nbsp;</span><span class="number">77</span><span>&nbsp;&nbsp;tion.MainWindow&nbsp;&nbsp;</span></span></li><li><span>00F8FAD0&nbsp;&nbsp;0C&nbsp;<span class="number">43</span><span>&nbsp;6C&nbsp;</span><span class="number">69</span><span>&nbsp;</span><span class="number">65</span><span>&nbsp;6E&nbsp;</span><span class="number">74</span><span>&nbsp;</span><span class="number">48</span><span>&nbsp;</span><span class="number">65</span><span>&nbsp;</span><span class="number">69</span><span>&nbsp;</span><span class="number">67</span><span>&nbsp;</span><span class="number">68</span><span>&nbsp;</span><span class="number">74</span><span>&nbsp;</span><span class="number">03</span><span>&nbsp;F0&nbsp;</span><span class="number">00</span><span>&nbsp;&nbsp;.ClientHeight?&nbsp;&nbsp;</span></span></li><li><span>00F8FAE0&nbsp;&nbsp;0B&nbsp;<span class="number">43</span><span>&nbsp;6C&nbsp;</span><span class="number">69</span><span>&nbsp;</span><span class="number">65</span><span>&nbsp;6E&nbsp;</span><span class="number">74</span><span>&nbsp;</span><span class="number">57</span><span>&nbsp;</span><span class="number">69</span><span>&nbsp;</span><span class="number">64</span><span>&nbsp;</span><span class="number">74</span><span>&nbsp;</span><span class="number">68</span><span>&nbsp;</span><span class="number">03</span><span>&nbsp;</span><span class="number">40</span><span>&nbsp;</span><span class="number">01</span><span>&nbsp;</span><span class="number">05</span><span>&nbsp;&nbsp;ClientWidth@&nbsp;&nbsp;</span></span></li><li><span>00F8FAF0&nbsp;&nbsp;<span class="number">43</span><span>&nbsp;6F&nbsp;6C&nbsp;6F&nbsp;</span><span class="number">72</span><span>&nbsp;</span><span class="number">07</span><span>&nbsp;</span><span class="number">09</span><span>&nbsp;</span><span class="number">63</span><span>&nbsp;6C&nbsp;</span><span class="number">42</span><span>&nbsp;</span><span class="number">74</span><span>&nbsp;6E&nbsp;</span><span class="number">46</span><span>&nbsp;</span><span class="number">61</span><span>&nbsp;</span><span class="number">63</span><span>&nbsp;</span><span class="number">65</span><span>&nbsp;&nbsp;Color.clBtnFace&nbsp;&nbsp;</span></span></li><li><span>00F8FB00&nbsp;&nbsp;0C&nbsp;<span class="number">46</span><span>&nbsp;6F&nbsp;6E&nbsp;</span><span class="number">74</span><span>&nbsp;2E&nbsp;</span><span class="number">43</span><span>&nbsp;</span><span class="number">68</span><span>&nbsp;</span><span class="number">61</span><span>&nbsp;</span><span class="number">72</span><span>&nbsp;</span><span class="number">73</span><span>&nbsp;</span><span class="number">65</span><span>&nbsp;</span><span class="number">74</span><span>&nbsp;</span><span class="number">07</span><span>&nbsp;</span><span class="number">10</span><span>&nbsp;</span><span class="number">53</span><span>&nbsp;&nbsp;.Font.CharsetS&nbsp;&nbsp;</span></span></li><li><span>00F8FB10&nbsp;&nbsp;<span class="number">48</span><span>&nbsp;</span><span class="number">49</span><span>&nbsp;</span><span class="number">46</span><span>&nbsp;</span><span class="number">54</span><span>&nbsp;4A&nbsp;</span><span class="number">49</span><span>&nbsp;</span><span class="number">53</span><span>&nbsp;5F&nbsp;</span><span class="number">43</span><span>&nbsp;</span><span class="number">48</span><span>&nbsp;</span><span class="number">41</span><span>&nbsp;</span><span class="number">52</span><span>&nbsp;</span><span class="number">53</span><span>&nbsp;</span><span class="number">45</span><span>&nbsp;</span><span class="number">54</span><span>&nbsp;0A&nbsp;&nbsp;HIFTJIS_CHARSET.&nbsp;&nbsp;</span></span></li><li><span>00F8FB20&nbsp;&nbsp;<span class="number">46</span><span>&nbsp;6F&nbsp;6E&nbsp;</span><span class="number">74</span><span>&nbsp;2E&nbsp;</span><span class="number">43</span><span>&nbsp;6F&nbsp;6C&nbsp;6F&nbsp;</span><span class="number">72</span><span>&nbsp;</span><span class="number">07</span><span>&nbsp;0C&nbsp;</span><span class="number">63</span><span>&nbsp;6C&nbsp;</span><span class="number">57</span><span>&nbsp;</span><span class="number">69</span><span>&nbsp;&nbsp;Font.Color.clWi&nbsp;&nbsp;</span></span></li><li><span>00F8FB30&nbsp;&nbsp;6E&nbsp;<span class="number">64</span><span>&nbsp;6F&nbsp;</span><span class="number">77</span><span>&nbsp;</span><span class="number">54</span><span>&nbsp;</span><span class="number">65</span><span>&nbsp;</span><span class="number">78</span><span>&nbsp;</span><span class="number">74</span><span>&nbsp;0B&nbsp;</span><span class="number">46</span><span>&nbsp;6F&nbsp;6E&nbsp;</span><span class="number">74</span><span>&nbsp;2E&nbsp;</span><span class="number">48</span><span>&nbsp;</span><span class="number">65</span><span>&nbsp;&nbsp;ndowTextFont.He&nbsp;&nbsp;</span></span></li><li><span>00F8FB40&nbsp;&nbsp;<span class="number">69</span><span>&nbsp;</span><span class="number">67</span><span>&nbsp;</span><span class="number">68</span><span>&nbsp;</span><span class="number">74</span><span>&nbsp;</span><span class="number">02</span><span>&nbsp;F4&nbsp;</span><span class="number">09</span><span>&nbsp;</span><span class="number">46</span><span>&nbsp;6F&nbsp;6E&nbsp;</span><span class="number">74</span><span>&nbsp;2E&nbsp;4E&nbsp;</span><span class="number">61</span><span>&nbsp;6D&nbsp;</span><span class="number">65</span><span>&nbsp;&nbsp;ight?Font.Name&nbsp;&nbsp;</span></span></li><li><span>00F8FB50&nbsp;&nbsp;<span class="number">06</span><span>&nbsp;</span><span class="number">07</span><span>&nbsp;4D&nbsp;</span><span class="number">53</span><span>&nbsp;</span><span class="number">20</span><span>&nbsp;3F&nbsp;3F&nbsp;3F&nbsp;3F&nbsp;0A&nbsp;</span><span class="number">46</span><span>&nbsp;6F&nbsp;6E&nbsp;</span><span class="number">74</span><span>&nbsp;2E&nbsp;</span><span class="number">53</span><span>&nbsp;&nbsp;MS&nbsp;????.Font.S&nbsp;&nbsp;</span></span></li><li><span>00F8FB60&nbsp;&nbsp;<span class="number">74</span><span>&nbsp;</span><span class="number">79</span><span>&nbsp;6C&nbsp;</span><span class="number">65</span><span>&nbsp;0B&nbsp;</span><span class="number">00</span><span>&nbsp;0E&nbsp;4F&nbsp;6C&nbsp;</span><span class="number">64</span><span>&nbsp;</span><span class="number">43</span><span>&nbsp;</span><span class="number">72</span><span>&nbsp;</span><span class="number">65</span><span>&nbsp;</span><span class="number">61</span><span>&nbsp;</span><span class="number">74</span><span>&nbsp;</span><span class="number">65</span><span>&nbsp;&nbsp;tyle.OldCreate&nbsp;&nbsp;</span></span></li><li><span>00F8FB70&nbsp;&nbsp;4F&nbsp;<span class="number">72</span><span>&nbsp;</span><span class="number">64</span><span>&nbsp;</span><span class="number">65</span><span>&nbsp;</span><span class="number">72</span><span>&nbsp;</span><span class="number">08</span><span>&nbsp;</span><span class="number">08</span><span>&nbsp;</span><span class="number">50</span><span>&nbsp;6F&nbsp;</span><span class="number">73</span><span>&nbsp;</span><span class="number">69</span><span>&nbsp;</span><span class="number">74</span><span>&nbsp;</span><span class="number">69</span><span>&nbsp;6F&nbsp;6E&nbsp;</span><span class="number">07</span><span>&nbsp;&nbsp;OrderPosition&nbsp;&nbsp;</span></span></li><li><span>00F8FB80&nbsp;&nbsp;0E&nbsp;<span class="number">70</span><span>&nbsp;6F&nbsp;</span><span class="number">53</span><span>&nbsp;</span><span class="number">63</span><span>&nbsp;</span><span class="number">72</span><span>&nbsp;</span><span class="number">65</span><span>&nbsp;</span><span class="number">65</span><span>&nbsp;6E&nbsp;</span><span class="number">43</span><span>&nbsp;</span><span class="number">65</span><span>&nbsp;6E&nbsp;</span><span class="number">74</span><span>&nbsp;</span><span class="number">65</span><span>&nbsp;</span><span class="number">72</span><span>&nbsp;</span><span class="number">07</span><span>&nbsp;&nbsp;poScreenCenter&nbsp;&nbsp;</span></span></li><li><span>00F8FB90&nbsp;&nbsp;4F&nbsp;6E&nbsp;<span class="number">43</span><span>&nbsp;6C&nbsp;6F&nbsp;</span><span class="number">73</span><span>&nbsp;</span><span class="number">65</span><span>&nbsp;</span><span class="number">07</span><span>&nbsp;</span><span class="number">09</span><span>&nbsp;</span><span class="number">46</span><span>&nbsp;6F&nbsp;</span><span class="number">72</span><span>&nbsp;6D&nbsp;</span><span class="number">43</span><span>&nbsp;6C&nbsp;6F&nbsp;&nbsp;OnClose.FormClo&nbsp;&nbsp;</span></span></li><li><span>00F8FBA0&nbsp;&nbsp;<span class="number">73</span><span>&nbsp;</span><span class="number">65</span><span>&nbsp;</span><span class="number">08</span><span>&nbsp;4F&nbsp;6E&nbsp;</span><span class="number">43</span><span>&nbsp;</span><span class="number">72</span><span>&nbsp;</span><span class="number">65</span><span>&nbsp;</span><span class="number">61</span><span>&nbsp;</span><span class="number">74</span><span>&nbsp;</span><span class="number">65</span><span>&nbsp;</span><span class="number">07</span><span>&nbsp;0A&nbsp;</span><span class="number">46</span><span>&nbsp;6F&nbsp;</span><span class="number">72</span><span>&nbsp;&nbsp;seOnCreate.For&nbsp;&nbsp;</span></span></li><li><span>00F8FBB0&nbsp;&nbsp;6D&nbsp;<span class="number">43</span><span>&nbsp;</span><span class="number">72</span><span>&nbsp;</span><span class="number">65</span><span>&nbsp;</span><span class="number">61</span><span>&nbsp;</span><span class="number">74</span><span>&nbsp;</span><span class="number">65</span><span>&nbsp;</span><span class="number">09</span><span>&nbsp;4F&nbsp;6E&nbsp;</span><span class="number">44</span><span>&nbsp;</span><span class="number">65</span><span>&nbsp;</span><span class="number">73</span><span>&nbsp;</span><span class="number">74</span><span>&nbsp;</span><span class="number">72</span><span>&nbsp;6F&nbsp;&nbsp;mCreate.OnDestro&nbsp;&nbsp;</span></span></li><li><span>00F8FBC0&nbsp;&nbsp;<span class="number">79</span><span>&nbsp;</span><span class="number">07</span><span>&nbsp;0B&nbsp;</span><span class="number">46</span><span>&nbsp;6F&nbsp;</span><span class="number">72</span><span>&nbsp;6D&nbsp;</span><span class="number">44</span><span>&nbsp;</span><span class="number">65</span><span>&nbsp;</span><span class="number">73</span><span>&nbsp;</span><span class="number">74</span><span>&nbsp;</span><span class="number">72</span><span>&nbsp;6F&nbsp;</span><span class="number">79</span><span>&nbsp;</span><span class="number">09</span><span>&nbsp;4F&nbsp;&nbsp;yFormDestroy.O&nbsp;&nbsp;</span></span></li><li><span>00F8FBD0&nbsp;&nbsp;6E&nbsp;4B&nbsp;<span class="number">65</span><span>&nbsp;</span><span class="number">79</span><span>&nbsp;</span><span class="number">44</span><span>&nbsp;6F&nbsp;</span><span class="number">77</span><span>&nbsp;6E&nbsp;</span><span class="number">07</span><span>&nbsp;0B&nbsp;</span><span class="number">46</span><span>&nbsp;6F&nbsp;</span><span class="number">72</span><span>&nbsp;6D&nbsp;4B&nbsp;</span><span class="number">65</span><span>&nbsp;&nbsp;nKeyDownFormKe&nbsp;&nbsp;</span></span></li><li><span>00F8FBE0&nbsp;&nbsp;<span class="number">79</span><span>&nbsp;</span><span class="number">44</span><span>&nbsp;6F&nbsp;</span><span class="number">77</span><span>&nbsp;6E&nbsp;</span><span class="number">07</span><span>&nbsp;4F&nbsp;6E&nbsp;4B&nbsp;</span><span class="number">65</span><span>&nbsp;</span><span class="number">79</span><span>&nbsp;</span><span class="number">55</span><span>&nbsp;</span><span class="number">70</span><span>&nbsp;</span><span class="number">07</span><span>&nbsp;</span><span class="number">09</span><span>&nbsp;</span><span class="number">46</span><span>&nbsp;&nbsp;yDownOnKeyUp.F&nbsp;&nbsp;</span></span></li><li><span>00F8FBF0&nbsp;&nbsp;6F&nbsp;<span class="number">72</span><span>&nbsp;6D&nbsp;4B&nbsp;</span><span class="number">65</span><span>&nbsp;</span><span class="number">79</span><span>&nbsp;</span><span class="number">55</span><span>&nbsp;</span><span class="number">70</span><span>&nbsp;</span><span class="number">07</span><span>&nbsp;4F&nbsp;6E&nbsp;</span><span class="number">50</span><span>&nbsp;</span><span class="number">61</span><span>&nbsp;</span><span class="number">69</span><span>&nbsp;6E&nbsp;</span><span class="number">74</span><span>&nbsp;&nbsp;ormKeyUpOnPaint&nbsp;&nbsp;</span></span></li><li><span>00F8FC00&nbsp;&nbsp;<span class="number">07</span><span>&nbsp;</span><span class="number">09</span><span>&nbsp;</span><span class="number">46</span><span>&nbsp;6F&nbsp;</span><span class="number">72</span><span>&nbsp;6D&nbsp;</span><span class="number">50</span><span>&nbsp;</span><span class="number">61</span><span>&nbsp;</span><span class="number">69</span><span>&nbsp;6E&nbsp;</span><span class="number">74</span><span>&nbsp;0D&nbsp;</span><span class="number">50</span><span>&nbsp;</span><span class="number">69</span><span>&nbsp;</span><span class="number">78</span><span>&nbsp;</span><span class="number">65</span><span>&nbsp;&nbsp;.FormPaint.Pixe&nbsp;&nbsp;</span></span></li><li><span>00F8FC10&nbsp;&nbsp;6C&nbsp;<span class="number">73</span><span>&nbsp;</span><span class="number">50</span><span>&nbsp;</span><span class="number">65</span><span>&nbsp;</span><span class="number">72</span><span>&nbsp;</span><span class="number">49</span><span>&nbsp;6E&nbsp;</span><span class="number">63</span><span>&nbsp;</span><span class="number">68</span><span>&nbsp;</span><span class="number">02</span><span>&nbsp;</span><span class="number">60</span><span>&nbsp;0A&nbsp;</span><span class="number">54</span><span>&nbsp;</span><span class="number">65</span><span>&nbsp;</span><span class="number">78</span><span>&nbsp;</span><span class="number">74</span><span>&nbsp;&nbsp;lsPerInch`.Text&nbsp;&nbsp;</span></span></li><li><span>00F8FC20&nbsp;&nbsp;<span class="number">48</span><span>&nbsp;</span><span class="number">65</span><span>&nbsp;</span><span class="number">69</span><span>&nbsp;</span><span class="number">67</span><span>&nbsp;</span><span class="number">68</span><span>&nbsp;</span><span class="number">74</span><span>&nbsp;</span><span class="number">02</span><span>&nbsp;0C&nbsp;</span><span class="number">00</span><span>&nbsp;</span><span class="number">06</span><span>&nbsp;</span><span class="number">54</span><span>&nbsp;</span><span class="number">44</span><span>&nbsp;</span><span class="number">44</span><span>&nbsp;</span><span class="number">44</span><span>&nbsp;</span><span class="number">44</span><span>&nbsp;</span><span class="number">37</span><span>&nbsp;&nbsp;Height..TDDDD7&nbsp;&nbsp;</span></span></li><li><span>00F8FC30&nbsp;&nbsp;<span class="number">06</span><span>&nbsp;</span><span class="number">44</span><span>&nbsp;</span><span class="number">44</span><span>&nbsp;</span><span class="number">44</span><span>&nbsp;</span><span class="number">44</span><span>&nbsp;</span><span class="number">37</span><span>&nbsp;</span><span class="number">31</span><span>&nbsp;0B&nbsp;</span><span class="number">44</span><span>&nbsp;</span><span class="number">65</span><span>&nbsp;</span><span class="number">62</span><span>&nbsp;</span><span class="number">75</span><span>&nbsp;</span><span class="number">67</span><span>&nbsp;4F&nbsp;</span><span class="number">70</span><span>&nbsp;</span><span class="number">74</span><span>&nbsp;&nbsp;DDDD71DebugOpt&nbsp;&nbsp;</span></span></li><li><span>00F8FC40&nbsp;&nbsp;<span class="number">69</span><span>&nbsp;6F&nbsp;6E&nbsp;0B&nbsp;0E&nbsp;</span><span class="number">64</span><span>&nbsp;</span><span class="number">64</span><span>&nbsp;6F&nbsp;</span><span class="number">48</span><span>&nbsp;</span><span class="number">61</span><span>&nbsp;6C&nbsp;</span><span class="number">74</span><span>&nbsp;4F&nbsp;6E&nbsp;</span><span class="number">45</span><span>&nbsp;</span><span class="number">72</span><span>&nbsp;&nbsp;ionddoHaltOnEr&nbsp;&nbsp;</span></span></li><li><span>00F8FC50&nbsp;&nbsp;<span class="number">72</span><span>&nbsp;6F&nbsp;</span><span class="number">72</span><span>&nbsp;</span><span class="number">00</span><span>&nbsp;</span><span class="number">09</span><span>&nbsp;</span><span class="number">42</span><span>&nbsp;</span><span class="number">61</span><span>&nbsp;</span><span class="number">63</span><span>&nbsp;6B&nbsp;</span><span class="number">43</span><span>&nbsp;6F&nbsp;6C&nbsp;6F&nbsp;</span><span class="number">72</span><span>&nbsp;</span><span class="number">02</span><span>&nbsp;</span><span class="number">00</span><span>&nbsp;&nbsp;ror..BackColor.&nbsp;&nbsp;</span></span></li><li><span>00F8FC60&nbsp;&nbsp;<span class="number">19</span><span>&nbsp;</span><span class="number">41</span><span>&nbsp;</span><span class="number">75</span><span>&nbsp;</span><span class="number">74</span><span>&nbsp;6F&nbsp;</span><span class="number">44</span><span>&nbsp;</span><span class="number">69</span><span>&nbsp;</span><span class="number">73</span><span>&nbsp;</span><span class="number">70</span><span>&nbsp;6C&nbsp;</span><span class="number">61</span><span>&nbsp;</span><span class="number">79</span><span>&nbsp;4D&nbsp;6F&nbsp;</span><span class="number">64</span><span>&nbsp;</span><span class="number">65</span><span>&nbsp;&nbsp;AutoDisplayMode&nbsp;&nbsp;</span></span></li><li><span>00F8FC70&nbsp;&nbsp;<span class="number">49</span><span>&nbsp;6E&nbsp;</span><span class="number">69</span><span>&nbsp;</span><span class="number">74</span><span>&nbsp;</span><span class="number">69</span><span>&nbsp;</span><span class="number">61</span><span>&nbsp;6C&nbsp;</span><span class="number">69</span><span>&nbsp;7A&nbsp;</span><span class="number">65</span><span>&nbsp;</span><span class="number">08</span><span>&nbsp;</span><span class="number">12</span><span>&nbsp;</span><span class="number">44</span><span>&nbsp;</span><span class="number">69</span><span>&nbsp;</span><span class="number">73</span><span>&nbsp;</span><span class="number">61</span><span>&nbsp;&nbsp;InitializeDisa&nbsp;&nbsp;</span></span></li><li><span>00F8FC80&nbsp;&nbsp;<span class="number">62</span><span>&nbsp;6C&nbsp;</span><span class="number">65</span><span>&nbsp;</span><span class="number">53</span><span>&nbsp;</span><span class="number">63</span><span>&nbsp;</span><span class="number">72</span><span>&nbsp;</span><span class="number">65</span><span>&nbsp;</span><span class="number">65</span><span>&nbsp;6E&nbsp;</span><span class="number">53</span><span>&nbsp;</span><span class="number">61</span><span>&nbsp;</span><span class="number">76</span><span>&nbsp;</span><span class="number">65</span><span>&nbsp;</span><span class="number">72</span><span>&nbsp;</span><span class="number">09</span><span>&nbsp;</span><span class="number">05</span><span>&nbsp;&nbsp;bleScreenSaver.&nbsp;&nbsp;</span></span></li><li><span>00F8FC90&nbsp;&nbsp;<span class="number">55</span><span>&nbsp;</span><span class="number">73</span><span>&nbsp;</span><span class="number">65</span><span>&nbsp;</span><span class="number">33</span><span>&nbsp;</span><span class="number">44</span><span>&nbsp;</span><span class="number">08</span><span>&nbsp;0F&nbsp;</span><span class="number">56</span><span>&nbsp;</span><span class="number">73</span><span>&nbsp;</span><span class="number">79</span><span>&nbsp;6E&nbsp;</span><span class="number">63</span><span>&nbsp;</span><span class="number">41</span><span>&nbsp;</span><span class="number">74</span><span>&nbsp;</span><span class="number">57</span><span>&nbsp;</span><span class="number">69</span><span>&nbsp;&nbsp;Use3DVsyncAtWi&nbsp;&nbsp;</span></span></li><li><span>00F8FCA0&nbsp;&nbsp;6E&nbsp;<span class="number">64</span><span>&nbsp;6F&nbsp;</span><span class="number">77</span><span>&nbsp;</span><span class="number">65</span><span>&nbsp;</span><span class="number">64</span><span>&nbsp;</span><span class="number">08</span><span>&nbsp;0A&nbsp;</span><span class="number">44</span><span>&nbsp;</span><span class="number">33</span><span>&nbsp;</span><span class="number">44</span><span>&nbsp;4F&nbsp;</span><span class="number">70</span><span>&nbsp;</span><span class="number">74</span><span>&nbsp;</span><span class="number">69</span><span>&nbsp;6F&nbsp;&nbsp;ndowed.D3DOptio&nbsp;&nbsp;</span></span></li><li><span>00F8FCB0&nbsp;&nbsp;6E&nbsp;<span class="number">73</span><span>&nbsp;0B&nbsp;</span><span class="number">00</span><span>&nbsp;</span><span class="number">04</span><span>&nbsp;4C&nbsp;</span><span class="number">65</span><span>&nbsp;</span><span class="number">66</span><span>&nbsp;</span><span class="number">74</span><span>&nbsp;</span><span class="number">02</span><span>&nbsp;</span><span class="number">20</span><span>&nbsp;</span><span class="number">00</span><span>&nbsp;</span><span class="number">00</span><span>&nbsp;</span><span class="number">06</span><span>&nbsp;</span><span class="number">54</span><span>&nbsp;</span><span class="number">44</span><span>&nbsp;&nbsp;ns.Left&nbsp;..TD&nbsp;&nbsp;</span></span></li><li><span>00F8FCC0&nbsp;&nbsp;<span class="number">44</span><span>&nbsp;</span><span class="number">53</span><span>&nbsp;</span><span class="number">44</span><span>&nbsp;</span><span class="number">37</span><span>&nbsp;</span><span class="number">06</span><span>&nbsp;</span><span class="number">44</span><span>&nbsp;</span><span class="number">44</span><span>&nbsp;</span><span class="number">53</span><span>&nbsp;</span><span class="number">44</span><span>&nbsp;</span><span class="number">37</span><span>&nbsp;</span><span class="number">31</span><span>&nbsp;0B&nbsp;</span><span class="number">44</span><span>&nbsp;</span><span class="number">65</span><span>&nbsp;</span><span class="number">62</span><span>&nbsp;</span><span class="number">75</span><span>&nbsp;&nbsp;DSD7DDSD71Debu&nbsp;&nbsp;</span></span></li><li><span>00F8FCD0&nbsp;&nbsp;<span class="number">67</span><span>&nbsp;4F&nbsp;</span><span class="number">70</span><span>&nbsp;</span><span class="number">74</span><span>&nbsp;</span><span class="number">69</span><span>&nbsp;6F&nbsp;6E&nbsp;0B&nbsp;0E&nbsp;</span><span class="number">64</span><span>&nbsp;</span><span class="number">73</span><span>&nbsp;6F&nbsp;</span><span class="number">48</span><span>&nbsp;</span><span class="number">61</span><span>&nbsp;6C&nbsp;</span><span class="number">74</span><span>&nbsp;&nbsp;gOptiondsoHalt&nbsp;&nbsp;</span></span></li><li><span>00F8FCE0&nbsp;&nbsp;4F&nbsp;6E&nbsp;<span class="number">45</span><span>&nbsp;</span><span class="number">72</span><span>&nbsp;</span><span class="number">72</span><span>&nbsp;6F&nbsp;</span><span class="number">72</span><span>&nbsp;</span><span class="number">00</span><span>&nbsp;0C&nbsp;</span><span class="number">43</span><span>&nbsp;</span><span class="number">68</span><span>&nbsp;</span><span class="number">61</span><span>&nbsp;6E&nbsp;6E&nbsp;</span><span class="number">65</span><span>&nbsp;6C&nbsp;&nbsp;OnError..Channel&nbsp;&nbsp;</span></span></li><li><span>00F8FCF0&nbsp;&nbsp;<span class="number">43</span><span>&nbsp;6F&nbsp;</span><span class="number">75</span><span>&nbsp;6E&nbsp;</span><span class="number">74</span><span>&nbsp;</span><span class="number">02</span><span>&nbsp;</span><span class="number">10</span><span>&nbsp;</span><span class="number">00</span><span>&nbsp;</span><span class="number">00</span><span>&nbsp;0A&nbsp;</span><span class="number">54</span><span>&nbsp;</span><span class="number">50</span><span>&nbsp;6F&nbsp;</span><span class="number">70</span><span>&nbsp;</span><span class="number">75</span><span>&nbsp;</span><span class="number">70</span><span>&nbsp;&nbsp;Count...TPopup&nbsp;&nbsp;</span></span></li><li><span>00F8FD00&nbsp;&nbsp;4D&nbsp;<span class="number">65</span><span>&nbsp;6E&nbsp;</span><span class="number">75</span><span>&nbsp;0A&nbsp;</span><span class="number">50</span><span>&nbsp;6F&nbsp;</span><span class="number">70</span><span>&nbsp;</span><span class="number">75</span><span>&nbsp;</span><span class="number">70</span><span>&nbsp;4D&nbsp;</span><span class="number">65</span><span>&nbsp;6E&nbsp;</span><span class="number">75</span><span>&nbsp;</span><span class="number">31</span><span>&nbsp;</span><span class="number">03</span><span>&nbsp;&nbsp;Menu.PopupMenu1&nbsp;&nbsp;</span></span></li><li><span>00F8FD10&nbsp;&nbsp;<span class="number">54</span><span>&nbsp;6F&nbsp;</span><span class="number">70</span><span>&nbsp;</span><span class="number">02</span><span>&nbsp;</span><span class="number">20</span><span>&nbsp;</span><span class="number">00</span><span>&nbsp;</span><span class="number">09</span><span>&nbsp;</span><span class="number">54</span><span>&nbsp;4D&nbsp;</span><span class="number">65</span><span>&nbsp;6E&nbsp;</span><span class="number">75</span><span>&nbsp;</span><span class="number">49</span><span>&nbsp;</span><span class="number">74</span><span>&nbsp;</span><span class="number">65</span><span>&nbsp;6D&nbsp;&nbsp;Top&nbsp;..TMenuItem&nbsp;&nbsp;</span></span></li><li><span>00F8FD20&nbsp;&nbsp;<span class="number">05</span><span>&nbsp;</span><span class="number">53</span><span>&nbsp;</span><span class="number">68</span><span>&nbsp;6F&nbsp;</span><span class="number">77</span><span>&nbsp;</span><span class="number">31</span><span>&nbsp;</span><span class="number">07</span><span>&nbsp;</span><span class="number">43</span><span>&nbsp;</span><span class="number">61</span><span>&nbsp;</span><span class="number">70</span><span>&nbsp;</span><span class="number">74</span><span>&nbsp;</span><span class="number">69</span><span>&nbsp;6F&nbsp;6E&nbsp;</span><span class="number">06</span><span>&nbsp;</span><span class="number">02</span><span>&nbsp;&nbsp;Show1Caption&nbsp;&nbsp;</span></span></li><li><span>00F8FD30&nbsp;&nbsp;3F&nbsp;3F&nbsp;<span class="number">07</span><span>&nbsp;4F&nbsp;6E&nbsp;</span><span class="number">43</span><span>&nbsp;6C&nbsp;</span><span class="number">69</span><span>&nbsp;</span><span class="number">63</span><span>&nbsp;6B&nbsp;</span><span class="number">07</span><span>&nbsp;0A&nbsp;</span><span class="number">53</span><span>&nbsp;</span><span class="number">68</span><span>&nbsp;6F&nbsp;</span><span class="number">77</span><span>&nbsp;&nbsp;??OnClick.Show&nbsp;&nbsp;</span></span></li><li><span>00F8FD40&nbsp;&nbsp;<span class="number">31</span><span>&nbsp;</span><span class="number">43</span><span>&nbsp;6C&nbsp;</span><span class="number">69</span><span>&nbsp;</span><span class="number">63</span><span>&nbsp;6B&nbsp;</span><span class="number">00</span><span>&nbsp;</span><span class="number">00</span><span>&nbsp;</span><span class="number">00</span><span>&nbsp;</span><span class="number">00</span><span>&nbsp;</span><span class="number">00</span><span>&nbsp;</span><span class="number">00</span><span>&nbsp;</span><span class="number">00</span><span>&nbsp;</span><span class="number">00</span><span>&nbsp;</span><span class="number">00</span><span>&nbsp;</span><span class="number">00</span><span>&nbsp;&nbsp;1Click..........&nbsp;&nbsp;</span></span></li></ol></div>
+<br>
+<br>上面数据在kamipani_trial.exe里位于0x00146AC0。
+<br>
+<br>当然这样的数据就是从TForm1的属性数据里来的咯。
+<br><div class="dp-highlighter" id=""><div class="bar"><div class="tools">Java代码 <embed wmode="transparent" src="/javascripts/syntaxhighlighter/clipboard_new.swf" width="14" height="15" flashvars="clipboard=object%20Form1%3A%20TForm1%0A%20%20Left%20%3D%20381%0A%20%20Top%20%3D%20235%0A%20%20BorderIcons%20%3D%20%5BbiSystemMenu%2C%20biMinimize%5D%0A%20%20BorderStyle%20%3D%20bsSingle%0A%20%20Caption%20%3D%20'MainWindow'%0A%20%20ClientHeight%20%3D%20240%0A%20%20ClientWidth%20%3D%20320%0A%20%20Color%20%3D%20clBtnFace%0A%20%20Font.Charset%20%3D%20SHIFTJIS_CHARSET%0A%20%20Font.Color%20%3D%20clWindowText%0A%20%20Font.Height%20%3D%20-12%0A%20%20Font.Name%20%3D%20'MS%20%3F%3F%3F%3F'%0A%20%20Font.Style%20%3D%20%5B%5D%0A%20%20OldCreateOrder%20%3D%20False%0A%20%20Position%20%3D%20poScreenCenter%0A%20%20OnClose%20%3D%20FormClose%0A%20%20OnCreate%20%3D%20FormCreate%0A%20%20OnDestroy%20%3D%20FormDestroy%0A%20%20OnKeyDown%20%3D%20FormKeyDown%0A%20%20OnKeyUp%20%3D%20FormKeyUp%0A%20%20OnPaint%20%3D%20FormPaint%0A%20%20PixelsPerInch%20%3D%2096%0A%20%20TextHeight%20%3D%2012%0A%20%20object%20DDDD71%3A%20TDDDD7%0A%20%20%20%20DebugOption%20%3D%20%5BddoHaltOnError%5D%0A%20%20%20%20BackColor%20%3D%200%0A%20%20%20%20AutoDisplayModeInitialize%20%3D%20False%0A%20%20%20%20DisableScreenSaver%20%3D%20True%0A%20%20%20%20Use3D%20%3D%20False%0A%20%20%20%20VsyncAtWindowed%20%3D%20False%0A%20%20%20%20D3DOptions%20%3D%20%5B%5D%0A%20%20%20%20Left%20%3D%2032%0A%20%20end%0A%20%20object%20DDSD71%3A%20TDDSD7%0A%20%20%20%20DebugOption%20%3D%20%5BdsoHaltOnError%5D%0A%20%20%20%20ChannelCount%20%3D%2016%0A%20%20end%0A%20%20object%20PopupMenu1%3A%20TPopupMenu%0A%20%20%20%20Top%20%3D%2032%0A%20%20%20%20object%20Show1%3A%20TMenuItem%0A%20%20%20%20%20%20Caption%20%3D%20'%3F%3F'%0A%20%20%20%20%20%20OnClick%20%3D%20Show1Click%0A%20%20%20%20end%0A%20%20end%0Aend" quality="high" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">&nbsp;<a href="javascript:void()" title="收藏这段代码" onclick="code_favorites_do_favorite(this);return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img class="star" src="assets/1571209307-bf632ec55a05f69a9359f73417402b26.png" alt="收藏代码"><img class="spinner" src="assets/1571209307-a42df3a5b569bdc98ca473a4a3adfeac.gif" style="display:none"></a></div></div><ol start="1" class="dp-j"><li><span><span>object&nbsp;Form1:&nbsp;TForm1&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;Left&nbsp;=&nbsp;<span class="number">381</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;Top&nbsp;=&nbsp;<span class="number">235</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;BorderIcons&nbsp;=&nbsp;[biSystemMenu,&nbsp;biMinimize]&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;BorderStyle&nbsp;=&nbsp;bsSingle&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;Caption&nbsp;=&nbsp;<span class="string">'MainWindow'</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;ClientHeight&nbsp;=&nbsp;<span class="number">240</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;ClientWidth&nbsp;=&nbsp;<span class="number">320</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;Color&nbsp;=&nbsp;clBtnFace&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;Font.Charset&nbsp;=&nbsp;SHIFTJIS_CHARSET&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;Font.Color&nbsp;=&nbsp;clWindowText&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;Font.Height&nbsp;=&nbsp;-<span class="number">12</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;Font.Name&nbsp;=&nbsp;<span class="string">'MS&nbsp;????'</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;Font.Style&nbsp;=&nbsp;[]&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;OldCreateOrder&nbsp;=&nbsp;False&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;Position&nbsp;=&nbsp;poScreenCenter&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;OnClose&nbsp;=&nbsp;FormClose&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;OnCreate&nbsp;=&nbsp;FormCreate&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;OnDestroy&nbsp;=&nbsp;FormDestroy&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;OnKeyDown&nbsp;=&nbsp;FormKeyDown&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;OnKeyUp&nbsp;=&nbsp;FormKeyUp&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;OnPaint&nbsp;=&nbsp;FormPaint&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;PixelsPerInch&nbsp;=&nbsp;<span class="number">96</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;TextHeight&nbsp;=&nbsp;<span class="number">12</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;object&nbsp;DDDD71:&nbsp;TDDDD7&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;DebugOption&nbsp;=&nbsp;[ddoHaltOnError]&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;BackColor&nbsp;=&nbsp;<span class="number">0</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;AutoDisplayModeInitialize&nbsp;=&nbsp;False&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;DisableScreenSaver&nbsp;=&nbsp;True&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;Use3D&nbsp;=&nbsp;False&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;VsyncAtWindowed&nbsp;=&nbsp;False&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;D3DOptions&nbsp;=&nbsp;[]&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;Left&nbsp;=&nbsp;<span class="number">32</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;end&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;object&nbsp;DDSD71:&nbsp;TDDSD7&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;DebugOption&nbsp;=&nbsp;[dsoHaltOnError]&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;ChannelCount&nbsp;=&nbsp;<span class="number">16</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;end&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;object&nbsp;PopupMenu1:&nbsp;TPopupMenu&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;Top&nbsp;=&nbsp;<span class="number">32</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;object&nbsp;Show1:&nbsp;TMenuItem&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Caption&nbsp;=&nbsp;<span class="string">'??'</span><span>&nbsp;&nbsp;</span></span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OnClick&nbsp;=&nbsp;Show1Click&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;&nbsp;&nbsp;end&nbsp;&nbsp;</span></li><li><span>&nbsp;&nbsp;end&nbsp;&nbsp;</span></li><li><span>end&nbsp;&nbsp;</span></li></ol></div>
+<br>=============================================================
+<br>
+<br>唉，明知道是Delphi程序我该早点开Dede的。前面用OllyDbg的效率太低了，找几个字体参数都花了那么长时间 OTL。Delphi程序的默认RVA-&gt;物理地址转换也跟我熟悉的不一样，郁闷。
+<br>
+<br>CC的结果：
+<br><div class="quote_title">引用</div><div class="quote_div">##&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Offset&nbsp;&nbsp;&nbsp;&nbsp; Value&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Method
+<br>-----&nbsp;&nbsp; --------&nbsp;&nbsp; --------&nbsp;&nbsp; --------
+<br>&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp; 0009DDF4&nbsp;&nbsp; EDB88320&nbsp;&nbsp; CRC32 Polynomial
+<br>
+<br>&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp; 0012A834&nbsp;&nbsp; 6A09E667&nbsp;&nbsp; SHA-256 (Init)
+<br>&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp; 0012A838&nbsp;&nbsp; BB67AE85&nbsp;&nbsp; SHA-256 (Init)
+<br>&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp; 0012A83C&nbsp;&nbsp; 3C6EF372&nbsp;&nbsp; SHA-256 (Init)
+<br>&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp; 0012A840&nbsp;&nbsp; A54FF53A&nbsp;&nbsp; SHA-256 (Init)
+<br>
+<br>&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp; 000029BD&nbsp;&nbsp; 08088405&nbsp;&nbsp; PKZip/Borland Pseudo-Random Generator</div>
+<br>不过FilePackVer3.0的archive格式其实并没有用SHA-256吧。在CC结果指出的SHA-256第一个特征值相关的位置设了断点，却一直没看到它被触发。
+<br><div class="dp-highlighter" id=""><div class="bar"><div class="tools">Java代码 <embed wmode="transparent" src="/javascripts/syntaxhighlighter/clipboard_new.swf" width="14" height="15" flashvars="clipboard=004A4DDB%20%20mov%20edx%2Ckamipani.0052B634" quality="high" allowscriptaccess="always" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer">&nbsp;<a href="javascript:void()" title="收藏这段代码" onclick="code_favorites_do_favorite(this);return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img class="star" src="assets/1571209307-bf632ec55a05f69a9359f73417402b26.png" alt="收藏代码"><img class="spinner" src="assets/1571209307-a42df3a5b569bdc98ca473a4a3adfeac.gif" style="display:none"></a></div></div><ol start="1" class="dp-j"><li><span><span>004A4DDB&nbsp;&nbsp;mov&nbsp;edx,kamipani.0052B634&nbsp;&nbsp;</span></span></li></ol></div>
+
+  
+
+
+  <div id="bottoms" class="clearfix">
+    
+    <div id="share_weibo">分享到：
+      <a data-type="sina" href="javascript:;" title="分享到新浪微博" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1571209307-18e900b8666ce6f233d25ec02f95ee59.jpg"></a>
+      <a data-type="qq" href="javascript:;" title="分享到腾讯微博" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1571209307-72dd548719f0ace4d5f9bca64e1d7715.jpg"></a>
+    </div>
+  </div>
+
+  <div class="blog_nav">
+    <div class="pre_next">
+      <a href="https://www.iteye.com/blog/153544" class="next" title="[链接] 除法优化与编译时常量参数的函数调用优化" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">[链接] 除法优化与编译时常量参数的函数调 ...</a>
+      |
+      <a href="https://www.iteye.com/blog/153382" class="pre" title="吉里吉里3观察记录（2008-01-05 3523）" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">吉里吉里3观察记录（2008-01-05 3523）</a>
+    </div>
+  </div>
+  <div class="blog_bottom">
+    <ul>
+      <li>2008-01-06 00:22</li>
+      <li>浏览 1957</li>
+      <li><a href="#comments">评论(2)</a></li>
+      
+      
+            
+      <li class="last"><a href="https://www.iteye.com/wiki/blog/153433" target="_blank" class="more" referrerpolicy="no-referrer" rel="noopener noreferrer">查看更多</a></li>
+    </ul>    
+  </div>
+    
+  <div class="blog_comment">
+    <h5>评论</h5>
+    <a id="comments" name="comments" data-mx-warn="Empty URL"></a>
+    <div id="bc442862">
+  <div class="comment_title">
+    2 楼
+    <a href="https://www.iteye.com/blog/user/rednaxelafx" target="_blank" title="RednaxelaFX" referrerpolicy="no-referrer" rel="noopener noreferrer">RednaxelaFX</a>
+    2008-01-06&nbsp;&nbsp;
+    
+    
+  </div>
+  <div class="comment_content">javaeye新的这个界面貌似成熟度不高……用起来的挫败感比以前稍微提升。草稿会显示在外面的bug还是没解决。code标签默认会显示“java代码”也不爽……
+<br>嗯，为了对齐确实是会做选用有合适的代码长度而又尽量少占用时钟周期的指令来填充空位。但这里是一个函数的开头，函数入口的地方就已经应该对齐到边界上了，后面又不是接着jmp之类的跳转，我是一时理解不了多生成一句mov的意义。</div>
+</div>
+
+<div id="bc442717">
+  <div class="comment_title">
+    1 楼
+    <a href="https://www.iteye.com/blog/user/lwwin" target="_blank" title="lwwin" referrerpolicy="no-referrer" rel="noopener noreferrer">lwwin</a>
+    2008-01-06&nbsp;&nbsp;
+    
+    
+  </div>
+  <div class="comment_content">Java代码 
+<br>0044D2AC&nbsp; push ebx&nbsp;&nbsp; 
+<br>0044D2AD&nbsp; mov ebx,eax&nbsp;&nbsp; 
+<br>0044D2AF&nbsp; mov eax,ebx&nbsp;&nbsp; 
+<br>0044D2B1&nbsp; call kamipani.0045F2FC 
+<br> 
+<br>0044D2AC&nbsp; push ebx
+<br>0044D2AD&nbsp; mov ebx,eax
+<br>0044D2AF&nbsp; mov eax,ebx
+<br>0044D2B1&nbsp; call kamipani.0045F2FC
+<br>
+<br>Google了一下这串关键字：borland 编译 缺乏优化 
+<br>
+<br>很强大很强大！！不过偶个人觉得可能是为了凑齐一些对齐的用处？？这些细节的东西偶基本不会了……
+<br>PS：为啥偶COPY了会有对－　－？？</div>
+</div>
+
+
+    
+    
+  </div>
+
+  <div class="blog_comment">
+    <h5>发表评论</h5>
+            <p style="text-align:center; margin-top:30px;margin-bottom:0px;"><a href="https://www.iteye.com/login" style="background-color: white; --darkreader-inline-bgcolor:#191a1b;" data-darkreader-inline-bgcolor="" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"> <img src="assets/1571209307-cf6d69dfbb92d2238c3e50c97eb9e7bf.png" style="vertical-align:middle; margin-right: 10px;"></a><a href="https://www.iteye.com/login" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">  您还没有登录,请您登录后再发表评论 </a></p>
+      </div>
+  </div>
+  <div>
+    <div style="" id="_iisp7s2o04d"></div>
+    <!-- 多条广告如下脚本只需引入一次 -->
+    
+  </div>
+</div>
+
+
+
+
+
+
+
+      </div>
+      
+        <div class="blog-sidebar">
+          <div class="blog-sidebar-fixed">
+            <div class="news-right-side">
+              <div class="newbox recommend">
+                <div class="recommend-right">
+                <ul class="recommend-fixed-box">
+                  
+                    <li class="right-item cebian_item">
+                      <a href="https://www.iteye.com/blog/rednaxelafx-1871640" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                        <div class="content clearfix">
+                          <h5 class="" title="IDA Pro Free笔记">IDA Pro Free笔记</h5>
+                          <span class="time">
+                            2013-05-19 08:59
+                          </span>
+                          <span class="read so_read">
+                          <svg class="icon no-active hover-hide" aria-hidden="true">
+                            <use xlink:href="#yuedushu"></use>
+                          </svg>
+                            0
+                        </span>
+                        </div>
+                        <div class="right-item-desc">
+                          IDA把数据都存哪里了？
+Windows 7
+D:\temp&amp; ...
+                        </div>
+                      </a>
+                    </li>
+                  
+                    <li class="right-item cebian_item">
+                      <a href="https://www.iteye.com/blog/rednaxelafx-891873" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                        <div class="content clearfix">
+                          <h5 class="" title="加密算法收集">加密算法收集</h5>
+                          <span class="time">
+                            2011-01-23 16:10
+                          </span>
+                          <span class="read so_read">
+                          <svg class="icon no-active hover-hide" aria-hidden="true">
+                            <use xlink:href="#yuedushu"></use>
+                          </svg>
+                            0
+                        </span>
+                        </div>
+                        <div class="right-item-desc">
+                          加密算法，OTP
+http://en.wikipedia.or ...
+                        </div>
+                      </a>
+                    </li>
+                  
+                    <li class="right-item cebian_item">
+                      <a href="https://www.iteye.com/blog/rednaxelafx-658308" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                        <div class="content clearfix">
+                          <h5 class="" title="BattleMoonWars 归档解压/压缩程序（砍掉重炼版）">BattleMoonWars 归档解压/压缩程序（砍掉重炼版）</h5>
+                          <span class="time">
+                            2010-05-03 21:40
+                          </span>
+                          <span class="read so_read">
+                          <svg class="icon no-active hover-hide" aria-hidden="true">
+                            <use xlink:href="#yuedushu"></use>
+                          </svg>
+                            1833
+                        </span>
+                        </div>
+                        <div class="right-item-desc">
+                          以前写过BattleMoonWars的� ...
+                        </div>
+                      </a>
+                    </li>
+                  
+                    <li class="right-item cebian_item">
+                      <a href="https://www.iteye.com/blog/rednaxelafx-206720" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                        <div class="content clearfix">
+                          <h5 class="" title="Quartett!文本插入程序">Quartett!文本插入程序</h5>
+                          <span class="time">
+                            2008-06-21 20:38
+                          </span>
+                          <span class="read so_read">
+                          <svg class="icon no-active hover-hide" aria-hidden="true">
+                            <use xlink:href="#yuedushu"></use>
+                          </svg>
+                            1231
+                        </span>
+                        </div>
+                        <div class="right-item-desc">
+                          年初写的Quartett!的文本� ...
+                        </div>
+                      </a>
+                    </li>
+                  
+                    <li class="right-item cebian_item">
+                      <a href="https://www.iteye.com/blog/rednaxelafx-180521" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                        <div class="content clearfix">
+                          <h5 class="" title="BattleMoonWars 归档解压/压缩程序 (Java)">BattleMoonWars 归档解压/压缩程序 (Java)</h5>
+                          <span class="time">
+                            2008-04-08 16:44
+                          </span>
+                          <span class="read so_read">
+                          <svg class="icon no-active hover-hide" aria-hidden="true">
+                            <use xlink:href="#yuedushu"></use>
+                          </svg>
+                            1964
+                        </span>
+                        </div>
+                        <div class="right-item-desc">
+                          呼，这个也是一年多之� ...
+                        </div>
+                      </a>
+                    </li>
+                  
+                    <li class="right-item cebian_item">
+                      <a href="https://www.iteye.com/blog/rednaxelafx-180447" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                        <div class="content clearfix">
+                          <h5 class="" title="ケータイ少女 script.arc的解压缩程序 (Java)">ケータイ少女 script.arc的解压缩程序 (Java)</h5>
+                          <span class="time">
+                            2008-04-08 14:02
+                          </span>
+                          <span class="read so_read">
+                          <svg class="icon no-active hover-hide" aria-hidden="true">
+                            <use xlink:href="#yuedushu"></use>
+                          </svg>
+                            4041
+                        </span>
+                        </div>
+                        <div class="right-item-desc">
+                          嗯，这个也是快一年前写的了。当时在澄空看到有人想要解手机少女的 ...
+                        </div>
+                      </a>
+                    </li>
+                  
+                    <li class="right-item cebian_item">
+                      <a href="https://www.iteye.com/blog/rednaxelafx-180434" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                        <div class="content clearfix">
+                          <h5 class="" title="桃華月憚体験版的解压缩程序 (Java)">桃華月憚体験版的解压缩程序 (Java)</h5>
+                          <span class="time">
+                            2008-04-08 13:38
+                          </span>
+                          <span class="read so_read">
+                          <svg class="icon no-active hover-hide" aria-hidden="true">
+                            <use xlink:href="#yuedushu"></use>
+                          </svg>
+                            2654
+                        </span>
+                        </div>
+                        <div class="right-item-desc">
+                          这是差不多一年前写的程序了……有人说想看于是发出来。
+当时也是 ...
+                        </div>
+                      </a>
+                    </li>
+                  
+                    <li class="right-item cebian_item">
+                      <a href="https://www.iteye.com/blog/rednaxelafx-168505" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                        <div class="content clearfix">
+                          <h5 class="" title="Quartett!的文本提取程序">Quartett!的文本提取程序</h5>
+                          <span class="time">
+                            2008-03-05 23:31
+                          </span>
+                          <span class="read so_read">
+                          <svg class="icon no-active hover-hide" aria-hidden="true">
+                            <use xlink:href="#yuedushu"></use>
+                          </svg>
+                            1313
+                        </span>
+                        </div>
+                        <div class="right-item-desc">
+                          诶，之前写了这个程序� ...
+                        </div>
+                      </a>
+                    </li>
+                  
+                    <li class="right-item cebian_item">
+                      <a href="https://www.iteye.com/blog/rednaxelafx-165721" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                        <div class="content clearfix">
+                          <h5 class="" title="Fortune Arterial Tools">Fortune Arterial Tools</h5>
+                          <span class="time">
+                            2008-02-28 13:34
+                          </span>
+                          <span class="read so_read">
+                          <svg class="icon no-active hover-hide" aria-hidden="true">
+                            <use xlink:href="#yuedushu"></use>
+                          </svg>
+                            2114
+                        </span>
+                        </div>
+                        <div class="right-item-desc">
+                          using System;
+using System.IO; ...
+                        </div>
+                      </a>
+                    </li>
+                  
+                    <li class="right-item cebian_item">
+                      <a href="https://www.iteye.com/blog/rednaxelafx-159926" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                        <div class="content clearfix">
+                          <h5 class="" title="さくらシュトラッセ literal record">さくらシュトラッセ literal record</h5>
+                          <span class="time">
+                            2008-01-28 14:53
+                          </span>
+                          <span class="read so_read">
+                          <svg class="icon no-active hover-hide" aria-hidden="true">
+                            <use xlink:href="#yuedushu"></use>
+                          </svg>
+                            1414
+                        </span>
+                        </div>
+                        <div class="right-item-desc">
+                          脚本在scenario.sc里。无� ...
+                        </div>
+                      </a>
+                    </li>
+                  
+                    <li class="right-item cebian_item">
+                      <a href="https://www.iteye.com/blog/rednaxelafx-149964" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                        <div class="content clearfix">
+                          <h5 class="" title="[脚本分析] 从Quartett!的脚本得到资源列表">[脚本分析] 从Quartett!的脚本得到资源列表</h5>
+                          <span class="time">
+                            2007-12-21 14:00
+                          </span>
+                          <span class="read so_read">
+                          <svg class="icon no-active hover-hide" aria-hidden="true">
+                            <use xlink:href="#yuedushu"></use>
+                          </svg>
+                            1354
+                        </span>
+                        </div>
+                        <div class="right-item-desc">
+                          听汉公的说明，看来LittleWitch所使用的FFD Sys ...
+                        </div>
+                      </a>
+                    </li>
+                  
+                    <li class="right-item cebian_item">
+                      <a href="https://www.iteye.com/blog/rednaxelafx-149811" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                        <div class="content clearfix">
+                          <h5 class="" title="[脚本分析] Quartett!的二进制脚本分析">[脚本分析] Quartett!的二进制脚本分析</h5>
+                          <span class="time">
+                            2007-12-20 22:17
+                          </span>
+                          <span class="read so_read">
+                          <svg class="icon no-active hover-hide" aria-hidden="true">
+                            <use xlink:href="#yuedushu"></use>
+                          </svg>
+                            2693
+                        </span>
+                        </div>
+                        <div class="right-item-desc">
+                          我前两天在NetOA方面确� ...
+                        </div>
+                      </a>
+                    </li>
+                  
+                </ul>
+              </div></div>
+            </div>
+            <div class="persion_article">
+
+            </div>
+          </div>
+        </div>
+            
+    </div>
+    
+    <div id="footer" class="clearfix">
+      <!-- <div id="copyright">
+        <hr />
+        声明：ITeye文章版权属于作者，受法律保护。没有作者书面许可不得转载。若作者同意转载，必须以超链接形式标明文章原始出处和作者。<br />
+        &copy; 2003-
+        2019 ITeye.com. All rights reserved. [ 京ICP证110151号 京公网安备110105010620 ]
+      </div> -->
+      
+    </div>
+  </div>
+  <img src="assets/1571209307-d276843a7ed3098fe558889333a85519.gif" width="0" height="0">
+
+
+
+   Global site tag (gtag.js) - Google Analytics
+  
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+<a href="" download="" data-mx-warn="Empty URL"></a><div class="newbox"><div class="recommend-right">
+  <ul class="recommend-fixed-box">
+    
+</ul>
+</div></div><div data-mx-warn="extension url was not captured by MaoXian" data-mx-original-src="chrome-extension://kjahokgdcbohofgdidndeiaigkehdjdc/pages/ui-selection.html?t=aHR0cHM6Ly93d3cuaXRleWUuY29t"></div><div data-mx-warn="extension url was not captured by MaoXian" data-mx-original-src="chrome-extension://kjahokgdcbohofgdidndeiaigkehdjdc/pages/ui-control.html?t=aHR0cHM6Ly93d3cuaXRleWUuY29t"></div>
+</body>
+  </html>

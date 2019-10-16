@@ -1,0 +1,380 @@
+
+  <!DOCTYPE html>
+  <html id="" class="">
+    <!-- OriginalSrc: https://flandre-scarlet.moe/blog/629/ -->
+    <head>
+      <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <title>YU-RIS 封包分析 – Re: Memory</title>
+      
+<link rel="icon" href="assets/1571161099-17d889a0990111283b7e9ab6b744a6dd.png" sizes="32x32" referrerpolicy="no-referrer">
+<link rel="icon" href="assets/1571161099-8b159906d1fdb06a82c22e5e7ce8f46d.png" sizes="192x192" referrerpolicy="no-referrer">
+<link rel="apple-touch-icon-precomposed" href="assets/1571161099-20ae3987d5e7357fb563ee9491f9113b.png" referrerpolicy="no-referrer">
+
+
+<link rel="stylesheet" id="wp-block-library-css" href="assets/1571161099-e69bc92e88b43bbf8e9ad8eeb064397d.css" type="text/css" media="all" referrerpolicy="no-referrer">
+<link rel="stylesheet" id="blackoot-css" href="assets/1571161099-0d04b7fb02f2c9484b3af6d74b0b57c0.css" type="text/css" media="all" referrerpolicy="no-referrer">
+<link rel="stylesheet" id="blackoot-style-css" href="assets/1571161099-1cd53d4cd49ce0fed0e3af3fbee7e57c.css" type="text/css" media="all" referrerpolicy="no-referrer">
+<link rel="stylesheet" id="font-awesome-css" href="assets/1571161099-90a427bcba3d520dfd533a09951e1a66.css" type="text/css" media="all" referrerpolicy="no-referrer">
+<link rel="stylesheet" id="blackoot-webfonts-css" href="assets/1571161099-6f3e02fc0009b79641be89e4bb36af95.css" type="text/css" media="all" referrerpolicy="no-referrer">
+<link rel="stylesheet" type="text/css" href="assets/1571161099-509befd76878fec54a4d71c9dd6bdd16.css" referrerpolicy="no-referrer">
+<link rel="stylesheet" type="text/css" href="assets/1571161099-d6f1eee630153f750a51250eeb33231c.css" referrerpolicy="no-referrer">
+
+
+<style class="darkreader darkreader--fallback" media="screen"></style>
+<style class="darkreader darkreader--text" media="screen"></style>
+<style class="darkreader darkreader--invert" media="screen"></style>
+<style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}</style>
+<style class="darkreader darkreader--user-agent" media="screen">html {
+    background-color: #191a1b !important;
+}
+html, body, input, textarea, select, button {
+    background-color: #191a1b;
+}
+html, body, input, textarea, select, button {
+    border-color: #5a5956;
+    color: #f0ebe2;
+}
+a {
+    color: #4791e7;
+}
+table {
+    border-color: #4f4e4c;
+}
+::placeholder {
+    color: #bfb9ac;
+}
+::selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+::-moz-selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #565a0f !important;
+    color: #f0ebe2 !important;
+}
+::-webkit-scrollbar {
+    background-color: #1d1f1f;
+    color: #cbc5b9;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #2c2d2d;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #343636;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #404142;
+}
+::-webkit-scrollbar-corner {
+    background-color: #191a1b;
+}
+* {
+    scrollbar-color: #2c2d2d #1d1f1f;
+}</style>
+<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--override" media="screen">.jfk-bubble {
+    background-color: #000000 !important;
+}
+.vimvixen-hint {
+    background-color: #765500 !important;
+    border-color: #d5b22e !important;
+    color: #f9edcc !important;
+}</style>
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #212121; background-image: url(""); background-position: center center; background-size: contain; background-repeat: repeat; background-attachment: fixed; }
+</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">@keyframes fadeInOpacity{0%{opacity:0}to{opacity:1}}:hover>*>.fbvd--wrapper{animation-name:fadeInOpacity;animation-duration:.3s;opacity:1}.fbvd--wrapper{position:absolute;top:10px;left:10px;opacity:0;text-align:center;margin:0;z-index:5}.fbvd--wrapper a{background: url("") no-repeat 3px 4.55px; background-color: #fff; display:inline-block;font:700 14px Helvetica,Arial,sans-serif;color:#4b4f56;text-decoration:none;vertical-align:middle;padding:0px 8px 0px;margin-right:8px;border-radius:2px; line-height: 22px; padding-left:19px; border: 1px solid #e7e7e7; background-size: 13px}.fbvd--wrapper a:last-child{margin-right:0}.fbvd--wrapper a:hover{text-decoration:none}.fbvd--wrapper a:focus{box-shadow:0 0 1px 2px rgba(88,144,255,.75),0 1px 1px rgba(0,0,0,.15);outline:none}.fbvd--wrapper b{font-size:13px;position:relative;top:1px;color:#3b5998;font-weight:400}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+
+      
+    </head>
+    <body class="post-template-default single single-post postid-629 single-format-standard custom-background mx-wc-selected-elem mx-wc-1571161099">
+
+<div id="main-wrap">
+	<div id="header-wrap">
+		<div id="tophead-wrap">
+			<div class="container">
+				<div class="tophead">
+					<form role="search" method="get" class="search-form" action="https://flandre-scarlet.moe/blog/">
+				<label>
+					<span class="screen-reader-text">搜索：</span>
+					<input type="search" class="search-field" placeholder="搜索…" value="" name="s">
+				</label>
+				
+			</form>				</div>
+			</div>
+		</div>
+
+		<div id="header">
+			<div class="container">
+				<div id="logo">
+					<a href="https://flandre-scarlet.moe/blog" title="Re: Memory" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+													<h1 class="site-title">Re: Memory</h1>
+												</a>
+				</div>
+							</div>
+		</div>
+
+		<div id="nav-wrap">
+			<div id="navbar" class="container">
+				<div class="menu-main-container"><ul id="menu-main" class="menu sf-menu sf-js-enabled sf-arrows"><li id="menu-item-573" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-573"><a href="https://flandre-scarlet.moe/blog" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">首页</a></li>
+</ul></div>			</div>
+		</div>
+	</div>
+				<div id="header-image" class="container">
+				<img src="assets/1571161099-d127d0a4e39e2000628b998f0a57e463.png" height="595" width="1000" alt="">
+			</div>
+				<div id="page-title">
+		<div class="container">
+							<div id="breadcrumbs">
+					<a href="https://flandre-scarlet.moe/blog" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">首页</a><span class="separator"> / </span><a href="https://flandre-scarlet.moe/blog/category/%e8%a7%a3%e5%8c%85/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">解包</a><span class="separator"> / </span><a href="https://flandre-scarlet.moe/blog/category/%e9%80%86%e5%90%91/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">逆向</a><span class="separator"> / </span>YU-RIS 封包分析				</div>
+							<h1>YU-RIS 封包分析</h1>
+		</div>
+	</div>
+	<div class="container" id="main-content">
+	<div id="page-container" class="with-sidebar">
+						<div id="post-629" class="single-post post-629 post type-post status-publish format-standard hentry category-5 category-31 tag-galgame tag-ybn tag-ycg tag-ypf tag-yu-ris">
+										<div class="postmetadata">
+												
+												<span class="meta-date post-date updated"><i class="fa fa-calendar"></i><a href="https://flandre-scarlet.moe/blog/629/" title="YU-RIS 封包分析" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+							2018年11月9日						</a></span>
+												<span class="meta-author author vcard"><i class="fa fa-user"></i><a class="fn" href="https://flandre-scarlet.moe/blog/author/flandrelovely/" title="查看所有由flandre发布的文章" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">flandre</a></span>
+												<div class="meta-category">
+							<span class="category-icon" title="分类"><i class="fa fa-tag"></i></span>
+							<a href="https://flandre-scarlet.moe/blog/category/%e8%a7%a3%e5%8c%85/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">解包</a><a href="https://flandre-scarlet.moe/blog/category/%e9%80%86%e5%90%91/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">逆向</a>						</div>
+													<span class="meta-comments"><i class="fa fa-comment"></i>
+								<a href="#comments">2 条评论</a>							</span>
+							<div class="meta-tags"><span class="tags-icon"><i class="fa fa-tags"></i></span><a href="https://flandre-scarlet.moe/blog/tag/galgame/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">Galgame</a><a href="https://flandre-scarlet.moe/blog/tag/ybn/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">ybn</a><a href="https://flandre-scarlet.moe/blog/tag/ycg/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">ycg</a><a href="https://flandre-scarlet.moe/blog/tag/ypf/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">ypf</a><a href="https://flandre-scarlet.moe/blog/tag/yu-ris/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">yu-ris</a></div>					</div>
+										<div class="post-contents entry-content">
+						<p>这两天搞了一下 yu-ris 的 ypf 封包，这里做个简单的记录。</p>
+<p></p><p>ypf 主要用了 zlib 进行压缩处理。包头里有文件数量和数据区起始地址等信息。文件索引表里包含了文件的偏移、压缩后长度和原始长度等基本信息，文件名则是经过取反后存储的。文件索引表非定长。</p>
+<p><span id="more-629"></span></p>
+<h3>ypf 封包</h3>
+<p>封包的结构如下：</p>
+<div id="highlighter_127869" class="syntaxhighlighter  "><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="keyword bold">struct</code> <code class="plain">YpfHeader {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">uint32_t mMagic;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">uint32_t mVersionTmp;&nbsp;&nbsp;&nbsp; </code><code class="comments">// 应该是版本号之类的</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">uint32_t mFileCount;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>5</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">uint32_t mDataStart;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>6</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">uint8_t&nbsp; mZero[16];</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>7</code></td><td class="content"><code class="plain">};</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>8</code></td><td class="content"><code class="keyword bold">struct</code> <code class="plain">YpfEntry {</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>9</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">uint32_t unknown;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>10</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">uint8_t name_length;&nbsp;&nbsp;&nbsp;&nbsp; </code><code class="comments">// 要解码</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>11</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">uint8_t name[1];&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </code><code class="comments">// 要解码</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>12</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">uint8_t filetype;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>13</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">uint8_t zlib_compress_flag;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>14</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">uint32_t original_length;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>15</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">uint32_t compressd_length;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>16</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">uint32_t offset;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>17</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">uint32_t unknwon;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </code><code class="comments">// 估计是 crc 之类的</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>18</code></td><td class="content"><code class="plain">};</code></td></tr></tbody></table></div></div></div>
+<p></p>
+<p>目前手头上两款游戏的 YpfHeader::mVersionTmp 字段不同，并且 YpfEntry 中也有（微小的）差异，版号大的 YpfEntry 结构中多了一个全零的 uint32_t。</p>
+<p>文件名前面有一个指示长度的字节，但是需要经过运算才能得到真实的文件名长度。为简便起见，可以在解码过程中识别文件扩展名之前的 ‘.’，然后加上最后 3 个字符的扩展名就得到完整文件名了。</p>
+<p>根据索引表中的偏移长度提速数据并解压即可解出原始文件。</p>
+<h3>ycg 文件</h3>
+<p>ycg 是经 zlib 压缩后的图像。其中头 0x38 个字节记录了文件信息，结构如下：</p>
+<div id="highlighter_596538" class="syntaxhighlighter  "><div class="lines"><div class="line alt1"><table><tbody><tr><td class="number"><code>1</code></td><td class="content"><code class="keyword bold">struct</code> <code class="plain">YcgHeader {</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>2</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">uint32_t mMagic;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>3</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">uint32_t mWidth;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>4</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">uint32_t mHeight;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>5</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">uint32_t mBpp;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>6</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">uint32_t mUnkonwn[4];</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>7</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">uint32_t mPart1PlainLength;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>8</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">uint32_t mPart1PackedLength;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>9</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">uint32_t mMaybeImgPosition[2];</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>10</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">uint32_t mPart2PlainLength;</code></td></tr></tbody></table></div><div class="line alt1"><table><tbody><tr><td class="number"><code>11</code></td><td class="content"><code class="spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="plain">uint32_t mPart2PackedLength;</code></td></tr></tbody></table></div><div class="line alt2"><table><tbody><tr><td class="number"><code>12</code></td><td class="content"><code class="plain">};</code></td></tr></tbody></table></div></div></div>
+<p>这两部分就对应着上下半张图像，对两部分分别解压后直接拼接，最后再补上 bmp 文件头即可。</p>
+<h3>ybn 文件</h3>
+<p>经过编译后的脚本文件，带有 YSTB 标志。使用异或解码，key 要在 exe 文件中找，搜索字符串 “ysbin\yst%05d.ybn” 即可快速空降到目标附近。每个游戏的 key 应该都不相同，毕竟可以自定义。</p>
+<p><a href="https://i.imgur.com/lKydatO.png" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer"><img src="assets/1571161099-263b67e95715bbc1253060d4e2843b56.png" alt="脚本截图"></a></p>
+						
+											</div>
+					
+				</div>
+				<div class="article_nav"><div class="next navbutton"><a href="https://flandre-scarlet.moe/blog/637/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">下一篇文章<i class="fa fa-angle-double-right"></i></a></div><div class="previous navbutton"><a href="https://flandre-scarlet.moe/blog/625/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><i class="fa fa-angle-double-left"></i>上一篇文章</a></div></div>					<hr>
+					<div class="comments">
+							<h3 id="comments">
+		2 则回应给 YU-RIS 封包分析	</h3>
+
+	<ol class="commentlist">
+				<li class="comment even thread-even depth-1 parent" id="comment-212">
+				<div id="div-comment-212" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="assets/1571161099-2754cd8beccc024d01f865e2c665855e.png" srcset="assets/1571161099-41463a2d5381ec3c4815a0ee1a610353 2x" class="avatar avatar-64 photo" height="64" width="64">			<cite class="fn">Sora</cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="#comment-212">
+			2019年7月29日 下午8:56				</a>
+						</div>
+
+		<p>关于YBN文件的异或解码和KEY的查找还是不太清楚，如果方便的话请发给我一份详细的教程！不胜感激。</p>
+
+		<div class="reply"><a rel="noopener noreferrer" class="comment-reply-link" href="https://flandre-scarlet.moe/blog/629/?replytocom=212#respond" data-commentid="212" data-postid="629" data-belowelement="div-comment-212" data-respondelement="respond" aria-label="回复给Sora" target="_blank" referrerpolicy="no-referrer">回复</a></div>
+				</div>
+				<ul class="children">
+		<li class="comment byuser comment-author-flandrelovely bypostauthor odd alt depth-2" id="comment-213">
+				<div id="div-comment-213" class="comment-body">
+				<div class="comment-author vcard">
+			<img alt="" src="assets/1571161099-925f84c2ed571dcce5c9e28930e5dd69.png" srcset="assets/1571161099-5e3df821b4f513b9e96bfd59c56d54d9 2x" class="avatar avatar-64 photo" height="64" width="64">			<cite class="fn">flandre</cite><span class="says">说道：</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="#comment-213">
+			2019年7月29日 下午10:33				</a>
+						</div>
+
+		<p>在 OD 里搜这个字符串的引用，没记错的话在引用位置之后应该有个小循环用来对读取出的 ybn 文件内容进行逐双字异或，key 则是在循环里直接引用的一个静态区 4 字节整数，把它取出来就可以了。</p>
+
+		<div class="reply"><a rel="noopener noreferrer" class="comment-reply-link" href="https://flandre-scarlet.moe/blog/629/?replytocom=213#respond" data-commentid="213" data-postid="629" data-belowelement="div-comment-213" data-respondelement="respond" aria-label="回复给flandre" target="_blank" referrerpolicy="no-referrer">回复</a></div>
+				</div>
+				</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+	</ol>
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">发表评论 <small></small></h3>			<form action="https://flandre-scarlet.moe/blog/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+				<p class="comment-notes"><span id="email-notes">电子邮件地址不会被公开。</span> 必填项已用<span class="required">*</span>标注</p><p class="comment-form-comment"><label for="comment">评论</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">姓名 <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required="required"></p>
+<p class="comment-form-email"><label for="email">电子邮件 <span class="required">*</span></label> <input id="email" name="email" type="text" value="" size="30" maxlength="100" aria-describedby="email-notes" required="required"></p>
+<p class="comment-form-url"><label for="url">站点</label> <input id="url" name="url" type="text" value="" size="30" maxlength="200"></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="发表评论"> 
+
+</p>			</form>
+			</div><!-- #respond -->
+	<p class="akismet_comment_form_privacy_notice">此站点使用Akismet来减少垃圾评论。<a href="https://akismet.com/privacy/" target="_blank" rel="noopener noreferrer" referrerpolicy="no-referrer">了解我们如何处理您的评论数据</a>。</p>					</div>
+					<div class="article_nav"><div class="next navbutton"><a href="https://flandre-scarlet.moe/blog/637/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">下一篇文章<i class="fa fa-angle-double-right"></i></a></div><div class="previous navbutton"><a href="https://flandre-scarlet.moe/blog/625/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"><i class="fa fa-angle-double-left"></i>上一篇文章</a></div></div>	</div>
+
+	<div id="sidebar-container">
+		<ul id="sidebar">
+	<li id="custom_html-3" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><a target="_blank" href="mailto:i@flandre-scarlet.moe" rel="noopener noreferrer" referrerpolicy="no-referrer"><img src="assets/1571161099-ecd958657097b567a4b01e64238bf463.png" title="联系我"></a></div></li>
+		<li id="recent-posts-4" class="widget widget_recent_entries">		<h3 class="widget-title">近期文章</h3>		<ul>
+											<li>
+					<a href="https://flandre-scarlet.moe/blog/959/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">時計仕掛けのレイライン 感想</a>
+									</li>
+											<li>
+					<a href="https://flandre-scarlet.moe/blog/946/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">CrackMe 反汇编练习之 092</a>
+									</li>
+											<li>
+					<a href="https://flandre-scarlet.moe/blog/931/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">CrackMe 反汇编练习之 081</a>
+									</li>
+											<li>
+					<a href="https://flandre-scarlet.moe/blog/912/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">制作龙儿同款橙子挞</a>
+									</li>
+											<li>
+					<a href="https://flandre-scarlet.moe/blog/890/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">自建 KMS 激活服务</a>
+									</li>
+					</ul>
+		</li>
+<li id="categories-3" class="widget widget_categories"><h3 class="widget-title">分类目录</h3>		<ul>
+				<li class="cat-item cat-item-2"><a href="https://flandre-scarlet.moe/blog/category/debug/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Debug</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="https://flandre-scarlet.moe/blog/category/directx/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">DirectX</a>
+</li>
+	<li class="cat-item cat-item-126"><a href="https://flandre-scarlet.moe/blog/category/galgame/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">galgame</a>
+</li>
+	<li class="cat-item cat-item-4"><a href="https://flandre-scarlet.moe/blog/category/%e5%9b%be%e5%83%8f%e5%a4%84%e7%90%86/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">图像处理</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="https://flandre-scarlet.moe/blog/category/uncategorized/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">未分类</a>
+</li>
+	<li class="cat-item cat-item-42"><a href="https://flandre-scarlet.moe/blog/category/%e6%9d%82/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">杂</a>
+</li>
+	<li class="cat-item cat-item-25"><a href="https://flandre-scarlet.moe/blog/category/%e6%b8%b8%e6%88%8f/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">游戏</a>
+</li>
+	<li class="cat-item cat-item-83"><a href="https://flandre-scarlet.moe/blog/category/%e7%94%9f%e6%b4%bb/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">生活</a>
+</li>
+	<li class="cat-item cat-item-85"><a href="https://flandre-scarlet.moe/blog/category/%e7%a8%8b%e5%ba%8f/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">程序</a>
+</li>
+	<li class="cat-item cat-item-5"><a href="https://flandre-scarlet.moe/blog/category/%e8%a7%a3%e5%8c%85/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">解包</a>
+</li>
+	<li class="cat-item cat-item-31"><a href="https://flandre-scarlet.moe/blog/category/%e9%80%86%e5%90%91/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">逆向</a>
+</li>
+		</ul>
+			</li>
+<li id="meta-3" class="widget widget_meta"><h3 class="widget-title">功能</h3>			<ul>
+						<li><a href="https://flandre-scarlet.moe/blog/wp-login.php" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">登录</a></li>
+			<li><a href="https://flandre-scarlet.moe/blog/feed/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">文章<abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="https://flandre-scarlet.moe/blog/comments/feed/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">评论<abbr title="Really Simple Syndication">RSS</abbr></a></li>
+			<li><a href="https://cn.wordpress.org/" title="基于WordPress，一个优美、先进的个人信息发布平台。" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">WordPress.org</a></li>			</ul>
+			</li>
+<li id="nav_menu-2" class="widget widget_nav_menu"><h3 class="widget-title">链接</h3><div class="menu-%e5%8f%8b%e6%83%85%e9%93%be%e6%8e%a5-container"><ul id="menu-%e5%8f%8b%e6%83%85%e9%93%be%e6%8e%a5" class="menu"><li id="menu-item-575" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-575"><a target="_blank" rel="noopener noreferrer" href="https://laike9m.com/" referrerpolicy="no-referrer">laike9m’s blog</a></li>
+<li id="menu-item-742" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-742"><a target="_blank" rel="noopener noreferrer" href="https://plumz.me/" referrerpolicy="no-referrer">Plum’s Blog</a></li>
+<li id="menu-item-842" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-842"><a target="_blank" rel="noopener noreferrer" href="https://moeblog.top/" referrerpolicy="no-referrer">MoeBlog</a></li>
+<li id="menu-item-722" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-722"><a target="_blank" rel="noopener noreferrer" href="https://www.vultr.com/?ref=7987757-4F" referrerpolicy="no-referrer">[ 注册 vultr 赠送 $50 ]</a></li>
+</ul></div></li>
+</ul>
+	</div>
+
+</div>
+<div id="sub-footer">
+	<div class="container">
+		<div class="sub-footer-left">
+			<p>
+
+			
+			Copyright © 2019 Re: Memory. &nbsp;&nbsp;Powered by love. 
+
+			</p>
+		</div>
+
+		<div class="sub-footer-right">
+					</div>
+	</div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Dynamic page generated in 0.330 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2019-10-16 01:31:42 -->
+
+<!-- super cache --><a href="" download="" data-mx-warn="Empty URL"></a><div data-mx-warn="extension url was not captured by MaoXian" data-mx-original-src="chrome-extension://kjahokgdcbohofgdidndeiaigkehdjdc/pages/ui-selection.html?t=aHR0cHM6Ly9mbGFuZHJlLXNjYXJsZXQubW9l"></div><div data-mx-warn="extension url was not captured by MaoXian" data-mx-original-src="chrome-extension://kjahokgdcbohofgdidndeiaigkehdjdc/pages/ui-control.html?t=aHR0cHM6Ly9mbGFuZHJlLXNjYXJsZXQubW9l"></div>
+</body>
+  </html>

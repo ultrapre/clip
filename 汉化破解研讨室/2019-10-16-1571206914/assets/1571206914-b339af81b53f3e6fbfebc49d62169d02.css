@@ -1,0 +1,380 @@
+ 
+.i-button {
+cursor: default;
+outline: none;
+display: inline-block;
+text-align: left;
+-moz-user-select: none;
+}
+
+ 
+.i-button {
+*display: inline;
+}
+
+.i-button .i-button-left,
+.i-button .i-button-right {
+float: inherit;
+float: left;
+overflow: hidden;
+}
+
+.i-button .i-button-icon {
+float: left;
+}
+ 
+
+
+ 
+.i-button-default {
+cursor: pointer;
+}
+
+.i-button-default .i-button-left,
+.i-button-default .i-button-right {
+height: 25px;
+background-image: url("");
+}
+
+.i-button-default .i-button-left {
+padding-left: 20px;
+background-position: 0 0;
+}
+
+.i-button-default .i-button-right {
+padding-right: 20px;
+background-position: -180px 0;
+}
+
+.i-button-default .i-button-left-hover {
+background-position: -200px 0;
+}
+
+.i-button-default .i-button-right-hover {
+background-position: -380px 0;
+}
+
+.i-button-default .i-button-left-focus {
+background-position: -400px 0;
+}
+
+.i-button-default .i-button-right-focus {
+background-position: -580px 0;
+}
+
+.i-button-default .i-button-left-active {
+background-position: -600px 0;
+}
+
+.i-button-default .i-button-right-active {
+background-position: -780px 0;
+}
+
+.i-button-default .i-button-text {
+color: #000;
+font-size: 12px;
+line-height: 17px;
+padding-top: 5px;
+}
+
+.i-button-default .i-button-text-disabled {
+color: #ccc;
+}
+ 
+.jquery-dialog-mask-color,
+.jquery-dialog-mask-transparent {
+position: fixed;
+text-align: left;
+top: 0;
+left: 0;
+height: 100%;
+width: 100%;
+}
+
+.jquery-dialog-mask-color,
+.jquery-dialog-mask-transparent {
+background: url("");
+}
+
+.jquery-dialog {
+text-align: left;
+}
+
+.dialog-outer-fixed {
+position: fixed;
+}
+
+.dialog-outer-absolute {
+position: absolute;
+}
+
+.jquery-dialog-mask,
+.jquery-dialog {
+z-index: 212122000;
+}
+
+.jquery-dialog .dialog-top-container,
+.jquery-dialog .dialog-bottom-container {
+height: 6px;
+}
+
+.jquery-dialog .dialog-top-border,
+.jquery-dialog .dialog-bottom-border,
+.jquery-dialog .dialog-left-border,
+.jquery-dialog .dialog-right-border,
+.jquery-dialog .dialog-top-left-corner,
+.jquery-dialog .dialog-top-right-corner,
+.jquery-dialog .dialog-bottom-left-corner,
+.jquery-dialog .dialog-bottom-right-corner {
+opacity: 0.15;
+filter: alpha(opacity=15);
+font-size: 0;
+line-height: 0;
+float: inherit;
+float: left;
+}
+
+.jquery-dialog .dialog-top-border,
+.jquery-dialog .dialog-bottom-border {
+height: 6px;
+background-color: #000;
+}
+
+.jquery-dialog .dialog-left-border,
+.jquery-dialog .dialog-right-border {
+width: 6px;
+background-color: #000;
+}
+
+.jquery-dialog .dialog-top-left-corner,
+.jquery-dialog .dialog-top-right-corner,
+.jquery-dialog .dialog-bottom-left-corner,
+.jquery-dialog .dialog-bottom-right-corner {
+width: 6px;
+height: 6px;
+background-image: url("");
+}
+
+.jquery-dialog .dialog-top-left-corner {
+background-position: 0 0;
+}
+
+.jquery-dialog .dialog-top-right-corner {
+background-position: -6px 0;
+}
+
+.jquery-dialog .dialog-bottom-left-corner {
+background-position: 0 -6px;
+}
+
+.jquery-dialog .dialog-bottom-right-corner {
+background-position: -6px -6px;
+}
+
+.jquery-dialog .dialog-inner-container {
+float: left;
+background: #fff;
+border: 1px solid #a1a0a0;
+}
+
+.jquery-dialog .dialog-title-container {
+height: 13px;
+padding-top: 7px;
+padding-right: 7px;
+overflow: hidden;
+}
+
+.jquery-dialog .dialog-title {
+float: left;
+padding-left: 10px;
+font-size: 13px;
+font-weight: bold;
+height: 13px;
+line-height: 15px;
+overflow: hidden;
+color: #333;
+}
+
+.jquery-dialog .dialog-button-close {
+float: inherit;
+float: right;
+font-size: 0;
+line-height: 0;
+width: 13px;
+height: 13px;
+overflow: hidden;
+background-image: url("");
+background-position: -12px 0;
+cursor: pointer;
+}
+
+.jquery-dialog .dialog-button-close-hover {
+background-position: -25px 0;
+}
+
+.jquery-dialog .dialog-button-container {
+text-align: center;
+padding: 10px 0 20px 0;
+}
+
+.jquery-dialog .dialog-button-container .dialog-button-accept,
+.jquery-dialog .dialog-button-container .dialog-button-cancel {
+margin-left: 5px;
+margin-right: 5px;
+}
+
+ 
+ 
+.jquery-dialog .dialog-content-container {
+overflow: hidden;
+display: inline-block;
+}
+
+.jquery-dialog .dialog-content-container {
+*display: inline;
+}
+
+ 
+.jquery-inform .dialog-content-container,
+.jquery-alert .dialog-content-container,
+.jquery-confirm .dialog-content-container {
+padding: 5px 20px 0 20px;
+font-size: 14px;
+font-weight: bold;
+color: #598418;
+}
+
+.jquery-inform .dialog-content-container {
+padding-bottom: 20px;
+}
+div.pp-dialog .dialog-content-container {
+padding: 0 25px;
+font-size: 12px;
+color: #333;
+}
+
+div.pp-dialog .dialog-title-container {
+height: 13px;
+border: 0;
+padding-top: 7px;
+padding-right: 7px;
+background: #fff;
+overflow: hidden;
+}
+
+div.pp-dialog .dialog-title {
+padding: 0;
+height: 13px;
+line-height: 15px;
+}
+
+div.pp-dialog .dialog-button-close {
+margin: 0;
+}
+
+div.pp-dialog a {
+color:#2582AA;
+text-decoration: none;
+}
+
+div.pp-dialog a:hover {
+color:#2582AA;
+text-decoration: underline;
+}
+
+div.pp-dialog h2 {
+padding-top: 2px;
+height:20px;
+font-size:14px;
+font-weight:bold;
+color:#333;
+text-align:left;
+border-bottom:1px dotted  #b2b2b2;
+}
+
+div.pp-dialog .error{
+margin:10px 0;
+height: 15px;
+}
+
+div.pp-dialog .left{
+width:226px;
+border-right:1px solid #cecece;
+display:inline;
+float:left;
+}
+
+div.pp-dialog .right{
+display:inline;
+float:right;
+}
+
+div.pp-dialog .loginFrom .uname,
+div.pp-dialog .loginFrom .upass{
+float:left;
+width:225px;
+}
+
+div.pp-dialog .loginFrom .upass{
+float:left;
+width:225px;
+}
+
+div.pp-dialog .loginFrom .uname input,
+div.pp-dialog .loginFrom .upass input{
+margin-left:5px;
+border:1px solid #cecece;
+width: 165px;
+height: 15px;
+font-size: 12px;
+}
+
+div.pp-dialog .loginFrom .ucookie{
+height:26px;
+}
+
+div.pp-dialog .loginFrom .ucookie input{
+float: left;
+}
+
+div.pp-dialog label {
+height:26px;
+line-height:19px;
+}
+
+div.pp-dialog .btn{
+margin-top:10px;
+text-align:left;
+background: none;
+}
+
+div.pp-dialog .btn a:hover {
+text-decoration: none;
+}
+
+div.pp-dialog .loading {
+height:145px;
+}
+
+div.pp-dialog .loading .loadTxt{
+background: url("") no-repeat 0 6px;
+padding-left: 22px;
+float:left;
+height:30px;
+line-height:30px;
+margin:50px 0 0 100px;
+color:#666;
+font-size:14px;
+display:inline;
+}
+.passportc{zoom:1}
+.passportc:after{content:".";display:block;visibility:hidden;height:0;clear:both;}
+ 
+div.pp-dialog .ppselecter {z-index:5000}
+div.pp-dialog .ppselecter table {position:relative;z-index:100;cursor:default;}
+div.pp-dialog .ppselecter table tr {height:0}
+div.pp-dialog .ppselecter,div.pp-dialog .ppselecter * {font-size:12px; font-family:\5B8B\4F53,'Verdana','Arial','Helvetica','sans-serif';line-height:normal}
+div.pp-dialog .ppselecter {border:1px solid #FFA700;width:166px;margin-left:1px;overflow:hidden}
+div.pp-dialog .ppselecter .ppseltit {background:#FFF6DF;color:#FF6000;height:15px;padding-top:4px;text-indent:6px}
+div.pp-dialog .ppselecter table td table td {padding:3px;cursor:pointer;}
+div.pp-dialog .ppselecter .active {background:#FDD463;color:#333;font-weight:normal}
