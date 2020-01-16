@@ -1,0 +1,133 @@
+@charset "Shift_JIS";
+BODY{
+background-image:url("");
+background-position:center top;
+background-repeat:no-repeat;
+-moz-background-size:cover;
+background-size:cover;
+background-attachment: fixed;
+
+ 
+
+  margin: 0 auto;  
+  background-color:#000;              
+
+
+
+   
+   
+   
+   
+
+   
+   
+   
+   
+
+
+  font-size : 9pt;
+
+     scrollbar-base-color : #dce3ef; 
+     scrollbar-face-color : #dce3ef; 
+     scrollbar-track-color: #7c98ca; 
+     scrollbar-arrow-color : #8888ff;
+     scrollbar-3dlight-color: #8888ff;
+     scrollbar-darkshadow-color : #8888ff;
+     scrollbar-highlight-color : #dce3ef;
+     scrollbar-shadow-color : #dce3ef;
+}
+
+.topGrph{
+ width:100%;
+ height:146px;
+
+  background : url(jimontop.jpg) center center; 
+
+  margin: 0 auto;  
+  background-color:#000;              
+
+  background-repeat: repeat;
+  background-position: center top;
+
+  
+}
+
+.ie90.topGrph{
+ width:100%;
+ height:200px;
+
+  background : url(jimontop.jpg) center center; 
+
+
+ margin-bottom : -5pt; 
+
+  background-color:#000;              
+
+  background-repeat: repeat;
+  background-attachment: fixed;
+
+  
+}
+
+.new{
+
+     padding-left : 8px;
+     color : #ffffff;
+
+     line-height : 18px;
+
+}
+
+.ie90.new{
+
+     padding-left : 3px;
+     color : #ffffff;
+
+     line-height : 18px;
+
+}
+
+#copyright {
+ position: fixed;
+ bottom: 5px;
+ right: 20px;
+ font-size : 11px;
+ color : #aaa;
+ font-family:'�q���M�m�p�S Pro W3','Hiragino Kaku Gothic Pro','���C���I',Meiryo,'�l�r �o�S�V�b�N';
+}
+
+
+#obj_img {
+    top     : 40px;
+    left    : 30px;
+    padding : 0px;
+    margin  : 0px;
+    position : absolute;
+}
+
+#TopMenu{
+ width : 100%;
+ height:32px;
+    position : fixed;
+    z-index: 1;
+  
+}
+
+P{
+  font-size : 12px;
+  color : #000;
+ font-family:'�q���M�m�p�S Pro W3','Hiragino Kaku Gothic Pro','���C���I',Meiryo,'�l�r �o�S�V�b�N';
+}
+
+
+TD{
+  font-size : 12px;
+  color : #ffffff;
+  font-family:'�q���M�m�p�S Pro W3','Hiragino Kaku Gothic Pro','���C���I',Meiryo,'�l�r �o�S�V�b�N';
+}
+
+
+A{
+  color : #394d55;
+  outline:none;
+}

@@ -1,0 +1,423 @@
+
+  <!DOCTYPE html>
+  <html id="" class="">
+    <!-- OriginalSrc: http://bangumi.tv/blog/53474 -->
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <title>[favorite]Favorite社非日语环境 解决立绘崩溃的补丁</title>
+      
+
+<link rel="stylesheet" type="text/css" href="assets/1574346830-01d763931f95958830a8eeea94e03997.css" referrerpolicy="no-referrer">
+
+
+<style class="darkreader darkreader--fallback" media="screen"></style>
+<style class="darkreader darkreader--text" media="screen"></style>
+<style class="darkreader darkreader--invert" media="screen"></style>
+<style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}</style>
+<style class="darkreader darkreader--user-agent" media="screen">html {
+    background-color: #191a1b !important;
+}
+html, body, input, textarea, select, button {
+    background-color: #191a1b;
+}
+html, body, input, textarea, select, button {
+    border-color: #5a5956;
+    color: #f0ebe2;
+}
+a {
+    color: #4791e7;
+}
+table {
+    border-color: #4f4e4c;
+}
+::placeholder {
+    color: #bfb9ac;
+}
+::selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+::-moz-selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #565a0f !important;
+    color: #f0ebe2 !important;
+}
+::-webkit-scrollbar {
+    background-color: #1d1f1f;
+    color: #cbc5b9;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #2c2d2d;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #343636;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #404142;
+}
+::-webkit-scrollbar-corner {
+    background-color: #191a1b;
+}
+* {
+    scrollbar-color: #2c2d2d #1d1f1f;
+}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--override" media="screen">.jfk-bubble {
+    background-color: #000000 !important;
+}
+.vimvixen-hint {
+    background-color: #765500 !important;
+    border-color: #d5b22e !important;
+    color: #f9edcc !important;
+}</style>
+<style type="text/css">@keyframes fadeInOpacity{0%{opacity:0}to{opacity:1}}:hover>*>.fbvd--wrapper{animation-name:fadeInOpacity;animation-duration:.3s;opacity:1}.fbvd--wrapper{position:absolute;top:10px;left:10px;opacity:0;text-align:center;margin:0;z-index:5}.fbvd--wrapper a{background: url("") no-repeat 3px 4.55px; background-color: #fff; display:inline-block;font:700 14px Helvetica,Arial,sans-serif;color:#4b4f56;text-decoration:none;vertical-align:middle;padding:0px 8px 0px;margin-right:8px;border-radius:2px; line-height: 22px; padding-left:19px; border: 1px solid #e7e7e7; background-size: 13px}.fbvd--wrapper a:last-child{margin-right:0}.fbvd--wrapper a:hover{text-decoration:none}.fbvd--wrapper a:focus{box-shadow:0 0 1px 2px rgba(88,144,255,.75),0 1px 1px rgba(0,0,0,.15);outline:none}.fbvd--wrapper b{font-size:13px;position:relative;top:1px;color:#3b5998;font-weight:400}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+
+      <style class="mx-wc-style">
+        body {padding-top: 20px;}
+        .mx-wc-main img {max-width: 100%;}
+        .mx-wc-main{
+          box-sizing: content-box;
+          background-color: rgb(25, 26, 27) !important;
+          margin: 0 auto;
+          max-width: 1349px;
+        }
+        @media (min-width: 768px) {
+          .mx-wc-main { padding: 15px 15px 80px 15px }
+        }
+        @media (max-width: 767px) {
+          .mx-wc-main { padding: 15px 3px 80px 3px }
+        }
+  
+      </style>
+    </head>
+    <body style="background-color: #ffffff !important; min-height: 100%; height: auto; position: static !important; overflow: auto !important; padding-bottom: 0px !important;" id="" class="bangumi">
+      <div class="mx-wc-main">
+        <div id="wrapperNeue" class="wrapperNeue mx-wc-selected-elem mx-wc-1574346830" style="display: block; float: none !important; position: relative !important; top: 0px !important; left: 0px !important; margin: 0px !important; flex: unset !important; width: 100% !important; max-width: 100% !important; box-sizing: border-box !important;">
+<div id="headerNeue2">
+    <div class="headerNeueInner clearit">
+         <div class="bg musume_0"></div>
+    <a href="http://bangumi.tv/" class="logo" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Bangumi 番组计划</a>
+    
+    	
+    
+    
+<div id="navNeue2">
+<div id="menuNeue">
+<ul id="navMenuNeue" class="clearit">
+<li><a href="http://bangumi.tv/anime" class="top chl anime" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><span>动画</span></a>
+    			<div class="clear"></div>
+<ul class="clearit">
+<li><a href="http://bangumi.tv/anime/chart" class="nav" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">排行榜</a></li>
+<li><a href="http://bangumi.tv/calendar" class="nav" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">每日放送</a></li>
+<li><a href="http://bangumi.tv/anime/tag" class="nav" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">动画标签</a></li>
+<li><a href="http://bangumi.tv/anime/browser" class="nav" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">分类浏览</a></li>
+<li><a href="http://bangumi.tv/anime/blog" class="nav" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">动画日志</a></li>
+</ul>
+</li>
+<li><a href="http://bangumi.tv/book" class="top chl" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><span>书籍</span></a>
+<div class="clear"></div>
+<ul class="clearit">
+<li><a href="http://bangumi.tv/book/chart" class="nav" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">排行榜</a></li>
+<li><a href="http://bangumi.tv/book/tag" class="nav" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">图书标签</a></li>
+<li><a href="http://bangumi.tv/book/browser" class="nav" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">分类浏览</a></li>
+<li><a href="http://bangumi.tv/book/blog" class="nav" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">图书日志</a></li>
+</ul>
+</li>
+<li><a href="http://bangumi.tv/music" class="top chl" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><span>音乐</span></a>
+<div class="clear"></div>
+<ul class="clearit">
+<li><a href="http://bangumi.tv/music/chart" class="nav" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">排行榜</a></li>
+<li><a href="http://bangumi.tv/music/tag" class="nav" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">音乐标签</a></li>
+<li><a href="http://bangumi.tv/music/browser" class="nav" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">浏览全部</a></li>
+<li><a href="http://bangumi.tv/music/blog" class="nav" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">音乐日志</a></li>
+</ul>
+</li>
+<li><a href="http://bangumi.tv/game" class="top chl" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><span>游戏</span></a>
+<div class="clear"></div>
+<ul class="clearit">
+<li><a href="http://bangumi.tv/game/chart" class="nav" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">排行榜</a></li>
+<li><a href="http://bangumi.tv/game/tag" class="nav" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">游戏标签</a></li>
+<li><a href="http://bangumi.tv/game/browser" class="nav" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">平台浏览</a></li>
+<li><a href="http://bangumi.tv/game/blog" class="nav" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">游戏日志</a></li>
+</ul>
+</li>
+<li><a href="http://bangumi.tv/real" class="top chl real" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><span>三次元</span></a>
+<div class="clear"></div>
+<ul class="clearit">
+<li><a href="http://bangumi.tv/real/chart" class="nav" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">排行榜</a></li>
+<li><a href="http://bangumi.tv/real/tag" class="nav" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">三次元标签</a></li>
+<li><a href="http://bangumi.tv/real/blog" class="nav" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">三次元日志</a></li>
+<li><a href="http://bangumi.tv/real/browser/platform/jp" class="nav" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">日剧</a></li>
+<li><a href="http://bangumi.tv/real/browser/platform/en" class="nav" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">欧美剧</a></li>
+</ul>
+</li>
+            <li><a href="http://bangumi.tv/mono" class="top" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><span>人物</span></a>
+<div class="clear"></div>
+<ul class="clearit">
+<li><a href="http://bangumi.tv/character" class="nav" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">虚构人物</a></li>
+<li><a href="http://bangumi.tv/person" class="nav" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">现实人物</a></li>
+	
+</ul>
+</li>
+<li><a href="http://bangumi.tv/rakuen" class="top_lite" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><span>超展开</span></a></li>
+<li><a href="http://bangumi.tv/group" class="top" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><span>小组</span></a>
+<div class="clear"></div>
+<ul class="clearit">
+<li><a href="http://bangumi.tv/group/discover" class="nav" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">随便看看</a></li>
+<li><a href="http://bangumi.tv/group/all" class="nav" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">所有小组</a></li>
+</ul>
+</li>
+<li><a href="javascript:void(0);" class="top" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><span>探索</span></a>
+<div class="clear"></div>
+<ul class="explore clearit">
+
+<li class="single"><a href="http://bangumi.tv/timeline" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">时空管理局</a></li>		
+                <li class="group">
+<span><a href="http://bangumi.tv/blog" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">日志</a><a href="http://bangumi.tv/index" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">目录</a><a href="http://bangumi.tv/wiki" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">维基人</a></span>
+</li>				
+<li class="group"><span><a href="http://bangumi.tv/magi" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">MAGI 问答</a><a href="http://bangumi.tv/dollars" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Dollars</a></span></li>				
+                <li class="group">
+<span class="root">客户端</span>
+<span><a href="http://bangumi.tv/onair" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">onAir</a><a href="http://bangumi.tv/group/topic/5155" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Mobile</a></span>
+</li>				
+</ul>
+</li>
+<li class="doujin"><a href="http://doujin.bangumi.tv/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">天窗联盟</a></li>
+</ul>	
+</div>
+</div>
+        
+    <div class="idBadgerNeue">
+    <div class="guest"><a href="http://bangumi.tv/login" class="guest login" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">登录</a><a href="http://bangumi.tv/signup" class="guest signup" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">注册</a></div>
+	
+</div><div id="headerSearchWrapper">
+<div id="headerSearch">
+        <form action="/subject_search" method="post">
+    <div class="inner">
+<select name="cat" id="siteSearchSelect">
+<option value="all">全部</option>
+<option value="2">动画</option>
+<option value="1">书籍</option>
+<option value="4">游戏</option>
+<option value="3">音乐</option>
+<option value="6">三次元</option>
+<option value="person">人物</option>			
+</select>
+<input id="search_text" name="search_text" class="textfield" type="text">
+        <input type="submit" name="submit" value="搜索" class="search">
+    </div>
+</form>
+    </div>   
+</div>  
+    </div>
+</div>
+
+<div id="main" class="png_bg"><div class="columns clearit">
+<div id="columnA" class="column">
+
+<div id="pageHeader">
+<h1><span><a href="http://bangumi.tv/user/xmoe" class="avatar l" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1574346830-1b2c95a25bc8fc370b1adffb40c2fded.jpg" class="avatar ll"> X‘moe Project</a> » <a href="http://bangumi.tv/user/xmoe/blog" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">日志</a></span><br>[favorite]Favorite社非日语环境 解决立绘崩溃的补丁</h1>
+</div>
+<hr class="board">
+<div class="re_info"><small>2014-9-1 21:48 / </small></div>
+<div id="viewEntry" class="clearit">
+        <div id="entry_content" class="blog_entry clearit">			
+        Ver0.6(GUI)<br>
+已经开源== 之前还闹着支持Wine的...<br>
+懒得弄了，估计不再更新?<br>
+<br>
+消除AngelWish菜单乱码<br>
+<a href="https://github.com/xmoeproject/FVPLoader/releases" target="_blank" rel="noopener noreferrer" class="l" referrerpolicy="no-referrer">Ver0.6版本</a><br>
+<br>
+Ver0.5(GUI)<br>
+<span style="text-decoration: line-through;">似乎不写个GUI，工具就得不到推广</span><br>
+让我们先看看主界面吧（好吧 啥也没有<br>
+<img src="assets/1574346830-d515fa1ff2bbbea72f0b8650341d8ad6.jpg" class="code" alt=""><br>
+简洁为上<span style="text-decoration: line-through;">别把真红挡住就好</span><br>
+之前的用法也行，就是直接拖，不过这样是没法使用高级功能的。<br>
+高级功能分别是：<br>
+Change Widow:消去window标题乱码<br>
+Change Mess:消去消息盒子的乱码<br>
+Change Font:允许你使用自己的字体<br>
+<img src="assets/1574346830-30d59e1c663ff68d73e5acaf11001dd3.jpg" class="code" alt=""><br>
+<br>
+第一次启动的时候，你可以勾上你需要个功能，然后把F社的引擎（主程序拖进来），<br>
+我的工具将自动完成配置，下次直接双击FVPLoaderGui就可以开启游戏了。<br>
+如果在后面你觉得你需要 或者不需要某个功能了，你可以删去FVPLOG.ini，然后点开<br>
+FVPLoaderGui重新配置（一般这种人很少吧）<br>
+别给我说麻烦，我实在不知道什么UI设计能更简便了（<br>
+<br>
+下载地址：<br>
+<a href="https://github.com/xmoeproject/FVPLoader/releases/tag/Vwe0.1" target="_blank" rel="noopener noreferrer" class="l" referrerpolicy="no-referrer">Ver0.5版本</a><br>
+挂度盘天天被艹。<br>
+<br>
+下面的介绍可以稍微看看，知道这工具是干啥的。<br>
+========================================================<br>
+ver0.3 final:<br>
+* removed vs2012 dynamic runtime library<br>
+* supported windows xp OS(Currently, FVPLoader supports WinXP, Win7, Win8/Win8.1, Win10 Preview)<br>
+度受：1c0AfBJM 8cls<br>
+<br>
+ver 0.2更新：<br>
+消除窗口文字乱码。让你们没理由使用le或者app之类的转码补丁。<br>
+在运行本补丁的时候，也请不要使用le或者app之类的转码工具。<br>
+妖妖舞： （礼包）<br>
+115网盘礼包码：5lbdihwm3r7r<br>
+http://115.com/lb/5lbdihwm3r7r<br>
+<br>
+度受：<br>
+链接：http://pan.baidu.com/s/1c0lcCnQ 密码：qcsq<br>
+<br>
+=====================原文==========================<br>
+<span style="text-decoration: line-through;">特么的，学校真热</span><br>
+其实早就准备写这个补丁了，但是由于坑很多再加上自己懒，就拖到了现在orz<br>
+废话就不说了。<br>
+<br>
+本补丁解决了f社长期以来的老毛病：非日语环境下 显示立绘会崩溃。【如图】<br>
+<img src="assets/1574346830-bfa8b4550603c628bf3596bb0d14dd7d.jpg" class="code" alt=""><br>
+现在你只需要轻轻一拖exe，便可以解决此问题。<br>
+再也不需要伸手去求修复后的exe。<br>
+<br>
+下载地址看下面。<br>
+<br>
+用法：<br>
+解压以后，有两个文件。<br>
+一个是FVPLoader.exe&nbsp;&nbsp;另一个是xmoe_white.dll<br>
+将这两个文件放进游戏的根目录，如图【这里用白永来举例<br>
+<img src="assets/1574346830-2b84ad9e5129005d1402018097114631.jpg" class="code" alt=""><br>
+<br>
+接下来直接把游戏运行引擎拖进FVPLoader.exe【对于白永来说，运行引擎就是WhiteEternity.exe<br>
+<br>
+或者使用命令行：【我存放白永的目录是 D:\FAVORITE\アストラエアの白き永遠<br>
+&gt;D:<br>
+&gt;cd D:\FAVORITE\アストラエアの白き永遠<br>
+&gt;FVPLoader.exe WhiteEternity.exe<br>
+即可。游戏将自动运行。<br>
+【明显第一种方法最简单嘛】<br>
+<br>
+之后，游戏能够正常运行。<br>
+<img src="assets/1574346830-fc123a962f5592884186856249b2f8a7.jpg" class="code" alt=""><br>
+<br>
+<br>
+运行有问题的，直接-&gt; xmoe.project@gmail.com<br>
+解压密码：xmoeproject<br>
+<br>
+<br>
+传送:<br>
+pan.baidu.com/s/1ElNUQ 密码：grr6<br>
+<br>
+<br>
+我的东西经常被爆，另外提供一个妖妖舞的地址:(礼包)<br>
+礼包码：5lbewdali9jz<br>
+        </div>
+        			
+</div> 
+<div id="comment_list" class="">    <div id="post_46209" class="light_odd row_reply clearit" name="floor-1">
+        <div class="re_info"><small><a href="#post_46209" class="floor-anchor">#1</a> - 2016-4-17 19:20</small></div>
+<a href="http://bangumi.tv/user/192733" class="avatar" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><span class="avatarNeue avatarReSize40 ll" style="background-image:url('//lain.bgm.tv/pic/user/m/icon.jpg')"></span></a>
+<div class="inner">
+<strong><a href="http://bangumi.tv/user/192733" class="l post_author_46209" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">yyd</a></strong>       		<div class="reply_content">
+    			<div class="message clearit">
+                    			
+    			感谢更新0.6版本~    			</div>
+        		    		</div>
+</div>
+</div></div>
+
+
+</div>
+
+
+<div id="columnB" class="column">
+</div>
+</div><div id="footer">
+<ul id="footerLinks" class="clearit">
+<li class="first">
+    <dl>
+        <dt>关于我们</dt>
+        <dd><a href="http://bangumi.tv/about" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">关于我们</a></dd>
+        <dd><a href="http://bangumi.tv/about/guideline" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">社区指导原则</a></dd><dd>
+        </dd><dd><a href="http://bangumi.tv/about/copyright" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">版权声明</a></dd><dd>		
+        </dd><dd><a href="http://bangumi.tv/about/link2us" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">链接我们</a></dd><dd>
+    </dd></dl>
+</li>
+<li>
+    <dl>
+    <dt>获取帮助</dt>
+        <dd><a href="http://bangumi.tv/help/bbcode" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">BBCode</a></dd>
+        <dd><a href="http://bangumi.tv/group/forum" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">站务论坛</a></dd>
+        <dd><a href="http://bangumi.tv/group/dev" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">番组开发</a></dd>
+        <dd><a href="http://bangumi.tv/group/issues" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">BUG追踪</a></dd>
+        <dd><a href="http://bangumi.tv/group/doujin" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">天窗站务</a></dd>	
+    </dl>
+</li>
+<li>
+<dl>
+    <dt>特别推荐</dt>
+        <dd><a href="http://bangumi.tv/award/2018" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">年鉴 2018</a> | <a href="http://bangumi.tv/award/2017" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">17</a> |  <a href="http://bangumi.tv/award/2016" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">16</a> |  <a href="http://bangumi.tv/award/2015" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">15</a> | <a href="http://bangumi.tv/award/2014" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">14</a> |  <a href="http://bangumi.tv/award/2013" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">13</a> | <a href="http://bangumi.tv/award/2012" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">12</a><br>| <a href="http://bangumi.tv/award/2011" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">11</a> | <a href="http://bangumi.tv/award/2010" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">10</a></dd>
+        <dd><a href="http://bangumi.tv/group/wiki" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">番組WIKI計画</a></dd>
+        <dd><a href="http://bangumi.tv/onair" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">onAir 客户端</a></dd>
+        <dd><a href="http://bangumi.tv/tokei" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">etokei 绘时计</a></dd>        
+    </dl>
+</li>
+<li class="last">
+    <dl>
+    <dt>更多</dt>
+        <dd><a href="http://bangumi.tv/dev/app" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">开发者平台</a></dd>    
+        <dd><a href="http://bangumi.tv/index" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">目录</a></dd>
+        <dd><a href="http://bangumi.tv/wiki" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">维基人</a></dd>
+        <dd><a href="http://bangumi.tv/magi" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">MAGI 问答</a></dd>
+        <dd><a href="http://bangumi.tv/goodies" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">周边</a></dd>
+        <dd><a href="http://bangumi.tv/dollars" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Dollars</a></dd>	
+    </dl>
+</li>
+</ul><div class="copyright"><small class="grey">© 2008-2019 Bangumi (a.k.a.Chobits), some rights reserved</small></div>
+</div>
+</div></div>
+        
+      </div>
+    </body>
+  </html>

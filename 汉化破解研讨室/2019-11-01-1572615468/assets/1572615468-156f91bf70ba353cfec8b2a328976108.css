@@ -1,0 +1,126 @@
+.breadcrumb {
+  padding: 0 0;
+  background-color: transparent; }
+
+.breadcrumb li a {
+  color: #017E66; }
+
+.article__authorleft {
+  position: absolute; }
+
+.avatar-40 {
+  width: 40px;
+  height: 40px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%; }
+
+.article__authorright {
+  float: right;
+  padding-left: 50px;
+  width: 100%; }
+
+.article__authormeta {
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis; }
+
+.article__authormeta strong {
+  color: #017E66; }
+
+.article__authormeta + div span {
+  color: #999; }
+
+.article__title--tag {
+  margin-bottom: 0; }
+
+.taglist--inline, .taglist--block {
+  list-style: none;
+  padding: 0;
+  font-size: 0; }
+
+.taglist--inline > li {
+  display: inline-block;
+  margin-right: 5px; }
+
+.taglist--inline li, .taglist--block li {
+  padding: 0;
+  font-size: 13px; }
+
+.tag {
+  display: inline-block;
+  padding: 0 6px;
+  color: #017E66;
+  background-color: rgba(1, 126, 102, 0.08);
+  height: 22px;
+  line-height: 22px;
+  font-weight: normal;
+  font-size: 13px;
+  text-align: center; }
+
+#articleTitle {
+  font-size: 30px;
+  line-height: 42px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Microsoft YaHei", "Source Han Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", sans-serif; }
+
+.article_content {
+  margin-top: 60px;
+  line-height: 1.8;
+  font-size: 15px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "PingFang SC", "Microsoft YaHei", "Source Han Sans SC", "Noto Sans CJK SC", "WenQuanYi Micro Hei", sans-serif; }
+
+.recommend-post ul {
+  padding: 0 0 0 25px; }
+
+.recommend-post ul li {
+  font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Microsoft YaHei,Source Han Sans SC,Noto Sans CJK SC,WenQuanYi Micro Hei,sans-serif;
+  margin-bottom: 3px;
+  line-height: 28px;
+  list-style: disc; }
+
+.recommend-post ul li a {
+  font-weight: bold;
+  color: #017E66; }
+
+.recommend-post ul li span {
+  font-size: 13px;
+  margin: 0 10px; }
+
+.text-muted {
+  color: #777; }
+
+.recommend-post ul li .tag {
+  font-weight: normal;
+  margin: 0 5px 0 0;
+  font-size: 12px;
+  height: 16px;
+  line-height: 16px;
+  padding: 0 3px; }
+
+.cont-msg-gw {
+  overflow: hidden; }
+
+#feedAv .cont-msg-gw, #feedAv, #feedAv .cont-head-gw, #feedAv .list-content-wrapper-wap {
+  display: none !important; }
+
+.module-cmt-footer {
+  display: none !important; }
+
+#SOHUCS #SOHU_MAIN .module-cmt-list .block-cont-gw {
+  border-top: 0 none !important; }
+
+.module-cmt-notice, #pop_ad {
+  display: none !important; }
+
+.module-hot-topic {
+  display: none !important; }
+
+#footf {
+  display: none; }
+
+#article_content img.auto {
+  width: 100%;
+  height: auto; }

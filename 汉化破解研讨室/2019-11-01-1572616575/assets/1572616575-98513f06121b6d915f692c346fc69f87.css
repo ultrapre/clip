@@ -1,0 +1,19 @@
+#notice{background:#f2f8f2;border:1px solid #b9dcd0;margin:15px 0;padding:2px 8px}
+h4{background:#EEF4FF;border:1px solid #CEE1F6;padding:2px 8px}
+blockquote{margin-left:0}
+#nav_newpost,#nav_q,#nav_ing,#nav_contact{display:none}
+code{padding:2px 4px;background:#EEE}
+.csharpcode-wrapper,.csharpcode-wrapper pre{background-color:#f4f4f4;border:solid 1px silver;cursor:text;font-family:Consolas, Monospace;font-size:8pt;line-height:12pt;max-height:200px;overflow:auto;width:97.5%;margin:20px 0 10px;padding:4px}
+.csharpcode-wrapper pre{overflow:visible;border-style:none;margin:0;padding:0}
+.csharpcode,.csharpcode pre,.csharpcode .alt{background-color:#f4f4f4;color:#000;font-family:Consolas, Monospace;font-size:8pt;line-height:12pt;overflow:visible;width:100%;border-style:none;padding:0}
+.csharpcode pre{margin:0}
+.csharpcode .alt{background-color:#FFF}
+.csharpcode .asp{background-color:#ff0}
+.csharpcode .attr{color:red}
+.csharpcode .html{color:maroon}
+.csharpcode .kwrd{color:#00f}
+.csharpcode .lnum{color:#606060}
+.csharpcode .op{color:#0000c0}
+.csharpcode .rem{color:green}
+.csharpcode .str{color:#006080}
+.csharpcode .cls,.csharpcode .preproc{color:#c63}

@@ -1,0 +1,1107 @@
+
+  <!DOCTYPE html>
+  <html id="" class="">
+    <!-- OriginalSrc: https://www.cnblogs.com/javabluesky/archive/2011/01/28/2211526.html -->
+    <head>
+      <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <title>一个最简单GAL游戏资源文件黑盒分析（一） - Java天堂 - 博客园</title>
+      
+
+<link rel="stylesheet" href="assets/1573869485-d4b73980e5ecba85aa25d546f104e1c7.css" referrerpolicy="no-referrer">
+<link id="MainCss" rel="stylesheet" href="assets/1573869485-10f07eb494c03cc105455991d60e95ae.css" referrerpolicy="no-referrer">
+<link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="assets/1573869485-41389609cb37ebe6d27a46c6e6277742.css" referrerpolicy="no-referrer">
+
+
+<style class="darkreader darkreader--fallback" media="screen"></style>
+<style class="darkreader darkreader--text" media="screen"></style>
+<style class="darkreader darkreader--invert" media="screen"></style>
+<style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}</style>
+<style class="darkreader darkreader--user-agent" media="screen">html {
+    background-color: #181919 !important;
+}
+html, body, input, textarea, select, button {
+    background-color: #181919;
+}
+html, body, input, textarea, select, button {
+    border-color: #565452;
+    color: #e4dfd7;
+}
+a {
+    color: #448adb;
+}
+table {
+    border-color: #4b4a48;
+}
+::placeholder {
+    color: #b6afa3;
+}
+::selection {
+    background-color: #1157ab;
+    color: #fbf7f1;
+}
+::-moz-selection {
+    background-color: #1157ab;
+    color: #fbf7f1;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #52560e !important;
+    color: #e4dfd7 !important;
+}
+::-webkit-scrollbar {
+    background-color: #1c1d1d;
+    color: #c1bbb0;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #2a2b2b;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #323333;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #3d3e3f;
+}
+::-webkit-scrollbar-corner {
+    background-color: #181919;
+}
+* {
+    scrollbar-color: #2a2b2b #1c1d1d;
+}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--override" media="screen">.jfk-bubble {
+    background-color: #000000 !important;
+}
+.vimvixen-hint {
+    background-color: #705000 !important;
+    border-color: #caa92c !important;
+    color: #ece1c2 !important;
+}</style>
+<style type="text/css">@keyframes fadeInOpacity{0%{opacity:0}to{opacity:1}}:hover>*>.fbvd--wrapper{animation-name:fadeInOpacity;animation-duration:.3s;opacity:1}.fbvd--wrapper{position:absolute;top:10px;left:10px;opacity:0;text-align:center;margin:0;z-index:5}.fbvd--wrapper a{background: url("") no-repeat 3px 4.55px; background-color: #fff; display:inline-block;font:700 14px Helvetica,Arial,sans-serif;color:#4b4f56;text-decoration:none;vertical-align:middle;padding:0px 8px 0px;margin-right:8px;border-radius:2px; line-height: 22px; padding-left:19px; border: 1px solid #e7e7e7; background-size: 13px}.fbvd--wrapper a:last-child{margin-right:0}.fbvd--wrapper a:hover{text-decoration:none}.fbvd--wrapper a:focus{box-shadow:0 0 1px 2px rgba(88,144,255,.75),0 1px 1px rgba(0,0,0,.15);outline:none}.fbvd--wrapper b{font-size:13px;position:relative;top:1px;color:#3b5998;font-weight:400}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+
+      
+    </head>
+    <body class="mx-wc-selected-elem mx-wc-1573869485">
+    <a name="top" data-mx-warn="Empty URL"></a>
+    <div id="page_begin_html"><table align="center">
+<tbody><tr><td>
+ 
+
+</td></tr>
+</tbody></table></div>
+    <div id="home">
+<div id="header">
+	<div id="blogTitle">
+        
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/javabluesky/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Java天堂</a>
+</h1>
+
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+
+			<ul id="navList">
+				<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+博客园</a>
+</li>
+				<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/javabluesky/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+首页</a>
+</li>
+				<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+新随笔</a>
+</li>
+				<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/Java%E5%A4%A9%E5%A0%82" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+联系</a></li>
+				<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+管理</a>
+</li>
+				<li>
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/javabluesky/rss/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+订阅</a>
+				
+<a id="blog_nav_rss_image" href="https://www.cnblogs.com/javabluesky/rss/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+    <img src="assets/1573869485-034a82888f5826d83323a5648ed21d95.gif" alt="订阅">
+</a></li>
+			</ul>
+
+
+
+		<div class="blogStats">
+            <div class="blog_stats">
+                <!--done-->
+随笔- 
+637&nbsp;
+文章- 
+0&nbsp;
+评论- 
+8&nbsp;
+
+
+
+            </div>
+        </div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="post_detail">
+<!--done-->
+<div id="topics">
+	<div class="post">
+		<h1 class="postTitle">
+			
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/javabluesky/archive/2011/01/28/2211526.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">一个最简单GAL游戏资源文件黑盒分析（一）</a>
+
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			
+<div id="cnblogs_post_body" class="blogpost-body ">
+    <p>早就有人叫我写个封包分析教程</p>
+<p>我今天有点时间写个 </p>
+<p>&nbsp;</p>
+<p><a href="http://blog.csdn.net/luozhuang/archive/2010/12/31/6110010.aspx" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">http://blog.csdn.net/luozhuang/archive/2010/12/31/6110010.aspx</a></p>
+<p>游戏文件黑盒分析吧。</p>
+<p>黑盒来源于软件测试词语<a href="http://baike.baidu.com/view/51274.htm" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">http://baike.baidu.com/view/51274.htm</a></p>
+<p>也就是我们不分析任何程序汇编。</p>
+<p>&nbsp;</p>
+<p>三大妈有个封包分析组，也是类似的。黑盒分析下资源文件</p>
+<p>&nbsp;</p>
+<p>工具 大家可以找自己喜欢二进制编辑工具 比如winhex</p>
+<p>&nbsp;</p>
+<p>这个封包是最简单的，因为没有任何压缩。。。</p>
+<p>&nbsp;</p>
+<p>分析文件名：日文原版script.dat 文件</p>
+<p>没有装游戏这里可以下载：</p>
+<p><a href="http://hotfile.com/dl/100048813/d53730d/script.dat.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">http://hotfile.com/dl/100048813/d53730d/script.dat.html</a></p>
+<p>&nbsp;</p>
+<p>0000h: 50 41 43 4B 44 41 54 2E 01 04 00 00 01 04 00 00&nbsp; PACKDAT......... <br>0010h: 69 39 35 5F 30 31 2E 74 78 00 00 00 00 00 00 00&nbsp; i95_01.tx....... <br>0020h: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&nbsp; ................ <br>0030h: 40 C0 00 00 00 00 00 20 62 00 00 00 62 00 00 00&nbsp; @...... b...b... <br>0040h: 69 39 35 5F 30 32 2E 74 78 00 00 00 00 00 00 00&nbsp; i95_02.tx....... <br>0050h: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&nbsp; ................ <br>0060h: A4 C0 00 00 00 00 00 20 94 00 00 00 94 00 00 00&nbsp; ....... ........ </p>
+<p>&nbsp;</p>
+<p>应该知道的：</p>
+<p>游戏汉化中的一个重要的步骤是对资源的解包以及封包。</p>
+<p>这个游戏引擎名叫InnocentGrey</p>
+<p>&nbsp;</p>
+<p>前8个byte（0x0-0x7）<br>PACKDAT-&gt;magic<br>magic 作为识别该引擎的表示，因为很多游戏都采用.dat后缀名。</p>
+<p>&nbsp;</p>
+<p>01 04 00 00 我们没有知道确切意思标记为Unkown 未知吧</p>
+<p><br>后面又来个01 04 00 00 请大家看看winhex 数据解释器 <br>代表32bit数据类型的1025<br>可能就是说这个包里面有1025个文件？<br>其实可以比较下Crass输出结果，这个文件解包以后有1025个文件，符合我们分析结果。</p>
+<p><br>0010h: 69 39 35 5F 30 31 2E 74 78 00 00 00 00 00 00 00&nbsp; i95_01.tx....... <br>0020h: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&nbsp; ................ <br>很明显是文件名 不说了</p>
+<p>&nbsp;</p>
+<p>0030h: 40 C0 00 00 这是什么呢<br>winhex 数据解释器 显示为32bit的 49216<br>这又是什么意思？<br>Alt+G 把这个数据扔进去看看<br>很明显 跳转到这里：<br>C020h: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&nbsp; ................ <br>C030h: 0C F6 1E 00 00 00 00 20 E6 00 00 00 E6 00 00 00&nbsp; ....... ........ <br>C040h: 81 40 94 92 8D 9C 89 BB 82 B5 82 BD 8A D4 8B 7B&nbsp; .@.............{ <br>C050h: 94 FC 90 E1 82 C6 8E 76 82 ED 82 EA 82 E9 88 E2&nbsp; .......v........ </p>
+<p><br>81 40这里明显肯定这个值是偏移地址，而且是对应于文件开头偏移。<br>C语言有个fseek函数<br>fseek( stream, 偏移地址, SEEK_SET);</p>
+<p>&nbsp;</p>
+<p>00 00 00 20 我们没有知道确切意思标记为Unkown 未知吧</p>
+<p>&nbsp;</p>
+<p>62 00 00 00这两个我简单说明下<br>这个引擎存在压缩格式<br>遇到压缩算法就必须给出 压缩前长度和解压缩后长度。<br>类似这样的调用：<br>uncompress（uncompressbuf，compresslen，uncompresslen);</p>
+<p><br>这个文件没有压缩，所以这两个值完全一样的。</p>
+<p>&nbsp;</p>
+<p>这个封包经过分析以后 格式如下</p>
+<p><br>文件头：<br>&nbsp;char&nbsp; [8];&nbsp;&nbsp;//"PACKDAT." 50 41 43 4B 44 41 54 2E<br>&nbsp;32bit ?;<br>&nbsp;32bit 索引数目;</p>
+<p><br>索引：<br>&nbsp;char [32];<br>&nbsp;32bit 偏移地址;<br>&nbsp;32bit ?<br>&nbsp;32bit 压缩/解压缩后大小;<br>&nbsp;32bit 压缩/解压缩后大小;</p>
+<p>&nbsp;</p>
+<p>压缩/解压缩后大小 我没有继续辨认，这个可以从其他文件辨认，压缩后大小必然小于解压缩后大小。</p>
+<p>&nbsp;</p>
+<p>将32bit 这些转换成程序格式：</p>
+<p><br>8bit char-〉BYTE<br>16bit-〉short<br>32bit-〉int</p>
+<p>现在可以提取/写回这个封包了。不管写代码还是手工都可以试试看吧。</p>
+<p>&nbsp;</p>
+<p>加密部分：</p>
+<p>剧本部分</p>
+<p>加密比较简单 Xor FF</p>
+</div>
+
+<div class="clear"></div>
+<div id="blog_post_info_block">
+
+
+    <div id="blog_post_info">
+<div id="green_channel">
+        <a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(2211526,cb_blogId,1);green_channel_success(this,'谢谢推荐！');" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">好文要顶</a>
+        <a id="green_channel_follow" onclick="follow('7e25a697-02f6-e011-b7b9-842b2b196315');" href="javascript:void(0);" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">关注我</a>
+    <a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">收藏该文</a>
+    <a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1573869485-3212f7b914cc9773fb30bbf4656405fc.png" alt=""></a>
+    <a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信" onclick="shareOnWechat()" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1573869485-cb7153d1c13a5d9aef10ebab342f6f71.png" alt=""></a>
+</div>
+<div id="author_profile">
+    <div id="author_profile_info" class="author_profile_info">
+        <div id="author_profile_detail" class="author_profile_info">
+            <a href="https://home.cnblogs.com/u/javabluesky/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Java天堂</a><br>
+            <a href="https://home.cnblogs.com/u/javabluesky/followees/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">关注 - 0</a><br>
+            <a href="https://home.cnblogs.com/u/javabluesky/followers/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">粉丝 - 8</a>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="author_profile_honor"></div>
+    <div id="author_profile_follow">
+                <a href="javascript:void(0);" onclick="follow('7e25a697-02f6-e011-b7b9-842b2b196315');return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">+加关注</a>
+    </div>
+</div>
+<div id="div_digg">
+    <div class="diggit" onclick="votePost(2211526,'Digg')">
+        <span class="diggnum" id="digg_count">0</span>
+    </div>
+    <div class="buryit" onclick="votePost(2211526,'Bury')">
+        <span class="burynum" id="bury_count">0</span>
+    </div>
+    <div class="clear"></div>
+    <div class="diggword" id="digg_tips">
+    </div>
+</div>
+
+</div>
+    <div class="clear"></div>
+    <div id="post_next_prev">
+
+    <a href="https://www.cnblogs.com/javabluesky/archive/2011/01/21/2211527.html" class="p_n_p_prefix" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">« </a> 上一篇：    <a href="https://www.cnblogs.com/javabluesky/archive/2011/01/21/2211527.html" title="发布于 2011-01-21 10:38" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">streams.h和streams.lib 问题+DirectShow SDK问题</a>
+    <br>
+    <a href="https://www.cnblogs.com/javabluesky/archive/2011/02/10/2211525.html" class="p_n_p_prefix" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">» </a> 下一篇：    <a href="https://www.cnblogs.com/javabluesky/archive/2011/02/10/2211525.html" title="发布于 2011-02-10 16:26" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">我玩过的所有热门的汉化GALGAME全介绍</a>
+
+</div>
+</div>
+		</div>
+		<div class="postDesc">posted @ 
+<span id="post-date">2011-01-28 11:53</span>&nbsp;<a href="https://www.cnblogs.com/javabluesky/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Java天堂</a> 阅读(<span id="post_view_count">266</span>) 评论(<span id="post_comment_count">0</span>) <a href="https://i.cnblogs.com/EditPosts.aspx?postid=2211526" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"> 编辑</a> <a href="javascript:void(0)" onclick="AddToWz(2211526); return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">收藏</a>
+</div>
+	</div>
+	
+	
+</div>
+<!--end: topics 文章、评论容器-->
+
+
+<a name="!comments" data-mx-warn="Empty URL"></a>
+<div id="blog-comments-placeholder"></div>
+
+
+<div id="comment_form" class="commentform">
+    <a name="commentform" data-mx-warn="Empty URL"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"><div class="login_tips">
+    注册用户登录后才能发表评论，请 
+    <a rel="noopener noreferrer" href="javascript:void(0);" class="underline" onclick="return login('commentform');" target="_blank" referrerpolicy="no-referrer">登录</a>
+     或 
+    <a rel="noopener noreferrer" href="javascript:void(0);" class="underline" onclick="return register();" target="_blank" referrerpolicy="no-referrer">注册</a>，
+    <a href="https://www.cnblogs.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">访问</a> 网站首页。
+</div></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"><a href="https://cloud.tencent.com/act/pro/overseas?fromSource=gwzcw.3090393.3090393.3090393&amp;utm_medium=cpc&amp;utm_id=gwzcw.3090393.3090393.3090393" target="_blank" onclick="ga('send', 'event', 'Link', 'click', 'T2-腾讯云')" referrerpolicy="no-referrer" rel="noopener noreferrer">【推荐】腾讯云海外1核2G云服务器低至2折，半价续费券限量免费领取！</a><br><a href="https://www.jdcloud.com/cn/activity/year-end?utm_source=DMT_cnblogs&amp;utm_medium=CH&amp;utm_campaign=q4vm&amp;utm_term=Virtual-Machines" target="_blank" onclick="ga('send', 'event', 'Link', 'click', 'T2-京东云')" referrerpolicy="no-referrer" rel="noopener noreferrer">【活动】京东云服务器_云主机低于1折，低价高性能产品备战双11</a><br><a href="http://www.ucancode.com/index.htm" target="_blank" onclick="ga('send', 'event', 'Link', 'click', 'T2-工控')" referrerpolicy="no-referrer" rel="noopener noreferrer">【推荐】超50万行VC++源码: 大型组态工控、电力仿真CAD与GIS源码库</a><br><a href="https://ke.qq.com/huodong/mashibing_pc/index.html?from=800018451" target="_blank" onclick="ga('send', 'event', 'Link', 'click', 'T2-马士兵')" referrerpolicy="no-referrer" rel="noopener noreferrer">【培训】马士兵老师强势回归！Java线下课程全免费，双十一大促！</a><br><a href="https://www.ctyun.cn/activity/20191111?hmsr=%E7%9C%8B%E7%9C%8B-%E5%8D%9A%E5%AE%A2%E5%9B%AD-%E5%8F%8C11-1106&amp;hmpl=&amp;hmcu=&amp;hmkw=&amp;hmci=" target="_blank" onclick="ga('send', 'event', 'Link', 'click', 'T2-天翼云')" referrerpolicy="no-referrer" rel="noopener noreferrer">【推荐】天翼云双十一翼降到底，云主机11.11元起，抽奖送大礼</a><br><a href="https://www.getui.com/2019devfest?f=5&amp;p=10&amp;c=15&amp;ch=1&amp;hmsr=%E5%8D%9A%E5%AE%A2%E5%9B%AD&amp;hmpl=2019%E5%BC%80%E5%8F%91%E8%80%85%E8%8A%82&amp;hmcu=PC&amp;hmkw=&amp;hmci=" target="_blank" onclick="ga('send', 'event', 'Link', 'click', 'T2-个推-1')" referrerpolicy="no-referrer" rel="noopener noreferrer">【福利】个推四大热门移动开发SDK全部免费用一年，限时抢！</a><br><a href="https://www.uibot.com.cn/sem/bky.html" target="_blank" onclick="ga('send', 'event', 'Link', 'click', 'T2-uibot_T2')" referrerpolicy="no-referrer" rel="noopener noreferrer">【推荐】流程自动化专家UiBot，全套体系化教程成就高薪RPA工程师</a><br></div>
+    <div id="opt_under_post"></div>
+    
+    
+    
+    
+    <div id="under_post_news"><div class="recomm-block"><b>相关博文：</b><br>·  <a title="一个最简单GAL游戏资源文件黑盒分析（二）" href="https://www.cnblogs.com/javabluesky/archive/2011/03/01/2211521.html" target="_blank" onclick="clickRecomItmem(2211521)" referrerpolicy="no-referrer" rel="noopener noreferrer">一个最简单GAL游戏资源文件黑盒分析（二）</a><br>·  <a title="游戏包文件结构分析(2)" href="https://www.cnblogs.com/Rex/archive/2007/12/17/1002810.html" target="_blank" onclick="clickRecomItmem(1002810)" referrerpolicy="no-referrer" rel="noopener noreferrer">游戏包文件结构分析(2)</a><br>·  <a title="【转贴】游戏中的资源打包" href="https://www.cnblogs.com/lancidie/archive/2010/09/24/1833922.html" target="_blank" onclick="clickRecomItmem(1833922)" referrerpolicy="no-referrer" rel="noopener noreferrer">【转贴】游戏中的资源打包</a><br>·  <a title="游戏包文件结构分析(1)" href="https://www.cnblogs.com/Rex/archive/2007/12/12/992829.html" target="_blank" onclick="clickRecomItmem(992829)" referrerpolicy="no-referrer" rel="noopener noreferrer">游戏包文件结构分析(1)</a><br>·  <a title="游戏汉化教程2-资源分析" href="https://www.cnblogs.com/sweetwxh/archive/2013/02/23/game_localization_tutorial_2.html" target="_blank" onclick="clickRecomItmem(2923470)" referrerpolicy="no-referrer" rel="noopener noreferrer">游戏汉化教程2-资源分析</a><br>»  <a target="_blank" href="https://recomm.cnblogs.com/blogpost/2211526" referrerpolicy="no-referrer" rel="noopener noreferrer">更多推荐...</a></div></div>
+    
+    <div id="under_post_kb">
+</div>
+    
+    
+</div></div>
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+		<div id="calendar"><div id="blog-calendar" style="">
+
+<table id="blogCalendar" class="Cal" cellspacing="0" cellpadding="0" title="Calendar" border="0">
+    <tbody>
+        <tr>
+            <td colspan="7">
+                <table class="CalTitle" cellspacing="0" border="0">
+                    <tbody>
+                        <tr>
+                            <td class="CalNextPrev">
+                                <a href="javascript:void(0);" onclick="loadBlogCalendar('2010/12/28'); return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">&lt;</a>
+                            </td>
+                            <td align="center">2011年1月</td>
+                            <td align="right" class="CalNextPrev">
+                                <a href="javascript:void(0);" onclick="loadBlogCalendar('2011/02/28'); return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">&gt;</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+                    <th class="CalDayHeader" align="center" abbr="日" scope="col">日</th>
+                    <th class="CalDayHeader" align="center" abbr="一" scope="col">一</th>
+                    <th class="CalDayHeader" align="center" abbr="二" scope="col">二</th>
+                    <th class="CalDayHeader" align="center" abbr="三" scope="col">三</th>
+                    <th class="CalDayHeader" align="center" abbr="四" scope="col">四</th>
+                    <th class="CalDayHeader" align="center" abbr="五" scope="col">五</th>
+                    <th class="CalDayHeader" align="center" abbr="六" scope="col">六</th>
+        </tr>
+            <tr>
+                            <td class="CalOtherMonthDay" align="center">26</td>
+                            <td class="CalOtherMonthDay" align="center">27</td>
+                            <td class="CalOtherMonthDay" align="center">28</td>
+                            <td class="CalOtherMonthDay" align="center">29</td>
+                            <td class="CalOtherMonthDay" align="center">30</td>
+                            <td class="CalOtherMonthDay" align="center">31</td>
+                    <td class="CalWeekendDay" align="center">
+                        1
+                    </td>
+            </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            <a href="https://www.cnblogs.com/javabluesky/archive/2011/01/02.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><u>2</u></a>
+                        </td>
+                            <td class="" align="center">
+                                3
+                            </td>
+                            <td class="" align="center">
+                                4
+                            </td>
+                            <td class="" align="center">
+                                5
+                            </td>
+                            <td class="" align="center">
+                                6
+                            </td>
+                            <td class="" align="center">
+                                <a href="https://www.cnblogs.com/javabluesky/archive/2011/01/07.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><u>7</u></a>
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            8
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            9
+                        </td>
+                            <td class="" align="center">
+                                10
+                            </td>
+                            <td class="" align="center">
+                                11
+                            </td>
+                            <td class="" align="center">
+                                12
+                            </td>
+                            <td class="" align="center">
+                                <a href="https://www.cnblogs.com/javabluesky/archive/2011/01/13.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><u>13</u></a>
+                            </td>
+                            <td class="" align="center">
+                                14
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            15
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            16
+                        </td>
+                            <td class="" align="center">
+                                17
+                            </td>
+                            <td class="" align="center">
+                                18
+                            </td>
+                            <td class="" align="center">
+                                <a href="https://www.cnblogs.com/javabluesky/archive/2011/01/19.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><u>19</u></a>
+                            </td>
+                            <td class="" align="center">
+                                20
+                            </td>
+                            <td class="" align="center">
+                                <a href="https://www.cnblogs.com/javabluesky/archive/2011/01/21.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><u>21</u></a>
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            22
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            23
+                        </td>
+                            <td class="" align="center">
+                                24
+                            </td>
+                            <td class="" align="center">
+                                25
+                            </td>
+                            <td class="" align="center">
+                                26
+                            </td>
+                            <td class="" align="center">
+                                27
+                            </td>
+                            <td class="" align="center">
+                                <a href="https://www.cnblogs.com/javabluesky/archive/2011/01/28.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><u>28</u></a>
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            29
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            30
+                        </td>
+                            <td class="" align="center">
+                                31
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                1
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                2
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                3
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                4
+                            </td>
+                        <td class="CalOtherMonthDay" align="center">
+                            5
+                        </td>
+                </tr>
+    </tbody>
+</table></div></div>
+			
+<div id="sidebar_news" class="newsItem"><!--done-->
+<div class="newsItem">
+
+	
+<div id="blog-news">
+     
+
+    <div id="profile_block">
+        昵称：
+        <a href="https://home.cnblogs.com/u/javabluesky/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+            Java天堂
+        </a>
+        <br>
+        园龄：
+        <a href="https://home.cnblogs.com/u/javabluesky/" title="入园时间：2011-10-14" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+            8年1个月
+        </a>
+        <br>
+        粉丝：
+        <a href="https://home.cnblogs.com/u/javabluesky/followers/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+            8
+        </a>
+        <br>
+        关注：
+        <a href="https://home.cnblogs.com/u/javabluesky/followees/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+            0
+        </a>
+        <div id="p_b_follow">
+<a href="javascript:void(0)" onclick="follow('7e25a697-02f6-e011-b7b9-842b2b196315')" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">+加关注</a></div>
+        
+    </div>
+</div>
+</div>
+
+</div>
+			
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn">
+<!-- 搜索 -->
+<div id="sidebar_search" class="sidebar-block">
+    <div id="sidebar_search" class="mySearch">
+        <h3 class="catListTitle">搜索</h3>
+        <div id="sidebar_search_box">
+            <div id="widget_my_zzk" class="div_my_zzk">
+                <input type="text" id="q" onkeydown="return zzk_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="zzk_go()" type="button" value="找找看" id="btnZzk" class="btn_my_zzk">
+            </div>
+            <div id="widget_my_google" class="div_my_zzk">
+                <input type="text" name="google_q" id="google_q" onkeydown="return google_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="google_go()" type="button" value="谷歌搜索" class="btn_my_zzk">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 常用链接 -->
+<div id="sidebar_shortcut" class="sidebar-block">
+    <div class="catListLink">
+<h3 class="catListTitle">
+常用链接
+</h3>
+<ul>
+		<li>
+
+<a href="https://www.cnblogs.com/javabluesky/p/" title="我的博客的随笔列表" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">我的随笔</a>
+</li>
+		<li>
+
+<a href="https://www.cnblogs.com/javabluesky/MyComments.html" title="我的发表过的评论列表" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">我的评论</a>
+</li>
+		<li>
+
+<a href="https://www.cnblogs.com/javabluesky/OtherPosts.html" title="我评论过的随笔列表" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">我的参与</a>
+</li>
+		<li>
+
+<a href="https://www.cnblogs.com/javabluesky/RecentComments.html" title="我的博客的评论列表" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">最新评论</a>
+</li>
+		<li>
+
+<a href="https://www.cnblogs.com/javabluesky/tag/" title="我的博客的标签列表" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">我的标签</a>
+</li>
+
+<li><a id="itemListLink" onclick="this.blur();WarpClass('itemListLink', 'itemListLin_con');return false;" href="#">更多链接</a></li>
+</ul>
+
+</div>
+
+
+</div>
+
+<!-- 最新随笔 -->
+
+
+
+<!-- 我的标签 -->
+<div id="sidebar_toptags" class="sidebar-block">
+    
+</div>
+
+<!-- 积分与排名 -->
+
+
+<!-- 随笔分类、随笔档案、文章分类、新闻分类、相册、链接 -->
+<div id="sidebar_categories">
+    
+<div class="catListPostArchive">
+<h3 class="catListTitle">
+
+随笔档案
+
+
+</h3>
+
+
+<ul>
+
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2011/10.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2011年10月(3)
+</a>
+ 
+</li>
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2011/09.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2011年9月(15)
+</a>
+ 
+</li>
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2011/08.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2011年8月(17)
+</a>
+ 
+</li>
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2011/07.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2011年7月(13)
+</a>
+ 
+</li>
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2011/06.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2011年6月(3)
+</a>
+ 
+</li>
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2011/05.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2011年5月(6)
+</a>
+ 
+</li>
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2011/04.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2011年4月(4)
+</a>
+ 
+</li>
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2011/03.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2011年3月(11)
+</a>
+ 
+</li>
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2011/02.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2011年2月(4)
+</a>
+ 
+</li>
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2011/01.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2011年1月(6)
+</a>
+ 
+</li>
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2010/12.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2010年12月(8)
+</a>
+ 
+</li>
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2010/11.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2010年11月(6)
+</a>
+ 
+</li>
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2010/10.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2010年10月(12)
+</a>
+ 
+</li>
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2010/09.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2010年9月(12)
+</a>
+ 
+</li>
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2010/08.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2010年8月(26)
+</a>
+ 
+</li>
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2010/07.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2010年7月(7)
+</a>
+ 
+</li>
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2010/06.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2010年6月(14)
+</a>
+ 
+</li>
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2010/05.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2010年5月(20)
+</a>
+ 
+</li>
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2010/04.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2010年4月(15)
+</a>
+ 
+</li>
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2010/03.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2010年3月(14)
+</a>
+ 
+</li>
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2010/02.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2010年2月(18)
+</a>
+ 
+</li>
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2010/01.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2010年1月(25)
+</a>
+ 
+</li>
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2009/12.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2009年12月(26)
+</a>
+ 
+</li>
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2009/11.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2009年11月(11)
+</a>
+ 
+</li>
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2009/10.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2009年10月(10)
+</a>
+ 
+</li>
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2009/09.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2009年9月(10)
+</a>
+ 
+</li>
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2009/03.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2009年3月(8)
+</a>
+ 
+</li>
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2009/02.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2009年2月(20)
+</a>
+ 
+</li>
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2009/01.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2009年1月(20)
+</a>
+ 
+</li>
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2008/12.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2008年12月(20)
+</a>
+ 
+</li>
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2008/11.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2008年11月(20)
+</a>
+ 
+</li>
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2008/10.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2008年10月(20)
+</a>
+ 
+</li>
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2008/09.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2008年9月(19)
+</a>
+ 
+</li>
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2008/08.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2008年8月(15)
+</a>
+ 
+</li>
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2008/07.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2008年7月(14)
+</a>
+ 
+</li>
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2008/06.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2008年6月(20)
+</a>
+ 
+</li>
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2008/05.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2008年5月(10)
+</a>
+ 
+</li>
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2008/04.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2008年4月(20)
+</a>
+ 
+</li>
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2008/03.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2008年3月(20)
+</a>
+ 
+</li>
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2008/02.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2008年2月(20)
+</a>
+ 
+</li>
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2008/01.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2008年1月(16)
+</a>
+ 
+</li>
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2007/12.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2007年12月(20)
+</a>
+ 
+</li>
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2007/10.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2007年10月(9)
+</a>
+ 
+</li>
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2007/09.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2007年9月(1)
+</a>
+ 
+</li>
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2007/08.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2007年8月(2)
+</a>
+ 
+</li>
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2007/07.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2007年7月(2)
+</a>
+ 
+</li>
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2007/06.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2007年6月(20)
+</a>
+ 
+</li>
+<li>
+<a href="https://www.cnblogs.com/javabluesky/archive/2007/05.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2007年5月(4)
+</a>
+ 
+</li>
+
+</ul>
+
+
+</div>
+
+
+</div>
+
+<!-- 最新评论 -->
+<div id="sidebar_recentcomments" class="sidebar-block">
+    <div class="catListComment">
+<h3 class="catListTitle">最新评论</h3>
+
+	<div class="RecentCommentBlock">
+        <ul>
+                    <li class="recent_comment_title"><a href="http://www.cnblogs.com/javabluesky/archive/2010/04/27/2211334.html#2895512" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">1. Re:35岁以前成功的12条黄金法则(1)</a></li>
+                    <li class="recent_comment_body">有道理！</li>
+                    <li class="recent_comment_author">--wzjin</li>
+                    <li class="recent_comment_title"><a href="http://www.cnblogs.com/javabluesky/archive/2009/10/14/2211641.html#2813020" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">2. Re:UltraFileSearch 汉化版发布</a></li>
+                    <li class="recent_comment_body">怎么下载请问</li>
+                    <li class="recent_comment_author">--xinade</li>
+                    <li class="recent_comment_title"><a href="http://www.cnblogs.com/javabluesky/archive/2009/11/13/2211628.html#2531198" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">3. Re:Electric Rain Swift 3D 6 和 ZAM 3D 汉化发布</a></li>
+                    <li class="recent_comment_body">怎么才能导成 XAML啊  求教</li>
+                    <li class="recent_comment_author">--疯癫大圣</li>
+                    <li class="recent_comment_title"><a href="http://www.cnblogs.com/javabluesky/archive/2011/03/24/2211514.html#2485962" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">4. Re:回应：现在的gal汉化组为什么不多汉化些神作呢？</a></li>
+                    <li class="recent_comment_body">看了你的文章，觉得有很多共鸣，不知是否有意向一起汉化CC游戏原作？ 简单表示一下我个人现在的情况： 大一，解包器已完成，文本、图片都提取出来了。（除了翻译，都能干。）（封包器可以很快完成，但是现在想重...</li>
+                    <li class="recent_comment_author">--xiayuanzhong</li>
+                    <li class="recent_comment_title"><a href="http://www.cnblogs.com/javabluesky/archive/2008/08/30/2211784.html#2370425" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">5. Re:经典作品推荐  パルフェ ショコラsecond brew 女仆咖啡帕露菲（含下载、汉化和攻略）</a></li>
+                    <li class="recent_comment_body">看看不赖，感谢</li>
+                    <li class="recent_comment_author">--sdhfciu</li>
+        </ul>
+    </div>
+</div>
+
+
+</div>
+
+
+
+<!-- 阅读排行榜 -->
+<div id="sidebar_topviewedposts" class="sidebar-block">
+    <div class="catListView">
+<h3 class="catListTitle">阅读排行榜</h3>
+	<div id="TopViewPostsBlock">
+        <ul style="word-break:break-all">
+                    <li>
+                        <a href="https://www.cnblogs.com/javabluesky/archive/2010/08/18/2211561.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            1. 雯雅婷4 PoorSakura vol.4 和poorsakura desktop(雯雅婷桌面精灵)汉化(9029)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/javabluesky/archive/2009/01/14/2211691.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            2. GALGAME文字提取agth 特殊码大全(特殊码表)和使用方法(8532)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/javabluesky/archive/2010/06/05/2211578.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            3. 妄想性仮想人格障害  入门教程 +修改器(6605)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/javabluesky/archive/2010/05/15/2211589.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            4. 2009年末最强梅麻呂3D动画游戏大作 汉化补丁(5120)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/javabluesky/archive/2008/02/21/2211883.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            5. 我的美丽天使（My Fair Angel）全剧情攻略(3687)
+                        </a>
+                    </li>
+        </ul>
+    </div>
+</div>
+
+
+</div>
+
+<!-- 评论排行榜 -->
+<div id="sidebar_topcommentedposts" class="sidebar-block">
+    <div class="catListFeedback">
+<h3 class="catListTitle">评论排行榜</h3>
+	<div id="TopFeedbackPostsBlock">
+        <ul style="word-break:break-all">
+                    <li>
+                        <a href="https://www.cnblogs.com/javabluesky/archive/2010/09/12/2211416.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            1. 新版全图、T人工具 过 浩方 VS 掌门人 三大平台 即Breeze's MH V2.0正式版 0917 发布(2)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/javabluesky/archive/2010/04/27/2211334.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            2. 35岁以前成功的12条黄金法则(1)(1)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/javabluesky/archive/2009/11/13/2211628.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            3. Electric Rain Swift 3D 6 和 ZAM 3D 汉化发布(1)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/javabluesky/archive/2009/11/04/2211631.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            4. 某些Office 精简版 Win7运行问题(Windows7 不支持 Thinstall)(1)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/javabluesky/archive/2009/10/14/2211641.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            5. UltraFileSearch 汉化版发布(1)
+                        </a>
+                    </li>
+        </ul>
+    </div>
+</div>
+
+
+</div>
+
+<!-- 推荐排行榜 -->
+<div id="sidebar_topdiggedposts" class="sidebar-block">
+    
+<div id="topdigg_posts_wrap">
+    <div class="catListView">
+        <h3 class="catListTitle">推荐排行榜</h3>
+        <div id="TopDiggPostsBlock">
+            <ul style="word-break:break-all">
+                        <li>
+                            <a href="https://www.cnblogs.com/javabluesky/archive/2007/05/21/2211977.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                                1. 计算机科学类优秀书籍推荐 Networks (网络)(1)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/javabluesky/archive/2007/05/21/2211976.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                                2. 计算机科学类优秀书籍推荐 (C++ 语言)(1)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/javabluesky/archive/2007/05/21/2211975.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                                3. 计算机科学类优秀书籍推荐 UNIX&amp;Operating System (操作系统)(1)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/javabluesky/archive/2008/07/07/2211808.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                                4. 密码知识系列之基于C++的MD5算法类(1)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/javabluesky/archive/2011/10/10/2211450.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                                5. 一点真心话希望77能好好翻译。。(1)
+                            </a>
+                        </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div></div>
+                    
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright © 2019 Java天堂
+<br><span id="poweredby">Powered by .NET Core 3.0.0 on Linux</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    <div id="page_end_html">
+        <table align="center"><tbody><tr><td>
+ 
+</td></tr>
+</tbody></table>
+    </div>
+
+
+<a href="" download="" data-mx-warn="Empty URL"></a>
+</body>
+  </html>

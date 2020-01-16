@@ -1,0 +1,766 @@
+
+  <!DOCTYPE html>
+  <html id="" class="">
+    <!-- OriginalSrc: https://www.cnblogs.com/bl4nk/archive/2011/06/16/2909132.html -->
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <title>Steins;Gate PC版npa文件的解包与封包程序 - wwwwwwwww11we - 博客园</title>
+      
+
+<link rel="stylesheet" href="assets/1572616575-d4b73980e5ecba85aa25d546f104e1c7.css" referrerpolicy="no-referrer">
+<link id="MainCss" rel="stylesheet" href="assets/1572616575-1caca293e9e98b0767137e16706185df.css" referrerpolicy="no-referrer">
+<link type="text/css" rel="stylesheet" href="assets/1572616575-98513f06121b6d915f692c346fc69f87.css" referrerpolicy="no-referrer">
+<link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="assets/1572616575-ef684c18de2bcd80f7dc64c7e46b2d0c.css" referrerpolicy="no-referrer">
+
+
+<style class="darkreader darkreader--fallback" media="screen"></style>
+<style class="darkreader darkreader--text" media="screen"></style>
+<style class="darkreader darkreader--invert" media="screen"></style>
+<style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}</style>
+<style class="darkreader darkreader--user-agent" media="screen">html {
+    background-color: #191a1b !important;
+}
+html, body, input, textarea, select, button {
+    background-color: #191a1b;
+}
+html, body, input, textarea, select, button {
+    border-color: #5a5956;
+    color: #f0ebe2;
+}
+a {
+    color: #4791e7;
+}
+table {
+    border-color: #4f4e4c;
+}
+::placeholder {
+    color: #bfb9ac;
+}
+::selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+::-moz-selection {
+    background-color: #125cb4;
+    color: #fffffd;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #565a0f !important;
+    color: #f0ebe2 !important;
+}
+::-webkit-scrollbar {
+    background-color: #1d1f1f;
+    color: #cbc5b9;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #2c2d2d;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #343636;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #404142;
+}
+::-webkit-scrollbar-corner {
+    background-color: #191a1b;
+}
+* {
+    scrollbar-color: #2c2d2d #1d1f1f;
+}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--override" media="screen">.jfk-bubble {
+    background-color: #000000 !important;
+}
+.vimvixen-hint {
+    background-color: #765500 !important;
+    border-color: #d5b22e !important;
+    color: #f9edcc !important;
+}</style>
+<style type="text/css">@keyframes fadeInOpacity{0%{opacity:0}to{opacity:1}}:hover>*>.fbvd--wrapper{animation-name:fadeInOpacity;animation-duration:.3s;opacity:1}.fbvd--wrapper{position:absolute;top:10px;left:10px;opacity:0;text-align:center;margin:0;z-index:5}.fbvd--wrapper a{background: url("") no-repeat 3px 4.55px; background-color: #fff; display:inline-block;font:700 14px Helvetica,Arial,sans-serif;color:#4b4f56;text-decoration:none;vertical-align:middle;padding:0px 8px 0px;margin-right:8px;border-radius:2px; line-height: 22px; padding-left:19px; border: 1px solid #e7e7e7; background-size: 13px}.fbvd--wrapper a:last-child{margin-right:0}.fbvd--wrapper a:hover{text-decoration:none}.fbvd--wrapper a:focus{box-shadow:0 0 1px 2px rgba(88,144,255,.75),0 1px 1px rgba(0,0,0,.15);outline:none}.fbvd--wrapper b{font-size:13px;position:relative;top:1px;color:#3b5998;font-weight:400}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+
+      <style class="mx-wc-style">
+        body {padding-top: 20px;}
+        .mx-wc-main img {max-width: 100%;}
+        .mx-wc-main{
+          box-sizing: content-box;
+          background-color: rgb(25, 26, 27) !important;
+          margin: 0 auto;
+          max-width: 1349px;
+        }
+        @media (min-width: 768px) {
+          .mx-wc-main { padding: 15px 15px 80px 15px }
+        }
+        @media (max-width: 767px) {
+          .mx-wc-main { padding: 15px 3px 80px 3px }
+        }
+  
+      </style>
+    </head>
+    <body style="background-color: #ffffff !important; min-height: 100%; height: auto; position: static !important; overflow: auto !important; padding-bottom: 0px !important;" id="" class="">
+      <div class="mx-wc-main">
+        <div id="home" class="mx-wc-selected-elem mx-wc-1572616575" style="display: block; float: none !important; position: relative !important; top: 0px !important; left: 0px !important; margin: 0px !important; flex: unset !important; width: 100% !important; max-width: 100% !important; box-sizing: border-box !important;">
+    <div id="header">
+        <div id="blogTitle">
+            
+<div class="title"><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/bl4nk/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">closed</a>
+</div>
+<div class="subtitle">
+
+</div>
+
+        </div>
+        <div id="navigator">
+            
+<ul id="navList">
+    <li id="nav_sitehome"><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+博客园</a>
+</li>
+    <li id="nav_myhome">
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/bl4nk/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+首页</a>
+</li>
+    
+    
+    <li id="nav_rss">
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/bl4nk/rss/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+订阅</a></li>
+    <li id="nav_admin">
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+管理</a>
+</li>
+</ul>
+
+            <div class="blogStats">
+                
+<span id="stats_post_count">随笔 - 
+29&nbsp;</span>
+<span id="stats_article_count">文章 - 
+0&nbsp;</span>
+<!-- <span id="stats-comment_count"></span> -->
+<span id="stats_comment_count">评论 - 
+3</span>
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <div id="mainContent">
+            <div class="forFlow">
+                <div id="post_detail">
+    <div id="topics">
+        <div class="post">
+            <h1 class="postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/bl4nk/archive/2011/06/16/2909132.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Steins;Gate PC版npa文件的解包与封包程序</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                
+<div id="cnblogs_post_body" class="blogpost-body ">
+    <blockquote>我上个月才知道这个游戏，遂下载了pc版，结果找遍互联网也没有汉化包。<br>
+花了三天时间看完了<a href="http://www.bilibili.tv/video/av12826/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">KFC的中文影像</a>，非常喜欢这个游戏的剧情。<br>
+貌似KFC去年就开始了汉化工作，感慨龟速的同时也非常同情一些像我一样对日文一窍不通的ACG FANs。<br>
+因此本着互联网分享的精神，我开始了汉化包的制作。</blockquote>
+<p>因为自己之前也从来没搞过汉化这方面的，网上也鲜有教程。<br>
+摸着石头过河，我写了一个流程。</p>
+<p><span><span style="color: rgb(51, 102, 255); --darkreader-inline-color:#4791e7;" data-darkreader-inline-color="">1.解包资源文件。（使用exsgnpa.exe）<br>
+2.导出字幕。（使用nsb2txt.exe，这个程序只能简单的导出）<br>
+3.翻译。（需要翻译和输入大量的文字，我估计得有几十甚至上百万字，我一个人是没戏了）<br>
+4.制作并导回字幕。<br>
+5.打包资源文件。（使用pksgnpa.exe）</span></span></p>
+<p>目前我进行到了2，翻译我不懂跳过。打包程序已经写好。<br>
+那么就剩下4这个关键步骤了。</p>
+<p><span style="color: rgb(102, 102, 204); --darkreader-inline-color:#849dc6;" data-darkreader-inline-color="">要使字幕正常工作，我想到了三个方法。<br>
+1.敲字幕使用繁体字(因为大部分日语汉字都是繁体字，呵呵)，然后转为Shift-JIS编码，利用Shift-JIS编码中的日语汉字来显示中文字幕。但是这个方法有很大的局限性。Shift-JIS中的日语汉字数量太少，很多字不能正常显示，在制制作字幕时还要经常考虑换一种表达方式来避过不能使用的汉字。<br>
+2.敲字幕使用简体字，保存为GBK编码。然后修改游戏，让游戏调用GBK字符集。这个方法显示最完美。但是首先这只是我的想法，并不知道这个方法能不能行得通，再者我不会逆向工程。<br>
+3.敲字幕使用简体字，保存为Shift-JIS编码。重新为游戏制作一个字库(扩展Shift-JIS，加入常用汉字)，让游戏调用这个字库。不过貌似这个方法更玄乎也更麻烦了。</span></p>
+<p>个人感觉第二种方法最省心，但是必须让游戏采用GBK编码。<br>
+以上均为我的yy，咱也没汉化过游戏，不知道汉化小组是怎么解决这个问题的。</p>
+<p>还有就是就算解决了编码的问题，因为字幕数据块大小不同的原因不能正常载入nss.npa。<br>
+所以需要分析nsb和map文件格式，分别为字幕文件和字幕控制文件。<br>
+我也觉得像<a href="http://forums.novelnews.net/showthread.php?t=35894" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">这个老外说的</a>文件格式好像是xml，但是又不是。<br>
+貌似是N+模仿xml语法规则自己定义的。我在分析map文件时发现采用了和npa一样的数据排列手法，什么length,offset之类的。<br>
+官方已经发布了1.20升级补丁，应该是做了一些字幕的修复。可是使用1.10的破解主程序加载。</p>
+<p><span style="color: rgb(204, 153, 255); --darkreader-inline-color:#cda1ef;" data-darkreader-inline-color="">关于解包程序 exsgnpa.cpp</span><br>
+asmodean简直就是个HENTAI，竟然写了那么多解包程序：<a href="http://asmodean.reverse.net/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">http://asmodean.reverse.net</a>&nbsp;逆向技术很强大啊。<br>
+我的打包程序就是根据其源代码分析了npa文件，完成了打包程序。<br>
+<span style="color: rgb(204, 153, 255); --darkreader-inline-color:#cda1ef;" data-darkreader-inline-color="">关于打包程序 pksgnpa.cpp</span><br>
+但是经过简单测试，其他三个npa文件包括cg.npa还是可以载入的，貌似主程序没有验证文件大小的步骤。<br>
+可以修改cg.npa里的图片完成图片的汉化。<br>
+当然你也可以修改system.npa文件，来去除窗口标题的乱码。<br>
+<span style="color: rgb(204, 153, 255); --darkreader-inline-color:#cda1ef;" data-darkreader-inline-color="">关于文件格式的分析</span><br>
+map文件格式没有加密，有一些正常的字符。所以我是根据16进制码来分析的，比较缓慢。<br>
+当然如果知道了文件的调用机制的话，就快多了，还是得会逆向工程啊。。。</p>
+<p>附件为我破解过程中的一些文件，有兴趣的可以下载。<br>
+至于为什么我还没完成就发出来了。<br>
+一是让有兴趣汉化的同学可以少费点时间，<br>
+二是我马上要考试了，估计考试完了才能继续破解工程。</p>
+<p><br>
+</p>
+<p>包括：<br>
+<span style="color: rgb(255, 102, 0); --darkreader-inline-color:#f18c46;" data-darkreader-inline-color="">exsgnpa.cpp (by asmodean)<br>
+as-util.h<br>
+nsb2txt.cpp<br>
+pksgnpa.cpp<br>
+npa.png (npa文件格式分析)<br>
+map.png (map文件格式分析，未完成)</span><br>
+<br>
+</p>
+<p>请用MinGW编译。</p>
+<div><a href="http://u.115.com/file/dnsbvzos" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">http://u.115.com/file/dnsbvzos</a></div>
+<p>有技术的同学帮帮忙。<br>
+附邮箱一枚：blxode [AT] gmail.com</p>
+</div>
+
+<div class="clear"></div>
+<div id="blog_post_info_block">
+
+
+    <div id="blog_post_info">
+<div id="green_channel">
+        <a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(2909132,cb_blogId,1);green_channel_success(this,'谢谢推荐！');" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">好文要顶</a>
+        <a id="green_channel_follow" onclick="follow('c105f5aa-dd69-e011-a53f-842b2b196315');" href="javascript:void(0);" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">关注我</a>
+    <a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">收藏该文</a>
+    <a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1572616575-3212f7b914cc9773fb30bbf4656405fc.png" alt=""></a>
+    <a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信" onclick="shareOnWechat()" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1572616575-cb7153d1c13a5d9aef10ebab342f6f71.png" alt=""></a>
+</div>
+<div id="author_profile">
+    <div id="author_profile_info" class="author_profile_info">
+            <a href="https://home.cnblogs.com/u/bl4nk/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1572616575-38bd3e6fc584b5a0ada56fdd098bdc79.png" class="author_avatar" alt=""></a>
+        <div id="author_profile_detail" class="author_profile_info">
+            <a href="https://home.cnblogs.com/u/bl4nk/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">wwwwwwwww11we</a><br>
+            <a href="https://home.cnblogs.com/u/bl4nk/followees/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">关注 - 1</a><br>
+            <a href="https://home.cnblogs.com/u/bl4nk/followers/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">粉丝 - 13</a>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="author_profile_honor"></div>
+    <div id="author_profile_follow">
+                <a href="javascript:void(0);" onclick="follow('c105f5aa-dd69-e011-a53f-842b2b196315');return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">+加关注</a>
+    </div>
+</div>
+<div id="div_digg">
+    <div class="diggit" onclick="votePost(2909132,'Digg')">
+        <span class="diggnum" id="digg_count">0</span>
+    </div>
+    <div class="buryit" onclick="votePost(2909132,'Bury')">
+        <span class="burynum" id="bury_count">0</span>
+    </div>
+    <div class="clear"></div>
+    <div class="diggword" id="digg_tips">
+    </div>
+</div>
+
+</div>
+    <div class="clear"></div>
+    <div id="post_next_prev">
+
+    <a href="https://www.cnblogs.com/bl4nk/archive/2011/04/21/2023092.html" class="p_n_p_prefix" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">« </a> 上一篇：    <a href="https://www.cnblogs.com/bl4nk/archive/2011/04/21/2023092.html" title="发布于 2011-04-21 01:00" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">汉诺塔</a>
+    <br>
+    <a href="https://www.cnblogs.com/bl4nk/archive/2011/07/17/2909131.html" class="p_n_p_prefix" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">» </a> 下一篇：    <a href="https://www.cnblogs.com/bl4nk/archive/2011/07/17/2909131.html" title="发布于 2011-07-17 23:51" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Steins;Gate 主程序汉化流程</a>
+
+</div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2011-06-16 23:20</span>&nbsp;<a href="https://www.cnblogs.com/bl4nk/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">wwwwwwwww11we</a> 阅读(<span id="post_view_count">908</span>) 评论(<span id="post_comment_count">0</span>) <a href="https://i.cnblogs.com/EditPosts.aspx?postid=2909132" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"> 编辑</a> <a href="javascript:void(0)" onclick="AddToWz(2909132); return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">收藏</a>
+</div>
+        </div>
+
+
+<a name="!comments" data-mx-warn="Empty URL"></a>
+<div id="blog-comments-placeholder"></div>
+
+
+<div id="comment_form" class="commentform">
+    <a name="commentform" data-mx-warn="Empty URL"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container">
+<div id="commentform_title">发表评论</div>
+<span id="tip_comment" style="color: red; --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color=""></span>
+<p>
+    昵称：<input type="text" id="tbCommentAuthor" class="author" disabled="disabled" size="50" value="silasme">
+</p>
+<div class="commentbox_main">
+    <div class="commentbox_title">
+        <div class="commentbox_title_left">评论内容：</div>
+        <div class="commentbox_title_right">
+            <img id="ubb_quote" class="comment_icon" src="assets/1572616575-f73aa5858a77ac484d6e38b16845ec7a.gif" alt="引用" title="添加引用" onclick="insertUBB('tbCommentBody','quote')">
+            <img id="ubb_bold" class="comment_icon" src="assets/1572616575-a3012b6c75907da19c938715fc365301.png" alt="粗体" title="添加粗体" onclick="insertUBB('tbCommentBody','b')">
+            <img id="ubb_url" class="comment_icon" src="assets/1572616575-3c93efed347059875dedd7289f066d73.png" alt="链接" title="添加链接" onclick="insertUbbUrl('tbCommentBody')">
+            <img id="ubb_indent" class="comment_icon" src="assets/1572616575-950de7e37169b99428327a61507f3d27.png" alt="缩进" title="添加首行缩进" onclick="insertIndent('tbCommentBody')">
+            <img id="ubb_code" class="comment_icon" src="assets/1572616575-74174e6e1601689ba012dba4ecc323e1.gif" alt="代码" title="添加代码" onclick="insertUbbCode()">
+            <img id="ubb_img" class="comment_icon" src="assets/1572616575-ff3290f0d150b320786c15e5e6e84529.gif" alt="图片" title="上传图片" onclick="OpenImageUploadWindow();">
+        </div>
+    </div>
+    <textarea id="tbCommentBody" class="comment_textarea"></textarea>
+</div>
+<p id="commentbox_opt">
+    <input id="btn_comment_submit" type="button" class="comment_btn" value="提交评论">
+    
+    <a href="javascript:void(0);" onclick="return logout();" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">退出</a>
+            <a id="commentbox_opt_sub" href="javascript:void(0);" title="订阅后有新评论时会邮件通知您" onclick="commentManager.Subscribe()" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">订阅评论</a>
+</p>
+<div id="tip_comment2" style="color: red; --darkreader-inline-color:#e63f3c;" data-darkreader-inline-color=""></div>
+<p>[Ctrl+Enter快捷键提交]</p>
+
+</div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"><a href="http://www.ucancode.com/index.htm" target="_blank" onclick="ga('send', 'event', 'Link', 'click', 'T2-工控')" referrerpolicy="no-referrer" rel="noopener noreferrer">【推荐】超50万行VC++源码: 大型组态工控、电力仿真CAD与GIS源码库</a><br><a href="https://www.jdcloud.com/cn/activity/year-end?utm_source=DMT_cnblogs&amp;utm_medium=CH&amp;utm_campaign=q4vm&amp;utm_term=Virtual-Machines" target="_blank" onclick="ga('send', 'event', 'Link', 'click', 'T2-京东云')" referrerpolicy="no-referrer" rel="noopener noreferrer">【活动】京东云服务器_云主机低于1折，低价高性能产品备战双11</a><br><a href="https://www.ctyun.cn/activity/#/201910/ecs?hmsr=%E7%9C%8B%E7%9C%8B-%E5%8D%9A%E5%AE%A2%E5%9B%AD-10.16-10%E6%9C%88%E7%89%B9%E6%83%A0&amp;hmpl=&amp;hmcu=&amp;hmkw=&amp;hmci=?track=|cp:cz_blog|tgdy:46861|ttjh:shouyedingbuyoucefenlan|key:czkk12|pf:pc" target="_blank" onclick="ga('send', 'event', 'Link', 'click', 'T2-天翼云')" referrerpolicy="no-referrer" rel="noopener noreferrer">【推荐】天翼云双十一提前开抢，1核1G云主机3个月仅需59元</a><br><a href="http://click.aliyun.com/m/1000081987/" target="_blank" onclick="ga('send', 'event', 'Link', 'click', 'T2-阿里云')" referrerpolicy="no-referrer" rel="noopener noreferrer">【推荐】阿里云双11活动，热门产品低至一折等你来抢！</a><br><a href="https://www.getui.com/2019devfest?f=5&amp;p=10&amp;c=15&amp;ch=1&amp;hmsr=%E5%8D%9A%E5%AE%A2%E5%9B%AD&amp;hmpl=2019%E5%BC%80%E5%8F%91%E8%80%85%E8%8A%82&amp;hmcu=PC&amp;hmkw=&amp;hmci=" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">【福利】个推四大热门移动开发SDK全部免费用一年，限时抢！</a><br></div>
+    <div id="opt_under_post"></div>
+    
+    
+    
+    
+    <div id="under_post_news"><div class="recomm-block"><b>相关博文：</b><br>·  <a title="Steins;Gate 主程序汉化流程" href="https://www.cnblogs.com/bl4nk/archive/2011/07/17/2909131.html" target="_blank" onclick="clickRecomItmem(2909131)" referrerpolicy="no-referrer" rel="noopener noreferrer">Steins;Gate 主程序汉化流程</a><br>·  <a title="Steins;Gate 汉化工具包" href="https://www.cnblogs.com/bl4nk/archive/2011/08/25/2909129.html" target="_blank" onclick="clickRecomItmem(2909129)" referrerpolicy="no-referrer" rel="noopener noreferrer">Steins;Gate 汉化工具包</a><br>·  <a title="json解包与json封包" href="https://www.cnblogs.com/cchHers/p/5357583.html" target="_blank" onclick="clickRecomItmem(5357583)" referrerpolicy="no-referrer" rel="noopener noreferrer">json解包与json封包</a><br>·  <a title="游戏汉化技术内幕 第2章解包封包" href="https://www.cnblogs.com/javabluesky/archive/2008/12/19/2211712.html" target="_blank" onclick="clickRecomItmem(2211712)" referrerpolicy="no-referrer" rel="noopener noreferrer">游戏汉化技术内幕 第2章解包封包</a><br>·  <a title="轻松玩转AI 与PDF文件的转化（完美解决字体问题）" href="https://www.cnblogs.com/imsoft/p/4338172.html" target="_blank" onclick="clickRecomItmem(4338172)" referrerpolicy="no-referrer" rel="noopener noreferrer">轻松玩转AI 与PDF文件的转化（完美解决字体问题）</a><br>»  <a target="_blank" href="https://recomm.cnblogs.com/r?postId=2909132&amp;index=1" referrerpolicy="no-referrer" rel="noopener noreferrer">更多推荐...</a></div></div>
+    
+    <div id="under_post_kb">
+</div>
+    
+    
+</div>    </div>
+</div>
+            </div>
+        </div>
+
+        <div id="sideBar">
+            <div id="sideBarMain">
+                
+<div id="sidebar_news" class="newsItem">
+<h3 class="catListTitle">公告</h3>
+
+<div id="blog-news">
+    
+    <div id="profile_block">
+        昵称：
+        <a href="https://home.cnblogs.com/u/bl4nk/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+            wwwwwwwww11we
+        </a>
+        <br>
+        园龄：
+        <a href="https://home.cnblogs.com/u/bl4nk/" title="入园时间：2011-04-19" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+            8年6个月
+        </a>
+        <br>
+        粉丝：
+        <a href="https://home.cnblogs.com/u/bl4nk/followers/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+            13
+        </a>
+        <br>
+        关注：
+        <a href="https://home.cnblogs.com/u/bl4nk/followees/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+            1
+        </a>
+        <div id="p_b_follow">
+<a href="javascript:void(0)" onclick="follow('c105f5aa-dd69-e011-a53f-842b2b196315')" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">+加关注</a></div>
+        
+    </div>
+</div></div>
+
+                <div id="calendar"></div>                
+                
+                <div id="leftcontentcontainer">
+                    <!-- begin:SingleColumn -->
+                    <div id="blog-sidecolumn">
+<!-- 搜索 -->
+<div id="sidebar_search" class="sidebar-block">
+    <div id="sidebar_search" class="mySearch">
+        <h3 class="catListTitle">搜索</h3>
+        <div id="sidebar_search_box">
+            <div id="widget_my_zzk" class="div_my_zzk">
+                <input type="text" id="q" onkeydown="return zzk_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="zzk_go()" type="button" value="找找看" id="btnZzk" class="btn_my_zzk">
+            </div>
+            <div id="widget_my_google" class="div_my_zzk">
+                <input type="text" name="google_q" id="google_q" onkeydown="return google_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="google_go()" type="button" value="谷歌搜索" class="btn_my_zzk">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 常用链接 -->
+<div id="sidebar_shortcut" class="sidebar-block">
+    
+<h3 class="catListTitle">
+常用链接
+</h3>
+<ul>
+        <li>
+
+<a href="https://www.cnblogs.com/bl4nk/p/" title="我的博客的随笔列表" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">我的随笔</a>
+</li>
+        <li>
+
+<a href="https://www.cnblogs.com/bl4nk/MyComments.html" title="我的发表过的评论列表" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">我的评论</a>
+</li>
+        <li>
+
+<a href="https://www.cnblogs.com/bl4nk/OtherPosts.html" title="我评论过的随笔列表" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">我的参与</a>
+</li>
+        <li>
+
+<a href="https://www.cnblogs.com/bl4nk/RecentComments.html" title="我的博客的评论列表" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">最新评论</a>
+</li>
+        <li>
+
+<a href="https://www.cnblogs.com/bl4nk/tag/" title="我的博客的标签列表" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">我的标签</a>
+</li>
+</ul>
+
+<!-- TODO: 检查是否有使用这一部分的控件，如果没有则应该删除。 -->
+
+
+</div>
+
+<!-- 最新随笔 -->
+<div id="sidebar_recentposts" class="sidebar-block">
+    
+<div class="catListEssay">
+    <h3 class="catListTitle">最新随笔</h3>
+    <ul>
+                <li>
+                    
+
+<a href="https://www.cnblogs.com/bl4nk/p/4219968.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">1.Google 域名的秘密</a>
+
+                </li>
+                <li>
+                    
+
+<a href="https://www.cnblogs.com/bl4nk/p/3960912.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">2.路由器刷OpenWRT配置isatap ipv6和vpn服务器实现免费上网</a>
+
+                </li>
+                <li>
+                    
+
+<a href="https://www.cnblogs.com/bl4nk/p/3299368.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">3.Windows7和Archlinux双系统硬盘安装笔记</a>
+
+                </li>
+                <li>
+                    
+
+<a href="https://www.cnblogs.com/bl4nk/archive/2013/03/05/2945063.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">4.「小技巧」利用Chrome手动找出豆瓣小站和新浪微音乐的歌曲地址</a>
+
+                </li>
+                <li>
+                    
+
+<a href="https://www.cnblogs.com/bl4nk/archive/2013/02/08/2909466.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">5.「ext2fsd」Windows系统读写ext2/3/4文件系统的工具</a>
+
+                </li>
+                <li>
+                    
+
+<a href="https://www.cnblogs.com/bl4nk/archive/2012/07/16/2909123.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">6.「The King of Fighters i 2012」obm格式转换工具</a>
+
+                </li>
+                <li>
+                    
+
+<a href="https://www.cnblogs.com/bl4nk/archive/2011/11/13/2909125.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">7.Innocent Grey和Noesis社GalGame工具</a>
+
+                </li>
+                <li>
+                    
+
+<a href="https://www.cnblogs.com/bl4nk/archive/2011/09/03/2909126.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">8.『クロウカシス~七憑キノ贄(七凭之祭)』汉化工具包</a>
+
+                </li>
+                <li>
+                    
+
+<a href="https://www.cnblogs.com/bl4nk/archive/2011/08/26/2909127.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">9.「七凭之祭」汉化</a>
+
+                </li>
+                <li>
+                    
+
+<a href="https://www.cnblogs.com/bl4nk/archive/2011/08/25/2909129.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">10.Steins;Gate 汉化工具包</a>
+
+                </li>
+    </ul>
+</div>
+
+</div>
+
+
+<!-- 我的标签 -->
+<div id="sidebar_toptags" class="sidebar-block">
+    
+<div class="catListTag">
+    <h3 class="catListTitle">我的标签</h3>
+    <ul>
+        
+        <li>
+            <a href="https://www.cnblogs.com/bl4nk/tag/HMM/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">HMM</a>(1)
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/bl4nk/tag/%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">语音识别</a>(1)
+        </li>
+
+    </ul>
+</div>
+
+</div>
+
+<!-- 积分与排名 -->
+
+
+<!-- 随笔分类、随笔档案、文章分类、新闻分类、相册、链接 -->
+<div id="sidebar_categories">
+    
+        <div class="catListPostArchive">
+            <h3 class="catListTitle">
+                
+
+随笔档案
+
+
+
+            </h3>
+            <ul>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/bl4nk/archive/2015/01.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2015年1月(1)
+</a>
+
+                            
+
+                        </li>
+                        
+                        <li>
+                            
+<a href="https://www.cnblogs.com/bl4nk/archive/2014/09.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2014年9月(1)
+</a>
+
+                            
+
+                        </li>
+                        
+                        <li>
+                            
+<a href="https://www.cnblogs.com/bl4nk/archive/2013/09.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2013年9月(1)
+</a>
+
+                            
+
+                        </li>
+                        
+                        <li>
+                            
+<a href="https://www.cnblogs.com/bl4nk/archive/2013/03.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2013年3月(1)
+</a>
+
+                            
+
+                        </li>
+                        
+                        <li>
+                            
+<a href="https://www.cnblogs.com/bl4nk/archive/2013/02.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2013年2月(1)
+</a>
+
+                            
+
+                        </li>
+                        
+                        <li>
+                            
+<a href="https://www.cnblogs.com/bl4nk/archive/2012/07.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2012年7月(1)
+</a>
+
+                            
+
+                        </li>
+                        
+                        <li>
+                            
+<a href="https://www.cnblogs.com/bl4nk/archive/2011/11.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2011年11月(1)
+</a>
+
+                            
+
+                        </li>
+                        
+                        <li>
+                            
+<a href="https://www.cnblogs.com/bl4nk/archive/2011/09.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2011年9月(1)
+</a>
+
+                            
+
+                        </li>
+                        
+                        <li>
+                            
+<a href="https://www.cnblogs.com/bl4nk/archive/2011/08.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2011年8月(3)
+</a>
+
+                            
+
+                        </li>
+                        
+                        <li>
+                            
+<a href="https://www.cnblogs.com/bl4nk/archive/2011/07.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2011年7月(2)
+</a>
+
+                            
+
+                        </li>
+                        
+                        <li>
+                            
+<a href="https://www.cnblogs.com/bl4nk/archive/2011/06.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2011年6月(1)
+</a>
+
+                            
+
+                        </li>
+                        
+                        <li>
+                            
+<a href="https://www.cnblogs.com/bl4nk/archive/2011/04.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    2011年4月(15)
+</a>
+
+                            
+
+                        </li>
+                        
+            </ul>
+        </div>
+
+</div>
+
+<!-- 最新评论 -->
+<div id="sidebar_recentcomments" class="sidebar-block">
+    <div id="recent_comments_wrap" class="RecentComment">
+    <h3 class="catListTitle">最新评论</h3>
+    <div class="RecentCommentBlock">
+        <ul>
+                    <li class="recent_comment_title"><a href="http://www.cnblogs.com/bl4nk/p/3960912.html#3622545" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">1. Re:路由器刷OpenWRT配置isatap ipv6和vpn服务器实现免费上网</a></li>
+                    <li class="recent_comment_body">现在还能用吗？radvd都不能用了</li>
+                    <li class="recent_comment_author">--beijihan</li>
+        </ul>
+    </div>
+</div>
+</div>
+
+
+
+<!-- 阅读排行榜 -->
+<div id="sidebar_topviewedposts" class="sidebar-block">
+    
+<div id="topview_posts_wrap">
+    <h3 class="catListTitle">阅读排行榜</h3>
+    <div id="TopViewPostsBlock">
+        <ul style="word-break:break-all">
+                    <li>
+                        <a href="https://www.cnblogs.com/bl4nk/archive/2013/02/08/2909466.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            1. 「ext2fsd」Windows系统读写ext2/3/4文件系统的工具(6292)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/bl4nk/p/3960912.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            2. 路由器刷OpenWRT配置isatap ipv6和vpn服务器实现免费上网(3449)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/bl4nk/p/3299368.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            3. Windows7和Archlinux双系统硬盘安装笔记(3142)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/bl4nk/p/4219968.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            4. Google 域名的秘密(3054)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/bl4nk/archive/2013/03/05/2945063.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            5. 「小技巧」利用Chrome手动找出豆瓣小站和新浪微音乐的歌曲地址(1761)
+                        </a>
+                    </li>
+        </ul>
+    </div>
+</div>
+</div>
+
+<!-- 评论排行榜 -->
+
+
+<!-- 推荐排行榜 -->
+</div>
+                    
+                    <!-- end:  SingleColumn -->
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+    <div id="footer">
+        <!--done-->
+Copyright © 2019 wwwwwwwww11we
+<br><span id="poweredby">Powered by .NET Core 3.0.0 on Linux</span>
+
+    </div>
+</div>
+        
+      </div>
+    </body>
+  </html>

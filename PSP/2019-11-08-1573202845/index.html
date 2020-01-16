@@ -1,0 +1,607 @@
+
+  <!DOCTYPE html>
+  <html id="" class="">
+    <!-- OriginalSrc: http://ppsspp.cn/user/wdmnzhh -->
+    <head>
+      <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <title>wdmnzhh | 做最好的模拟器中文交流论坛,论坛包含PPSSPP开发版，PCSX2，rpcs3模拟器下载，citra模拟器，xenia等模拟器，PSP汉化游戏,PS3游戏，PC游戏资源网站,ppsspp游戏资源网站,模拟器论坛</title>
+      
+
+<link rel="stylesheet" type="text/css" href="assets/1573202845-a369294724424b6806664798ba9ed9fd.css" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="assets/1573202845-4d12c0cc89ab0d6e385040b0f5097bf1.css" referrerpolicy="no-referrer">
+<link rel="prefetch stylesheet" href="assets/1573202845-d28249e615e8c9704a9a8fb40ed9f937.css" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="assets/1573202845-c137d58bf773a9f82ac003e61a608b0e.css" referrerpolicy="no-referrer">
+
+
+<style class="darkreader darkreader--fallback" media="screen"></style>
+<style class="darkreader darkreader--text" media="screen"></style>
+<style class="darkreader darkreader--invert" media="screen"></style>
+<style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}</style>
+<style class="darkreader darkreader--user-agent" media="screen">html {
+    background-color: #181919 !important;
+}
+html, body, input, textarea, select, button {
+    background-color: #181919;
+}
+html, body, input, textarea, select, button {
+    border-color: #565452;
+    color: #e4dfd7;
+}
+a {
+    color: #448adb;
+}
+table {
+    border-color: #4b4a48;
+}
+::placeholder {
+    color: #b6afa3;
+}
+::selection {
+    background-color: #1157ab;
+    color: #fbf7f1;
+}
+::-moz-selection {
+    background-color: #1157ab;
+    color: #fbf7f1;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #52560e !important;
+    color: #e4dfd7 !important;
+}
+::-webkit-scrollbar {
+    background-color: #1c1d1d;
+    color: #c1bbb0;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #2a2b2b;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #323333;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #3d3e3f;
+}
+::-webkit-scrollbar-corner {
+    background-color: #181919;
+}
+* {
+    scrollbar-color: #2a2b2b #1c1d1d;
+}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--override" media="screen">.jfk-bubble {
+    background-color: #000000 !important;
+}
+.vimvixen-hint {
+    background-color: #705000 !important;
+    border-color: #caa92c !important;
+    color: #ece1c2 !important;
+}</style>
+<style type="text/css">@keyframes fadeInOpacity{0%{opacity:0}to{opacity:1}}:hover>*>.fbvd--wrapper{animation-name:fadeInOpacity;animation-duration:.3s;opacity:1}.fbvd--wrapper{position:absolute;top:10px;left:10px;opacity:0;text-align:center;margin:0;z-index:5}.fbvd--wrapper a{background: url("") no-repeat 3px 4.55px; background-color: #fff; display:inline-block;font:700 14px Helvetica,Arial,sans-serif;color:#4b4f56;text-decoration:none;vertical-align:middle;padding:0px 8px 0px;margin-right:8px;border-radius:2px; line-height: 22px; padding-left:19px; border: 1px solid #e7e7e7; background-size: 13px}.fbvd--wrapper a:last-child{margin-right:0}.fbvd--wrapper a:hover{text-decoration:none}.fbvd--wrapper a:focus{box-shadow:0 0 1px 2px rgba(88,144,255,.75),0 1px 1px rgba(0,0,0,.15);outline:none}.fbvd--wrapper b{font-size:13px;position:relative;top:1px;color:#3b5998;font-weight:400}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+
+      
+    </head>
+    <body class="page-user page-user-wdmnzhh page-status-200 skin-default mx-wc-selected-elem mx-wc-1573202845">
+    <div id="header-menu">
+<div class="material-load-bar" style="height: 0px;">
+      <div class="material-bar"></div>
+      <div class="material-bar"></div>
+      <div class="material-bar"></div>
+    </div>
+<header id="header" component="navbar">
+    <ul class="header-inner">
+        <li id="menu-trigger" data-trigger="#sidebar">
+            <div class="line-wrap">
+                <div class="line top"></div>
+                <div class="line center"></div>
+                <div class="line bottom"></div>
+            </div>
+        </li>
+    	<li class="logo ">
+			
+
+            
+			<a class="title" href="http://ppsspp.cn/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+				模道团
+			</a>
+			
+        </li>
+
+        
+
+        <li class="pull-right">
+        <ul class="top-menu">
+            <li class="nav navbar-nav pagination-block visible-lg visible-md">
+                <div class="dropdown">
+                    <i class="fa fa-angle-double-up pointer fa-fw pagetop"></i>
+                    <i class="fa fa-angle-up pointer fa-fw pageup"></i>
+
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <span class="pagination-text"></span>
+                    </a>
+
+                    <i class="fa fa-angle-down pointer fa-fw pagedown"></i>
+                    <i class="fa fa-angle-double-down pointer fa-fw pagebottom"></i>
+
+                    <div class="progress-container">
+                        <div class="progress-bar"></div>
+                    </div>
+
+                    <ul class="dropdown-menu" role="menu">
+                        <li>
+                            <input type="text" class="form-control" id="indexInput" placeholder="输入索引">
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li>
+                
+            </li>
+            
+            <li data-original-title="" title="">
+                <form id="search-form" class="hidden-xs" role="search" method="GET">
+                    
+                    <button id="search-button" type="button" class="btn btn-link waves-effect"><i class="fa fa-search fa-fw"></i></button>
+                </form>
+            </li>
+            
+
+			
+            
+            <li class="hidden-xs">
+                <a href="http://ppsspp.cn/register" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+					<span>注册</span>
+				</a>
+            </li>
+            
+            <li class="hidden-xs">
+            	<a href="http://ppsspp.cn/login" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+					<span>登录</span>
+				</a>
+            </li>
+            
+            </ul>
+        </li>
+    </ul>
+
+</header>
+</div>
+<section id="main">
+    <aside id="sidebar">
+        <div class="sidebar-inner">
+            <div class="si-inner">
+                <ul class="main-menu">
+                    <li id="toggle-width" class="hidden-xs">
+                        <div class="toggle-switch">
+                            
+                            <label for="tw-switch" class="ts-helper"></label>
+                        </div>
+                    </li>
+                    
+                    
+                    
+                    
+                    
+                    
+
+                    
+
+					
+					
+					<li class="">
+						<a class="navigation-link" href="http://ppsspp.cn/categories" title="版块" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+							
+							<i class="fa fa-fw fa-list"></i>
+							
+							
+							板块
+							
+						</a>
+					</li>
+					
+					
+					
+					
+					
+					<li class="">
+						<a class="navigation-link" href="http://ppsspp.cn/recent" title="最新" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+							
+							<i class="fa fa-fw fa-clock-o"></i>
+							
+							
+							最新
+							
+						</a>
+					</li>
+					
+					
+					
+					<li class="">
+						<a class="navigation-link" href="http://ppsspp.cn/tags" title="话题" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+							
+							<i class="fa fa-fw fa-tags"></i>
+							
+							
+							话题
+							
+						</a>
+					</li>
+					
+					
+					
+					<li class="">
+						<a class="navigation-link" href="http://ppsspp.cn/popular" title="热门" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+							
+							<i class="fa fa-fw fa-fire"></i>
+							
+							
+							热门
+							
+						</a>
+					</li>
+					
+					
+					
+					
+					
+					
+					
+					
+                </ul>
+            </div>
+        </div>
+    </aside>
+</section>
+
+
+	<div class="container" id="content">
+		<noscript>
+		<div class="alert alert-danger">
+			<p>
+				Your browser does not seem to support JavaScript. As a result, your viewing experience will be diminished, and you may not be able to execute some actions.
+			</p>
+			<p>
+				Please download a browser that supports JavaScript, or enable it if it's disabled (i.e. NoScript).
+			</p>
+		</div>
+	</noscript>
+<ol class="breadcrumb">
+	
+	<li itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb">
+		<a href="http://ppsspp.cn/" itemprop="url" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+			<span itemprop="title">
+				主页
+				
+			</span>
+		</a>
+	</li>
+	
+	<li component="breadcrumb/current" itemscope="itemscope" itemtype="http://data-vocabulary.org/Breadcrumb" class="active">
+		
+			<span itemprop="title">
+				wdmnzhh
+				
+				
+				
+				
+			</span>
+		
+	</li>
+	
+</ol>
+
+<div class="account profile-view">
+	<div class="card user-profile-view" data-uid="7698">
+	<div class="card-body cover" component="account/cover" style="background-image: url(/assets/images/cover-default.png); background-position: 50% 50%;">
+		
+	</div>
+
+	<div class="card-footer">
+		<div class="profile-pic">
+	        <div class="user-icon profile-header-img" style="background-color: rgb(121, 85, 72); --darkreader-inline-bgcolor:#564037;" data-original-title="" title="" data-darkreader-inline-bgcolor="">W
+	        </div>
+	        <span component="user/status" class="status offline" title="离线"></span>
+        </div>
+
+        <div class="user-info">
+	        <h3 class="fullname">wdmnzhh</h3>
+			<h4 class="username">@wdmnzhh</h4>
+		</div>
+
+        
+		<div class="account-stats">
+			
+			<div class="stat">
+				<div class="human-readable-number" title="2">2</div>
+				<span class="stat-label">声望</span>
+			</div>
+			
+
+			<div class="stat">
+				<div class="human-readable-number" title="5">5</div>
+				<span class="stat-label">帖子</span>
+			</div>
+
+			<div class="stat">
+				<div class="human-readable-number" title="795">795</div>
+				<span class="stat-label">资料浏览</span>
+			</div>
+
+			<div class="stat">
+				<div class="human-readable-number" title="0">0</div>
+				<span class="stat-label">粉丝</span>
+			</div>
+
+			<div class="stat">
+				<div class="human-readable-number" title="0">0</div>
+				<span class="stat-label">关注</span>
+			</div>
+		</div>
+		
+
+		
+
+		<div class="btn-group account-fab">
+	<button type="button" class="btn btn-primary btn-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+		<i class="fa fa-ellipsis-v"></i>
+	</button>
+	<ul class="dropdown-menu pull-right" role="menu">
+		<li>
+			<a href="http://ppsspp.cn/user/wdmnzhh" class="inline-block" id="profile" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><i class="fa fa-fw fa-user"></i> 资料</a>
+		</li>
+		
+
+		
+		
+		<li>
+  			<a component="account/flag" href="#">举报资料</a>
+  		</li>
+		
+
+		
+		
+		
+
+		<li class="divider"></li>
+		<li><a href="http://ppsspp.cn/user/wdmnzhh/following" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><i class="fa fa-fw fa-users"></i> 关注</a></li>
+		<li><a href="http://ppsspp.cn/user/wdmnzhh/followers" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><i class="fa fa-fw fa-users"></i> 粉丝</a></li>
+		<li class="divider"></li>
+		<li><a href="http://ppsspp.cn/user/wdmnzhh/topics" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><i class="fa fa-fw fa-book"></i> 主题</a></li>
+		<li><a href="http://ppsspp.cn/user/wdmnzhh/posts" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><i class="fa fa-fw fa-pencil"></i> 帖子</a></li>
+		<li><a href="http://ppsspp.cn/user/wdmnzhh/best" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><i class="fa fa-fw fa-pencil"></i> 最佳</a></li>
+		<li><a href="http://ppsspp.cn/user/wdmnzhh/groups" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><i class="fa fa-fw fa-users"></i> 群组</a></li>
+		
+		
+	</ul>
+</div>
+
+	</div>
+</div>
+
+	<div class="row">
+		<div class="col-md-4">
+			<div class="card">
+				<div class="card-body card-padding">
+					
+
+					
+
+					
+
+					
+
+					
+
+					<div class="profile-label">注册时间</div>
+					<div class="timeago account-bio-value" title="2018年8月18日 上午2:57" datetime="2018-08-17T17:57:29.887Z">2018年8月18日 上午2:57</div>
+
+					<div class="profile-label">最后登录</div>
+					<div class="timeago account-bio-value" title="2018年8月22日 上午1:49" datetime="2018-08-21T16:49:28.472Z">2018年8月22日 上午1:49</div>
+
+					
+					
+					
+				</div>
+			</div>
+
+			
+
+		</div>
+		<div class="col-md-8 user-recent-posts">
+			<div class="card">
+				<div class="card-header ch-alt">
+					<i class="fa fa-edit"></i> 新帖
+				</div>
+				
+				<div class="card-body card-padding" component="posts" data-nextstart="80">
+	
+	<div class="timeline single">
+		<div class="frame">
+			<div class="timeline-badge" style="background-color: rgb(161, 181, 108); border-color: rgb(161, 181, 108); --darkreader-inline-bgcolor:#505933; --darkreader-inline-border-top:#5d673c; --darkreader-inline-border-right:#5d673c; --darkreader-inline-border-bottom:#5d673c; --darkreader-inline-border-left:#5d673c;" data-darkreader-inline-bgcolor="" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+				
+			</div>
+			<span class="timeline-date"><a href="http://ppsspp.cn/category/6/ps3%E6%A8%A1%E6%8B%9F%E5%99%A8-rpcs3" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">发布在 [PS3模拟器]RPCS3 </a> <span class="timeago" title="2018年8月22日 上午1:49" datetime="2018-08-21T16:49:28.389Z">2018年8月22日 上午1:49</span> •
+			<a href="http://ppsspp.cn/topic/1808/ps3%E5%A5%B3%E7%A5%9E%E5%BC%82%E9%97%BB%E5%BD%955%E6%97%A5%E7%89%88%E6%B1%89%E5%8C%96%E8%A1%A5%E4%B8%81v3-5-3/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">阅读更多</a></span>
+			<div class="timeline-content">
+				<p><a class="plugin-mentions-user plugin-mentions-a" href="http://ppsspp.cn/uid/7720" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">@jiukai</a> cpk工具很多<br>
+比如<br>
+cpktools<br>
+Crifilesystem<br>
+CpkMaker<br>
+CriPakGUI（可解包 p5官方cpk）<br>
+自行搜索</p>
+
+			</div>
+		</div>
+	</div>
+	
+	<div class="timeline single">
+		<div class="frame">
+			<div class="timeline-badge" style="background-color: rgb(161, 181, 108); border-color: rgb(161, 181, 108); --darkreader-inline-bgcolor:#505933; --darkreader-inline-border-top:#5d673c; --darkreader-inline-border-right:#5d673c; --darkreader-inline-border-bottom:#5d673c; --darkreader-inline-border-left:#5d673c;" data-darkreader-inline-bgcolor="" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+				
+			</div>
+			<span class="timeline-date"><a href="http://ppsspp.cn/category/6/ps3%E6%A8%A1%E6%8B%9F%E5%99%A8-rpcs3" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">发布在 [PS3模拟器]RPCS3 </a> <span class="timeago" title="2018年8月21日 下午11:04" datetime="2018-08-21T14:04:47.647Z">2018年8月21日 下午11:04</span> •
+			<a href="http://ppsspp.cn/topic/1808/ps3%E5%A5%B3%E7%A5%9E%E5%BC%82%E9%97%BB%E5%BD%955%E6%97%A5%E7%89%88%E6%B1%89%E5%8C%96%E8%A1%A5%E4%B8%81v3-5-3/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">阅读更多</a></span>
+			<div class="timeline-content">
+				<p><a class="plugin-mentions-user plugin-mentions-a" href="http://ppsspp.cn/uid/7720" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">@jiukai</a> 还不够详细，难道要手把手！</p>
+<p>汉化补丁的话，简单来说就是软破 模拟器 han破解 把汉化补丁弄进内置硬盘目录，硬破弄进ISO里面，就这么简单，硬破必须弄进hdd.cpk里面。</p>
+<p>作弊码的话上面的两个网址慢慢去看看吧</p>
+
+			</div>
+		</div>
+	</div>
+	
+	<div class="timeline single">
+		<div class="frame">
+			<div class="timeline-badge" style="background-color: rgb(161, 181, 108); border-color: rgb(161, 181, 108); --darkreader-inline-bgcolor:#505933; --darkreader-inline-border-top:#5d673c; --darkreader-inline-border-right:#5d673c; --darkreader-inline-border-bottom:#5d673c; --darkreader-inline-border-left:#5d673c;" data-darkreader-inline-bgcolor="" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+				
+			</div>
+			<span class="timeline-date"><a href="http://ppsspp.cn/category/6/ps3%E6%A8%A1%E6%8B%9F%E5%99%A8-rpcs3" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">发布在 [PS3模拟器]RPCS3 </a> <span class="timeago" title="2018年8月19日 上午2:16" datetime="2018-08-18T17:16:26.859Z">2018年8月19日 上午2:16</span> •
+			<a href="http://ppsspp.cn/topic/1808/ps3%E5%A5%B3%E7%A5%9E%E5%BC%82%E9%97%BB%E5%BD%955%E6%97%A5%E7%89%88%E6%B1%89%E5%8C%96%E8%A1%A5%E4%B8%81v3-5-3/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">阅读更多</a></span>
+			<div class="timeline-content">
+				<p>再发几个作弊代码吧，免去刷刷刷的痛苦</p>
+<p>首先是金手指代码</p>
+<p>战斗后得到经验值倍数<br>
+搜索：7F391B96806100907C6307B438800090<br>
+替换：7F391B96806100901C63XXXX38800090<br>
+x2 = 0002<br>
+x4 = 0004<br>
+x8 = 0008<br>
+x16 = 0010<br>
+x32 = 0020<br>
+x64 = 0040<br>
+x128 = 0080<br>
+x256 = 0100<br>
+x512 = 0200<br>
+x1024 = 0400<br>
+x2048 = 0800<br>
+x4096 = 1000<br>
+上面的替换代码中的xxxx是自定义经验值倍数，自己按照喜欢的倍数替换之（比如7F391B96806100901C63001038800090就是16倍）</p>
+<p>无限弹药<br>
+搜索: 7CA62010B0A302944E800020<br>
+替换: 38A00063B0A302944E800020</p>
+<p>以上金手指代码使用方法是解密eboot.bin为eboot.elf用十六进制编辑器搜索十六进制代码替换之，再加密eboot.elf为eboot.bin就行了（最新版工具地址http://bbs.a9vg.com/forum.php?mod=viewthread&amp;tid=5337869），软硬破模拟器都能用（han和直破不支持）</p>
+<p>下面是bsd存档代码</p>
+<p>; "Persona 5"<br>
+[BLJM61346/NPJB00769]<br>
+;disc_hash_key=<br>
+secure_file_id:*=01020301020300000000000000000000<br>
+上面是bsd解密存档必须的key，用记事本添加进bsd安装目录的games.conf文件中。</p>
+<p>[所持金 9999999]<br>
+00002D3B 00000098<br>
+00002D3C 00000096<br>
+00002D3D 0000007F</p>
+<p>[知识魅力等能力最大]<br>
+[知識]<br>
+000124A3 000000FF<br>
+[魅力]<br>
+000124A5 000000FF<br>
+[器用]<br>
+000124A7 000000FF<br>
+[度胸]<br>
+000124A9 000000FF<br>
+[優し]<br>
+000124AB 000000FF<br>
+这是修改存档的作弊代码，解密后点击Cheats添加到里面就行了。存档修改所有都能用，包括han和直破。（详细方法http://bbs.duowan.com/forum.php?mod=viewthread&amp;tid=35723197）</p>
+<p>作弊太厉害就没意思了，就这些代码就够了</p>
+
+			</div>
+		</div>
+	</div>
+	
+	<div class="timeline single">
+		<div class="frame">
+			<div class="timeline-badge" style="background-color: rgb(161, 181, 108); border-color: rgb(161, 181, 108); --darkreader-inline-bgcolor:#505933; --darkreader-inline-border-top:#5d673c; --darkreader-inline-border-right:#5d673c; --darkreader-inline-border-bottom:#5d673c; --darkreader-inline-border-left:#5d673c;" data-darkreader-inline-bgcolor="" data-darkreader-inline-border-top="" data-darkreader-inline-border-right="" data-darkreader-inline-border-bottom="" data-darkreader-inline-border-left="">
+				
+			</div>
+			<span class="timeline-date"><a href="http://ppsspp.cn/category/6/ps3%E6%A8%A1%E6%8B%9F%E5%99%A8-rpcs3" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">发布在 [PS3模拟器]RPCS3 </a> <span class="timeago" title="2018年8月18日 上午3:33" datetime="2018-08-17T18:33:21.230Z">2018年8月18日 上午3:33</span> •
+			<a href="http://ppsspp.cn/topic/1808/ps3%E5%A5%B3%E7%A5%9E%E5%BC%82%E9%97%BB%E5%BD%955%E6%97%A5%E7%89%88%E6%B1%89%E5%8C%96%E8%A1%A5%E4%B8%81v3-5-3/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">阅读更多</a></span>
+			<div class="timeline-content">
+				<p>硬破 han破解 直破全是正版系统，正版系统是不能在内置硬盘运行重签过的eboot self sprx这三种文件的，会800错误代码（能运行的话世界上就不需要自制系统了），所以那个包涵重签eboot的pkg文件对于硬破无效的（han破解和直破因为只能内置所以用不了重签过的eboot，所以战斗右上角不能汉化的问题无解）</p>
+<p>硬破正确使用方法是把重签过的文件外置到ISO里面，女神异闻录5这个游戏的eboot是个奇葩，只要把它签名成光盘类的eboot就会变成1.0的读取方式，它会自动忽略升级补丁里面的patch3ps3.cpk这种文件名，只会读取hdd.cpk的内容，所以这个游戏无论是用整合法还是内外置法对于硬破都没有汉化效果，只能替换hdd.cpk文件，高级的替换方式是解压游戏里面的那个ps3.cpk和动画字幕汉化补丁的cpk，把动画补丁里面的move文件夹移动到PS3.cpk里面覆盖（网上有cpk解包和打包工具），这样可以精简3g多的容量，而且可以提高音质，因为动画补丁里面不含音质文件，游戏会自动忽略原音质文件，造成音质不好，视频的usm文件转换时提高码率可以改善清晰度（转换usm软件自行百度Scaleform VideoEncoder）。</p>
+<p>光盘版想提高加载速度的话就解压那个原版hdd.cpk把3.4补丁整合进去，动画那个move文件夹整合到ps3.cpk，不过原版hdd打包时不选择压缩文件会巨大，压缩的话会很慢。</p>
+<p>短信头像修复那个cpk解压覆盖进3.4的cpk里面或者那个动画字幕cpk里面。</p>
+
+			</div>
+		</div>
+	</div>
+	
+	
+</div>
+				
+			</div>
+
+		</div>
+	</div>
+	<br>
+	
+
+</div>	</div>
+
+	
+
+	
+	
+
+	<div component="toaster/tray" class="alert-window">
+		
+	</div>
+	
+
+	
+
+	
+	
+	
+
+	
+
+	
+
+
+<a href="" download="" data-mx-warn="Empty URL"></a>
+</body>
+  </html>

@@ -1,0 +1,280 @@
+
+  <!DOCTYPE html>
+  <html id="" class="">
+    <!-- OriginalSrc: http://zt.tgbus.com/acghh/Teaching/2009/04/30/1440594744.shtml -->
+    <head>
+      <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <title>漫谈汉化流程中的文本处理-ACG汉化组-</title>
+      
+
+<link href="assets/1573201639-58d0aaaaac9013a348eacae64f778527.css" rel="stylesheet" type="text/css" referrerpolicy="no-referrer">
+<link href="assets/1573201639-ea4422b02d1580776b2fa7eabaca9dd0.css" rel="stylesheet" type="text/css" referrerpolicy="no-referrer">
+
+
+<style class="darkreader darkreader--fallback" media="screen"></style>
+<style class="darkreader darkreader--text" media="screen"></style>
+<style class="darkreader darkreader--invert" media="screen"></style>
+<style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}</style>
+<style class="darkreader darkreader--user-agent" media="screen">html {
+    background-color: #181919 !important;
+}
+html, body, input, textarea, select, button {
+    background-color: #181919;
+}
+html, body, input, textarea, select, button {
+    border-color: #565452;
+    color: #e4dfd7;
+}
+a {
+    color: #448adb;
+}
+table {
+    border-color: #4b4a48;
+}
+::placeholder {
+    color: #b6afa3;
+}
+::selection {
+    background-color: #1157ab;
+    color: #fbf7f1;
+}
+::-moz-selection {
+    background-color: #1157ab;
+    color: #fbf7f1;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #52560e !important;
+    color: #e4dfd7 !important;
+}
+::-webkit-scrollbar {
+    background-color: #1c1d1d;
+    color: #c1bbb0;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #2a2b2b;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #323333;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #3d3e3f;
+}
+::-webkit-scrollbar-corner {
+    background-color: #181919;
+}
+* {
+    scrollbar-color: #2a2b2b #1c1d1d;
+}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--override" media="screen">.jfk-bubble {
+    background-color: #000000 !important;
+}
+.vimvixen-hint {
+    background-color: #705000 !important;
+    border-color: #caa92c !important;
+    color: #ece1c2 !important;
+}</style>
+<style type="text/css">@keyframes fadeInOpacity{0%{opacity:0}to{opacity:1}}:hover>*>.fbvd--wrapper{animation-name:fadeInOpacity;animation-duration:.3s;opacity:1}.fbvd--wrapper{position:absolute;top:10px;left:10px;opacity:0;text-align:center;margin:0;z-index:5}.fbvd--wrapper a{background: url("") no-repeat 3px 4.55px; background-color: #fff; display:inline-block;font:700 14px Helvetica,Arial,sans-serif;color:#4b4f56;text-decoration:none;vertical-align:middle;padding:0px 8px 0px;margin-right:8px;border-radius:2px; line-height: 22px; padding-left:19px; border: 1px solid #e7e7e7; background-size: 13px}.fbvd--wrapper a:last-child{margin-right:0}.fbvd--wrapper a:hover{text-decoration:none}.fbvd--wrapper a:focus{box-shadow:0 0 1px 2px rgba(88,144,255,.75),0 1px 1px rgba(0,0,0,.15);outline:none}.fbvd--wrapper b{font-size:13px;position:relative;top:1px;color:#3b5998;font-weight:400}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--cors" media="screen">@CHARSET "UTF-8";#bdshare ul,#bdshare_s ul,#bdshare ul li,#bdshare_s ul li,#bdshare_l_c ul li,#bdshare_m_c ul li,#bdshare_pop ul,#bdshare_pop ul li{list-style:none;margin:0;padding:0}#bdshare{_overflow-x:hidden;z-index:999999;padding-bottom:2px;font-size:12px;float:left;text-align:left!important;zoom:1}#bdshare a,#bdshare_s a,#bdshare_pop a{text-decoration:none;cursor:pointer}#bdshare a:hover,#bdshare_s a:hover,#bdshare_pop a:hover{color:#333;opacity:.8;filter:alpha(opacity=80)}#bdshare img{border:0;margin:0;padding:0;cursor:pointer}#bdshare h6,#bdshare_s h6{width:100%;font:14px/22px '宋体';text-indent:.5em;font-weight:700;border-top:1px solid #fbfbfb;border-bottom:1px solid #f2f1f1;background-color:#f6f6f6;float:left;padding:5px 0;margin:0}#bdshare ul,#bdshare_s ul{width:98%;float:left;padding:8px 0;margin-left:2px;overflow:hidden}#bdshare ul li,#bdshare_s ul li{width:47%;_width:41%;float:left;margin:4px 2px}#bdshare ul li a,#bdshare_s ul li a{color:#565656;font:12px '宋体';display:block;width:98%;padding:6px 0;text-indent:2.4em;*text-indent:1.8em;_text-indent:1.8em;border:1px solid #fff}#bdshare ul li a:hover,#bdshare_s ul li a:hover{background-color:#f3f3f3;border:1px solid #eee;-webkit-border-radius:3px;-moz-border-radius:3px}#bdshare p,#bdshare_s p{width:100%;height:21px;font:12px '宋体';border-top:1px solid #f2f1f1;background-color:#f8f8f8;float:left;padding:0;margin:0}#bdshare p a,#bdshare_s p a{width:auto;text-align:right;float:right;padding:0 5px}#bdshare_l{width:212px;position:absolute;top:0;background:#fff;text-align:left}#bdshare_l_c{width:210px;float:left;border:1px solid #e9e9e9;text-align:left}#bdshare_l_c ul li{width:47%;height:26px;float:left;margin:2px}#bdshare_l_c ul li a{background:url("") no-repeat;height:auto!important}#bdshare_m{width:132px;float:right;position:absolute;zoom:1;background:#fff}#bdshare_m_c{width:130px;float:left;border:1px solid #e9e9e9;overflow:hidden;background:#fff}#bdshare_m_c ul li{width:97%;_width:90%;float:left;margin:2px}#bdshare_m_c ul li a{background:url("") no-repeat;height:auto!important}#bdshare_l,#bdshare_m{-webkit-box-shadow:0 0 7px #eee;-moz-box-shadow:0 0 7px #eee;z-index:99999}#bdshare_pop{width:300px;border:6px solid #8f8f8f;padding:0;background:#f6f6f6;position:absolute;z-index:1000000;text-align:left}#bdshare_pop{-webkit-border-radius:5px;-moz-border-radius:5px}#bdshare_pop{-webkit-box-shadow:0 0 7px #aaa;-moz-box-shadow:0 0 7px #aaa}#bdshare_pop div{border:1px solid #e9e9e9;float:left;overflow:hidden;text-align:left}#bdshare_pop h5{width:100%;height:28px;color:#626262;font:14px/28px '宋体';font-weight:700;text-indent:.5em;float:left;margin:0;overflow:hidden}#bdshare_pop h5 b{width:22px;height:23px;background:url("") no-repeat 0 0;cursor:pointer;position:absolute;right:8px;top:4px}#bdshare_pop ul{width:100%;height:256px;background:#fff;float:left;padding:8px 0;margin:0;border-top:1px solid #f2f1f1;border-bottom:1px solid #f2f1f1;overflow:auto;overflow-x:hidden}#bdshare_pop ul li{width:130px;float:left;padding:2px;margin-left:6px;_margin-left:3px;height:29px;overflow:hidden}#bdshare_pop ul li a{background:url("") no-repeat;color:#565656;font:12px '宋体';display:block;width:75%;padding:6px 0 6px 28px;border:1px solid #fff}#bdshare_pop ul li a:hover{background-color:#f3f3f3;border:1px solid #eee;-webkit-border-radius:3px;-moz-border-radius:3px}#bdshare_pop p{width:100%;font:12px '宋体';float:left;padding:5px 0 8px;margin:0;overflow:hidden}#bdshare_pop p a{width:auto;text-align:right;float:right;padding:0 5px}#bdshare_l_c p a.goWebsite,#bdshare_m_c p a.goWebsite,#bdshare_pop p a.goWebsite{text-align:right;background:url("") no-repeat 0 center;line-height:16px;padding-left:12px;color:#8c8c8c}#bdshare_l_c p a.goWebsite:hover,#bdshare_m_c p a.goWebsite:hover,#bdshare_pop p a.goWebsite:hover{color:#00a9e0}span.bds_more{background:url("http://bdimg.share.baidu.com/static/images/is.png?cdnversion=20131219") no-repeat 0 5px!important}span.bds_more,.bds_tools a{display:block;font-family:'宋体',Arial;height:16px;float:left;cursor:pointer;padding-top:6px;padding-bottom:3px;padding-left:22px}.bds_tools a{background:url("http://bdimg.share.baidu.com/static/images/is.png?cdnversion=20131219") no-repeat}.bds_tools_32 a{background:url("") no-repeat;width:37px;height:37px;display:block;float:left;margin-right:3px;text-indent:-100em;cursor:pointer}.bds_tools_32 span.bds_more{background:url("") no-repeat 0 5px!important;width:37px;height:32px;text-indent:-100em;padding-left:0}.bds_tools_24 a{background:url("") no-repeat;width:29px;height:29px;display:block;float:left;margin-right:3px text-indent:-100em;padding-left:0;cursor:pointer}.bds_tools_24 span.bds_more{background:url("") no-repeat 0 5px!important;width:29px;height:24px;text-indent:-100em;padding-left:0}.bds_more{background-image:url("")!important;background-position:0 4px!important}span.bds_nopic,.bds_tools_32 span.bds_nopic,.bds_tools_24 span.bds_nopic{background-image:none!important;padding-left:3px!important}.bdshare_b img{float:left}.bdshare_b a.shareCount,.bds_tools a.shareCount,.bds_tools_32 a.shareCount,.bds_tools_24 a.shareCount{float:left;background:url("") no-repeat!important;margin:0;padding:0;text-align:center;padding-left:5px;color:#454545;font-family:'宋体'!important}.bdshare_b a.shareCount,.bds_tools_24 a.shareCount{width:39px;height:24px;background-position:0 0;font-size:12px;line-height:24px;margin-left:3px}.bdshare_b a.shareCount:hover,.bds_tools_24 a.shareCount:hover{color:#454545!important;background-position:-44px 0!important;opacity:1!important;filter:alpha(opacity=100)!important}.bds_tools a.shareCount{width:37px;height:16px;background-position:0 -30px!important;margin-top:5px;overflow:hidden;font-size:12px;line-height:16px}.bds_tools a.shareCount:hover{color:#454545!important;background-position:-42px -30px!important;opacity:1!important;filter:alpha(opacity=100)!important}.bds_tools_32 a.shareCount{width:43px;height:32px;background-position:0 -60px!important;margin-top:5px;overflow:hidden;font-size:14px;line-height:32px;text-indent:0!important}.bds_tools_32 a.shareCount:hover{color:#454545!important;background-position:-48px -60px!important;background-position:-48px -60px;opacity:1!important;filter:alpha(opacity=100)!important}.bds_tools_24 a.shareCount{margin-top:5px}.bds_qzone{background-position:0 -75px!important}.bds_tsina{background-position:0 -115px!important}.bds_bdhome{background-position:0 -155px!important}.bds_renren{background-position:0 -195px!important}.bds_tqq{background-position:0 -235px!important}.bds_kaixin001{background-position:0 -275px!important}.bds_tqf{background-position:0 -315px!important}.bds_hi{background-position:0 -355px!important}.bds_douban{background-position:0 -395px!important}.bds_tsohu{background-position:0 -435px!important}.bds_msn{background-position:0 -475px!important}.bds_qq{background-position:0 -515px!important}.bds_taobao{background-position:0 -555px!important}.bds_tieba{background-position:0 -595px!important}.bds_sohu{background-position:0 -675px!important}.bds_t163{background-position:0 -715px!important}.bds_qy{background-position:0 -755px!important}.bds_tfh{background-position:0 -795px!important}.bds_hx{background-position:0 -835px!important}.bds_fx{background-position:0 -875px!important}.bds_ff{background-position:0 -915px!important}.bds_xg{background-position:0 -955px!important}.bds_ty{background-position:0 -995px!important}.bds_s51{background-position:0 -1035px!important}.bds_fbook{background-position:0 -1115px!important}.bds_twi{background-position:0 -1155px!important}.bds_ms{background-position:0 -1195px!important}.bds_deli{background-position:0 -1235px!important}.bds_s139{background-position:0 -1275px!important}.bds_iguba{background-position:0 -1315px!important}.bds_linkedin{background-position:0 -1354px!important}.bds_copy{background-position:0 -1393px!important}.bds_ifeng{background-position:0 -1431px!important}.bds_tuita{background-position:0 -1470px!important}.bds_meilishuo{background-position:0 -1549px!important}.bds_mogujie{background-position:0 -1589px!important}.bds_diandian{background-position:0 -1629px!important}.bds_huaban{background-position:0 -1669px!important}.bds_leho{background-position:0 -1709px!important}.bds_wealink{background-position:0 -1749px!important}.bds_duitang{background-position:0 -1789px!important}.bds_thx{background-position:0 -1829px!important}.bds_mail{background-position:0 -1870px!important}.bds_print{background-position:0 -1910px!important}.bds_baidu{background-position:0 -1950px!important}.bds_share189{background-position:0 -1990px!important}.bds_youdao{background-position:0 -2030px!important}.bds_mshare{background-position:0 -2070px!important}.bds_mop{background-position:0 -2110px!important}.bds_yaoshi{background-position:0 -2150px!important}.bds_bdxc{background-position:0 -2190px!important}.bds_sqq{background-position:0 -2230px!important}.bds_sdo{background-position:0 -2270px!important}.bds_qingbiji{background-position:0 -2310px!important}.bds_people{background-position:0 -2350px!important}.bds_kanshou{background-position:0 -2390px!important}.bds_xinhua{background-position:0 -2430px!important}.bds_yaolan{background-position:0 -2470px!important}.bds_isohu{background-position:0 -2510px!important}.bds_bdysc{background-position:0 -2550px!important}.bds_ibaidu{background-position:0 -2590px!important}#bdshare .bds_fl5,#bdshare .bds_buzz,#bdshare .bds_zx{display:none}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+
+      
+    </head>
+    <body onload="MM_preloadImages('images/a1.jpg','images/a3.jpg','images/a4.jpg','images/a5.jpg','images/a6.jpg','images/a7.jpg','images/a8.jpg')" class="mx-wc-selected-elem mx-wc-1573201639"><div id="bdshare" style="right: 0px; top: 166px; position: fixed; height: 330px; overflow: hidden;"><img src="assets/1573201639-60d0cf9445c8679a132df84e9dd505de.gif" alt="" style="float:left;margin-top:58px;"></div>
+<div id="header">
+	<div class="banner1"></div>
+    <div class="banner2"></div>
+    <div class="banner3"></div>
+    <div class="banner4"></div>
+    <div class="nav_menu">
+    	<div class="nav_menu-1 left"></div>
+        <div class="nav_menu-2 left">
+   	    <a href="http://zt.tgbus.com/acghh/" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image1','','http://zt.tgbus.com/acghh/images/a1.jpg',1)" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1573201639-69d0643e67e9fedc8eca76c706ed5ee4.jpg" name="Image1" width="55" height="44" border="0" id="Image1"></a><a href="http://zt.tgbus.com/acghh/news/" target="_blank" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image2','','http://zt.tgbus.com/acghh/images/a2.jpg',0)" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1573201639-564b3957cf1041ff115e0a74487860e7.jpg" name="Image2" width="89" height="44" border="0" id="Image2"></a> <a href="http://zt.tgbus.com/acghh/Project/" target="_blank" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image3','','http://zt.tgbus.com/acghh/images/a3.jpg',1)" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1573201639-27e9694f0673bd0822773af0ee656482.jpg" name="Image3" width="89" height="44" border="0" id="Image3"></a><a href="http://zt.tgbus.com/acghh/members/" target="_blank" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image4','','http://zt.tgbus.com/acghh/images/a4.jpg',1)" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1573201639-cf5e7253d64df00f596fcce38fd434cb.jpg" name="Image4" width="89" height="44" border="0" id="Image4"></a><a href="http://zt.tgbus.com/acghh/voices/" target="_blank" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image5','','http://zt.tgbus.com/acghh/images/a5.jpg',1)" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1573201639-5bc7edce65a349c390d5a8174f801f3f.jpg" name="Image5" width="123" height="44" border="0" id="Image5"></a><a href="http://zt.tgbus.com/acghh/work/" target="_blank" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image6','','http://zt.tgbus.com/acghh/images/a6.jpg',1)" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1573201639-36133329c3be078927f6406c9a6855d4.jpg" name="Image6" width="107" height="44" border="0" id="Image6"></a><a href="http://zt.tgbus.com/acghh/Teaching/" target="_blank" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image7','','http://zt.tgbus.com/acghh/images/a7.jpg',1)" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1573201639-55ed49a418716551e9eb9b182160ec47.jpg" name="Image7" width="90" height="44" border="0" id="Image7"></a><a href="http://forum.tgbus.com/forumdisplay.php?fid=33" target="_blank" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image8','','http://zt.tgbus.com/acghh/images/a8.jpg',1)" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1573201639-00733dbd5a62d0330c636bfe63c1266d.jpg" name="Image8" width="55" height="44" border="0" id="Image8"></a></div>
+        <div class="nav_menu-3 right"></div>
+    </div>
+     <div class="banner5"></div>
+</div>
+<div id="main">
+<div class="sso" style="margin:0 auto;width:1003px;	text-align: center;">
+<ul>
+
+
+</ul>
+<div class="clear"></div>
+</div>
+  <div class="main2">
+   	<div class="Screen3">
+    	<div class="Speaking left">
+        	<div class="Speaking-t"><b>汉化新闻-ACG汉化组</b></div>
+            <div class="Speaking-c">
+            	<div class="Article2">
+                            <h1 class="Yellow">外语是怎么变成中文的（漫谈汉化流程中的文本处理）</h1>
+                            <h2>作者：timely　来源：电玩巴士　发布时间：2009年04月30日　期望度：
+15582
+</h2>
+                            <div id="txt_ad2" style="width:160px; height:600px; float:left; position:absolute; left:0px;  margin-top: 50px; ">
+    <img width="100px" vspace="3" height="14px" border="0px" alt="�رչ��" onclick="javascript:document.getElementById('txt_ad2').style.display = 'none';" src="assets/1573201639-efb65f583d62884dbdf6b37125cf9a0f.gif">
+    
+</div>
+
+<p>原帖地址：<a href="http://www.17woo.com/viewthread.php?tid=74496" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">http://www.17woo.com/viewthread.php?tid=74496</a></p>
+		<p>
+				<font color="#0000ff" data-darkreader-inline-color="" style="--darkreader-inline-color:#4178d9;">　　一个悠长深远的故事，一部感人肺腑的传说，一番波澜起伏的争斗，一段沁人心脾的乐章。<br>
+　　我们会感动于一个世界，一些人物和它们的故事，因为这些故事是用我们的母语写就的。</font>
+				<br>
+				<font color="#0000ff" data-darkreader-inline-color="" style="--darkreader-inline-color:#4178d9;">　　那么这样的故事是如何从天书变成神奇的呢？今天我就来讲讲这背后的故事吧。</font>
+				<br>
+				<br>
+				<br>
+				<font color="#ff8c00" data-darkreader-inline-color="" style="--darkreader-inline-color:#e9a046;">一、世界观——文本变化的整个经历</font>
+		</p>
+		<p>　　一般上来说，一段文本从外语（以日语为例）变成中文，其思维流程上大致要经历这样的一个过程：<br>
+　　天书（翻译人员能看懂）-&gt;庖丁之牛（拆分下来的语素零件和逻辑关系）-&gt;毛坯房（能看了，但不美观）-&gt;婚礼花车（美观、漂亮、夺目）。<br>
+　　随便举一句话来说明这几部分的层次关系吧。<br>
+　　わたくしは気持ちいいわね。（基本是天书吧）<br>
+　　我是心情好的呢。（嗯，语素基本齐备，语法也没问题，不过直接看怎么也不像中国人说的中文）<br>
+　　我心情很好呢。（差不多像中文样了，就是语气冷冰冰的。懂日语的人可以对照原文的语气，不懂的往下看）<br>
+　　人家心情很不错呢。（一个有点撒娇的女孩子形象跃然纸上了）<br>
+　　一般来讲，完成这四步，应该全是<font color="#ff0000" data-darkreader-inline-color="" style="--darkreader-inline-color:#da3c39;">翻译</font>的工作。你是不是会说：“哇，那翻译岂不是把事情全都干了？”呵呵，且听我慢慢道来。<br><br><font color="#ff8c00" data-darkreader-inline-color="" style="--darkreader-inline-color:#e9a046;">二、人设——分工与组织</font></p>
+		<p>
+				<font color="#ff00ff" data-darkreader-inline-color="" style="--darkreader-inline-color:#df40da;">
+						<font color="#ff0000" data-darkreader-inline-color="" style="--darkreader-inline-color:#da3c39;">骑士：翻译；</font>&nbsp; &nbsp; 魔法师：润色；&nbsp; &nbsp;<font color="#4169e1" data-darkreader-inline-color="" style="--darkreader-inline-color:#6594ca;"> 野蛮人：终校； </font>&nbsp; &nbsp;<font color="#708090" data-darkreader-inline-color="" style="--darkreader-inline-color:#b3ada0;">忍者：测试</font></font>
+				<br>
+　　上回书说到，从天书到花车的四步骤，我说这些都是翻译该干的事。那么这回书就说说每个职业都应该有些什么样的技能吧。<br><font color="#2e8b57" data-darkreader-inline-color="" style="--darkreader-inline-color:#9bd0ac;">骑士：披铠挂剑，所向披靡。</font><br>
+　　游戏中的文本，一个骑士（翻译）必须要能看懂绝大部分，哪怕是借助字典。所以他们要打头阵，冲在最前面，人挡杀人佛挡杀佛。在翻译群里有时碰到一句话，如果大家都很难理解，大家就会说：”扔给润色姐姐好了……“。我觉得这是一种很残忍的行为－，－&nbsp; &nbsp;因为听说有些润色是不懂日语的，如果你一群翻译都理解不了的句子，让润色怎么去理解－，－。<br>
+　　那么<font color="#ff0000" data-darkreader-inline-color="" style="--darkreader-inline-color:#da3c39;">我的观点</font>是：在翻译阶段的工作就应该要做到信、达、雅。这才能给后边留下更多的余地。哪怕做不到”雅“，也起码要做到”达“。对于比较难的句子，也应该尽量猜一个能连贯上下文的表达上去。OS大（翻译组长）对此发表过文章[1]，实际上可以看出，他对翻译也是提出了“雅”的要求的。那么润色又做什么呢？<br><font color="#2e8b57" data-darkreader-inline-color="" style="--darkreader-inline-color:#9bd0ac;">魔法师：华丽炫烂，光彩耀眼</font><br>
+　　各位要知道，一般比较大的RPG游戏之类的，往往会有几十万甚至上百万的文本量，参与一个工程的翻译有时会多达十来个。那么这些翻译每个人都会有一套自己的惯用表达方式。比如我喜欢用”因此“、”于是“，不爱用”所以“；喜欢用”可是“、”不过“，不爱用”但是“。这些都是各人的习惯。另外有一些词汇，各个翻译会有不同的处理，比如わし，有的翻译成“我”，有的是“老夫”，有的是“老朽”。可是在游戏中如果你听到一个人的自称变来变去的会不会很奇怪？所以这就是润色的工作之一了——名词统一及风格统一。<br>
+　　那么润色还有一个任务就是去除日语风。因为翻译一边要理解日语原文，一边要写中文，有些时候思维就会打架，会被日语的语句架构给带着走。这有时是没办法的事情，哪怕非常注意了也还是会犯，我现在回头看我自己翻译的东西，也有不少带日语风的地方。因此就需要借助润色没有思维惯性的优势，把这些地方都给纠正过来。另外让文字变得更加优美也是润色的一个工作之一，但是一定是在翻译出来的文本已经比较能看的基础上才行。一个好的翻译文本能让润色有更大的发挥余地。<br><font color="#2e8b57" data-darkreader-inline-color="" style="--darkreader-inline-color:#9bd0ac;">野蛮人：皮糙肉厚，不怕折腾</font><br>
+　　作为终校，担负的是在导入rom进行测试之前的最后一番测试，也可以称为“测试前传”，毕竟如果文本有错漏，在文档中检查要比在游戏中检查方便得多，也更便于修改。要做的工作是最后的查漏补缺，包括文本错漏、语义逻辑、形式统一和内容统一等。这个工作非常辛苦，因为这个步骤一定不能人多——本来就是要在这一步检查文本整体的统一程度的，如果再多分几个人做，那就没意义了。并且基本要将全部文本都过一遍。做这个工作的人一定要会日语，这样发现有逻辑不通的文档时可以及时地查阅原文，同时要有一定的文学素养，以便能纠出一些细节上的错误，而且在发现不妥的地方时能自己发挥。终校可以说是拥有权限比较高的一个职位，因为经过终校的文本，基本上也就是呈现给大伙的文本了。所以终校有时也会称为“质量监督”，这一职的发挥将直接决定最后的质量（当然其他环节的高质量也是不可少的）。<br>
+　　有时在汉化过程中会有“校对”一职，其实这是在翻译环节的一个部分，是在进入润色流程之前的进行文本和原文的校对，以便发现一些对原文的理解错误，否则错误理解的文本进入润色环节，只会越错越大。<br><font color="#2e8b57" data-darkreader-inline-color="" style="--darkreader-inline-color:#9bd0ac;">忍者：飞檐走壁，身怀绝技</font><br>
+　　测试要做的工作不仅仅是文本的检查，还包括了对美工和程序的检查，是个大汇总的工作。在对文本方面，测试基本上是要找逻辑不通的地方和气氛不合的地方。毕竟前三个环节都是和游戏脱钩的，除非其中的某一环节完全通关了游戏，并且清楚地知道哪段文本对应的是哪个地方，否则汉化的文字和场景气氛不合的情况是必然会发生的。而日语又是一种很暧昧的语言，更加剧了这种必然性。有时候汉化的语言不好，生硬、死板，测试也会帮忙润色。但是这种地方不能太多，否则测试会很辛苦……而且如果测试阶段了又要回头去润色，那一定是前三个环节没做好。<br><br><font color="#ff8c00" data-darkreader-inline-color="" style="--darkreader-inline-color:#e9a046;">三、系统——优秀的文本是如何炼成的</font><br>
+　　由于我是翻译一职，所以我这儿只谈谈翻译对文本的作用，这是一个基础，一个游戏最后出来的文本好不好，很大程度上是由这一步决定的……<br>
+　　日语的架构和中文有着太大的不同，这意味着在把日语变成中文的过程中，要对它对伤筋动骨的手术。日语里不爱写主语，尤其主语是“我”的时候，在中文里要加上；日语里有非常多的语气词，要揣摩实际的语气再用中文表达出来；日语的语序是先宾后谓，这个有时不光是会影响表达了，甚至会影响翻译人员对原文的理解；日语中的介词、用贴尾成分来表达的细微的含义差别等，都要翻译人员非常小心地去剖析。<br>
+　　剖析完了还不够。我随手摘录了手上文本的一个不合格的翻译做例子——暂时先和谐掉例子了，因为这些问题并非只在部分翻译身上存在，其实我自己也有。<br>
+----------------------------------<br>
+和谐掉的例子<br>
+----------------------------------<br>
+　　这句话乍一看没问题，但仔细一读，很不是滋味。更别提里边还有个没删掉的假名了。<br>
+　　其实这是因为翻译人员对翻译工作应做到哪种程度的理解还不够。这句话要说“信”和“达”，都做到了。旁人一看也都能知道是什么意思，但是却很难说这个翻译很好，因为它读起来不是中国人说话的方式，因为它缺了“雅”。OS大在[1]文中提到，翻译完之后最好要朗读一下自己的文本，我敢说，如果这段话被朗读过一下的话，肯定不会是现在这样。往往翻译人员认为做到这一步交给润色就可以了，但是如果这样的句子太多，甚至整个文档都是这样的句子的话，不仅会使润色疲于奔命，而且会使本来能有更完美表现的文字变得很平庸了。打个比方说：如果一座100米高的山，翻译爬了80米，润色能爬到顶还能插上一面小旗。但是如果翻译只爬50米的话，润色也就只能爬到80米了。<br>
+　　以第一部分的“好心情”为例来说，如果翻译做到了第2步的话，润色的结果往往是第3步。但如果翻译做到了第3步的话，润色出来的结果可能是第4步，而如果翻译直接就做到了第4步的话，润色就能跟据这句话的人物心情、性格、当时状态，对上下文的句子做出更好的处理了。所以说，<font color="#2e8b57" data-darkreader-inline-color="" style="--darkreader-inline-color:#9bd0ac;">一个优秀的骑士，不能让任何一只史莱姆有机会来到魔法师跟前，魔法师才会有充足的余裕使出华丽的魔法。</font><br>
+　　一个优秀的文本，一定是各方共同努力千锤百炼地打造出来的。<br><br>
+　　好了，我的故事就讲到这儿了。谢谢大家。<br><br><br>
+[1]&nbsp;&nbsp;Our Story, "翻译是怎么炼成的 翻译小心得" , 电玩巴士，2009年01月06日<br><a href="http://zt.tgbus.com/acghh/other/2009/01/06/1645364179.shtml" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><font color="#0066cc" data-darkreader-inline-color="" style="--darkreader-inline-color:#62a8e0;">http://zt.tgbus.com/acghh/other/2009/01/06/1645364179.shtml</font></a></p>
+
+<div class="sso" style="margin:0 auto;width:336px;">
+<ul>
+
+
+</ul>
+<div class="clear"></div>
+</div>
+                        <div class="clear"></div>
+        </div>
+                <div class="Sort"><span id="pe100_page_contentpage" class="pagecss"><a href="http://zt.tgbus.com/acghh/Teaching/2009/04/30/1440594744.shtml" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">首页</a> <a href="http://zt.tgbus.com/acghh/Teaching/2009/04/30/1440594744.shtml" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">上一页</a>
+ <a href="http://zt.tgbus.com/acghh/Teaching/2009/04/30/1440594744.shtml" class="c" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">[1]</a> 
+ <a href="http://zt.tgbus.com/acghh/Teaching/2009/04/30/1440594744.shtml" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">下一页</a>
+ <a href="http://zt.tgbus.com/acghh/Teaching/2009/04/30/1440594744.shtml" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">尾页</a> 共1页
+</span></div>
+                <div class="butter2">
+<ul>
+<li>
+
+</li>
+<li>
+
+下一篇：
+<a href="http://zt.tgbus.com/acghh/Teaching/2009/02/17/1008434709.shtml" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">【分享】关于汉化游戏后期的测试</a>
+</li>
+</ul>
+                         </div>
+            </div>
+            <div class="Speaking-b"></div>
+        </div>
+        <div class="Works right">
+        	<div class="Works2">
+        	<div class="Works-t"><b>汉化作品</b></div>
+            <div class="Works-c">
+            	<ul><li>
+                    	<a href="http://zt.tgbus.com/acghh/news/2011/04/01/17552424236.shtml" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1573201639-e79b9c44de0f0daf4ac67d33a661519c.jpg" width="255" height="146" alt=""></a>
+						<h2 class="Yellow"><a href="http://zt.tgbus.com/acghh/news/2011/04/01/17552424236.shtml" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">口袋妖怪黑白</a></h2>
+                        <p></p>
+                    </li>
+                
+                
+                    <li>
+                    	<a href="http://zt.tgbus.com/acghh/news/2010/12/08/19295122175.shtml" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1573201639-520162a23c037e3873ff83d170da9951.jpg" width="255" height="146" alt=""></a>
+						<h2 class="Yellow"><a href="http://zt.tgbus.com/acghh/news/2010/12/08/19295122175.shtml" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">怪物猎人携带版3</a></h2>
+                        <p></p>
+                    </li> 
+                	<li>
+                    	<a href="http://zt.tgbus.com/acghh/news/2010/11/26/15032321820.shtml" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1573201639-914beb65d3689bedfa29d77d2c42af65.jpg" width="255" height="146" alt=""></a>
+						<h2 class="Yellow"><a href="http://zt.tgbus.com/acghh/news/2010/11/26/15032321820.shtml" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">黄金太阳:漆黑的黎明</a></h2>
+                        <p></p>
+                    </li>            		
+                    <li>
+                    	<a href="http://zt.tgbus.com/acghh/news/2010/11/19/14403921619.shtml" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1573201639-81d69ad7150cfa6783bc2127bcb07ed7.jpg" width="255" height="146" alt=""></a>
+						<h2 class="Yellow"><a href="http://zt.tgbus.com/acghh/news/2010/11/19/14403921619.shtml" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">风来的西林4</a></h2>
+                        <p></p>
+                    </li>           		
+            	</ul>
+            </div>
+            <div class="Works-b"></div>
+        </div>
+        </div>
+   	  <div class="clear"></div>
+    </div>
+<div class="Copyright"><b>Copyright 2008-2013 <span class="Yellow">A.C.G </span>All rights reserved </b></div>
+        <div class="clear"></div>
+    </div>
+    <div class="main2-b"></div>
+     <div class="clear"></div>
+</div>
+
+
+
+
+
+
+<a href="" download="" data-mx-warn="Empty URL"></a>
+</body>
+  </html>

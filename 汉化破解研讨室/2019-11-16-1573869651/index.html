@@ -1,0 +1,991 @@
+
+  <!DOCTYPE html>
+  <html id="" class="">
+    <!-- OriginalSrc: https://www.cnblogs.com/Rex/archive/2007/12/17/1002810.html -->
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <title>游戏包文件结构分析(2) - 地狱门神 - 博客园</title>
+      
+
+<link rel="stylesheet" href="assets/1573869651-d4b73980e5ecba85aa25d546f104e1c7.css" referrerpolicy="no-referrer">
+<link id="MainCss" rel="stylesheet" href="assets/1573869651-c81f294dcbc3e4d616bc856656324c87.css" referrerpolicy="no-referrer">
+<link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="assets/1573869651-25f9ef1d0c68bf626a067f29e9b7a8b0.css" referrerpolicy="no-referrer">
+
+
+<style class="darkreader darkreader--fallback" media="screen"></style>
+<style class="darkreader darkreader--text" media="screen"></style>
+<style class="darkreader darkreader--invert" media="screen"></style>
+<style class="darkreader darkreader--inline" media="screen">[data-darkreader-inline-bgcolor] {
+  background-color: var(--darkreader-inline-bgcolor) !important;
+}
+[data-darkreader-inline-bgimage] {
+  background-image: var(--darkreader-inline-bgimage) !important;
+}
+[data-darkreader-inline-border] {
+  border-color: var(--darkreader-inline-border) !important;
+}
+[data-darkreader-inline-border-bottom] {
+  border-bottom-color: var(--darkreader-inline-border-bottom) !important;
+}
+[data-darkreader-inline-border-left] {
+  border-left-color: var(--darkreader-inline-border-left) !important;
+}
+[data-darkreader-inline-border-right] {
+  border-right-color: var(--darkreader-inline-border-right) !important;
+}
+[data-darkreader-inline-border-top] {
+  border-top-color: var(--darkreader-inline-border-top) !important;
+}
+[data-darkreader-inline-boxshadow] {
+  box-shadow: var(--darkreader-inline-boxshadow) !important;
+}
+[data-darkreader-inline-color] {
+  color: var(--darkreader-inline-color) !important;
+}
+[data-darkreader-inline-fill] {
+  fill: var(--darkreader-inline-fill) !important;
+}
+[data-darkreader-inline-stroke] {
+  stroke: var(--darkreader-inline-stroke) !important;
+}
+[data-darkreader-inline-outline] {
+  outline-color: var(--darkreader-inline-outline) !important;
+}</style>
+<style class="darkreader darkreader--user-agent" media="screen">html {
+    background-color: #181919 !important;
+}
+html, body, input, textarea, select, button {
+    background-color: #181919;
+}
+html, body, input, textarea, select, button {
+    border-color: #565452;
+    color: #e4dfd7;
+}
+a {
+    color: #448adb;
+}
+table {
+    border-color: #4b4a48;
+}
+::placeholder {
+    color: #b6afa3;
+}
+::selection {
+    background-color: #1157ab;
+    color: #fbf7f1;
+}
+::-moz-selection {
+    background-color: #1157ab;
+    color: #fbf7f1;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+    background-color: #52560e !important;
+    color: #e4dfd7 !important;
+}
+::-webkit-scrollbar {
+    background-color: #1c1d1d;
+    color: #c1bbb0;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #2a2b2b;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #323333;
+}
+::-webkit-scrollbar-thumb:active {
+    background-color: #3d3e3f;
+}
+::-webkit-scrollbar-corner {
+    background-color: #181919;
+}
+* {
+    scrollbar-color: #2a2b2b #1c1d1d;
+}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style class="darkreader darkreader--override" media="screen">.jfk-bubble {
+    background-color: #000000 !important;
+}
+.vimvixen-hint {
+    background-color: #705000 !important;
+    border-color: #caa92c !important;
+    color: #ece1c2 !important;
+}</style>
+<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover, .MJXp-munder {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > *, .MJXp-munder > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+<style type="text/css">@keyframes fadeInOpacity{0%{opacity:0}to{opacity:1}}:hover>*>.fbvd--wrapper{animation-name:fadeInOpacity;animation-duration:.3s;opacity:1}.fbvd--wrapper{position:absolute;top:10px;left:10px;opacity:0;text-align:center;margin:0;z-index:5}.fbvd--wrapper a{background: url("") no-repeat 3px 4.55px; background-color: #fff; display:inline-block;font:700 14px Helvetica,Arial,sans-serif;color:#4b4f56;text-decoration:none;vertical-align:middle;padding:0px 8px 0px;margin-right:8px;border-radius:2px; line-height: 22px; padding-left:19px; border: 1px solid #e7e7e7; background-size: 13px}.fbvd--wrapper a:last-child{margin-right:0}.fbvd--wrapper a:hover{text-decoration:none}.fbvd--wrapper a:focus{box-shadow:0 0 1px 2px rgba(88,144,255,.75),0 1px 1px rgba(0,0,0,.15);outline:none}.fbvd--wrapper b{font-size:13px;position:relative;top:1px;color:#3b5998;font-weight:400}</style>
+<style class="darkreader darkreader--sync" media="screen"></style>
+
+      <style class="mx-wc-style">
+        body {padding-top: 20px;}
+        .mx-wc-main img {max-width: 100%;}
+        .mx-wc-main{
+          box-sizing: content-box;
+          background-color: rgb(24, 25, 25) !important;
+          margin: 0 auto;
+          max-width: 1286px;
+        }
+        @media (min-width: 768px) {
+          .mx-wc-main { padding: 15px 15px 80px 15px }
+        }
+        @media (max-width: 767px) {
+          .mx-wc-main { padding: 15px 3px 80px 3px }
+        }
+  
+      </style>
+    </head>
+    <body style="background-color: #ffffff !important; min-height: 100%; height: auto; position: static !important; overflow: auto !important; padding-bottom: 0px !important;" id="" class="">
+      <div class="mx-wc-main">
+        <div id="home" class="mx-wc-selected-elem mx-wc-1573869651" style="display: block; float: none !important; position: relative !important; top: 0px !important; left: 0px !important; margin: 0px !important; flex: unset !important; width: 100% !important; max-width: 100% !important; box-sizing: border-box !important;">
+    <div id="header">
+        <div id="blogTitle">
+            
+<div class="title"><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/Rex/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">地狱之门</a>
+</div>
+<div class="subtitle">
+欢迎来到地狱!
+
+</div>
+
+        </div>
+        <div id="navigator">
+            
+<ul id="navList">
+    <li id="nav_sitehome"><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+博客园</a>
+</li>
+    <li id="nav_myhome">
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/Rex/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+首页</a>
+</li>
+    <li id="nav_newpost">
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+新随笔</a>
+</li>
+    <li id="nav_contact">
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E5%9C%B0%E7%8B%B1%E9%97%A8%E7%A5%9E" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+联系</a></li>
+    <li id="nav_rss">
+<a id="blog_nav_rss" class="menu" href="https://www.cnblogs.com/Rex/rss/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+订阅</a></li>
+    <li id="nav_admin">
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+管理</a>
+</li>
+</ul>
+
+            <div class="blogStats">
+                
+<span id="stats_post_count">随笔 - 
+76&nbsp;</span>
+<span id="stats_article_count">文章 - 
+15&nbsp;</span>
+<!-- <span id="stats-comment_count"></span> -->
+<span id="stats_comment_count">评论 - 
+621</span>
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <div id="mainContent">
+            <div class="forFlow">
+                <div id="post_detail">
+    <div id="topics">
+        <div class="post">
+            <h1 class="postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/Rex/archive/2007/12/17/1002810.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">游戏包文件结构分析(2)</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                
+<div id="cnblogs_post_body" class="blogpost-body ">
+    <p><span style="font-family: 宋体"><span style="font-family: 宋体">5.第二个例子——一个小游戏的包文件格式</span></span></p>
+<p><span style="font-family: 宋体"><span style="font-family: 宋体">下载地址：http://www.lanqie.net.cn/html/benzhanzuopin/20070604/43.html AAAKK版</span></span></p>
+<p><span style="font-family: 宋体"><span style="font-family: 宋体">包文件是安装文件夹中最大的文件Game.dat。</span></span></p>
+<p><span style="font-family: 宋体"><span style="font-family: 宋体">这个格式用到了简单的异或加密，但是文件索引表非常简单，因为没有文件夹格式。</span></span></p>
+<p><span style="font-family: 宋体"><span style="font-family: 宋体">打开文件，发现有一些文件名(1.BMP，1.WAV)，而且每两个文件名的开头间隔一样，说明文件索引长度固定，为28。可以看到文件名占20字节，文件名的空白用空格(0x20)来填充。每两个文件名之间还有8个字节，即两个Int32。可以估计其中一个是文件位置，另一个是文件长度。</span></span></p>
+<p><span style="font-family: 宋体"><span style="font-family: 宋体">图2 Game.dat文件头<br>00000000h: 52 45 53 59 00 C2 09 00 00 88 47 03 00 4E 55 4D ; RESY.?..圙..NUM<br>00000010h: 2E 42 4D 50 20 20 20 20 20 20 20 20 20 20 20 20 ; .BMP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>00000020h: 20 4B 51 03 00 C2 58 01 00 31 2E 42 4D 50 20 20 ;&nbsp; KQ..耎..1.BMP&nbsp; <br>00000030h: 20 20 20 20 20 20 20 20 20 20 20 20 20 0E AA 04 ;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .?<br>00000040h: 00 2A 20 00 00 31 2E 57 41 56 20 20 20 20 20 20 ; .* ..1.WAV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>00000050h: 20 20 20 20 20 20 20 20 20 39 CA 04 00 C0 58 01 ;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9?.繶.<br>00000060h: 00 32 2E 42 4D 50 20 20 20 20 20 20 20 20 20 20 ; .2.BMP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>00000070h: 20 20 20 20 20 FA 22 06 00 D8 AF 02 00 32 2E 57 ;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ?..丿..2.W<br>00000080h: 41 56 20 20 20 20 20 20 20 20 20 20 20 20 20 20 ; AV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>00000090h: 20 D3 D2 08 00 C0 58 01 00 33 2E 42 4D 50 20 20 ;&nbsp; 右..繶..3.BMP&nbsp; <br>000000a0h: 20 20 20 20 20 20 20 20 20 20 20 20 20 94 2B 0A ;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ?.<br>000000b0h: 00 1E 80 00 00 33 2E 57 41 56 20 20 20 20 20 20 ; ..€..3.WAV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>000000c0h: 20 20 20 20 20 20 20 20 20 B3 AB 0A 00 C0 58 01 ;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 倡..繶.<br>000000d0h: 00 34 2E 42 4D 50 20 20 20 20 20 20 20 20 20 20 ; .4.BMP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>000000e0h: 20 20 20 20 20 74 04 0C 00 04 50 01 00 34 2E 57 ;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; t....P..4.W<br>000000f0h: 41 56 20 20 20 20 20 20 20 20 20 20 20 20 20 20 ; AV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>00000100h: 20 79 54 0D 00 C0 58 01 00 35 2E 42 4D 50 20 20 ;&nbsp; yT..繶..5.BMP&nbsp; <br>00000110h: 20 20 20 20 20 20 20 20 20 20 20 20 20 3A AD 0E ;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :?<br>00000120h: 00 18 B0 00 00 35 2E 57 41 56 20 20 20 20 20 20 ; ..?.5.WAV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>00000130h: 20 20 20 20 20 20 20 20 20 53 5D 0F 00 C0 58 01 ;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; S]..繶.<br>00000140h: 00 36 2E 42 4D 50 20 20 20 20 20 20 20 20 20 20 ; .6.BMP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>00000150h: 20 20 20 20 20 14 B6 10 00 08 30 01 00 36 2E 57 ;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .?..0..6.W<br>00000160h: 41 56 20 20 20 20 20 20 20 20 20 20 20 20 20 20 ; AV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>00000170h: 20 1D E6 11 00 C0 58 01 00 37 2E 42 4D 50 20 20 ;&nbsp; .?.繶..7.BMP&nbsp; <br>00000180h: 20 20 20 20 20 20 20 20 20 20 20 20 20 DE 3E 13 ;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ?.<br>00000190h: 00 28 30 00 00 37 2E 57 41 56 20 20 20 20 20 20 ; .(0..7.WAV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>000001a0h: 20 20 20 20 20 20 20 20 20 07 6F 13 00 C0 58 01 ;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .o..繶.<br>000001b0h: 00 38 2E 42 4D 50 20 20 20 20 20 20 20 20 20 20 ; .8.BMP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></p>
+<p><span style="font-family: 宋体"><span style="font-family: 宋体">图3 Game.dat文件索引和第一个文件结合部<br>00000970h: 00 C0 58 01 00 36 31 2E 42 4D 50 20 20 20 20 20 ; .繶..61.BMP&nbsp;&nbsp;&nbsp;&nbsp; <br>00000980h: 20 20 20 20 20 20 20 20 20 7D 9C 82 00 C0 58 01 ;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }渹.繶.<br>00000990h: 00 36 32 2E 42 4D 50 20 20 20 20 20 20 20 20 20 ; .62.BMP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>000009a0h: 20 20 20 20 20 3E F5 83 00 B7 C2 0C 00 44 41 54 ;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &gt;鮾.仿..DAT<br>000009b0h: 41 2E 42 4D 50 20 20 20 20 20 20 20 20 20 20 20 ; A.BMP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>000009c0h: 20 42 4C 84 44 07 05 06 07 08 09 3C 0F 0C 0D 26 ;&nbsp; BL凞......&lt;...&amp;<br>000009d0h: 0F 10 11 02 11 14 15 83 16 18 19 1B 1B 14 1D 1E ; .......?.......<br>000009e0h: 1F 20 21 72 60 27 25 34 2C 28 29 38 20 2C 2D 2E ; . !r`'%4,()8 ,-.<br>000009f0h: 2F 30 31 32 33 34 35 36 37 38 39 3A 3B BC 3D 3E ; /0123456789:;?&gt;<br>00000a00h: BF 40 41 42 C3 C4 45 C6 47 48 49 CA 4B CC 4D CE ; 緻AB媚E艷HI蔏蘉?</span></span></p>
+<p><span style="font-family: 宋体"><span style="font-family: 宋体">00000a10h: CF 50 51 92 93 94 55 96 8B 98 59 AA 91 FA 5D 5E ; 螾Q挀擴枊榊獞鷀^<br>00000a20h: 7F 20 61 62 43 04 65 66 47 E8 69 6A 4B CC 6D 6E ;  abC.efG鑙jK蘭n<br>00000a30h: 4F B0 71 72 53 94 75 76 37 78 79 7A 3B 5C 7D 7E ; O皅rS攗v7xyz;\}~<br>00000a40h: 3F C0 81 82 C3 E4 85 86 C7 08 89 8A CB 2C 8D 8E ; ?纴偯鋮喦.墛?崕<br>00000a50h: CF 50 91 92 D3 74 95 96 F7 98 99 9A FB BC 9D 9E ; 螾憭觮晼鳂櫄潪<br>00000a60h: FF E0 A1 A2 C3 C4 A5 A6 C7 28 A9 AA CB 0C AD AE ; 唷⒚磨η(┆?</span></span></p>
+<p><span style="font-family: 宋体"><span style="font-family: 宋体">往下翻，一直翻到索引结束，如图3。<br>可以看到最后的文件名之后接的8个字节和前面的文件名后的8个字节不太一样。因此可以认为该格式的文件索引表中的每一个索引是文件位置和文件长度先于文件名的。<br>最后一个索引的结束位置是9C1h，第一个文件索引的开始位置（现在可以辨认出）是5h。每个索引的大小是28字节。可以算出共有89个索引。89的16进制写法是0x59，正好是开头第四个字节的值。而第五字节是00，所以我们可以认为这两个字节是一个16位整数（Int16）。<br>最开始的RES是文件类型标志。大多数文件都会有这种标志，多数长度为4和3。许多格式接下来还有版本号。</span></span></p>
+<p><span style="font-family: 宋体"><span style="font-family: 宋体">我们继续分析文件大小和文件长度。<br>第一个文件数据的开头位置为9C1h，而第一个文件索引的第一个Int32（5h处）是0x000009C2。转到第二个索引的第一个Int32（21h）指向的位置（0x003514B），我们可以看到文件开头是BL，和第一个文件数据的开头处一样，但是B的位置都比索引确定的位置要提前一个字节。<br>这里有几种理解，比如：这个字节可能是一个特殊的标志；文件索引中的文件位置应该减1，等等。但是，无论如何，文件索引中的第一个Int32和文件位置有关。我们假设文件索引中的文件位置应该减1。<br>我们还可以发现两个相邻文件索引的文件位置的差等于前一个的第二个Int32，因此我们能够确定，文件索引中的第二个Int32是文件的长度，而且文件应该没有压缩。</span></span></p>
+<p><span style="font-family: 宋体"><span style="font-family: 宋体">我们从最开始的两个文件的文件名可以知道这两个文件是位图文件，但是文件数据一点儿也不像位图文件。<br>对于位图文件，最明显的特征是文件开始的文件类型标志"BM"。</span></span></p>
+<p><span style="font-family: 宋体"><span style="font-family: 宋体">文件数据是加了密的。<br>我们是否应该放弃呢？我们先找一下规律吧。<br>9F1h处有个"0123456789"(ASCII)，似乎比较奇怪。<br>9C6h处的"05 06 07 08 09"，也有规律。<br>如果你对BMP格式有一点了解，你应该知道，BMP中充满了00。<br>从9EDh处开始，到9FFh，包括了"0123456789"，全部是每次递增1的数字。</span></span></p>
+<p><span style="font-family: 宋体"><span style="font-family: 宋体">嗯，这些字节的值加密前应该是00吧。<br>9EDh相对于文件开始（9C1h）的偏移量是44（0x2C），正好是9EDh的值。<br>所以，可以确定，文件的每一个字节，都用该字节在该文件中的位置（相对于该文件的初始位置）进行了可逆变换。<br>最简单的变换是什么呢？加减？异或？异或是最简单的变换，因为不需要考虑整数溢出。<br>注意到A Xor B Xor B = A，我们可以猜测，加密算法应该是文件的每一个字节，与字节在该文件中的位置（相对于该文件的初始位置）进行了异或产生的。</span></span></p>
+<p><span style="font-family: 宋体"><span style="font-family: 宋体">编程，按此思路对该段数据（9C1h到35141h）进行变换，结果如下。</span></span></p>
+<p><span style="font-family: 宋体"><span style="font-family: 宋体">图4 解密后的NUM.BMP的文件头<br>00000000h: 42 4D 86 47 03 00 00 00 00 00 36 04 00 00 28 00 ; BM咷......6...(.<br>00000010h: 00 00 10 02 00 00 95 01 00 00 01 00 08 00 00 00 ; ......?........<br>00000020h: 00 00 50 43 03 00 12 0B 00 00 12 0B 00 00 00 00 ; ..PC............<br>00000030h: 00 00 00 00 00 00 00 00 00 00 00 00 80 00 00 80 ; ............€..€<br>00000040h: 00 00 00 80 80 00 80 00 00 00 80 00 80 00 80 80 ; ...€€.€...€.€.€€<br>00000050h: 00 00 C0 C0 C0 00 C0 DC C0 00 F0 CA A6 00 00 20 ; ..览?儡?鹗?. <br>00000060h: 40 00 00 20 60 00 00 20 80 00 00 20 A0 00 00 20 ; @.. `.. €.. ?. <br>00000070h: C0 00 00 20 E0 00 00 40 00 00 00 40 20 00 00 40 ; ?. ?.@...@ ..@</span></span></p>
+<p><span style="font-family: 宋体"><span style="font-family: 宋体">按照BMP打开，可以发现文件正常显示出一堆数字的图像。</span></span></p>
+<p><span style="font-family: 宋体"><span style="font-family: 宋体">于是，可以确认前面的所有假设。</span></span></p>
+<p><br><span style="font-family: 宋体"><span style="font-family: 宋体">总结一下：</span></span></p>
+<p><span style="font-family: 宋体"><span style="font-family: 宋体">DAT结构</span></span></p>
+<p><span style="font-family: 宋体"><span style="font-family: 宋体">文件索引表<br>NumIndex&nbsp; Int32&nbsp; 4&nbsp;&nbsp; 文件索引数<br>文件索引<br>Address&nbsp;&nbsp; Int32&nbsp; 4&nbsp;&nbsp; 文件位置+1<br>Length&nbsp;&nbsp;&nbsp; Int32&nbsp; 4&nbsp;&nbsp; 文件长度<br>Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; String 20&nbsp; 文件名</span></span></p>
+<p><span style="font-family: 宋体"><span style="font-family: 宋体">文件数据<br>每个文件的数据通过文件的每一个字节与字节在该文件中的位置（相对于该文件的初始位置）进行了异或产生的。</span></span></p>
+<p><br><span style="font-family: 宋体"><span style="font-family: 宋体">本节中提到的游戏的下载地址<br>http://www.lanqie.net.cn/html/benzhanzuopin/20070604/43.html AAAKK版<br><br>（未完待续）<br></span></span></p>
+</div>
+
+<div class="clear"></div>
+<div id="blog_post_info_block"><div id="BlogPostCategory">
+    分类: 
+            <a href="https://www.cnblogs.com/Rex/category/99891.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">从主页撤下的东西</a></div>
+
+
+    <div id="blog_post_info">
+<div id="green_channel">
+        <a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(1002810,cb_blogId,1);green_channel_success(this,'谢谢推荐！');" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">好文要顶</a>
+        <a id="green_channel_follow" onclick="follow('3f95310b-63cf-dd11-9e4d-001cf0cd104b');" href="javascript:void(0);" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">关注我</a>
+    <a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">收藏该文</a>
+    <a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1573869651-3212f7b914cc9773fb30bbf4656405fc.png" alt=""></a>
+    <a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信" onclick="shareOnWechat()" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer"><img src="assets/1573869651-cb7153d1c13a5d9aef10ebab342f6f71.png" alt=""></a>
+</div>
+<div id="author_profile">
+    <div id="author_profile_info" class="author_profile_info">
+        <div id="author_profile_detail" class="author_profile_info">
+            <a href="https://home.cnblogs.com/u/Rex/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">地狱门神</a><br>
+            <a href="https://home.cnblogs.com/u/Rex/followees/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">关注 - 6</a><br>
+            <a href="https://home.cnblogs.com/u/Rex/followers/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">粉丝 - 26</a>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="author_profile_honor"></div>
+    <div id="author_profile_follow">
+                <a href="javascript:void(0);" onclick="follow('3f95310b-63cf-dd11-9e4d-001cf0cd104b');return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">+加关注</a>
+    </div>
+</div>
+<div id="div_digg">
+    <div class="diggit" onclick="votePost(1002810,'Digg')">
+        <span class="diggnum" id="digg_count">0</span>
+    </div>
+    <div class="buryit" onclick="votePost(1002810,'Bury')">
+        <span class="burynum" id="bury_count">0</span>
+    </div>
+    <div class="clear"></div>
+    <div class="diggword" id="digg_tips">
+    </div>
+</div>
+
+</div>
+    <div class="clear"></div>
+    <div id="post_next_prev">
+
+    <a href="https://www.cnblogs.com/Rex/archive/2007/12/12/992829.html" class="p_n_p_prefix" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">« </a> 上一篇：    <a href="https://www.cnblogs.com/Rex/archive/2007/12/12/992829.html" title="发布于 2007-12-12 22:51" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">游戏包文件结构分析(1)</a>
+    <br>
+    <a href="https://www.cnblogs.com/Rex/archive/2008/01/17/1042826.html" class="p_n_p_prefix" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">» </a> 下一篇：    <a href="https://www.cnblogs.com/Rex/archive/2008/01/17/1042826.html" title="发布于 2008-01-17 13:23" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">赫多兰朵SBPAK文件管理器</a>
+
+</div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2007-12-17 12:22</span>&nbsp;<a href="https://www.cnblogs.com/Rex/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">地狱门神</a> 阅读(<span id="post_view_count">866</span>) 评论(<span id="post_comment_count">3</span>) <a href="https://i.cnblogs.com/EditPosts.aspx?postid=1002810" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer"> 编辑</a> <a href="javascript:void(0)" onclick="AddToWz(1002810); return false;" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">收藏</a>
+</div>
+        </div>
+
+
+<a name="!comments" data-mx-warn="Empty URL"></a>
+<div id="blog-comments-placeholder">
+
+<div id="comment_pager_top">
+    
+</div>
+
+
+<div class="feedback_area_title">评论列表</div>
+<div class="feedbackNoItems"></div>
+
+        <div class="feedbackItem">
+            <div class="feedbackListSubtitle">
+                <div class="feedbackManage">
+                    &nbsp;&nbsp;
+                    
+
+<span class="comment_actions">
+    
+    
+    
+    
+</span>
+
+
+                </div>
+                <!-- Title -->
+                
+<a href="#1002861" class="layer">#1楼</a>
+<a name="1002861" id="comment_anchor_1002861" data-mx-warn="Empty URL"></a>
+
+
+                <!-- PostDate -->
+                
+<span class="comment_date">2007-12-17 12:54</span>
+
+
+                <!--NameLink-->
+                
+
+            <a id="a_comment_author_1002861" href="https://www.cnblogs.com/neoragex2002/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">neoragex2002</a>
+
+                <div class="feedbackCon">
+                    
+<div id="comment_body_1002861" class="blog_comment_body">
+    支持！~ <img src="assets/1573869651-2d763805ec11bcc2e953d54bcd333170.gif" alt="">
+
+</div>
+        <div class="comment_vote">
+            <span class="comment_error" style="color: red; --darkreader-inline-color:#da3c39;" data-darkreader-inline-color=""></span>
+            <a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(1002861, 'Digg', this.parentElement, false);" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                支持(0)
+            </a>
+            <a href="javascript:void(0);" class="comment_burry" onclick="return voteComment(1002861, 'Bury', this.parentElement, false);" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                反对(0)
+            </a>
+        </div>
+        
+
+                </div>
+            </div>
+        </div>
+        <div class="feedbackItem">
+            <div class="feedbackListSubtitle">
+                <div class="feedbackManage">
+                    &nbsp;&nbsp;
+                    
+
+<span class="comment_actions">
+    
+    
+    
+    
+</span>
+
+
+                </div>
+                <!-- Title -->
+                
+<a href="#1003196" class="layer">#2楼</a>
+<a name="1003196" id="comment_anchor_1003196" data-mx-warn="Empty URL"></a>
+
+
+                <!-- PostDate -->
+                
+<span class="comment_date">2007-12-17 15:41</span>
+
+
+                <!--NameLink-->
+                
+
+            <a id="a_comment_author_1003196" href="https://www.cnblogs.com/AndyHai/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">AndyHai</a>
+
+                <div class="feedbackCon">
+                    
+<div id="comment_body_1003196" class="blog_comment_body">
+    呵呵，分析这个真的很头疼，当年分析Pal的数据包，哎~~~~
+</div>
+        <div class="comment_vote">
+            <span class="comment_error" style="color: red; --darkreader-inline-color:#da3c39;" data-darkreader-inline-color=""></span>
+            <a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(1003196, 'Digg', this.parentElement, false);" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                支持(0)
+            </a>
+            <a href="javascript:void(0);" class="comment_burry" onclick="return voteComment(1003196, 'Bury', this.parentElement, false);" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                反对(0)
+            </a>
+        </div>
+        
+
+                </div>
+            </div>
+        </div>
+        <div class="feedbackItem">
+            <div class="feedbackListSubtitle">
+                <div class="feedbackManage">
+                    &nbsp;&nbsp;
+                    
+
+<span class="comment_actions">
+    
+    
+    
+    
+</span>
+
+
+                </div>
+                <!-- Title -->
+                
+<a href="#1003471" class="layer">#3楼</a>
+<a name="1003471" id="comment_anchor_1003471" data-mx-warn="Empty URL"></a>
+
+        
+        
+
+                <!-- PostDate -->
+                
+<span class="comment_date">2007-12-17 18:27</span>
+
+
+                <!--NameLink-->
+                
+
+            <a id="a_comment_author_1003471" href="https://www.cnblogs.com/jessezhao/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">JesseZhao</a>
+
+                <div class="feedbackCon">
+                    
+<div id="comment_body_1003471" class="blog_comment_body">
+    @AndyHai
+<br>仙剑
+<br>我的最爱
+</div>
+        <div class="comment_vote">
+            <span class="comment_error" style="color: red; --darkreader-inline-color:#da3c39;" data-darkreader-inline-color=""></span>
+            <a href="javascript:void(0);" class="comment_digg" onclick="return voteComment(1003471, 'Digg', this.parentElement, false);" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                支持(0)
+            </a>
+            <a href="javascript:void(0);" class="comment_burry" onclick="return voteComment(1003471, 'Bury', this.parentElement, false);" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                反对(0)
+            </a>
+        </div>
+        
+
+                </div>
+            </div>
+        </div>
+
+
+<div id="comment_pager_bottom">
+    
+</div>
+</div>
+
+
+<div id="comment_form" class="commentform">
+    <a name="commentform" data-mx-warn="Empty URL"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container"><div class="login_tips">
+    注册用户登录后才能发表评论，请 
+    <a rel="noopener noreferrer" href="javascript:void(0);" class="underline" onclick="return login('commentform');" target="_blank" referrerpolicy="no-referrer">登录</a>
+     或 
+    <a rel="noopener noreferrer" href="javascript:void(0);" class="underline" onclick="return register();" target="_blank" referrerpolicy="no-referrer">注册</a>，
+    <a href="https://www.cnblogs.com/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">访问</a> 网站首页。
+</div></div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"><a href="https://cloud.tencent.com/act/pro/overseas?fromSource=gwzcw.3090393.3090393.3090393&amp;utm_medium=cpc&amp;utm_id=gwzcw.3090393.3090393.3090393" target="_blank" onclick="ga('send', 'event', 'Link', 'click', 'T2-腾讯云')" referrerpolicy="no-referrer" rel="noopener noreferrer">【推荐】腾讯云海外1核2G云服务器低至2折，半价续费券限量免费领取！</a><br><a href="https://www.jdcloud.com/cn/activity/year-end?utm_source=DMT_cnblogs&amp;utm_medium=CH&amp;utm_campaign=q4vm&amp;utm_term=Virtual-Machines" target="_blank" onclick="ga('send', 'event', 'Link', 'click', 'T2-京东云')" referrerpolicy="no-referrer" rel="noopener noreferrer">【活动】京东云服务器_云主机低于1折，低价高性能产品备战双11</a><br><a href="http://www.ucancode.com/index.htm" target="_blank" onclick="ga('send', 'event', 'Link', 'click', 'T2-工控')" referrerpolicy="no-referrer" rel="noopener noreferrer">【推荐】超50万行VC++源码: 大型组态工控、电力仿真CAD与GIS源码库</a><br><a href="https://ke.qq.com/huodong/mashibing_pc/index.html?from=800018451" target="_blank" onclick="ga('send', 'event', 'Link', 'click', 'T2-马士兵')" referrerpolicy="no-referrer" rel="noopener noreferrer">【培训】马士兵老师强势回归！Java线下课程全免费，双十一大促！</a><br><a href="https://www.ctyun.cn/activity/20191111?hmsr=%E7%9C%8B%E7%9C%8B-%E5%8D%9A%E5%AE%A2%E5%9B%AD-%E5%8F%8C11-1106&amp;hmpl=&amp;hmcu=&amp;hmkw=&amp;hmci=" target="_blank" onclick="ga('send', 'event', 'Link', 'click', 'T2-天翼云')" referrerpolicy="no-referrer" rel="noopener noreferrer">【推荐】天翼云双十一翼降到底，云主机11.11元起，抽奖送大礼</a><br><a href="https://www.getui.com/2019devfest?f=5&amp;p=10&amp;c=15&amp;ch=1&amp;hmsr=%E5%8D%9A%E5%AE%A2%E5%9B%AD&amp;hmpl=2019%E5%BC%80%E5%8F%91%E8%80%85%E8%8A%82&amp;hmcu=PC&amp;hmkw=&amp;hmci=" target="_blank" onclick="ga('send', 'event', 'Link', 'click', 'T2-个推-1')" referrerpolicy="no-referrer" rel="noopener noreferrer">【福利】个推四大热门移动开发SDK全部免费用一年，限时抢！</a><br><a href="https://www.uibot.com.cn/sem/bky.html" target="_blank" onclick="ga('send', 'event', 'Link', 'click', 'T2-uibot_T2')" referrerpolicy="no-referrer" rel="noopener noreferrer">【推荐】流程自动化专家UiBot，全套体系化教程成就高薪RPA工程师</a><br></div>
+    <div id="opt_under_post"></div>
+    
+    
+    
+    
+    <div id="under_post_news"><div class="recomm-block"><b>相关博文：</b><br>·  <a title="游戏包文件结构分析(1)" href="https://www.cnblogs.com/Rex/archive/2007/12/12/992829.html" target="_blank" onclick="clickRecomItmem(992829)" referrerpolicy="no-referrer" rel="noopener noreferrer">游戏包文件结构分析(1)</a><br>·  <a title="Linux及安全实践四——ELF文件格式分析" href="https://www.cnblogs.com/lxq20135309/p/5551658.html" target="_blank" onclick="clickRecomItmem(5551658)" referrerpolicy="no-referrer" rel="noopener noreferrer">Linux及安全实践四——ELF文件格式分析</a><br>·  <a title="解读TCP/UDP数据包（二）：TCP数据包结构" href="https://www.cnblogs.com/fzzmouse/p/3162586.html" target="_blank" onclick="clickRecomItmem(3162586)" referrerpolicy="no-referrer" rel="noopener noreferrer">解读TCP/UDP数据包（二）：TCP数据包结构</a><br>·  <a title="BMP文件结构" href="https://www.cnblogs.com/kingmoon/archive/2011/04/18/2020097.html" target="_blank" onclick="clickRecomItmem(2020097)" referrerpolicy="no-referrer" rel="noopener noreferrer">BMP文件结构</a><br>·  <a title="7z文件格式及其源码的分析(三)" href="https://www.cnblogs.com/shuidao/p/3293583.html" target="_blank" onclick="clickRecomItmem(3293583)" referrerpolicy="no-referrer" rel="noopener noreferrer">7z文件格式及其源码的分析(三)</a><br>»  <a target="_blank" href="https://recomm.cnblogs.com/blogpost/1002810" referrerpolicy="no-referrer" rel="noopener noreferrer">更多推荐...</a></div></div>
+    
+    <div id="under_post_kb">
+</div>
+    
+    
+</div>    </div>
+</div>
+            </div>
+        </div>
+
+        <div id="sideBar">
+            <div id="sideBarMain">
+                
+<div id="sidebar_news" class="newsItem">
+<h3 class="catListTitle">公告</h3>
+
+<div id="blog-news">
+    <font color="#00007F" data-darkreader-inline-color="" style="--darkreader-inline-color:#87a8e2;">夷历二〇〇八年五月十二，蜀郡汶川地裂。</font>
+    <div id="profile_block">
+        昵称：
+        <a href="https://home.cnblogs.com/u/Rex/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+            地狱门神
+        </a>
+        <br>
+        园龄：
+        <a href="https://home.cnblogs.com/u/Rex/" title="入园时间：2005-02-04" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+            14年9个月
+        </a>
+        <br>
+        粉丝：
+        <a href="https://home.cnblogs.com/u/Rex/followers/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+            26
+        </a>
+        <br>
+        关注：
+        <a href="https://home.cnblogs.com/u/Rex/followees/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+            6
+        </a>
+        <div id="p_b_follow">
+<a href="javascript:void(0)" onclick="follow('3f95310b-63cf-dd11-9e4d-001cf0cd104b')" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">+加关注</a></div>
+        
+    </div>
+</div></div>
+
+                <div id="calendar"></div>                
+                
+                <div id="leftcontentcontainer">
+                    <!-- begin:SingleColumn -->
+                    <div id="blog-sidecolumn">
+<!-- 搜索 -->
+<div id="sidebar_search" class="sidebar-block">
+    <div id="sidebar_search" class="mySearch">
+        <h3 class="catListTitle">搜索</h3>
+        <div id="sidebar_search_box">
+            <div id="widget_my_zzk" class="div_my_zzk">
+                <input type="text" id="q" onkeydown="return zzk_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="zzk_go()" type="button" value="找找看" id="btnZzk" class="btn_my_zzk">
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+<!-- 常用链接 -->
+
+
+<!-- 最新随笔 -->
+
+
+
+<!-- 我的标签 -->
+<div id="sidebar_toptags" class="sidebar-block">
+    
+<div class="catListTag">
+    <h3 class="catListTitle">我的标签</h3>
+    <ul>
+        
+        <li>
+            <a href="https://www.cnblogs.com/Rex/tag/BlackBerry%20%E8%BE%93%E5%85%A5%E6%B3%95/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">BlackBerry 输入法</a>(1)
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/Rex/tag/C%20%E5%8F%98%E9%87%8F%20%E5%A3%B0%E6%98%8E/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">C 变量 声明</a>(1)
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/Rex/tag/DirectDraw/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">DirectDraw</a>(1)
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/Rex/tag/SVN/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">SVN</a>(1)
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/Rex/tag/Termux%20Mono%20Wcode/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Termux Mono Wcode</a>(1)
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/Rex/tag/Win7/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">Win7</a>(1)
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/Rex/tag/%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">代码生成</a>(1)
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/Rex/tag/%E5%9C%B0%E9%93%81%E5%9B%BE/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">地铁图</a>(1)
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/Rex/tag/%E8%8A%B1%E5%B1%8F/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">花屏</a>(1)
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/Rex/tag/%E5%8F%AF%E6%89%A9%E5%B1%95%E6%80%A7/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">可扩展性</a>(1)
+        </li>
+            <li>
+                <a href="https://www.cnblogs.com/Rex/tag/" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">更多</a>
+            </li>
+
+    </ul>
+</div>
+
+</div>
+
+<!-- 积分与排名 -->
+<div id="sidebar_scorerank" class="sidebar-block">
+    
+<div class="catListBlogRank">
+    <h3 class="catListTitle">积分与排名</h3>
+    <ul>
+        <li class="liScore">
+            积分 - 
+125663
+        </li>
+        <li class="liRank">
+            排名 - 
+4233
+        </li>
+    </ul>
+</div>
+</div>
+
+<!-- 随笔分类、随笔档案、文章分类、新闻分类、相册、链接 -->
+<div id="sidebar_categories">
+    
+        <div class="catListPostCategory">
+            <h3 class="catListTitle">
+                
+
+随笔分类
+<span style="font-size:11px;font-weight:normal">(56)</span>
+
+
+            </h3>
+            <ul>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/Rex/category/99891.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    从主页撤下的东西(38)
+</a>
+
+                            
+
+                        </li>
+                        
+                        <li>
+                            
+<a href="https://www.cnblogs.com/Rex/category/99913.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    古旧软件代码(14)
+</a>
+
+                            
+
+                        </li>
+                        
+                        <li>
+                            
+<a href="https://www.cnblogs.com/Rex/category/99890.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    已作废软件(4)
+</a>
+
+                            
+
+                        </li>
+                        
+            </ul>
+        </div>
+        <div class="catListArticleCategory">
+            <h3 class="catListTitle">
+                
+
+文章分类
+<span style="font-size:11px;font-weight:normal">(13)</span>
+
+
+            </h3>
+            <ul>
+                        <li>
+                            
+<a href="https://www.cnblogs.com/Rex/category/24841.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    理论(2)
+</a>
+
+                            
+
+                        </li>
+                        
+                        <li>
+                            
+<a href="https://www.cnblogs.com/Rex/category/101456.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    其他
+</a>
+
+                            
+
+                        </li>
+                        
+                        <li>
+                            
+<a href="https://www.cnblogs.com/Rex/category/84026.html" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    文件格式(11)
+</a>
+
+                            
+
+                        </li>
+                        
+            </ul>
+        </div>
+        <div class="catList">
+            <h3 class="catListTitle">
+                
+
+友情链接
+
+
+
+            </h3>
+            <ul>
+                        <li>
+                            
+<a href="http://2history.blogcn.com/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    乙史
+</a>
+
+                            
+
+                        </li>
+                        
+                        <li>
+                            
+<a href="http://blog.sina.com.cn/u/1455627014" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    Dandy
+</a>
+
+                            
+
+                        </li>
+                        
+                        <li>
+                            
+<a href="http://xccihm.blogcn.com/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    chem&amp;liu
+</a>
+
+                            
+
+                        </li>
+                        
+                        <li>
+                            
+<a href="http://necessary.yculblog.com/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    是的，没错。
+</a>
+
+                            
+
+                        </li>
+                        
+                        <li>
+                            
+<a href="http://hi.baidu.com/mjhui" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    锅盔堡垒
+</a>
+
+                            
+
+                        </li>
+                        
+                        <li>
+                            
+<a href="http://blog.sina.com.cn/u/1238422980" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    匪翠匪脆
+</a>
+
+                            
+
+                        </li>
+                        
+                        <li>
+                            
+<a href="http://eddienever.blog.sohu.com/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    梵迦小娘
+</a>
+
+                            
+
+                        </li>
+                        
+                        <li>
+                            
+<a href="http://www.ahmadinejad.ir/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    يادداشت هاي شخصي احمدي نژاد
+</a>
+
+                            
+
+                        </li>
+                        
+                        <li>
+                            
+<a href="http://neoragex2002.cnblogs.com/" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    NeoRAGEx2002
+</a>
+
+                            
+
+                        </li>
+                        
+                        <li>
+                            
+<a href="http://blog.sina.com.cn/shawilliam" rel="noopener noreferrer" target="_blank" referrerpolicy="no-referrer">
+    shaw~^0^-^0^~
+</a>
+
+                            
+
+                        </li>
+                        
+            </ul>
+        </div>
+
+</div>
+
+<!-- 最新评论 -->
+<div id="sidebar_recentcomments" class="sidebar-block">
+    <div id="recent_comments_wrap" class="RecentComment">
+    <h3 class="catListTitle">最新评论</h3>
+    <div class="RecentCommentBlock">
+        <ul>
+                    <li class="recent_comment_title"><a href="https://www.cnblogs.com/Rex/archive/2008/11/08/1329759.html#4243855" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">1. Re:萤火虫框架</a></li>
+                    <li class="recent_comment_body">v201904282019.04.28Firefly.Core.Texting.TreeFormat, Firefly.Core.Mapping:将所有Optional中的NotHasValue改为N...</li>
+                    <li class="recent_comment_author">--地狱门神</li>
+                    <li class="recent_comment_title"><a href="https://www.cnblogs.com/Rex/archive/2012/02/10/2344735.html#4243854" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">2. Re:Niveum类型框架库</a></li>
+                    <li class="recent_comment_body">v201904282019.04.28Niveum.Core, Niveum.Expression:在C++代码生成中将std::wstring改为std::u16string，去除对std::wst...</li>
+                    <li class="recent_comment_author">--地狱门神</li>
+                    <li class="recent_comment_title"><a href="https://www.cnblogs.com/Rex/archive/2012/02/10/2344735.html#4166770" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">3. Re:Niveum类型框架库</a></li>
+                    <li class="recent_comment_body">2018.12.22Niveum.Core:完成Python二进制序列化代码生成的修改。Yuki.SchemaManipulator:重命名为Niveum.SchemaManipulator。Yuki...</li>
+                    <li class="recent_comment_author">--地狱门神</li>
+                    <li class="recent_comment_title"><a href="https://www.cnblogs.com/Rex/archive/2010/07/14/1777172.html#4122041" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">4. Re:萤火虫框架漩涡文本本地化工具项目</a></li>
+                    <li class="recent_comment_body">2018.11.25<br>从SourceForge迁移到github。<br>修改文档、协议、发布脚本。</li>
+                    <li class="recent_comment_author">--地狱门神</li>
+        </ul>
+    </div>
+</div>
+</div>
+
+
+
+<!-- 阅读排行榜 -->
+
+
+<!-- 评论排行榜 -->
+<div id="sidebar_topcommentedposts" class="sidebar-block">
+    
+<div id="topfeedback_posts_wrap">
+    <h3 class="catListTitle">评论排行榜</h3>
+    <div id="TopFeedbackPostsBlock">
+        <ul style="word-break:break-all">
+                    <li>
+                        <a href="https://www.cnblogs.com/Rex/archive/2007/02/11/647203.html" target="_blank" referrerpolicy="no-referrer" rel="noopener noreferrer">
+                            1. 盟军敢死队开发工具箱(2007.03.16.0-2007.11.02.0)(209)
+                        </a>
+                    </li>
+        </ul>
+    </div>
+</div>
+</div>
+
+<!-- 推荐排行榜 -->
+</div>
+                    
+                    <!-- end:  SingleColumn -->
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+    <div id="footer">
+        <!--done-->
+Copyright © 2019 地狱门神
+<br><span id="poweredby">Powered by .NET Core 3.0.0 on Linux</span>
+
+    </div>
+</div>
+        
+      </div>
+    </body>
+  </html>
